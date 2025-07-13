@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AGB - Thümmler AI GmbH</title>
+    <meta name="description" content="Allgemeine Geschäftsbedingungen der Thümmler AI GmbH">
+    <meta name="keywords" content="AGB, Allgemeine Geschäftsbedingungen, Thümmler AI">
+    <meta name="author" content="Thümmler AI GmbH">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+        }
+        
+        /* Custom scrollbar for webkit browsers */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: rgba(15, 23, 42, 0.5);
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: rgba(59, 130, 246, 0.5);
+            border-radius: 4px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(59, 130, 246, 0.7);
+        }
+        
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Custom gradient text animation */
+        @keyframes gradient-x {
+            0%, 100% {
+                background-size: 200% 200%;
+                background-position: left center;
+            }
+            50% {
+                background-size: 200% 200%;
+                background-position: right center;
+            }
+        }
+        
+        .animate-gradient-x {
+            animation: gradient-x 3s ease infinite;
+        }
+        
+        /* Glass morphism effect */
+        .glass {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        /* Custom focus styles */
+        .focus-visible:focus-visible {
+            outline: 2px solid rgba(59, 130, 246, 0.8);
+            outline-offset: 2px;
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <div class="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
+        <!-- Navigation -->
+        <nav class="bg-black/20 backdrop-blur-md border-b border-white/10">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center h-16">
+                    <div class="flex items-center">
+                        <a href="index.html" class="text-2xl font-bold text-white">
+                            Thümmler AI
+                        </a>
+                    </div>
+                    <div class="hidden md:block">
+                        <div class="ml-10 flex items-baseline space-x-4">
+                            <a href="index.html" class="text-white hover:text-blue-300 px-3 py-2 rounded-md text-sm font-medium transition-colors">
+                                Home
+                            </a>
+                            <a href="anwendungen.html" class="text-white hover:text-blue-300 px-3 py-2 rounded-md text-sm font-medium transition-colors">
+                                Anwendungen
+                            </a>
+                            <a href="ueber-uns.html" class="text-white hover:text-blue-300 px-3 py-2 rounded-md text-sm font-medium transition-colors">
+                                Über uns
+                            </a>
+                            <a href="kontakt.html" class="text-white hover:text-blue-300 px-3 py-2 rounded-md text-sm font-medium transition-colors">
+                                Kontakt
+                            </a>
+                            <a href="impressum.html" class="text-white hover:text-blue-300 px-3 py-2 rounded-md text-sm font-medium transition-colors">
+                                Impressum
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="bg-white/10 backdrop-blur-md rounded-xl p-8 border border-white/20">
+                <h1 class="text-4xl md:text-5xl font-bold text-white mb-8 text-center">
+                    <span class="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                        Allgemeine Geschäftsbedingungen
+                    </span>
+                </h1>
+
+                <div class="space-y-8 text-gray-300">
+                    <!-- Introduction -->
+                    <section>
+                        <h2 class="text-2xl font-bold text-white mb-4">§ 1 Geltungsbereich</h2>
+                        <div class="bg-white/5 rounded-lg p-6 border border-white/10">
+                            <p class="text-lg leading-relaxed">
+                                Diese Allgemeinen Geschäftsbedingungen (AGB) gelten für alle Geschäftsbeziehungen zwischen der 
+                                Thümmler AI GmbH (nachfolgend "Anbieter") und ihren Kunden im Zusammenhang mit der Nutzung 
+                                unserer KI-gestützten Lernsoftware und damit verbundenen Dienstleistungen.
+                            </p>
+                        </div>
+                    </section>
+
+                    <!-- Services -->
+                    <section>
+                        <h2 class="text-2xl font-bold text-white mb-4">§ 2 Leistungen</h2>
+                        <div class="bg-white/5 rounded-lg p-6 border border-white/10 space-y-4">
+                            <div>
+                                <h3 class="text-lg font-bold text-white mb-2">2.1 Angebotene Dienstleistungen</h3>
+                                <p class="leading-relaxed">
+                                    Der Anbieter entwickelt und betreibt KI-gestützte Lernsoftware, insbesondere die Anwendung 
+                                    "Nachhilfe-Mentor". Die spezifischen Leistungen und Funktionen sind in den jeweiligen 
+                                    Produktbeschreibungen auf unserer Website detailliert beschrieben.
+                                </p>
+                            </div>
+                            
+                            <div>
+                                <h3 class="text-lg font-bold text-white mb-2">2.2 Verfügbarkeit</h3>
+                                <p class="leading-relaxed">
+                                    Wir bemühen uns um eine hohe Verfügbarkeit unserer Dienste. Eine 100%ige Verfügbarkeit 
+                                    kann jedoch nicht garantiert werden, insbesondere bei Wartungsarbeiten, Updates oder 
+                                    technischen Störungen.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Subscription and Cancellation -->
+                    <section>
+                        <h2 class="text-2xl font-bold text-white mb-4">§ 3 Abonnements und Kündigung</h2>
+                        <div class="bg-white/5 rounded-lg p-6 border border-white/10 space-y-4">
+                            <div>
+                                <h3 class="text-lg font-bold text-white mb-2">3.1 Abonnementmodelle</h3>
+                                <p class="leading-relaxed">
+                                    Unsere Dienste werden in verschiedenen Abonnementmodellen angeboten (monatlich oder jährlich). 
+                                    Die spezifischen Konditionen sind in der jeweiligen Anwendung oder auf unserer Website ersichtlich.
+                                </p>
+                            </div>
+                            
+                            <div>
+                                <h3 class="text-lg font-bold text-white mb-2">3.2 Kündigung</h3>
+                                <p class="leading-relaxed">
+                                    Kunden können ihr Abonnement jederzeit entsprechend dem gewählten Abomodell kündigen:
+                                </p>
+                                <ul class="list-disc list-inside mt-2 space-y-1 ml-4">
+                                    <li>Monatliche Abonnements: Kündigung zum Ende des laufenden Monats</li>
+                                    <li>Jährliche Abonnements: Kündigung zum Ende des laufenden Jahres</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Refund Policy -->
+                    <section>
+                        <h2 class="text-2xl font-bold text-white mb-4">§ 4 Rückerstattungen und Widerrufsrecht</h2>
+                        <div class="bg-white/5 rounded-lg p-6 border border-white/10 space-y-4">
+                            <div>
+                                <h3 class="text-lg font-bold text-white mb-2">4.1 Rückerstattungsrichtlinie</h3>
+                                <p class="leading-relaxed">
+                                    Da wir Online-Dienste anbieten, gewähren wir grundsätzlich keine Rückerstattungen für bereits 
+                                    erbrachte Leistungen. Es besteht kein Widerrufsrecht gemäß § 312g Abs. 2 Nr. 9 BGB, da es sich 
+                                    um die Erbringung von Dienstleistungen handelt, die vollständig erbracht wurden.
+                                </p>
+                            </div>
+                            
+                            <div>
+                                <h3 class="text-lg font-bold text-white mb-2">4.2 Ausnahmen</h3>
+                                <p class="leading-relaxed">
+                                    In besonderen Fällen, wie technischen Problemen, die eine Nutzung unmöglich machen, 
+                                    prüfen wir Einzelfälle kulant. Kontaktieren Sie hierzu unseren Kundenservice.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Payment Terms -->
+                    <section>
+                        <h2 class="text-2xl font-bold text-white mb-4">§ 5 Zahlungsbedingungen</h2>
+                        <div class="bg-white/5 rounded-lg p-6 border border-white/10 space-y-4">
+                            <div>
+                                <h3 class="text-lg font-bold text-white mb-2">5.1 Zahlungsmodalitäten</h3>
+                                <p class="leading-relaxed">
+                                    Die Zahlung erfolgt je nach gewähltem Abonnement monatlich oder jährlich im Voraus. 
+                                    Akzeptierte Zahlungsmethoden werden in der jeweiligen Anwendung angezeigt.
+                                </p>
+                            </div>
+                            
+                            <div>
+                                <h3 class="text-lg font-bold text-white mb-2">5.2 Zahlungsverzug</h3>
+                                <p class="leading-relaxed">
+                                    Bei Zahlungsverzug kann der Zugang zu den Diensten vorübergehend gesperrt werden. 
+                                    Nach Begleichung der ausstehenden Beträge wird der Zugang wiederhergestellt.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- User Obligations -->
+                    <section>
+                        <h2 class="text-2xl font-bold text-white mb-4">§ 6 Pflichten des Nutzers</h2>
+                        <div class="bg-white/5 rounded-lg p-6 border border-white/10">
+                            <p class="leading-relaxed mb-4">
+                                Der Nutzer verpflichtet sich:
+                            </p>
+                            <ul class="list-disc list-inside space-y-2 ml-4">
+                                <li>Die Dienste nur für den vorgesehenen Zweck zu nutzen</li>
+                                <li>Keine rechtswidrigen Inhalte zu übertragen oder zu speichern</li>
+                                <li>Seine Zugangsdaten vertraulich zu behandeln</li>
+                                <li>Änderungen seiner Kontaktdaten unverzüglich mitzuteilen</li>
+                                <li>Die geltenden Gesetze und diese AGB einzuhalten</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <!-- Liability -->
+                    <section>
+                        <h2 class="text-2xl font-bold text-white mb-4">§ 7 Haftung</h2>
+                        <div class="bg-white/5 rounded-lg p-6 border border-white/10 space-y-4">
+                            <div>
+                                <h3 class="text-lg font-bold text-white mb-2">7.1 Haftungsumfang</h3>
+                                <p class="leading-relaxed">
+                                    Der Anbieter haftet nur für Schäden, die auf vorsätzlichem oder grob fahrlässigem Verhalten 
+                                    beruhen. Die Haftung für leichte Fahrlässigkeit ist ausgeschlossen, soweit nicht 
+                                    wesentliche Vertragspflichten verletzt werden.
+                                </p>
+                            </div>
+                            
+                            <div>
+                                <h3 class="text-lg font-bold text-white mb-2">7.2 Haftungsbeschränkung</h3>
+                                <p class="leading-relaxed">
+                                    Die Haftung ist der Höhe nach auf den typischen, vorhersehbaren Schaden begrenzt. 
+                                    Eine Haftung für mittelbare Schäden und entgangenen Gewinn ist ausgeschlossen.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Data Protection -->
+                    <section>
+                        <h2 class="text-2xl font-bold text-white mb-4">§ 8 Datenschutz</h2>
+                        <div class="bg-white/5 rounded-lg p-6 border border-white/10">
+                            <p class="leading-relaxed">
+                                Der Schutz Ihrer persönlichen Daten ist uns wichtig. Einzelheiten zur Erhebung, 
+                                Verarbeitung und Nutzung Ihrer Daten finden Sie in unserer 
+                                <a href="datenschutz.html" class="text-blue-300 hover:text-blue-200 transition-colors">
+                                    Datenschutzerklärung
+                                </a>.
+                            </p>
+                        </div>
+                    </section>
+
+                    <!-- Final Provisions -->
+                    <section>
+                        <h2 class="text-2xl font-bold text-white mb-4">§ 9 Schlussbestimmungen</h2>
+                        <div class="bg-white/5 rounded-lg p-6 border border-white/10 space-y-4">
+                            <div>
+                                <h3 class="text-lg font-bold text-white mb-2">9.1 Anwendbares Recht</h3>
+                                <p class="leading-relaxed">
+                                    Es gilt das Recht der Bundesrepublik Deutschland unter Ausschluss des UN-Kaufrechts.
+                                </p>
+                            </div>
+                            
+                            <div>
+                                <h3 class="text-lg font-bold text-white mb-2">9.2 Gerichtsstand</h3>
+                                <p class="leading-relaxed">
+                                    Gerichtsstand für alle Streitigkeiten ist Potsdam, sofern der Kunde Kaufmann, 
+                                    juristische Person des öffentlichen Rechts oder öffentlich-rechtliches Sondervermögen ist.
+                                </p>
+                            </div>
+                            
+                            <div>
+                                <h3 class="text-lg font-bold text-white mb-2">9.3 Salvatorische Klausel</h3>
+                                <p class="leading-relaxed">
+                                    Sollten einzelne Bestimmungen dieser AGB unwirksam sein, bleibt die Wirksamkeit 
+                                    der übrigen Bestimmungen unberührt.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Product-specific Terms -->
+                    <section>
+                        <h2 class="text-2xl font-bold text-white mb-4">§ 10 Produktspezifische Bedingungen</h2>
+                        <div class="bg-white/5 rounded-lg p-6 border border-white/10">
+                            <p class="leading-relaxed">
+                                Für spezifische Anwendungen wie "Nachhilfe-Mentor" gelten zusätzlich die jeweiligen 
+                                Nutzungsbedingungen, die in der Anwendung oder auf der entsprechenden Website 
+                                (z.B. <a href="https://nachhilfe-mentor.de/nutzungsbedingungen" target="_blank" rel="noopener noreferrer" 
+                                         class="text-blue-300 hover:text-blue-200 transition-colors">
+                                    nachhilfe-mentor.de/nutzungsbedingungen
+                                </a>) einsehbar sind.
+                            </p>
+                        </div>
+                    </section>
+
+                    <!-- Last Updated -->
+                    <section class="text-center pt-8 border-t border-white/20">
+                        <p class="text-sm text-gray-400">
+                            Stand: Dezember 2024
+                        </p>
+                    </section>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-black/30 backdrop-blur-md border-t border-white/10 mt-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <div class="text-white mb-4 md:mb-0">
+                        © 2024 Thümmler AI GmbH. Alle Rechte vorbehalten.
+                    </div>
+                    <div class="flex space-x-6">
+                        <a href="impressum.html" class="text-gray-300 hover:text-white transition-colors">
+                            Impressum
+                        </a>
+                        <a href="datenschutz.html" class="text-gray-300 hover:text-white transition-colors">
+                            Datenschutz
+                        </a>
+                        <a href="agb.html" class="text-blue-300">
+                            AGB
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
