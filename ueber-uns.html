@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Über uns - Thümmler AI GmbH</title>
+    <meta name="description" content="Wir sind ein innovatives Unternehmen, das sich der Entwicklung von KI-gestützter Lernsoftware verschrieben hat.">
+    <meta name="keywords" content="KI, Lernsoftware, Nachhilfe, Bildung, AI, Thümmler AI, Über uns">
+    <meta name="author" content="Thümmler AI GmbH">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+        }
+        
+        /* Custom scrollbar for webkit browsers */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: rgba(15, 23, 42, 0.5);
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: rgba(59, 130, 246, 0.5);
+            border-radius: 4px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(59, 130, 246, 0.7);
+        }
+        
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Custom gradient text animation */
+        @keyframes gradient-x {
+            0%, 100% {
+                background-size: 200% 200%;
+                background-position: left center;
+            }
+            50% {
+                background-size: 200% 200%;
+                background-position: right center;
+            }
+        }
+        
+        .animate-gradient-x {
+            animation: gradient-x 3s ease infinite;
+        }
+        
+        /* Glass morphism effect */
+        .glass {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        /* Custom focus styles */
+        .focus-visible:focus-visible {
+            outline: 2px solid rgba(59, 130, 246, 0.8);
+            outline-offset: 2px;
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <div class="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
+        <!-- Navigation -->
+        <nav class="bg-black/20 backdrop-blur-md border-b border-white/10">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center h-16">
+                    <div class="flex items-center">
+                        <a href="index.html" class="text-2xl font-bold text-white">
+                            Thümmler AI
+                        </a>
+                    </div>
+                    <div class="hidden md:block">
+                        <div class="ml-10 flex items-baseline space-x-4">
+                            <a href="index.html" class="text-white hover:text-blue-300 px-3 py-2 rounded-md text-sm font-medium transition-colors">
+                                Home
+                            </a>
+                            <a href="anwendungen.html" class="text-white hover:text-blue-300 px-3 py-2 rounded-md text-sm font-medium transition-colors">
+                                Anwendungen
+                            </a>
+                            <a href="ueber-uns.html" class="text-blue-300 px-3 py-2 rounded-md text-sm font-medium">
+                                Über uns
+                            </a>
+                            <a href="kontakt.html" class="text-white hover:text-blue-300 px-3 py-2 rounded-md text-sm font-medium transition-colors">
+                                Kontakt
+                            </a>
+                            <a href="impressum.html" class="text-white hover:text-blue-300 px-3 py-2 rounded-md text-sm font-medium transition-colors">
+                                Impressum
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <!-- Hero Section -->
+            <div class="text-center mb-16">
+                <h1 class="text-4xl md:text-5xl font-bold text-white mb-6">
+                    Über <span class="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Thümmler AI</span>
+                </h1>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Wir sind ein innovatives Unternehmen, das sich der Entwicklung von KI-gestützter Lernsoftware verschrieben hat.
+                </p>
+            </div>
+
+            <!-- Mission Section -->
+            <div class="grid lg:grid-cols-2 gap-12 mb-16">
+                <div class="bg-white/10 backdrop-blur-md rounded-xl p-8 border border-white/20">
+                    <div class="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                    </div>
+                    <h2 class="text-3xl font-bold text-white mb-4">Unsere Mission</h2>
+                    <p class="text-gray-300 leading-relaxed text-lg">
+                        Lernen soll für alle möglich werden, egal welche soziale Klasse. Wir entwickeln innovative KI-Anwendungen, 
+                        die hochwertige Bildung zugänglich und erschwinglich machen. Unser Ziel ist es, Bildungsbarrieren abzubauen 
+                        und jedem die Möglichkeit zu geben, sein volles Potenzial zu entfalten.
+                    </p>
+                </div>
+
+                <div class="bg-white/10 backdrop-blur-md rounded-xl p-8 border border-white/20">
+                    <div class="w-16 h-16 bg-gradient-to-r from-green-500 to-blue-600 rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                        </svg>
+                    </div>
+                    <h2 class="text-3xl font-bold text-white mb-4">Unsere Vision</h2>
+                    <p class="text-gray-300 leading-relaxed text-lg">
+                        Wir stellen uns eine Welt vor, in der modernste KI-Technologie jedem Lernenden personalisierte, 
+                        effektive und inspirierende Bildungserfahrungen bietet. Durch den Einsatz künstlicher Intelligenz 
+                        schaffen wir Lernanwendungen, die sich an die individuellen Bedürfnisse jedes Nutzers anpassen.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Company Info -->
+            <div class="bg-white/10 backdrop-blur-md rounded-xl p-8 border border-white/20 mb-16">
+                <h2 class="text-3xl font-bold text-white mb-6 text-center">Unternehmensinformationen</h2>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-xl font-bold text-white mb-4">Über das Unternehmen</h3>
+                        <div class="space-y-3 text-gray-300">
+                            <p><strong class="text-white">Firmenname:</strong> Thümmler AI GmbH</p>
+                            <p><strong class="text-white">Geschäftsführer:</strong> Helene Thümmler</p>
+                            <p><strong class="text-white">Standort:</strong> Potsdam, Deutschland</p>
+                            <p><strong class="text-white">Branche:</strong> KI-gestützte Lernsoftware</p>
+                            <p><strong class="text-white">Gründung:</strong> 2024</p>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-white mb-4">Unsere Expertise</h3>
+                        <div class="space-y-3">
+                            <div class="flex items-center text-gray-300">
+                                <svg class="w-5 h-5 text-blue-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                Künstliche Intelligenz
+                            </div>
+                            <div class="flex items-center text-gray-300">
+                                <svg class="w-5 h-5 text-blue-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                Personalisierte Lernsysteme
+                            </div>
+                            <div class="flex items-center text-gray-300">
+                                <svg class="w-5 h-5 text-blue-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                Bildungstechnologie
+                            </div>
+                            <div class="flex items-center text-gray-300">
+                                <svg class="w-5 h-5 text-blue-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                Softwareentwicklung
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Values Section -->
+            <div class="mb-16">
+                <h2 class="text-3xl font-bold text-white mb-8 text-center">Unsere Werte</h2>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Zugänglichkeit</h3>
+                        <p class="text-gray-300">Bildung für alle, unabhängig vom sozialen oder wirtschaftlichen Hintergrund.</p>
+                    </div>
+
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-gradient-to-r from-green-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Innovation</h3>
+                        <p class="text-gray-300">Kontinuierliche Weiterentwicklung durch modernste KI-Technologien.</p>
+                    </div>
+
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Qualität</h3>
+                        <p class="text-gray-300">Höchste Standards in der Entwicklung und Bereitstellung unserer Lösungen.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Call to Action -->
+            <div class="text-center">
+                <div class="bg-white/10 backdrop-blur-md rounded-xl p-8 border border-white/20">
+                    <h2 class="text-3xl font-bold text-white mb-4">
+                        Möchten Sie mehr erfahren?
+                    </h2>
+                    <p class="text-gray-300 mb-6 max-w-2xl mx-auto">
+                        Kontaktieren Sie uns gerne, um mehr über unsere Mission und unsere innovativen Lernanwendungen zu erfahren.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <a href="anwendungen.html" class="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+                            Unsere Anwendungen
+                        </a>
+                        <a href="kontakt.html" class="border border-white/30 text-white hover:bg-white/10 font-bold py-3 px-8 rounded-lg transition-all duration-300">
+                            Kontakt aufnehmen
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-black/30 backdrop-blur-md border-t border-white/10 mt-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <div class="text-white mb-4 md:mb-0">
+                        © 2024 Thümmler AI GmbH. Alle Rechte vorbehalten.
+                    </div>
+                    <div class="flex space-x-6">
+                        <a href="impressum.html" class="text-gray-300 hover:text-white transition-colors">
+                            Impressum
+                        </a>
+                        <a href="datenschutz.html" class="text-gray-300 hover:text-white transition-colors">
+                            Datenschutz
+                        </a>
+                        <a href="agb.html" class="text-gray-300 hover:text-white transition-colors">
+                            AGB
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

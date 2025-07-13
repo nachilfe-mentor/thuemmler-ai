@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datenschutz - Thümmler AI GmbH</title>
+    <meta name="description" content="Datenschutzerklärung der Thümmler AI GmbH - Informationen zum Schutz Ihrer Daten">
+    <meta name="keywords" content="Datenschutz, DSGVO, Thümmler AI, Datenschutzerklärung">
+    <meta name="author" content="Thümmler AI GmbH">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+        }
+        
+        /* Custom scrollbar for webkit browsers */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: rgba(15, 23, 42, 0.5);
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: rgba(59, 130, 246, 0.5);
+            border-radius: 4px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(59, 130, 246, 0.7);
+        }
+        
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Custom gradient text animation */
+        @keyframes gradient-x {
+            0%, 100% {
+                background-size: 200% 200%;
+                background-position: left center;
+            }
+            50% {
+                background-size: 200% 200%;
+                background-position: right center;
+            }
+        }
+        
+        .animate-gradient-x {
+            animation: gradient-x 3s ease infinite;
+        }
+        
+        /* Glass morphism effect */
+        .glass {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        /* Custom focus styles */
+        .focus-visible:focus-visible {
+            outline: 2px solid rgba(59, 130, 246, 0.8);
+            outline-offset: 2px;
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <div class="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
+        <!-- Navigation -->
+        <nav class="bg-black/20 backdrop-blur-md border-b border-white/10">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center h-16">
+                    <div class="flex items-center">
+                        <a href="index.html" class="text-2xl font-bold text-white">
+                            Thümmler AI
+                        </a>
+                    </div>
+                    <div class="hidden md:block">
+                        <div class="ml-10 flex items-baseline space-x-4">
+                            <a href="index.html" class="text-white hover:text-blue-300 px-3 py-2 rounded-md text-sm font-medium transition-colors">
+                                Home
+                            </a>
+                            <a href="anwendungen.html" class="text-white hover:text-blue-300 px-3 py-2 rounded-md text-sm font-medium transition-colors">
+                                Anwendungen
+                            </a>
+                            <a href="ueber-uns.html" class="text-white hover:text-blue-300 px-3 py-2 rounded-md text-sm font-medium transition-colors">
+                                Über uns
+                            </a>
+                            <a href="kontakt.html" class="text-white hover:text-blue-300 px-3 py-2 rounded-md text-sm font-medium transition-colors">
+                                Kontakt
+                            </a>
+                            <a href="impressum.html" class="text-white hover:text-blue-300 px-3 py-2 rounded-md text-sm font-medium transition-colors">
+                                Impressum
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="bg-white/10 backdrop-blur-md rounded-xl p-8 border border-white/20">
+                <h1 class="text-4xl md:text-5xl font-bold text-white mb-8 text-center">
+                    <span class="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                        Datenschutzerklärung
+                    </span>
+                </h1>
+
+                <div class="space-y-8 text-gray-300">
+                    <!-- Introduction -->
+                    <section>
+                        <h2 class="text-2xl font-bold text-white mb-4">1. Datenschutz auf einen Blick</h2>
+                        <div class="bg-white/5 rounded-lg p-6 border border-white/10 space-y-4">
+                            <div>
+                                <h3 class="text-lg font-bold text-white mb-2">Allgemeine Hinweise</h3>
+                                <p class="leading-relaxed">
+                                    Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen 
+                                    Daten passiert, wenn Sie diese Website besuchen. Personenbezogene Daten sind alle Daten, 
+                                    mit denen Sie persönlich identifiziert werden können.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Data Controller -->
+                    <section>
+                        <h2 class="text-2xl font-bold text-white mb-4">2. Verantwortliche Stelle</h2>
+                        <div class="bg-white/5 rounded-lg p-6 border border-white/10">
+                            <p class="text-lg leading-relaxed">
+                                <strong class="text-white">Verantwortliche Stelle für die Datenverarbeitung:</strong><br>
+                                Thümmler AI GmbH<br>
+                                Eisenhartstraße 8<br>
+                                14469 Potsdam<br>
+                                Deutschland<br><br>
+                                <strong class="text-white">Geschäftsführer:</strong> Helene Thümmler<br>
+                                <strong class="text-white">E-Mail:</strong> 
+                                <a href="mailto:support@nachhilfe-mentor.de" class="text-blue-300 hover:text-blue-200 transition-colors ml-1">
+                                    support@nachhilfe-mentor.de
+                                </a><br>
+                                <strong class="text-white">Telefon:</strong> 
+                                <a href="tel:+4915758249014" class="text-blue-300 hover:text-blue-200 transition-colors ml-1">
+                                    +49 1575 8249014
+                                </a>
+                            </p>
+                        </div>
+                    </section>
+
+                    <!-- Data Collection -->
+                    <section>
+                        <h2 class="text-2xl font-bold text-white mb-4">3. Datenerfassung auf dieser Website</h2>
+                        <div class="bg-white/5 rounded-lg p-6 border border-white/10 space-y-4">
+                            <div>
+                                <h3 class="text-lg font-bold text-white mb-2">Wer ist verantwortlich für die Datenerfassung?</h3>
+                                <p class="leading-relaxed">
+                                    Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber. 
+                                    Dessen Kontaktdaten können Sie dem Abschnitt „Verantwortliche Stelle" in dieser 
+                                    Datenschutzerklärung entnehmen.
+                                </p>
+                            </div>
+                            
+                            <div>
+                                <h3 class="text-lg font-bold text-white mb-2">Wie erfassen wir Ihre Daten?</h3>
+                                <p class="leading-relaxed">
+                                    Ihre Daten werden zum einen dadurch erhoben, dass Sie uns diese mitteilen. Hierbei kann es sich 
+                                    z.B. um Daten handeln, die Sie in ein Kontaktformular eingeben. Andere Daten werden automatisch 
+                                    oder nach Ihrer Einwilligung beim Besuch der Website durch unsere IT-Systeme erfasst.
+                                </p>
+                            </div>
+                            
+                            <div>
+                                <h3 class="text-lg font-bold text-white mb-2">Wofür nutzen wir Ihre Daten?</h3>
+                                <p class="leading-relaxed">
+                                    Ein Teil der Daten wird erhoben, um eine fehlerfreie Bereitstellung der Website zu gewährleisten. 
+                                    Andere Daten können zur Analyse Ihres Nutzerverhaltens verwendet werden, um unsere Dienste zu verbessern.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Rights -->
+                    <section>
+                        <h2 class="text-2xl font-bold text-white mb-4">4. Ihre Rechte</h2>
+                        <div class="bg-white/5 rounded-lg p-6 border border-white/10">
+                            <p class="leading-relaxed mb-4">
+                                Sie haben jederzeit das Recht:
+                            </p>
+                            <ul class="list-disc list-inside space-y-2 ml-4">
+                                <li>unentgeltlich Auskunft über Herkunft, Empfänger und Zweck Ihrer gespeicherten personenbezogenen Daten zu erhalten</li>
+                                <li>Berichtigung oder Löschung dieser Daten zu verlangen</li>
+                                <li>Einschränkung der Datenverarbeitung zu verlangen</li>
+                                <li>der Datenverarbeitung zu widersprechen</li>
+                                <li>Datenübertragbarkeit zu verlangen</li>
+                                <li>sich bei einer Aufsichtsbehörde über die Verarbeitung Ihrer personenbezogenen Daten zu beschweren</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <!-- Server Data -->
+                    <section>
+                        <h2 class="text-2xl font-bold text-white mb-4">5. Server-Log-Dateien</h2>
+                        <div class="bg-white/5 rounded-lg p-6 border border-white/10 space-y-4">
+                            <div>
+                                <h3 class="text-lg font-bold text-white mb-2">Automatische Datenerfassung</h3>
+                                <p class="leading-relaxed">
+                                    Der Provider der Seiten erhebt und speichert automatisch Informationen in so genannten Server-Log-Dateien, 
+                                    die Ihr Browser automatisch an uns übermittelt. Dies sind:
+                                </p>
+                                <ul class="list-disc list-inside mt-2 space-y-1 ml-4">
+                                    <li>Browsertyp und Browserversion</li>
+                                    <li>verwendetes Betriebssystem</li>
+                                    <li>Referrer URL</li>
+                                    <li>Hostname des zugreifenden Rechners</li>
+                                    <li>Uhrzeit der Serveranfrage</li>
+                                    <li>IP-Adresse</li>
+                                </ul>
+                            </div>
+                            
+                            <div>
+                                <h3 class="text-lg font-bold text-white mb-2">Rechtsgrundlage</h3>
+                                <p class="leading-relaxed">
+                                    Die Verarbeitung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO aus unserem berechtigten 
+                                    Interesse an der Gewährleistung der Funktionsfähigkeit und Sicherheit unserer Website.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Contact Forms -->
+                    <section>
+                        <h2 class="text-2xl font-bold text-white mb-4">6. Kontaktaufnahme</h2>
+                        <div class="bg-white/5 rounded-lg p-6 border border-white/10 space-y-4">
+                            <div>
+                                <h3 class="text-lg font-bold text-white mb-2">Kontakt per E-Mail oder Telefon</h3>
+                                <p class="leading-relaxed">
+                                    Wenn Sie uns per E-Mail oder Telefon kontaktieren, wird Ihre Anfrage inklusive aller daraus 
+                                    hervorgehenden personenbezogenen Daten (Name, Anfrage) zum Zwecke der Bearbeitung Ihres Anliegens 
+                                    bei uns gespeichert und verarbeitet.
+                                </p>
+                            </div>
+                            
+                            <div>
+                                <h3 class="text-lg font-bold text-white mb-2">Rechtsgrundlage</h3>
+                                <p class="leading-relaxed">
+                                    Die Verarbeitung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO, sofern Ihre Anfrage mit 
+                                    der Erfüllung eines Vertrags zusammenhängt oder zur Durchführung vorvertraglicher Maßnahmen 
+                                    erforderlich ist. In allen übrigen Fällen beruht die Verarbeitung auf unserem berechtigten 
+                                    Interesse an der effektiven Bearbeitung der an uns gerichteten Anfragen (Art. 6 Abs. 1 lit. f DSGVO).
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Data Retention -->
+                    <section>
+                        <h2 class="text-2xl font-bold text-white mb-4">7. Speicherdauer</h2>
+                        <div class="bg-white/5 rounded-lg p-6 border border-white/10">
+                            <p class="leading-relaxed">
+                                Wir speichern personenbezogene Daten nur so lange, wie es für die Erfüllung der jeweiligen Zwecke 
+                                erforderlich ist oder gesetzliche Aufbewahrungsfristen bestehen. Nach Ablauf dieser Fristen werden 
+                                die entsprechenden Daten routinemäßig gelöscht, sofern sie nicht mehr zur Vertragserfüllung oder 
+                                Vertragsanbahnung erforderlich sind.
+                            </p>
+                        </div>
+                    </section>
+
+                    <!-- Third Party Services -->
+                    <section>
+                        <h2 class="text-2xl font-bold text-white mb-4">8. Externe Dienste</h2>
+                        <div class="bg-white/5 rounded-lg p-6 border border-white/10 space-y-4">
+                            <div>
+                                <h3 class="text-lg font-bold text-white mb-2">Hosting</h3>
+                                <p class="leading-relaxed">
+                                    Diese Website wird extern gehostet. Die personenbezogenen Daten, die auf dieser Website erfasst werden, 
+                                    werden auf den Servern des Hosters gespeichert. Hierbei kann es sich v.a. um IP-Adressen, 
+                                    Kontaktanfragen, Meta- und Kommunikationsdaten, Vertragsdaten, Kontaktdaten, Namen, 
+                                    Websitezugriffe und sonstige Daten, die über eine Website generiert werden, handeln.
+                                </p>
+                            </div>
+                            
+                            <div>
+                                <h3 class="text-lg font-bold text-white mb-2">Zahlungsdienstleister</h3>
+                                <p class="leading-relaxed">
+                                    Für die Abwicklung von Zahlungen nutzen wir externe Zahlungsdienstleister. 
+                                    Die Datenverarbeitung erfolgt dabei entsprechend den Datenschutzbestimmungen des jeweiligen Anbieters.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Security -->
+                    <section>
+                        <h2 class="text-2xl font-bold text-white mb-4">9. Datensicherheit</h2>
+                        <div class="bg-white/5 rounded-lg p-6 border border-white/10">
+                            <p class="leading-relaxed">
+                                Wir verwenden innerhalb des Website-Besuchs das verbreitete SSL-Verfahren (Secure Socket Layer) 
+                                in Verbindung mit der jeweils höchsten Verschlüsselungsstufe, die von Ihrem Browser unterstützt wird. 
+                                In der Regel handelt es sich dabei um eine 256 Bit SSL-Verschlüsselung. Falls Ihr Browser keine 
+                                256-Bit Verschlüsselung unterstützt, greifen wir stattdessen auf 128-Bit v3 Technologie zurück.
+                            </p>
+                        </div>
+                    </section>
+
+                    <!-- Changes -->
+                    <section>
+                        <h2 class="text-2xl font-bold text-white mb-4">10. Änderungen der Datenschutzerklärung</h2>
+                        <div class="bg-white/5 rounded-lg p-6 border border-white/10">
+                            <p class="leading-relaxed">
+                                Wir behalten uns vor, diese Datenschutzerklärung anzupassen, damit sie stets den aktuellen 
+                                rechtlichen Anforderungen entspricht oder um Änderungen unserer Leistungen in der 
+                                Datenschutzerklärung umzusetzen. Für Ihren erneuten Besuch gilt dann die neue Datenschutzerklärung.
+                            </p>
+                        </div>
+                    </section>
+
+                    <!-- Last Updated -->
+                    <section class="text-center pt-8 border-t border-white/20">
+                        <p class="text-sm text-gray-400">
+                            Stand: Dezember 2024
+                        </p>
+                    </section>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-black/30 backdrop-blur-md border-t border-white/10 mt-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <div class="text-white mb-4 md:mb-0">
+                        © 2024 Thümmler AI GmbH. Alle Rechte vorbehalten.
+                    </div>
+                    <div class="flex space-x-6">
+                        <a href="impressum.html" class="text-gray-300 hover:text-white transition-colors">
+                            Impressum
+                        </a>
+                        <a href="datenschutz.html" class="text-blue-300">
+                            Datenschutz
+                        </a>
+                        <a href="agb.html" class="text-gray-300 hover:text-white transition-colors">
+                            AGB
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
