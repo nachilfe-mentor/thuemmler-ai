@@ -120,8 +120,8 @@ serve(async (req) => {
 
     const params: Record<string, string> = {
       "mode": "subscription",
-      "success_url": appBase + "#/dashboard?checkout=success",
-      "cancel_url": appBase + "#/settings?checkout=cancelled",
+      "success_url": appBase + "?checkout=success",
+      "cancel_url": appBase + "?checkout=cancelled",
       "metadata[user_id]": user.id,
       "allow_promotion_codes": "true",
     };
