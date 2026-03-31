@@ -148,7 +148,7 @@ function _showScanOverlay() {
       '<div id="scan-spinner" style="width:64px;height:64px;border:3px solid rgba(99,102,241,0.2);border-top-color:#6366f1;border-radius:50%;animation:scanSpin 1s linear infinite;margin:0 auto 24px;"></div>' +
       // Status text
       '<p id="scan-status" style="color:#e2e8f0;font-size:20px;font-weight:600;margin:0 0 8px;">Verbindung wird hergestellt...</p>' +
-      '<p id="scan-substatus" style="color:#64748b;font-size:14px;margin:0 0 32px;">Bitte warte einen Moment</p>' +
+      '<p id="scan-substatus" style="color:#64748b;font-size:14px;margin:0 0 32px;">Die Analyse kann 1-2 Minuten dauern</p>' +
       // Phase content container
       '<div id="scan-phase-content" style="min-height:200px;"></div>' +
     '</div>';
@@ -276,7 +276,11 @@ function _animatePhase2() {
  */
 function _animatePhase3() {
   return new Promise(async function(resolve) {
-    _updateScanStatus('KI-Analyse läuft...', 'Kategorien werden bewertet');
+    _updateScanStatus('KI-Analyse läuft...', 'Das kann 1-2 Minuten dauern');
+
+    // Hide the top spinner to avoid double spinners
+    var topSpinner = document.getElementById('scan-spinner');
+    if (topSpinner) topSpinner.style.display = 'none';
 
     var content = document.getElementById('scan-phase-content');
     if (!content) { setTimeout(resolve, 10000); return; }

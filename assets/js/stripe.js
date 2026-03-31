@@ -21,10 +21,16 @@ var payments = {
 
       const session = await db.getSession();
       if (!session) {
-        // User needs to sign up / log in first
         if (typeof auth !== 'undefined' && auth.showAuthModal) {
           auth.showAuthModal('signup');
         }
+        return;
+      }
+
+      // Check if user is already Pro - prevent double payment
+      var alreadyPro = await auth.isPro();
+      if (alreadyPro) {
+        payments._showNotification('info', 'Bereits Pro', 'Du hast bereits ein aktives Pro-Abonnement. Verwalte es unter Einstellungen.');
         return;
       }
 
