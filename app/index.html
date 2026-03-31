@@ -1761,19 +1761,35 @@
 
         // Delete account
         document.getElementById('delete-account-btn').addEventListener('click', async () => {
+            // Check if user has an active subscription first
+            const currentProfile = appState.profile || await db.getProfile();
+            if (currentProfile && (currentProfile.subscription_status === 'pro' || currentProfile.subscription_status === 'active')) {
+                const cancelFirst = await showConfirmModal(
+                    'Aktives Abonnement',
+                    'Du hast noch ein laufendes Pro-Abonnement. Bitte kündige zuerst dein Abo über das Stripe Kundenportal, damit du nicht weiter belastet wirst. Danach kannst du deinen Account löschen.',
+                    'Abo verwalten'
+                );
+                if (cancelFirst && typeof payments !== 'undefined') {
+                    payments.openBillingPortal();
+                }
+                return;
+            }
+
             const confirmed = await showConfirmModal(
-                'Account löschen',
-                'Bist du sicher? Alle deine Daten, Analysen und Einstellungen werden unwiderruflich gelöscht.',
+                'Account endgültig löschen',
+                'Bist du sicher? Alle deine Daten, Analysen und Einstellungen werden unwiderruflich gelöscht. Diese Aktion kann nicht rückgängig gemacht werden.',
                 'Endgültig löschen'
             );
             if (!confirmed) return;
 
             try {
-                // Delete profile and analyses from DB, then sign out
                 const user = await db.getUser();
                 if (!user) throw new Error('Nicht angemeldet');
 
-                // Delete user's analyses
+                const btn = document.getElementById('delete-account-btn');
+                if (btn) { btn.disabled = true; btn.textContent = 'Wird gelöscht...'; }
+
+                // Delete user's data
                 await supabaseClient.from('analyses').delete().eq('user_id', user.id);
                 await supabaseClient.from('issue_status').delete().eq('user_id', user.id);
                 await supabaseClient.from('tracked_urls').delete().eq('user_id', user.id);
@@ -1785,6 +1801,8 @@
                 window.location.hash = '#/login';
             } catch (err) {
                 showNotification('error', 'Fehler', 'Account konnte nicht gelöscht werden: ' + err.message);
+                const btn = document.getElementById('delete-account-btn');
+                if (btn) { btn.disabled = false; btn.textContent = 'Account löschen'; }
             }
         });
     }
