@@ -143,35 +143,11 @@ var payments = {
           'Abo wird aktiviert...'
         );
 
-        // Verify subscription with Stripe and update DB
-        try {
-          var session = await db.getSession();
-          if (session) {
-            var response = await fetch(SUPABASE_URL + '/functions/v1/verify-subscription', {
-              method: 'POST',
-              headers: {
-                'Content-Type': 'application/json',
-                'Authorization': 'Bearer ' + session.access_token,
-                'apikey': SUPABASE_ANON_KEY,
-              },
-            });
-            var result = await response.json();
-            if (result.success && result.data.subscription_status === 'pro') {
-              payments._showNotification(
-                'success',
-                'Shift07 Pro ist aktiv!',
-                'Du hast jetzt vollen Zugriff auf alle Funktionen.'
-              );
-            }
-            console.log('[shift07] Subscription verified:', result.data);
-          }
-        } catch (verifyErr) {
-          console.error('[shift07] Subscription verification error:', verifyErr);
-        }
+        // Wait for Supabase to be ready, then verify subscription
+        payments._verifyWithRetry(0);
 
         // Clean the URL
         payments._cleanUrl('checkout');
-        // Also clean hash params
         if (window.location.hash.includes('checkout=')) {
           window.location.hash = window.location.hash.split('?')[0];
         }
@@ -307,6 +283,62 @@ var payments = {
     var div = document.createElement('div');
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
+  },
+
+  /**
+   * Verify subscription with retry - waits for Supabase session to be available.
+   */
+  async _verifyWithRetry(attempt) {
+    if (attempt > 15) {
+      console.error('[shift07] Could not verify subscription after 15 attempts');
+      payments._showNotification('info', 'Fast geschafft', 'Bitte lade die Seite neu um deinen Pro-Status zu aktivieren.');
+      return;
+    }
+
+    // Wait for Supabase to initialize
+    if (!supabaseClient) {
+      console.log('[shift07] Waiting for Supabase... attempt', attempt);
+      setTimeout(function() { payments._verifyWithRetry(attempt + 1); }, 1000);
+      return;
+    }
+
+    try {
+      var session = await db.getSession();
+      if (!session) {
+        console.log('[shift07] No session yet, retrying... attempt', attempt);
+        setTimeout(function() { payments._verifyWithRetry(attempt + 1); }, 1000);
+        return;
+      }
+
+      console.log('[shift07] Verifying subscription for', session.user.email);
+      var response = await fetch(SUPABASE_URL + '/functions/v1/verify-subscription', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': 'Bearer ' + session.access_token,
+          'apikey': SUPABASE_ANON_KEY,
+        },
+      });
+      var result = await response.json();
+      console.log('[shift07] Verify result:', JSON.stringify(result));
+
+      if (result.success && result.data.subscription_status === 'pro') {
+        payments._showNotification('success', 'Shift07 Pro ist aktiv!', 'Du hast jetzt vollen Zugriff auf alle Funktionen.');
+        // Refresh the page after a short delay to update UI
+        setTimeout(function() { window.location.reload(); }, 2000);
+      } else {
+        // Maybe Stripe hasn't processed yet, retry
+        if (attempt < 5) {
+          console.log('[shift07] Not pro yet, retrying in 3s...');
+          setTimeout(function() { payments._verifyWithRetry(attempt + 1); }, 3000);
+        } else {
+          payments._showNotification('info', 'Zahlung erhalten', 'Dein Pro-Status wird in Kürze aktiviert. Bitte lade die Seite in einer Minute neu.');
+        }
+      }
+    } catch (err) {
+      console.error('[shift07] Verify error:', err);
+      setTimeout(function() { payments._verifyWithRetry(attempt + 1); }, 2000);
+    }
   },
 };
 
