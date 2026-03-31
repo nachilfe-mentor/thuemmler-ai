@@ -3,6 +3,24 @@
  * Handles signup, login, OAuth, password reset, and auth UI using Supabase Auth.
  */
 
+/**
+ * Get the Supabase client, initializing it if needed.
+ * Handles the case where the CDN script loads after auth.js.
+ * @returns {object|null} The Supabase client or null.
+ */
+function getSupabase() {
+  if (typeof supabase !== 'undefined' && supabase) return supabase;
+  if (window.supabase && window.supabase.createClient && typeof SUPABASE_URL !== 'undefined' && typeof SUPABASE_ANON_KEY !== 'undefined') {
+    try {
+      supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+      return supabase;
+    } catch (e) {
+      console.error('[shift07] Failed to initialize Supabase:', e);
+    }
+  }
+  return null;
+}
+
 var auth = {
 
   _modalElement: null,
@@ -273,7 +291,8 @@ var auth = {
    */
   async signUp(email, password, name) {
     try {
-      if (!supabase) {
+      var sb = getSupabase();
+      if (!sb) {
         auth._showMessage('error', 'Verbindungsfehler. Bitte lade die Seite neu.');
         return;
       }
@@ -281,7 +300,7 @@ var auth = {
       auth._setFormLoading('auth-signup-form', true);
       auth._clearMessage();
 
-      var { data, error } = await supabase.auth.signUp({
+      var { data, error } = await sb.auth.signUp({
         email: email,
         password: password,
         options: {
@@ -320,7 +339,8 @@ var auth = {
    */
   async signIn(email, password) {
     try {
-      if (!supabase) {
+      var sb = getSupabase();
+      if (!sb) {
         auth._showMessage('error', 'Verbindungsfehler. Bitte lade die Seite neu.');
         return;
       }
@@ -328,7 +348,7 @@ var auth = {
       auth._setFormLoading('auth-login-form', true);
       auth._clearMessage();
 
-      var { data, error } = await supabase.auth.signInWithPassword({
+      var { data, error } = await sb.auth.signInWithPassword({
         email: email,
         password: password,
       });
@@ -356,12 +376,13 @@ var auth = {
    */
   async signInWithGoogle() {
     try {
-      if (!supabase) {
+      var sb = getSupabase();
+      if (!sb) {
         auth._showMessage('error', 'Verbindungsfehler. Bitte lade die Seite neu.');
         return;
       }
 
-      var { data, error } = await supabase.auth.signInWithOAuth({
+      var { data, error } = await sb.auth.signInWithOAuth({
         provider: 'google',
         options: {
           redirectTo: window.location.origin + '/app/',
@@ -384,12 +405,13 @@ var auth = {
    */
   async signOut() {
     try {
-      if (!supabase) {
+      var sb = getSupabase();
+      if (!sb) {
         console.error('[shift07] Supabase not initialized');
         return;
       }
 
-      var { error } = await supabase.auth.signOut();
+      var { error } = await sb.auth.signOut();
       if (error) {
         console.error('[shift07] Sign out error:', error);
       }
@@ -411,7 +433,8 @@ var auth = {
    */
   async resetPassword(email) {
     try {
-      if (!supabase) {
+      var sb = getSupabase();
+      if (!sb) {
         auth._showMessage('error', 'Verbindungsfehler. Bitte lade die Seite neu.');
         return;
       }
@@ -419,7 +442,7 @@ var auth = {
       auth._setFormLoading('auth-reset-form', true);
       auth._clearMessage();
 
-      var { error } = await supabase.auth.resetPasswordForEmail(email, {
+      var { error } = await sb.auth.resetPasswordForEmail(email, {
         redirectTo: window.location.origin + '/app/reset-password',
       });
 
@@ -467,11 +490,12 @@ var auth = {
    * @param {Function} callback - Called with (event, session).
    */
   onAuthStateChange: function(callback) {
-    if (!supabase) {
+    var sb = getSupabase();
+    if (!sb) {
       console.error('[shift07] Supabase not initialized');
       return null;
     }
-    var { data } = supabase.auth.onAuthStateChange(function(event, session) {
+    var { data } = sb.auth.onAuthStateChange(function(event, session) {
       console.log('[shift07] Auth state changed:', event);
       callback(event, session);
       auth.updateUI();
@@ -625,22 +649,38 @@ var auth = {
   _escapeHandler: null,
 };
 
-// Set up auth state listener on load
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', function() {
-    // Small delay to ensure supabase client is initialized
-    setTimeout(function() {
-      auth.onAuthStateChange(function(event, session) {
-        // Auth state change handler - UI update happens automatically
-      });
-      auth.updateUI();
-    }, 100);
-  });
-} else {
-  setTimeout(function() {
+// Set up auth state listener on load, with retry if Supabase isn't ready
+function _initAuthListener() {
+  var sb = getSupabase();
+  if (sb) {
     auth.onAuthStateChange(function(event, session) {
       // Auth state change handler - UI update happens automatically
     });
     auth.updateUI();
-  }, 100);
+  } else {
+    // Retry after a short delay - Supabase CDN may still be loading
+    var retries = 0;
+    var retryInterval = setInterval(function() {
+      retries++;
+      var sb = getSupabase();
+      if (sb) {
+        clearInterval(retryInterval);
+        auth.onAuthStateChange(function(event, session) {
+          // Auth state change handler - UI update happens automatically
+        });
+        auth.updateUI();
+      } else if (retries >= 20) {
+        clearInterval(retryInterval);
+        console.warn('[shift07] Supabase failed to initialize after retries');
+      }
+    }, 250);
+  }
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', function() {
+    setTimeout(_initAuthListener, 100);
+  });
+} else {
+  setTimeout(_initAuthListener, 100);
 }

@@ -255,10 +255,10 @@ function _animatePhase3() {
 
     var categories = [
       { key: 'technical_seo', label: 'Technical SEO', color: '#6366f1' },
-      { key: 'content', label: 'Content', color: '#8b5cf6' },
+      { key: 'content_quality', label: 'Inhaltsqualität', color: '#8b5cf6' },
       { key: 'meta_tags', label: 'Meta Tags', color: '#a78bfa' },
-      { key: 'headings', label: 'Überschriften', color: '#c4b5fd' },
-      { key: 'mobile', label: 'Mobile', color: '#10b981' },
+      { key: 'heading_structure', label: 'Überschriften', color: '#c4b5fd' },
+      { key: 'mobile_usability', label: 'Mobile', color: '#10b981' },
       { key: 'performance', label: 'Performance', color: '#34d399' },
       { key: 'accessibility', label: 'Barrierefreiheit', color: '#f59e0b' },
       { key: 'security', label: 'Sicherheit', color: '#ef4444' },
@@ -424,17 +424,51 @@ async function _callAnalyzeAPI(url) {
     }
 
     var data = await response.json();
-    _scanState.apiResult = data;
+
+    // Normalize the API response for _displayResults
+    if (data.success && data.data && data.data.analysis) {
+      var analysis = data.data.analysis;
+      // Flatten category scores and collect all issues
+      var flatScores = {};
+      var allIssues = [];
+      var categories = analysis.categories || {};
+      for (var catKey in categories) {
+        var cat = categories[catKey];
+        flatScores[catKey] = cat.score || 0;
+        if (cat.issues && cat.issues.length) {
+          cat.issues.forEach(function(issue) {
+            // Map severity: high→error, medium→warning, low→info
+            if (issue.severity === 'high') issue.severity = 'error';
+            else if (issue.severity === 'medium') issue.severity = 'warning';
+            else if (issue.severity === 'low') issue.severity = 'info';
+            allIssues.push(issue);
+          });
+        }
+      }
+
+      _scanState.apiResult = {
+        url: data.data.url,
+        overall_score: analysis.overall_score,
+        summary: analysis.summary,
+        category_scores: flatScores,
+        categories: categories,
+        issues: allIssues,
+        quick_wins: analysis.quick_wins || [],
+      };
+    } else {
+      _scanState.apiResult = data;
+    }
+
     _scanState.apiDone = true;
 
     // Save to database if we have a result
-    if (data && data.url) {
-      db.saveAnalysis(data).catch(function(err) {
+    if (_scanState.apiResult && _scanState.apiResult.url) {
+      db.saveAnalysis(_scanState.apiResult).catch(function(err) {
         console.error('[shift07] Failed to save analysis:', err);
       });
     }
 
-    console.log('[shift07] API analysis complete:', data.overall_score);
+    console.log('[shift07] API analysis complete:', _scanState.apiResult && _scanState.apiResult.overall_score);
   } catch (err) {
     console.error('[shift07] API call failed:', err);
     _scanState.apiError = err.message;
@@ -510,10 +544,10 @@ function _displayResults(result, isFree) {
   html += '<div style="padding:0 20px 32px;max-width:600px;margin:0 auto;">';
   var catLabels = {
     technical_seo: 'Technical SEO',
-    content: 'Content',
+    content_quality: 'Inhaltsqualität',
     meta_tags: 'Meta Tags',
-    headings: 'Überschriften',
-    mobile: 'Mobile',
+    heading_structure: 'Überschriften',
+    mobile_usability: 'Mobile',
     performance: 'Performance',
     accessibility: 'Barrierefreiheit',
     security: 'Sicherheit',
@@ -671,10 +705,10 @@ function _renderRadarChart(categoryScores, targetElementId) {
 
   var categories = [
     { key: 'technical_seo', label: 'Technical SEO' },
-    { key: 'content', label: 'Content' },
+    { key: 'content_quality', label: 'Inhaltsqualität' },
     { key: 'meta_tags', label: 'Meta Tags' },
-    { key: 'headings', label: 'Überschriften' },
-    { key: 'mobile', label: 'Mobile' },
+    { key: 'heading_structure', label: 'Überschriften' },
+    { key: 'mobile_usability', label: 'Mobile' },
     { key: 'performance', label: 'Performance' },
     { key: 'accessibility', label: 'Barrierefreiheit' },
     { key: 'security', label: 'Sicherheit' },
