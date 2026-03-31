@@ -1998,6 +1998,59 @@
             }
         });
 
+        // Handle checkout return - poll until subscription is verified
+        var checkoutParam = new URLSearchParams(window.location.search).get('checkout');
+        if (checkoutParam === 'success') {
+            console.log('[shift07] Checkout success detected in URL');
+            // Show persistent notification
+            var banner = document.createElement('div');
+            banner.id = 'checkout-banner';
+            banner.style.cssText = 'position:fixed;top:0;left:0;right:0;z-index:9999;background:linear-gradient(90deg,#4f46e5,#7c3aed);padding:12px 20px;text-align:center;color:white;font-weight:600;font-size:14px;';
+            banner.textContent = 'Abo wird aktiviert...';
+            document.body.appendChild(banner);
+
+            // Poll verify-subscription every 3 seconds
+            var pollCount = 0;
+            var pollInterval = setInterval(async function() {
+                pollCount++;
+                console.log('[shift07] Polling verify-subscription attempt', pollCount);
+                try {
+                    var session = await db.getSession();
+                    if (!session) {
+                        console.log('[shift07] No session yet');
+                        if (pollCount > 20) { clearInterval(pollInterval); banner.textContent = 'Bitte lade die Seite neu.'; }
+                        return;
+                    }
+                    var resp = await fetch(SUPABASE_URL + '/functions/v1/verify-subscription', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'Authorization': 'Bearer ' + session.access_token,
+                            'apikey': SUPABASE_ANON_KEY,
+                        },
+                    });
+                    var result = await resp.json();
+                    console.log('[shift07] Poll result:', JSON.stringify(result));
+                    if (result.success && result.data.subscription_status === 'pro') {
+                        clearInterval(pollInterval);
+                        banner.textContent = 'Shift07 Pro ist aktiv!';
+                        banner.style.background = 'linear-gradient(90deg,#059669,#10b981)';
+                        // Clean URL and reload
+                        window.history.replaceState({}, '', window.location.pathname);
+                        setTimeout(function() {
+                            window.location.href = window.location.pathname + '#/dashboard';
+                            window.location.reload();
+                        }, 1500);
+                    } else if (pollCount > 20) {
+                        clearInterval(pollInterval);
+                        banner.textContent = 'Bitte lade die Seite neu um den Pro-Status zu aktivieren.';
+                    }
+                } catch (e) {
+                    console.error('[shift07] Poll error:', e);
+                }
+            }, 3000);
+        }
+
         // Initial navigation
         if (!window.location.hash || window.location.hash === '#' || window.location.hash === '#/') {
             window.location.hash = '#/dashboard';
