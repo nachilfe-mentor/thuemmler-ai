@@ -1783,10 +1783,6 @@
                 await auth.signOut();
                 showNotification('success', 'Account gelöscht', 'Dein Account und alle Daten wurden gelöscht.');
                 window.location.hash = '#/login';
-                return; // skip the old fetch logic below
-
-                await auth.signOut();
-                window.location.href = '../index.html';
             } catch (err) {
                 showNotification('error', 'Fehler', 'Account konnte nicht gelöscht werden: ' + err.message);
             }
