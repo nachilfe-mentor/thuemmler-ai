@@ -47,10 +47,22 @@ window.startScan = async function(url) {
     await _animatePhase3();
     await _animatePhase4();
 
-    // Wait for API if not done yet
+    // Wait for API if not done yet - show animated status so user knows it's still working
     if (!_scanState.apiDone) {
-      _updateScanStatus('Daten werden geladen...');
+      _updateScanStatus('Tiefenanalyse läuft, bitte einen Moment Geduld...');
+      var dots = 0;
+      var statusInterval = setInterval(function() {
+        dots = (dots + 1) % 4;
+        var messages = [
+          'Tiefenanalyse läuft' + '.'.repeat(dots),
+          'KI wertet Ergebnisse aus' + '.'.repeat(dots),
+          'Detaillierter Report wird erstellt' + '.'.repeat(dots),
+        ];
+        var idx = Math.floor(Date.now() / 5000) % messages.length;
+        _updateScanStatus(messages[idx]);
+      }, 800);
       await _waitForApi(90000);
+      clearInterval(statusInterval);
     }
 
     // Hide overlay
