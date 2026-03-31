@@ -235,14 +235,30 @@ function _animatePhase2() {
         '</div>' +
       '</div>';
 
-    // Determine target values from API result or use random placeholders
+    // Use real data if API is already done, otherwise show animated dots
     var meta = (_scanState.apiResult && _scanState.apiResult.metadata) || null;
     var targets = {
-      elements: meta ? (meta.elements || meta.element_count || 247) : Math.floor(Math.random() * 300) + 100,
-      images: meta ? (meta.images || meta.image_count || 34) : Math.floor(Math.random() * 50) + 10,
-      headings: meta ? (meta.headings || meta.heading_count || 18) : Math.floor(Math.random() * 25) + 5,
-      links: meta ? (meta.links || meta.link_count || 67) : Math.floor(Math.random() * 80) + 20,
+      elements: meta ? (meta.element_count || meta.script_count * 20 || 150) : 0,
+      images: meta ? (meta.image_count || 0) : 0,
+      headings: meta ? (meta.heading_count || 0) : 0,
+      links: meta ? (meta.link_count || 0) : 0,
     };
+    // If no real data yet, show generic "scanning" animation instead of fake numbers
+    if (!meta) {
+      targets = { elements: 0, images: 0, headings: 0, links: 0 };
+      // Update counters with dots animation to show activity
+      var dotInterval = setInterval(function() {
+        ['elements','images','headings','links'].forEach(function(key) {
+          var el = document.getElementById('scan-count-' + key);
+          if (el) {
+            var dots = (el.textContent.length % 3) + 1;
+            el.textContent = '.'.repeat(dots);
+            el.style.fontSize = '24px';
+          }
+        });
+      }, 500);
+      setTimeout(function() { clearInterval(dotInterval); }, 6500);
+    }
 
     // Animate counters
     _animateCounter('scan-count-elements', targets.elements, 6500);
@@ -259,7 +275,7 @@ function _animatePhase2() {
  * Fill radar chart categories one by one with scores.
  */
 function _animatePhase3() {
-  return new Promise(function(resolve) {
+  return new Promise(async function(resolve) {
     _updateScanStatus('KI-Analyse läuft...', 'Kategorien werden bewertet');
 
     var content = document.getElementById('scan-phase-content');
@@ -276,16 +292,29 @@ function _animatePhase3() {
       { key: 'security', label: 'Sicherheit', color: '#ef4444' },
     ];
 
-    // Get real scores if available
-    var scores = (_scanState.apiResult && _scanState.apiResult.category_scores) || null;
+    // Show loading spinner while waiting for API
+    content.innerHTML =
+      '<div class="scan-phase" style="max-width:500px;margin:24px auto 0;text-align:center;">' +
+        '<div style="width:48px;height:48px;border:3px solid rgba(99,102,241,0.2);border-top-color:#6366f1;border-radius:50%;animation:scanSpin 1s linear infinite;margin:0 auto 16px;"></div>' +
+        '<p style="color:#94a3b8;font-size:14px;">Website wird von der KI analysiert...</p>' +
+      '</div>';
+
+    // Wait for the real API result before showing scores
+    if (!_scanState.apiDone) {
+      await _waitForApi(70000);
+    }
+
+    // Use REAL scores only
+    var scores = (_scanState.apiResult && _scanState.apiResult.category_scores) || {};
 
     var barsHtml = '';
     categories.forEach(function(cat) {
-      var score = scores ? (scores[cat.key] || Math.floor(Math.random() * 40) + 50) : 0;
-      barsHtml += '<div style="display:flex;align-items:center;gap:12px;margin-bottom:10px;" class="scan-category-bar" data-key="' + cat.key + '" data-score="' + score + '">' +
+      var score = scores[cat.key] || 0;
+      var barColor = score >= 80 ? '#10b981' : score >= 50 ? '#f59e0b' : '#ef4444';
+      barsHtml += '<div style="display:flex;align-items:center;gap:12px;margin-bottom:10px;" class="scan-category-bar" data-score="' + score + '">' +
         '<span style="color:#94a3b8;font-size:13px;width:130px;text-align:right;flex-shrink:0;">' + cat.label + '</span>' +
         '<div style="flex:1;height:8px;background:rgba(100,116,139,0.15);border-radius:4px;overflow:hidden;">' +
-          '<div class="scan-bar-fill" style="width:0%;height:100%;background:' + cat.color + ';border-radius:4px;transition:width 0.8s ease-out;"></div>' +
+          '<div class="scan-bar-fill" style="width:0%;height:100%;background:' + barColor + ';border-radius:4px;transition:width 0.8s ease-out;"></div>' +
         '</div>' +
         '<span class="scan-bar-value" style="color:#e2e8f0;font-size:14px;font-weight:600;width:36px;text-align:right;">0</span>' +
       '</div>';
@@ -293,22 +322,20 @@ function _animatePhase3() {
 
     content.innerHTML = '<div class="scan-phase" style="max-width:500px;margin:24px auto 0;">' + barsHtml + '</div>';
 
-    // Animate bars one by one
+    // Animate bars one by one with REAL scores
     var bars = content.querySelectorAll('.scan-category-bar');
-    var delay = 0;
     bars.forEach(function(bar, i) {
-      delay = i * 1100;
       setTimeout(function() {
-        var targetScore = parseInt(bar.getAttribute('data-score')) || Math.floor(Math.random() * 40) + 50;
+        var targetScore = parseInt(bar.getAttribute('data-score')) || 0;
         var fill = bar.querySelector('.scan-bar-fill');
         var valueEl = bar.querySelector('.scan-bar-value');
 
         if (fill) fill.style.width = targetScore + '%';
         _animateCounterElement(valueEl, targetScore, 800);
-      }, delay);
+      }, i * 600);
     });
 
-    setTimeout(resolve, 10000);
+    setTimeout(resolve, categories.length * 600 + 1500);
   });
 }
 
