@@ -50,7 +50,7 @@ window.startScan = async function(url) {
     // Wait for API if not done yet
     if (!_scanState.apiDone) {
       _updateScanStatus('Daten werden geladen...');
-      await _waitForApi(15000);
+      await _waitForApi(90000);
     }
 
     // Hide overlay

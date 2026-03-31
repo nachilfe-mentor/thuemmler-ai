@@ -1553,7 +1553,7 @@
                 const user = await db.getUser();
                 if (!user) throw new Error('Nicht angemeldet');
 
-                const { error } = await supabaseClient.from('monitored_urls').insert({
+                const { error } = await supabaseClient.from('tracked_urls').insert({
                     user_id: user.id,
                     url: url,
                     schedule: schedule,
@@ -1577,7 +1577,7 @@
                 if (!user) throw new Error('Nicht angemeldet');
 
                 const { data, error } = await supabaseClient
-                    .from('monitored_urls')
+                    .from('tracked_urls')
                     .select('*')
                     .eq('user_id', user.id)
                     .order('created_at', { ascending: false });
@@ -1653,7 +1653,7 @@
             if (!confirmed) return;
 
             try {
-                const { error } = await supabaseClient.from('monitored_urls').delete().eq('id', id);
+                const { error } = await supabaseClient.from('tracked_urls').delete().eq('id', id);
                 if (error) throw error;
                 showNotification('success', 'Entfernt', 'URL wurde aus dem Monitoring entfernt.');
                 loadMonitoredUrls();
