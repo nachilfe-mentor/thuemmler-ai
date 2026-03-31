@@ -93,9 +93,9 @@ serve(async (req) => {
       );
     }
 
-    // Get active subscriptions for this customer
-    const subs = (await stripeGet(
-      `/subscriptions?customer=${customerId}&status=active&limit=1`,
+    // Check ALL subscriptions for this customer (any paid status = pro)
+    const allSubs = (await stripeGet(
+      `/subscriptions?customer=${customerId}&limit=5`,
       stripeSecretKey
     )) as { data?: { id: string; status: string; current_period_end: number }[] };
 
@@ -103,25 +103,47 @@ serve(async (req) => {
     let subscriptionId = null;
     let periodEnd = null;
 
-    if (subs.data && subs.data.length > 0) {
-      const sub = subs.data[0];
-      subscriptionStatus = sub.status === "active" ? "pro" : "free";
-      subscriptionId = sub.id;
-      periodEnd = new Date(sub.current_period_end * 1000).toISOString();
-    } else {
-      // Also check trialing
-      const trialSubs = (await stripeGet(
-        `/subscriptions?customer=${customerId}&status=trialing&limit=1`,
-        stripeSecretKey
-      )) as { data?: { id: string; status: string; current_period_end: number }[] };
-
-      if (trialSubs.data && trialSubs.data.length > 0) {
-        const sub = trialSubs.data[0];
-        subscriptionStatus = "pro";
-        subscriptionId = sub.id;
-        periodEnd = new Date(sub.current_period_end * 1000).toISOString();
+    const proStatuses = ["active", "trialing", "past_due"];
+    if (allSubs.data) {
+      for (const sub of allSubs.data) {
+        if (proStatuses.includes(sub.status)) {
+          subscriptionStatus = "pro";
+          subscriptionId = sub.id;
+          periodEnd = new Date(sub.current_period_end * 1000).toISOString();
+          break;
+        }
       }
     }
+
+    // If still free, check recent completed checkout sessions (Stripe might not have
+    // created the subscription yet but the payment was successful)
+    if (subscriptionStatus === "free") {
+      const sessions = (await stripeGet(
+        `/checkout/sessions?customer=${customerId}&limit=3`,
+        stripeSecretKey
+      )) as { data?: { id: string; status: string; payment_status: string; subscription: string }[] };
+
+      if (sessions.data) {
+        for (const session of sessions.data) {
+          if (session.payment_status === "paid" && session.subscription) {
+            // Payment was made, subscription exists
+            subscriptionStatus = "pro";
+            subscriptionId = session.subscription;
+            // Get the subscription details for period end
+            const subDetail = (await stripeGet(
+              `/subscriptions/${session.subscription}`,
+              stripeSecretKey
+            )) as { current_period_end?: number; status?: string };
+            if (subDetail.current_period_end) {
+              periodEnd = new Date(subDetail.current_period_end * 1000).toISOString();
+            }
+            break;
+          }
+        }
+      }
+    }
+
+    console.log(`[verify-subscription] Customer ${customerId}: status=${subscriptionStatus}, sub=${subscriptionId}`);
 
     // Update the profile in the database
     const { error: updateError } = await supabase.from("profiles").update({
