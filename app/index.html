@@ -698,12 +698,13 @@
             </div>
         </div>`;
 
-        // Quick analyze
-        document.getElementById('dashboard-quick-analyze').addEventListener('submit', (e) => {
+        // Quick analyze - start scan directly from dashboard
+        document.getElementById('dashboard-quick-analyze').addEventListener('submit', async (e) => {
             e.preventDefault();
             const url = e.target.querySelector('input').value.trim();
-            if (url) {
-                window.location.hash = '#/analyze?url=' + encodeURIComponent(url);
+            if (!url) return;
+            if (typeof window.startScan === 'function') {
+                await window.startScan(url);
             }
         });
 
