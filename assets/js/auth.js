@@ -101,9 +101,9 @@ var auth = {
       '</div>' +
 
       // Tabs
-      '<div style="display:flex;gap:4px;background:rgba(15,23,42,0.5);border-radius:10px;padding:4px;margin-bottom:24px;">' +
-        '<button class="auth-tab ' + (isSignup ? 'active' : '') + '" data-tab="signup">Registrieren</button>' +
-        '<button class="auth-tab ' + (!isSignup ? 'active' : '') + '" data-tab="login">Anmelden</button>' +
+      '<div style="display:flex;gap:4px;background:rgba(15,23,42,0.5);border-radius:10px;padding:4px;margin-bottom:24px;width:100%;box-sizing:border-box;">' +
+        '<button class="auth-tab ' + (isSignup ? 'active' : '') + '" data-tab="signup" style="flex:1;">Registrieren</button>' +
+        '<button class="auth-tab ' + (!isSignup ? 'active' : '') + '" data-tab="login" style="flex:1;">Anmelden</button>' +
       '</div>' +
 
       // Error / Success messages

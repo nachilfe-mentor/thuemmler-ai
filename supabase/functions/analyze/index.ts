@@ -476,55 +476,110 @@ serve(async (req) => {
       );
     }
 
-    console.log(`[analyze] Calling OpenAI API...`);
-    const openaiResponse = await fetch(
-      "https://api.openai.com/v1/chat/completions",
-      {
-        method: "POST",
-        headers: {
-          Authorization: `Bearer ${openaiKey}`,
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          model: "gpt-4o-mini",
-          response_format: { type: "json_object" },
-          messages: [
-            { role: "system", content: SYSTEM_PROMPT },
-            { role: "user", content: JSON.stringify(metadata) },
-          ],
-          temperature: 0.3,
-          max_tokens: 4000,
-        }),
+    // Required category keys for validation
+    const REQUIRED_CATEGORIES = [
+      "technical_seo",
+      "content_quality",
+      "meta_tags",
+      "heading_structure",
+      "mobile_usability",
+      "performance",
+      "accessibility",
+      "security",
+    ];
+
+    /**
+     * Call OpenAI with retry logic, timeout, and response validation.
+     */
+    async function callOpenAIWithRetry(messages: any[], maxRetries = 3): Promise<any> {
+      for (let attempt = 0; attempt < maxRetries; attempt++) {
+        try {
+          const controller = new AbortController();
+          const timeoutId = setTimeout(() => controller.abort(), 25000);
+
+          const response = await fetch("https://api.openai.com/v1/chat/completions", {
+            method: "POST",
+            headers: {
+              "Authorization": `Bearer ${openaiKey}`,
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              model: "gpt-4o-mini",
+              response_format: { type: "json_object" },
+              messages: messages,
+              temperature: 0.3,
+              max_tokens: 4000,
+            }),
+            signal: controller.signal,
+          });
+
+          clearTimeout(timeoutId);
+
+          if (response.status === 429) {
+            // Rate limited - wait and retry
+            const waitTime = Math.pow(2, attempt) * 1000;
+            console.log(`[analyze] Rate limited, retry ${attempt + 1}/${maxRetries} after ${waitTime}ms`);
+            await new Promise(r => setTimeout(r, waitTime));
+            continue;
+          }
+
+          if (!response.ok) {
+            throw new Error(`OpenAI API error: ${response.status}`);
+          }
+
+          const data = await response.json();
+          const content = data.choices?.[0]?.message?.content;
+          if (!content) throw new Error("Empty response from OpenAI");
+
+          const parsed = JSON.parse(content);
+
+          // Validate the response has the expected structure
+          if (!parsed.overall_score || !parsed.categories) {
+            throw new Error("Invalid response structure");
+          }
+
+          // Ensure all 8 categories exist with valid data
+          for (const key of REQUIRED_CATEGORIES) {
+            if (!parsed.categories[key]) {
+              console.warn(`[analyze] Missing category '${key}', adding default`);
+              parsed.categories[key] = {
+                score: 50,
+                label: key.replace(/_/g, " ").replace(/\b\w/g, (c: string) => c.toUpperCase()),
+                issues: [],
+              };
+            } else {
+              if (typeof parsed.categories[key].score !== "number") {
+                parsed.categories[key].score = 50;
+              }
+              if (!Array.isArray(parsed.categories[key].issues)) {
+                parsed.categories[key].issues = [];
+              }
+            }
+          }
+
+          return parsed;
+        } catch (err) {
+          if (attempt === maxRetries - 1) throw err;
+          const waitTime = Math.pow(2, attempt) * 1000;
+          const errMsg = err instanceof Error ? err.message : String(err);
+          console.log(`[analyze] Retry ${attempt + 1}/${maxRetries} after ${waitTime}ms: ${errMsg}`);
+          await new Promise(r => setTimeout(r, waitTime));
+        }
       }
-    );
-
-    if (!openaiResponse.ok) {
-      const errBody = await openaiResponse.text();
-      console.error(`[analyze] OpenAI API error: ${openaiResponse.status} ${errBody}`);
-      return new Response(
-        JSON.stringify({ success: false, error: "Analysis failed. Please try again." }),
-        { status: 502, headers: { ...corsHeaders, "Content-Type": "application/json" } }
-      );
     }
 
-    const openaiData = await openaiResponse.json();
-    const analysisText = openaiData.choices?.[0]?.message?.content;
-
-    if (!analysisText) {
-      console.error("[analyze] Empty response from OpenAI");
-      return new Response(
-        JSON.stringify({ success: false, error: "Analysis returned empty results." }),
-        { status: 502, headers: { ...corsHeaders, "Content-Type": "application/json" } }
-      );
-    }
-
+    console.log(`[analyze] Calling OpenAI API...`);
     let analysis: Record<string, unknown>;
     try {
-      analysis = JSON.parse(analysisText);
-    } catch {
-      console.error("[analyze] Failed to parse OpenAI JSON response");
+      analysis = await callOpenAIWithRetry([
+        { role: "system", content: SYSTEM_PROMPT },
+        { role: "user", content: JSON.stringify(metadata) },
+      ]);
+    } catch (err) {
+      const errMsg = err instanceof Error ? err.message : String(err);
+      console.error(`[analyze] OpenAI API failed after retries: ${errMsg}`);
       return new Response(
-        JSON.stringify({ success: false, error: "Failed to parse analysis results." }),
+        JSON.stringify({ success: false, error: "Analysis failed. Please try again." }),
         { status: 502, headers: { ...corsHeaders, "Content-Type": "application/json" } }
       );
     }

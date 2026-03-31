@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Datenschutz - Thümmler AI GmbH</title>
-    <meta name="description" content="Datenschutzerklärung der Thümmler AI GmbH - Informationen zum Schutz Ihrer Daten">
-    <meta name="keywords" content="Datenschutz, DSGVO, Thümmler AI, Datenschutzerklärung">
+    <title>Datenschutzerklärung - shift07.ai | Thümmler AI GmbH</title>
+    <meta name="description" content="Datenschutzerklärung von shift07.ai (Thümmler AI GmbH) - Informationen zum Schutz Ihrer personenbezogenen Daten gemäß DSGVO">
+    <meta name="keywords" content="Datenschutz, DSGVO, GDPR, shift07.ai, Thümmler AI, Datenschutzerklärung, Privatsphäre">
     <meta name="author" content="Thümmler AI GmbH">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,30 +26,30 @@
         body {
             font-family: 'Inter', system-ui, -apple-system, sans-serif;
         }
-        
+
         /* Custom scrollbar for webkit browsers */
         ::-webkit-scrollbar {
             width: 8px;
         }
-        
+
         ::-webkit-scrollbar-track {
             background: rgba(15, 23, 42, 0.5);
         }
-        
+
         ::-webkit-scrollbar-thumb {
             background: rgba(59, 130, 246, 0.5);
             border-radius: 4px;
         }
-        
+
         ::-webkit-scrollbar-thumb:hover {
             background: rgba(59, 130, 246, 0.7);
         }
-        
+
         /* Smooth scrolling */
         html {
             scroll-behavior: smooth;
         }
-        
+
         /* Custom gradient text animation */
         @keyframes gradient-x {
             0%, 100% {
@@ -61,18 +61,18 @@
                 background-position: right center;
             }
         }
-        
+
         .animate-gradient-x {
             animation: gradient-x 3s ease infinite;
         }
-        
+
         /* Glass morphism effect */
         .glass {
             background: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.2);
         }
-        
+
         /* Custom focus styles */
         .focus-visible:focus-visible {
             outline: 2px solid rgba(59, 130, 246, 0.8);
@@ -88,254 +88,699 @@
                 <div class="flex justify-between items-center h-16">
                     <div class="flex items-center">
                         <a href="index.html" class="text-2xl font-bold text-white">
-                            Thümmler AI
+                            Shift07
                         </a>
                     </div>
                     <div class="hidden md:block">
                         <div class="ml-10 flex items-baseline space-x-4">
-                            <a href="index.html" class="text-white hover:text-blue-300 px-3 py-2 rounded-md text-sm font-medium transition-colors">
-                                Home
-                            </a>
-                            <a href="anwendungen.html" class="text-white hover:text-blue-300 px-3 py-2 rounded-md text-sm font-medium transition-colors">
-                                Anwendungen
-                            </a>
-                            <a href="ueber-uns.html" class="text-white hover:text-blue-300 px-3 py-2 rounded-md text-sm font-medium transition-colors">
-                                Über uns
-                            </a>
-                            <a href="kontakt.html" class="text-white hover:text-blue-300 px-3 py-2 rounded-md text-sm font-medium transition-colors">
-                                Kontakt
-                            </a>
-                            <a href="impressum.html" class="text-white hover:text-blue-300 px-3 py-2 rounded-md text-sm font-medium transition-colors">
+                            <a href="impressum.html" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
                                 Impressum
+                            </a>
+                            <a href="datenschutz.html" class="text-blue-300 px-3 py-2 rounded-md text-sm font-medium">
+                                Datenschutz
+                            </a>
+                            <a href="agb.html" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
+                                AGB
                             </a>
                         </div>
                     </div>
+                    <!-- Mobile menu button -->
+                    <div class="md:hidden">
+                        <button id="mobile-menu-btn" class="text-gray-300 hover:text-white focus:outline-none">
+                            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <!-- Mobile menu -->
+                <div id="mobile-menu" class="hidden md:hidden pb-4">
+                    <a href="impressum.html" class="block text-gray-300 hover:text-white px-3 py-2 text-sm font-medium">Impressum</a>
+                    <a href="datenschutz.html" class="block text-blue-300 px-3 py-2 text-sm font-medium">Datenschutz</a>
+                    <a href="agb.html" class="block text-gray-300 hover:text-white px-3 py-2 text-sm font-medium">AGB</a>
                 </div>
             </div>
         </nav>
 
         <!-- Main Content -->
         <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-            <div class="bg-white/10 backdrop-blur-md rounded-xl p-8 border border-white/20">
-                <h1 class="text-4xl md:text-5xl font-bold text-white mb-8 text-center">
-                    <span class="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                        Datenschutzerklärung
-                    </span>
-                </h1>
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-12 text-center">
+                <span class="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                    Datenschutzerkl&auml;rung
+                </span>
+            </h1>
 
-                <div class="space-y-8 text-gray-300">
-                    <!-- Introduction -->
-                    <section>
-                        <h2 class="text-2xl font-bold text-white mb-4">1. Datenschutz auf einen Blick</h2>
-                        <div class="bg-white/5 rounded-lg p-6 border border-white/10 space-y-4">
-                            <div>
-                                <h3 class="text-lg font-bold text-white mb-2">Allgemeine Hinweise</h3>
-                                <p class="leading-relaxed">
-                                    Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen 
-                                    Daten passiert, wenn Sie diese Website besuchen. Personenbezogene Daten sind alle Daten, 
-                                    mit denen Sie persönlich identifiziert werden können.
-                                </p>
-                            </div>
-                        </div>
-                    </section>
+            <div class="space-y-8 text-gray-300">
 
-                    <!-- Data Controller -->
-                    <section>
-                        <h2 class="text-2xl font-bold text-white mb-4">2. Verantwortliche Stelle</h2>
+                <!-- 1. Verantwortlicher -->
+                <section>
+                    <div class="glass rounded-xl p-8">
+                        <h2 class="text-2xl font-bold text-white mb-4">1. Verantwortlicher</h2>
+                        <p class="leading-relaxed mb-4">
+                            Verantwortlicher im Sinne der Datenschutz-Grundverordnung (DSGVO) und anderer nationaler
+                            Datenschutzgesetze sowie sonstiger datenschutzrechtlicher Bestimmungen ist:
+                        </p>
                         <div class="bg-white/5 rounded-lg p-6 border border-white/10">
-                            <p class="text-lg leading-relaxed">
-                                <strong class="text-white">Verantwortliche Stelle für die Datenverarbeitung:</strong><br>
-                                Thümmler AI GmbH<br>
-                                Eisenhartstraße 8<br>
-                                14469 Potsdam<br>
+                            <p class="leading-relaxed">
+                                <strong class="text-white">Th&uuml;mmler AI GmbH</strong><br>
+                                Leonardo-da-Vinci-Stra&szlig;e 15<br>
+                                14467 Potsdam<br>
                                 Deutschland<br><br>
-                                <strong class="text-white">Geschäftsführer:</strong> Helene Thümmler<br>
-                                <strong class="text-white">E-Mail:</strong> 
-                                <a href="mailto:support@nachhilfe-mentor.de" class="text-blue-300 hover:text-blue-200 transition-colors ml-1">
-                                    support@nachhilfe-mentor.de
-                                </a><br>
-                                <strong class="text-white">Telefon:</strong> 
-                                <a href="tel:+4915758249014" class="text-blue-300 hover:text-blue-200 transition-colors ml-1">
-                                    +49 1575 8249014
-                                </a>
+                                <strong class="text-white">Gesch&auml;ftsf&uuml;hrerin:</strong> Helene Th&uuml;mmler<br>
+                                <strong class="text-white">E-Mail:</strong>
+                                <a href="mailto:laurenz@shift07.ai" class="text-blue-300 hover:text-blue-200 transition-colors">laurenz@shift07.ai</a>
                             </p>
                         </div>
-                    </section>
+                    </div>
+                </section>
 
-                    <!-- Data Collection -->
-                    <section>
-                        <h2 class="text-2xl font-bold text-white mb-4">3. Datenerfassung auf dieser Website</h2>
+                <!-- 2. Datenschutzbeauftragter -->
+                <section>
+                    <div class="glass rounded-xl p-8">
+                        <h2 class="text-2xl font-bold text-white mb-4">2. Datenschutzbeauftragter</h2>
+                        <p class="leading-relaxed">
+                            Die Benennung eines Datenschutzbeauftragten ist f&uuml;r uns gesetzlich nicht verpflichtend,
+                            da wir weniger als 20 Personen besch&auml;ftigen, die st&auml;ndig mit der automatisierten
+                            Verarbeitung personenbezogener Daten betraut sind (&sect;&nbsp;38 BDSG).
+                        </p>
+                        <p class="leading-relaxed mt-4">
+                            F&uuml;r datenschutzrechtliche Anfragen wenden Sie sich bitte an:
+                        </p>
+                        <p class="leading-relaxed mt-2">
+                            <strong class="text-white">E-Mail:</strong>
+                            <a href="mailto:laurenz@shift07.ai" class="text-blue-300 hover:text-blue-200 transition-colors">laurenz@shift07.ai</a>
+                        </p>
+                    </div>
+                </section>
+
+                <!-- 3. Übersicht der Verarbeitungen -->
+                <section>
+                    <div class="glass rounded-xl p-8">
+                        <h2 class="text-2xl font-bold text-white mb-4">3. &Uuml;bersicht der Verarbeitungen</h2>
+                        <p class="leading-relaxed mb-4">
+                            Die nachfolgende &Uuml;bersicht fasst die Arten der verarbeiteten Daten und die Zwecke
+                            ihrer Verarbeitung zusammen und verweist auf die betroffenen Personen.
+                        </p>
                         <div class="bg-white/5 rounded-lg p-6 border border-white/10 space-y-4">
                             <div>
-                                <h3 class="text-lg font-bold text-white mb-2">Wer ist verantwortlich für die Datenerfassung?</h3>
-                                <p class="leading-relaxed">
-                                    Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber. 
-                                    Dessen Kontaktdaten können Sie dem Abschnitt „Verantwortliche Stelle" in dieser 
-                                    Datenschutzerklärung entnehmen.
-                                </p>
-                            </div>
-                            
-                            <div>
-                                <h3 class="text-lg font-bold text-white mb-2">Wie erfassen wir Ihre Daten?</h3>
-                                <p class="leading-relaxed">
-                                    Ihre Daten werden zum einen dadurch erhoben, dass Sie uns diese mitteilen. Hierbei kann es sich 
-                                    z.B. um Daten handeln, die Sie in ein Kontaktformular eingeben. Andere Daten werden automatisch 
-                                    oder nach Ihrer Einwilligung beim Besuch der Website durch unsere IT-Systeme erfasst.
-                                </p>
-                            </div>
-                            
-                            <div>
-                                <h3 class="text-lg font-bold text-white mb-2">Wofür nutzen wir Ihre Daten?</h3>
-                                <p class="leading-relaxed">
-                                    Ein Teil der Daten wird erhoben, um eine fehlerfreie Bereitstellung der Website zu gewährleisten. 
-                                    Andere Daten können zur Analyse Ihres Nutzerverhaltens verwendet werden, um unsere Dienste zu verbessern.
-                                </p>
-                            </div>
-                        </div>
-                    </section>
-
-                    <!-- Rights -->
-                    <section>
-                        <h2 class="text-2xl font-bold text-white mb-4">4. Ihre Rechte</h2>
-                        <div class="bg-white/5 rounded-lg p-6 border border-white/10">
-                            <p class="leading-relaxed mb-4">
-                                Sie haben jederzeit das Recht:
-                            </p>
-                            <ul class="list-disc list-inside space-y-2 ml-4">
-                                <li>unentgeltlich Auskunft über Herkunft, Empfänger und Zweck Ihrer gespeicherten personenbezogenen Daten zu erhalten</li>
-                                <li>Berichtigung oder Löschung dieser Daten zu verlangen</li>
-                                <li>Einschränkung der Datenverarbeitung zu verlangen</li>
-                                <li>der Datenverarbeitung zu widersprechen</li>
-                                <li>Datenübertragbarkeit zu verlangen</li>
-                                <li>sich bei einer Aufsichtsbehörde über die Verarbeitung Ihrer personenbezogenen Daten zu beschweren</li>
-                            </ul>
-                        </div>
-                    </section>
-
-                    <!-- Server Data -->
-                    <section>
-                        <h2 class="text-2xl font-bold text-white mb-4">5. Server-Log-Dateien</h2>
-                        <div class="bg-white/5 rounded-lg p-6 border border-white/10 space-y-4">
-                            <div>
-                                <h3 class="text-lg font-bold text-white mb-2">Automatische Datenerfassung</h3>
-                                <p class="leading-relaxed">
-                                    Der Provider der Seiten erhebt und speichert automatisch Informationen in so genannten Server-Log-Dateien, 
-                                    die Ihr Browser automatisch an uns übermittelt. Dies sind:
-                                </p>
-                                <ul class="list-disc list-inside mt-2 space-y-1 ml-4">
-                                    <li>Browsertyp und Browserversion</li>
-                                    <li>verwendetes Betriebssystem</li>
-                                    <li>Referrer URL</li>
-                                    <li>Hostname des zugreifenden Rechners</li>
-                                    <li>Uhrzeit der Serveranfrage</li>
-                                    <li>IP-Adresse</li>
+                                <h3 class="text-lg font-semibold text-white mb-2">Arten der verarbeiteten Daten</h3>
+                                <ul class="list-disc list-inside space-y-1 ml-2">
+                                    <li>Bestandsdaten (z.&nbsp;B. E-Mail-Adresse, Name)</li>
+                                    <li>Nutzungsdaten (z.&nbsp;B. aufgerufene Seiten, Zugriffszeiten)</li>
+                                    <li>Meta-/Kommunikationsdaten (z.&nbsp;B. IP-Adressen, Ger&auml;teinformationen)</li>
+                                    <li>Zahlungsdaten (z.&nbsp;B. Zahlungsmethode, Rechnungsadresse)</li>
+                                    <li>Inhaltsdaten (z.&nbsp;B. Website-URLs, die zur Analyse eingereicht werden)</li>
+                                    <li>Authentifizierungsdaten (z.&nbsp;B. Passwort-Hashes, Session-Tokens)</li>
+                                    <li>Analyse-Verlaufsdaten (z.&nbsp;B. durchgef&uuml;hrte Analysen und deren Ergebnisse)</li>
                                 </ul>
                             </div>
-                            
                             <div>
-                                <h3 class="text-lg font-bold text-white mb-2">Rechtsgrundlage</h3>
-                                <p class="leading-relaxed">
-                                    Die Verarbeitung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO aus unserem berechtigten 
-                                    Interesse an der Gewährleistung der Funktionsfähigkeit und Sicherheit unserer Website.
-                                </p>
+                                <h3 class="text-lg font-semibold text-white mb-2">Kategorien betroffener Personen</h3>
+                                <ul class="list-disc list-inside space-y-1 ml-2">
+                                    <li>Nutzer unserer Webanwendung (Kunden, Interessenten)</li>
+                                    <li>Besucher der Website</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-white mb-2">Zwecke der Verarbeitung</h3>
+                                <ul class="list-disc list-inside space-y-1 ml-2">
+                                    <li>Bereitstellung und Betrieb unserer Webanwendung</li>
+                                    <li>Nutzerkontoverwaltung und Authentifizierung</li>
+                                    <li>Erbringung der AI-Analysedienstleistung</li>
+                                    <li>Zahlungsabwicklung und Abrechnung</li>
+                                    <li>Sicherheit und Missbrauchspr&auml;vention</li>
+                                    <li>Kommunikation mit Nutzern</li>
+                                </ul>
                             </div>
                         </div>
-                    </section>
+                    </div>
+                </section>
 
-                    <!-- Contact Forms -->
-                    <section>
-                        <h2 class="text-2xl font-bold text-white mb-4">6. Kontaktaufnahme</h2>
-                        <div class="bg-white/5 rounded-lg p-6 border border-white/10 space-y-4">
-                            <div>
-                                <h3 class="text-lg font-bold text-white mb-2">Kontakt per E-Mail oder Telefon</h3>
-                                <p class="leading-relaxed">
-                                    Wenn Sie uns per E-Mail oder Telefon kontaktieren, wird Ihre Anfrage inklusive aller daraus 
-                                    hervorgehenden personenbezogenen Daten (Name, Anfrage) zum Zwecke der Bearbeitung Ihres Anliegens 
-                                    bei uns gespeichert und verarbeitet.
-                                </p>
-                            </div>
-                            
-                            <div>
-                                <h3 class="text-lg font-bold text-white mb-2">Rechtsgrundlage</h3>
-                                <p class="leading-relaxed">
-                                    Die Verarbeitung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO, sofern Ihre Anfrage mit 
-                                    der Erfüllung eines Vertrags zusammenhängt oder zur Durchführung vorvertraglicher Maßnahmen 
-                                    erforderlich ist. In allen übrigen Fällen beruht die Verarbeitung auf unserem berechtigten 
-                                    Interesse an der effektiven Bearbeitung der an uns gerichteten Anfragen (Art. 6 Abs. 1 lit. f DSGVO).
-                                </p>
-                            </div>
-                        </div>
-                    </section>
-
-                    <!-- Data Retention -->
-                    <section>
-                        <h2 class="text-2xl font-bold text-white mb-4">7. Speicherdauer</h2>
-                        <div class="bg-white/5 rounded-lg p-6 border border-white/10">
-                            <p class="leading-relaxed">
-                                Wir speichern personenbezogene Daten nur so lange, wie es für die Erfüllung der jeweiligen Zwecke 
-                                erforderlich ist oder gesetzliche Aufbewahrungsfristen bestehen. Nach Ablauf dieser Fristen werden 
-                                die entsprechenden Daten routinemäßig gelöscht, sofern sie nicht mehr zur Vertragserfüllung oder 
-                                Vertragsanbahnung erforderlich sind.
-                            </p>
-                        </div>
-                    </section>
-
-                    <!-- Third Party Services -->
-                    <section>
-                        <h2 class="text-2xl font-bold text-white mb-4">8. Externe Dienste</h2>
-                        <div class="bg-white/5 rounded-lg p-6 border border-white/10 space-y-4">
-                            <div>
-                                <h3 class="text-lg font-bold text-white mb-2">Hosting</h3>
-                                <p class="leading-relaxed">
-                                    Diese Website wird extern gehostet. Die personenbezogenen Daten, die auf dieser Website erfasst werden, 
-                                    werden auf den Servern des Hosters gespeichert. Hierbei kann es sich v.a. um IP-Adressen, 
-                                    Kontaktanfragen, Meta- und Kommunikationsdaten, Vertragsdaten, Kontaktdaten, Namen, 
-                                    Websitezugriffe und sonstige Daten, die über eine Website generiert werden, handeln.
-                                </p>
-                            </div>
-                            
-                            <div>
-                                <h3 class="text-lg font-bold text-white mb-2">Zahlungsdienstleister</h3>
-                                <p class="leading-relaxed">
-                                    Für die Abwicklung von Zahlungen nutzen wir externe Zahlungsdienstleister. 
-                                    Die Datenverarbeitung erfolgt dabei entsprechend den Datenschutzbestimmungen des jeweiligen Anbieters.
-                                </p>
-                            </div>
-                        </div>
-                    </section>
-
-                    <!-- Security -->
-                    <section>
-                        <h2 class="text-2xl font-bold text-white mb-4">9. Datensicherheit</h2>
-                        <div class="bg-white/5 rounded-lg p-6 border border-white/10">
-                            <p class="leading-relaxed">
-                                Wir verwenden innerhalb des Website-Besuchs das verbreitete SSL-Verfahren (Secure Socket Layer) 
-                                in Verbindung mit der jeweils höchsten Verschlüsselungsstufe, die von Ihrem Browser unterstützt wird. 
-                                In der Regel handelt es sich dabei um eine 256 Bit SSL-Verschlüsselung. Falls Ihr Browser keine 
-                                256-Bit Verschlüsselung unterstützt, greifen wir stattdessen auf 128-Bit v3 Technologie zurück.
-                            </p>
-                        </div>
-                    </section>
-
-                    <!-- Changes -->
-                    <section>
-                        <h2 class="text-2xl font-bold text-white mb-4">10. Änderungen der Datenschutzerklärung</h2>
-                        <div class="bg-white/5 rounded-lg p-6 border border-white/10">
-                            <p class="leading-relaxed">
-                                Wir behalten uns vor, diese Datenschutzerklärung anzupassen, damit sie stets den aktuellen 
-                                rechtlichen Anforderungen entspricht oder um Änderungen unserer Leistungen in der 
-                                Datenschutzerklärung umzusetzen. Für Ihren erneuten Besuch gilt dann die neue Datenschutzerklärung.
-                            </p>
-                        </div>
-                    </section>
-
-                    <!-- Last Updated -->
-                    <section class="text-center pt-8 border-t border-white/20">
-                        <p class="text-sm text-gray-400">
-                            Stand: Dezember 2024
+                <!-- 4. Rechtsgrundlagen -->
+                <section>
+                    <div class="glass rounded-xl p-8">
+                        <h2 class="text-2xl font-bold text-white mb-4">4. Rechtsgrundlagen der Verarbeitung</h2>
+                        <p class="leading-relaxed mb-4">
+                            Wir verarbeiten personenbezogene Daten im Einklang mit der DSGVO. Die Verarbeitung erfolgt
+                            auf Basis folgender Rechtsgrundlagen:
                         </p>
-                    </section>
-                </div>
+                        <div class="bg-white/5 rounded-lg p-6 border border-white/10 space-y-4">
+                            <div>
+                                <h3 class="text-lg font-semibold text-white mb-1">Einwilligung (Art. 6 Abs. 1 lit. a DSGVO)</h3>
+                                <p class="leading-relaxed">
+                                    Soweit wir Ihre Einwilligung zur Verarbeitung eingeholt haben, z.&nbsp;B. f&uuml;r die
+                                    Einbindung externer Ressourcen (Google Fonts, CDN-Dienste).
+                                </p>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-white mb-1">Vertragserf&uuml;llung (Art. 6 Abs. 1 lit. b DSGVO)</h3>
+                                <p class="leading-relaxed">
+                                    Wenn die Verarbeitung zur Erf&uuml;llung eines Vertrags oder vorvertraglicher Ma&szlig;nahmen
+                                    erforderlich ist, z.&nbsp;B. Kontoverwaltung, Erbringung der AI-Analysedienstleistung,
+                                    Zahlungsabwicklung.
+                                </p>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-white mb-1">Rechtliche Verpflichtung (Art. 6 Abs. 1 lit. c DSGVO)</h3>
+                                <p class="leading-relaxed">
+                                    Wenn die Verarbeitung zur Erf&uuml;llung einer rechtlichen Verpflichtung erforderlich
+                                    ist, z.&nbsp;B. steuerrechtliche Aufbewahrungspflichten.
+                                </p>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-white mb-1">Berechtigte Interessen (Art. 6 Abs. 1 lit. f DSGVO)</h3>
+                                <p class="leading-relaxed">
+                                    Wenn die Verarbeitung zur Wahrung unserer berechtigten Interessen erforderlich ist,
+                                    z.&nbsp;B. Gew&auml;hrleistung der IT-Sicherheit, Betrieb und Optimierung unserer Website,
+                                    Missbrauchspr&auml;vention.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 5. Hosting - GitHub Pages -->
+                <section>
+                    <div class="glass rounded-xl p-8">
+                        <h2 class="text-2xl font-bold text-white mb-4">5. Hosting &ndash; GitHub Pages</h2>
+                        <p class="leading-relaxed mb-4">
+                            Unsere statische Website wird &uuml;ber <strong class="text-white">GitHub Pages</strong>
+                            (GitHub Inc., 88 Colin P Kelly Jr St, San Francisco, CA 94107, USA) gehostet. Beim Aufruf
+                            unserer Website werden durch GitHub automatisch technische Zugriffsdaten in
+                            Server-Log-Dateien erhoben, darunter:
+                        </p>
+                        <ul class="list-disc list-inside space-y-1 ml-4 mb-4">
+                            <li>IP-Adresse des anfragenden Ger&auml;ts</li>
+                            <li>Datum und Uhrzeit des Zugriffs</li>
+                            <li>Aufgerufene URL</li>
+                            <li>Browsertyp und -version</li>
+                            <li>Betriebssystem</li>
+                            <li>Referrer-URL</li>
+                        </ul>
+                        <p class="leading-relaxed mb-2">
+                            Auf unserer statischen Website werden durch GitHub Pages keine personenbezogenen Nutzerdaten
+                            gespeichert. GitHub kann jedoch IP-Adressen in Server-Logs festhalten.
+                        </p>
+                        <p class="leading-relaxed">
+                            <strong class="text-white">Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. f DSGVO (berechtigtes
+                            Interesse an einer stabilen und sicheren Bereitstellung der Website).
+                        </p>
+                        <p class="leading-relaxed mt-2">
+                            Weitere Informationen: <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener noreferrer" class="text-blue-300 hover:text-blue-200 transition-colors underline">GitHub Privacy Statement</a>.
+                        </p>
+                    </div>
+                </section>
+
+                <!-- 6. Registrierung und Nutzerkonten - Supabase -->
+                <section>
+                    <div class="glass rounded-xl p-8">
+                        <h2 class="text-2xl font-bold text-white mb-4">6. Registrierung und Nutzerkonten &ndash; Supabase</h2>
+                        <p class="leading-relaxed mb-4">
+                            F&uuml;r die Nutzerkontoverwaltung, Authentifizierung, Datenbankspeicherung und
+                            serverseitige Funktionen (Edge Functions) setzen wir <strong class="text-white">Supabase</strong>
+                            (Supabase Inc., 970 Toa Payoh North #07-04, Singapore 318992) ein. Supabase ist als
+                            Auftragsverarbeiter gem&auml;&szlig; Art. 28 DSGVO f&uuml;r uns t&auml;tig.
+                        </p>
+                        <div class="bg-white/5 rounded-lg p-6 border border-white/10 space-y-4">
+                            <div>
+                                <h3 class="text-lg font-semibold text-white mb-2">Verarbeitete Daten</h3>
+                                <ul class="list-disc list-inside space-y-1 ml-2">
+                                    <li>E-Mail-Adresse</li>
+                                    <li>Passwort-Hash (verschl&uuml;sselt gespeichert)</li>
+                                    <li>Analyse-Verlauf (eingereichte URLs und Ergebnisse)</li>
+                                    <li>Session-Tokens (Authentifizierung)</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-white mb-2">Serverstandort</h3>
+                                <p class="leading-relaxed">
+                                    <strong class="text-white">EU (Frankfurt am Main, Deutschland)</strong> &ndash; Ihre
+                                    Daten werden innerhalb der Europ&auml;ischen Union verarbeitet und gespeichert.
+                                </p>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-white mb-2">Rechtsgrundlage</h3>
+                                <p class="leading-relaxed">
+                                    Art. 6 Abs. 1 lit. b DSGVO (Vertragserf&uuml;llung &ndash; die Registrierung und
+                                    Kontoverwaltung ist erforderlich, um unsere Dienstleistung zu erbringen).
+                                </p>
+                            </div>
+                        </div>
+                        <p class="leading-relaxed mt-4">
+                            Weitere Informationen: <a href="https://supabase.com/privacy" target="_blank" rel="noopener noreferrer" class="text-blue-300 hover:text-blue-200 transition-colors underline">Supabase Privacy Policy</a>.
+                        </p>
+                    </div>
+                </section>
+
+                <!-- 7. AI-Analyse - OpenAI -->
+                <section>
+                    <div class="glass rounded-xl p-8">
+                        <h2 class="text-2xl font-bold text-white mb-4">7. AI-Analysedienst &ndash; OpenAI</h2>
+                        <p class="leading-relaxed mb-4">
+                            Zur Erbringung unserer AI-gest&uuml;tzten Analyse verwenden wir die API von
+                            <strong class="text-white">OpenAI</strong> (OpenAI, L.L.C., 3180 18th St, San Francisco,
+                            CA 94110, USA).
+                        </p>
+                        <div class="bg-white/5 rounded-lg p-6 border border-white/10 space-y-4">
+                            <div>
+                                <h3 class="text-lg font-semibold text-white mb-2">Was wird an OpenAI &uuml;bermittelt?</h3>
+                                <p class="leading-relaxed">
+                                    Wir senden ausschlie&szlig;lich <strong class="text-white">&ouml;ffentlich zug&auml;ngliche
+                                    Website-Metadaten</strong> (z.&nbsp;B. Titel, Beschreibung, strukturierte Daten der zu
+                                    analysierenden URL) an OpenAI. <strong class="text-white">Es werden keine
+                                    personenbezogenen Daten der Nutzer an OpenAI &uuml;bermittelt.</strong>
+                                </p>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-white mb-2">Daten&uuml;bermittlung in die USA</h3>
+                                <p class="leading-relaxed">
+                                    OpenAI hat seinen Sitz in den USA. Die Daten&uuml;bermittlung erfolgt auf Grundlage
+                                    des EU-US Data Privacy Framework (DPF), unter dem OpenAI zertifiziert ist,
+                                    gem&auml;&szlig; Art. 45 DSGVO. Zudem werden ausschlie&szlig;lich &ouml;ffentlich
+                                    zug&auml;ngliche Informationen &uuml;bermittelt &ndash; keine personenbezogenen
+                                    Nutzerdaten.
+                                </p>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-white mb-2">Rechtsgrundlage</h3>
+                                <p class="leading-relaxed">
+                                    Art. 6 Abs. 1 lit. b DSGVO (Vertragserf&uuml;llung &ndash; die AI-Analyse ist
+                                    Kernbestandteil unserer Dienstleistung).
+                                </p>
+                            </div>
+                        </div>
+                        <p class="leading-relaxed mt-4">
+                            Weitere Informationen: <a href="https://openai.com/policies/privacy-policy" target="_blank" rel="noopener noreferrer" class="text-blue-300 hover:text-blue-200 transition-colors underline">OpenAI Privacy Policy</a>.
+                        </p>
+                    </div>
+                </section>
+
+                <!-- 8. Zahlungsabwicklung - Stripe -->
+                <section>
+                    <div class="glass rounded-xl p-8">
+                        <h2 class="text-2xl font-bold text-white mb-4">8. Zahlungsabwicklung &ndash; Stripe</h2>
+                        <p class="leading-relaxed mb-4">
+                            F&uuml;r die Zahlungsabwicklung nutzen wir den Dienst von <strong class="text-white">Stripe</strong>
+                            (Stripe Payments Europe, Ltd., 1 Grand Canal Street Lower, Grand Canal Dock, Dublin, D02 H210, Irland).
+                            Stripe ist PCI-DSS-zertifiziert und gew&auml;hrleistet damit h&ouml;chste Sicherheitsstandards
+                            bei der Verarbeitung von Zahlungsdaten.
+                        </p>
+                        <div class="bg-white/5 rounded-lg p-6 border border-white/10 space-y-4">
+                            <div>
+                                <h3 class="text-lg font-semibold text-white mb-2">Verarbeitete Daten</h3>
+                                <ul class="list-disc list-inside space-y-1 ml-2">
+                                    <li>Zahlungsmethode (z.&nbsp;B. Kreditkartendaten, SEPA-Lastschrift)</li>
+                                    <li>Rechnungsadresse und Rechnungsdaten</li>
+                                    <li>Transaktionsdaten (Betrag, Zeitpunkt, Status)</li>
+                                    <li>E-Mail-Adresse (f&uuml;r Zahlungsbest&auml;tigungen)</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-white mb-2">Hinweis</h3>
+                                <p class="leading-relaxed">
+                                    Zahlungsdaten (z.&nbsp;B. Kreditkartennummern) werden direkt von Stripe verarbeitet
+                                    und nicht auf unseren Servern gespeichert. Wir erhalten von Stripe lediglich eine
+                                    Best&auml;tigung &uuml;ber den Zahlungsstatus sowie ggf. die letzten vier Ziffern
+                                    der Kartennummer zu Identifikationszwecken.
+                                </p>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-white mb-2">Rechtsgrundlage</h3>
+                                <p class="leading-relaxed">
+                                    Art. 6 Abs. 1 lit. b DSGVO (Vertragserf&uuml;llung &ndash; die Zahlungsabwicklung
+                                    ist f&uuml;r die Nutzung kostenpflichtiger Funktionen erforderlich).
+                                </p>
+                            </div>
+                        </div>
+                        <p class="leading-relaxed mt-4">
+                            Weitere Informationen: <a href="https://stripe.com/de/privacy" target="_blank" rel="noopener noreferrer" class="text-blue-300 hover:text-blue-200 transition-colors underline">Stripe Datenschutzerkl&auml;rung</a>.
+                        </p>
+                    </div>
+                </section>
+
+                <!-- 9. Externe Ressourcen -->
+                <section>
+                    <div class="glass rounded-xl p-8">
+                        <h2 class="text-2xl font-bold text-white mb-4">9. Externe Ressourcen &ndash; CDN und Schriftarten</h2>
+                        <p class="leading-relaxed mb-4">
+                            Unsere Website bindet externe Ressourcen ein, die beim Seitenaufruf von Drittservern
+                            geladen werden. Dabei wird automatisch Ihre IP-Adresse an die jeweiligen Anbieter
+                            &uuml;bermittelt.
+                        </p>
+                        <div class="bg-white/5 rounded-lg p-6 border border-white/10 space-y-4">
+                            <div>
+                                <h3 class="text-lg font-semibold text-white mb-2">Google Fonts</h3>
+                                <p class="leading-relaxed">
+                                    Wir verwenden Schriftarten von Google Fonts (Google Ireland Limited, Gordon House,
+                                    Barrow Street, Dublin 4, Irland). Beim Aufruf unserer Seite stellt Ihr Browser eine
+                                    Verbindung zu den Servern von Google her und &uuml;bermittelt dabei Ihre IP-Adresse.
+                                    Google kann diese Daten in den USA verarbeiten. Die &Uuml;bermittlung erfolgt auf
+                                    Grundlage des EU-US Data Privacy Framework.
+                                </p>
+                                <p class="leading-relaxed mt-2">
+                                    Weitere Informationen: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" class="text-blue-300 hover:text-blue-200 transition-colors underline">Google Datenschutzerkl&auml;rung</a>.
+                                </p>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-white mb-2">Tailwind CSS CDN</h3>
+                                <p class="leading-relaxed">
+                                    Wir nutzen das Tailwind CSS Framework &uuml;ber ein Content Delivery Network (CDN).
+                                    Beim Laden dieser Ressource wird Ihre IP-Adresse an den CDN-Anbieter &uuml;bermittelt.
+                                </p>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-white mb-2">Rechtsgrundlage</h3>
+                                <p class="leading-relaxed">
+                                    Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an einer optisch ansprechenden
+                                    und technisch einwandfreien Darstellung der Website). Sofern eine Einwilligung
+                                    abgefragt wurde, erfolgt die Verarbeitung auf Grundlage von Art. 6 Abs. 1 lit. a DSGVO.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 10. Cookies und Session-Speicher -->
+                <section>
+                    <div class="glass rounded-xl p-8">
+                        <h2 class="text-2xl font-bold text-white mb-4">10. Cookies und lokale Speicherung</h2>
+                        <p class="leading-relaxed mb-4">
+                            Unsere Website verwendet Cookies und lokale Speichermechanismen in eingeschr&auml;nktem
+                            Umfang. Im Folgenden informieren wir Sie &uuml;ber Art, Umfang und Zweck der verwendeten
+                            Cookies und Speichertechnologien.
+                        </p>
+                        <div class="bg-white/5 rounded-lg p-6 border border-white/10 space-y-4">
+                            <div>
+                                <h3 class="text-lg font-semibold text-white mb-2">Technisch notwendige Cookies</h3>
+                                <p class="leading-relaxed">
+                                    Wir verwenden technisch notwendige Cookies bzw. den lokalen Speicher (Local Storage)
+                                    Ihres Browsers f&uuml;r die <strong class="text-white">Supabase-Authentifizierung</strong>.
+                                    Diese speichern Ihren Session-Token, damit Sie nach der Anmeldung eingeloggt bleiben.
+                                    Ohne diese Speicherung ist die Nutzung des eingeloggten Bereichs nicht m&ouml;glich.
+                                </p>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-white mb-2">Analyse- und Marketing-Cookies</h3>
+                                <p class="leading-relaxed">
+                                    Wir setzen <strong class="text-white">keine Analyse- oder Marketing-Cookies</strong> ein.
+                                    Es findet kein Tracking Ihres Nutzerverhaltens statt.
+                                </p>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-white mb-2">Cookies von Drittanbietern</h3>
+                                <p class="leading-relaxed">
+                                    Durch die Einbindung externer Ressourcen (Google Fonts, Tailwind CSS CDN) k&ouml;nnen
+                                    gegebenenfalls Cookies durch die jeweiligen Anbieter gesetzt werden. Auf den Inhalt
+                                    dieser Cookies haben wir keinen Einfluss.
+                                </p>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-white mb-2">Rechtsgrundlage</h3>
+                                <p class="leading-relaxed">
+                                    Technisch notwendige Cookies: Art. 6 Abs. 1 lit. b DSGVO (Vertragserf&uuml;llung)
+                                    bzw. Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der Funktionsf&auml;higkeit
+                                    der Website). Cookies von Drittanbietern: Art. 6 Abs. 1 lit. f DSGVO bzw. Art. 6 Abs. 1
+                                    lit. a DSGVO (Einwilligung), sofern eine solche eingeholt wurde.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 11. Weitergabe an Dritte -->
+                <section>
+                    <div class="glass rounded-xl p-8">
+                        <h2 class="text-2xl font-bold text-white mb-4">11. Weitergabe von Daten an Dritte</h2>
+                        <p class="leading-relaxed mb-4">
+                            Eine Weitergabe Ihrer personenbezogenen Daten an Dritte erfolgt nur in den nachfolgend
+                            genannten F&auml;llen:
+                        </p>
+                        <div class="bg-white/5 rounded-lg p-6 border border-white/10">
+                            <div class="overflow-x-auto">
+                                <table class="w-full text-left">
+                                    <thead>
+                                        <tr class="border-b border-white/20">
+                                            <th class="py-3 pr-4 text-white font-semibold">Dienstleister</th>
+                                            <th class="py-3 pr-4 text-white font-semibold">Zweck</th>
+                                            <th class="py-3 text-white font-semibold">Serverstandort</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="divide-y divide-white/10">
+                                        <tr>
+                                            <td class="py-3 pr-4">Supabase</td>
+                                            <td class="py-3 pr-4">Auth, Datenbank, Edge Functions</td>
+                                            <td class="py-3">EU (Frankfurt)</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="py-3 pr-4">OpenAI</td>
+                                            <td class="py-3 pr-4">AI-Analyse (nur &ouml;ffentl. Metadaten)</td>
+                                            <td class="py-3">USA (DPF)</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="py-3 pr-4">Stripe</td>
+                                            <td class="py-3 pr-4">Zahlungsabwicklung</td>
+                                            <td class="py-3">EU (Irland)</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="py-3 pr-4">GitHub</td>
+                                            <td class="py-3 pr-4">Website-Hosting</td>
+                                            <td class="py-3">USA (DPF)</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="py-3 pr-4">Google</td>
+                                            <td class="py-3 pr-4">Schriftarten (Google Fonts)</td>
+                                            <td class="py-3">USA (DPF)</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <p class="leading-relaxed mt-4">
+                            Mit allen Auftragsverarbeitern haben wir Auftragsverarbeitungsvertr&auml;ge (AVV) gem&auml;&szlig;
+                            Art. 28 DSGVO geschlossen bzw. nutzen deren Standardvertragsklauseln.
+                        </p>
+                    </div>
+                </section>
+
+                <!-- 12. Datenübermittlung in Drittländer -->
+                <section>
+                    <div class="glass rounded-xl p-8">
+                        <h2 class="text-2xl font-bold text-white mb-4">12. Daten&uuml;bermittlung in Drittl&auml;nder</h2>
+                        <p class="leading-relaxed mb-4">
+                            Eine &Uuml;bermittlung personenbezogener Daten in L&auml;nder au&szlig;erhalb der EU/des EWR
+                            (sog. Drittl&auml;nder) findet in folgenden F&auml;llen statt:
+                        </p>
+                        <div class="bg-white/5 rounded-lg p-6 border border-white/10 space-y-4">
+                            <div>
+                                <h3 class="text-lg font-semibold text-white mb-2">USA &ndash; EU-US Data Privacy Framework</h3>
+                                <p class="leading-relaxed">
+                                    Die Daten&uuml;bermittlung an OpenAI, GitHub und Google erfolgt auf Grundlage des
+                                    Angemessenheitsbeschlusses der Europ&auml;ischen Kommission f&uuml;r das EU-US Data
+                                    Privacy Framework (DPF) gem&auml;&szlig; Art. 45 DSGVO. Diese Unternehmen sind unter
+                                    dem DPF zertifiziert und gew&auml;hrleisten damit ein angemessenes Datenschutzniveau.
+                                </p>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-white mb-2">Erg&auml;nzende Schutzma&szlig;nahmen</h3>
+                                <p class="leading-relaxed">
+                                    Zus&auml;tzlich zum DPF setzen wir, sofern verf&uuml;gbar, auf
+                                    EU-Standardvertragsklauseln (Standard Contractual Clauses, SCC) gem&auml;&szlig;
+                                    Art. 46 Abs. 2 lit. c DSGVO als erg&auml;nzende Absicherung.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 13. Speicherdauer -->
+                <section>
+                    <div class="glass rounded-xl p-8">
+                        <h2 class="text-2xl font-bold text-white mb-4">13. Speicherdauer</h2>
+                        <p class="leading-relaxed mb-4">
+                            Wir speichern Ihre personenbezogenen Daten nur so lange, wie es f&uuml;r die jeweiligen
+                            Verarbeitungszwecke erforderlich ist oder gesetzliche Aufbewahrungspflichten bestehen.
+                        </p>
+                        <div class="bg-white/5 rounded-lg p-6 border border-white/10 space-y-4">
+                            <div>
+                                <h3 class="text-lg font-semibold text-white mb-2">Kontodaten (E-Mail, Passwort-Hash)</h3>
+                                <p class="leading-relaxed">
+                                    Diese Daten werden f&uuml;r die Dauer Ihres Nutzerkontos gespeichert. Nach
+                                    Kontol&ouml;schung werden die Daten unverz&uuml;glich gel&ouml;scht, sofern keine
+                                    gesetzlichen Aufbewahrungspflichten entgegenstehen.
+                                </p>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-white mb-2">Analyse-Verlauf</h3>
+                                <p class="leading-relaxed">
+                                    Ihre Analyse-Historie wird f&uuml;r die Dauer Ihres Nutzerkontos gespeichert und
+                                    bei Kontol&ouml;schung gel&ouml;scht.
+                                </p>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-white mb-2">Zahlungsdaten</h3>
+                                <p class="leading-relaxed">
+                                    Rechnungsrelevante Daten werden gem&auml;&szlig; den steuer- und handelsrechtlichen
+                                    Aufbewahrungspflichten f&uuml;r 10 Jahre aufbewahrt (&sect;&nbsp;147 AO,
+                                    &sect;&nbsp;257 HGB).
+                                </p>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-white mb-2">Server-Log-Dateien</h3>
+                                <p class="leading-relaxed">
+                                    Technische Zugriffsdaten (IP-Adressen) werden durch den Hosting-Anbieter in der
+                                    Regel nach sp&auml;testens 30 Tagen gel&ouml;scht.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 14. SSL/TLS-Verschlüsselung -->
+                <section>
+                    <div class="glass rounded-xl p-8">
+                        <h2 class="text-2xl font-bold text-white mb-4">14. SSL-/TLS-Verschl&uuml;sselung</h2>
+                        <p class="leading-relaxed">
+                            Unsere Website nutzt aus Sicherheitsgr&uuml;nden und zum Schutz der &Uuml;bertragung
+                            vertraulicher Inhalte eine SSL- bzw. TLS-Verschl&uuml;sselung. Sie erkennen eine
+                            verschl&uuml;sselte Verbindung daran, dass die Adresszeile des Browsers von
+                            &bdquo;http://&ldquo; auf &bdquo;https://&ldquo; wechselt und an dem Schloss-Symbol
+                            in Ihrer Browserzeile. Wenn die SSL- bzw. TLS-Verschl&uuml;sselung aktiviert ist,
+                            k&ouml;nnen die Daten, die Sie an uns &uuml;bermitteln, nicht von Dritten
+                            mitgelesen werden.
+                        </p>
+                    </div>
+                </section>
+
+                <!-- 15. Rechte der betroffenen Personen -->
+                <section>
+                    <div class="glass rounded-xl p-8">
+                        <h2 class="text-2xl font-bold text-white mb-4">15. Ihre Rechte als betroffene Person</h2>
+                        <p class="leading-relaxed mb-4">
+                            Ihnen stehen gegen&uuml;ber uns folgende Rechte hinsichtlich der Sie betreffenden
+                            personenbezogenen Daten zu:
+                        </p>
+                        <div class="bg-white/5 rounded-lg p-6 border border-white/10 space-y-4">
+                            <div>
+                                <h3 class="text-lg font-semibold text-white mb-1">Recht auf Auskunft (Art. 15 DSGVO)</h3>
+                                <p class="leading-relaxed">
+                                    Sie haben das Recht, Auskunft &uuml;ber die von uns verarbeiteten personenbezogenen
+                                    Daten zu verlangen. Dies umfasst insbesondere Informationen &uuml;ber die
+                                    Verarbeitungszwecke, die Kategorien der Daten, die Empf&auml;nger und die
+                                    geplante Speicherdauer.
+                                </p>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-white mb-1">Recht auf Berichtigung (Art. 16 DSGVO)</h3>
+                                <p class="leading-relaxed">
+                                    Sie k&ouml;nnen die unverz&uuml;gliche Berichtigung unrichtiger oder
+                                    Vervollst&auml;ndigung unvollst&auml;ndiger personenbezogener Daten verlangen.
+                                </p>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-white mb-1">Recht auf L&ouml;schung (Art. 17 DSGVO)</h3>
+                                <p class="leading-relaxed">
+                                    Sie k&ouml;nnen die L&ouml;schung Ihrer personenbezogenen Daten verlangen, sofern
+                                    die Verarbeitung nicht zur Erf&uuml;llung einer rechtlichen Verpflichtung, aus
+                                    Gr&uuml;nden des &ouml;ffentlichen Interesses oder zur Geltendmachung, Aus&uuml;bung
+                                    oder Verteidigung von Rechtsanspr&uuml;chen erforderlich ist.
+                                </p>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-white mb-1">Recht auf Einschr&auml;nkung der Verarbeitung (Art. 18 DSGVO)</h3>
+                                <p class="leading-relaxed">
+                                    Sie k&ouml;nnen die Einschr&auml;nkung der Verarbeitung Ihrer Daten verlangen,
+                                    z.&nbsp;B. wenn Sie die Richtigkeit der Daten bestreiten oder die Verarbeitung
+                                    unrechtm&auml;&szlig;ig ist.
+                                </p>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-white mb-1">Recht auf Daten&uuml;bertragbarkeit (Art. 20 DSGVO)</h3>
+                                <p class="leading-relaxed">
+                                    Sie haben das Recht, die von Ihnen bereitgestellten Daten in einem strukturierten,
+                                    g&auml;ngigen und maschinenlesbaren Format zu erhalten oder die &Uuml;bermittlung
+                                    an einen anderen Verantwortlichen zu verlangen.
+                                </p>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-white mb-1">Widerspruchsrecht (Art. 21 DSGVO)</h3>
+                                <p class="leading-relaxed">
+                                    Sofern die Verarbeitung auf Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse) beruht,
+                                    haben Sie jederzeit das Recht, aus Gr&uuml;nden, die sich aus Ihrer besonderen Situation
+                                    ergeben, Widerspruch gegen die Verarbeitung einzulegen. Wir verarbeiten die Daten dann
+                                    nicht mehr, es sei denn, wir k&ouml;nnen zwingende schutzw&uuml;rdige Gr&uuml;nde
+                                    nachweisen, die Ihre Interessen, Rechte und Freiheiten &uuml;berwiegen.
+                                </p>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-white mb-1">Widerruf einer Einwilligung (Art. 7 Abs. 3 DSGVO)</h3>
+                                <p class="leading-relaxed">
+                                    Eine erteilte Einwilligung k&ouml;nnen Sie jederzeit mit Wirkung f&uuml;r die
+                                    Zukunft widerrufen. Die Rechtm&auml;&szlig;igkeit der bis zum Widerruf erfolgten
+                                    Verarbeitung bleibt davon unber&uuml;hrt.
+                                </p>
+                            </div>
+                        </div>
+                        <p class="leading-relaxed mt-4">
+                            Zur Aus&uuml;bung Ihrer Rechte wenden Sie sich bitte an:
+                            <a href="mailto:laurenz@shift07.ai" class="text-blue-300 hover:text-blue-200 transition-colors">laurenz@shift07.ai</a>
+                        </p>
+                    </div>
+                </section>
+
+                <!-- 16. Beschwerderecht -->
+                <section>
+                    <div class="glass rounded-xl p-8">
+                        <h2 class="text-2xl font-bold text-white mb-4">16. Beschwerderecht bei einer Aufsichtsbeh&ouml;rde</h2>
+                        <p class="leading-relaxed mb-4">
+                            Unbeschadet eines anderweitigen verwaltungsrechtlichen oder gerichtlichen Rechtsbehelfs
+                            steht Ihnen das Recht auf Beschwerde bei einer Aufsichtsbeh&ouml;rde zu, wenn Sie der
+                            Ansicht sind, dass die Verarbeitung Ihrer personenbezogenen Daten gegen die DSGVO
+                            verst&ouml;&szlig;t (Art. 77 DSGVO).
+                        </p>
+                        <div class="bg-white/5 rounded-lg p-6 border border-white/10">
+                            <p class="leading-relaxed">
+                                <strong class="text-white">Zust&auml;ndige Aufsichtsbeh&ouml;rde:</strong><br>
+                                Die Landesbeauftragte f&uuml;r den Datenschutz und f&uuml;r das Recht auf Akteneinsicht<br>
+                                Dagmar Hartge<br>
+                                Stahnsdorfer Damm 77<br>
+                                14532 Kleinmachnow<br>
+                                Deutschland<br><br>
+                                <strong class="text-white">Telefon:</strong> +49 33203 356-0<br>
+                                <strong class="text-white">E-Mail:</strong>
+                                <a href="mailto:poststelle@lda.brandenburg.de" class="text-blue-300 hover:text-blue-200 transition-colors">poststelle@lda.brandenburg.de</a><br>
+                                <strong class="text-white">Website:</strong>
+                                <a href="https://www.lda.brandenburg.de" target="_blank" rel="noopener noreferrer" class="text-blue-300 hover:text-blue-200 transition-colors underline">www.lda.brandenburg.de</a>
+                            </p>
+                        </div>
+                        <p class="leading-relaxed mt-4 text-sm text-gray-400">
+                            Hinweis: Sie k&ouml;nnen sich alternativ auch an die Aufsichtsbeh&ouml;rde Ihres
+                            gew&ouml;hnlichen Aufenthaltsortes oder Arbeitsplatzes wenden.
+                        </p>
+                    </div>
+                </section>
+
+                <!-- 17. Änderungen -->
+                <section>
+                    <div class="glass rounded-xl p-8">
+                        <h2 class="text-2xl font-bold text-white mb-4">17. &Auml;nderungen dieser Datenschutzerkl&auml;rung</h2>
+                        <p class="leading-relaxed">
+                            Wir behalten uns vor, diese Datenschutzerkl&auml;rung anzupassen, damit sie stets den
+                            aktuellen rechtlichen Anforderungen entspricht oder um &Auml;nderungen unserer
+                            Leistungen umzusetzen, z.&nbsp;B. bei der Einf&uuml;hrung neuer Dienste. F&uuml;r
+                            Ihren erneuten Besuch gilt dann die jeweils aktuelle Datenschutzerkl&auml;rung.
+                            Bei wesentlichen &Auml;nderungen, die Ihre Rechte betreffen, werden wir Sie
+                            &uuml;ber die in Ihrem Nutzerkonto hinterlegte E-Mail-Adresse informieren.
+                        </p>
+                    </div>
+                </section>
+
+                <!-- Stand -->
+                <section class="text-center pt-8 border-t border-white/20">
+                    <p class="text-sm text-gray-400">
+                        Stand: M&auml;rz 2026
+                    </p>
+                </section>
+
             </div>
         </main>
 
@@ -344,7 +789,7 @@
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
                 <div class="flex flex-col md:flex-row justify-between items-center">
                     <div class="text-white mb-4 md:mb-0">
-                        © 2024 Thümmler AI GmbH. Alle Rechte vorbehalten.
+                        &copy; 2026 Th&uuml;mmler AI GmbH. Alle Rechte vorbehalten.
                     </div>
                     <div class="flex space-x-6">
                         <a href="impressum.html" class="text-gray-300 hover:text-white transition-colors">
@@ -361,5 +806,16 @@
             </div>
         </footer>
     </div>
+
+    <!-- Mobile menu toggle -->
+    <script>
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (menuBtn && mobileMenu) {
+            menuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+    </script>
 </body>
 </html>
