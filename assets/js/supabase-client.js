@@ -8,8 +8,9 @@
 var SUPABASE_URL = 'https://xhshwuotydeerthvhhsx.supabase.co';
 var SUPABASE_ANON_KEY = 'sb_publishable_qVxp1w5wCKAwP-hij17Sbw_tEBHYX3S';
 
-// Will be initialized after CDN loads — use var for global scope
-var supabase = null;
+// The CDN sets window.supabase as the library object.
+// We store the initialized CLIENT instance in supabaseClient (not supabase, to avoid overwriting the library).
+var supabaseClient = null;
 
 /**
  * Initialize the Supabase client from the globally loaded supabase-js library.
@@ -17,17 +18,16 @@ var supabase = null;
  */
 function initSupabase() {
   try {
-    if (window.supabase && window.supabase.createClient) {
-      supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY, {
+    var lib = window.supabase;
+    if (lib && lib.createClient) {
+      supabaseClient = lib.createClient(SUPABASE_URL, SUPABASE_ANON_KEY, {
         auth: {
           autoRefreshToken: true,
           persistSession: true,
           detectSessionInUrl: true,
         },
       });
-      // Make the client instance available globally (window.supabase is the library;
-      // window.supabaseClient is the initialized client instance)
-      window.supabaseClient = supabase;
+      window.supabaseClient = supabaseClient;
       console.log('[shift07] Supabase client initialized');
       return true;
     } else {
@@ -51,11 +51,11 @@ var db = {
    */
   async getSession() {
     try {
-      if (!supabase) {
+      if (!supabaseClient) {
         console.error('[shift07] Supabase not initialized');
         return null;
       }
-      const { data, error } = await supabase.auth.getSession();
+      const { data, error } = await supabaseClient.auth.getSession();
       if (error) {
         console.error('[shift07] Error getting session:', error.message);
         return null;
@@ -73,11 +73,11 @@ var db = {
    */
   async getUser() {
     try {
-      if (!supabase) {
+      if (!supabaseClient) {
         console.error('[shift07] Supabase not initialized');
         return null;
       }
-      const { data, error } = await supabase.auth.getUser();
+      const { data, error } = await supabaseClient.auth.getUser();
       if (error) {
         console.error('[shift07] Error getting user:', error.message);
         return null;
@@ -95,7 +95,7 @@ var db = {
    */
   async getProfile() {
     try {
-      if (!supabase) {
+      if (!supabaseClient) {
         console.error('[shift07] Supabase not initialized');
         return null;
       }
@@ -103,7 +103,7 @@ var db = {
       const user = await this.getUser();
       if (!user) return null;
 
-      const { data, error } = await supabase
+      const { data, error } = await supabaseClient
         .from('profiles')
         .select('*')
         .eq('id', user.id)
@@ -134,7 +134,7 @@ var db = {
    */
   async saveAnalysis(data) {
     try {
-      if (!supabase) {
+      if (!supabaseClient) {
         console.error('[shift07] Supabase not initialized');
         return null;
       }
@@ -153,7 +153,7 @@ var db = {
         created_at: new Date().toISOString(),
       };
 
-      const { data: saved, error } = await supabase
+      const { data: saved, error } = await supabaseClient
         .from('analyses')
         .insert(record)
         .select()
@@ -180,7 +180,7 @@ var db = {
    */
   async getAnalyses(page = 1, limit = 20) {
     try {
-      if (!supabase) {
+      if (!supabaseClient) {
         return { data: [], count: 0, error: 'Supabase not initialized' };
       }
 
@@ -192,7 +192,7 @@ var db = {
       const from = (page - 1) * limit;
       const to = from + limit - 1;
 
-      const { data, error, count } = await supabase
+      const { data, error, count } = await supabaseClient
         .from('analyses')
         .select('*', { count: 'exact' })
         .eq('user_id', user.id)
@@ -218,12 +218,12 @@ var db = {
    */
   async getAnalysis(id) {
     try {
-      if (!supabase) {
+      if (!supabaseClient) {
         console.error('[shift07] Supabase not initialized');
         return null;
       }
 
-      const { data, error } = await supabase
+      const { data, error } = await supabaseClient
         .from('analyses')
         .select('*')
         .eq('id', id)
@@ -248,11 +248,11 @@ var db = {
    */
   async checkRateLimit(ipHash) {
     try {
-      if (!supabase) {
+      if (!supabaseClient) {
         return { allowed: false, remaining: 0, resetAt: null };
       }
 
-      const { data, error } = await supabase
+      const { data, error } = await supabaseClient
         .from('rate_limits')
         .select('*')
         .eq('ip_hash', ipHash)
@@ -301,7 +301,7 @@ var db = {
    */
   async updateRateLimit(ipHash) {
     try {
-      if (!supabase) {
+      if (!supabaseClient) {
         console.error('[shift07] Supabase not initialized');
         return false;
       }
@@ -310,7 +310,7 @@ var db = {
       const resetAt = new Date(now.getTime() + 24 * 60 * 60 * 1000); // 24 hours from now
 
       // Try to upsert the rate limit record
-      const { data: existing } = await supabase
+      const { data: existing } = await supabaseClient
         .from('rate_limits')
         .select('*')
         .eq('ip_hash', ipHash)
@@ -318,7 +318,7 @@ var db = {
 
       if (!existing || new Date(existing.reset_at) <= now) {
         // Create or reset the record
-        const { error } = await supabase
+        const { error } = await supabaseClient
           .from('rate_limits')
           .upsert({
             ip_hash: ipHash,
@@ -333,7 +333,7 @@ var db = {
         }
       } else {
         // Increment the counter
-        const { error } = await supabase
+        const { error } = await supabaseClient
           .from('rate_limits')
           .update({
             request_count: (existing.request_count || 0) + 1,

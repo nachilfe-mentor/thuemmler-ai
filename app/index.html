@@ -1551,7 +1551,7 @@
                 const user = await db.getUser();
                 if (!user) throw new Error('Nicht angemeldet');
 
-                const { error } = await supabase.from('monitored_urls').insert({
+                const { error } = await supabaseClient.from('monitored_urls').insert({
                     user_id: user.id,
                     url: url,
                     schedule: schedule,
@@ -1574,7 +1574,7 @@
                 const user = await db.getUser();
                 if (!user) throw new Error('Nicht angemeldet');
 
-                const { data, error } = await supabase
+                const { data, error } = await supabaseClient
                     .from('monitored_urls')
                     .select('*')
                     .eq('user_id', user.id)
@@ -1651,7 +1651,7 @@
             if (!confirmed) return;
 
             try {
-                const { error } = await supabase.from('monitored_urls').delete().eq('id', id);
+                const { error } = await supabaseClient.from('monitored_urls').delete().eq('id', id);
                 if (error) throw error;
                 showNotification('success', 'Entfernt', 'URL wurde aus dem Monitoring entfernt.');
                 loadMonitoredUrls();
@@ -1743,7 +1743,7 @@
                 const user = await db.getUser();
                 if (!user) throw new Error('Nicht angemeldet');
 
-                const { error } = await supabase.from('profiles').update({
+                const { error } = await supabaseClient.from('profiles').update({
                     notify_on_analysis: document.getElementById('pref-email-analysis').checked,
                     weekly_report: document.getElementById('pref-weekly-report').checked,
                 }).eq('id', user.id);
@@ -1861,7 +1861,7 @@
         if (!confirmed) return;
 
         try {
-            const { error } = await supabase.from('analyses').delete().eq('id', id);
+            const { error } = await supabaseClient.from('analyses').delete().eq('id', id);
             if (error) throw error;
             showNotification('success', 'Gelöscht', 'Analyse wurde entfernt.');
             // Refresh if on history page
@@ -1908,7 +1908,7 @@
 
             if (targetIdx >= 0) {
                 analysis.issues[targetIdx].resolved = checked;
-                await supabase.from('analyses').update({ issues: analysis.issues }).eq('id', analysisId);
+                await supabaseClient.from('analyses').update({ issues: analysis.issues }).eq('id', analysisId);
             }
         } catch (err) {
             console.error('[shift07] Toggle issue error:', err);
@@ -1926,12 +1926,12 @@
     async function initApp() {
         // Wait for Supabase to be ready
         let retries = 0;
-        while (!supabase && retries < 20) {
+        while (!supabaseClient && retries < 20) {
             await new Promise(r => setTimeout(r, 100));
             retries++;
         }
 
-        if (!supabase) {
+        if (!supabaseClient) {
             document.getElementById('main-content').innerHTML = showError('Verbindung zum Server fehlgeschlagen. Bitte lade die Seite neu.');
             return;
         }

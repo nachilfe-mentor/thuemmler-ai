@@ -9,14 +9,12 @@
  * @returns {object|null} The Supabase client or null.
  */
 function getSupabase() {
-  if (typeof supabase !== 'undefined' && supabase) return supabase;
-  if (window.supabase && window.supabase.createClient && typeof SUPABASE_URL !== 'undefined' && typeof SUPABASE_ANON_KEY !== 'undefined') {
-    try {
-      supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
-      return supabase;
-    } catch (e) {
-      console.error('[shift07] Failed to initialize Supabase:', e);
-    }
+  // supabaseClient is the initialized client from supabase-client.js
+  if (typeof supabaseClient !== 'undefined' && supabaseClient) return supabaseClient;
+  // Fallback: try initializing if CDN is loaded but initSupabase() hasn't run
+  if (typeof initSupabase === 'function') {
+    initSupabase();
+    if (typeof supabaseClient !== 'undefined' && supabaseClient) return supabaseClient;
   }
   return null;
 }

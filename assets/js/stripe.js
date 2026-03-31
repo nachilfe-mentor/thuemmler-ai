@@ -13,7 +13,7 @@ var payments = {
    */
   async subscribePro(interval = 'month') {
     try {
-      if (!supabase) {
+      if (!supabaseClient) {
         console.error('[shift07] Supabase not initialized');
         payments._showError('Verbindungsfehler. Bitte lade die Seite neu.');
         return;
@@ -67,7 +67,7 @@ var payments = {
    */
   async openBillingPortal() {
     try {
-      if (!supabase) {
+      if (!supabaseClient) {
         console.error('[shift07] Supabase not initialized');
         payments._showError('Verbindungsfehler. Bitte lade die Seite neu.');
         return;
