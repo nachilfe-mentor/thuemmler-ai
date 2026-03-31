@@ -305,7 +305,7 @@ var auth = {
           data: {
             full_name: name,
           },
-          emailRedirectTo: window.location.origin + '/app/',
+          emailRedirectTo: window.location.href,
         },
       });
 
@@ -322,7 +322,34 @@ var auth = {
         return;
       }
 
-      auth._showMessage('success', 'Bestätigungsmail gesendet! Bitte prüfe dein Postfach.');
+      // Show success with spam hint and resend option
+      var signupEmail = email;
+      var msgEl = document.getElementById('auth-message');
+      if (msgEl) {
+        msgEl.style.display = 'block';
+        msgEl.style.background = 'rgba(16,185,129,0.15)';
+        msgEl.style.color = '#6ee7b7';
+        msgEl.style.border = '1px solid rgba(16,185,129,0.3)';
+        msgEl.innerHTML = '<strong>Bestätigungsmail gesendet!</strong><br>' +
+          'Bitte prüfe dein Postfach. <strong>Tipp:</strong> Schau auch im Spam-Ordner nach.<br><br>' +
+          '<button id="auth-resend-btn" style="background:rgba(16,185,129,0.2);border:1px solid rgba(16,185,129,0.4);color:#6ee7b7;padding:6px 14px;border-radius:6px;font-size:13px;cursor:pointer;">E-Mail erneut senden</button>';
+        var resendBtn = document.getElementById('auth-resend-btn');
+        if (resendBtn) {
+          resendBtn.addEventListener('click', async function() {
+            resendBtn.disabled = true;
+            resendBtn.textContent = 'Wird gesendet...';
+            try {
+              var sb = getSupabase();
+              if (sb) {
+                await sb.auth.resend({ type: 'signup', email: signupEmail });
+                resendBtn.textContent = 'Erneut gesendet!';
+              }
+            } catch (e) {
+              resendBtn.textContent = 'Fehler. Bitte versuche es später.';
+            }
+          });
+        }
+      }
       auth._setFormLoading('auth-signup-form', false);
 
     } catch (err) {
@@ -380,10 +407,21 @@ var auth = {
         return;
       }
 
+      // Build correct redirect URL based on current hosting
+      var currentPath = window.location.pathname;
+      var basePath = currentPath.substring(0, currentPath.lastIndexOf('/') + 1);
+      if (basePath.includes('/app')) {
+        // Already in /app/, redirect back here
+        var redirectUrl = window.location.origin + basePath;
+      } else {
+        // On main site, redirect to /app/
+        var redirectUrl = window.location.origin + basePath + 'app/';
+      }
+
       var { data, error } = await sb.auth.signInWithOAuth({
         provider: 'google',
         options: {
-          redirectTo: window.location.origin + '/app/',
+          redirectTo: redirectUrl,
         },
       });
 

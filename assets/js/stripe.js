@@ -30,7 +30,7 @@ var payments = {
 
       payments._showLoading('Weiterleitung zu Stripe...');
 
-      const response = await fetch(SUPABASE_URL + '/functions/v1/create-checkout', {
+      const response = await fetch(SUPABASE_URL + '/functions/v1/stripe-checkout', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -83,7 +83,7 @@ var payments = {
 
       payments._showLoading('Kundenportal wird geöffnet...');
 
-      const response = await fetch(SUPABASE_URL + '/functions/v1/create-portal-session', {
+      const response = await fetch(SUPABASE_URL + '/functions/v1/stripe-portal', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

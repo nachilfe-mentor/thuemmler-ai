@@ -10,70 +10,147 @@ const corsHeaders = {
 // ---------------------------------------------------------------------------
 // System prompt for the AI analysis (German)
 // ---------------------------------------------------------------------------
-const SYSTEM_PROMPT = `Du bist ein erfahrener Web-Analyst und SEO-Experte. Du analysierst die bereitgestellten Website-Metadaten und gibst eine strukturierte Bewertung zurück.
+const SYSTEM_PROMPT = `Du bist ein Senior Web-Analyst und SEO-Berater mit 15 Jahren Erfahrung. Du analysierst die bereitgestellten Website-Metadaten gründlich und gibst eine detaillierte, professionelle Bewertung zurück.
 
-WICHTIGE REGELN:
-- Bewerte jede der 8 Kategorien von 0 bis 100.
-- Finde konkrete, umsetzbare Probleme — keine allgemeinen Ratschläge.
-- Schreibe alle Erklärungen in einfachem Deutsch ohne SEO-Fachbegriffe.
-- Erkläre die geschäftliche Auswirkung jedes Problems.
-- Gib, wo möglich, kopierfertige Code-Fixes an.
-- Sei ehrlich: Wenn etwas gut ist, sage das auch.
-- Identifiziere 2-3 "Quick Wins" (hohe Wirkung, geringer Aufwand).
+ANALYSE-QUALITÄT:
+- Finde MINDESTENS 3-5 Issues pro Kategorie. Wenn du weniger findest, schaue genauer hin.
+- Jedes Issue muss SPEZIFISCH sein, nicht generisch. Nenne konkrete Elemente, Tags oder Werte aus den Daten.
+- Beschreibe die geschäftliche Auswirkung in Zahlen wo möglich ("kann bis zu 20% weniger Klicks bedeuten").
+- Liefere IMMER einen konkreten Code-Fix als code_snippet. Keine leeren Strings.
+- Erkläre Fixes so, dass ein Nicht-Techniker sie versteht, aber ein Entwickler sie direkt umsetzen kann.
+- Bewerte streng aber fair: Die meisten Websites haben einen Score zwischen 30-70. Ein Score über 80 ist selten.
+
+KATEGORIE-SPEZIFISCHE PRÜFPUNKTE:
+
+technical_seo:
+- Canonical URL vorhanden und korrekt?
+- robots.txt und robots meta?
+- Zeichensatz (charset) deklariert?
+- DOCTYPE vorhanden?
+- Sprachattribut (lang) gesetzt?
+- Ladezeit-Indikatoren (Seitengröße, Anzahl Scripts/Styles)
+- URL-Struktur sauber?
+- Structured Data (JSON-LD, Microdata)?
+- Gibt es Redirect-Ketten?
+
+content_quality:
+- Ist der Seiteninhalt ausreichend lang (mind. 300 Wörter für Hauptseiten)?
+- Keyword-Dichte und Relevanz?
+- Text-zu-HTML-Verhältnis gut?
+- Duplikate in Title/Description?
+- Einzigartiger, wertvoller Content?
+- Interne Verlinkung vorhanden?
+- Externe Links zu vertrauenswürdigen Quellen?
+
+meta_tags:
+- Title vorhanden, richtige Länge (50-60 Zeichen)?
+- Meta Description vorhanden, richtige Länge (150-160 Zeichen)?
+- Open Graph Tags vollständig (og:title, og:description, og:image, og:type, og:url)?
+- Twitter Card Tags?
+- Meta Viewport korrekt?
+- Meta Robots korrekt?
+- Favicon gesetzt?
+
+heading_structure:
+- Genau ein H1?
+- H1 enthält relevante Keywords?
+- Logische Hierarchie (H1 > H2 > H3, keine Sprünge)?
+- Headings sind beschreibend, nicht generisch?
+- Zu viele oder zu wenige Headings?
+
+mobile_usability:
+- Viewport Meta Tag korrekt (width=device-width, initial-scale=1)?
+- Touch-freundliche Elemente (min. 44x44px Tap-Targets)?
+- Keine horizontale Scrollbalken (responsive Design)?
+- Schriftgröße lesbar auf Mobilgeräten (min. 16px)?
+- Keine Flash-Inhalte?
+
+performance:
+- Seitengröße unter 3MB?
+- Anzahl HTTP-Requests minimal?
+- Bilder optimiert (WebP-Format, lazy loading)?
+- CSS/JS minimiert?
+- Render-blockierende Ressourcen?
+- Browser-Caching über Cache-Control Headers?
+- Komprimierung (gzip/brotli)?
+
+accessibility:
+- Alle Bilder haben alt-Attribute?
+- Formular-Labels vorhanden?
+- Farbkontrast ausreichend?
+- Tastatur-Navigation möglich?
+- ARIA-Labels wo nötig?
+- Skip-to-Content Link?
+- Semantische HTML-Elemente (header, main, nav, footer)?
+
+security:
+- HTTPS aktiv?
+- Mixed Content (HTTP-Ressourcen auf HTTPS-Seite)?
+- Security Headers (X-Content-Type-Options, X-Frame-Options, Strict-Transport-Security, Content-Security-Policy)?
+- Keine veralteten JavaScript-Bibliotheken?
+- Externe Scripts von vertrauenswürdigen Quellen?
+
+BEWERTUNGS-MASSSTAB:
+- 90-100: Exzellent, best-practice in allen Punkten
+- 70-89: Gut, aber Verbesserungspotenzial
+- 50-69: Durchschnittlich, deutliche Probleme
+- 30-49: Schlecht, viele kritische Probleme
+- 0-29: Sehr schlecht, grundlegende Probleme
 
 Du MUSST exakt dieses JSON-Format zurückgeben:
 
 {
   "overall_score": <0-100>,
-  "summary": "<Kurze Zusammenfassung auf Deutsch>",
+  "summary": "<3-4 Sätze Zusammenfassung: Was ist gut, was sind die Hauptprobleme, was sollte als erstes gefixt werden>",
   "categories": {
     "technical_seo": {
       "score": <0-100>,
       "label": "Technical SEO",
-      "issues": [<Issue-Objekte>]
+      "issues": [<3-5 Issue-Objekte>]
     },
     "content_quality": {
       "score": <0-100>,
       "label": "Inhaltsqualität",
-      "issues": [<Issue-Objekte>]
+      "issues": [<3-5 Issue-Objekte>]
     },
     "meta_tags": {
       "score": <0-100>,
       "label": "Meta-Tags & Open Graph",
-      "issues": [<Issue-Objekte>]
+      "issues": [<3-5 Issue-Objekte>]
     },
     "heading_structure": {
       "score": <0-100>,
       "label": "Überschriften-Struktur",
-      "issues": [<Issue-Objekte>]
+      "issues": [<2-4 Issue-Objekte>]
     },
     "mobile_usability": {
       "score": <0-100>,
       "label": "Mobile Nutzbarkeit",
-      "issues": [<Issue-Objekte>]
+      "issues": [<2-4 Issue-Objekte>]
     },
     "performance": {
       "score": <0-100>,
       "label": "Performance",
-      "issues": [<Issue-Objekte>]
+      "issues": [<3-5 Issue-Objekte>]
     },
     "accessibility": {
       "score": <0-100>,
       "label": "Barrierefreiheit",
-      "issues": [<Issue-Objekte>]
+      "issues": [<3-5 Issue-Objekte>]
     },
     "security": {
       "score": <0-100>,
       "label": "Sicherheit",
-      "issues": [<Issue-Objekte>]
+      "issues": [<2-4 Issue-Objekte>]
     }
   },
   "quick_wins": [
     {
-      "title": "<Titel>",
-      "description": "<Beschreibung>",
+      "title": "<Konkrete Aktion>",
+      "description": "<Was genau zu tun ist und warum>",
       "impact": "high",
-      "effort": "low"
+      "effort": "low",
+      "estimated_time": "<z.B. 5 Minuten>"
     }
   ]
 }
@@ -82,16 +159,16 @@ Jedes Issue-Objekt MUSS dieses Format haben:
 {
   "id": "<kebab-case-id>",
   "severity": "high" | "medium" | "low",
-  "title": "<Titel auf Deutsch>",
-  "description": "<Beschreibung auf Deutsch>",
-  "impact": "<Geschäftliche Auswirkung auf Deutsch>",
-  "fix": "<Lösung auf Deutsch>",
-  "code_snippet": "<Optionaler Code-Fix oder leerer String>",
+  "title": "<Konkreter Titel, z.B. 'Meta-Description fehlt' statt 'SEO Problem'>",
+  "description": "<2-3 Sätze: Was genau das Problem ist und warum es schlecht ist>",
+  "impact": "<Konkreter Business-Impact: z.B. 'Kann bis zu 30% weniger Klicks in Google bedeuten'>",
+  "fix": "<Schritt-für-Schritt Anleitung zum Beheben>",
+  "code_snippet": "<Konkreter Code zum Kopieren und Einfügen. MUSS ausgefüllt sein. Wenn kein Code möglich: Konfigurationsanweisung.>",
   "effort": "low" | "medium" | "high",
   "category": "<Kategorie-Schlüssel>"
 }
 
-Antworte NUR mit dem JSON-Objekt, ohne Markdown-Codeblocks.`;
+Antworte NUR mit dem JSON-Objekt, ohne Markdown-Codeblocks oder erklärenden Text.`;
 
 // ---------------------------------------------------------------------------
 // HTML metadata extraction (regex-based, no DOM parser)
@@ -508,7 +585,7 @@ serve(async (req) => {
               response_format: { type: "json_object" },
               messages: messages,
               temperature: 0.3,
-              max_tokens: 4000,
+              max_tokens: 8000,
             }),
             signal: controller.signal,
           });
@@ -587,28 +664,45 @@ serve(async (req) => {
     const durationMs = Date.now() - startTime;
     console.log(`[analyze] Analysis complete in ${durationMs}ms`);
 
-    // ---- Save to database (if authenticated) ----
-    if (userId) {
-      try {
-        const { error: dbError } = await supabase.from("analyses").insert({
+    // ---- Flatten all issues from all categories ----
+    const allIssues: any[] = [];
+    for (const catKey in analysis.categories) {
+      const cat = (analysis.categories as any)[catKey];
+      if (cat.issues) {
+        cat.issues.forEach((issue: any) => allIssues.push(issue));
+      }
+    }
+
+    // ---- Save to database ----
+    let savedAnalysis: { id: string } | null = null;
+    try {
+      const { data: savedData, error: dbError } = await supabase
+        .from("analyses")
+        .insert({
           user_id: userId,
           url,
+          status: 'completed',
           overall_score: analysis.overall_score,
-          results: analysis,
-          metadata: {
-            title: metadata.title,
-            meta_description: metadata.meta_description,
-            page_size_kb: metadata.page_size_kb,
-          },
-          duration_ms: durationMs,
-        });
-        if (dbError) {
-          console.error(`[analyze] DB insert error: ${JSON.stringify(dbError)}`);
-        }
-      } catch (dbErr) {
-        console.error(`[analyze] DB save failed: ${dbErr}`);
-        // Non-fatal — still return results
+          category_scores: analysis.categories,
+          issues: allIssues,
+          raw_metadata: metadata,
+          page_title: metadata.title || '',
+          summary: (analysis as any).summary || '',
+          quick_wins: (analysis as any).quick_wins || [],
+          is_free_analysis: !userId,
+          ai_model_used: 'gpt-4o-mini',
+          processing_time_ms: durationMs,
+        })
+        .select('id')
+        .single();
+      if (dbError) {
+        console.error(`[analyze] DB insert error: ${JSON.stringify(dbError)}`);
+      } else {
+        savedAnalysis = savedData;
       }
+    } catch (dbErr) {
+      console.error(`[analyze] DB save failed: ${dbErr}`);
+      // Non-fatal — still return results
     }
 
     // ---- Return results ----
@@ -618,6 +712,7 @@ serve(async (req) => {
         data: {
           url,
           analysis,
+          analysis_id: savedAnalysis?.id || null,
           metadata: {
             title: metadata.title,
             is_https: metadata.is_https,
