@@ -1965,16 +1965,41 @@
             return;
         }
 
-        // Handle checkout returns
-        if (typeof payments !== 'undefined') {
-            payments.handleCheckoutReturn();
-        }
-
         // Listen for auth changes
         auth.onAuthStateChange(async (event, session) => {
             if (event === 'SIGNED_IN') {
                 appState.user = await db.getUser();
                 appState.profile = await db.getProfile();
+
+                // Auto-verify subscription on sign-in if checkout=success in URL
+                var urlParams = new URLSearchParams(window.location.search);
+                if (urlParams.get('checkout') === 'success' && session) {
+                    console.log('[shift07] Checkout success detected, verifying subscription...');
+                    try {
+                        var resp = await fetch(SUPABASE_URL + '/functions/v1/verify-subscription', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json',
+                                'Authorization': 'Bearer ' + session.access_token,
+                                'apikey': SUPABASE_ANON_KEY,
+                            },
+                        });
+                        var result = await resp.json();
+                        console.log('[shift07] Verify result:', JSON.stringify(result));
+                        if (result.success && result.data.subscription_status === 'pro') {
+                            appState.profile = await db.getProfile();
+                            updateSidebarUser();
+                            if (typeof payments !== 'undefined') {
+                                payments._showNotification('success', 'Shift07 Pro ist aktiv!', 'Du hast vollen Zugriff auf alle Funktionen.');
+                            }
+                            // Clean URL and navigate to dashboard
+                            window.history.replaceState({}, '', window.location.pathname);
+                            window.location.hash = '#/dashboard';
+                        }
+                    } catch (e) {
+                        console.error('[shift07] Auto-verify error:', e);
+                    }
+                }
                 updateSidebarUser();
                 if (appState.currentRoute === '#/login' || appState.currentRoute === '#/signup') {
                     window.location.hash = '#/dashboard';
