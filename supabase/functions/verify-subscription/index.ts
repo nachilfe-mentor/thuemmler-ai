@@ -72,14 +72,18 @@ serve(async (req) => {
     let customerId = profile?.stripe_customer_id;
 
     // If no customer ID stored, search Stripe by email
-    if (!customerId) {
-      const customers = (await stripeGet(
-        `/customers?email=${encodeURIComponent(user.email!)}&limit=1`,
-        stripeSecretKey
-      )) as { data?: { id: string }[] };
+    if (!customerId && user.email) {
+      try {
+        const customers = (await stripeGet(
+          `/customers?email=${encodeURIComponent(user.email)}&limit=1`,
+          stripeSecretKey
+        )) as { data?: { id: string }[] };
 
-      if (customers.data && customers.data.length > 0) {
-        customerId = customers.data[0].id;
+        if (customers.data && customers.data.length > 0) {
+          customerId = customers.data[0].id;
+        }
+      } catch (e) {
+        console.error(`[verify-subscription] Stripe customer lookup error: ${e}`);
       }
     }
 
@@ -109,7 +113,9 @@ serve(async (req) => {
         if (proStatuses.includes(sub.status)) {
           subscriptionStatus = "pro";
           subscriptionId = sub.id;
-          periodEnd = new Date(sub.current_period_end * 1000).toISOString();
+          if (sub.current_period_end) {
+            periodEnd = new Date(sub.current_period_end * 1000).toISOString();
+          }
           break;
         }
       }
@@ -134,9 +140,11 @@ serve(async (req) => {
               `/subscriptions/${session.subscription}`,
               stripeSecretKey
             )) as { current_period_end?: number; status?: string };
-            if (subDetail.current_period_end) {
-              periodEnd = new Date(subDetail.current_period_end * 1000).toISOString();
-            }
+            try {
+              if (subDetail.current_period_end) {
+                periodEnd = new Date(subDetail.current_period_end * 1000).toISOString();
+              }
+            } catch (_) { /* ignore date parsing errors */ }
             break;
           }
         }
