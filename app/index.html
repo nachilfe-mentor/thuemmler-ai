@@ -1,0 +1,1968 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard — Shift07.ai</title>
+    <meta name="description" content="Shift07 Dashboard — Verwalte deine SEO-Analysen, vergleiche Ergebnisse und ueberwache deine Websites.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+        }
+
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: rgba(15, 23, 42, 0.5); }
+        ::-webkit-scrollbar-thumb { background: rgba(59, 130, 246, 0.5); border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: rgba(59, 130, 246, 0.7); }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.06);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .glass-strong {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+
+        @keyframes fade-in-up {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in-up {
+            animation: fade-in-up 0.4s ease-out forwards;
+            opacity: 0;
+        }
+
+        @keyframes spin-slow {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .animate-spin-slow { animation: spin-slow 2s linear infinite; }
+
+        @keyframes pulse-glow {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(99, 102, 241, 0.4); }
+            50% { box-shadow: 0 0 20px 4px rgba(99, 102, 241, 0.2); }
+        }
+
+        .sidebar-link {
+            transition: all 0.2s ease;
+        }
+        .sidebar-link:hover, .sidebar-link.active {
+            background: rgba(99, 102, 241, 0.15);
+            color: #a5b4fc;
+        }
+        .sidebar-link.active {
+            border-right: 3px solid #6366f1;
+        }
+
+        .score-circle {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .score-circle svg {
+            transform: rotate(-90deg);
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #6366f1, #8b5cf6);
+            transition: all 0.2s;
+        }
+        .btn-primary:hover {
+            opacity: 0.9;
+            transform: translateY(-1px);
+        }
+        .btn-primary:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.2s;
+        }
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.12);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .input-field {
+            background: rgba(15, 23, 42, 0.6);
+            border: 1px solid rgba(100, 116, 139, 0.3);
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+        .input-field:focus {
+            outline: none;
+            border-color: #6366f1;
+            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+        }
+
+        .severity-critical { background: rgba(239, 68, 68, 0.15); color: #fca5a5; border: 1px solid rgba(239, 68, 68, 0.3); }
+        .severity-high { background: rgba(249, 115, 22, 0.15); color: #fdba74; border: 1px solid rgba(249, 115, 22, 0.3); }
+        .severity-medium { background: rgba(245, 158, 11, 0.15); color: #fcd34d; border: 1px solid rgba(245, 158, 11, 0.3); }
+        .severity-low { background: rgba(34, 197, 94, 0.15); color: #86efac; border: 1px solid rgba(34, 197, 94, 0.3); }
+        .severity-info { background: rgba(99, 102, 241, 0.15); color: #a5b4fc; border: 1px solid rgba(99, 102, 241, 0.3); }
+
+        .badge-new { background: rgba(34, 197, 94, 0.15); color: #86efac; }
+        .badge-solved { background: rgba(99, 102, 241, 0.15); color: #a5b4fc; }
+        .badge-worse { background: rgba(239, 68, 68, 0.15); color: #fca5a5; }
+
+        .table-row {
+            transition: background 0.15s;
+        }
+        .table-row:hover {
+            background: rgba(255, 255, 255, 0.04);
+        }
+
+        /* Mobile sidebar overlay */
+        #sidebar-overlay {
+            transition: opacity 0.3s;
+        }
+        #sidebar {
+            transition: transform 0.3s ease;
+        }
+
+        /* Confirmation modal */
+        .modal-overlay {
+            background: rgba(15, 23, 42, 0.85);
+            backdrop-filter: blur(12px);
+        }
+
+        /* Radar chart */
+        .radar-label {
+            font-size: 11px;
+            fill: #94a3b8;
+        }
+
+        /* Copy button */
+        .copy-btn {
+            transition: all 0.2s;
+        }
+        .copy-btn:hover {
+            background: rgba(99, 102, 241, 0.2);
+        }
+        .copy-btn.copied {
+            color: #86efac;
+        }
+    </style>
+</head>
+<body class="bg-slate-900 text-slate-200 min-h-screen">
+
+    <!-- Mobile sidebar toggle -->
+    <button id="sidebar-toggle" class="fixed top-4 left-4 z-50 lg:hidden p-2 rounded-lg glass text-slate-300 hover:text-white">
+        <svg id="sidebar-open-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+        <svg id="sidebar-close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+    </button>
+
+    <!-- Sidebar overlay (mobile) -->
+    <div id="sidebar-overlay" class="fixed inset-0 bg-black/50 z-30 hidden lg:hidden" onclick="toggleSidebar()"></div>
+
+    <!-- Sidebar -->
+    <aside id="sidebar" class="fixed left-0 top-0 h-full w-64 z-40 flex flex-col border-r border-white/10 -translate-x-full lg:translate-x-0"
+           style="background: linear-gradient(180deg, rgba(15,23,42,0.98), rgba(30,27,75,0.95));">
+        <!-- Logo -->
+        <div class="p-6 pb-4">
+            <a href="#/dashboard" class="text-xl font-bold text-white">
+                shift07<span class="text-indigo-400">.ai</span>
+            </a>
+            <p class="text-xs text-slate-500 mt-1">SEO Intelligence Platform</p>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="flex-1 px-3 space-y-1 overflow-y-auto">
+            <!-- Main -->
+            <a href="#/dashboard" class="sidebar-link flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium text-slate-400" data-route="#/dashboard">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-4 0a1 1 0 01-1-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 01-1 1"/></svg>
+                Dashboard
+            </a>
+            <a href="#/analyze" class="sidebar-link flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium text-slate-400" data-route="#/analyze">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+                Neue Analyse
+            </a>
+            <a href="#/history" class="sidebar-link flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium text-slate-400" data-route="#/history">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                Verlauf
+            </a>
+            <a href="#/compare" class="sidebar-link flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium text-slate-400" data-route="#/compare">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+                Vergleich
+            </a>
+            <a href="#/monitoring" class="sidebar-link flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium text-slate-400" data-route="#/monitoring">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+                Monitoring
+            </a>
+
+            <!-- Divider -->
+            <div class="border-t border-white/10 my-3"></div>
+
+            <a href="#/settings" class="sidebar-link flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium text-slate-400" data-route="#/settings">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                Einstellungen
+            </a>
+            <a href="#/billing" class="sidebar-link flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium text-slate-400" data-route="#/billing">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"/></svg>
+                Abrechnung
+            </a>
+        </nav>
+
+        <!-- User section / Logout -->
+        <div class="p-3 border-t border-white/10">
+            <div id="sidebar-user" class="flex items-center gap-3 px-3 py-2 mb-1">
+                <div class="w-8 h-8 rounded-full bg-indigo-500/20 flex items-center justify-center text-indigo-400 text-sm font-bold" id="sidebar-avatar">?</div>
+                <div class="flex-1 min-w-0">
+                    <p class="text-sm font-medium text-slate-300 truncate" id="sidebar-username">Laden...</p>
+                    <p class="text-xs text-slate-500 truncate" id="sidebar-email"></p>
+                </div>
+            </div>
+            <button onclick="handleLogout()" class="sidebar-link flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium text-red-400/70 hover:text-red-400 hover:bg-red-500/10 w-full">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"/></svg>
+                Abmelden
+            </button>
+        </div>
+    </aside>
+
+    <!-- Main content area -->
+    <main id="main-content" class="lg:ml-64 min-h-screen">
+        <!-- Content injected by router -->
+    </main>
+
+    <!-- Global notification container -->
+    <div id="notification-container" class="fixed top-4 right-4 z-50 space-y-2" style="max-width:420px;"></div>
+
+    <!-- Confirmation modal (reusable) -->
+    <div id="confirm-modal" class="fixed inset-0 z-[9999] hidden">
+        <div class="modal-overlay absolute inset-0" onclick="closeConfirmModal()"></div>
+        <div class="absolute inset-0 flex items-center justify-content p-4 pointer-events-none">
+            <div class="glass-strong rounded-2xl p-6 max-w-md mx-auto pointer-events-auto" style="animation: fade-in-up 0.2s ease-out;">
+                <h3 id="confirm-title" class="text-lg font-bold text-white mb-2"></h3>
+                <p id="confirm-message" class="text-slate-400 text-sm mb-6"></p>
+                <div class="flex gap-3 justify-end">
+                    <button onclick="closeConfirmModal()" class="btn-secondary px-4 py-2 rounded-lg text-sm font-medium text-slate-300">Abbrechen</button>
+                    <button id="confirm-action-btn" class="px-4 py-2 rounded-lg text-sm font-medium text-white bg-red-500 hover:bg-red-600 transition-colors">Bestaetigen</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- External scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="/assets/js/supabase-client.js"></script>
+    <script src="/assets/js/auth.js"></script>
+    <script src="/assets/js/scanner.js"></script>
+    <script src="/assets/js/stripe.js"></script>
+
+    <script>
+    // =========================================================================
+    // App State
+    // =========================================================================
+    const appState = {
+        user: null,
+        profile: null,
+        currentRoute: null,
+        currentParams: {},
+        analysesCache: null,
+        analysesCacheTime: 0,
+    };
+
+    // =========================================================================
+    // Utility Helpers
+    // =========================================================================
+
+    function escapeHtml(str) {
+        if (!str) return '';
+        const div = document.createElement('div');
+        div.appendChild(document.createTextNode(str));
+        return div.innerHTML;
+    }
+
+    function formatDate(dateStr) {
+        if (!dateStr) return '---';
+        const d = new Date(dateStr);
+        return d.toLocaleDateString('de-DE', { day: '2-digit', month: '2-digit', year: 'numeric' });
+    }
+
+    function formatDateTime(dateStr) {
+        if (!dateStr) return '---';
+        const d = new Date(dateStr);
+        return d.toLocaleDateString('de-DE', { day: '2-digit', month: '2-digit', year: 'numeric' }) + ', ' +
+               d.toLocaleTimeString('de-DE', { hour: '2-digit', minute: '2-digit' });
+    }
+
+    function truncateUrl(url, maxLen) {
+        maxLen = maxLen || 40;
+        if (!url) return '';
+        try {
+            const u = new URL(url);
+            let display = u.hostname + u.pathname;
+            if (display.endsWith('/')) display = display.slice(0, -1);
+            if (display.length > maxLen) display = display.substring(0, maxLen) + '...';
+            return display;
+        } catch (e) {
+            return url.length > maxLen ? url.substring(0, maxLen) + '...' : url;
+        }
+    }
+
+    function getScoreColor(score) {
+        if (score >= 80) return '#22c55e';
+        if (score >= 60) return '#f59e0b';
+        if (score >= 40) return '#f97316';
+        return '#ef4444';
+    }
+
+    function getScoreLabel(score) {
+        if (score >= 80) return 'Gut';
+        if (score >= 60) return 'Mittel';
+        if (score >= 40) return 'Schwach';
+        return 'Kritisch';
+    }
+
+    function getSeverityClass(severity) {
+        const map = { critical: 'severity-critical', high: 'severity-high', medium: 'severity-medium', low: 'severity-low', info: 'severity-info' };
+        return map[severity] || 'severity-info';
+    }
+
+    function getSeverityLabel(severity) {
+        const map = { critical: 'Kritisch', high: 'Hoch', medium: 'Mittel', low: 'Niedrig', info: 'Info' };
+        return map[severity] || severity;
+    }
+
+    function buildScoreCircleSVG(score, size, strokeWidth) {
+        size = size || 80;
+        strokeWidth = strokeWidth || 6;
+        const radius = (size - strokeWidth) / 2;
+        const circumference = 2 * Math.PI * radius;
+        const offset = circumference - (score / 100) * circumference;
+        const color = getScoreColor(score);
+        return `<div class="score-circle" style="width:${size}px;height:${size}px;">
+            <svg width="${size}" height="${size}" viewBox="0 0 ${size} ${size}">
+                <circle cx="${size/2}" cy="${size/2}" r="${radius}" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="${strokeWidth}"/>
+                <circle cx="${size/2}" cy="${size/2}" r="${radius}" fill="none" stroke="${color}" stroke-width="${strokeWidth}" stroke-linecap="round"
+                    stroke-dasharray="${circumference}" stroke-dashoffset="${offset}" style="transition: stroke-dashoffset 1s ease;"/>
+            </svg>
+            <span class="absolute text-base font-bold" style="color:${color};">${score}</span>
+        </div>`;
+    }
+
+    function buildSmallScoreCircle(score) {
+        return buildScoreCircleSVG(score, 48, 4);
+    }
+
+    function showLoading() {
+        return `<div class="flex items-center justify-center py-20">
+            <div class="text-center">
+                <div class="w-10 h-10 border-3 border-indigo-500/30 border-t-indigo-500 rounded-full animate-spin-slow mx-auto mb-4" style="border-width:3px;"></div>
+                <p class="text-slate-500 text-sm">Laden...</p>
+            </div>
+        </div>`;
+    }
+
+    function showError(message) {
+        return `<div class="flex items-center justify-center py-20">
+            <div class="text-center glass rounded-2xl p-8 max-w-md">
+                <div class="w-12 h-12 rounded-full bg-red-500/10 flex items-center justify-center mx-auto mb-4">
+                    <svg class="w-6 h-6 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.082 16.5c-.77.833.192 2.5 1.732 2.5z"/></svg>
+                </div>
+                <p class="text-red-300 font-medium mb-2">Fehler</p>
+                <p class="text-slate-400 text-sm">${escapeHtml(message)}</p>
+            </div>
+        </div>`;
+    }
+
+    function showNotification(type, title, message) {
+        const container = document.getElementById('notification-container');
+        if (!container) return;
+
+        const colors = {
+            success: { bg: 'rgba(16,185,129,0.15)', border: '#10b981', icon: '<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>' },
+            error: { bg: 'rgba(239,68,68,0.15)', border: '#ef4444', icon: '<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>' },
+            info: { bg: 'rgba(99,102,241,0.15)', border: '#6366f1', icon: '<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>' },
+        };
+        const c = colors[type] || colors.info;
+
+        const el = document.createElement('div');
+        el.className = 'animate-fade-in-up';
+        el.innerHTML = `<div class="rounded-xl p-4 flex items-start gap-3" style="background:${c.bg};border:1px solid ${c.border};">
+            <span class="flex-shrink-0 mt-0.5" style="color:${c.border};">${c.icon}</span>
+            <div class="flex-1 min-w-0">
+                <p class="text-sm font-semibold text-slate-200">${escapeHtml(title)}</p>
+                <p class="text-xs text-slate-400 mt-0.5">${escapeHtml(message)}</p>
+            </div>
+            <button onclick="this.closest('.animate-fade-in-up').remove()" class="text-slate-500 hover:text-slate-300 flex-shrink-0">&times;</button>
+        </div>`;
+        container.appendChild(el);
+        setTimeout(() => { if (el.parentNode) el.remove(); }, 6000);
+    }
+
+    // Confirmation modal
+    let _confirmResolve = null;
+    function showConfirmModal(title, message, actionLabel, actionClass) {
+        const modal = document.getElementById('confirm-modal');
+        document.getElementById('confirm-title').textContent = title;
+        document.getElementById('confirm-message').textContent = message;
+        const btn = document.getElementById('confirm-action-btn');
+        btn.textContent = actionLabel || 'Bestaetigen';
+        btn.className = `px-4 py-2 rounded-lg text-sm font-medium text-white transition-colors ${actionClass || 'bg-red-500 hover:bg-red-600'}`;
+        modal.classList.remove('hidden');
+
+        return new Promise(resolve => {
+            _confirmResolve = resolve;
+            btn.onclick = () => { closeConfirmModal(); resolve(true); };
+        });
+    }
+
+    function closeConfirmModal() {
+        document.getElementById('confirm-modal').classList.add('hidden');
+        if (_confirmResolve) { _confirmResolve(false); _confirmResolve = null; }
+    }
+
+    // Copy to clipboard
+    async function copyToClipboard(text, btnEl) {
+        try {
+            await navigator.clipboard.writeText(text);
+            if (btnEl) {
+                btnEl.classList.add('copied');
+                const orig = btnEl.innerHTML;
+                btnEl.innerHTML = '<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>';
+                setTimeout(() => { btnEl.innerHTML = orig; btnEl.classList.remove('copied'); }, 2000);
+            }
+        } catch (e) {
+            showNotification('error', 'Fehler', 'Konnte nicht in die Zwischenablage kopieren.');
+        }
+    }
+
+    // =========================================================================
+    // Sidebar
+    // =========================================================================
+
+    function toggleSidebar() {
+        const sidebar = document.getElementById('sidebar');
+        const overlay = document.getElementById('sidebar-overlay');
+        const openIcon = document.getElementById('sidebar-open-icon');
+        const closeIcon = document.getElementById('sidebar-close-icon');
+
+        const isOpen = !sidebar.classList.contains('-translate-x-full');
+        if (isOpen) {
+            sidebar.classList.add('-translate-x-full');
+            overlay.classList.add('hidden');
+            openIcon.classList.remove('hidden');
+            closeIcon.classList.add('hidden');
+        } else {
+            sidebar.classList.remove('-translate-x-full');
+            overlay.classList.remove('hidden');
+            openIcon.classList.add('hidden');
+            closeIcon.classList.remove('hidden');
+        }
+    }
+
+    document.getElementById('sidebar-toggle').addEventListener('click', toggleSidebar);
+
+    function updateSidebarActive(route) {
+        document.querySelectorAll('.sidebar-link[data-route]').forEach(link => {
+            const linkRoute = link.getAttribute('data-route');
+            if (route.startsWith(linkRoute)) {
+                link.classList.add('active');
+            } else {
+                link.classList.remove('active');
+            }
+        });
+    }
+
+    async function updateSidebarUser() {
+        const user = appState.user;
+        const avatarEl = document.getElementById('sidebar-avatar');
+        const nameEl = document.getElementById('sidebar-username');
+        const emailEl = document.getElementById('sidebar-email');
+
+        if (user) {
+            const name = (user.user_metadata && user.user_metadata.full_name) || user.email || '';
+            nameEl.textContent = name;
+            emailEl.textContent = user.email || '';
+            avatarEl.textContent = name.charAt(0).toUpperCase();
+        }
+    }
+
+    // =========================================================================
+    // Router
+    // =========================================================================
+
+    const routes = {
+        '#/dashboard': renderDashboard,
+        '#/analyze': renderAnalyze,
+        '#/history': renderHistory,
+        '#/analysis': renderAnalysisDetail,
+        '#/compare': renderCompare,
+        '#/monitoring': renderMonitoring,
+        '#/settings': renderSettings,
+        '#/billing': renderBilling,
+        '#/login': renderLogin,
+        '#/signup': renderSignup,
+    };
+
+    function parseRoute() {
+        const hash = window.location.hash || '#/dashboard';
+        const parts = hash.split('/');
+        // Handle #/analysis/:id
+        if (parts.length >= 3 && parts[1] === 'analysis') {
+            return { route: '#/analysis', params: { id: parts.slice(2).join('/') } };
+        }
+        const route = '#/' + (parts[1] || 'dashboard');
+        return { route, params: {} };
+    }
+
+    async function navigate() {
+        const { route, params } = parseRoute();
+        const publicRoutes = ['#/login', '#/signup'];
+
+        // Check auth
+        const isAuthed = await auth.isAuthenticated();
+        if (!isAuthed && !publicRoutes.includes(route)) {
+            window.location.hash = '#/login';
+            return;
+        }
+        if (isAuthed && publicRoutes.includes(route)) {
+            window.location.hash = '#/dashboard';
+            return;
+        }
+
+        // Load user data if authenticated
+        if (isAuthed && !appState.user) {
+            appState.user = await db.getUser();
+            appState.profile = await db.getProfile();
+            updateSidebarUser();
+        }
+
+        appState.currentRoute = route;
+        appState.currentParams = params;
+
+        updateSidebarActive(route);
+
+        // Close mobile sidebar
+        const sidebar = document.getElementById('sidebar');
+        if (window.innerWidth < 1024 && !sidebar.classList.contains('-translate-x-full')) {
+            toggleSidebar();
+        }
+
+        // Show/hide sidebar for auth pages
+        const sidebarEl = document.getElementById('sidebar');
+        const toggleBtn = document.getElementById('sidebar-toggle');
+        const mainContent = document.getElementById('main-content');
+        if (publicRoutes.includes(route)) {
+            sidebarEl.classList.add('hidden');
+            toggleBtn.classList.add('hidden');
+            mainContent.classList.remove('lg:ml-64');
+        } else {
+            sidebarEl.classList.remove('hidden');
+            toggleBtn.classList.remove('hidden');
+            mainContent.classList.add('lg:ml-64');
+        }
+
+        const renderFn = routes[route];
+        if (renderFn) {
+            renderFn(params);
+        } else {
+            document.getElementById('main-content').innerHTML = `
+                <div class="p-6 lg:p-8">
+                    <div class="glass rounded-2xl p-12 text-center">
+                        <p class="text-6xl mb-4">404</p>
+                        <p class="text-slate-400 mb-6">Seite nicht gefunden.</p>
+                        <a href="#/dashboard" class="btn-primary px-6 py-2 rounded-lg text-sm font-medium text-white inline-block">Zum Dashboard</a>
+                    </div>
+                </div>`;
+        }
+    }
+
+    window.addEventListener('hashchange', navigate);
+
+    // =========================================================================
+    // Logout
+    // =========================================================================
+
+    async function handleLogout() {
+        await auth.signOut();
+        appState.user = null;
+        appState.profile = null;
+        appState.analysesCache = null;
+        window.location.hash = '#/login';
+    }
+
+    // =========================================================================
+    // View: Login
+    // =========================================================================
+
+    function renderLogin() {
+        const main = document.getElementById('main-content');
+        main.innerHTML = `
+        <div class="min-h-screen flex items-center justify-center p-4" style="background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #312e81 100%);">
+            <div class="text-center">
+                <h1 class="text-3xl font-bold text-white mb-2">shift07<span class="text-indigo-400">.ai</span></h1>
+                <p class="text-slate-500 mb-8">Melde dich an, um fortzufahren</p>
+                <div id="auth-inline-container"></div>
+            </div>
+        </div>`;
+        setTimeout(() => auth.showAuthModal('login'), 100);
+    }
+
+    // =========================================================================
+    // View: Signup
+    // =========================================================================
+
+    function renderSignup() {
+        const main = document.getElementById('main-content');
+        main.innerHTML = `
+        <div class="min-h-screen flex items-center justify-center p-4" style="background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #312e81 100%);">
+            <div class="text-center">
+                <h1 class="text-3xl font-bold text-white mb-2">shift07<span class="text-indigo-400">.ai</span></h1>
+                <p class="text-slate-500 mb-8">Erstelle dein Konto</p>
+                <div id="auth-inline-container"></div>
+            </div>
+        </div>`;
+        setTimeout(() => auth.showAuthModal('signup'), 100);
+    }
+
+    // =========================================================================
+    // View: Dashboard
+    // =========================================================================
+
+    async function renderDashboard() {
+        const main = document.getElementById('main-content');
+        const userName = (appState.user && appState.user.user_metadata && appState.user.user_metadata.full_name)
+            ? appState.user.user_metadata.full_name.split(' ')[0]
+            : 'User';
+
+        main.innerHTML = `
+        <div class="p-6 lg:p-8 animate-fade-in-up" style="background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #312e81 100%); min-height:100vh;">
+            <!-- Header -->
+            <div class="mb-8">
+                <h1 class="text-2xl lg:text-3xl font-bold text-white">Hallo, ${escapeHtml(userName)}!</h1>
+                <p class="text-slate-400 mt-1">Hier ist dein SEO-Ueberblick.</p>
+            </div>
+
+            <!-- Stats -->
+            <div id="dashboard-stats" class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+                ${showLoading()}
+            </div>
+
+            <!-- Quick Action -->
+            <div class="glass rounded-2xl p-6 mb-8">
+                <h2 class="text-lg font-semibold text-white mb-4">Neue Analyse starten</h2>
+                <form id="dashboard-quick-analyze" class="flex gap-3">
+                    <input type="url" placeholder="https://example.com" class="input-field flex-1 px-4 py-3 rounded-xl text-white text-sm" required>
+                    <button type="submit" class="btn-primary px-6 py-3 rounded-xl text-sm font-semibold text-white whitespace-nowrap">Analysieren</button>
+                </form>
+            </div>
+
+            <!-- Recent Analyses -->
+            <div class="glass rounded-2xl p-6">
+                <div class="flex items-center justify-between mb-4">
+                    <h2 class="text-lg font-semibold text-white">Letzte Analysen</h2>
+                    <a href="#/history" class="text-indigo-400 hover:text-indigo-300 text-sm font-medium">Alle anzeigen &rarr;</a>
+                </div>
+                <div id="dashboard-recent">${showLoading()}</div>
+            </div>
+        </div>`;
+
+        // Quick analyze
+        document.getElementById('dashboard-quick-analyze').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const url = e.target.querySelector('input').value.trim();
+            if (url) {
+                window.location.hash = '#/analyze?url=' + encodeURIComponent(url);
+            }
+        });
+
+        // Load data
+        try {
+            const { data: analyses, count } = await db.getAnalyses(1, 5);
+
+            // Stats
+            const statsContainer = document.getElementById('dashboard-stats');
+            if (!analyses || analyses.length === 0) {
+                statsContainer.innerHTML = `
+                    <div class="glass rounded-2xl p-6 text-center md:col-span-3">
+                        <div class="w-16 h-16 rounded-full bg-indigo-500/10 flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+                        </div>
+                        <h3 class="text-lg font-semibold text-white mb-2">Starte deine erste Analyse</h3>
+                        <p class="text-slate-400 text-sm mb-4">Gib eine URL ein und erhalte detaillierte SEO-Einblicke.</p>
+                        <a href="#/analyze" class="btn-primary inline-block px-6 py-2.5 rounded-xl text-sm font-semibold text-white">Jetzt analysieren</a>
+                    </div>`;
+                document.getElementById('dashboard-recent').innerHTML = '<p class="text-slate-500 text-sm text-center py-8">Noch keine Analysen vorhanden.</p>';
+                return;
+            }
+
+            const totalAnalyses = count || analyses.length;
+            const avgScore = Math.round(analyses.reduce((sum, a) => sum + (a.overall_score || 0), 0) / analyses.length);
+            const lastDate = formatDate(analyses[0].created_at);
+
+            statsContainer.innerHTML = `
+                <div class="glass rounded-2xl p-6">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-10 h-10 rounded-xl bg-indigo-500/15 flex items-center justify-center">
+                            <svg class="w-5 h-5 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+                        </div>
+                        <span class="text-slate-400 text-sm">Gesamt-Analysen</span>
+                    </div>
+                    <p class="text-3xl font-bold text-white">${totalAnalyses}</p>
+                </div>
+                <div class="glass rounded-2xl p-6">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-10 h-10 rounded-xl bg-green-500/15 flex items-center justify-center">
+                            <svg class="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
+                        </div>
+                        <span class="text-slate-400 text-sm">Durchschnittlicher Score</span>
+                    </div>
+                    <p class="text-3xl font-bold" style="color:${getScoreColor(avgScore)};">${avgScore}<span class="text-lg text-slate-500">/100</span></p>
+                </div>
+                <div class="glass rounded-2xl p-6">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-10 h-10 rounded-xl bg-amber-500/15 flex items-center justify-center">
+                            <svg class="w-5 h-5 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                        </div>
+                        <span class="text-slate-400 text-sm">Letzte Analyse</span>
+                    </div>
+                    <p class="text-3xl font-bold text-white">${lastDate}</p>
+                </div>`;
+
+            // Recent analyses list
+            const recentContainer = document.getElementById('dashboard-recent');
+            let recentHtml = '<div class="space-y-3">';
+            for (const a of analyses) {
+                recentHtml += `
+                <a href="#/analysis/${a.id}" class="table-row flex items-center gap-4 p-3 rounded-xl cursor-pointer">
+                    ${buildSmallScoreCircle(a.overall_score || 0)}
+                    <div class="flex-1 min-w-0">
+                        <p class="text-sm font-medium text-white truncate">${escapeHtml(truncateUrl(a.url, 50))}</p>
+                        <p class="text-xs text-slate-500">${formatDateTime(a.created_at)}</p>
+                    </div>
+                    <span class="text-xs font-medium px-2 py-1 rounded-full" style="background:${getScoreColor(a.overall_score || 0)}20;color:${getScoreColor(a.overall_score || 0)};">${getScoreLabel(a.overall_score || 0)}</span>
+                    <svg class="w-4 h-4 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                </a>`;
+            }
+            recentHtml += '</div>';
+            recentContainer.innerHTML = recentHtml;
+
+        } catch (err) {
+            console.error('[shift07] Dashboard load error:', err);
+            document.getElementById('dashboard-stats').innerHTML = showError('Daten konnten nicht geladen werden.');
+        }
+    }
+
+    // =========================================================================
+    // View: Analyze
+    // =========================================================================
+
+    async function renderAnalyze(params) {
+        const main = document.getElementById('main-content');
+        const urlParam = new URLSearchParams(window.location.hash.split('?')[1] || '').get('url') || '';
+
+        main.innerHTML = `
+        <div class="p-6 lg:p-8 animate-fade-in-up" style="background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #312e81 100%); min-height:100vh;">
+            <div class="mb-8">
+                <h1 class="text-2xl lg:text-3xl font-bold text-white">Neue Analyse</h1>
+                <p class="text-slate-400 mt-1">Gib eine URL ein und erhalte eine vollstaendige SEO-Analyse.</p>
+            </div>
+
+            <div class="glass rounded-2xl p-8 mb-8 max-w-3xl">
+                <form id="analyze-form" class="space-y-4">
+                    <div>
+                        <label class="block text-sm font-medium text-slate-300 mb-2">Website-URL</label>
+                        <input type="url" id="analyze-url" value="${escapeHtml(urlParam)}" placeholder="https://example.com" class="input-field w-full px-5 py-4 rounded-xl text-white text-lg" required>
+                    </div>
+                    <button type="submit" id="analyze-submit-btn" class="btn-primary w-full py-4 rounded-xl text-base font-semibold text-white">
+                        <span class="flex items-center justify-center gap-2">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+                            Analysieren
+                        </span>
+                    </button>
+                </form>
+            </div>
+
+            <div id="analyze-results"></div>
+        </div>`;
+
+        document.getElementById('analyze-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const url = document.getElementById('analyze-url').value.trim();
+            if (!url) return;
+
+            const btn = document.getElementById('analyze-submit-btn');
+            btn.disabled = true;
+            btn.innerHTML = '<span class="flex items-center justify-center gap-2"><div class="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin-slow"></div>Analyse laeuft...</span>';
+
+            try {
+                // Use the scanner's startScan which handles the overlay animation
+                if (typeof window.startScan === 'function') {
+                    // We override _displayResults temporarily to capture the result
+                    const origDisplay = window._displayResults;
+                    let scanResult = null;
+
+                    // Start scan - it will call _displayResults when done
+                    await window.startScan(url);
+
+                    // After scan, the result should be in _scanState
+                    if (window._scanState && window._scanState.apiResult) {
+                        scanResult = window._scanState.apiResult;
+                        // Save the analysis
+                        const saved = await db.saveAnalysis({
+                            url: url,
+                            overall_score: scanResult.overall_score || scanResult.score || 0,
+                            category_scores: scanResult.category_scores || scanResult.categories || {},
+                            issues: scanResult.issues || [],
+                            metadata: scanResult.metadata || {},
+                            recommendations: scanResult.recommendations || null,
+                            seven_day_plan: scanResult.seven_day_plan || scanResult.action_plan || null,
+                        });
+
+                        // Display in our dashboard format
+                        if (saved && saved.id) {
+                            window.location.hash = '#/analysis/' + saved.id;
+                        } else {
+                            renderAnalysisResults(scanResult, document.getElementById('analyze-results'));
+                        }
+                    }
+                } else {
+                    // Fallback: call the API directly
+                    const session = await db.getSession();
+                    const response = await fetch(SUPABASE_URL + '/functions/v1/analyze', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'Authorization': 'Bearer ' + (session ? session.access_token : SUPABASE_ANON_KEY),
+                        },
+                        body: JSON.stringify({ url }),
+                    });
+
+                    if (!response.ok) throw new Error('Analyse fehlgeschlagen');
+                    const result = await response.json();
+
+                    const saved = await db.saveAnalysis({
+                        url: url,
+                        overall_score: result.overall_score || result.score || 0,
+                        category_scores: result.category_scores || result.categories || {},
+                        issues: result.issues || [],
+                        metadata: result.metadata || {},
+                        recommendations: result.recommendations || null,
+                        seven_day_plan: result.seven_day_plan || result.action_plan || null,
+                    });
+
+                    if (saved && saved.id) {
+                        window.location.hash = '#/analysis/' + saved.id;
+                    } else {
+                        renderAnalysisResults(result, document.getElementById('analyze-results'));
+                    }
+                }
+            } catch (err) {
+                console.error('[shift07] Analysis error:', err);
+                showNotification('error', 'Analyse fehlgeschlagen', err.message || 'Bitte versuche es erneut.');
+            } finally {
+                btn.disabled = false;
+                btn.innerHTML = '<span class="flex items-center justify-center gap-2"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>Analysieren</span>';
+            }
+        });
+
+        // Auto-start if URL param present
+        if (urlParam) {
+            setTimeout(() => document.getElementById('analyze-form').dispatchEvent(new Event('submit')), 300);
+        }
+    }
+
+    // =========================================================================
+    // Shared: Render analysis results
+    // =========================================================================
+
+    function renderAnalysisResults(data, container, analysisId) {
+        if (!data || !container) return;
+
+        const score = data.overall_score || data.score || 0;
+        const categories = data.category_scores || data.categories || {};
+        const issues = data.issues || [];
+        const sevenDayPlan = data.seven_day_plan || data.action_plan || null;
+
+        // Category labels
+        const categoryLabels = {
+            meta_tags: 'Meta-Tags',
+            headings: 'Ueberschriften',
+            images: 'Bilder',
+            links: 'Links',
+            performance: 'Performance',
+            mobile: 'Mobile',
+            security: 'Sicherheit',
+            content: 'Inhalt',
+            structured_data: 'Strukturierte Daten',
+            social: 'Social Media',
+        };
+
+        // Build radar chart
+        const catKeys = Object.keys(categories);
+        const radarSize = 280;
+        const radarCenter = radarSize / 2;
+        const radarRadius = 110;
+        let radarSvg = '';
+        if (catKeys.length >= 3) {
+            radarSvg = buildRadarChart(categories, categoryLabels, radarSize, radarCenter, radarRadius);
+        }
+
+        // Group issues by category
+        const issuesByCategory = {};
+        issues.forEach(issue => {
+            const cat = issue.category || 'other';
+            if (!issuesByCategory[cat]) issuesByCategory[cat] = [];
+            issuesByCategory[cat].push(issue);
+        });
+
+        let html = `
+        <!-- Score overview -->
+        <div class="glass rounded-2xl p-8 mb-6">
+            <div class="flex flex-col md:flex-row items-center gap-8">
+                <div class="text-center">
+                    ${buildScoreCircleSVG(score, 140, 10)}
+                    <p class="text-sm font-medium mt-3" style="color:${getScoreColor(score)};">${getScoreLabel(score)}</p>
+                </div>
+                ${radarSvg ? `<div class="flex-1 flex justify-center">${radarSvg}</div>` : ''}
+                <div class="flex-1">
+                    <h3 class="text-lg font-semibold text-white mb-4">Kategorie-Scores</h3>
+                    <div class="space-y-3">
+                        ${catKeys.map(key => {
+                            const val = categories[key] || 0;
+                            const label = categoryLabels[key] || key;
+                            return `<div>
+                                <div class="flex justify-between text-sm mb-1">
+                                    <span class="text-slate-400">${escapeHtml(label)}</span>
+                                    <span class="font-medium" style="color:${getScoreColor(val)};">${val}/100</span>
+                                </div>
+                                <div class="h-2 rounded-full bg-white/5">
+                                    <div class="h-2 rounded-full transition-all duration-1000" style="width:${val}%;background:${getScoreColor(val)};"></div>
+                                </div>
+                            </div>`;
+                        }).join('')}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Action buttons -->
+        <div class="flex flex-wrap gap-3 mb-6">
+            ${analysisId ? `<button onclick="reanalyze('${analysisId}')" class="btn-secondary px-4 py-2 rounded-lg text-sm font-medium text-slate-300 flex items-center gap-2">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+                Erneut analysieren
+            </button>` : ''}
+            <button onclick="exportPDF()" class="btn-secondary px-4 py-2 rounded-lg text-sm font-medium text-slate-300 flex items-center gap-2">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                PDF exportieren
+            </button>
+            ${analysisId ? `<a href="#/compare?a=${analysisId}" class="btn-secondary px-4 py-2 rounded-lg text-sm font-medium text-slate-300 flex items-center gap-2">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+                Vergleichen
+            </a>` : ''}
+        </div>
+
+        <!-- Issues by category -->
+        <div class="space-y-6 mb-8">
+            <h3 class="text-lg font-semibold text-white">Gefundene Issues (${issues.length})</h3>
+            ${Object.keys(issuesByCategory).map(cat => {
+                const catIssues = issuesByCategory[cat];
+                const label = categoryLabels[cat] || cat;
+                return `<div class="glass rounded-2xl p-6">
+                    <h4 class="text-base font-semibold text-white mb-4 flex items-center gap-2">
+                        ${escapeHtml(label)}
+                        <span class="text-xs px-2 py-0.5 rounded-full bg-white/10 text-slate-400">${catIssues.length}</span>
+                    </h4>
+                    <div class="space-y-4">
+                        ${catIssues.map((issue, idx) => renderIssueCard(issue, cat + '-' + idx, analysisId)).join('')}
+                    </div>
+                </div>`;
+            }).join('')}
+            ${issues.length === 0 ? '<div class="glass rounded-2xl p-8 text-center"><p class="text-slate-400">Keine Issues gefunden. Grossartig!</p></div>' : ''}
+        </div>
+
+        <!-- 7-Day Action Plan -->
+        ${sevenDayPlan ? renderSevenDayPlan(sevenDayPlan) : ''}
+        `;
+
+        container.innerHTML = html;
+    }
+
+    function renderIssueCard(issue, uid, analysisId) {
+        const severity = issue.severity || 'info';
+        const title = issue.title || issue.message || 'Issue';
+        const description = issue.description || issue.details || '';
+        const fix = issue.fix || issue.code_fix || issue.suggestion || '';
+        const resolved = issue.resolved || false;
+
+        return `<div class="rounded-xl border border-white/5 p-4 bg-white/[0.02]">
+            <div class="flex items-start gap-3">
+                ${analysisId ? `<input type="checkbox" ${resolved ? 'checked' : ''} onchange="toggleIssueResolved('${analysisId}', '${uid}', this.checked)"
+                    class="mt-1 w-4 h-4 rounded border-slate-600 bg-slate-800 text-indigo-500 focus:ring-indigo-500 cursor-pointer">` : ''}
+                <div class="flex-1 min-w-0">
+                    <div class="flex items-center gap-2 mb-1">
+                        <span class="text-xs font-medium px-2 py-0.5 rounded-full ${getSeverityClass(severity)}">${getSeverityLabel(severity)}</span>
+                        <h5 class="text-sm font-semibold text-white ${resolved ? 'line-through opacity-50' : ''}">${escapeHtml(title)}</h5>
+                    </div>
+                    ${description ? `<p class="text-sm text-slate-400 mt-1">${escapeHtml(description)}</p>` : ''}
+                    ${fix ? `<div class="mt-3 relative">
+                        <div class="bg-slate-900/80 rounded-lg p-3 overflow-x-auto">
+                            <pre class="text-xs text-green-300 font-mono whitespace-pre-wrap"><code>${escapeHtml(fix)}</code></pre>
+                        </div>
+                        <button onclick="copyToClipboard(this.closest('.relative').querySelector('code').textContent, this)" class="copy-btn absolute top-2 right-2 p-1.5 rounded-md bg-white/5 text-slate-500 hover:text-slate-300">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                        </button>
+                    </div>` : ''}
+                </div>
+            </div>
+        </div>`;
+    }
+
+    function renderSevenDayPlan(plan) {
+        let days = [];
+        if (Array.isArray(plan)) {
+            days = plan;
+        } else if (typeof plan === 'object') {
+            // Might be { day1: ..., day2: ... } or { days: [...] }
+            if (plan.days && Array.isArray(plan.days)) {
+                days = plan.days;
+            } else {
+                Object.keys(plan).forEach(key => {
+                    if (plan[key]) days.push({ label: key, tasks: Array.isArray(plan[key]) ? plan[key] : [plan[key]] });
+                });
+            }
+        }
+
+        if (days.length === 0) return '';
+
+        return `<div class="glass rounded-2xl p-6">
+            <h3 class="text-lg font-semibold text-white mb-4">7-Tage Aktionsplan</h3>
+            <div class="space-y-4">
+                ${days.map((day, i) => {
+                    const label = day.label || day.day || ('Tag ' + (i + 1));
+                    const tasks = day.tasks || day.actions || (typeof day === 'string' ? [day] : [day.description || '']);
+                    return `<div class="flex gap-4">
+                        <div class="flex-shrink-0 w-20">
+                            <span class="text-xs font-bold px-2.5 py-1 rounded-full bg-indigo-500/15 text-indigo-400">${escapeHtml(String(label))}</span>
+                        </div>
+                        <div class="flex-1">
+                            ${(Array.isArray(tasks) ? tasks : [tasks]).map(t => `<p class="text-sm text-slate-300 mb-1">${escapeHtml(typeof t === 'string' ? t : (t.description || t.title || JSON.stringify(t)))}</p>`).join('')}
+                        </div>
+                    </div>`;
+                }).join('')}
+            </div>
+        </div>`;
+    }
+
+    function buildRadarChart(categories, labels, size, center, radius) {
+        const keys = Object.keys(categories);
+        const n = keys.length;
+        if (n < 3) return '';
+
+        const angleStep = (2 * Math.PI) / n;
+
+        // Grid circles
+        let gridCircles = '';
+        for (let r = 0.25; r <= 1; r += 0.25) {
+            const points = [];
+            for (let i = 0; i < n; i++) {
+                const angle = i * angleStep - Math.PI / 2;
+                points.push(`${center + radius * r * Math.cos(angle)},${center + radius * r * Math.sin(angle)}`);
+            }
+            gridCircles += `<polygon points="${points.join(' ')}" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>`;
+        }
+
+        // Axis lines
+        let axisLines = '';
+        for (let i = 0; i < n; i++) {
+            const angle = i * angleStep - Math.PI / 2;
+            const x = center + radius * Math.cos(angle);
+            const y = center + radius * Math.sin(angle);
+            axisLines += `<line x1="${center}" y1="${center}" x2="${x}" y2="${y}" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>`;
+        }
+
+        // Data polygon
+        const dataPoints = [];
+        for (let i = 0; i < n; i++) {
+            const val = (categories[keys[i]] || 0) / 100;
+            const angle = i * angleStep - Math.PI / 2;
+            dataPoints.push(`${center + radius * val * Math.cos(angle)},${center + radius * val * Math.sin(angle)}`);
+        }
+
+        // Labels
+        let labelEls = '';
+        for (let i = 0; i < n; i++) {
+            const angle = i * angleStep - Math.PI / 2;
+            const lx = center + (radius + 24) * Math.cos(angle);
+            const ly = center + (radius + 24) * Math.sin(angle);
+            const label = labels[keys[i]] || keys[i];
+            const anchor = Math.abs(Math.cos(angle)) < 0.1 ? 'middle' : Math.cos(angle) > 0 ? 'start' : 'end';
+            labelEls += `<text x="${lx}" y="${ly}" text-anchor="${anchor}" dominant-baseline="central" class="radar-label">${escapeHtml(label)}</text>`;
+        }
+
+        return `<svg width="${size}" height="${size}" viewBox="0 0 ${size} ${size}">
+            ${gridCircles}
+            ${axisLines}
+            <polygon points="${dataPoints.join(' ')}" fill="rgba(99,102,241,0.15)" stroke="#6366f1" stroke-width="2"/>
+            ${dataPoints.map((p, i) => `<circle cx="${p.split(',')[0]}" cy="${p.split(',')[1]}" r="4" fill="#6366f1"/>`).join('')}
+            ${labelEls}
+        </svg>`;
+    }
+
+    // =========================================================================
+    // View: History
+    // =========================================================================
+
+    async function renderHistory() {
+        const main = document.getElementById('main-content');
+        main.innerHTML = `
+        <div class="p-6 lg:p-8 animate-fade-in-up" style="background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #312e81 100%); min-height:100vh;">
+            <div class="flex items-center justify-between mb-8">
+                <div>
+                    <h1 class="text-2xl lg:text-3xl font-bold text-white">Verlauf</h1>
+                    <p class="text-slate-400 mt-1">Alle bisherigen Analysen</p>
+                </div>
+                <a href="#/analyze" class="btn-primary px-4 py-2 rounded-lg text-sm font-semibold text-white">+ Neue Analyse</a>
+            </div>
+
+            <!-- Search -->
+            <div class="glass rounded-xl p-4 mb-6">
+                <input type="text" id="history-search" placeholder="URL suchen..." class="input-field w-full px-4 py-2.5 rounded-lg text-white text-sm">
+            </div>
+
+            <!-- Table -->
+            <div id="history-table" class="glass rounded-2xl overflow-hidden">
+                ${showLoading()}
+            </div>
+
+            <!-- Pagination -->
+            <div id="history-pagination" class="flex items-center justify-between mt-4"></div>
+        </div>`;
+
+        let currentPage = 1;
+        const perPage = 20;
+        let allData = [];
+        let totalCount = 0;
+
+        async function loadPage(page) {
+            const tableEl = document.getElementById('history-table');
+            tableEl.innerHTML = showLoading();
+
+            try {
+                const { data, count, error } = await db.getAnalyses(page, perPage);
+                if (error) throw new Error(error);
+
+                allData = data || [];
+                totalCount = count || 0;
+                currentPage = page;
+                renderTable(allData);
+                renderPagination();
+            } catch (err) {
+                tableEl.innerHTML = showError('Verlauf konnte nicht geladen werden: ' + err.message);
+            }
+        }
+
+        function renderTable(analyses) {
+            const tableEl = document.getElementById('history-table');
+
+            if (!analyses || analyses.length === 0) {
+                tableEl.innerHTML = `<div class="p-12 text-center">
+                    <p class="text-slate-400 mb-4">Noch keine Analysen vorhanden.</p>
+                    <a href="#/analyze" class="btn-primary inline-block px-6 py-2.5 rounded-xl text-sm font-semibold text-white">Erste Analyse starten</a>
+                </div>`;
+                return;
+            }
+
+            let html = `
+            <div class="hidden md:grid grid-cols-12 gap-4 px-6 py-3 bg-white/[0.03] text-xs font-medium text-slate-500 uppercase tracking-wider border-b border-white/5">
+                <div class="col-span-1">Score</div>
+                <div class="col-span-5">URL</div>
+                <div class="col-span-2">Datum</div>
+                <div class="col-span-2">Status</div>
+                <div class="col-span-2 text-right">Aktionen</div>
+            </div>`;
+
+            for (const a of analyses) {
+                const score = a.overall_score || 0;
+                html += `
+                <div class="table-row grid grid-cols-1 md:grid-cols-12 gap-2 md:gap-4 items-center px-6 py-4 border-b border-white/5 cursor-pointer" onclick="window.location.hash='#/analysis/${a.id}'">
+                    <div class="col-span-1">${buildSmallScoreCircle(score)}</div>
+                    <div class="col-span-5">
+                        <p class="text-sm font-medium text-white truncate">${escapeHtml(truncateUrl(a.url, 50))}</p>
+                    </div>
+                    <div class="col-span-2">
+                        <p class="text-sm text-slate-400">${formatDate(a.created_at)}</p>
+                    </div>
+                    <div class="col-span-2">
+                        <span class="text-xs font-medium px-2 py-1 rounded-full" style="background:${getScoreColor(score)}20;color:${getScoreColor(score)};">${getScoreLabel(score)}</span>
+                    </div>
+                    <div class="col-span-2 flex justify-end gap-2" onclick="event.stopPropagation();">
+                        <a href="#/analysis/${a.id}" class="text-indigo-400 hover:text-indigo-300 text-sm" title="Details">Details</a>
+                        <a href="#/compare?a=${a.id}" class="text-slate-400 hover:text-slate-300 text-sm" title="Vergleichen">Vergleichen</a>
+                        <button onclick="deleteAnalysis('${a.id}')" class="text-red-400/60 hover:text-red-400 text-sm" title="Loeschen">Loeschen</button>
+                    </div>
+                </div>`;
+            }
+
+            tableEl.innerHTML = html;
+        }
+
+        function renderPagination() {
+            const pagEl = document.getElementById('history-pagination');
+            const totalPages = Math.ceil(totalCount / perPage);
+
+            if (totalPages <= 1) { pagEl.innerHTML = ''; return; }
+
+            pagEl.innerHTML = `
+                <p class="text-sm text-slate-500">${totalCount} Analysen gesamt</p>
+                <div class="flex gap-2">
+                    <button onclick="window._historyLoadPage(${currentPage - 1})" ${currentPage <= 1 ? 'disabled' : ''} class="btn-secondary px-3 py-1.5 rounded-lg text-sm text-slate-300 disabled:opacity-30">&larr; Zurueck</button>
+                    <span class="px-3 py-1.5 text-sm text-slate-400">Seite ${currentPage} / ${totalPages}</span>
+                    <button onclick="window._historyLoadPage(${currentPage + 1})" ${currentPage >= totalPages ? 'disabled' : ''} class="btn-secondary px-3 py-1.5 rounded-lg text-sm text-slate-300 disabled:opacity-30">Weiter &rarr;</button>
+                </div>`;
+        }
+
+        // Expose for pagination buttons
+        window._historyLoadPage = loadPage;
+
+        // Search filter
+        document.getElementById('history-search').addEventListener('input', (e) => {
+            const q = e.target.value.toLowerCase();
+            if (!q) { renderTable(allData); return; }
+            const filtered = allData.filter(a => a.url && a.url.toLowerCase().includes(q));
+            renderTable(filtered);
+        });
+
+        await loadPage(1);
+    }
+
+    // =========================================================================
+    // View: Analysis Detail
+    // =========================================================================
+
+    async function renderAnalysisDetail(params) {
+        const main = document.getElementById('main-content');
+        const id = params.id;
+
+        if (!id) {
+            main.innerHTML = `<div class="p-6 lg:p-8">${showError('Keine Analyse-ID angegeben.')}</div>`;
+            return;
+        }
+
+        main.innerHTML = `
+        <div class="p-6 lg:p-8 animate-fade-in-up" style="background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #312e81 100%); min-height:100vh;">
+            ${showLoading()}
+        </div>`;
+
+        try {
+            const analysis = await db.getAnalysis(id);
+            if (!analysis) {
+                main.innerHTML = `<div class="p-6 lg:p-8" style="background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #312e81 100%); min-height:100vh;">${showError('Analyse nicht gefunden.')}</div>`;
+                return;
+            }
+
+            main.innerHTML = `
+            <div class="p-6 lg:p-8 animate-fade-in-up" style="background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #312e81 100%); min-height:100vh;">
+                <div class="flex items-center gap-4 mb-8">
+                    <a href="#/history" class="text-slate-400 hover:text-white transition-colors">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+                    </a>
+                    <div>
+                        <h1 class="text-2xl font-bold text-white truncate">${escapeHtml(truncateUrl(analysis.url, 60))}</h1>
+                        <p class="text-slate-400 text-sm">${formatDateTime(analysis.created_at)}</p>
+                    </div>
+                </div>
+                <div id="analysis-detail-content"></div>
+            </div>`;
+
+            renderAnalysisResults(analysis, document.getElementById('analysis-detail-content'), id);
+        } catch (err) {
+            console.error('[shift07] Analysis detail error:', err);
+            main.innerHTML = `<div class="p-6 lg:p-8" style="background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #312e81 100%); min-height:100vh;">${showError('Analyse konnte nicht geladen werden.')}</div>`;
+        }
+    }
+
+    // =========================================================================
+    // View: Compare
+    // =========================================================================
+
+    async function renderCompare() {
+        const main = document.getElementById('main-content');
+        const urlParams = new URLSearchParams(window.location.hash.split('?')[1] || '');
+        const preselectedA = urlParams.get('a') || '';
+
+        main.innerHTML = `
+        <div class="p-6 lg:p-8 animate-fade-in-up" style="background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #312e81 100%); min-height:100vh;">
+            <div class="mb-8">
+                <h1 class="text-2xl lg:text-3xl font-bold text-white">Vergleich</h1>
+                <p class="text-slate-400 mt-1">Vergleiche zwei Analysen nebeneinander.</p>
+            </div>
+
+            <div class="glass rounded-2xl p-6 mb-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                    <div>
+                        <label class="block text-sm font-medium text-slate-300 mb-2">Analyse A</label>
+                        <select id="compare-a" class="input-field w-full px-4 py-3 rounded-xl text-white text-sm">
+                            <option value="">Analyse waehlen...</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-slate-300 mb-2">Analyse B</label>
+                        <select id="compare-b" class="input-field w-full px-4 py-3 rounded-xl text-white text-sm">
+                            <option value="">Analyse waehlen...</option>
+                        </select>
+                    </div>
+                </div>
+                <button id="compare-btn" class="btn-primary px-6 py-2.5 rounded-xl text-sm font-semibold text-white" disabled>Vergleichen</button>
+            </div>
+
+            <div id="compare-results"></div>
+        </div>`;
+
+        // Load analyses for dropdowns
+        try {
+            const { data } = await db.getAnalyses(1, 100);
+            const selectA = document.getElementById('compare-a');
+            const selectB = document.getElementById('compare-b');
+
+            (data || []).forEach(a => {
+                const label = `${truncateUrl(a.url, 30)} — Score: ${a.overall_score || 0} — ${formatDate(a.created_at)}`;
+                selectA.innerHTML += `<option value="${a.id}" ${a.id === preselectedA ? 'selected' : ''}>${escapeHtml(label)}</option>`;
+                selectB.innerHTML += `<option value="${a.id}">${escapeHtml(label)}</option>`;
+            });
+
+            function checkReady() {
+                document.getElementById('compare-btn').disabled = !(selectA.value && selectB.value);
+            }
+            selectA.addEventListener('change', checkReady);
+            selectB.addEventListener('change', checkReady);
+            checkReady();
+
+            document.getElementById('compare-btn').addEventListener('click', async () => {
+                const idA = selectA.value;
+                const idB = selectB.value;
+                if (!idA || !idB) return;
+
+                const resultsEl = document.getElementById('compare-results');
+                resultsEl.innerHTML = showLoading();
+
+                try {
+                    const [analysisA, analysisB] = await Promise.all([db.getAnalysis(idA), db.getAnalysis(idB)]);
+                    if (!analysisA || !analysisB) throw new Error('Analyse nicht gefunden');
+                    renderCompareResults(analysisA, analysisB, resultsEl);
+                } catch (err) {
+                    resultsEl.innerHTML = showError('Vergleich fehlgeschlagen: ' + err.message);
+                }
+            });
+
+        } catch (err) {
+            showNotification('error', 'Fehler', 'Analysen konnten nicht geladen werden.');
+        }
+    }
+
+    function renderCompareResults(a, b, container) {
+        const scoreA = a.overall_score || 0;
+        const scoreB = b.overall_score || 0;
+        const catsA = a.category_scores || {};
+        const catsB = b.category_scores || {};
+        const issuesA = a.issues || [];
+        const issuesB = b.issues || [];
+
+        const allCatKeys = [...new Set([...Object.keys(catsA), ...Object.keys(catsB)])];
+        const categoryLabels = {
+            meta_tags: 'Meta-Tags', headings: 'Ueberschriften', images: 'Bilder', links: 'Links',
+            performance: 'Performance', mobile: 'Mobile', security: 'Sicherheit', content: 'Inhalt',
+            structured_data: 'Strukturierte Daten', social: 'Social Media',
+        };
+
+        // Diff issues
+        const issueKeysA = new Set(issuesA.map(i => (i.title || i.message || '').toLowerCase()));
+        const issueKeysB = new Set(issuesB.map(i => (i.title || i.message || '').toLowerCase()));
+        const newIssues = issuesB.filter(i => !issueKeysA.has((i.title || i.message || '').toLowerCase()));
+        const solvedIssues = issuesA.filter(i => !issueKeysB.has((i.title || i.message || '').toLowerCase()));
+        const worseIssues = issuesB.filter(i => {
+            const matchA = issuesA.find(ia => (ia.title || ia.message || '').toLowerCase() === (i.title || i.message || '').toLowerCase());
+            if (!matchA) return false;
+            const sevOrder = { critical: 4, high: 3, medium: 2, low: 1, info: 0 };
+            return (sevOrder[i.severity] || 0) > (sevOrder[matchA.severity] || 0);
+        });
+
+        let html = `
+        <!-- Score comparison -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+            <div class="glass rounded-2xl p-6 text-center">
+                <p class="text-sm text-slate-400 mb-3">Analyse A</p>
+                <p class="text-xs text-slate-500 truncate mb-4">${escapeHtml(truncateUrl(a.url, 40))} &mdash; ${formatDate(a.created_at)}</p>
+                ${buildScoreCircleSVG(scoreA, 100, 8)}
+            </div>
+            <div class="glass rounded-2xl p-6 text-center">
+                <p class="text-sm text-slate-400 mb-3">Analyse B</p>
+                <p class="text-xs text-slate-500 truncate mb-4">${escapeHtml(truncateUrl(b.url, 40))} &mdash; ${formatDate(b.created_at)}</p>
+                ${buildScoreCircleSVG(scoreB, 100, 8)}
+            </div>
+        </div>
+
+        <!-- Score diff -->
+        <div class="glass rounded-2xl p-6 mb-6 text-center">
+            <p class="text-sm text-slate-400 mb-2">Score-Differenz</p>
+            <p class="text-4xl font-bold ${scoreB >= scoreA ? 'text-green-400' : 'text-red-400'}">${scoreB >= scoreA ? '+' : ''}${scoreB - scoreA}</p>
+        </div>
+
+        <!-- Category comparison -->
+        <div class="glass rounded-2xl p-6 mb-6">
+            <h3 class="text-lg font-semibold text-white mb-4">Kategorie-Vergleich</h3>
+            <div class="space-y-4">
+                ${allCatKeys.map(key => {
+                    const valA = catsA[key] || 0;
+                    const valB = catsB[key] || 0;
+                    const diff = valB - valA;
+                    const label = categoryLabels[key] || key;
+                    return `<div>
+                        <div class="flex justify-between text-sm mb-2">
+                            <span class="text-slate-400">${escapeHtml(label)}</span>
+                            <span class="${diff >= 0 ? 'text-green-400' : 'text-red-400'} font-medium">${diff >= 0 ? '+' : ''}${diff}</span>
+                        </div>
+                        <div class="flex gap-2 items-center">
+                            <div class="flex-1 h-2 rounded-full bg-white/5">
+                                <div class="h-2 rounded-full" style="width:${valA}%;background:${getScoreColor(valA)};opacity:0.5;"></div>
+                            </div>
+                            <div class="flex-1 h-2 rounded-full bg-white/5">
+                                <div class="h-2 rounded-full" style="width:${valB}%;background:${getScoreColor(valB)};"></div>
+                            </div>
+                        </div>
+                        <div class="flex justify-between text-xs text-slate-500 mt-1">
+                            <span>A: ${valA}</span>
+                            <span>B: ${valB}</span>
+                        </div>
+                    </div>`;
+                }).join('')}
+            </div>
+        </div>
+
+        <!-- Issue diff -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="glass rounded-2xl p-6">
+                <h4 class="text-sm font-semibold text-green-400 mb-3 flex items-center gap-2">
+                    <span class="badge-solved text-xs px-2 py-0.5 rounded-full">Geloest</span>
+                    ${solvedIssues.length} Issues
+                </h4>
+                <div class="space-y-2">
+                    ${solvedIssues.slice(0, 10).map(i => `<p class="text-xs text-slate-400">${escapeHtml(i.title || i.message || '')}</p>`).join('')}
+                    ${solvedIssues.length === 0 ? '<p class="text-xs text-slate-500">Keine</p>' : ''}
+                </div>
+            </div>
+            <div class="glass rounded-2xl p-6">
+                <h4 class="text-sm font-semibold text-amber-400 mb-3 flex items-center gap-2">
+                    <span class="badge-new text-xs px-2 py-0.5 rounded-full">Neu</span>
+                    ${newIssues.length} Issues
+                </h4>
+                <div class="space-y-2">
+                    ${newIssues.slice(0, 10).map(i => `<p class="text-xs text-slate-400">${escapeHtml(i.title || i.message || '')}</p>`).join('')}
+                    ${newIssues.length === 0 ? '<p class="text-xs text-slate-500">Keine</p>' : ''}
+                </div>
+            </div>
+            <div class="glass rounded-2xl p-6">
+                <h4 class="text-sm font-semibold text-red-400 mb-3 flex items-center gap-2">
+                    <span class="badge-worse text-xs px-2 py-0.5 rounded-full">Verschlechtert</span>
+                    ${worseIssues.length} Issues
+                </h4>
+                <div class="space-y-2">
+                    ${worseIssues.slice(0, 10).map(i => `<p class="text-xs text-slate-400">${escapeHtml(i.title || i.message || '')}</p>`).join('')}
+                    ${worseIssues.length === 0 ? '<p class="text-xs text-slate-500">Keine</p>' : ''}
+                </div>
+            </div>
+        </div>`;
+
+        container.innerHTML = html;
+    }
+
+    // =========================================================================
+    // View: Monitoring
+    // =========================================================================
+
+    async function renderMonitoring() {
+        const main = document.getElementById('main-content');
+
+        main.innerHTML = `
+        <div class="p-6 lg:p-8 animate-fade-in-up" style="background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #312e81 100%); min-height:100vh;">
+            <div class="mb-8">
+                <h1 class="text-2xl lg:text-3xl font-bold text-white">Monitoring</h1>
+                <p class="text-slate-400 mt-1">Ueberwache deine Websites automatisch.</p>
+            </div>
+
+            <!-- Add URL form -->
+            <div class="glass rounded-2xl p-6 mb-8">
+                <h2 class="text-base font-semibold text-white mb-4">URL hinzufuegen</h2>
+                <form id="monitoring-add-form" class="flex flex-col sm:flex-row gap-3">
+                    <input type="url" placeholder="https://example.com" class="input-field flex-1 px-4 py-3 rounded-xl text-white text-sm" required>
+                    <select id="monitoring-schedule" class="input-field px-4 py-3 rounded-xl text-white text-sm">
+                        <option value="daily">Taeglich</option>
+                        <option value="weekly" selected>Woechentlich</option>
+                        <option value="monthly">Monatlich</option>
+                    </select>
+                    <button type="submit" class="btn-primary px-6 py-3 rounded-xl text-sm font-semibold text-white whitespace-nowrap">Hinzufuegen</button>
+                </form>
+            </div>
+
+            <!-- Tracked URLs list -->
+            <div id="monitoring-list" class="glass rounded-2xl overflow-hidden">
+                ${showLoading()}
+            </div>
+        </div>`;
+
+        // Add URL handler
+        document.getElementById('monitoring-add-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const urlInput = e.target.querySelector('input');
+            const schedule = document.getElementById('monitoring-schedule').value;
+            const url = urlInput.value.trim();
+            if (!url) return;
+
+            try {
+                const user = await db.getUser();
+                if (!user) throw new Error('Nicht angemeldet');
+
+                const { error } = await supabase.from('monitored_urls').insert({
+                    user_id: user.id,
+                    url: url,
+                    schedule: schedule,
+                    created_at: new Date().toISOString(),
+                });
+
+                if (error) throw error;
+
+                urlInput.value = '';
+                showNotification('success', 'Hinzugefuegt', url + ' wird jetzt ueberwacht.');
+                loadMonitoredUrls();
+            } catch (err) {
+                showNotification('error', 'Fehler', 'URL konnte nicht hinzugefuegt werden: ' + err.message);
+            }
+        });
+
+        async function loadMonitoredUrls() {
+            const listEl = document.getElementById('monitoring-list');
+            try {
+                const user = await db.getUser();
+                if (!user) throw new Error('Nicht angemeldet');
+
+                const { data, error } = await supabase
+                    .from('monitored_urls')
+                    .select('*')
+                    .eq('user_id', user.id)
+                    .order('created_at', { ascending: false });
+
+                if (error) throw error;
+
+                if (!data || data.length === 0) {
+                    listEl.innerHTML = `<div class="p-12 text-center">
+                        <div class="w-16 h-16 rounded-full bg-indigo-500/10 flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+                        </div>
+                        <h3 class="text-lg font-semibold text-white mb-2">Keine URLs ueberwacht</h3>
+                        <p class="text-slate-400 text-sm">Fuege eine URL hinzu, um automatisches Monitoring zu starten.</p>
+                    </div>`;
+                    return;
+                }
+
+                const scheduleLabels = { daily: 'Taeglich', weekly: 'Woechentlich', monthly: 'Monatlich' };
+
+                let html = `
+                <div class="hidden md:grid grid-cols-12 gap-4 px-6 py-3 bg-white/[0.03] text-xs font-medium text-slate-500 uppercase tracking-wider border-b border-white/5">
+                    <div class="col-span-5">URL</div>
+                    <div class="col-span-2">Letzter Score</div>
+                    <div class="col-span-2">Intervall</div>
+                    <div class="col-span-2">Naechste Analyse</div>
+                    <div class="col-span-1"></div>
+                </div>`;
+
+                for (const item of data) {
+                    const lastScore = item.last_score || '---';
+                    const trend = item.score_trend;
+                    const trendIcon = trend === 'up'
+                        ? '<svg class="w-4 h-4 text-green-400 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"/></svg>'
+                        : trend === 'down'
+                        ? '<svg class="w-4 h-4 text-red-400 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>'
+                        : '';
+
+                    html += `
+                    <div class="table-row grid grid-cols-1 md:grid-cols-12 gap-2 md:gap-4 items-center px-6 py-4 border-b border-white/5">
+                        <div class="col-span-5">
+                            <p class="text-sm font-medium text-white truncate">${escapeHtml(truncateUrl(item.url, 40))}</p>
+                        </div>
+                        <div class="col-span-2 flex items-center gap-1">
+                            <span class="text-sm font-medium" style="color:${typeof lastScore === 'number' ? getScoreColor(lastScore) : '#64748b'};">${lastScore}</span>
+                            ${trendIcon}
+                        </div>
+                        <div class="col-span-2">
+                            <span class="text-sm text-slate-400">${scheduleLabels[item.schedule] || item.schedule}</span>
+                        </div>
+                        <div class="col-span-2">
+                            <span class="text-sm text-slate-400">${item.next_analysis ? formatDate(item.next_analysis) : '---'}</span>
+                        </div>
+                        <div class="col-span-1 flex justify-end">
+                            <button onclick="deleteMonitoredUrl('${item.id}')" class="text-red-400/60 hover:text-red-400 text-sm p-1" title="Entfernen">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
+                            </button>
+                        </div>
+                    </div>`;
+                }
+
+                listEl.innerHTML = html;
+            } catch (err) {
+                listEl.innerHTML = showError('Monitoring-Daten konnten nicht geladen werden.');
+            }
+        }
+
+        window.deleteMonitoredUrl = async (id) => {
+            const confirmed = await showConfirmModal(
+                'URL entfernen',
+                'Moechtest du diese URL wirklich aus dem Monitoring entfernen?',
+                'Entfernen'
+            );
+            if (!confirmed) return;
+
+            try {
+                const { error } = await supabase.from('monitored_urls').delete().eq('id', id);
+                if (error) throw error;
+                showNotification('success', 'Entfernt', 'URL wurde aus dem Monitoring entfernt.');
+                loadMonitoredUrls();
+            } catch (err) {
+                showNotification('error', 'Fehler', 'Konnte URL nicht entfernen.');
+            }
+        };
+
+        await loadMonitoredUrls();
+    }
+
+    // =========================================================================
+    // View: Settings
+    // =========================================================================
+
+    async function renderSettings() {
+        const main = document.getElementById('main-content');
+        const user = appState.user;
+        const profile = appState.profile || {};
+        const name = (user && user.user_metadata && user.user_metadata.full_name) || '';
+        const email = (user && user.email) || '';
+
+        main.innerHTML = `
+        <div class="p-6 lg:p-8 animate-fade-in-up" style="background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #312e81 100%); min-height:100vh;">
+            <div class="mb-8">
+                <h1 class="text-2xl lg:text-3xl font-bold text-white">Einstellungen</h1>
+                <p class="text-slate-400 mt-1">Verwalte dein Profil und deine Einstellungen.</p>
+            </div>
+
+            <!-- Profile -->
+            <div class="glass rounded-2xl p-6 mb-6 max-w-2xl">
+                <h2 class="text-lg font-semibold text-white mb-4">Profil</h2>
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-sm font-medium text-slate-400 mb-1">Name</label>
+                        <p class="text-white">${escapeHtml(name) || '---'}</p>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-slate-400 mb-1">E-Mail</label>
+                        <p class="text-white">${escapeHtml(email)}</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Subscription -->
+            <div class="glass rounded-2xl p-6 mb-6 max-w-2xl">
+                <h2 class="text-lg font-semibold text-white mb-4">Abonnement</h2>
+                <div class="flex items-center gap-4 mb-4">
+                    <span class="text-sm text-slate-400">Aktueller Plan:</span>
+                    <span class="text-sm font-semibold px-3 py-1 rounded-full ${profile.subscription_status === 'active' || profile.subscription_status === 'trialing' ? 'bg-indigo-500/15 text-indigo-400' : 'bg-white/5 text-slate-400'}">
+                        ${profile.subscription_status === 'active' || profile.subscription_status === 'trialing' ? 'Pro' : 'Free'}
+                    </span>
+                </div>
+                ${profile.current_period_end ? `<p class="text-sm text-slate-400 mb-4">Naechste Abrechnung: ${formatDate(profile.current_period_end)}</p>` : ''}
+                <button onclick="payments.openBillingPortal()" class="btn-secondary px-4 py-2 rounded-lg text-sm font-medium text-slate-300">Abo verwalten</button>
+            </div>
+
+            <!-- Notification preferences -->
+            <div class="glass rounded-2xl p-6 mb-6 max-w-2xl">
+                <h2 class="text-lg font-semibold text-white mb-4">Benachrichtigungen</h2>
+                <div class="space-y-4">
+                    <label class="flex items-center gap-3 cursor-pointer">
+                        <input type="checkbox" id="pref-email-analysis" ${profile.notify_on_analysis !== false ? 'checked' : ''} class="w-4 h-4 rounded border-slate-600 bg-slate-800 text-indigo-500 focus:ring-indigo-500">
+                        <span class="text-sm text-slate-300">E-Mail bei neuer Analyse</span>
+                    </label>
+                    <label class="flex items-center gap-3 cursor-pointer">
+                        <input type="checkbox" id="pref-weekly-report" ${profile.weekly_report ? 'checked' : ''} class="w-4 h-4 rounded border-slate-600 bg-slate-800 text-indigo-500 focus:ring-indigo-500">
+                        <span class="text-sm text-slate-300">Woechentlicher Report</span>
+                    </label>
+                </div>
+                <button id="save-prefs-btn" class="btn-primary px-4 py-2 rounded-lg text-sm font-medium text-white mt-4">Speichern</button>
+            </div>
+
+            <!-- Danger zone -->
+            <div class="rounded-2xl p-6 max-w-2xl border border-red-500/20 bg-red-500/5">
+                <h2 class="text-lg font-semibold text-red-400 mb-2">Gefahrenzone</h2>
+                <p class="text-sm text-slate-400 mb-4">Diese Aktion kann nicht rueckgaengig gemacht werden.</p>
+                <button id="delete-account-btn" class="px-4 py-2 rounded-lg text-sm font-medium text-red-400 border border-red-500/30 hover:bg-red-500/10 transition-colors">Account loeschen</button>
+            </div>
+        </div>`;
+
+        // Save preferences
+        document.getElementById('save-prefs-btn').addEventListener('click', async () => {
+            const btn = document.getElementById('save-prefs-btn');
+            btn.disabled = true;
+            btn.textContent = 'Speichern...';
+
+            try {
+                const user = await db.getUser();
+                if (!user) throw new Error('Nicht angemeldet');
+
+                const { error } = await supabase.from('profiles').update({
+                    notify_on_analysis: document.getElementById('pref-email-analysis').checked,
+                    weekly_report: document.getElementById('pref-weekly-report').checked,
+                }).eq('id', user.id);
+
+                if (error) throw error;
+                showNotification('success', 'Gespeichert', 'Einstellungen wurden aktualisiert.');
+            } catch (err) {
+                showNotification('error', 'Fehler', 'Einstellungen konnten nicht gespeichert werden.');
+            } finally {
+                btn.disabled = false;
+                btn.textContent = 'Speichern';
+            }
+        });
+
+        // Delete account
+        document.getElementById('delete-account-btn').addEventListener('click', async () => {
+            const confirmed = await showConfirmModal(
+                'Account loeschen',
+                'Bist du sicher? Alle deine Daten, Analysen und Einstellungen werden unwiderruflich geloescht.',
+                'Endgueltig loeschen'
+            );
+            if (!confirmed) return;
+
+            try {
+                const session = await db.getSession();
+                const response = await fetch(SUPABASE_URL + '/functions/v1/delete-account', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': 'Bearer ' + session.access_token,
+                    },
+                });
+                if (!response.ok) throw new Error('Loeschung fehlgeschlagen');
+
+                await auth.signOut();
+                window.location.href = '/';
+            } catch (err) {
+                showNotification('error', 'Fehler', 'Account konnte nicht geloescht werden: ' + err.message);
+            }
+        });
+    }
+
+    // =========================================================================
+    // View: Billing
+    // =========================================================================
+
+    async function renderBilling() {
+        const main = document.getElementById('main-content');
+        const profile = appState.profile || {};
+        const isPro = profile.subscription_status === 'active' || profile.subscription_status === 'trialing';
+
+        main.innerHTML = `
+        <div class="p-6 lg:p-8 animate-fade-in-up" style="background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #312e81 100%); min-height:100vh;">
+            <div class="mb-8">
+                <h1 class="text-2xl lg:text-3xl font-bold text-white">Abrechnung</h1>
+                <p class="text-slate-400 mt-1">Verwalte dein Abonnement und deine Rechnungen.</p>
+            </div>
+
+            <!-- Current plan -->
+            <div class="glass rounded-2xl p-6 mb-6 max-w-2xl">
+                <div class="flex items-center justify-between mb-6">
+                    <div>
+                        <h2 class="text-lg font-semibold text-white">Aktueller Plan</h2>
+                        <p class="text-sm text-slate-400 mt-1">${isPro ? 'Du hast vollen Zugriff auf alle Funktionen.' : 'Upgrade fuer unbegrenzte Analysen und Premium-Features.'}</p>
+                    </div>
+                    <span class="text-lg font-bold px-4 py-2 rounded-xl ${isPro ? 'bg-indigo-500/15 text-indigo-400' : 'bg-white/5 text-slate-400'}">${isPro ? 'Pro' : 'Free'}</span>
+                </div>
+                ${isPro && profile.current_period_end ? `<p class="text-sm text-slate-400 mb-4">Naechste Abrechnung: <span class="text-white font-medium">${formatDate(profile.current_period_end)}</span></p>` : ''}
+                ${isPro
+                    ? `<button onclick="payments.openBillingPortal()" class="btn-secondary px-6 py-2.5 rounded-xl text-sm font-medium text-slate-300">Abo verwalten</button>`
+                    : `<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
+                        <div class="glass-strong rounded-xl p-6">
+                            <h3 class="text-base font-semibold text-white mb-1">Monatlich</h3>
+                            <p class="text-3xl font-bold text-white mb-1">29&euro;<span class="text-sm text-slate-400 font-normal">/Monat</span></p>
+                            <p class="text-xs text-slate-500 mb-4">Jederzeit kuendbar</p>
+                            <button onclick="payments.subscribePro('month')" class="btn-primary w-full py-2.5 rounded-lg text-sm font-semibold text-white">Jetzt upgraden</button>
+                        </div>
+                        <div class="glass-strong rounded-xl p-6 border-indigo-500/30" style="border:1px solid rgba(99,102,241,0.3);">
+                            <div class="flex items-center gap-2 mb-1">
+                                <h3 class="text-base font-semibold text-white">Jaehrlich</h3>
+                                <span class="text-xs px-2 py-0.5 rounded-full bg-green-500/15 text-green-400 font-medium">-17%</span>
+                            </div>
+                            <p class="text-3xl font-bold text-white mb-1">290&euro;<span class="text-sm text-slate-400 font-normal">/Jahr</span></p>
+                            <p class="text-xs text-slate-500 mb-4">24,17&euro;/Monat, jaehrliche Abrechnung</p>
+                            <button onclick="payments.subscribePro('year')" class="btn-primary w-full py-2.5 rounded-lg text-sm font-semibold text-white">Jetzt upgraden</button>
+                        </div>
+                    </div>`
+                }
+            </div>
+
+            <!-- Features -->
+            <div class="glass rounded-2xl p-6 max-w-2xl">
+                <h2 class="text-lg font-semibold text-white mb-4">Pro Features</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    ${['Unbegrenzte Analysen', 'Vollstaendige Issue-Details', 'Code-Fix Vorschlaege', '7-Tage Aktionsplaene', 'Vergleichsfunktion', 'Automatisches Monitoring', 'PDF-Export', 'Prioritaets-Support'].map(f => `
+                    <div class="flex items-center gap-2">
+                        <svg class="w-4 h-4 text-green-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                        <span class="text-sm text-slate-300">${f}</span>
+                    </div>`).join('')}
+                </div>
+            </div>
+        </div>`;
+    }
+
+    // =========================================================================
+    // Global Action Handlers
+    // =========================================================================
+
+    async function deleteAnalysis(id) {
+        const confirmed = await showConfirmModal(
+            'Analyse loeschen',
+            'Moechtest du diese Analyse wirklich endgueltig loeschen?',
+            'Loeschen'
+        );
+        if (!confirmed) return;
+
+        try {
+            const { error } = await supabase.from('analyses').delete().eq('id', id);
+            if (error) throw error;
+            showNotification('success', 'Geloescht', 'Analyse wurde entfernt.');
+            // Refresh if on history page
+            if (appState.currentRoute === '#/history') renderHistory();
+        } catch (err) {
+            showNotification('error', 'Fehler', 'Analyse konnte nicht geloescht werden.');
+        }
+    }
+
+    async function reanalyze(id) {
+        try {
+            const analysis = await db.getAnalysis(id);
+            if (analysis && analysis.url) {
+                window.location.hash = '#/analyze?url=' + encodeURIComponent(analysis.url);
+            }
+        } catch (err) {
+            showNotification('error', 'Fehler', 'Erneute Analyse konnte nicht gestartet werden.');
+        }
+    }
+
+    async function toggleIssueResolved(analysisId, issueUid, checked) {
+        try {
+            const analysis = await db.getAnalysis(analysisId);
+            if (!analysis || !analysis.issues) return;
+
+            // Parse uid: "category-index"
+            const parts = issueUid.split('-');
+            const idx = parseInt(parts[parts.length - 1], 10);
+            const cat = parts.slice(0, -1).join('-');
+
+            // Find the issue by category grouping
+            let counter = 0;
+            let targetIdx = -1;
+            const issuesByCategory = {};
+            analysis.issues.forEach((issue, i) => {
+                const c = issue.category || 'other';
+                if (!issuesByCategory[c]) issuesByCategory[c] = [];
+                issuesByCategory[c].push({ ...issue, _originalIdx: i });
+            });
+
+            if (issuesByCategory[cat] && issuesByCategory[cat][idx]) {
+                targetIdx = issuesByCategory[cat][idx]._originalIdx;
+            }
+
+            if (targetIdx >= 0) {
+                analysis.issues[targetIdx].resolved = checked;
+                await supabase.from('analyses').update({ issues: analysis.issues }).eq('id', analysisId);
+            }
+        } catch (err) {
+            console.error('[shift07] Toggle issue error:', err);
+        }
+    }
+
+    function exportPDF() {
+        showNotification('info', 'PDF-Export', 'Der PDF-Export wird vorbereitet. Diese Funktion ist in Kuerze verfuegbar.');
+    }
+
+    // =========================================================================
+    // Init
+    // =========================================================================
+
+    async function initApp() {
+        // Wait for Supabase to be ready
+        let retries = 0;
+        while (!supabase && retries < 20) {
+            await new Promise(r => setTimeout(r, 100));
+            retries++;
+        }
+
+        if (!supabase) {
+            document.getElementById('main-content').innerHTML = showError('Verbindung zum Server fehlgeschlagen. Bitte lade die Seite neu.');
+            return;
+        }
+
+        // Handle checkout returns
+        if (typeof payments !== 'undefined') {
+            payments.handleCheckoutReturn();
+        }
+
+        // Listen for auth changes
+        auth.onAuthStateChange(async (event, session) => {
+            if (event === 'SIGNED_IN') {
+                appState.user = await db.getUser();
+                appState.profile = await db.getProfile();
+                updateSidebarUser();
+                if (appState.currentRoute === '#/login' || appState.currentRoute === '#/signup') {
+                    window.location.hash = '#/dashboard';
+                }
+            } else if (event === 'SIGNED_OUT') {
+                appState.user = null;
+                appState.profile = null;
+                window.location.hash = '#/login';
+            }
+        });
+
+        // Initial navigation
+        if (!window.location.hash || window.location.hash === '#' || window.location.hash === '#/') {
+            window.location.hash = '#/dashboard';
+        }
+
+        navigate();
+    }
+
+    // Start the app when DOM is ready
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', () => setTimeout(initApp, 150));
+    } else {
+        setTimeout(initApp, 150);
+    }
+    </script>
+</body>
+</html>
