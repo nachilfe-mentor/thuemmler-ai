@@ -3,9 +3,9 @@
  * Handles subscription checkout and billing portal via Supabase Edge Functions.
  */
 
-const STRIPE_PUBLISHABLE_KEY = 'pk_live_51RQ5WeLeIwloYepsW7efH2U7xjAd28IGso145oDx3E8DUby9gPktYwbx1dTXtnl0YsHBOWaGreAMFu2h2lkQFgNk00EUQ53jpc';
+var STRIPE_PUBLISHABLE_KEY = 'pk_live_51RQ5WeLeIwloYepsW7efH2U7xjAd28IGso145oDx3E8DUby9gPktYwbx1dTXtnl0YsHBOWaGreAMFu2h2lkQFgNk00EUQ53jpc';
 
-const payments = {
+var payments = {
 
   /**
    * Redirect the user to Stripe Checkout for a Pro subscription.
@@ -81,7 +81,7 @@ const payments = {
         return;
       }
 
-      payments._showLoading('Kundenportal wird geoeffnet...');
+      payments._showLoading('Kundenportal wird geöffnet...');
 
       const response = await fetch(SUPABASE_URL + '/functions/v1/create-portal-session', {
         method: 'POST',
@@ -109,7 +109,7 @@ const payments = {
     } catch (err) {
       console.error('[shift07] Error opening billing portal:', err);
       payments._hideLoading();
-      payments._showError('Fehler beim Oeffnen des Kundenportals: ' + err.message);
+      payments._showError('Fehler beim Öffnen des Kundenportals: ' + err.message);
     }
   },
 
@@ -134,7 +134,7 @@ const payments = {
         payments._showNotification(
           'info',
           'Checkout abgebrochen',
-          'Du kannst jederzeit ein Abonnement abschliessen.'
+          'Du kannst jederzeit ein Abonnement abschließen.'
         );
         // Clean the URL
         payments._cleanUrl('checkout');

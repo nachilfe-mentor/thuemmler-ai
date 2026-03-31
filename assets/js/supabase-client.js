@@ -4,12 +4,12 @@
  * Requires supabase-js CDN to be loaded before this file.
  */
 
-// Supabase configuration
-const SUPABASE_URL = 'https://xhshwuotydeerthvhhsx.supabase.co';
-const SUPABASE_ANON_KEY = 'sb_publishable_qVxp1w5wCKAwP-hij17Sbw_tEBHYX3S';
+// Supabase configuration — use var so they are true globals accessible from all scripts
+var SUPABASE_URL = 'https://xhshwuotydeerthvhhsx.supabase.co';
+var SUPABASE_ANON_KEY = 'sb_publishable_qVxp1w5wCKAwP-hij17Sbw_tEBHYX3S';
 
-// Will be initialized after CDN loads
-let supabase = null;
+// Will be initialized after CDN loads — use var for global scope
+var supabase = null;
 
 /**
  * Initialize the Supabase client from the globally loaded supabase-js library.
@@ -25,6 +25,9 @@ function initSupabase() {
           detectSessionInUrl: true,
         },
       });
+      // Make the client instance available globally (window.supabase is the library;
+      // window.supabaseClient is the initialized client instance)
+      window.supabaseClient = supabase;
       console.log('[shift07] Supabase client initialized');
       return true;
     } else {
@@ -40,7 +43,7 @@ function initSupabase() {
 /**
  * Database helper functions for the shift07.ai app.
  */
-const db = {
+var db = {
 
   /**
    * Get the current auth session.
@@ -351,6 +354,9 @@ const db = {
     }
   },
 };
+
+// Expose db on window so all scripts can access it regardless of scope
+window.db = db;
 
 // Auto-initialize when the script loads
 if (document.readyState === 'loading') {

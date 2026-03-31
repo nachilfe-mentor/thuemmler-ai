@@ -10,18 +10,18 @@ const corsHeaders = {
 // ---------------------------------------------------------------------------
 // System prompt for the AI analysis (German)
 // ---------------------------------------------------------------------------
-const SYSTEM_PROMPT = `Du bist ein erfahrener Web-Analyst und SEO-Experte. Du analysierst die bereitgestellten Website-Metadaten und gibst eine strukturierte Bewertung zurueck.
+const SYSTEM_PROMPT = `Du bist ein erfahrener Web-Analyst und SEO-Experte. Du analysierst die bereitgestellten Website-Metadaten und gibst eine strukturierte Bewertung zurück.
 
 WICHTIGE REGELN:
 - Bewerte jede der 8 Kategorien von 0 bis 100.
-- Finde konkrete, umsetzbare Probleme — keine allgemeinen Ratschlaege.
-- Schreibe alle Erklaerungen in einfachem Deutsch ohne SEO-Fachbegriffe.
-- Erklaere die geschaeftliche Auswirkung jedes Problems.
-- Gib, wo moeglich, kopierfertige Code-Fixes an.
+- Finde konkrete, umsetzbare Probleme — keine allgemeinen Ratschläge.
+- Schreibe alle Erklärungen in einfachem Deutsch ohne SEO-Fachbegriffe.
+- Erkläre die geschäftliche Auswirkung jedes Problems.
+- Gib, wo möglich, kopierfertige Code-Fixes an.
 - Sei ehrlich: Wenn etwas gut ist, sage das auch.
 - Identifiziere 2-3 "Quick Wins" (hohe Wirkung, geringer Aufwand).
 
-Du MUSST exakt dieses JSON-Format zurueckgeben:
+Du MUSST exakt dieses JSON-Format zurückgeben:
 
 {
   "overall_score": <0-100>,
@@ -34,7 +34,7 @@ Du MUSST exakt dieses JSON-Format zurueckgeben:
     },
     "content_quality": {
       "score": <0-100>,
-      "label": "Inhaltsqualitaet",
+      "label": "Inhaltsqualität",
       "issues": [<Issue-Objekte>]
     },
     "meta_tags": {
@@ -44,7 +44,7 @@ Du MUSST exakt dieses JSON-Format zurueckgeben:
     },
     "heading_structure": {
       "score": <0-100>,
-      "label": "Ueberschriften-Struktur",
+      "label": "Überschriften-Struktur",
       "issues": [<Issue-Objekte>]
     },
     "mobile_usability": {
@@ -84,11 +84,11 @@ Jedes Issue-Objekt MUSS dieses Format haben:
   "severity": "high" | "medium" | "low",
   "title": "<Titel auf Deutsch>",
   "description": "<Beschreibung auf Deutsch>",
-  "impact": "<Geschaeftliche Auswirkung auf Deutsch>",
-  "fix": "<Loesung auf Deutsch>",
+  "impact": "<Geschäftliche Auswirkung auf Deutsch>",
+  "fix": "<Lösung auf Deutsch>",
   "code_snippet": "<Optionaler Code-Fix oder leerer String>",
   "effort": "low" | "medium" | "high",
-  "category": "<Kategorie-Schluessel>"
+  "category": "<Kategorie-Schlüssel>"
 }
 
 Antworte NUR mit dem JSON-Objekt, ohne Markdown-Codeblocks.`;
@@ -398,30 +398,68 @@ serve(async (req) => {
     // ---- Fetch the target URL ----
     console.log(`[analyze] Fetching URL: ${url}`);
     let html: string;
-    try {
-      const fetchResponse = await fetch(url, {
-        headers: {
-          "User-Agent":
-            "Mozilla/5.0 (compatible; shift07bot/1.0; +https://shift07.ai)",
-          Accept: "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
-          "Accept-Language": "de-DE,de;q=0.9,en;q=0.8",
-        },
+
+    const fetchHeaders = {
+      "User-Agent":
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+      Accept: "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+      "Accept-Language": "de-DE,de;q=0.9,en;q=0.8",
+    };
+
+    async function tryFetch(targetUrl: string): Promise<string> {
+      const fetchResponse = await fetch(targetUrl, {
+        headers: fetchHeaders,
         redirect: "follow",
       });
       if (!fetchResponse.ok) {
         throw new Error(`HTTP ${fetchResponse.status} ${fetchResponse.statusText}`);
       }
-      html = await fetchResponse.text();
-    } catch (err) {
-      const message = err instanceof Error ? err.message : String(err);
-      console.error(`[analyze] Failed to fetch URL: ${message}`);
-      return new Response(
-        JSON.stringify({
-          success: false,
-          error: `Could not fetch the URL: ${message}`,
-        }),
-        { status: 422, headers: { ...corsHeaders, "Content-Type": "application/json" } }
-      );
+      return await fetchResponse.text();
+    }
+
+    try {
+      html = await tryFetch(url);
+    } catch (firstErr) {
+      const firstMessage = firstErr instanceof Error ? firstErr.message : String(firstErr);
+      console.warn(`[analyze] First fetch attempt failed: ${firstMessage}`);
+
+      // If the URL was HTTPS and the error looks like an SSL/TLS issue, try HTTP fallback
+      const isSSLError = firstMessage.includes("certificate") ||
+        firstMessage.includes("SSL") ||
+        firstMessage.includes("TLS") ||
+        firstMessage.includes("CERT_") ||
+        firstMessage.includes("NotValidForName") ||
+        firstMessage.includes("invalid peer") ||
+        firstMessage.includes("Connect");
+
+      if (isSSLError && parsedUrl.protocol === "https:") {
+        const httpUrl = url.replace(/^https:\/\//i, "http://");
+        console.log(`[analyze] SSL error detected, trying HTTP fallback: ${httpUrl}`);
+        try {
+          html = await tryFetch(httpUrl);
+          console.log(`[analyze] HTTP fallback succeeded`);
+        } catch (fallbackErr) {
+          const fallbackMessage = fallbackErr instanceof Error ? fallbackErr.message : String(fallbackErr);
+          console.error(`[analyze] HTTP fallback also failed: ${fallbackMessage}`);
+          return new Response(
+            JSON.stringify({
+              success: false,
+              error: `Die Website konnte nicht abgerufen werden. Es liegt ein SSL/TLS-Zertifikatsproblem vor. Das Zertifikat ist möglicherweise nicht korrekt für diese Domain konfiguriert. Bitte prüfe die SSL-Einstellungen der Website.`,
+            }),
+            { status: 422, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+          );
+        }
+      } else {
+        // Non-SSL error or already HTTP
+        console.error(`[analyze] Failed to fetch URL: ${firstMessage}`);
+        return new Response(
+          JSON.stringify({
+            success: false,
+            error: `Die URL konnte nicht abgerufen werden: ${firstMessage}`,
+          }),
+          { status: 422, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+        );
+      }
     }
 
     // ---- Extract metadata ----

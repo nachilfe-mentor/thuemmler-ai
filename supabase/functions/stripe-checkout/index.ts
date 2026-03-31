@@ -133,7 +133,7 @@ serve(async (req) => {
       params["line_items[0][price_data][product_data][description]"] =
         interval === "month"
           ? "shift07.ai Pro - Monatlich"
-          : "shift07.ai Pro - Jaehrlich";
+          : "shift07.ai Pro - Jährlich";
       params["line_items[0][price_data][unit_amount]"] = unitAmount;
       params["line_items[0][price_data][recurring][interval]"] = interval;
       params["line_items[0][quantity]"] = "1";

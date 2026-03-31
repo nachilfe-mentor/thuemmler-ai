@@ -25,7 +25,7 @@ window.startScan = async function(url) {
   // Validate URL
   url = _normalizeUrl(url);
   if (!url) {
-    _showScanError('Bitte gib eine gueltige URL ein (z.B. example.com)');
+    _showScanError('Bitte gib eine gültige URL ein (z.B. example.com)');
     return;
   }
 
@@ -198,7 +198,7 @@ function _animatePhase1() {
  */
 function _animatePhase2() {
   return new Promise(function(resolve) {
-    _updateScanStatus('Seite wird analysiert...', 'HTML-Struktur und Inhalte werden geprueft');
+    _updateScanStatus('Seite wird analysiert...', 'HTML-Struktur und Inhalte werden geprüft');
 
     var content = document.getElementById('scan-phase-content');
     if (!content) { setTimeout(resolve, 7000); return; }
@@ -215,7 +215,7 @@ function _animatePhase2() {
         '</div>' +
         '<div style="background:rgba(16,185,129,0.08);border:1px solid rgba(16,185,129,0.15);border-radius:12px;padding:16px;text-align:center;">' +
           '<div class="scan-counter" id="scan-count-headings">0</div>' +
-          '<div class="scan-counter-label">Ueberschriften</div>' +
+          '<div class="scan-counter-label">Überschriften</div>' +
         '</div>' +
         '<div style="background:rgba(245,158,11,0.08);border:1px solid rgba(245,158,11,0.15);border-radius:12px;padding:16px;text-align:center;">' +
           '<div class="scan-counter" id="scan-count-links">0</div>' +
@@ -243,12 +243,12 @@ function _animatePhase2() {
 }
 
 /**
- * Phase 3 (10-20s): "KI-Analyse laeuft..."
+ * Phase 3 (10-20s): "KI-Analyse läuft..."
  * Fill radar chart categories one by one with scores.
  */
 function _animatePhase3() {
   return new Promise(function(resolve) {
-    _updateScanStatus('KI-Analyse laeuft...', 'Kategorien werden bewertet');
+    _updateScanStatus('KI-Analyse läuft...', 'Kategorien werden bewertet');
 
     var content = document.getElementById('scan-phase-content');
     if (!content) { setTimeout(resolve, 10000); return; }
@@ -257,7 +257,7 @@ function _animatePhase3() {
       { key: 'technical_seo', label: 'Technical SEO', color: '#6366f1' },
       { key: 'content', label: 'Content', color: '#8b5cf6' },
       { key: 'meta_tags', label: 'Meta Tags', color: '#a78bfa' },
-      { key: 'headings', label: 'Ueberschriften', color: '#c4b5fd' },
+      { key: 'headings', label: 'Überschriften', color: '#c4b5fd' },
       { key: 'mobile', label: 'Mobile', color: '#10b981' },
       { key: 'performance', label: 'Performance', color: '#34d399' },
       { key: 'accessibility', label: 'Barrierefreiheit', color: '#f59e0b' },
@@ -502,7 +502,7 @@ function _displayResults(result, isFree) {
 
   // --- Radar chart ---
   html += '<div style="padding:0 20px 32px;">' +
-    '<h3 style="color:#f1f5f9;font-size:18px;font-weight:600;margin:0 0 16px;">Kategorie-Uebersicht</h3>' +
+    '<h3 style="color:#f1f5f9;font-size:18px;font-weight:600;margin:0 0 16px;">Kategorie-Übersicht</h3>' +
     '<div id="results-radar-chart" style="display:flex;justify-content:center;"></div>' +
   '</div>';
 
@@ -512,7 +512,7 @@ function _displayResults(result, isFree) {
     technical_seo: 'Technical SEO',
     content: 'Content',
     meta_tags: 'Meta Tags',
-    headings: 'Ueberschriften',
+    headings: 'Überschriften',
     mobile: 'Mobile',
     performance: 'Performance',
     accessibility: 'Barrierefreiheit',
@@ -554,7 +554,7 @@ function _displayResults(result, isFree) {
     // Code fix (pro only)
     if (issue.fix && !isFree) {
       html += '<div style="background:rgba(0,0,0,0.3);border-radius:8px;padding:12px;margin-top:8px;">' +
-        '<p style="color:#6ee7b7;font-size:12px;font-weight:600;margin:0 0 6px;text-transform:uppercase;">Loesung</p>' +
+        '<p style="color:#6ee7b7;font-size:12px;font-weight:600;margin:0 0 6px;text-transform:uppercase;">Lösung</p>' +
         '<code style="color:#e2e8f0;font-size:13px;white-space:pre-wrap;word-break:break-all;">' + _escapeHtml(issue.fix) + '</code>' +
       '</div>';
     }
@@ -583,7 +583,7 @@ function _displayResults(result, isFree) {
           '<svg width="24" height="24" fill="none" stroke="#6366f1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>' +
         '</div>' +
         '<p style="color:#f1f5f9;font-size:18px;font-weight:700;margin:0 0 8px;">' + hiddenIssueCount + ' weitere Issues gefunden</p>' +
-        '<p style="color:#94a3b8;font-size:14px;margin:0 0 20px;">Vollstaendigen Report freischalten inkl. Code-Fixes und 7-Tage-Plan</p>' +
+        '<p style="color:#94a3b8;font-size:14px;margin:0 0 20px;">Vollständigen Report freischalten inkl. Code-Fixes und 7-Tage-Plan</p>' +
         '<button onclick="auth.showAuthModal(\'signup\')" style="padding:12px 32px;background:linear-gradient(135deg,#6366f1,#8b5cf6);color:#fff;border:none;border-radius:8px;font-size:16px;font-weight:600;cursor:pointer;transition:opacity 0.2s;">Jetzt freischalten</button>' +
       '</div>' +
     '</div>';
@@ -630,7 +630,7 @@ function _displayResults(result, isFree) {
       '<div style="position:absolute;top:40px;left:20px;width:calc(100% - 40px);height:calc(100% - 60px);display:flex;align-items:center;justify-content:center;">' +
         '<div style="background:rgba(15,23,42,0.7);backdrop-filter:blur(8px);border:1px solid rgba(99,102,241,0.3);border-radius:12px;padding:20px 32px;text-align:center;">' +
           '<p style="color:#a5b4fc;font-size:15px;font-weight:600;margin:0;">Pro-Feature</p>' +
-          '<p style="color:#64748b;font-size:13px;margin:4px 0 0;">Upgrade fuer den vollstaendigen Plan</p>' +
+          '<p style="color:#64748b;font-size:13px;margin:4px 0 0;">Upgrade für den vollständigen Plan</p>' +
         '</div>' +
       '</div>' +
     '</div>';
@@ -673,7 +673,7 @@ function _renderRadarChart(categoryScores, targetElementId) {
     { key: 'technical_seo', label: 'Technical SEO' },
     { key: 'content', label: 'Content' },
     { key: 'meta_tags', label: 'Meta Tags' },
-    { key: 'headings', label: 'Ueberschriften' },
+    { key: 'headings', label: 'Überschriften' },
     { key: 'mobile', label: 'Mobile' },
     { key: 'performance', label: 'Performance' },
     { key: 'accessibility', label: 'Barrierefreiheit' },

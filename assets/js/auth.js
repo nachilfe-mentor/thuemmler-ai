@@ -79,7 +79,7 @@ var auth = {
       // Logo / Title
       '<div style="text-align:center;margin-bottom:24px;">' +
         '<h2 style="color:#f1f5f9;font-size:24px;font-weight:700;margin:0 0 4px;">shift07<span style="color:#6366f1;">.ai</span></h2>' +
-        '<p style="color:#64748b;font-size:14px;margin:0;">KI-gestuetzte SEO Analyse</p>' +
+        '<p style="color:#64748b;font-size:14px;margin:0;">KI-gestützte SEO Analyse</p>' +
       '</div>' +
 
       // Tabs
@@ -126,13 +126,13 @@ var auth = {
 
       // Password reset form (hidden by default)
       '<form id="auth-reset-form" style="display:none;">' +
-        '<p style="color:#94a3b8;font-size:14px;margin-bottom:16px;">Gib deine E-Mail-Adresse ein und wir senden dir einen Link zum Zuruecksetzen deines Passworts.</p>' +
+        '<p style="color:#94a3b8;font-size:14px;margin-bottom:16px;">Gib deine E-Mail-Adresse ein und wir senden dir einen Link zum Zurücksetzen deines Passworts.</p>' +
         '<div style="margin-bottom:20px;">' +
           '<label style="display:block;color:#94a3b8;font-size:13px;font-weight:500;margin-bottom:6px;">E-Mail</label>' +
           '<input type="email" name="email" placeholder="deine@email.de" required style="width:100%;padding:10px 14px;background:rgba(15,23,42,0.6);border:1px solid rgba(100,116,139,0.3);border-radius:8px;color:#e2e8f0;font-size:15px;box-sizing:border-box;transition:border-color 0.2s,box-shadow 0.2s;" />' +
         '</div>' +
         '<button type="submit" style="width:100%;padding:12px;background:linear-gradient(135deg,#6366f1,#8b5cf6);color:#fff;border:none;border-radius:8px;font-size:16px;font-weight:600;cursor:pointer;transition:opacity 0.2s;">Link senden</button>' +
-        '<button type="button" id="auth-back-to-login" style="width:100%;padding:10px;background:none;color:#818cf8;border:none;font-size:14px;cursor:pointer;margin-top:8px;">Zurueck zur Anmeldung</button>' +
+        '<button type="button" id="auth-back-to-login" style="width:100%;padding:10px;background:none;color:#818cf8;border:none;font-size:14px;cursor:pointer;margin-top:8px;">Zurück zur Anmeldung</button>' +
       '</form>' +
 
       // Divider
@@ -149,7 +149,7 @@ var auth = {
       '</button>' +
 
       // Terms
-      '<p style="color:#475569;font-size:12px;text-align:center;margin-top:16px;line-height:1.5;">Mit der Registrierung akzeptierst du unsere <a href="/agb.html" style="color:#818cf8;text-decoration:none;">AGB</a> und <a href="/datenschutz.html" style="color:#818cf8;text-decoration:none;">Datenschutzerklaerung</a>.</p>' +
+      '<p style="color:#475569;font-size:12px;text-align:center;margin-top:16px;line-height:1.5;">Mit der Registrierung akzeptierst du unsere <a href="/agb.html" style="color:#818cf8;text-decoration:none;">AGB</a> und <a href="/datenschutz.html" style="color:#818cf8;text-decoration:none;">Datenschutzerklärung</a>.</p>' +
 
     '</div>';
   },
@@ -305,7 +305,7 @@ var auth = {
         return;
       }
 
-      auth._showMessage('success', 'Bestaetigungsmail gesendet! Bitte pruefe dein Postfach.');
+      auth._showMessage('success', 'Bestätigungsmail gesendet! Bitte prüfe dein Postfach.');
       auth._setFormLoading('auth-signup-form', false);
 
     } catch (err) {
@@ -429,7 +429,7 @@ var auth = {
         return;
       }
 
-      auth._showMessage('success', 'Falls ein Konto mit dieser E-Mail existiert, haben wir dir einen Link zum Zuruecksetzen gesendet.');
+      auth._showMessage('success', 'Falls ein Konto mit dieser E-Mail existiert, haben wir dir einen Link zum Zurücksetzen gesendet.');
       auth._setFormLoading('auth-reset-form', false);
     } catch (err) {
       console.error('[shift07] Password reset error:', err);
@@ -601,13 +601,13 @@ var auth = {
    */
   _translateError: function(msg) {
     var translations = {
-      'Invalid login credentials': 'Ungueltige Anmeldedaten. Bitte ueberpreufe E-Mail und Passwort.',
-      'Email not confirmed': 'E-Mail noch nicht bestaetigt. Bitte pruefe dein Postfach.',
+      'Invalid login credentials': 'Ungültige Anmeldedaten. Bitte überprüfe E-Mail und Passwort.',
+      'Email not confirmed': 'E-Mail noch nicht bestätigt. Bitte prüfe dein Postfach.',
       'User already registered': 'Ein Konto mit dieser E-Mail existiert bereits.',
       'Password should be at least 6 characters': 'Das Passwort muss mindestens 6 Zeichen lang sein.',
-      'Signup requires a valid password': 'Bitte gib ein gueltiges Passwort ein.',
-      'Unable to validate email address: invalid format': 'Bitte gib eine gueltige E-Mail-Adresse ein.',
-      'For security purposes, you can only request this after': 'Aus Sicherheitsgruenden kannst du dies erst spaeter erneut anfordern.',
+      'Signup requires a valid password': 'Bitte gib ein gültiges Passwort ein.',
+      'Unable to validate email address: invalid format': 'Bitte gib eine gültige E-Mail-Adresse ein.',
+      'For security purposes, you can only request this after': 'Aus Sicherheitsgründen kannst du dies erst später erneut anfordern.',
     };
 
     for (var key in translations) {
