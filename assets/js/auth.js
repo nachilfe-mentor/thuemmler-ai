@@ -165,7 +165,7 @@ var auth = {
       '</button>' +
 
       // Terms
-      '<p style="color:#475569;font-size:12px;text-align:center;margin-top:16px;line-height:1.5;">Mit der Registrierung akzeptierst du unsere <a href="/agb.html" style="color:#818cf8;text-decoration:none;">AGB</a> und <a href="/datenschutz.html" style="color:#818cf8;text-decoration:none;">Datenschutzerklärung</a>.</p>' +
+      '<p style="color:#475569;font-size:12px;text-align:center;margin-top:16px;line-height:1.5;">Mit der Registrierung akzeptierst du unsere <a href="' + (window.location.pathname.includes('/app') ? '../agb.html' : 'agb.html') + '" style="color:#818cf8;text-decoration:none;">AGB</a> und <a href="' + (window.location.pathname.includes('/app') ? '../datenschutz.html' : 'datenschutz.html') + '" style="color:#818cf8;text-decoration:none;">Datenschutzerklärung</a>.</p>' +
 
     '</div>';
   },
@@ -418,8 +418,8 @@ var auth = {
       console.log('[shift07] User signed out');
 
       // Redirect to home if on app page
-      if (window.location.pathname.startsWith('/app')) {
-        window.location.href = '/';
+      if (window.location.pathname.includes('/app')) {
+        window.location.href = '../index.html';
       }
     } catch (err) {
       console.error('[shift07] Sign out error:', err);
