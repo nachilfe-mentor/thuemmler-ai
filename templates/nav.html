@@ -1,0 +1,24 @@
+<!-- Standard navigation - adjust active link per page -->
+<nav class="bg-black/20 backdrop-blur-md border-b border-white/10">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-16">
+      <a href="/" class="text-2xl font-bold text-white">Shift07</a>
+      <div class="hidden md:flex items-baseline space-x-4">
+        <a href="/" class="text-white hover:text-blue-300 px-3 py-2 text-sm font-medium">SEO-Tool</a>
+        <a href="/blog/" class="text-white hover:text-blue-300 px-3 py-2 text-sm font-medium">Blog</a>
+        <a href="/tools/" class="text-white hover:text-blue-300 px-3 py-2 text-sm font-medium">Tools</a>
+        <a href="/app/#/login" class="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4 py-2 rounded-lg text-sm font-medium">Anmelden</a>
+      </div>
+      <!-- Mobile menu button -->
+      <button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="md:hidden text-white">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden pb-4">
+      <a href="/" class="block text-white hover:text-blue-300 px-3 py-2 text-sm font-medium">SEO-Tool</a>
+      <a href="/blog/" class="block text-white hover:text-blue-300 px-3 py-2 text-sm font-medium">Blog</a>
+      <a href="/tools/" class="block text-white hover:text-blue-300 px-3 py-2 text-sm font-medium">Tools</a>
+      <a href="/app/#/login" class="block text-white hover:text-blue-300 px-3 py-2 text-sm font-medium">Anmelden</a>
+    </div>
+  </div>
+</nav>
