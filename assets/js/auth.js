@@ -514,7 +514,7 @@ var auth = {
     try {
       var profile = await db.getProfile();
       if (!profile) return false;
-      return profile.subscription_status === 'active' || profile.subscription_status === 'trialing';
+      return profile.subscription_status === 'pro' || profile.subscription_status === 'active' || profile.subscription_status === 'trialing';
     } catch (err) {
       console.error('[shift07] Error checking pro status:', err);
       return false;

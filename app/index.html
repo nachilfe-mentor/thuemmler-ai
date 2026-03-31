@@ -1730,8 +1730,8 @@
                 <h2 class="text-lg font-semibold text-white mb-4">Abonnement</h2>
                 <div class="flex items-center gap-4 mb-4">
                     <span class="text-sm text-slate-400">Aktueller Plan:</span>
-                    <span class="text-sm font-semibold px-3 py-1 rounded-full ${profile.subscription_status === 'active' || profile.subscription_status === 'trialing' ? 'bg-indigo-500/15 text-indigo-400' : 'bg-white/5 text-slate-400'}">
-                        ${profile.subscription_status === 'active' || profile.subscription_status === 'trialing' ? 'Pro' : 'Free'}
+                    <span class="text-sm font-semibold px-3 py-1 rounded-full ${profile.subscription_status === 'pro' || profile.subscription_status === 'active' || profile.subscription_status === 'trialing' ? 'bg-indigo-500/15 text-indigo-400' : 'bg-white/5 text-slate-400'}">
+                        ${profile.subscription_status === 'pro' || profile.subscription_status === 'active' || profile.subscription_status === 'trialing' ? 'Pro' : 'Free'}
                     </span>
                 </div>
                 ${profile.current_period_end ? `<p class="text-sm text-slate-400 mb-4">Nächste Abrechnung: ${formatDate(profile.current_period_end)}</p>` : ''}
@@ -1822,7 +1822,7 @@
     async function renderBilling() {
         const main = document.getElementById('main-content');
         const profile = appState.profile || {};
-        const isPro = profile.subscription_status === 'active' || profile.subscription_status === 'trialing';
+        const isPro = profile.subscription_status === 'pro' || profile.subscription_status === 'active' || profile.subscription_status === 'trialing';
 
         main.innerHTML = `
         <div class="p-6 lg:p-8 animate-fade-in-up" style="background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #312e81 100%); min-height:100vh;">
