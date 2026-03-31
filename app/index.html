@@ -568,6 +568,32 @@
             updateSidebarUser();
         }
 
+        // Check email confirmation
+        if (isAuthed && appState.user && !appState.user.email_confirmed_at && route !== '#/confirm-email') {
+            const main = document.getElementById('main-content');
+            main.innerHTML = `
+            <div class="p-6 lg:p-8 flex items-center justify-center" style="background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #312e81 100%); min-height:100vh;">
+                <div class="glass rounded-2xl p-10 max-w-lg text-center">
+                    <div class="text-5xl mb-4">📧</div>
+                    <h1 class="text-2xl font-bold text-white mb-3">E-Mail bestätigen</h1>
+                    <p class="text-slate-400 mb-2">Wir haben eine Bestätigungsmail an <strong class="text-white">${escapeHtml(appState.user.email)}</strong> gesendet.</p>
+                    <p class="text-slate-500 text-sm mb-6">Bitte klicke auf den Link in der E-Mail um deinen Account zu aktivieren. Prüfe auch deinen Spam-Ordner.</p>
+                    <button onclick="window.location.reload()" class="btn-primary px-6 py-3 rounded-xl text-sm font-semibold text-white mb-3 w-full">Ich habe bestätigt - Seite neu laden</button>
+                    <button id="resend-confirm-btn" class="btn-secondary px-6 py-2.5 rounded-xl text-sm font-medium text-slate-300 w-full">Bestätigungsmail erneut senden</button>
+                </div>
+            </div>`;
+            document.getElementById('resend-confirm-btn').addEventListener('click', async function() {
+                this.disabled = true;
+                this.textContent = 'Wird gesendet...';
+                try {
+                    var sb = getSupabase();
+                    if (sb) await sb.auth.resend({ type: 'signup', email: appState.user.email });
+                    this.textContent = 'Gesendet! Prüfe dein Postfach.';
+                } catch(e) { this.textContent = 'Fehler. Bitte versuche es später.'; }
+            });
+            return;
+        }
+
         appState.currentRoute = route;
         appState.currentParams = params;
 
@@ -1725,22 +1751,6 @@
                 <button onclick="payments.openBillingPortal()" class="btn-secondary px-4 py-2 rounded-lg text-sm font-medium text-slate-300">Abo verwalten</button>
             </div>
 
-            <!-- Notification preferences -->
-            <div class="glass rounded-2xl p-6 mb-6 max-w-2xl">
-                <h2 class="text-lg font-semibold text-white mb-4">Benachrichtigungen</h2>
-                <div class="space-y-4">
-                    <label class="flex items-center gap-3 cursor-pointer">
-                        <input type="checkbox" id="pref-email-analysis" ${profile.notify_on_analysis !== false ? 'checked' : ''} class="w-4 h-4 rounded border-slate-600 bg-slate-800 text-indigo-500 focus:ring-indigo-500">
-                        <span class="text-sm text-slate-300">E-Mail bei neuer Analyse</span>
-                    </label>
-                    <label class="flex items-center gap-3 cursor-pointer">
-                        <input type="checkbox" id="pref-weekly-report" ${profile.weekly_report ? 'checked' : ''} class="w-4 h-4 rounded border-slate-600 bg-slate-800 text-indigo-500 focus:ring-indigo-500">
-                        <span class="text-sm text-slate-300">Wöchentlicher Report</span>
-                    </label>
-                </div>
-                <button id="save-prefs-btn" class="btn-primary px-4 py-2 rounded-lg text-sm font-medium text-white mt-4">Speichern</button>
-            </div>
-
             <!-- Danger zone -->
             <div class="rounded-2xl p-6 max-w-2xl border border-red-500/20 bg-red-500/5">
                 <h2 class="text-lg font-semibold text-red-400 mb-2">Gefahrenzone</h2>
@@ -1748,31 +1758,6 @@
                 <button id="delete-account-btn" class="px-4 py-2 rounded-lg text-sm font-medium text-red-400 border border-red-500/30 hover:bg-red-500/10 transition-colors">Account löschen</button>
             </div>
         </div>`;
-
-        // Save preferences
-        document.getElementById('save-prefs-btn').addEventListener('click', async () => {
-            const btn = document.getElementById('save-prefs-btn');
-            btn.disabled = true;
-            btn.textContent = 'Speichern...';
-
-            try {
-                const user = await db.getUser();
-                if (!user) throw new Error('Nicht angemeldet');
-
-                const { error } = await supabaseClient.from('profiles').update({
-                    notify_on_analysis: document.getElementById('pref-email-analysis').checked,
-                    weekly_report: document.getElementById('pref-weekly-report').checked,
-                }).eq('id', user.id);
-
-                if (error) throw error;
-                showNotification('success', 'Gespeichert', 'Einstellungen wurden aktualisiert.');
-            } catch (err) {
-                showNotification('error', 'Fehler', 'Einstellungen konnten nicht gespeichert werden.');
-            } finally {
-                btn.disabled = false;
-                btn.textContent = 'Speichern';
-            }
-        });
 
         // Delete account
         document.getElementById('delete-account-btn').addEventListener('click', async () => {
@@ -1784,15 +1769,21 @@
             if (!confirmed) return;
 
             try {
-                const session = await db.getSession();
-                const response = await fetch(SUPABASE_URL + '/functions/v1/delete-account', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                        'Authorization': 'Bearer ' + session.access_token,
-                    },
-                });
-                if (!response.ok) throw new Error('Löschung fehlgeschlagen');
+                // Delete profile and analyses from DB, then sign out
+                const user = await db.getUser();
+                if (!user) throw new Error('Nicht angemeldet');
+
+                // Delete user's analyses
+                await supabaseClient.from('analyses').delete().eq('user_id', user.id);
+                await supabaseClient.from('issue_status').delete().eq('user_id', user.id);
+                await supabaseClient.from('tracked_urls').delete().eq('user_id', user.id);
+                await supabaseClient.from('profiles').delete().eq('id', user.id);
+
+                // Sign out
+                await auth.signOut();
+                showNotification('success', 'Account gelöscht', 'Dein Account und alle Daten wurden gelöscht.');
+                window.location.hash = '#/login';
+                return; // skip the old fetch logic below
 
                 await auth.signOut();
                 window.location.href = '../index.html';
