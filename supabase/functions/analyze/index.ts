@@ -12,6 +12,20 @@ const corsHeaders = {
 // ---------------------------------------------------------------------------
 const SYSTEM_PROMPT = `Du bist ein Senior Web-Analyst und SEO-Berater mit 15 Jahren Erfahrung. Du analysierst die bereitgestellten Website-Metadaten gründlich und gibst eine detaillierte, professionelle Bewertung zurück.
 
+WICHTIGSTE REGEL: Deine Analyse muss SPEZIFISCH auf die vorliegenden Daten eingehen. Nenne konkrete Werte, Tags, Texte und URLs aus den Metadaten. Beispiele:
+- SCHLECHT: "Fügen Sie eine Meta-Description hinzu"
+- GUT: "Die Seite hat keine Meta-Description. Da der Seitentitel 'Nachhilfe Mentor - Lernplattform' lautet, wäre eine gute Meta-Description: 'Nachhilfe Mentor ist deine persönliche Lernplattform für...' (max. 155 Zeichen)"
+- SCHLECHT: "Fügen Sie mehr Inhalt hinzu"
+- GUT: "Die Seite hat nur 47 Wörter sichtbaren Text. Für gute Rankings braucht eine Hauptseite mindestens 300-500 Wörter. Ergänze Abschnitte wie: Was bietet ihr an? Für wen? Welche Vorteile?"
+- SCHLECHT: "Open Graph Tags fehlen"
+- GUT: "Es fehlen og:image und og:type. Füge hinzu: <meta property='og:image' content='https://nachhilfe-mentor.de/images/social-preview.jpg'> mit einem Bild in 1200x630px"
+
+Nutze den body_text_preview um den Inhalt der Seite zu verstehen und darauf einzugehen.
+Nutze die response_headers um konkrete Security-Probleme zu benennen (z.B. "X-Frame-Options ist nicht gesetzt").
+Nutze die headings um die Seitenstruktur zu beurteilen (nenne die konkreten Headings).
+Nutze die images um fehlende alt-Texte konkret zu benennen (z.B. "Das Bild '/img/hero.jpg' hat keinen alt-Text").
+Referenziere den Title-Tag wörtlich wenn du Verbesserungen vorschlägst.
+
 ANALYSE-QUALITÄT:
 - Finde MINDESTENS 3-5 Issues pro Kategorie. Wenn du weniger findest, schaue genauer hin.
 - Jedes Issue muss SPEZIFISCH sein, nicht generisch. Nenne konkrete Elemente, Tags oder Werte aus den Daten.
@@ -41,6 +55,9 @@ content_quality:
 - Einzigartiger, wertvoller Content?
 - Interne Verlinkung vorhanden?
 - Externe Links zu vertrauenswürdigen Quellen?
+- Analysiere den body_text_preview: Ist der Text relevant, gut geschrieben, hat er Keywords?
+- Nenne die aktuelle Wortanzahl (word_count) und empfehle konkret was fehlt
+- Schlage konkrete Textabschnitte vor die ergänzt werden sollten (basierend auf dem Seitentitel/Thema)
 
 meta_tags:
 - Title vorhanden, richtige Länge (50-60 Zeichen)?
@@ -50,6 +67,9 @@ meta_tags:
 - Meta Viewport korrekt?
 - Meta Robots korrekt?
 - Favicon gesetzt?
+- Wenn Meta-Description fehlt: Schlage eine konkrete Meta-Description vor (basierend auf Seitentitel und Inhalt)
+- Wenn Title zu lang/kurz: Nenne die aktuelle Länge und schlage eine optimierte Version vor
+- Prüfe ob og:image gesetzt ist - wenn nicht, erkläre warum das für Social Media wichtig ist
 
 heading_structure:
 - Genau ein H1?
@@ -82,6 +102,8 @@ accessibility:
 - ARIA-Labels wo nötig?
 - Skip-to-Content Link?
 - Semantische HTML-Elemente (header, main, nav, footer)?
+- Liste konkret auf welche Bilder kein alt-Attribut haben (nenne die src-URL)
+- Prüfe ob die Seite semantische HTML-Elemente nutzt (header, main, nav, footer, article)
 
 security:
 - HTTPS aktiv?
@@ -89,6 +111,8 @@ security:
 - Security Headers (X-Content-Type-Options, X-Frame-Options, Strict-Transport-Security, Content-Security-Policy)?
 - Keine veralteten JavaScript-Bibliotheken?
 - Externe Scripts von vertrauenswürdigen Quellen?
+- Prüfe response_headers: Welche Security-Headers fehlen? Nenne jeden einzelnen der fehlt ("NOT SET")
+- Gib den exakten Header-Wert an der gesetzt werden sollte
 
 BEWERTUNGS-MASSSTAB:
 - 90-100: Exzellent, best-practice in allen Punkten
@@ -193,6 +217,8 @@ interface ExtractedMetadata {
   structured_data: string[];
   script_count: number;
   stylesheet_count: number;
+  body_text_preview: string;
+  word_count: number;
 }
 
 function extractMetadata(html: string, url: string): ExtractedMetadata {
@@ -348,6 +374,17 @@ function extractMetadata(html: string, url: string): ExtractedMetadata {
   // Page size
   const page_size_kb = Math.round((new TextEncoder().encode(html).length / 1024) * 10) / 10;
 
+  // Extract visible body text (strip tags, scripts, styles)
+  let bodyText = html
+    .replace(/<script[\s\S]*?<\/script>/gi, '')
+    .replace(/<style[\s\S]*?<\/style>/gi, '')
+    .replace(/<[^>]+>/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+  const word_count = bodyText.split(/\s+/).filter(w => w.length > 1).length;
+  // Keep first 2000 chars for AI analysis
+  bodyText = bodyText.substring(0, 2000);
+
   return {
     url,
     is_https: parsedUrl.protocol === "https:",
@@ -368,6 +405,8 @@ function extractMetadata(html: string, url: string): ExtractedMetadata {
     structured_data,
     script_count,
     stylesheet_count,
+    body_text_preview: bodyText,
+    word_count,
   };
 }
 
@@ -475,6 +514,7 @@ serve(async (req) => {
     // ---- Fetch the target URL ----
     console.log(`[analyze] Fetching URL: ${url}`);
     let html: string;
+    let responseHeaders: Record<string, string> = {};
 
     const fetchHeaders = {
       "User-Agent":
@@ -483,7 +523,7 @@ serve(async (req) => {
       "Accept-Language": "de-DE,de;q=0.9,en;q=0.8",
     };
 
-    async function tryFetch(targetUrl: string): Promise<string> {
+    async function tryFetch(targetUrl: string): Promise<{ html: string; headers: Record<string, string> }> {
       const fetchResponse = await fetch(targetUrl, {
         headers: fetchHeaders,
         redirect: "follow",
@@ -491,11 +531,15 @@ serve(async (req) => {
       if (!fetchResponse.ok) {
         throw new Error(`HTTP ${fetchResponse.status} ${fetchResponse.statusText}`);
       }
-      return await fetchResponse.text();
+      const responseHeaders: Record<string, string> = {};
+      for (const [key, value] of fetchResponse.headers.entries()) {
+        responseHeaders[key.toLowerCase()] = value;
+      }
+      return { html: await fetchResponse.text(), headers: responseHeaders };
     }
 
     try {
-      html = await tryFetch(url);
+      ({ html, headers: responseHeaders } = await tryFetch(url));
     } catch (firstErr) {
       const firstMessage = firstErr instanceof Error ? firstErr.message : String(firstErr);
       console.warn(`[analyze] First fetch attempt failed: ${firstMessage}`);
@@ -513,7 +557,7 @@ serve(async (req) => {
         const httpUrl = url.replace(/^https:\/\//i, "http://");
         console.log(`[analyze] SSL error detected, trying HTTP fallback: ${httpUrl}`);
         try {
-          html = await tryFetch(httpUrl);
+          ({ html, headers: responseHeaders } = await tryFetch(httpUrl));
           console.log(`[analyze] HTTP fallback succeeded`);
         } catch (fallbackErr) {
           const fallbackMessage = fallbackErr instanceof Error ? fallbackErr.message : String(fallbackErr);
@@ -541,7 +585,20 @@ serve(async (req) => {
 
     // ---- Extract metadata ----
     console.log(`[analyze] Extracting metadata...`);
-    const metadata = extractMetadata(html, url);
+    const metadata: Record<string, any> = extractMetadata(html, url);
+
+    // Add response headers for security analysis
+    metadata.response_headers = {
+      'content-type': responseHeaders['content-type'] || '',
+      'x-frame-options': responseHeaders['x-frame-options'] || 'NOT SET',
+      'x-content-type-options': responseHeaders['x-content-type-options'] || 'NOT SET',
+      'strict-transport-security': responseHeaders['strict-transport-security'] || 'NOT SET',
+      'content-security-policy': responseHeaders['content-security-policy'] || 'NOT SET',
+      'referrer-policy': responseHeaders['referrer-policy'] || 'NOT SET',
+      'permissions-policy': responseHeaders['permissions-policy'] || 'NOT SET',
+      'server': responseHeaders['server'] || '',
+      'x-powered-by': responseHeaders['x-powered-by'] || '',
+    };
 
     // ---- Call OpenAI API ----
     const openaiKey = Deno.env.get("OPENAI_API_KEY");
