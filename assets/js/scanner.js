@@ -317,17 +317,27 @@ function _animatePhase3() {
  * Count up overall score, reveal issues one by one.
  */
 function _animatePhase4() {
-  return new Promise(function(resolve) {
+  return new Promise(async function(resolve) {
     _updateScanStatus('Report wird erstellt...', 'Empfehlungen werden generiert');
 
     var content = document.getElementById('scan-phase-content');
     if (!content) { setTimeout(resolve, 5000); return; }
 
-    var overallScore = (_scanState.apiResult && _scanState.apiResult.overall_score) || Math.floor(Math.random() * 30) + 55;
+    // Wait for API result if not ready yet (max 60s)
+    if (!_scanState.apiDone) {
+      content.innerHTML =
+        '<div class="scan-phase" style="max-width:500px;margin:24px auto 0;text-align:center;">' +
+          '<div style="width:48px;height:48px;border:3px solid rgba(99,102,241,0.2);border-top-color:#6366f1;border-radius:50%;animation:scanSpin 1s linear infinite;margin:0 auto 16px;"></div>' +
+          '<p style="color:#94a3b8;font-size:14px;">Ergebnisse werden zusammengestellt...</p>' +
+        '</div>';
+      await _waitForApi(60000);
+    }
+
+    // Now use the REAL data
+    var overallScore = (_scanState.apiResult && _scanState.apiResult.overall_score) || 0;
     var issues = (_scanState.apiResult && _scanState.apiResult.issues) || [];
     var topIssues = issues.slice(0, 5);
 
-    // Score color
     var scoreColor = overallScore >= 80 ? '#10b981' : overallScore >= 50 ? '#f59e0b' : '#ef4444';
 
     var issuesHtml = '';
@@ -341,19 +351,17 @@ function _animatePhase4() {
 
     content.innerHTML =
       '<div class="scan-phase" style="max-width:500px;margin:24px auto 0;">' +
-        // Overall score
         '<div style="margin-bottom:32px;">' +
           '<div id="scan-overall-score" style="font-size:72px;font-weight:800;color:' + scoreColor + ';line-height:1;">0</div>' +
           '<div style="color:#64748b;font-size:14px;margin-top:4px;">Gesamtbewertung</div>' +
         '</div>' +
-        // Top issues
         '<div style="text-align:left;">' +
-          '<p style="color:#94a3b8;font-size:13px;font-weight:600;margin-bottom:12px;text-transform:uppercase;letter-spacing:0.05em;">Gefundene Issues</p>' +
+          '<p style="color:#94a3b8;font-size:13px;font-weight:600;margin-bottom:12px;text-transform:uppercase;letter-spacing:0.05em;">Gefundene Issues (' + issues.length + ')</p>' +
           issuesHtml +
         '</div>' +
       '</div>';
 
-    // Animate overall score
+    // Animate score counter with REAL score
     var scoreEl = document.getElementById('scan-overall-score');
     if (scoreEl) {
       _animateCounterElement(scoreEl, overallScore, 2000);
