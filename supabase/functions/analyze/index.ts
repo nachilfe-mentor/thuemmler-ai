@@ -572,7 +572,7 @@ serve(async (req) => {
       for (let attempt = 0; attempt < maxRetries; attempt++) {
         try {
           const controller = new AbortController();
-          const timeoutId = setTimeout(() => controller.abort(), 25000);
+          const timeoutId = setTimeout(() => controller.abort(), 55000);
 
           const response = await fetch("https://api.openai.com/v1/chat/completions", {
             method: "POST",
