@@ -35,6 +35,7 @@ var payments = {
         headers: {
           'Content-Type': 'application/json',
           'Authorization': 'Bearer ' + session.access_token,
+          'apikey': SUPABASE_ANON_KEY,
         },
         body: JSON.stringify({
           interval: interval,
@@ -48,11 +49,17 @@ var payments = {
         throw new Error(errorData.error || 'Checkout-Session konnte nicht erstellt werden');
       }
 
-      const data = await response.json();
+      const result = await response.json();
 
-      if (data.url) {
-        window.location.href = data.url;
+      // API returns { success, data: { checkout_url } }
+      var checkoutUrl = result.data && result.data.checkout_url
+        ? result.data.checkout_url
+        : result.url || result.checkout_url || null;
+
+      if (checkoutUrl) {
+        window.location.href = checkoutUrl;
       } else {
+        console.error('[shift07] Stripe response:', JSON.stringify(result));
         throw new Error('Keine Checkout-URL erhalten');
       }
     } catch (err) {
@@ -88,6 +95,7 @@ var payments = {
         headers: {
           'Content-Type': 'application/json',
           'Authorization': 'Bearer ' + session.access_token,
+          'apikey': SUPABASE_ANON_KEY,
         },
         body: JSON.stringify({
           return_url: window.location.href,
@@ -99,11 +107,16 @@ var payments = {
         throw new Error(errorData.error || 'Portal-Session konnte nicht erstellt werden');
       }
 
-      const data = await response.json();
+      const result = await response.json();
 
-      if (data.url) {
-        window.location.href = data.url;
+      var portalUrl = result.data && result.data.portal_url
+        ? result.data.portal_url
+        : result.url || result.portal_url || null;
+
+      if (portalUrl) {
+        window.location.href = portalUrl;
       } else {
+        console.error('[shift07] Portal response:', JSON.stringify(result));
         throw new Error('Keine Portal-URL erhalten');
       }
     } catch (err) {
