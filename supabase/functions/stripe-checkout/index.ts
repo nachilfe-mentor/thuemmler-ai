@@ -107,15 +107,21 @@ serve(async (req) => {
       .single();
 
     // ---- Build checkout session params ----
-    // Price configuration: use env vars if available, otherwise provide defaults
     const monthlyPriceId = Deno.env.get("STRIPE_PRICE_MONTHLY") || "";
     const yearlyPriceId = Deno.env.get("STRIPE_PRICE_YEARLY") || "";
     const priceId = interval === "month" ? monthlyPriceId : yearlyPriceId;
 
+    // Use origin from request body or referer, fallback to GitHub Pages URL
+    const origin = body.origin
+      || req.headers.get("origin")
+      || req.headers.get("referer")?.replace(/\/app\/.*$/, "")
+      || "https://nachilfe-mentor.github.io/thuemmler-ai";
+    const appBase = origin.endsWith("/") ? origin + "app/" : origin + "/app/";
+
     const params: Record<string, string> = {
       "mode": "subscription",
-      "success_url": "https://shift07.ai/app/#/dashboard?checkout=success",
-      "cancel_url": "https://shift07.ai/app/#/settings?checkout=cancelled",
+      "success_url": appBase + "#/dashboard?checkout=success",
+      "cancel_url": appBase + "#/settings?checkout=cancelled",
       "metadata[user_id]": user.id,
       "allow_promotion_codes": "true",
     };

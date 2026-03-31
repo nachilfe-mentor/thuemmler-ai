@@ -39,8 +39,7 @@ var payments = {
         },
         body: JSON.stringify({
           interval: interval,
-          success_url: window.location.origin + '/app/?checkout=success',
-          cancel_url: window.location.origin + '/app/?checkout=cancelled',
+          origin: window.location.origin + window.location.pathname.replace(/\/app\/.*$/, '').replace(/\/[^\/]*\.html$/, ''),
         }),
       });
 
@@ -130,19 +129,52 @@ var payments = {
    * Check URL params for checkout success or cancellation.
    * Should be called on page load.
    */
-  handleCheckoutReturn() {
+  async handleCheckoutReturn() {
     try {
+      // Check both URL search params and hash params (GitHub Pages uses hash routing)
       var params = new URLSearchParams(window.location.search);
-      var checkoutStatus = params.get('checkout');
+      var hashParams = new URLSearchParams(window.location.hash.split('?')[1] || '');
+      var checkoutStatus = params.get('checkout') || hashParams.get('checkout');
 
       if (checkoutStatus === 'success') {
         payments._showNotification(
           'success',
-          'Willkommen bei shift07 Pro!',
-          'Dein Abonnement ist jetzt aktiv. Du hast vollen Zugriff auf alle Funktionen.'
+          'Willkommen bei Shift07 Pro!',
+          'Abo wird aktiviert...'
         );
+
+        // Verify subscription with Stripe and update DB
+        try {
+          var session = await db.getSession();
+          if (session) {
+            var response = await fetch(SUPABASE_URL + '/functions/v1/verify-subscription', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+                'Authorization': 'Bearer ' + session.access_token,
+                'apikey': SUPABASE_ANON_KEY,
+              },
+            });
+            var result = await response.json();
+            if (result.success && result.data.subscription_status === 'pro') {
+              payments._showNotification(
+                'success',
+                'Shift07 Pro ist aktiv!',
+                'Du hast jetzt vollen Zugriff auf alle Funktionen.'
+              );
+            }
+            console.log('[shift07] Subscription verified:', result.data);
+          }
+        } catch (verifyErr) {
+          console.error('[shift07] Subscription verification error:', verifyErr);
+        }
+
         // Clean the URL
         payments._cleanUrl('checkout');
+        // Also clean hash params
+        if (window.location.hash.includes('checkout=')) {
+          window.location.hash = window.location.hash.split('?')[0];
+        }
       } else if (checkoutStatus === 'cancelled') {
         payments._showNotification(
           'info',
