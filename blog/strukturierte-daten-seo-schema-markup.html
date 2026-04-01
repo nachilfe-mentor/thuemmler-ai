@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strukturierte Daten für SEO: Schema Markup einfach erklärt | Shift07 Blog</title>
+    <meta name="description" content="Was sind strukturierte Daten und warum braucht deine Website Schema Markup? Lerne, wie du Rich Snippets in Google bekommst - mit Anleitung und Beispielen.">
+    <meta name="author" content="Thümmler AI GmbH">
+    <link rel="icon" type="image/png" href="/logo.png">
+    <link rel="canonical" href="https://shift07.ai/blog/strukturierte-daten-seo-schema-markup.html">
+    <link rel="alternate" type="application/rss+xml" title="Shift07 Blog" href="https://shift07.ai/feed.xml">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Strukturierte Daten für SEO: Schema Markup einfach erklärt | Shift07 Blog">
+    <meta property="og:description" content="Was sind strukturierte Daten und warum braucht deine Website Schema Markup? Lerne, wie du Rich Snippets in Google bekommst.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://shift07.ai/blog/strukturierte-daten-seo-schema-markup.html">
+    <meta property="og:image" content="https://shift07.ai/blog/images/strukturierte-daten-seo.png">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="Shift07">
+    <meta property="article:published_time" content="2026-04-01T15:00:00+02:00">
+    <meta property="article:section" content="SEO Technik">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Strukturierte Daten für SEO: Schema Markup einfach erklärt">
+    <meta name="twitter:description" content="Was sind strukturierte Daten und warum braucht deine Website Schema Markup? Lerne, wie du Rich Snippets in Google bekommst.">
+    <meta name="twitter:image" content="https://shift07.ai/blog/images/strukturierte-daten-seo.png">
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Strukturierte Daten für SEO: Schema Markup einfach erklärt",
+      "description": "Was sind strukturierte Daten und warum braucht deine Website Schema Markup? Lerne, wie du Rich Snippets in Google bekommst - mit Anleitung und Beispielen.",
+      "image": "https://shift07.ai/blog/images/strukturierte-daten-seo.png",
+      "datePublished": "2026-04-01T15:00:00+02:00",
+      "dateModified": "2026-04-01T15:00:00+02:00",
+      "author": {
+        "@type": "Organization",
+        "name": "Shift07",
+        "url": "https://shift07.ai"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Shift07",
+        "url": "https://shift07.ai",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://shift07.ai/assets/logo.png"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://shift07.ai/blog/strukturierte-daten-seo-schema-markup.html"
+      }
+    }
+    </script>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K1S1RXBDS8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K1S1RXBDS8');
+    </script>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8475857002943858" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: rgba(15, 23, 42, 0.5); }
+        ::-webkit-scrollbar-thumb { background: rgba(59, 130, 246, 0.5); border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: rgba(59, 130, 246, 0.7); }
+        html { scroll-behavior: smooth; }
+        .article-content h2 { font-size: 1.5rem; font-weight: 700; color: #fff; margin-top: 2.5rem; margin-bottom: 1rem; }
+        .article-content h3 { font-size: 1.25rem; font-weight: 600; color: #e2e8f0; margin-top: 2rem; margin-bottom: 0.75rem; }
+        .article-content p { color: #cbd5e1; line-height: 1.8; margin-bottom: 1.25rem; }
+        .article-content ul, .article-content ol { color: #cbd5e1; margin-bottom: 1.25rem; padding-left: 1.5rem; }
+        .article-content li { margin-bottom: 0.5rem; line-height: 1.7; }
+        .article-content ul li { list-style-type: disc; }
+        .article-content ol li { list-style-type: decimal; }
+        .article-content a { color: #60a5fa; text-decoration: underline; text-underline-offset: 2px; }
+        .article-content a:hover { color: #93bbfc; }
+        .article-content blockquote { border-left: 4px solid #3b82f6; padding-left: 1.25rem; margin: 1.5rem 0; color: #94a3b8; font-style: italic; }
+        .article-content code { background: rgba(59, 130, 246, 0.15); color: #93c5fd; padding: 0.15rem 0.4rem; border-radius: 0.25rem; font-size: 0.9em; }
+        .article-content pre { background: rgba(15, 23, 42, 0.8); border: 1px solid rgba(255,255,255,0.1); border-radius: 0.75rem; padding: 1.25rem; overflow-x: auto; margin-bottom: 1.5rem; }
+        .article-content pre code { background: none; padding: 0; color: #e2e8f0; }
+        .article-content strong { color: #f1f5f9; }
+    </style>
+</head>
+<body class="bg-slate-900 text-white min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-slate-900/80 backdrop-blur-xl border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <a href="/" class="flex items-center gap-2">
+                    <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                    <span class="text-xl font-bold text-white">Shift07</span>
+                </a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="/" class="text-gray-300 hover:text-white transition-colors">SEO-Tool</a>
+                    <a href="/blog/" class="text-white font-medium border-b-2 border-blue-500 pb-0.5">Blog</a>
+                    <a href="/tools/" class="text-gray-300 hover:text-white transition-colors">Tools</a>
+                    <a href="/app/#/login" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-5 py-2 rounded-lg font-medium transition-all">Anmelden</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-gray-300 hover:text-white">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900/95 border-b border-white/10">
+            <div class="px-4 py-3 space-y-2">
+                <a href="/" class="block py-2 text-gray-300 hover:text-white">SEO-Tool</a>
+                <a href="/blog/" class="block py-2 text-white font-medium">Blog</a>
+                <a href="/tools/" class="block py-2 text-gray-300 hover:text-white">Tools</a>
+                <a href="/app/#/login" class="block py-2 text-blue-400 hover:text-blue-300">Anmelden</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Image -->
+    <section class="pt-16 relative">
+        <div class="h-[400px] bg-gradient-to-br from-orange-600 via-amber-700 to-yellow-800 relative overflow-hidden">
+            <img src="images/strukturierte-daten-seo.png" alt="Strukturierte Daten und Schema Markup für SEO" class="absolute inset-0 w-full h-full object-cover opacity-60">
+            <div class="absolute inset-0 bg-black/40"></div>
+            <div class="absolute inset-0 flex items-center justify-center">
+                <div class="text-center px-4 max-w-4xl">
+                    <span class="inline-block text-sm font-semibold px-4 py-1.5 bg-white/10 text-white/90 rounded-full mb-6">SEO Technik</span>
+                    <h1 class="text-3xl md:text-5xl font-extrabold text-white leading-tight">Strukturierte Daten für SEO: Schema Markup einfach erklärt</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Article Content -->
+    <section class="py-12 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col lg:flex-row gap-12">
+
+                <!-- Main Content -->
+                <article class="lg:w-2/3">
+                    <!-- Meta -->
+                    <div class="flex flex-wrap items-center gap-4 text-sm text-gray-400 mb-10 pb-6 border-b border-white/10">
+                        <div class="flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+                            Shift07 Team
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                            1. April 2026
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                            8 Min. Lesezeit
+                        </div>
+                        <span class="text-xs font-semibold px-3 py-1 bg-amber-500/20 text-amber-400 rounded-full">SEO Technik</span>
+                    </div>
+
+                    <!-- Article Body -->
+                    <div class="article-content">
+
+                        <p>Hast du dich schon einmal gefragt, warum manche Google-Ergebnisse Sternebewertungen, Preise oder FAQ-Abschnitte anzeigen, während andere nur einen einfachen blauen Link haben? Der Unterschied liegt in <strong>strukturierten Daten</strong> - einem der am meisten unterschätzten SEO-Hebel überhaupt.</p>
+
+                        <p>In diesem Artikel erfährst du, was strukturierte Daten sind, wie Schema Markup funktioniert und wie du es auf deiner Website einbaust, um in den Google-Ergebnissen deutlich mehr Aufmerksamkeit zu bekommen.</p>
+
+                        <h2>Was sind strukturierte Daten?</h2>
+
+                        <p>Strukturierte Daten sind ein standardisiertes Format, mit dem du Suchmaschinen zusätzliche Informationen über den Inhalt deiner Seite gibst. Stell dir das so vor: Dein Website-Text ist für Menschen geschrieben. Strukturierte Daten sind die maschinenlesbare Version davon.</p>
+
+                        <p>Wenn du zum Beispiel eine Arztpraxis betreibst, kann dein Website-Text lauten: "Wir sind montags bis freitags von 8 bis 17 Uhr für Sie da." Ein Mensch versteht das sofort. Google muss aber raten, ob es sich um Öffnungszeiten, einen Blogbeitrag oder etwas anderes handelt.</p>
+
+                        <p>Mit strukturierten Daten sagst du Google explizit: "Das hier sind die Öffnungszeiten eines lokalen Unternehmens." Google kann diese Information dann direkt in den Suchergebnissen anzeigen - als sogenanntes <strong>Rich Snippet</strong>.</p>
+
+                        <h2>Warum sind strukturierte Daten wichtig für SEO?</h2>
+
+                        <p>Strukturierte Daten verbessern deine <a href="/blog/was-ist-seo.html">Suchmaschinenoptimierung</a> auf mehreren Ebenen:</p>
+
+                        <ul>
+                            <li><strong>Höhere Klickrate (CTR):</strong> Rich Snippets fallen in den Suchergebnissen sofort ins Auge. Studien zeigen, dass Ergebnisse mit Rich Snippets bis zu 30% mehr Klicks bekommen als normale Ergebnisse.</li>
+                            <li><strong>Besseres Verständnis:</strong> Google versteht den Kontext deiner Inhalte besser und kann sie passender ausspielen.</li>
+                            <li><strong>Sprachsuche:</strong> Google Assistant und andere Sprachassistenten nutzen strukturierte Daten, um Fragen direkt zu beantworten.</li>
+                            <li><strong>Knowledge Panel:</strong> Bei Unternehmen können strukturierte Daten dazu führen, dass ein eigenes Knowledge Panel in der Google-Suche erscheint.</li>
+                            <li><strong>Wettbewerbsvorteil:</strong> Die meisten kleinen und mittleren Unternehmen nutzen strukturierte Daten noch nicht. Wer es tut, hebt sich sofort ab.</li>
+                        </ul>
+
+                        <blockquote>Tipp: Mit unserer <a href="/">kostenlosen SEO-Analyse</a> kannst du prüfen, ob deine Website bereits strukturierte Daten verwendet.</blockquote>
+
+                        <h2>Schema.org: Der Standard hinter strukturierten Daten</h2>
+
+                        <p><strong>Schema.org</strong> ist ein gemeinsames Projekt von Google, Bing, Yahoo und Yandex. Es definiert ein einheitliches Vokabular für strukturierte Daten. Statt dass jede Suchmaschine ein eigenes Format verlangt, gibt es mit Schema.org einen Standard, den alle verstehen.</p>
+
+                        <p>Schema.org bietet hunderte verschiedene Typen, darunter:</p>
+
+                        <ul>
+                            <li><code>LocalBusiness</code> - für lokale Unternehmen (Adresse, Öffnungszeiten, Telefon)</li>
+                            <li><code>Article</code> - für Blog-Artikel und Nachrichtenbeiträge</li>
+                            <li><code>Product</code> - für Produkte (Preis, Verfügbarkeit, Bewertungen)</li>
+                            <li><code>FAQPage</code> - für Seiten mit häufig gestellten Fragen</li>
+                            <li><code>Review</code> - für Bewertungen und Rezensionen</li>
+                            <li><code>Event</code> - für Veranstaltungen (Datum, Ort, Tickets)</li>
+                            <li><code>Recipe</code> - für Rezepte (Zutaten, Zubereitungszeit)</li>
+                            <li><code>HowTo</code> - für Schritt-für-Schritt-Anleitungen</li>
+                        </ul>
+
+                        <h2>Die drei Formate: JSON-LD, Microdata und RDFa</h2>
+
+                        <p>Es gibt drei Wege, strukturierte Daten in deine Website einzubauen:</p>
+
+                        <h3>1. JSON-LD (empfohlen)</h3>
+
+                        <p>JSON-LD (<strong>JavaScript Object Notation for Linked Data</strong>) ist das von Google empfohlene Format. Du fügst es als <code>&lt;script&gt;</code>-Block in den <code>&lt;head&gt;</code> oder <code>&lt;body&gt;</code> deiner Seite ein. Der große Vorteil: Es ist komplett vom restlichen HTML getrennt und lässt sich leicht hinzufügen oder ändern.</p>
+
+<pre><code>&lt;script type="application/ld+json"&gt;
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Beispiel Zahnarztpraxis",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Musterstraße 1",
+    "addressLocality": "Berlin",
+    "postalCode": "10115"
+  },
+  "telephone": "+49 30 12345678",
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "08:00",
+      "closes": "17:00"
+    }
+  ]
+}
+&lt;/script&gt;</code></pre>
+
+                        <h3>2. Microdata</h3>
+
+                        <p>Bei Microdata fügst du die strukturierten Daten direkt in deine HTML-Tags ein. Das ist etwas unübersichtlicher, aber manche Content-Management-Systeme nutzen dieses Format.</p>
+
+                        <h3>3. RDFa</h3>
+
+                        <p>RDFa funktioniert ähnlich wie Microdata und wird ebenfalls in HTML-Tags eingebettet. Es ist weniger verbreitet und für die meisten Anwendungsfälle nicht nötig.</p>
+
+                        <p><strong>Unsere Empfehlung:</strong> Nutze JSON-LD. Es ist am einfachsten umzusetzen, von Google bevorzugt und lässt sich nachträglich ohne Änderung am bestehenden HTML hinzufügen.</p>
+
+                        <h2>Die 5 wichtigsten Schema-Typen für kleine Unternehmen</h2>
+
+                        <h3>1. LocalBusiness</h3>
+
+                        <p>Wenn du ein lokales Unternehmen hast - ob Zahnarztpraxis, Rechtsanwaltskanzlei oder Handwerksbetrieb - ist <code>LocalBusiness</code> der wichtigste Schema-Typ für dich. Er teilt Google mit, wo du bist, wann du geöffnet hast und wie man dich erreicht.</p>
+
+                        <p>Wichtige Eigenschaften:</p>
+                        <ul>
+                            <li><code>name</code> - Firmenname</li>
+                            <li><code>address</code> - vollständige Adresse</li>
+                            <li><code>telephone</code> - Telefonnummer</li>
+                            <li><code>openingHoursSpecification</code> - Öffnungszeiten</li>
+                            <li><code>geo</code> - GPS-Koordinaten</li>
+                            <li><code>image</code> - Bild des Unternehmens</li>
+                            <li><code>priceRange</code> - Preiskategorie (z.B. "$$")</li>
+                        </ul>
+
+                        <h3>2. FAQPage</h3>
+
+                        <p>Hast du eine FAQ-Seite oder beantwortest du auf einer Seite häufig gestellte Fragen? Dann nutze <code>FAQPage</code>. Google zeigt die Fragen und Antworten direkt in den Suchergebnissen als aufklappbare Elemente an - das kann dein Suchergebnis deutlich vergrößern.</p>
+
+<pre><code>&lt;script type="application/ld+json"&gt;
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Wie lange dauert eine SEO-Optimierung?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Erste Ergebnisse sind oft nach 4-8 Wochen sichtbar. Für nachhaltige Rankings sollte man 3-6 Monate einplanen."
+      }
+    }
+  ]
+}
+&lt;/script&gt;</code></pre>
+
+                        <h3>3. Article</h3>
+
+                        <p>Für Blog-Artikel und Nachrichtenbeiträge. Dieser Schema-Typ hilft Google, den Autor, das Veröffentlichungsdatum und das Thema deines Artikels zu verstehen.</p>
+
+                        <h3>4. BreadcrumbList</h3>
+
+                        <p>Breadcrumbs (Brotkrümelnavigation) zeigen den Pfad zur aktuellen Seite an. Mit dem Schema-Typ <code>BreadcrumbList</code> erscheint dieser Pfad auch in den Google-Ergebnissen statt der nackten URL - das sieht professioneller aus und gibt Nutzern Orientierung.</p>
+
+                        <h3>5. WebSite mit SearchAction</h3>
+
+                        <p>Wenn deine Website eine Suchfunktion hat, kannst du das mit <code>WebSite</code> und einer <code>SearchAction</code> markieren. Google zeigt dann möglicherweise ein Suchfeld direkt in den Suchergebnissen an.</p>
+
+                        <h2>So baust du strukturierte Daten ein: Schritt für Schritt</h2>
+
+                        <ol>
+                            <li><strong>Identifiziere den passenden Typ:</strong> Welche Art von Inhalt hat deine Seite? Ein lokales Unternehmen, ein Artikel, ein Produkt? Wähle den entsprechenden Schema-Typ.</li>
+                            <li><strong>Erstelle den JSON-LD-Code:</strong> Nutze die Dokumentation auf schema.org oder einen Generator wie den <a href="https://search.google.com/test/rich-results">Google Rich Results Test</a>.</li>
+                            <li><strong>Füge den Code ein:</strong> Kopiere den JSON-LD-Block in den <code>&lt;head&gt;</code>-Bereich deiner Seite.</li>
+                            <li><strong>Teste das Ergebnis:</strong> Nutze den Google Rich Results Test, um zu prüfen, ob alles korrekt ist.</li>
+                            <li><strong>Überwache die Ergebnisse:</strong> In der Google Search Console unter "Verbesserungen" siehst du, ob Google deine strukturierten Daten erkennt und ob es Fehler gibt.</li>
+                        </ol>
+
+                        <h2>Häufige Fehler bei strukturierten Daten</h2>
+
+                        <p>Beim Einbauen von Schema Markup gibt es einige typische Stolperfallen:</p>
+
+                        <ul>
+                            <li><strong>Unsichtbare Inhalte markieren:</strong> Strukturierte Daten sollten nur Informationen enthalten, die auch auf der Seite sichtbar sind. Google wertet es als Spam, wenn du Daten markierst, die der Nutzer nicht sehen kann.</li>
+                            <li><strong>Falsche Typen verwenden:</strong> Markiere nicht jede Seite als <code>Article</code> - eine Kontaktseite ist kein Artikel. Nutze den passenden Typ.</li>
+                            <li><strong>Pflichtfelder vergessen:</strong> Jeder Schema-Typ hat bestimmte Pflichtfelder. Ohne diese zeigt Google keine Rich Snippets an.</li>
+                            <li><strong>Veraltete Daten:</strong> Wenn sich Öffnungszeiten oder Adressen ändern, müssen auch die strukturierten Daten aktualisiert werden.</li>
+                            <li><strong>Syntaxfehler im JSON:</strong> Ein fehlendes Komma oder eine falsche Klammer kann das gesamte Markup ungültig machen.</li>
+                        </ul>
+
+                        <h2>Strukturierte Daten und die Website-Geschwindigkeit</h2>
+
+                        <p>Ein häufiges Bedenken: Verlangsamen strukturierte Daten meine Website? Die kurze Antwort: Nein. JSON-LD-Blöcke sind winzig klein, meist nur wenige Kilobyte. Im Vergleich zu den vielen Scripts, die auf manchen Websites laufen (wir sehen regelmäßig Seiten mit über 50 eingebundenen Scripts), sind strukturierte Daten vernachlässigbar.</p>
+
+                        <p>Wenn du dich für das Thema Ladezeit interessierst, lies unseren Artikel über <a href="/blog/website-geschwindigkeit-verbessern.html">7 Tipps zur Verbesserung der Website-Geschwindigkeit</a>.</p>
+
+                        <h2>Strukturierte Daten prüfen: Nützliche Tools</h2>
+
+                        <p>Mit diesen Tools kannst du deine strukturierten Daten überprüfen:</p>
+
+                        <ul>
+                            <li><strong>Google Rich Results Test:</strong> Zeigt dir, ob deine Seite für Rich Snippets qualifiziert ist und listet alle erkannten Schema-Typen auf.</li>
+                            <li><strong>Google Search Console:</strong> Unter "Verbesserungen" findest du eine Übersicht aller erkannten strukturierten Daten und eventueller Fehler.</li>
+                            <li><strong>Schema Markup Validator:</strong> Das offizielle Tool von Schema.org validiert deinen JSON-LD-Code.</li>
+                            <li><strong>Shift07 SEO-Analyse:</strong> Unsere <a href="/">kostenlose SEO-Analyse</a> prüft unter anderem, ob deine Website strukturierte Daten verwendet.</li>
+                        </ul>
+
+                        <p>Auch unser <a href="/tools/open-graph-vorschau.html">Open-Graph-Vorschau-Tool</a> hilft dir dabei, die Meta-Daten deiner Seite zu überprüfen - denn <a href="/blog/open-graph-vorschau-social-media-preview.html">Open Graph Tags</a> und strukturierte Daten ergänzen sich perfekt.</p>
+
+                        <h2>Fazit: Strukturierte Daten sind ein Muss</h2>
+
+                        <p>Strukturierte Daten sind einer der wenigen SEO-Faktoren, bei denen der Aufwand gering und der Nutzen hoch ist. Mit wenigen Zeilen JSON-LD-Code kannst du:</p>
+
+                        <ul>
+                            <li>Deine Klickrate in den Suchergebnissen deutlich steigern</li>
+                            <li>Google helfen, deine Inhalte besser zu verstehen</li>
+                            <li>Für die Sprachsuche und das Knowledge Panel relevant werden</li>
+                            <li>Dich von der Konkurrenz abheben</li>
+                        </ul>
+
+                        <p>Fang am besten mit <code>LocalBusiness</code> an, wenn du ein lokales Unternehmen hast, oder mit <code>Article</code> für deinen Blog. Teste anschließend mit dem Google Rich Results Test und beobachte die Ergebnisse in der Search Console.</p>
+
+                        <p>Du möchtest wissen, ob deine Website bereits strukturierte Daten nutzt und wo es Verbesserungspotenzial gibt? <a href="/">Starte jetzt eine kostenlose SEO-Analyse auf Shift07</a> und finde es in wenigen Sekunden heraus.</p>
+
+                    </div>
+
+                    <!-- Share / Back -->
+                    <div class="mt-12 pt-8 border-t border-white/10 flex items-center justify-between">
+                        <a href="/blog/" class="text-blue-400 hover:text-blue-300 flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+                            Zurück zum Blog
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Sidebar -->
+                <aside class="lg:w-1/3 space-y-8">
+                    <!-- CTA Box -->
+                    <div class="bg-gradient-to-br from-blue-600/20 to-indigo-600/20 border border-blue-500/30 rounded-2xl p-6 text-center">
+                        <h3 class="text-lg font-bold text-white mb-3">Kostenlose SEO-Analyse</h3>
+                        <p class="text-gray-400 text-sm mb-5">Finde heraus, ob deine Website strukturierte Daten nutzt und welche SEO-Probleme es gibt.</p>
+                        <a href="/" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-6 py-3 rounded-lg font-medium transition-all inline-block w-full">Jetzt testen</a>
+                    </div>
+
+                    <!-- Related Articles -->
+                    <div class="bg-slate-800/50 border border-white/10 rounded-2xl p-6">
+                        <h3 class="text-lg font-bold text-white mb-4">Weitere Artikel</h3>
+                        <div class="space-y-4">
+                            <a href="/blog/was-ist-seo.html" class="block group">
+                                <p class="text-sm text-gray-300 group-hover:text-blue-400 transition-colors font-medium">Was ist SEO? Ein verständlicher Leitfaden für Einsteiger</p>
+                                <p class="text-xs text-gray-500 mt-1">SEO Grundlagen</p>
+                            </a>
+                            <a href="/blog/website-geschwindigkeit-verbessern.html" class="block group">
+                                <p class="text-sm text-gray-300 group-hover:text-blue-400 transition-colors font-medium">Website-Geschwindigkeit verbessern: 7 einfache Tipps</p>
+                                <p class="text-xs text-gray-500 mt-1">Performance</p>
+                            </a>
+                            <a href="/blog/open-graph-vorschau-social-media-preview.html" class="block group">
+                                <p class="text-sm text-gray-300 group-hover:text-blue-400 transition-colors font-medium">Open Graph Tags richtig einsetzen: So sehen deine Links perfekt aus</p>
+                                <p class="text-xs text-gray-500 mt-1">Social Media & SEO</p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- AdSense -->
+                    <div class="bg-slate-800/50 border border-white/10 rounded-2xl p-4">
+                        <ins class="adsbygoogle"
+                             style="display:block"
+                             data-ad-client="ca-pub-8475857002943858"
+                             data-ad-slot=""
+                             data-ad-format="auto"
+                             data-full-width-responsive="true"></ins>
+                        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+                    </div>
+                </aside>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer CTA -->
+    <section class="py-16 px-4 bg-gradient-to-r from-blue-900/30 to-indigo-900/30 border-t border-b border-white/5">
+        <div class="max-w-3xl mx-auto text-center">
+            <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">Teste deine Website jetzt kostenlos</h2>
+            <p class="text-gray-400 mb-8">Erhalte eine vollständige SEO-Analyse mit konkreten Verbesserungsvorschlägen.</p>
+            <form action="/" method="get" class="flex flex-col sm:flex-row gap-3 max-w-xl mx-auto">
+                <input type="url" placeholder="https://deine-website.de" class="flex-1 bg-slate-800 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-blue-500">
+                <a href="/" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-8 py-3 rounded-lg font-medium transition-all whitespace-nowrap">Analyse starten</a>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/10 bg-slate-900/50 py-12 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="flex items-center gap-2">
+                    <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                    <span class="text-lg font-bold text-white">Shift07</span>
+                </div>
+                <div class="flex items-center space-x-6 text-sm text-gray-400">
+                    <a href="/impressum.html" class="hover:text-white transition-colors">Impressum</a>
+                    <a href="/datenschutz.html" class="hover:text-white transition-colors">Datenschutz</a>
+                    <a href="/agb.html" class="hover:text-white transition-colors">AGB</a>
+                </div>
+                <p class="text-sm text-gray-500">&copy; 2026 Thümmler AI GmbH</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
