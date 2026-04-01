@@ -1993,8 +1993,12 @@
                     }
                 }
                 updateSidebarUser();
-                if (appState.currentRoute === '#/login' || appState.currentRoute === '#/signup') {
+                // Always redirect to dashboard after sign-in if on login/signup page
+                var currentHash = window.location.hash || '';
+                if (appState.currentRoute === '#/login' || appState.currentRoute === '#/signup' ||
+                    currentHash.includes('/login') || currentHash.includes('/signup') || currentHash === '' || currentHash === '#') {
                     window.location.hash = '#/dashboard';
+                    navigate();
                 }
             } else if (event === 'SIGNED_OUT') {
                 appState.user = null;

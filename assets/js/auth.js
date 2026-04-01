@@ -389,6 +389,13 @@ var auth = {
       auth.updateUI();
 
       console.log('[shift07] User signed in:', data.user.email);
+
+      // Navigate to dashboard after successful login
+      if (window.location.pathname.includes('/app')) {
+        window.location.hash = '#/dashboard';
+        // Force navigate in case hash was already #/dashboard
+        if (typeof navigate === 'function') navigate();
+      }
     } catch (err) {
       console.error('[shift07] Login error:', err);
       auth._showMessage('error', 'Ein unerwarteter Fehler ist aufgetreten.');
