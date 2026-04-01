@@ -1,0 +1,9 @@
+# robots.txt for shift07.ai
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://shift07.ai/sitemap.xml
+
+# RSS Feed
+# https://shift07.ai/feed.xml
