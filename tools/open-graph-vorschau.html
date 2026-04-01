@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K1S1RXBDS8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K1S1RXBDS8');
+    </script>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8475857002943858" crossorigin="anonymous"></script>
+    <title>Open Graph Vorschau - Social Media Preview kostenlos testen | Shift07</title>
+    <meta name="description" content="Teste kostenlos, wie deine Website auf Facebook, Twitter/X und LinkedIn aussieht. Open Graph Preview mit Live-Vorschau fur alle Social-Media-Plattformen.">
+    <meta name="keywords" content="Open Graph Vorschau, OG Preview, Social Media Preview, Facebook Vorschau, Twitter Card Preview, LinkedIn Preview, Open Graph Tags testen, kostenlos">
+    <meta name="author" content="Thümmler AI GmbH">
+    <link rel="icon" type="image/png" href="../logo.png">
+    <link rel="canonical" href="https://shift07.ai/tools/open-graph-vorschau.html">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Open Graph Vorschau - Social Media Preview kostenlos testen">
+    <meta property="og:description" content="Teste kostenlos, wie deine Website auf Facebook, Twitter/X und LinkedIn aussieht. Live-Vorschau fur alle Plattformen.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://shift07.ai/tools/open-graph-vorschau.html">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="Shift07">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Open Graph Vorschau - Social Media Preview kostenlos testen">
+    <meta name="twitter:description" content="Teste kostenlos, wie deine Website auf Facebook, Twitter/X und LinkedIn aussieht.">
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Open Graph Vorschau",
+      "description": "Kostenlose Open Graph Vorschau: Teste wie deine Website auf Facebook, Twitter/X und LinkedIn aussieht. Live-Preview fur alle Social-Media-Plattformen.",
+      "url": "https://shift07.ai/tools/open-graph-vorschau.html",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR"
+      },
+      "provider": {
+        "@type": "Organization",
+        "name": "Thümmler AI GmbH",
+        "url": "https://shift07.ai"
+      }
+    }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: rgba(15, 23, 42, 0.5); }
+        ::-webkit-scrollbar-thumb { background: rgba(59, 130, 246, 0.5); border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: rgba(59, 130, 246, 0.7); }
+        html { scroll-behavior: smooth; }
+        .glass {
+            background: rgba(255, 255, 255, 0.06);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        /* Facebook Preview */
+        .fb-preview {
+            background: #ffffff;
+            border: 1px solid #dadde1;
+            border-radius: 8px;
+            overflow: hidden;
+            max-width: 500px;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+        .fb-preview-image {
+            width: 100%;
+            height: 261px;
+            background: #f0f2f5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        .fb-preview-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .fb-preview-content {
+            padding: 10px 12px;
+            border-top: 1px solid #dadde1;
+        }
+        .fb-preview-domain {
+            font-size: 12px;
+            color: #606770;
+            text-transform: uppercase;
+            line-height: 16px;
+        }
+        .fb-preview-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #1d2129;
+            line-height: 20px;
+            margin-top: 3px;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+        }
+        .fb-preview-desc {
+            font-size: 14px;
+            color: #606770;
+            line-height: 20px;
+            margin-top: 3px;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+        }
+        /* Twitter Preview */
+        .tw-preview {
+            background: #000000;
+            border: 1px solid #2f3336;
+            border-radius: 16px;
+            overflow: hidden;
+            max-width: 500px;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+        .tw-preview-image {
+            width: 100%;
+            height: 250px;
+            background: #16181c;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        .tw-preview-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .tw-preview-content {
+            padding: 12px;
+            border-top: 1px solid #2f3336;
+        }
+        .tw-preview-domain {
+            font-size: 13px;
+            color: #71767b;
+            line-height: 16px;
+        }
+        .tw-preview-title {
+            font-size: 15px;
+            font-weight: 400;
+            color: #e7e9ea;
+            line-height: 20px;
+            margin-top: 2px;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+        }
+        .tw-preview-desc {
+            font-size: 13px;
+            color: #71767b;
+            line-height: 16px;
+            margin-top: 2px;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+        }
+        /* LinkedIn Preview */
+        .li-preview {
+            background: #1b1f23;
+            border: 1px solid #38434f;
+            border-radius: 8px;
+            overflow: hidden;
+            max-width: 500px;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+        .li-preview-image {
+            width: 100%;
+            height: 250px;
+            background: #38434f;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        .li-preview-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .li-preview-content {
+            padding: 8px 12px 12px;
+        }
+        .li-preview-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: rgba(255,255,255,0.9);
+            line-height: 20px;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+        }
+        .li-preview-domain {
+            font-size: 12px;
+            color: rgba(255,255,255,0.6);
+            line-height: 16px;
+            margin-top: 2px;
+        }
+        .tab-active {
+            border-bottom: 2px solid #3b82f6;
+            color: #93c5fd;
+        }
+        .tab-inactive {
+            border-bottom: 2px solid transparent;
+            color: rgba(255,255,255,0.5);
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <div class="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
+        <!-- Navigation -->
+        <nav class="bg-black/20 backdrop-blur-md border-b border-white/10">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center h-16">
+                    <a href="../index.html" class="flex items-center gap-2">
+                        <img src="../logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                        <span class="text-xl font-bold text-white">Shift07</span>
+                    </a>
+                    <div class="hidden md:flex items-baseline space-x-4">
+                        <a href="../index.html" class="text-white hover:text-blue-300 px-3 py-2 text-sm font-medium transition-colors">SEO-Tool</a>
+                        <a href="../blog/" class="text-white hover:text-blue-300 px-3 py-2 text-sm font-medium transition-colors">Blog</a>
+                        <a href="./" class="text-blue-300 px-3 py-2 text-sm font-medium">Tools</a>
+                        <a href="../app/#/login" class="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:from-blue-600 hover:to-purple-700 transition-all">Anmelden</a>
+                    </div>
+                    <button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="md:hidden text-white">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                    </button>
+                </div>
+                <div id="mobile-menu" class="hidden md:hidden pb-4">
+                    <a href="../index.html" class="block text-white hover:text-blue-300 px-3 py-2 text-sm font-medium">SEO-Tool</a>
+                    <a href="../blog/" class="block text-white hover:text-blue-300 px-3 py-2 text-sm font-medium">Blog</a>
+                    <a href="./" class="block text-blue-300 px-3 py-2 text-sm font-medium">Tools</a>
+                    <a href="../app/#/login" class="block text-white hover:text-blue-300 px-3 py-2 text-sm font-medium">Anmelden</a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero -->
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-6 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">
+                <span class="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Open Graph Vorschau</span>
+            </h1>
+            <p class="text-xl text-blue-200/80 max-w-2xl mx-auto">Teste kostenlos, wie deine Website auf Facebook, Twitter/X und LinkedIn aussieht. Einfach ausfullen oder HTML einfugen.</p>
+        </section>
+
+        <!-- Main Tool -->
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+            <div class="grid lg:grid-cols-2 gap-8">
+                <!-- Input -->
+                <div class="glass rounded-xl p-6 md:p-8">
+                    <h2 class="text-xl font-semibold text-white mb-6">Deine Open Graph Tags</h2>
+
+                    <!-- Tab: Manuell / HTML einfugen -->
+                    <div class="flex gap-4 mb-6 border-b border-white/10">
+                        <button id="tabManual" onclick="switchTab('manual')" class="pb-3 text-sm font-medium tab-active transition-colors">Manuell eingeben</button>
+                        <button id="tabHtml" onclick="switchTab('html')" class="pb-3 text-sm font-medium tab-inactive transition-colors">HTML einfugen</button>
+                    </div>
+
+                    <!-- Manual Input -->
+                    <div id="panelManual" class="space-y-5">
+                        <div>
+                            <label class="block text-sm font-medium text-blue-200 mb-1">og:title *</label>
+                            <input id="ogTitle" type="text" placeholder="z.B. Meine Website - Startseite" maxlength="95" class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" oninput="updatePreview()">
+                            <p class="text-xs text-white/40 mt-1"><span id="titleCount">0</span>/95 Zeichen</p>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-blue-200 mb-1">og:description *</label>
+                            <textarea id="ogDesc" rows="3" placeholder="z.B. Entdecke die besten Angebote..." maxlength="300" class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none" oninput="updatePreview()"></textarea>
+                            <p class="text-xs text-white/40 mt-1"><span id="descCount">0</span>/300 Zeichen</p>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-blue-200 mb-1">og:url</label>
+                            <input id="ogUrl" type="url" placeholder="https://example.com/seite" class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" oninput="updatePreview()">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-blue-200 mb-1">og:image (URL zum Bild)</label>
+                            <input id="ogImage" type="url" placeholder="https://example.com/bild.jpg" class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" oninput="updatePreview()">
+                            <p class="text-xs text-white/40 mt-1">Empfohlen: 1200 x 630 px (1.91:1)</p>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-blue-200 mb-1">og:site_name</label>
+                            <input id="ogSiteName" type="text" placeholder="z.B. Meine Website" class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" oninput="updatePreview()">
+                        </div>
+                    </div>
+
+                    <!-- HTML Paste -->
+                    <div id="panelHtml" class="hidden space-y-5">
+                        <div>
+                            <label class="block text-sm font-medium text-blue-200 mb-1">HTML-Code einfugen</label>
+                            <textarea id="htmlInput" rows="10" placeholder='Fuge deinen <head>-Bereich hier ein, z.B.:&#10;&#10;<meta property="og:title" content="Mein Titel">&#10;<meta property="og:description" content="Meine Beschreibung">&#10;<meta property="og:image" content="https://example.com/bild.jpg">' class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none font-mono text-sm"></textarea>
+                        </div>
+                        <button onclick="parseHtml()" class="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white px-5 py-3 rounded-lg text-sm font-medium hover:from-blue-600 hover:to-purple-700 transition-all">
+                            Tags erkennen &amp; Vorschau laden
+                        </button>
+                    </div>
+
+                    <!-- Validation -->
+                    <div id="validation" class="mt-6 hidden">
+                        <h3 class="text-sm font-semibold text-white mb-3">Schnell-Check</h3>
+                        <div id="validationList" class="space-y-2"></div>
+                    </div>
+                </div>
+
+                <!-- Preview -->
+                <div>
+                    <!-- Platform Tabs -->
+                    <div class="flex gap-4 mb-4 border-b border-white/10">
+                        <button id="prevFb" onclick="switchPreview('facebook')" class="pb-3 text-sm font-medium tab-active transition-colors">Facebook</button>
+                        <button id="prevTw" onclick="switchPreview('twitter')" class="pb-3 text-sm font-medium tab-inactive transition-colors">Twitter / X</button>
+                        <button id="prevLi" onclick="switchPreview('linkedin')" class="pb-3 text-sm font-medium tab-inactive transition-colors">LinkedIn</button>
+                    </div>
+
+                    <!-- Facebook Preview -->
+                    <div id="previewFacebook" class="glass rounded-xl p-6 md:p-8">
+                        <h2 class="text-lg font-semibold text-white mb-4">Facebook-Vorschau</h2>
+                        <div class="fb-preview" id="fbCard">
+                            <div class="fb-preview-image" id="fbImage">
+                                <svg class="w-12 h-12 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                            </div>
+                            <div class="fb-preview-content">
+                                <div class="fb-preview-domain" id="fbDomain">example.com</div>
+                                <div class="fb-preview-title" id="fbTitle">Dein Seitentitel erscheint hier</div>
+                                <div class="fb-preview-desc" id="fbDesc">Deine Beschreibung erscheint hier. Fuelle die Felder links aus, um die Vorschau zu sehen.</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Twitter Preview -->
+                    <div id="previewTwitter" class="glass rounded-xl p-6 md:p-8 hidden">
+                        <h2 class="text-lg font-semibold text-white mb-4">Twitter/X-Vorschau</h2>
+                        <div class="tw-preview" id="twCard">
+                            <div class="tw-preview-image" id="twImage">
+                                <svg class="w-12 h-12 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                            </div>
+                            <div class="tw-preview-content">
+                                <div class="tw-preview-title" id="twTitle">Dein Seitentitel erscheint hier</div>
+                                <div class="tw-preview-desc" id="twDesc">Deine Beschreibung erscheint hier.</div>
+                                <div class="tw-preview-domain" id="twDomain">example.com</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- LinkedIn Preview -->
+                    <div id="previewLinkedin" class="glass rounded-xl p-6 md:p-8 hidden">
+                        <h2 class="text-lg font-semibold text-white mb-4">LinkedIn-Vorschau</h2>
+                        <div class="li-preview" id="liCard">
+                            <div class="li-preview-image" id="liImage">
+                                <svg class="w-12 h-12 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                            </div>
+                            <div class="li-preview-content">
+                                <div class="li-preview-title" id="liTitle">Dein Seitentitel erscheint hier</div>
+                                <div class="li-preview-domain" id="liDomain">example.com</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cross-sell -->
+                    <div class="glass rounded-xl p-6 mt-6 border-blue-500/30 border">
+                        <div class="flex items-start gap-4">
+                            <div class="bg-blue-500/20 rounded-lg p-3 flex-shrink-0">
+                                <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                            </div>
+                            <div>
+                                <h3 class="text-white font-semibold mb-1">Mehr als nur Open Graph?</h3>
+                                <p class="text-blue-200/70 text-sm mb-3">Prufe ob deine gesamte Website SEO-optimiert ist: Meta-Tags, Ladezeit, mobile Optimierung und mehr.</p>
+                                <a href="../index.html" class="inline-flex items-center text-blue-400 hover:text-blue-300 text-sm font-medium transition-colors">
+                                    Jetzt kostenlos mit Shift07 prufen
+                                    <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Meta-Tag-Generator Cross-sell -->
+                    <div class="glass rounded-xl p-6 mt-4 border-purple-500/30 border">
+                        <div class="flex items-start gap-4">
+                            <div class="bg-purple-500/20 rounded-lg p-3 flex-shrink-0">
+                                <svg class="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A2 2 0 013 12V7a4 4 0 014-4z"/></svg>
+                            </div>
+                            <div>
+                                <h3 class="text-white font-semibold mb-1">Open Graph Tags erstellen?</h3>
+                                <p class="text-blue-200/70 text-sm mb-3">Mit unserem Meta-Tag-Generator erstellst du alle Meta-Tags inklusive Open Graph und Twitter Card Tags.</p>
+                                <a href="meta-tag-generator.html" class="inline-flex items-center text-purple-400 hover:text-purple-300 text-sm font-medium transition-colors">
+                                    Zum Meta-Tag-Generator
+                                    <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- AdSense -->
+            <div class="mt-12">
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-8475857002943858"
+                     data-ad-slot=""
+                     data-ad-format="auto"
+                     data-full-width-responsive="true"></ins>
+                <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+            </div>
+
+            <!-- Tips Section -->
+            <div class="glass rounded-xl p-6 md:p-8 mt-12">
+                <h2 class="text-2xl font-bold text-white mb-6">Open Graph Tags erklaert</h2>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <h3 class="text-blue-300 font-semibold mb-2">og:title</h3>
+                        <p class="text-white/70 text-sm">Der Titel, der auf Social Media angezeigt wird. Sollte pragnant und aussagekraftig sein. Optimal: 40-60 Zeichen. Zu lange Titel werden abgeschnitten.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-blue-300 font-semibold mb-2">og:description</h3>
+                        <p class="text-white/70 text-sm">Die Beschreibung unter dem Titel. Facebook zeigt ca. 60 Zeichen, Twitter mehr. Mach neugierig und fasse den Inhalt der Seite zusammen.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-blue-300 font-semibold mb-2">og:image</h3>
+                        <p class="text-white/70 text-sm">Das Bild entscheidet massgeblich uber die Klickrate. Empfohlene Groesse: 1200 x 630 Pixel (Seitenverhaltnis 1.91:1). Mindestens 200 x 200 px.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-blue-300 font-semibold mb-2">og:url</h3>
+                        <p class="text-white/70 text-sm">Die kanonische URL deiner Seite. Plattformen nutzen sie zur Domain-Anzeige und um doppelte Shares zu erkennen. Immer die volle URL angeben.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-blue-300 font-semibold mb-2">Optimale Bildgroessen</h3>
+                        <p class="text-white/70 text-sm">Facebook: 1200x630px | Twitter: 1200x628px | LinkedIn: 1200x627px. Ein Bild mit 1200x630px funktioniert auf allen Plattformen gut.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-blue-300 font-semibold mb-2">Warum Open Graph wichtig ist</h3>
+                        <p class="text-white/70 text-sm">Ohne OG-Tags wahlen Plattformen selbst Titel und Bild — oft schlecht. Mit OG-Tags kontrollierst du, wie dein Link geteilt aussieht und steigerst die Klickrate.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-black/30 backdrop-blur-md border-t border-white/10">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <div class="text-white/60 mb-4 md:mb-0 text-sm">
+                        &copy; 2026 Thümmler AI GmbH. Alle Rechte vorbehalten.
+                    </div>
+                    <div class="flex space-x-6">
+                        <a href="../impressum.html" class="text-gray-300 hover:text-white transition-colors text-sm">Impressum</a>
+                        <a href="../datenschutz.html" class="text-gray-300 hover:text-white transition-colors text-sm">Datenschutz</a>
+                        <a href="../agb.html" class="text-gray-300 hover:text-white transition-colors text-sm">AGB</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        function switchTab(tab) {
+            const tabManual = document.getElementById('tabManual');
+            const tabHtml = document.getElementById('tabHtml');
+            const panelManual = document.getElementById('panelManual');
+            const panelHtml = document.getElementById('panelHtml');
+            if (tab === 'manual') {
+                tabManual.className = 'pb-3 text-sm font-medium tab-active transition-colors';
+                tabHtml.className = 'pb-3 text-sm font-medium tab-inactive transition-colors';
+                panelManual.classList.remove('hidden');
+                panelHtml.classList.add('hidden');
+            } else {
+                tabHtml.className = 'pb-3 text-sm font-medium tab-active transition-colors';
+                tabManual.className = 'pb-3 text-sm font-medium tab-inactive transition-colors';
+                panelHtml.classList.remove('hidden');
+                panelManual.classList.add('hidden');
+            }
+        }
+
+        function switchPreview(platform) {
+            const tabs = { facebook: 'prevFb', twitter: 'prevTw', linkedin: 'prevLi' };
+            const panels = { facebook: 'previewFacebook', twitter: 'previewTwitter', linkedin: 'previewLinkedin' };
+            Object.keys(tabs).forEach(p => {
+                document.getElementById(tabs[p]).className = p === platform ? 'pb-3 text-sm font-medium tab-active transition-colors' : 'pb-3 text-sm font-medium tab-inactive transition-colors';
+                document.getElementById(panels[p]).classList.toggle('hidden', p !== platform);
+            });
+        }
+
+        function extractDomain(url) {
+            if (!url) return 'example.com';
+            try {
+                return new URL(url).hostname;
+            } catch {
+                return url.replace(/^https?:\/\//, '').split('/')[0] || 'example.com';
+            }
+        }
+
+        function updatePreview() {
+            const title = document.getElementById('ogTitle').value || 'Dein Seitentitel erscheint hier';
+            const desc = document.getElementById('ogDesc').value || 'Deine Beschreibung erscheint hier.';
+            const url = document.getElementById('ogUrl').value;
+            const image = document.getElementById('ogImage').value;
+            const siteName = document.getElementById('ogSiteName').value;
+            const domain = extractDomain(url);
+
+            // Update counters
+            document.getElementById('titleCount').textContent = document.getElementById('ogTitle').value.length;
+            document.getElementById('descCount').textContent = document.getElementById('ogDesc').value.length;
+
+            // Facebook
+            document.getElementById('fbTitle').textContent = title;
+            document.getElementById('fbDesc').textContent = desc;
+            document.getElementById('fbDomain').textContent = domain.toUpperCase();
+            updateImage('fbImage', image);
+
+            // Twitter
+            document.getElementById('twTitle').textContent = title;
+            document.getElementById('twDesc').textContent = desc;
+            document.getElementById('twDomain').textContent = domain;
+            updateImage('twImage', image);
+
+            // LinkedIn
+            document.getElementById('liTitle').textContent = title;
+            document.getElementById('liDomain').textContent = siteName || domain;
+            updateImage('liImage', image);
+
+            // Validation
+            runValidation(document.getElementById('ogTitle').value, document.getElementById('ogDesc').value, url, image);
+        }
+
+        function updateImage(containerId, imageUrl) {
+            const container = document.getElementById(containerId);
+            if (imageUrl) {
+                const img = document.createElement('img');
+                img.src = imageUrl;
+                img.alt = 'Open Graph Bild';
+                img.onerror = function() {
+                    container.innerHTML = '<div class="flex flex-col items-center"><svg class="w-10 h-10 text-red-400 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.082 16.5c-.77.833.192 2.5 1.732 2.5z"/></svg><span class="text-red-400 text-xs">Bild konnte nicht geladen werden</span></div>';
+                };
+                container.innerHTML = '';
+                container.appendChild(img);
+            } else {
+                container.innerHTML = '<svg class="w-12 h-12 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>';
+            }
+        }
+
+        function runValidation(title, desc, url, image) {
+            const container = document.getElementById('validation');
+            const list = document.getElementById('validationList');
+            if (!title && !desc && !url && !image) {
+                container.classList.add('hidden');
+                return;
+            }
+            container.classList.remove('hidden');
+            const checks = [];
+
+            // Title
+            if (!title) {
+                checks.push({ ok: false, text: 'og:title fehlt — wird dringend empfohlen' });
+            } else if (title.length > 60) {
+                checks.push({ ok: false, text: `og:title ist ${title.length} Zeichen lang — Facebook schneidet nach ~60 ab` });
+            } else {
+                checks.push({ ok: true, text: `og:title ist ${title.length} Zeichen — gute Laenge` });
+            }
+
+            // Description
+            if (!desc) {
+                checks.push({ ok: false, text: 'og:description fehlt — wird empfohlen' });
+            } else if (desc.length > 200) {
+                checks.push({ ok: false, text: `og:description ist ${desc.length} Zeichen — kuerze auf unter 200` });
+            } else if (desc.length < 50) {
+                checks.push({ ok: false, text: `og:description ist nur ${desc.length} Zeichen — mehr Details helfen` });
+            } else {
+                checks.push({ ok: true, text: `og:description ist ${desc.length} Zeichen — gute Laenge` });
+            }
+
+            // URL
+            if (!url) {
+                checks.push({ ok: false, text: 'og:url fehlt — empfohlen fur korrektes Sharing' });
+            } else if (!url.startsWith('https://')) {
+                checks.push({ ok: false, text: 'og:url nutzt kein HTTPS — Social-Media-Plattformen bevorzugen HTTPS' });
+            } else {
+                checks.push({ ok: true, text: 'og:url ist gesetzt und nutzt HTTPS' });
+            }
+
+            // Image
+            if (!image) {
+                checks.push({ ok: false, text: 'og:image fehlt — ohne Bild werden Links selten geklickt' });
+            } else if (!image.startsWith('https://')) {
+                checks.push({ ok: false, text: 'og:image nutzt kein HTTPS — einige Plattformen blockieren HTTP-Bilder' });
+            } else {
+                checks.push({ ok: true, text: 'og:image ist gesetzt und nutzt HTTPS' });
+            }
+
+            list.innerHTML = checks.map(c => `
+                <div class="flex items-start gap-2">
+                    <span class="mt-0.5 flex-shrink-0">${c.ok ? '<svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>' : '<svg class="w-4 h-4 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>'}</span>
+                    <span class="text-sm ${c.ok ? 'text-green-300' : 'text-yellow-300'}">${c.text}</span>
+                </div>
+            `).join('');
+        }
+
+        function parseHtml() {
+            const html = document.getElementById('htmlInput').value;
+            if (!html.trim()) return;
+
+            const parser = new DOMParser();
+            const doc = parser.parseFromString('<html><head>' + html + '</head></html>', 'text/html');
+
+            const getContent = (property) => {
+                const el = doc.querySelector(`meta[property="${property}"]`) || doc.querySelector(`meta[name="${property}"]`);
+                return el ? el.getAttribute('content') || '' : '';
+            };
+
+            const title = getContent('og:title') || doc.querySelector('title')?.textContent || '';
+            const desc = getContent('og:description');
+            const url = getContent('og:url');
+            const image = getContent('og:image');
+            const siteName = getContent('og:site_name');
+
+            // Fill manual fields
+            document.getElementById('ogTitle').value = title;
+            document.getElementById('ogDesc').value = desc;
+            document.getElementById('ogUrl').value = url;
+            document.getElementById('ogImage').value = image;
+            document.getElementById('ogSiteName').value = siteName;
+
+            // Switch to manual tab to show filled fields
+            switchTab('manual');
+            updatePreview();
+        }
+
+        // Initialize
+        updatePreview();
+    </script>
+</body>
+</html>
