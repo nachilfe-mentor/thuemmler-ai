@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K1S1RXBDS8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K1S1RXBDS8');
+    </script>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8475857002943858" crossorigin="anonymous"></script>
+    <title>Heading-Struktur-Checker - Überschriften-Hierarchie kostenlos prüfen | Shift07</title>
+    <meta name="description" content="Analysiere die Überschriften-Struktur (H1-H6) deiner Website kostenlos. Finde fehlende H1-Tags, übersprungene Ebenen und Hierarchie-Probleme auf einen Blick.">
+    <meta name="keywords" content="Heading Checker, Überschriften Struktur, H1 H2 H3 Analyse, Heading Hierarchie, SEO Überschriften, Heading Tag Checker, kostenlos">
+    <meta name="author" content="Thümmler AI GmbH">
+    <link rel="icon" type="image/png" href="../logo.png">
+    <link rel="canonical" href="https://shift07.ai/tools/heading-struktur-checker.html">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Heading-Struktur-Checker - Überschriften-Hierarchie kostenlos prüfen">
+    <meta property="og:description" content="Analysiere die Überschriften-Struktur (H1-H6) deiner Website kostenlos. Finde Hierarchie-Probleme auf einen Blick.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://shift07.ai/tools/heading-struktur-checker.html">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="Shift07">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Heading-Struktur-Checker - Überschriften kostenlos prüfen">
+    <meta name="twitter:description" content="Analysiere die Überschriften-Struktur (H1-H6) deiner Website. Finde Hierarchie-Probleme auf einen Blick.">
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Heading-Struktur-Checker",
+      "description": "Kostenloser Heading-Struktur-Checker: Analysiere die Überschriften-Hierarchie (H1-H6) deiner Website und finde SEO-Probleme.",
+      "url": "https://shift07.ai/tools/heading-struktur-checker.html",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR"
+      },
+      "provider": {
+        "@type": "Organization",
+        "name": "Thümmler AI GmbH",
+        "url": "https://shift07.ai"
+      }
+    }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: rgba(15, 23, 42, 0.5); }
+        ::-webkit-scrollbar-thumb { background: rgba(59, 130, 246, 0.5); border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: rgba(59, 130, 246, 0.7); }
+        html { scroll-behavior: smooth; }
+        .glass {
+            background: rgba(255, 255, 255, 0.06);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .heading-tag {
+            font-family: 'Courier New', monospace;
+            font-weight: 700;
+        }
+        .issue-card {
+            border-left: 3px solid;
+        }
+        .issue-error { border-color: #ef4444; background: rgba(239, 68, 68, 0.08); }
+        .issue-warning { border-color: #f59e0b; background: rgba(245, 158, 11, 0.08); }
+        .issue-info { border-color: #3b82f6; background: rgba(59, 130, 246, 0.08); }
+    </style>
+</head>
+<body class="antialiased">
+    <div class="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
+        <!-- Navigation -->
+        <nav class="bg-black/20 backdrop-blur-md border-b border-white/10">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center h-16">
+                    <a href="/" class="flex items-center gap-2">
+                        <img src="../logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                        <span class="text-xl font-bold text-white">Shift07</span>
+                    </a>
+                    <div class="hidden md:flex items-baseline space-x-4">
+                        <a href="/" class="text-white hover:text-blue-300 px-3 py-2 text-sm font-medium transition-colors">SEO-Tool</a>
+                        <a href="/blog/" class="text-white hover:text-blue-300 px-3 py-2 text-sm font-medium transition-colors">Blog</a>
+                        <a href="/tools/" class="text-blue-300 px-3 py-2 text-sm font-medium">Tools</a>
+                        <a href="/app/#/login" class="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:from-blue-600 hover:to-purple-700 transition-all">Anmelden</a>
+                    </div>
+                    <button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="md:hidden text-white">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                    </button>
+                </div>
+                <div id="mobile-menu" class="hidden md:hidden pb-4">
+                    <a href="/" class="block text-white hover:text-blue-300 px-3 py-2 text-sm font-medium">SEO-Tool</a>
+                    <a href="/blog/" class="block text-white hover:text-blue-300 px-3 py-2 text-sm font-medium">Blog</a>
+                    <a href="/tools/" class="block text-blue-300 px-3 py-2 text-sm font-medium">Tools</a>
+                    <a href="/app/#/login" class="block text-white hover:text-blue-300 px-3 py-2 text-sm font-medium">Anmelden</a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero -->
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-6 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">
+                <span class="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Heading-Struktur-Checker</span>
+            </h1>
+            <p class="text-xl text-blue-200/80 max-w-2xl mx-auto">Analysiere die Überschriften-Hierarchie (H1-H6) deiner Website und finde SEO-Probleme sofort.</p>
+        </section>
+
+        <!-- Main Tool -->
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+            <div class="grid lg:grid-cols-2 gap-8">
+                <!-- Input -->
+                <div class="glass rounded-xl p-6 md:p-8">
+                    <h2 class="text-xl font-semibold text-white mb-6">HTML-Code einfügen</h2>
+                    <textarea id="htmlInput" rows="18" class="w-full bg-black/30 border border-white/10 rounded-lg p-4 text-white/90 text-sm font-mono placeholder-white/30 focus:outline-none focus:border-blue-500/50 resize-y" placeholder="Füge hier den HTML-Quellcode deiner Seite ein...
+
+Tipp: Rechtsklick auf deine Seite → &quot;Seitenquelltext anzeigen&quot; → alles kopieren und hier einfügen."></textarea>
+                    <button id="analyzeBtn" onclick="analyzeHeadings()" class="mt-4 w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all flex items-center justify-center gap-2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg>
+                        Headings analysieren
+                    </button>
+                    <div class="mt-4">
+                        <button onclick="loadExample()" class="text-blue-400/70 hover:text-blue-300 text-sm transition-colors">Beispiel laden</button>
+                    </div>
+                </div>
+
+                <!-- Output -->
+                <div>
+                    <!-- Score -->
+                    <div id="scoreSection" class="glass rounded-xl p-6 md:p-8 mb-6 hidden">
+                        <div class="flex items-center justify-between mb-4">
+                            <h2 class="text-xl font-semibold text-white">Ergebnis</h2>
+                            <div id="scoreDisplay" class="flex items-center gap-2"></div>
+                        </div>
+                        <div id="scoreSummary" class="text-blue-200/70 text-sm"></div>
+                    </div>
+
+                    <!-- Heading Tree -->
+                    <div id="treeSection" class="glass rounded-xl p-6 md:p-8 mb-6 hidden">
+                        <h2 class="text-xl font-semibold text-white mb-4">Überschriften-Baum</h2>
+                        <div id="headingTree" class="space-y-1"></div>
+                    </div>
+
+                    <!-- Issues -->
+                    <div id="issuesSection" class="glass rounded-xl p-6 md:p-8 mb-6 hidden">
+                        <h2 class="text-xl font-semibold text-white mb-4">Gefundene Probleme</h2>
+                        <div id="issuesList" class="space-y-3"></div>
+                    </div>
+
+                    <!-- Stats -->
+                    <div id="statsSection" class="glass rounded-xl p-6 md:p-8 mb-6 hidden">
+                        <h2 class="text-xl font-semibold text-white mb-4">Statistiken</h2>
+                        <div id="statsGrid" class="grid grid-cols-3 gap-4"></div>
+                    </div>
+
+                    <!-- Cross-sell -->
+                    <div class="glass rounded-xl p-6 border-blue-500/30 border">
+                        <div class="flex items-start gap-4">
+                            <div class="bg-blue-500/20 rounded-lg p-3 flex-shrink-0">
+                                <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                            </div>
+                            <div>
+                                <h3 class="text-white font-semibold mb-1">Komplette SEO-Analyse gefallig?</h3>
+                                <p class="text-blue-200/70 text-sm mb-3">Headings sind nur ein Faktor. Unser SEO-Tool prüft auch Meta-Tags, Ladezeit, Mobile-Optimierung und mehr.</p>
+                                <a href="/" class="inline-flex items-center text-blue-400 hover:text-blue-300 text-sm font-medium transition-colors">
+                                    Jetzt kostenlos mit Shift07 prüfen
+                                    <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tips Section -->
+            <div class="glass rounded-xl p-6 md:p-8 mt-12">
+                <h2 class="text-2xl font-bold text-white mb-6">Warum ist die Heading-Struktur wichtig für SEO?</h2>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-white/5 rounded-lg p-5">
+                        <h3 class="text-white font-semibold mb-2 flex items-center gap-2">
+                            <span class="text-blue-400">01</span> Genau ein H1-Tag pro Seite
+                        </h3>
+                        <p class="text-blue-200/60 text-sm">Jede Seite sollte genau eine H1-Überschrift haben. Sie ist die Hauptüberschrift und signalisiert Google das Hauptthema der Seite. Mehrere H1-Tags verwässern dieses Signal.</p>
+                    </div>
+                    <div class="bg-white/5 rounded-lg p-5">
+                        <h3 class="text-white font-semibold mb-2 flex items-center gap-2">
+                            <span class="text-blue-400">02</span> Keine Ebenen überspringen
+                        </h3>
+                        <p class="text-blue-200/60 text-sm">Springe nicht von H1 direkt zu H3. Die Hierarchie sollte logisch sein: H1 → H2 → H3. Übersprungene Ebenen verwirren Suchmaschinen und Screenreader gleichermaßen.</p>
+                    </div>
+                    <div class="bg-white/5 rounded-lg p-5">
+                        <h3 class="text-white font-semibold mb-2 flex items-center gap-2">
+                            <span class="text-blue-400">03</span> Keywords in Überschriften
+                        </h3>
+                        <p class="text-blue-200/60 text-sm">Nutze dein Haupt-Keyword in der H1 und verwandte Begriffe in den H2/H3-Überschriften. So erkennt Google sofort, worum es auf deiner Seite geht.</p>
+                    </div>
+                    <div class="bg-white/5 rounded-lg p-5">
+                        <h3 class="text-white font-semibold mb-2 flex items-center gap-2">
+                            <span class="text-blue-400">04</span> Barrierefreiheit (Accessibility)
+                        </h3>
+                        <p class="text-blue-200/60 text-sm">Screenreader nutzen die Heading-Struktur zur Navigation. Eine korrekte Hierarchie macht deine Website für alle Nutzer zugänglich — und das belohnt Google mit besseren Rankings.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Weitere Tools -->
+            <div class="glass rounded-xl p-6 md:p-8 mt-8">
+                <h2 class="text-xl font-bold text-white mb-4">Weitere kostenlose Tools</h2>
+                <div class="grid md:grid-cols-3 gap-4">
+                    <a href="meta-tag-generator.html" class="bg-white/5 rounded-lg p-4 hover:bg-white/10 transition-colors group">
+                        <h3 class="text-white font-semibold mb-1 group-hover:text-blue-400 transition-colors">Meta-Tag-Generator</h3>
+                        <p class="text-blue-200/50 text-sm">Erstelle perfekte Title Tags und Meta Descriptions.</p>
+                    </a>
+                    <a href="robots-txt-generator.html" class="bg-white/5 rounded-lg p-4 hover:bg-white/10 transition-colors group">
+                        <h3 class="text-white font-semibold mb-1 group-hover:text-blue-400 transition-colors">Robots.txt-Generator</h3>
+                        <p class="text-blue-200/50 text-sm">Steuere, welche Seiten Google crawlen darf.</p>
+                    </a>
+                    <a href="open-graph-vorschau.html" class="bg-white/5 rounded-lg p-4 hover:bg-white/10 transition-colors group">
+                        <h3 class="text-white font-semibold mb-1 group-hover:text-blue-400 transition-colors">Open-Graph-Vorschau</h3>
+                        <p class="text-blue-200/50 text-sm">Teste, wie deine Seite auf Social Media aussieht.</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-black/30 backdrop-blur-md border-t border-white/10">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <div class="text-white/60 mb-4 md:mb-0 text-sm">
+                        &copy; 2026 Thümmler AI GmbH. Alle Rechte vorbehalten.
+                    </div>
+                    <div class="flex space-x-6">
+                        <a href="/impressum.html" class="text-gray-300 hover:text-white transition-colors text-sm">Impressum</a>
+                        <a href="/datenschutz.html" class="text-gray-300 hover:text-white transition-colors text-sm">Datenschutz</a>
+                        <a href="/agb.html" class="text-gray-300 hover:text-white transition-colors text-sm">AGB</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        function loadExample() {
+            document.getElementById('htmlInput').value = `<!DOCTYPE html>
+<html lang="de">
+<head><title>Beispiel-Seite</title></head>
+<body>
+  <h1>Willkommen bei Muster GmbH</h1>
+  <h2>Unsere Leistungen</h2>
+  <h3>Webdesign</h3>
+  <h3>SEO-Optimierung</h3>
+  <h4>OnPage-SEO</h4>
+  <h4>OffPage-SEO</h4>
+  <h2>Über uns</h2>
+  <h2>Kontakt</h2>
+  <h1>Noch eine H1 — das ist ein Fehler!</h1>
+  <h4>Übersprungene Ebene — direkt von H2 zu H4</h4>
+  <h3></h3>
+</body>
+</html>`;
+            analyzeHeadings();
+        }
+
+        function analyzeHeadings() {
+            const html = document.getElementById('htmlInput').value.trim();
+            if (!html) return;
+
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(html, 'text/html');
+            const headings = doc.querySelectorAll('h1, h2, h3, h4, h5, h6');
+
+            const headingList = [];
+            headings.forEach(h => {
+                const level = parseInt(h.tagName[1]);
+                const text = h.textContent.trim();
+                headingList.push({ level, text, tag: h.tagName });
+            });
+
+            const issues = findIssues(headingList);
+            const score = calculateScore(headingList, issues);
+
+            renderScore(score, headingList.length, issues.length);
+            renderTree(headingList);
+            renderIssues(issues);
+            renderStats(headingList);
+
+            document.getElementById('scoreSection').classList.remove('hidden');
+            document.getElementById('treeSection').classList.remove('hidden');
+            document.getElementById('issuesSection').classList.remove('hidden');
+            document.getElementById('statsSection').classList.remove('hidden');
+        }
+
+        function findIssues(headings) {
+            const issues = [];
+
+            // Check H1 count
+            const h1Count = headings.filter(h => h.level === 1).length;
+            if (h1Count === 0) {
+                issues.push({ type: 'error', message: 'Kein H1-Tag gefunden', detail: 'Jede Seite braucht genau eine H1-Überschrift als Hauptthema.' });
+            } else if (h1Count > 1) {
+                issues.push({ type: 'error', message: `${h1Count} H1-Tags gefunden (sollte genau 1 sein)`, detail: 'Mehrere H1-Tags verwässern das Hauptthema deiner Seite. Verwende nur ein H1 und stufe die anderen zu H2 herunter.' });
+            }
+
+            // Check for skipped levels
+            for (let i = 1; i < headings.length; i++) {
+                const prev = headings[i - 1].level;
+                const curr = headings[i].level;
+                if (curr > prev + 1) {
+                    const skipped = [];
+                    for (let s = prev + 1; s < curr; s++) skipped.push('H' + s);
+                    issues.push({
+                        type: 'warning',
+                        message: `Übersprungene Ebene: H${prev} → H${curr}`,
+                        detail: `Nach "${headings[i-1].text || '(leer)'}" (H${prev}) kommt direkt "${headings[i].text || '(leer)'}" (H${curr}). Es fehlt: ${skipped.join(', ')}.`
+                    });
+                }
+            }
+
+            // Check first heading not H1
+            if (headings.length > 0 && headings[0].level !== 1) {
+                issues.push({ type: 'warning', message: `Erste Überschrift ist H${headings[0].level} statt H1`, detail: 'Die erste Überschrift auf der Seite sollte ein H1-Tag sein.' });
+            }
+
+            // Check empty headings
+            headings.forEach((h, i) => {
+                if (!h.text) {
+                    issues.push({ type: 'warning', message: `Leeres ${h.tag}-Tag (Heading #${i + 1})`, detail: 'Leere Überschriften verwirren Suchmaschinen und Screenreader. Füge Text hinzu oder entferne das Tag.' });
+                }
+            });
+
+            // Check very long headings
+            headings.forEach((h, i) => {
+                if (h.text.length > 100) {
+                    issues.push({ type: 'info', message: `${h.tag} ist sehr lang (${h.text.length} Zeichen)`, detail: `"${h.text.substring(0, 60)}..." — Überschriften sollten prägnant sein (unter 70 Zeichen optimal).` });
+                }
+            });
+
+            // Check no headings at all
+            if (headings.length === 0) {
+                issues.push({ type: 'error', message: 'Keine Überschriften gefunden', detail: 'Der HTML-Code enthält keine Heading-Tags (H1-H6). Überschriften sind essenziell für SEO und Barrierefreiheit.' });
+            }
+
+            return issues;
+        }
+
+        function calculateScore(headings, issues) {
+            if (headings.length === 0) return 0;
+            let score = 100;
+            issues.forEach(issue => {
+                if (issue.type === 'error') score -= 25;
+                else if (issue.type === 'warning') score -= 10;
+                else if (issue.type === 'info') score -= 5;
+            });
+            return Math.max(0, Math.min(100, score));
+        }
+
+        function renderScore(score, headingCount, issueCount) {
+            const display = document.getElementById('scoreDisplay');
+            const summary = document.getElementById('scoreSummary');
+
+            let color, label;
+            if (score >= 80) { color = 'text-green-400'; label = 'Gut'; }
+            else if (score >= 50) { color = 'text-yellow-400'; label = 'Verbesserungsbedarf'; }
+            else { color = 'text-red-400'; label = 'Kritisch'; }
+
+            display.innerHTML = `<span class="text-3xl font-bold ${color}">${score}</span><span class="text-white/50 text-sm">/100</span>`;
+            summary.innerHTML = `${headingCount} Überschrift${headingCount !== 1 ? 'en' : ''} gefunden, ${issueCount} Problem${issueCount !== 1 ? 'e' : ''} erkannt. <span class="${color} font-medium">${label}</span>`;
+        }
+
+        function renderTree(headings) {
+            const tree = document.getElementById('headingTree');
+            if (headings.length === 0) {
+                tree.innerHTML = '<p class="text-white/40 text-sm">Keine Überschriften gefunden.</p>';
+                return;
+            }
+
+            const levelColors = {
+                1: 'text-blue-400 bg-blue-400/10 border-blue-400/30',
+                2: 'text-indigo-400 bg-indigo-400/10 border-indigo-400/30',
+                3: 'text-purple-400 bg-purple-400/10 border-purple-400/30',
+                4: 'text-pink-400 bg-pink-400/10 border-pink-400/30',
+                5: 'text-orange-400 bg-orange-400/10 border-orange-400/30',
+                6: 'text-yellow-400 bg-yellow-400/10 border-yellow-400/30'
+            };
+
+            let html = '';
+            headings.forEach(h => {
+                const indent = (h.level - 1) * 1.5;
+                const colors = levelColors[h.level];
+                const displayText = h.text || '<span class="italic text-white/30">(leer)</span>';
+                html += `<div class="flex items-start gap-2" style="padding-left: ${indent}rem;">
+                    <span class="heading-tag text-xs px-2 py-0.5 rounded border ${colors} flex-shrink-0 mt-0.5">${h.tag}</span>
+                    <span class="text-white/80 text-sm">${displayText}</span>
+                </div>`;
+            });
+            tree.innerHTML = html;
+        }
+
+        function renderIssues(issues) {
+            const list = document.getElementById('issuesList');
+            if (issues.length === 0) {
+                list.innerHTML = '<div class="flex items-center gap-3 text-green-400"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg><span class="text-sm font-medium">Keine Probleme gefunden! Die Heading-Struktur ist korrekt.</span></div>';
+                return;
+            }
+
+            const icons = {
+                error: '<svg class="w-5 h-5 text-red-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>',
+                warning: '<svg class="w-5 h-5 text-yellow-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4.5c-.77-.833-1.964-.833-2.732 0L3.232 16.5c-.77.833.192 2.5 1.732 2.5z"/></svg>',
+                info: '<svg class="w-5 h-5 text-blue-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>'
+            };
+
+            list.innerHTML = issues.map(issue => `
+                <div class="issue-card issue-${issue.type} rounded-lg p-4">
+                    <div class="flex items-start gap-3">
+                        ${icons[issue.type]}
+                        <div>
+                            <p class="text-white text-sm font-medium">${issue.message}</p>
+                            <p class="text-white/50 text-xs mt-1">${issue.detail}</p>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function renderStats(headings) {
+            const grid = document.getElementById('statsGrid');
+            const counts = { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0 };
+            headings.forEach(h => counts[h.level]++);
+
+            const levelColors = {
+                1: 'text-blue-400',
+                2: 'text-indigo-400',
+                3: 'text-purple-400',
+                4: 'text-pink-400',
+                5: 'text-orange-400',
+                6: 'text-yellow-400'
+            };
+
+            grid.innerHTML = Object.entries(counts)
+                .filter(([, count]) => count > 0)
+                .map(([level, count]) => `
+                    <div class="bg-white/5 rounded-lg p-3 text-center">
+                        <div class="heading-tag ${levelColors[level]} text-lg mb-1">H${level}</div>
+                        <div class="text-white text-2xl font-bold">${count}</div>
+                    </div>
+                `).join('');
+
+            if (grid.innerHTML === '') {
+                grid.innerHTML = '<div class="col-span-3 text-white/40 text-sm text-center">Keine Daten</div>';
+            }
+        }
+    </script>
+</body>
+</html>
