@@ -460,7 +460,7 @@
                     </div>
                     <div>
                         <h3 class="text-blue-300 font-semibold mb-2">Warum Open Graph wichtig ist</h3>
-                        <p class="text-white/70 text-sm">Ohne OG-Tags wahlen Plattformen selbst Titel und Bild — oft schlecht. Mit OG-Tags kontrollierst du, wie dein Link geteilt aussieht und steigerst die Klickrate.</p>
+                        <p class="text-white/70 text-sm">Ohne OG-Tags wahlen Plattformen selbst Titel und Bild - oft schlecht. Mit OG-Tags kontrollierst du, wie dein Link geteilt aussieht und steigerst die Klickrate.</p>
                     </div>
                 </div>
             </div>
@@ -581,38 +581,38 @@
 
             // Title
             if (!title) {
-                checks.push({ ok: false, text: 'og:title fehlt — wird dringend empfohlen' });
+                checks.push({ ok: false, text: 'og:title fehlt - wird dringend empfohlen' });
             } else if (title.length > 60) {
-                checks.push({ ok: false, text: `og:title ist ${title.length} Zeichen lang — Facebook schneidet nach ~60 ab` });
+                checks.push({ ok: false, text: `og:title ist ${title.length} Zeichen lang - Facebook schneidet nach ~60 ab` });
             } else {
-                checks.push({ ok: true, text: `og:title ist ${title.length} Zeichen — gute Länge` });
+                checks.push({ ok: true, text: `og:title ist ${title.length} Zeichen - gute Länge` });
             }
 
             // Description
             if (!desc) {
-                checks.push({ ok: false, text: 'og:description fehlt — wird empfohlen' });
+                checks.push({ ok: false, text: 'og:description fehlt - wird empfohlen' });
             } else if (desc.length > 200) {
-                checks.push({ ok: false, text: `og:description ist ${desc.length} Zeichen — kürze auf unter 200` });
+                checks.push({ ok: false, text: `og:description ist ${desc.length} Zeichen - kürze auf unter 200` });
             } else if (desc.length < 50) {
-                checks.push({ ok: false, text: `og:description ist nur ${desc.length} Zeichen — mehr Details helfen` });
+                checks.push({ ok: false, text: `og:description ist nur ${desc.length} Zeichen - mehr Details helfen` });
             } else {
-                checks.push({ ok: true, text: `og:description ist ${desc.length} Zeichen — gute Länge` });
+                checks.push({ ok: true, text: `og:description ist ${desc.length} Zeichen - gute Länge` });
             }
 
             // URL
             if (!url) {
-                checks.push({ ok: false, text: 'og:url fehlt — empfohlen für korrektes Sharing' });
+                checks.push({ ok: false, text: 'og:url fehlt - empfohlen für korrektes Sharing' });
             } else if (!url.startsWith('https://')) {
-                checks.push({ ok: false, text: 'og:url nutzt kein HTTPS — Social-Media-Plattformen bevorzugen HTTPS' });
+                checks.push({ ok: false, text: 'og:url nutzt kein HTTPS - Social-Media-Plattformen bevorzugen HTTPS' });
             } else {
                 checks.push({ ok: true, text: 'og:url ist gesetzt und nutzt HTTPS' });
             }
 
             // Image
             if (!image) {
-                checks.push({ ok: false, text: 'og:image fehlt — ohne Bild werden Links selten geklickt' });
+                checks.push({ ok: false, text: 'og:image fehlt - ohne Bild werden Links selten geklickt' });
             } else if (!image.startsWith('https://')) {
-                checks.push({ ok: false, text: 'og:image nutzt kein HTTPS — einige Plattformen blockieren HTTP-Bilder' });
+                checks.push({ ok: false, text: 'og:image nutzt kein HTTPS - einige Plattformen blockieren HTTP-Bilder' });
             } else {
                 checks.push({ ok: true, text: 'og:image ist gesetzt und nutzt HTTPS' });
             }

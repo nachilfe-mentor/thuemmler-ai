@@ -221,7 +221,7 @@ Tipp: Rechtsklick auf deine Seite → &quot;Seitenquelltext anzeigen&quot; → a
                         <h3 class="text-white font-semibold mb-2 flex items-center gap-2">
                             <span class="text-blue-400">04</span> Barrierefreiheit (Accessibility)
                         </h3>
-                        <p class="text-blue-200/60 text-sm">Screenreader nutzen die Heading-Struktur zur Navigation. Eine korrekte Hierarchie macht deine Website für alle Nutzer zugänglich — und das belohnt Google mit besseren Rankings.</p>
+                        <p class="text-blue-200/60 text-sm">Screenreader nutzen die Heading-Struktur zur Navigation. Eine korrekte Hierarchie macht deine Website für alle Nutzer zugänglich - und das belohnt Google mit besseren Rankings.</p>
                     </div>
                 </div>
             </div>
@@ -277,8 +277,8 @@ Tipp: Rechtsklick auf deine Seite → &quot;Seitenquelltext anzeigen&quot; → a
   <h4>OffPage-SEO</h4>
   <h2>Über uns</h2>
   <h2>Kontakt</h2>
-  <h1>Noch eine H1 — das ist ein Fehler!</h1>
-  <h4>Übersprungene Ebene — direkt von H2 zu H4</h4>
+  <h1>Noch eine H1 - das ist ein Fehler!</h1>
+  <h4>Übersprungene Ebene - direkt von H2 zu H4</h4>
   <h3></h3>
 </body>
 </html>`;
@@ -355,7 +355,7 @@ Tipp: Rechtsklick auf deine Seite → &quot;Seitenquelltext anzeigen&quot; → a
             // Check very long headings
             headings.forEach((h, i) => {
                 if (h.text.length > 100) {
-                    issues.push({ type: 'info', message: `${h.tag} ist sehr lang (${h.text.length} Zeichen)`, detail: `"${h.text.substring(0, 60)}..." — Überschriften sollten prägnant sein (unter 70 Zeichen optimal).` });
+                    issues.push({ type: 'info', message: `${h.tag} ist sehr lang (${h.text.length} Zeichen)`, detail: `"${h.text.substring(0, 60)}..." - Überschriften sollten prägnant sein (unter 70 Zeichen optimal).` });
                 }
             });
 

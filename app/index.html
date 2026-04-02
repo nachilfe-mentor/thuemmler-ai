@@ -1463,12 +1463,12 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
             <div class="glass rounded-2xl p-6 text-center">
                 <p class="text-sm text-slate-400 mb-3">Analyse A</p>
-                <p class="text-xs text-slate-500 truncate mb-4">${escapeHtml(truncateUrl(a.url, 40))} &mdash; ${formatDate(a.created_at)}</p>
+                <p class="text-xs text-slate-500 truncate mb-4">${escapeHtml(truncateUrl(a.url, 40))} - ${formatDate(a.created_at)}</p>
                 ${buildScoreCircleSVG(scoreA, 100, 8)}
             </div>
             <div class="glass rounded-2xl p-6 text-center">
                 <p class="text-sm text-slate-400 mb-3">Analyse B</p>
-                <p class="text-xs text-slate-500 truncate mb-4">${escapeHtml(truncateUrl(b.url, 40))} &mdash; ${formatDate(b.created_at)}</p>
+                <p class="text-xs text-slate-500 truncate mb-4">${escapeHtml(truncateUrl(b.url, 40))} - ${formatDate(b.created_at)}</p>
                 ${buildScoreCircleSVG(scoreB, 100, 8)}
             </div>
         </div>
