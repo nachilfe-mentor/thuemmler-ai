@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K1S1RXBDS8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K1S1RXBDS8');
+    </script>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8475857002943858" crossorigin="anonymous"></script>
+    <title>Farbkontrast-Prüfer - WCAG Kontrast kostenlos testen | Shift07</title>
+    <meta name="description" content="Prüfe den Farbkontrast deiner Website kostenlos nach WCAG 2.1 Richtlinien. Teste ob deine Text- und Hintergrundfarben die Mindestanforderungen für Barrierefreiheit erfüllen.">
+    <meta name="keywords" content="Farbkontrast prüfen, WCAG Kontrast, Contrast Checker, Barrierefreiheit testen, Kontrastverhältnis berechnen, Color Contrast, Accessibility, Web Zugänglichkeit">
+    <meta name="author" content="Thümmler AI GmbH">
+    <link rel="icon" type="image/png" href="../logo.png">
+    <link rel="canonical" href="https://shift07.ai/tools/farbkontrast-pruefer.html">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Farbkontrast-Prüfer - WCAG Kontrast kostenlos testen">
+    <meta property="og:description" content="Prüfe den Farbkontrast deiner Website kostenlos nach WCAG 2.1. Teste ob deine Farben barrierefrei sind.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://shift07.ai/tools/farbkontrast-pruefer.html">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="Shift07">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Farbkontrast-Prüfer - WCAG Kontrast kostenlos testen">
+    <meta name="twitter:description" content="Prüfe den Farbkontrast deiner Website kostenlos nach WCAG 2.1 Richtlinien.">
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Farbkontrast-Prüfer",
+      "description": "Kostenloser Farbkontrast-Prüfer nach WCAG 2.1: Teste ob deine Text- und Hintergrundfarben die Mindestanforderungen für Barrierefreiheit erfüllen.",
+      "url": "https://shift07.ai/tools/farbkontrast-pruefer.html",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR"
+      },
+      "provider": {
+        "@type": "Organization",
+        "name": "Thümmler AI GmbH",
+        "url": "https://shift07.ai"
+      }
+    }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: rgba(15, 23, 42, 0.5); }
+        ::-webkit-scrollbar-thumb { background: rgba(59, 130, 246, 0.5); border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: rgba(59, 130, 246, 0.7); }
+        html { scroll-behavior: smooth; }
+        .glass {
+            background: rgba(255, 255, 255, 0.06);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .color-input-wrapper {
+            position: relative;
+        }
+        .color-input-wrapper input[type="color"] {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            cursor: pointer;
+        }
+        .result-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.375rem;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+        .badge-pass { background: rgba(34, 197, 94, 0.15); color: #4ade80; border: 1px solid rgba(34, 197, 94, 0.3); }
+        .badge-fail { background: rgba(239, 68, 68, 0.15); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.3); }
+    </style>
+</head>
+<body class="antialiased">
+    <div class="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
+        <!-- Navigation -->
+        <nav class="bg-black/20 backdrop-blur-md border-b border-white/10">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center h-16">
+                    <a href="/" class="flex items-center gap-2">
+                        <img src="../logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                        <span class="text-xl font-bold text-white">Shift07</span>
+                    </a>
+                    <div class="hidden md:flex items-baseline space-x-4">
+                        <a href="/" class="text-white hover:text-blue-300 px-3 py-2 text-sm font-medium transition-colors">SEO-Tool</a>
+                        <a href="/blog/" class="text-white hover:text-blue-300 px-3 py-2 text-sm font-medium transition-colors">Blog</a>
+                        <a href="/tools/" class="text-blue-300 px-3 py-2 text-sm font-medium">Tools</a>
+                        <a href="/app/#/login" class="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:from-blue-600 hover:to-purple-700 transition-all">Anmelden</a>
+                    </div>
+                    <button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="md:hidden text-white">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                    </button>
+                </div>
+                <div id="mobile-menu" class="hidden md:hidden pb-4">
+                    <a href="/" class="block text-white hover:text-blue-300 px-3 py-2 text-sm font-medium">SEO-Tool</a>
+                    <a href="/blog/" class="block text-white hover:text-blue-300 px-3 py-2 text-sm font-medium">Blog</a>
+                    <a href="/tools/" class="block text-blue-300 px-3 py-2 text-sm font-medium">Tools</a>
+                    <a href="/app/#/login" class="block text-white hover:text-blue-300 px-3 py-2 text-sm font-medium">Anmelden</a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero -->
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-6 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">
+                <span class="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Farbkontrast-Prüfer</span>
+            </h1>
+            <p class="text-xl text-blue-200/80 max-w-2xl mx-auto">Teste ob deine Farben die WCAG 2.1 Richtlinien für Barrierefreiheit erfüllen. Kostenlos und sofort.</p>
+        </section>
+
+        <!-- Main Tool -->
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+            <div class="grid lg:grid-cols-2 gap-8">
+                <!-- Input -->
+                <div class="glass rounded-xl p-6 md:p-8">
+                    <h2 class="text-xl font-semibold text-white mb-6">Farben wählen</h2>
+
+                    <!-- Textfarbe -->
+                    <div class="mb-6">
+                        <label class="block text-blue-200/80 text-sm font-medium mb-2">Textfarbe (Vordergrund)</label>
+                        <div class="flex items-center gap-3">
+                            <div class="color-input-wrapper w-12 h-12 rounded-lg border border-white/20 overflow-hidden flex-shrink-0">
+                                <div id="fgPreview" class="w-full h-full" style="background:#000000;"></div>
+                                <input type="color" id="fgColorPicker" value="#000000" onchange="updateFromPicker('fg')">
+                            </div>
+                            <input type="text" id="fgHex" value="#000000" maxlength="7" class="flex-1 bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white font-mono text-sm focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500" oninput="updateFromHex('fg')">
+                        </div>
+                    </div>
+
+                    <!-- Swap Button -->
+                    <div class="flex justify-center my-4">
+                        <button onclick="swapColors()" class="bg-white/10 hover:bg-white/20 border border-white/20 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16V4m0 0L3 8m4-4l4 4m6 0v12m0 0l4-4m-4 4l-4-4"/></svg>
+                            Farben tauschen
+                        </button>
+                    </div>
+
+                    <!-- Hintergrundfarbe -->
+                    <div class="mb-6">
+                        <label class="block text-blue-200/80 text-sm font-medium mb-2">Hintergrundfarbe</label>
+                        <div class="flex items-center gap-3">
+                            <div class="color-input-wrapper w-12 h-12 rounded-lg border border-white/20 overflow-hidden flex-shrink-0">
+                                <div id="bgPreview" class="w-full h-full" style="background:#FFFFFF;"></div>
+                                <input type="color" id="bgColorPicker" value="#FFFFFF" onchange="updateFromPicker('bg')">
+                            </div>
+                            <input type="text" id="bgHex" value="#FFFFFF" maxlength="7" class="flex-1 bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white font-mono text-sm focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500" oninput="updateFromHex('bg')">
+                        </div>
+                    </div>
+
+                    <!-- Schnellbeispiele -->
+                    <div class="mt-6">
+                        <label class="block text-blue-200/80 text-sm font-medium mb-3">Schnellbeispiele</label>
+                        <div class="grid grid-cols-2 gap-2">
+                            <button onclick="setColors('#000000','#FFFFFF')" class="bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-3 py-2 text-sm text-white/70 transition-all text-left">
+                                <span class="inline-block w-3 h-3 rounded-full mr-1" style="background:#000"></span>
+                                <span class="inline-block w-3 h-3 rounded-full mr-2" style="background:#FFF;border:1px solid #666"></span>
+                                Schwarz auf Weiß
+                            </button>
+                            <button onclick="setColors('#FFFFFF','#1E40AF')" class="bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-3 py-2 text-sm text-white/70 transition-all text-left">
+                                <span class="inline-block w-3 h-3 rounded-full mr-1" style="background:#FFF;border:1px solid #666"></span>
+                                <span class="inline-block w-3 h-3 rounded-full mr-2" style="background:#1E40AF"></span>
+                                Weiß auf Blau
+                            </button>
+                            <button onclick="setColors('#6B7280','#FFFFFF')" class="bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-3 py-2 text-sm text-white/70 transition-all text-left">
+                                <span class="inline-block w-3 h-3 rounded-full mr-1" style="background:#6B7280"></span>
+                                <span class="inline-block w-3 h-3 rounded-full mr-2" style="background:#FFF;border:1px solid #666"></span>
+                                Grau auf Weiß
+                            </button>
+                            <button onclick="setColors('#DC2626','#FEE2E2')" class="bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-3 py-2 text-sm text-white/70 transition-all text-left">
+                                <span class="inline-block w-3 h-3 rounded-full mr-1" style="background:#DC2626"></span>
+                                <span class="inline-block w-3 h-3 rounded-full mr-2" style="background:#FEE2E2"></span>
+                                Rot auf Hellrot
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Output -->
+                <div>
+                    <!-- Live Preview -->
+                    <div id="livePreview" class="rounded-xl p-8 mb-6 border border-white/10" style="background:#FFFFFF;">
+                        <p style="color:#000000;font-size:24px;font-weight:700;margin-bottom:8px;" id="previewLarge">Große Überschrift (24px)</p>
+                        <p style="color:#000000;font-size:18px;font-weight:700;margin-bottom:8px;" id="previewMedium">Großer Text / Fettschrift (18px bold)</p>
+                        <p style="color:#000000;font-size:16px;margin-bottom:8px;" id="previewNormal">Normaler Fließtext auf deiner Website (16px)</p>
+                        <p style="color:#000000;font-size:14px;" id="previewSmall">Kleiner Text, z.B. Fußnoten oder Disclaimers (14px)</p>
+                    </div>
+
+                    <!-- Ratio & Results -->
+                    <div class="glass rounded-xl p-6 md:p-8 mb-6">
+                        <div class="text-center mb-6">
+                            <div class="text-blue-200/60 text-sm mb-1">Kontrastverhältnis</div>
+                            <div id="ratioDisplay" class="text-5xl font-bold text-white">21 : 1</div>
+                        </div>
+
+                        <!-- WCAG Results Grid -->
+                        <div class="grid grid-cols-2 gap-3">
+                            <div class="bg-white/5 rounded-lg p-4">
+                                <div class="text-blue-200/60 text-xs mb-2 uppercase tracking-wide">AA Normaler Text</div>
+                                <div class="text-sm text-white/70 mb-1">Min. 4.5 : 1</div>
+                                <div id="aaNormal"></div>
+                            </div>
+                            <div class="bg-white/5 rounded-lg p-4">
+                                <div class="text-blue-200/60 text-xs mb-2 uppercase tracking-wide">AA Großer Text</div>
+                                <div class="text-sm text-white/70 mb-1">Min. 3 : 1</div>
+                                <div id="aaLarge"></div>
+                            </div>
+                            <div class="bg-white/5 rounded-lg p-4">
+                                <div class="text-blue-200/60 text-xs mb-2 uppercase tracking-wide">AAA Normaler Text</div>
+                                <div class="text-sm text-white/70 mb-1">Min. 7 : 1</div>
+                                <div id="aaaNormal"></div>
+                            </div>
+                            <div class="bg-white/5 rounded-lg p-4">
+                                <div class="text-blue-200/60 text-xs mb-2 uppercase tracking-wide">AAA Großer Text</div>
+                                <div class="text-sm text-white/70 mb-1">Min. 4.5 : 1</div>
+                                <div id="aaaLarge"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cross-sell -->
+                    <div class="glass rounded-xl p-6 border-blue-500/30 border">
+                        <div class="flex items-start gap-4">
+                            <div class="bg-blue-500/20 rounded-lg p-3 flex-shrink-0">
+                                <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                            </div>
+                            <div>
+                                <h3 class="text-white font-semibold mb-1">Deine Website komplett prüfen?</h3>
+                                <p class="text-blue-200/70 text-sm mb-3">Kontrast ist nur ein Aspekt. Unser SEO-Tool prüft auch Meta-Tags, Ladezeit, Mobile-Optimierung, Überschriften und mehr — alles in einer Analyse.</p>
+                                <a href="/" class="inline-flex items-center text-blue-400 hover:text-blue-300 text-sm font-medium transition-colors">
+                                    Jetzt kostenlos mit Shift07 prüfen
+                                    <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tips Section -->
+            <div class="glass rounded-xl p-6 md:p-8 mt-12">
+                <h2 class="text-2xl font-bold text-white mb-6">Was du über Farbkontrast und WCAG wissen musst</h2>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-white/5 rounded-lg p-5">
+                        <h3 class="text-white font-semibold mb-2 flex items-center gap-2">
+                            <span class="text-blue-400">01</span> Was ist WCAG?
+                        </h3>
+                        <p class="text-blue-200/60 text-sm">Die Web Content Accessibility Guidelines (WCAG) sind internationale Richtlinien für barrierefreie Websites. Sie definieren Mindestanforderungen für den Farbkontrast zwischen Text und Hintergrund, damit alle Menschen — auch mit Sehbeeinträchtigungen — Inhalte lesen können.</p>
+                    </div>
+                    <div class="bg-white/5 rounded-lg p-5">
+                        <h3 class="text-white font-semibold mb-2 flex items-center gap-2">
+                            <span class="text-blue-400">02</span> AA vs. AAA — der Unterschied
+                        </h3>
+                        <p class="text-blue-200/60 text-sm"><strong class="text-white/80">AA</strong> ist der empfohlene Standard und gesetzlich oft gefordert (z.B. BITV 2.0 in Deutschland). Normaler Text braucht 4.5:1, großer Text 3:1. <strong class="text-white/80">AAA</strong> ist der höchste Standard (7:1 bzw. 4.5:1) — empfohlen für besonders barrierefreie Seiten.</p>
+                    </div>
+                    <div class="bg-white/5 rounded-lg p-5">
+                        <h3 class="text-white font-semibold mb-2 flex items-center gap-2">
+                            <span class="text-blue-400">03</span> Was zählt als großer Text?
+                        </h3>
+                        <p class="text-blue-200/60 text-sm">Großer Text ist mindestens 18pt (24px) regulär oder 14pt (18.66px) fett. Für diesen gelten niedrigere Kontrastanforderungen, weil er auch bei geringerem Kontrast gut lesbar bleibt. Überschriften fallen fast immer in diese Kategorie.</p>
+                    </div>
+                    <div class="bg-white/5 rounded-lg p-5">
+                        <h3 class="text-white font-semibold mb-2 flex items-center gap-2">
+                            <span class="text-blue-400">04</span> Warum ist Kontrast auch SEO-relevant?
+                        </h3>
+                        <p class="text-blue-200/60 text-sm">Google bewertet Nutzerfreundlichkeit als Ranking-Faktor. Schlecht lesbarer Text erhöht die Absprungrate und senkt die Verweildauer. Barrierefreie Websites bieten eine bessere User Experience — und das belohnt Google mit besseren Rankings.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Weitere Tools -->
+            <div class="glass rounded-xl p-6 md:p-8 mt-8">
+                <h2 class="text-xl font-bold text-white mb-4">Weitere kostenlose Tools</h2>
+                <div class="grid md:grid-cols-3 gap-4">
+                    <a href="meta-tag-generator.html" class="bg-white/5 rounded-lg p-4 hover:bg-white/10 transition-colors group">
+                        <h3 class="text-white font-semibold mb-1 group-hover:text-blue-400 transition-colors">Meta-Tag-Generator</h3>
+                        <p class="text-blue-200/50 text-sm">Erstelle perfekte Title Tags und Meta Descriptions.</p>
+                    </a>
+                    <a href="heading-struktur-checker.html" class="bg-white/5 rounded-lg p-4 hover:bg-white/10 transition-colors group">
+                        <h3 class="text-white font-semibold mb-1 group-hover:text-blue-400 transition-colors">Heading-Struktur-Checker</h3>
+                        <p class="text-blue-200/50 text-sm">Analysiere die Überschriften-Hierarchie deiner Seite.</p>
+                    </a>
+                    <a href="open-graph-vorschau.html" class="bg-white/5 rounded-lg p-4 hover:bg-white/10 transition-colors group">
+                        <h3 class="text-white font-semibold mb-1 group-hover:text-blue-400 transition-colors">Open-Graph-Vorschau</h3>
+                        <p class="text-blue-200/50 text-sm">Teste, wie deine Seite auf Social Media aussieht.</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-black/30 backdrop-blur-md border-t border-white/10">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <div class="text-white/60 mb-4 md:mb-0 text-sm">
+                        &copy; 2026 Thümmler AI GmbH. Alle Rechte vorbehalten.
+                    </div>
+                    <div class="flex space-x-6">
+                        <a href="/impressum.html" class="text-gray-300 hover:text-white transition-colors text-sm">Impressum</a>
+                        <a href="/datenschutz.html" class="text-gray-300 hover:text-white transition-colors text-sm">Datenschutz</a>
+                        <a href="/agb.html" class="text-gray-300 hover:text-white transition-colors text-sm">AGB</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // --- WCAG Contrast Ratio Calculation ---
+        function hexToRgb(hex) {
+            hex = hex.replace('#', '');
+            if (hex.length === 3) hex = hex[0]+hex[0]+hex[1]+hex[1]+hex[2]+hex[2];
+            const num = parseInt(hex, 16);
+            return { r: (num >> 16) & 255, g: (num >> 8) & 255, b: num & 255 };
+        }
+
+        function relativeLuminance(rgb) {
+            const [rs, gs, bs] = [rgb.r / 255, rgb.g / 255, rgb.b / 255];
+            const r = rs <= 0.03928 ? rs / 12.92 : Math.pow((rs + 0.055) / 1.055, 2.4);
+            const g = gs <= 0.03928 ? gs / 12.92 : Math.pow((gs + 0.055) / 1.055, 2.4);
+            const b = bs <= 0.03928 ? bs / 12.92 : Math.pow((bs + 0.055) / 1.055, 2.4);
+            return 0.2126 * r + 0.7152 * g + 0.0722 * b;
+        }
+
+        function contrastRatio(hex1, hex2) {
+            const l1 = relativeLuminance(hexToRgb(hex1));
+            const l2 = relativeLuminance(hexToRgb(hex2));
+            const lighter = Math.max(l1, l2);
+            const darker = Math.min(l1, l2);
+            return (lighter + 0.05) / (darker + 0.05);
+        }
+
+        function isValidHex(hex) {
+            return /^#([0-9A-Fa-f]{3}|[0-9A-Fa-f]{6})$/.test(hex);
+        }
+
+        // --- UI Updates ---
+        function updateFromPicker(type) {
+            const color = document.getElementById(type + 'ColorPicker').value;
+            document.getElementById(type + 'Hex').value = color.toUpperCase();
+            document.getElementById(type + 'Preview').style.background = color;
+            calculate();
+        }
+
+        function updateFromHex(type) {
+            let hex = document.getElementById(type + 'Hex').value.trim();
+            if (!hex.startsWith('#')) hex = '#' + hex;
+            if (isValidHex(hex)) {
+                document.getElementById(type + 'ColorPicker').value = hex.length === 4
+                    ? '#' + hex[1]+hex[1]+hex[2]+hex[2]+hex[3]+hex[3]
+                    : hex;
+                document.getElementById(type + 'Preview').style.background = hex;
+                calculate();
+            }
+        }
+
+        function setColors(fg, bg) {
+            document.getElementById('fgHex').value = fg;
+            document.getElementById('bgHex').value = bg;
+            document.getElementById('fgColorPicker').value = fg;
+            document.getElementById('bgColorPicker').value = bg;
+            document.getElementById('fgPreview').style.background = fg;
+            document.getElementById('bgPreview').style.background = bg;
+            calculate();
+        }
+
+        function swapColors() {
+            const fg = document.getElementById('fgHex').value;
+            const bg = document.getElementById('bgHex').value;
+            setColors(bg, fg);
+        }
+
+        function badgeHtml(pass) {
+            if (pass) {
+                return '<span class="result-badge badge-pass"><svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>Bestanden</span>';
+            }
+            return '<span class="result-badge badge-fail"><svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"/></svg>Nicht bestanden</span>';
+        }
+
+        function calculate() {
+            const fg = document.getElementById('fgHex').value.trim();
+            const bg = document.getElementById('bgHex').value.trim();
+
+            if (!isValidHex(fg) || !isValidHex(bg)) return;
+
+            const ratio = contrastRatio(fg, bg);
+            const rounded = Math.round(ratio * 100) / 100;
+
+            // Display ratio
+            document.getElementById('ratioDisplay').textContent = rounded.toFixed(2) + ' : 1';
+
+            // Color the ratio
+            const ratioEl = document.getElementById('ratioDisplay');
+            if (ratio >= 7) ratioEl.className = 'text-5xl font-bold text-green-400';
+            else if (ratio >= 4.5) ratioEl.className = 'text-5xl font-bold text-yellow-400';
+            else ratioEl.className = 'text-5xl font-bold text-red-400';
+
+            // WCAG checks
+            document.getElementById('aaNormal').innerHTML = badgeHtml(ratio >= 4.5);
+            document.getElementById('aaLarge').innerHTML = badgeHtml(ratio >= 3);
+            document.getElementById('aaaNormal').innerHTML = badgeHtml(ratio >= 7);
+            document.getElementById('aaaLarge').innerHTML = badgeHtml(ratio >= 4.5);
+
+            // Update live preview
+            document.getElementById('livePreview').style.background = bg;
+            document.getElementById('previewLarge').style.color = fg;
+            document.getElementById('previewMedium').style.color = fg;
+            document.getElementById('previewNormal').style.color = fg;
+            document.getElementById('previewSmall').style.color = fg;
+        }
+
+        // Init
+        calculate();
+    </script>
+</body>
+</html>
