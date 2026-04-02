@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K1S1RXBDS8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K1S1RXBDS8');
+    </script>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8475857002943858" crossorigin="anonymous"></script>
+    <title>QR-Code-Generator - Kostenlos QR-Codes erstellen | Shift07</title>
+    <meta name="description" content="Erstelle kostenlose QR-Codes fur URLs, Texte, WLAN-Zugange, E-Mails und Telefonnummern. Sofort als PNG herunterladen — ohne Anmeldung.">
+    <meta name="keywords" content="QR Code Generator, QR Code erstellen, kostenlos, WLAN QR Code, URL QR Code, Visitenkarte QR Code, QR Code herunterladen">
+    <meta name="author" content="Thuemmler AI GmbH">
+    <link rel="icon" type="image/png" href="../logo.png">
+    <link rel="canonical" href="https://shift07.ai/tools/qr-code-generator.html">
+    <!-- Open Graph -->
+    <meta property="og:title" content="QR-Code-Generator - Kostenlos QR-Codes erstellen">
+    <meta property="og:description" content="Erstelle kostenlose QR-Codes fur URLs, Texte, WLAN, E-Mails und mehr. Sofort als PNG herunterladen.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://shift07.ai/tools/qr-code-generator.html">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="Shift07">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="QR-Code-Generator - Kostenlos QR-Codes erstellen">
+    <meta name="twitter:description" content="Erstelle kostenlose QR-Codes fur URLs, Texte, WLAN und mehr. Ohne Anmeldung.">
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "QR-Code-Generator",
+      "description": "Kostenloser QR-Code-Generator: Erstelle QR-Codes fur URLs, Texte, WLAN-Zugange, E-Mails und Telefonnummern. Sofort als PNG herunterladen.",
+      "url": "https://shift07.ai/tools/qr-code-generator.html",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR"
+      },
+      "provider": {
+        "@type": "Organization",
+        "name": "Thuemmler AI GmbH",
+        "url": "https://shift07.ai"
+      }
+    }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: rgba(15, 23, 42, 0.5); }
+        ::-webkit-scrollbar-thumb { background: rgba(59, 130, 246, 0.5); border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: rgba(59, 130, 246, 0.7); }
+        html { scroll-behavior: smooth; }
+        .glass {
+            background: rgba(255, 255, 255, 0.06);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .tab-active {
+            background: rgba(59, 130, 246, 0.3);
+            border-color: rgba(59, 130, 246, 0.6);
+            color: white;
+        }
+        .tab-inactive {
+            background: rgba(255, 255, 255, 0.03);
+            border-color: rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.5);
+        }
+        .tab-inactive:hover {
+            background: rgba(255, 255, 255, 0.08);
+            color: rgba(255, 255, 255, 0.8);
+        }
+        #qrCanvas {
+            image-rendering: pixelated;
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <div class="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
+        <!-- Navigation -->
+        <nav class="bg-black/20 backdrop-blur-md border-b border-white/10">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center h-16">
+                    <a href="/" class="flex items-center gap-2">
+                        <img src="../logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                        <span class="text-xl font-bold text-white">Shift07</span>
+                    </a>
+                    <div class="hidden md:flex items-baseline space-x-4">
+                        <a href="/" class="text-white hover:text-blue-300 px-3 py-2 text-sm font-medium transition-colors">SEO-Tool</a>
+                        <a href="/blog/" class="text-white hover:text-blue-300 px-3 py-2 text-sm font-medium transition-colors">Blog</a>
+                        <a href="/tools/" class="text-blue-300 px-3 py-2 text-sm font-medium">Tools</a>
+                        <a href="/app/#/login" class="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:from-blue-600 hover:to-purple-700 transition-all">Anmelden</a>
+                    </div>
+                    <button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="md:hidden text-white">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                    </button>
+                </div>
+                <div id="mobile-menu" class="hidden md:hidden pb-4">
+                    <a href="/" class="block text-white hover:text-blue-300 px-3 py-2 text-sm font-medium">SEO-Tool</a>
+                    <a href="/blog/" class="block text-white hover:text-blue-300 px-3 py-2 text-sm font-medium">Blog</a>
+                    <a href="/tools/" class="block text-blue-300 px-3 py-2 text-sm font-medium">Tools</a>
+                    <a href="/app/#/login" class="block text-white hover:text-blue-300 px-3 py-2 text-sm font-medium">Anmelden</a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero -->
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-6 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">
+                <span class="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">QR-Code-Generator</span>
+            </h1>
+            <p class="text-xl text-blue-200/80 max-w-2xl mx-auto">Erstelle kostenlose QR-Codes fur URLs, Texte, WLAN-Zugange, E-Mails und mehr. Sofort als PNG herunterladen.</p>
+        </section>
+
+        <!-- Main Tool -->
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+            <div class="grid lg:grid-cols-2 gap-8">
+                <!-- Input -->
+                <div class="glass rounded-xl p-6 md:p-8">
+                    <h2 class="text-xl font-semibold text-white mb-6">QR-Code erstellen</h2>
+
+                    <!-- Tabs -->
+                    <div class="grid grid-cols-3 sm:grid-cols-5 gap-2 mb-6">
+                        <button onclick="switchTab('url')" id="tab-url" class="tab-active border rounded-lg px-3 py-2 text-xs font-medium transition-all">URL</button>
+                        <button onclick="switchTab('text')" id="tab-text" class="tab-inactive border rounded-lg px-3 py-2 text-xs font-medium transition-all">Text</button>
+                        <button onclick="switchTab('wifi')" id="tab-wifi" class="tab-inactive border rounded-lg px-3 py-2 text-xs font-medium transition-all">WLAN</button>
+                        <button onclick="switchTab('email')" id="tab-email" class="tab-inactive border rounded-lg px-3 py-2 text-xs font-medium transition-all">E-Mail</button>
+                        <button onclick="switchTab('phone')" id="tab-phone" class="tab-inactive border rounded-lg px-3 py-2 text-xs font-medium transition-all">Telefon</button>
+                    </div>
+
+                    <!-- URL Input -->
+                    <div id="input-url" class="space-y-4">
+                        <div>
+                            <label class="block text-sm text-blue-200/70 mb-2">Website-URL</label>
+                            <input type="url" id="urlInput" class="w-full bg-black/30 border border-white/10 rounded-lg p-3 text-white/90 text-sm placeholder-white/30 focus:outline-none focus:border-blue-500/50" placeholder="https://www.example.de" value="https://shift07.ai">
+                        </div>
+                    </div>
+
+                    <!-- Text Input -->
+                    <div id="input-text" class="space-y-4 hidden">
+                        <div>
+                            <label class="block text-sm text-blue-200/70 mb-2">Freitext</label>
+                            <textarea id="textInput" rows="4" class="w-full bg-black/30 border border-white/10 rounded-lg p-3 text-white/90 text-sm placeholder-white/30 focus:outline-none focus:border-blue-500/50 resize-y" placeholder="Beliebiger Text, z.B. eine Nachricht oder Adresse..."></textarea>
+                        </div>
+                    </div>
+
+                    <!-- WiFi Input -->
+                    <div id="input-wifi" class="space-y-4 hidden">
+                        <div>
+                            <label class="block text-sm text-blue-200/70 mb-2">Netzwerkname (SSID)</label>
+                            <input type="text" id="wifiSsid" class="w-full bg-black/30 border border-white/10 rounded-lg p-3 text-white/90 text-sm placeholder-white/30 focus:outline-none focus:border-blue-500/50" placeholder="MeinWLAN">
+                        </div>
+                        <div>
+                            <label class="block text-sm text-blue-200/70 mb-2">Passwort</label>
+                            <input type="text" id="wifiPassword" class="w-full bg-black/30 border border-white/10 rounded-lg p-3 text-white/90 text-sm placeholder-white/30 focus:outline-none focus:border-blue-500/50" placeholder="Passwort eingeben">
+                        </div>
+                        <div>
+                            <label class="block text-sm text-blue-200/70 mb-2">Verschlusselung</label>
+                            <select id="wifiEncryption" class="w-full bg-black/30 border border-white/10 rounded-lg p-3 text-white/90 text-sm focus:outline-none focus:border-blue-500/50">
+                                <option value="WPA">WPA/WPA2/WPA3</option>
+                                <option value="WEP">WEP</option>
+                                <option value="nopass">Offen (kein Passwort)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Email Input -->
+                    <div id="input-email" class="space-y-4 hidden">
+                        <div>
+                            <label class="block text-sm text-blue-200/70 mb-2">E-Mail-Adresse</label>
+                            <input type="email" id="emailAddress" class="w-full bg-black/30 border border-white/10 rounded-lg p-3 text-white/90 text-sm placeholder-white/30 focus:outline-none focus:border-blue-500/50" placeholder="info@example.de">
+                        </div>
+                        <div>
+                            <label class="block text-sm text-blue-200/70 mb-2">Betreff (optional)</label>
+                            <input type="text" id="emailSubject" class="w-full bg-black/30 border border-white/10 rounded-lg p-3 text-white/90 text-sm placeholder-white/30 focus:outline-none focus:border-blue-500/50" placeholder="Anfrage">
+                        </div>
+                        <div>
+                            <label class="block text-sm text-blue-200/70 mb-2">Nachricht (optional)</label>
+                            <textarea id="emailBody" rows="2" class="w-full bg-black/30 border border-white/10 rounded-lg p-3 text-white/90 text-sm placeholder-white/30 focus:outline-none focus:border-blue-500/50 resize-y" placeholder="Hallo, ich habe eine Frage..."></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Phone Input -->
+                    <div id="input-phone" class="space-y-4 hidden">
+                        <div>
+                            <label class="block text-sm text-blue-200/70 mb-2">Telefonnummer</label>
+                            <input type="tel" id="phoneNumber" class="w-full bg-black/30 border border-white/10 rounded-lg p-3 text-white/90 text-sm placeholder-white/30 focus:outline-none focus:border-blue-500/50" placeholder="+49 123 456789">
+                        </div>
+                    </div>
+
+                    <!-- Design Options -->
+                    <div class="mt-6 pt-6 border-t border-white/10">
+                        <h3 class="text-sm font-semibold text-white mb-4">Design-Optionen</h3>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-sm text-blue-200/70 mb-2">Vordergrund</label>
+                                <div class="flex items-center gap-2">
+                                    <input type="color" id="fgColor" value="#000000" class="w-10 h-10 rounded cursor-pointer border border-white/10 bg-transparent">
+                                    <input type="text" id="fgColorText" value="#000000" class="flex-1 bg-black/30 border border-white/10 rounded-lg p-2 text-white/90 text-xs font-mono focus:outline-none focus:border-blue-500/50" maxlength="7">
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-sm text-blue-200/70 mb-2">Hintergrund</label>
+                                <div class="flex items-center gap-2">
+                                    <input type="color" id="bgColor" value="#ffffff" class="w-10 h-10 rounded cursor-pointer border border-white/10 bg-transparent">
+                                    <input type="text" id="bgColorText" value="#ffffff" class="flex-1 bg-black/30 border border-white/10 rounded-lg p-2 text-white/90 text-xs font-mono focus:outline-none focus:border-blue-500/50" maxlength="7">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-4">
+                            <label class="block text-sm text-blue-200/70 mb-2">Groesse: <span id="sizeLabel">300</span> x <span id="sizeLabelY">300</span> px</label>
+                            <input type="range" id="sizeSlider" min="150" max="800" value="300" class="w-full accent-blue-500">
+                        </div>
+                    </div>
+
+                    <button onclick="generateQR()" class="mt-6 w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all flex items-center justify-center gap-2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
+                        QR-Code erstellen
+                    </button>
+                </div>
+
+                <!-- Output -->
+                <div>
+                    <div class="glass rounded-xl p-6 md:p-8">
+                        <div class="flex justify-between items-center mb-6">
+                            <h2 class="text-xl font-semibold text-white">Dein QR-Code</h2>
+                            <button id="downloadBtn" onclick="downloadQR()" class="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-5 py-2 rounded-lg text-sm font-medium hover:from-blue-600 hover:to-purple-700 transition-all flex items-center gap-2 hidden">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                                PNG herunterladen
+                            </button>
+                        </div>
+                        <div class="flex items-center justify-center min-h-[300px]">
+                            <div id="qrPlaceholder" class="text-center">
+                                <svg class="w-16 h-16 text-white/20 mx-auto mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M12 4v1m6 11h2m-6 0h-2v4m0-11v3m0 0h.01M12 12h4.01M16 20h4M4 12h4m12 0h.01M5 8h2a1 1 0 001-1V5a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1zm12 0h2a1 1 0 001-1V5a1 1 0 00-1-1h-2a1 1 0 00-1 1v2a1 1 0 001 1zM5 20h2a1 1 0 001-1v-2a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1z"/></svg>
+                                <p class="text-white/30 text-sm">Gib deine Daten ein und klicke auf "QR-Code erstellen"</p>
+                            </div>
+                            <canvas id="qrCanvas" class="hidden rounded-lg shadow-2xl"></canvas>
+                        </div>
+                        <div id="qrInfo" class="mt-4 text-center hidden">
+                            <p class="text-blue-200/50 text-xs" id="qrDataInfo"></p>
+                        </div>
+                    </div>
+
+                    <!-- Cross-sell -->
+                    <div class="glass rounded-xl p-6 mt-6 border-blue-500/30 border">
+                        <div class="flex items-start gap-4">
+                            <div class="bg-blue-500/20 rounded-lg p-3 flex-shrink-0">
+                                <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                            </div>
+                            <div>
+                                <h3 class="text-white font-semibold mb-1">QR-Code auf der Website? Dann sollte die auch gut ranken!</h3>
+                                <p class="text-blue-200/70 text-sm mb-3">Prufe mit unserem kostenlosen SEO-Tool, ob deine Website fur Google optimiert ist — Meta-Tags, Ladezeit, Mobile und mehr.</p>
+                                <a href="/" class="inline-flex items-center text-blue-400 hover:text-blue-300 text-sm font-medium transition-colors">
+                                    Jetzt kostenlos mit Shift07 prufen
+                                    <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tips Section -->
+            <div class="glass rounded-xl p-6 md:p-8 mt-12">
+                <h2 class="text-2xl font-bold text-white mb-6">QR-Codes richtig einsetzen: Tipps fur Unternehmen</h2>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-white/5 rounded-lg p-5">
+                        <h3 class="text-white font-semibold mb-2 flex items-center gap-2">
+                            <span class="text-blue-400">01</span> Speisekarte und Menu
+                        </h3>
+                        <p class="text-blue-200/60 text-sm">Restaurants und Cafes nutzen QR-Codes auf Tischen oder an der Theke, um Gaste direkt zur digitalen Speisekarte zu leiten. Das spart Druckkosten und ist immer aktuell.</p>
+                    </div>
+                    <div class="bg-white/5 rounded-lg p-5">
+                        <h3 class="text-white font-semibold mb-2 flex items-center gap-2">
+                            <span class="text-blue-400">02</span> Visitenkarten und Flyer
+                        </h3>
+                        <p class="text-blue-200/60 text-sm">Drucke einen QR-Code auf deine Visitenkarte, der direkt auf deine Website fuhrt. So koennen potenzielle Kunden dich sofort online finden — auch unterwegs.</p>
+                    </div>
+                    <div class="bg-white/5 rounded-lg p-5">
+                        <h3 class="text-white font-semibold mb-2 flex items-center gap-2">
+                            <span class="text-blue-400">03</span> WLAN fur Gaeste
+                        </h3>
+                        <p class="text-blue-200/60 text-sm">Erstelle einen WLAN-QR-Code fur dein Gaeste-Netzwerk. Kunden scannen den Code und verbinden sich automatisch — ohne umstaendliche Passworteingabe.</p>
+                    </div>
+                    <div class="bg-white/5 rounded-lg p-5">
+                        <h3 class="text-white font-semibold mb-2 flex items-center gap-2">
+                            <span class="text-blue-400">04</span> Google-Bewertungen sammeln
+                        </h3>
+                        <p class="text-blue-200/60 text-sm">Verlinke deinen Google-Bewertungslink als QR-Code. Platziere ihn an der Kasse oder auf der Rechnung. Mehr Bewertungen = besseres lokales Ranking bei Google.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Weitere Tools -->
+            <div class="glass rounded-xl p-6 md:p-8 mt-8">
+                <h2 class="text-xl font-bold text-white mb-4">Weitere kostenlose Tools</h2>
+                <div class="grid md:grid-cols-3 gap-4">
+                    <a href="meta-tag-generator.html" class="bg-white/5 rounded-lg p-4 hover:bg-white/10 transition-colors group">
+                        <h3 class="text-white font-semibold mb-1 group-hover:text-blue-400 transition-colors">Meta-Tag-Generator</h3>
+                        <p class="text-blue-200/50 text-sm">Erstelle perfekte Title Tags und Meta Descriptions.</p>
+                    </a>
+                    <a href="open-graph-vorschau.html" class="bg-white/5 rounded-lg p-4 hover:bg-white/10 transition-colors group">
+                        <h3 class="text-white font-semibold mb-1 group-hover:text-blue-400 transition-colors">Open-Graph-Vorschau</h3>
+                        <p class="text-blue-200/50 text-sm">Teste, wie deine Seite auf Social Media aussieht.</p>
+                    </a>
+                    <a href="farbkontrast-pruefer.html" class="bg-white/5 rounded-lg p-4 hover:bg-white/10 transition-colors group">
+                        <h3 class="text-white font-semibold mb-1 group-hover:text-blue-400 transition-colors">Farbkontrast-Prufer</h3>
+                        <p class="text-blue-200/50 text-sm">Teste Barrierefreiheit deiner Farbkombinationen.</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-black/30 backdrop-blur-md border-t border-white/10">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <div class="text-white/60 mb-4 md:mb-0 text-sm">
+                        &copy; 2026 Thuemmler AI GmbH. Alle Rechte vorbehalten.
+                    </div>
+                    <div class="flex space-x-6">
+                        <a href="/impressum.html" class="text-gray-300 hover:text-white transition-colors text-sm">Impressum</a>
+                        <a href="/datenschutz.html" class="text-gray-300 hover:text-white transition-colors text-sm">Datenschutz</a>
+                        <a href="/agb.html" class="text-gray-300 hover:text-white transition-colors text-sm">AGB</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+    // ========== QR Code Generator (client-side, no external library) ==========
+    // Adapted from kazuhikoarase/qrcode-generator (MIT License)
+    // Minimal implementation supporting Byte mode, error correction level M
+
+    const QRCode = (() => {
+        const PAD0 = 0xEC, PAD1 = 0x11;
+
+        const QRMath = (() => {
+            const EXP_TABLE = new Array(256);
+            const LOG_TABLE = new Array(256);
+            for (let i = 0; i < 8; i++) EXP_TABLE[i] = 1 << i;
+            for (let i = 8; i < 256; i++) EXP_TABLE[i] = EXP_TABLE[i-4] ^ EXP_TABLE[i-5] ^ EXP_TABLE[i-6] ^ EXP_TABLE[i-8];
+            for (let i = 0; i < 255; i++) LOG_TABLE[EXP_TABLE[i]] = i;
+            return {
+                glog(n) { if (n < 1) throw new Error('glog(' + n + ')'); return LOG_TABLE[n]; },
+                gexp(n) { while (n < 0) n += 255; while (n >= 256) n -= 255; return EXP_TABLE[n]; }
+            };
+        })();
+
+        class QRPolynomial {
+            constructor(num, shift) {
+                let offset = 0;
+                while (offset < num.length && num[offset] === 0) offset++;
+                this.num = new Array(num.length - offset + shift);
+                for (let i = 0; i < num.length - offset; i++) this.num[i] = num[i + offset];
+            }
+            getAt(i) { return this.num[i]; }
+            getLength() { return this.num.length; }
+            multiply(e) {
+                const num = new Array(this.getLength() + e.getLength() - 1);
+                for (let i = 0; i < this.getLength(); i++)
+                    for (let j = 0; j < e.getLength(); j++)
+                        num[i + j] ^= QRMath.gexp(QRMath.glog(this.getAt(i)) + QRMath.glog(e.getAt(j)));
+                return new QRPolynomial(num, 0);
+            }
+            mod(e) {
+                if (this.getLength() - e.getLength() < 0) return this;
+                const ratio = QRMath.glog(this.getAt(0)) - QRMath.glog(e.getAt(0));
+                const num = new Array(this.getLength());
+                for (let i = 0; i < this.getLength(); i++) num[i] = this.getAt(i);
+                for (let i = 0; i < e.getLength(); i++) num[i] ^= QRMath.gexp(QRMath.glog(e.getAt(i)) + ratio);
+                return new QRPolynomial(num, 0).mod(e);
+            }
+        }
+
+        function getErrorCorrectPolynomial(ecLength) {
+            let a = new QRPolynomial([1], 0);
+            for (let i = 0; i < ecLength; i++)
+                a = a.multiply(new QRPolynomial([1, QRMath.gexp(i)], 0));
+            return a;
+        }
+
+        const MASK_FNS = [
+            (i, j) => (i + j) % 2 === 0,
+            (i, j) => i % 2 === 0,
+            (i, j) => j % 3 === 0,
+            (i, j) => (i + j) % 3 === 0,
+            (i, j) => (Math.floor(i / 2) + Math.floor(j / 3)) % 2 === 0,
+            (i, j) => (i * j) % 2 + (i * j) % 3 === 0,
+            (i, j) => ((i * j) % 2 + (i * j) % 3) % 2 === 0,
+            (i, j) => ((i * j) % 3 + (i + j) % 2) % 2 === 0
+        ];
+
+        // RS block table for error correction level M (index 1)
+        const RS_BLOCK_TABLE = [
+            [1,26,16],[1,44,28],[1,70,44],[2,50,32],[2,67,43],[4,43,27],[4,49,31],
+            [2,60,38,2,61,39],[3,58,36,2,59,37],[4,69,43,1,70,44],[1,80,50,4,81,51],
+            [6,58,36,2,59,37],[8,59,37,1,60,38],[4,64,40,5,65,41],[5,65,41,5,66,42],
+            [7,73,45,3,74,46],[10,74,46,1,75,47],[9,69,43,4,70,44],[3,70,44,11,71,45],
+            [3,67,41,13,68,42],[17,68,42],[17,74,46],[4,75,47,14,76,48],[6,73,45,14,74,46],
+            [8,75,47,13,76,48],[19,74,46,4,75,47],[22,73,45,3,74,46],[3,73,45,23,74,46],
+            [21,73,45,7,74,46],[19,75,47,10,76,48],[2,74,46,29,75,47],[10,74,46,23,75,47],
+            [14,74,46,21,75,47],[14,74,46,23,75,47],[12,75,47,26,76,48],[6,75,47,34,76,48],
+            [29,74,46,14,75,47],[13,74,46,32,75,47],[40,75,47,7,76,48],[18,75,47,31,76,48]
+        ];
+
+        function getRSBlocks(version) {
+            const rsBlock = RS_BLOCK_TABLE[version - 1];
+            const list = [];
+            for (let i = 0; i < rsBlock.length; i += 3)
+                for (let j = 0; j < rsBlock[i]; j++)
+                    list.push({ totalCount: rsBlock[i+1], dataCount: rsBlock[i+2] });
+            return list;
+        }
+
+        function getMaxDataLength(version) {
+            const blocks = getRSBlocks(version);
+            let total = 0;
+            for (const b of blocks) total += b.dataCount;
+            return total;
+        }
+
+        class BitBuffer {
+            constructor() { this.buffer = []; this.length = 0; }
+            put(num, length) { for (let i = 0; i < length; i++) this.putBit(((num >>> (length - i - 1)) & 1) === 1); }
+            getLengthInBits() { return this.length; }
+            putBit(bit) {
+                const idx = Math.floor(this.length / 8);
+                if (this.buffer.length <= idx) this.buffer.push(0);
+                if (bit) this.buffer[idx] |= (0x80 >>> (this.length % 8));
+                this.length++;
+            }
+        }
+
+        function createData(version, data) {
+            const rsBlocks = getRSBlocks(version);
+            const buffer = new BitBuffer();
+
+            // Byte mode indicator + length
+            buffer.put(4, 4); // mode: byte
+            buffer.put(data.length, version < 10 ? 8 : 16);
+            for (let i = 0; i < data.length; i++) buffer.put(data[i], 8);
+
+            let totalDataCount = 0;
+            for (const b of rsBlocks) totalDataCount += b.dataCount;
+
+            if (buffer.getLengthInBits() > totalDataCount * 8)
+                throw new Error('Data too long: ' + buffer.getLengthInBits() + ' > ' + totalDataCount * 8);
+
+            // Terminator
+            if (buffer.getLengthInBits() + 4 <= totalDataCount * 8) buffer.put(0, 4);
+            while (buffer.getLengthInBits() % 8 !== 0) buffer.putBit(false);
+            while (buffer.buffer.length < totalDataCount) {
+                buffer.buffer.push(PAD0);
+                if (buffer.buffer.length < totalDataCount) buffer.buffer.push(PAD1);
+            }
+
+            return createBytes(buffer, rsBlocks);
+        }
+
+        function createBytes(buffer, rsBlocks) {
+            let offset = 0;
+            let maxDcCount = 0, maxEcCount = 0;
+            const dcdata = [], ecdata = [];
+
+            for (let r = 0; r < rsBlocks.length; r++) {
+                const dcCount = rsBlocks[r].dataCount;
+                const ecCount = rsBlocks[r].totalCount - dcCount;
+                maxDcCount = Math.max(maxDcCount, dcCount);
+                maxEcCount = Math.max(maxEcCount, ecCount);
+
+                dcdata[r] = new Array(dcCount);
+                for (let i = 0; i < dcCount; i++) dcdata[r][i] = 0xff & buffer.buffer[i + offset];
+                offset += dcCount;
+
+                const rsPoly = getErrorCorrectPolynomial(ecCount);
+                const rawPoly = new QRPolynomial(dcdata[r], rsPoly.getLength() - 1);
+                const modPoly = rawPoly.mod(rsPoly);
+                ecdata[r] = new Array(rsPoly.getLength() - 1);
+                for (let i = 0; i < ecdata[r].length; i++) {
+                    const modIndex = i + modPoly.getLength() - ecdata[r].length;
+                    ecdata[r][i] = modIndex >= 0 ? modPoly.getAt(modIndex) : 0;
+                }
+            }
+
+            let totalCodeCount = 0;
+            for (const b of rsBlocks) totalCodeCount += b.totalCount;
+            const data = new Array(totalCodeCount);
+            let index = 0;
+            for (let i = 0; i < maxDcCount; i++)
+                for (let r = 0; r < rsBlocks.length; r++)
+                    if (i < dcdata[r].length) data[index++] = dcdata[r][i];
+            for (let i = 0; i < maxEcCount; i++)
+                for (let r = 0; r < rsBlocks.length; r++)
+                    if (i < ecdata[r].length) data[index++] = ecdata[r][i];
+            return data;
+        }
+
+        function getBCHTypeInfo(data) {
+            let d = data << 10;
+            while (getBCHDigit(d) - getBCHDigit(0x537) >= 0) d ^= (0x537 << (getBCHDigit(d) - getBCHDigit(0x537)));
+            return ((data << 10) | d) ^ 0x5412;
+        }
+
+        function getBCHTypeNumber(data) {
+            let d = data << 12;
+            while (getBCHDigit(d) - getBCHDigit(0x1f25) >= 0) d ^= (0x1f25 << (getBCHDigit(d) - getBCHDigit(0x1f25)));
+            return (data << 12) | d;
+        }
+
+        function getBCHDigit(data) {
+            let digit = 0;
+            while (data !== 0) { digit++; data >>>= 1; }
+            return digit;
+        }
+
+        const ALIGNMENT_PATTERN_TABLE = [
+            [], [6,18], [6,22], [6,26], [6,30], [6,34],
+            [6,22,38], [6,24,42], [6,26,46], [6,28,50], [6,30,54],
+            [6,32,58], [6,34,62], [6,26,46,66], [6,26,48,70], [6,26,50,74],
+            [6,30,54,78], [6,30,56,82], [6,30,58,86], [6,34,62,90],
+            [6,28,50,72,94], [6,26,50,74,98], [6,30,54,78,102], [6,28,54,80,106],
+            [6,32,58,84,110], [6,30,58,86,114], [6,34,62,90,118],
+            [6,26,50,74,98,122], [6,30,54,78,102,126], [6,26,52,78,104,130],
+            [6,30,56,82,108,134], [6,34,60,86,112,138], [6,30,58,86,114,142],
+            [6,34,62,90,118,146], [6,30,54,78,102,126,150], [6,24,50,76,102,128,154],
+            [6,28,54,80,106,132,158], [6,32,58,84,110,136,162], [6,26,54,82,110,138,166],
+            [6,30,58,86,114,142,170]
+        ];
+
+        function make(version, dataBytes) {
+            const moduleCount = version * 4 + 17;
+            const modules = Array.from({length: moduleCount}, () => new Array(moduleCount).fill(null));
+            const dataList = createData(version, dataBytes);
+
+            // Setup patterns
+            setupPositionProbePattern(modules, 0, 0);
+            setupPositionProbePattern(modules, moduleCount - 7, 0);
+            setupPositionProbePattern(modules, 0, moduleCount - 7);
+            setupPositionAdjustPattern(modules, version);
+            setupTimingPattern(modules);
+
+            // Try all masks, pick the best
+            let bestMask = 0, bestPenalty = Infinity;
+            for (let mask = 0; mask < 8; mask++) {
+                const test = modules.map(row => [...row]);
+                setupFormatInfo(test, mask, version);
+                if (version >= 7) setupVersionInfo(test, version);
+                mapData(test, dataList, mask);
+                const penalty = calcPenalty(test);
+                if (penalty < bestPenalty) { bestPenalty = penalty; bestMask = mask; }
+            }
+
+            setupFormatInfo(modules, bestMask, version);
+            if (version >= 7) setupVersionInfo(modules, version);
+            mapData(modules, dataList, bestMask);
+
+            return modules;
+        }
+
+        function setupPositionProbePattern(modules, row, col) {
+            const mc = modules.length;
+            for (let r = -1; r <= 7; r++) {
+                if (row + r < 0 || mc <= row + r) continue;
+                for (let c = -1; c <= 7; c++) {
+                    if (col + c < 0 || mc <= col + c) continue;
+                    if ((0 <= r && r <= 6 && (c === 0 || c === 6)) ||
+                        (0 <= c && c <= 6 && (r === 0 || r === 6)) ||
+                        (2 <= r && r <= 4 && 2 <= c && c <= 4)) {
+                        modules[row + r][col + c] = true;
+                    } else {
+                        modules[row + r][col + c] = false;
+                    }
+                }
+            }
+        }
+
+        function setupPositionAdjustPattern(modules, version) {
+            const pos = ALIGNMENT_PATTERN_TABLE[version - 1];
+            for (let i = 0; i < pos.length; i++) {
+                for (let j = 0; j < pos.length; j++) {
+                    const row = pos[i], col = pos[j];
+                    if (modules[row][col] !== null) continue;
+                    for (let r = -2; r <= 2; r++) {
+                        for (let c = -2; c <= 2; c++) {
+                            if (Math.abs(r) === 2 || Math.abs(c) === 2 || (r === 0 && c === 0))
+                                modules[row + r][col + c] = true;
+                            else
+                                modules[row + r][col + c] = false;
+                        }
+                    }
+                }
+            }
+        }
+
+        function setupTimingPattern(modules) {
+            const mc = modules.length;
+            for (let i = 8; i < mc - 8; i++) {
+                if (modules[i][6] !== null) continue;
+                modules[i][6] = (i % 2 === 0);
+            }
+            for (let i = 8; i < mc - 8; i++) {
+                if (modules[6][i] !== null) continue;
+                modules[6][i] = (i % 2 === 0);
+            }
+        }
+
+        function setupFormatInfo(modules, mask, version) {
+            const mc = modules.length;
+            const data = getBCHTypeInfo(1 << 3 | mask); // ecl M = 0, but format info for M uses bits 00 -> value 1
+            // Actually: EC level M = 0 in format info. Let me use the correct encoding.
+            // Format info: EC level (2 bits) + mask (3 bits)
+            // M = 00, so data = (0 << 3) | mask
+            const bits = getBCHTypeInfo(mask); // EC level M = 0
+
+            for (let i = 0; i < 15; i++) {
+                const mod = ((bits >> i) & 1) === 1;
+                if (i < 6) modules[i][8] = mod;
+                else if (i < 8) modules[i + 1][8] = mod;
+                else modules[mc - 15 + i][8] = mod;
+
+                if (i < 8) modules[8][mc - i - 1] = mod;
+                else if (i < 9) modules[8][15 - i - 1 + 1] = mod;
+                else modules[8][15 - i - 1] = mod;
+            }
+            modules[mc - 8][8] = true; // fixed dark module
+        }
+
+        function setupVersionInfo(modules, version) {
+            const mc = modules.length;
+            const bits = getBCHTypeNumber(version);
+            for (let i = 0; i < 18; i++) {
+                const mod = ((bits >> i) & 1) === 1;
+                modules[Math.floor(i / 3)][mc - 11 + i % 3] = mod;
+                modules[mc - 11 + i % 3][Math.floor(i / 3)] = mod;
+            }
+        }
+
+        function mapData(modules, data, maskPattern) {
+            const mc = modules.length;
+            let inc = -1, row = mc - 1, bitIndex = 7, byteIndex = 0;
+            const maskFn = MASK_FNS[maskPattern];
+
+            for (let col = mc - 1; col > 0; col -= 2) {
+                if (col === 6) col--;
+                while (true) {
+                    for (let c = 0; c < 2; c++) {
+                        if (modules[row][col - c] === null) {
+                            let dark = false;
+                            if (byteIndex < data.length) dark = ((data[byteIndex] >>> bitIndex) & 1) === 1;
+                            if (maskFn(row, col - c)) dark = !dark;
+                            modules[row][col - c] = dark;
+                            bitIndex--;
+                            if (bitIndex < 0) { byteIndex++; bitIndex = 7; }
+                        }
+                    }
+                    row += inc;
+                    if (row < 0 || mc <= row) { row -= inc; inc = -inc; break; }
+                }
+            }
+        }
+
+        function calcPenalty(modules) {
+            const mc = modules.length;
+            let penalty = 0;
+            // Rule 1: consecutive same-colored modules in row/col
+            for (let row = 0; row < mc; row++) {
+                let count = 1;
+                for (let col = 1; col < mc; col++) {
+                    if (modules[row][col] === modules[row][col-1]) { count++; }
+                    else { if (count >= 5) penalty += count - 2; count = 1; }
+                }
+                if (count >= 5) penalty += count - 2;
+            }
+            for (let col = 0; col < mc; col++) {
+                let count = 1;
+                for (let row = 1; row < mc; row++) {
+                    if (modules[row][col] === modules[row-1][col]) { count++; }
+                    else { if (count >= 5) penalty += count - 2; count = 1; }
+                }
+                if (count >= 5) penalty += count - 2;
+            }
+            // Rule 2: 2x2 blocks
+            for (let row = 0; row < mc - 1; row++)
+                for (let col = 0; col < mc - 1; col++)
+                    if (modules[row][col] === modules[row][col+1] && modules[row][col] === modules[row+1][col] && modules[row][col] === modules[row+1][col+1])
+                        penalty += 3;
+            // Simplified: skip rules 3 and 4 for performance
+            return penalty;
+        }
+
+        return {
+            generate(text, options = {}) {
+                const bytes = new TextEncoder().encode(text);
+                // Find minimum version that fits
+                let version = 1;
+                for (; version <= 40; version++) {
+                    const maxLen = getMaxDataLength(version);
+                    const needed = bytes.length + (version < 10 ? 2 : 3); // mode + length overhead
+                    if (needed <= maxLen) break;
+                }
+                if (version > 40) throw new Error('Data too long for QR code');
+
+                const modules = make(version, bytes);
+                return { modules, version, moduleCount: modules.length };
+            }
+        };
+    })();
+
+    // ========== UI Logic ==========
+    let currentTab = 'url';
+
+    function switchTab(tab) {
+        document.querySelectorAll('[id^="input-"]').forEach(el => el.classList.add('hidden'));
+        document.querySelectorAll('[id^="tab-"]').forEach(el => { el.className = el.className.replace('tab-active', 'tab-inactive'); });
+        document.getElementById('input-' + tab).classList.remove('hidden');
+        const tabBtn = document.getElementById('tab-' + tab);
+        tabBtn.className = tabBtn.className.replace('tab-inactive', 'tab-active');
+        currentTab = tab;
+    }
+
+    // Color picker sync
+    document.getElementById('fgColor').addEventListener('input', e => { document.getElementById('fgColorText').value = e.target.value; });
+    document.getElementById('bgColor').addEventListener('input', e => { document.getElementById('bgColorText').value = e.target.value; });
+    document.getElementById('fgColorText').addEventListener('input', e => { if (/^#[0-9a-fA-F]{6}$/.test(e.target.value)) document.getElementById('fgColor').value = e.target.value; });
+    document.getElementById('bgColorText').addEventListener('input', e => { if (/^#[0-9a-fA-F]{6}$/.test(e.target.value)) document.getElementById('bgColor').value = e.target.value; });
+
+    // Size slider
+    document.getElementById('sizeSlider').addEventListener('input', e => {
+        document.getElementById('sizeLabel').textContent = e.target.value;
+        document.getElementById('sizeLabelY').textContent = e.target.value;
+    });
+
+    function getQRData() {
+        switch (currentTab) {
+            case 'url':
+                return document.getElementById('urlInput').value.trim();
+            case 'text':
+                return document.getElementById('textInput').value.trim();
+            case 'wifi': {
+                const ssid = document.getElementById('wifiSsid').value.trim();
+                const pass = document.getElementById('wifiPassword').value;
+                const enc = document.getElementById('wifiEncryption').value;
+                if (!ssid) return '';
+                // Escape special characters in SSID and password
+                const escapeWifi = s => s.replace(/\\/g, '\\\\').replace(/;/g, '\\;').replace(/:/g, '\\:').replace(/"/g, '\\"');
+                if (enc === 'nopass') return `WIFI:T:nopass;S:${escapeWifi(ssid)};;`;
+                return `WIFI:T:${enc};S:${escapeWifi(ssid)};P:${escapeWifi(pass)};;`;
+            }
+            case 'email': {
+                const addr = document.getElementById('emailAddress').value.trim();
+                if (!addr) return '';
+                const subj = document.getElementById('emailSubject').value.trim();
+                const body = document.getElementById('emailBody').value.trim();
+                let mailto = `mailto:${addr}`;
+                const params = [];
+                if (subj) params.push('subject=' + encodeURIComponent(subj));
+                if (body) params.push('body=' + encodeURIComponent(body));
+                if (params.length) mailto += '?' + params.join('&');
+                return mailto;
+            }
+            case 'phone': {
+                const num = document.getElementById('phoneNumber').value.trim();
+                return num ? `tel:${num}` : '';
+            }
+        }
+        return '';
+    }
+
+    function generateQR() {
+        const data = getQRData();
+        if (!data) {
+            alert('Bitte gib die erforderlichen Daten ein.');
+            return;
+        }
+
+        try {
+            const qr = QRCode.generate(data);
+            const canvas = document.getElementById('qrCanvas');
+            const size = parseInt(document.getElementById('sizeSlider').value);
+            const fgColor = document.getElementById('fgColor').value;
+            const bgColor = document.getElementById('bgColor').value;
+
+            canvas.width = size;
+            canvas.height = size;
+            const ctx = canvas.getContext('2d');
+            const cellSize = size / (qr.moduleCount + 8); // quiet zone of 4 modules each side
+            const offset = cellSize * 4;
+
+            // Background
+            ctx.fillStyle = bgColor;
+            ctx.fillRect(0, 0, size, size);
+
+            // Modules
+            ctx.fillStyle = fgColor;
+            for (let row = 0; row < qr.moduleCount; row++) {
+                for (let col = 0; col < qr.moduleCount; col++) {
+                    if (qr.modules[row][col]) {
+                        ctx.fillRect(
+                            Math.round(offset + col * cellSize),
+                            Math.round(offset + row * cellSize),
+                            Math.ceil(cellSize),
+                            Math.ceil(cellSize)
+                        );
+                    }
+                }
+            }
+
+            document.getElementById('qrPlaceholder').classList.add('hidden');
+            canvas.classList.remove('hidden');
+            document.getElementById('downloadBtn').classList.remove('hidden');
+            document.getElementById('qrInfo').classList.remove('hidden');
+            document.getElementById('qrDataInfo').textContent = `Version ${qr.version} | ${qr.moduleCount}x${qr.moduleCount} Module | ${data.length} Zeichen`;
+        } catch (e) {
+            alert('Fehler: ' + e.message);
+        }
+    }
+
+    function downloadQR() {
+        const canvas = document.getElementById('qrCanvas');
+        const link = document.createElement('a');
+        link.download = 'qr-code-shift07.png';
+        link.href = canvas.toDataURL('image/png');
+        link.click();
+    }
+
+    // Generate initial QR code on load
+    window.addEventListener('load', () => { generateQR(); });
+    </script>
+</body>
+</html>
