@@ -1229,7 +1229,7 @@
                 renderTable(allData);
                 renderPagination();
             } catch (err) {
-                tableEl.innerHTML = showError('Verlauf konnte nicht geladen werden: ' + err.message);
+                tableEl.innerHTML = showError('Verlauf könnte nicht geladen werden: ' + err.message);
             }
         }
 
@@ -1349,7 +1349,7 @@
             renderAnalysisResults(analysis, document.getElementById('analysis-detail-content'), id);
         } catch (err) {
             console.error('[shift07] Analysis detail error:', err);
-            main.innerHTML = `<div class="p-6 lg:p-8" style="background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #312e81 100%); min-height:100vh;">${showError('Analyse konnte nicht geladen werden.')}</div>`;
+            main.innerHTML = `<div class="p-6 lg:p-8" style="background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #312e81 100%); min-height:100vh;">${showError('Analyse könnte nicht geladen werden.')}</div>`;
         }
     }
 
@@ -1606,7 +1606,7 @@
                 showNotification('success', 'Hinzugefügt', url + ' wird jetzt überwacht.');
                 loadMonitoredUrls();
             } catch (err) {
-                showNotification('error', 'Fehler', 'URL konnte nicht hinzugefügt werden: ' + err.message);
+                showNotification('error', 'Fehler', 'URL könnte nicht hinzugefügt werden: ' + err.message);
             }
         });
 
@@ -1800,7 +1800,7 @@
                 showNotification('success', 'Account gelöscht', 'Dein Account und alle Daten wurden gelöscht.');
                 window.location.hash = '#/login';
             } catch (err) {
-                showNotification('error', 'Fehler', 'Account konnte nicht gelöscht werden: ' + err.message);
+                showNotification('error', 'Fehler', 'Account könnte nicht gelöscht werden: ' + err.message);
                 const btn = document.getElementById('delete-account-btn');
                 if (btn) { btn.disabled = false; btn.textContent = 'Account löschen'; }
             }
@@ -1888,7 +1888,7 @@
             // Refresh if on history page
             if (appState.currentRoute === '#/history') renderHistory();
         } catch (err) {
-            showNotification('error', 'Fehler', 'Analyse konnte nicht gelöscht werden.');
+            showNotification('error', 'Fehler', 'Analyse könnte nicht gelöscht werden.');
         }
     }
 
@@ -1899,7 +1899,7 @@
                 window.location.hash = '#/analyze?url=' + encodeURIComponent(analysis.url);
             }
         } catch (err) {
-            showNotification('error', 'Fehler', 'Erneute Analyse konnte nicht gestartet werden.');
+            showNotification('error', 'Fehler', 'Erneute Analyse könnte nicht gestartet werden.');
         }
     }
 
