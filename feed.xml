@@ -5,71 +5,79 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Thu, 02 Apr 2026 07:12:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 03 Apr 2026 04:41:14 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>Was ist SEO? Ein verständlicher Leitfaden für Einsteiger</title>
       <link>https://shift07.ai/blog/was-ist-seo.html</link>
       <guid>https://shift07.ai/blog/was-ist-seo.html</guid>
-      <pubDate>Thu, 02 Apr 2026 05:34:58 +0000</pubDate>
+      <pubDate>Fri, 03 Apr 2026 04:41:04 +0000</pubDate>
       <description>Was ist SEO und warum ist es wichtig? Lerne die 8 wichtigsten Ranking-Faktoren kennen und erfahre, wie du deine Website für Suchmaschinen optimierst.</description>
       <category>SEO Grundlagen</category>
     </item>
     <item>
-      <title>Die 10 haeufigsten Website-Fehler bei Handwerkern</title>
-      <link>https://shift07.ai/blog/website-fehler-handwerker.html</link>
-      <guid>https://shift07.ai/blog/website-fehler-handwerker.html</guid>
-      <pubDate>Thu, 02 Apr 2026 05:34:47 +0000</pubDate>
-      <description>Handwerker-Websites haben oft die gleichen SEO-Probleme. Erfahre die 10 haeufigsten Fehler und wie du sie einfach behebst, um mehr Kunden ueber Google zu gewinnen.</description>
-      <category>SEO Praxis</category>
-    </item>
-    <item>
-      <title>HTTPS und SSL-Zertifikat: Warum deine Website verschluesselt sein muss</title>
-      <link>https://shift07.ai/blog/https-ssl-zertifikat-website-sicherheit.html</link>
-      <guid>https://shift07.ai/blog/https-ssl-zertifikat-website-sicherheit.html</guid>
-      <pubDate>Thu, 02 Apr 2026 05:34:19 +0000</pubDate>
-      <description>Erfahre, warum HTTPS und ein SSL-Zertifikat fuer jede Website Pflicht sind. Wie du dein SSL-Zertifikat einrichtest, was es kostet und welche SEO-Vorteile es bringt.</description>
-      <category>Website-Sicherheit</category>
-    </item>
-    <item>
-      <title>Lokales SEO fuer kleine Unternehmen: Der komplette Leitfaden 2026</title>
-      <link>https://shift07.ai/blog/lokales-seo-kleine-unternehmen.html</link>
-      <guid>https://shift07.ai/blog/lokales-seo-kleine-unternehmen.html</guid>
-      <pubDate>Thu, 02 Apr 2026 03:58:30 +0000</pubDate>
-      <description>Lokales SEO hilft kleinen Unternehmen, in der Google-Suche und auf Google Maps sichtbar zu werden. Lerne die wichtigsten Massnahmen fuer dein lokales Ranking.</description>
-      <category>Lokales SEO</category>
-    </item>
-    <item>
-      <title>Google My Business optimieren: Anleitung fuer lokale Unternehmen 2026</title>
-      <link>https://shift07.ai/blog/google-my-business-optimieren.html</link>
-      <guid>https://shift07.ai/blog/google-my-business-optimieren.html</guid>
-      <pubDate>Thu, 02 Apr 2026 00:46:02 +0000</pubDate>
-      <description>Google My Business optimieren: Schritt-fuer-Schritt-Anleitung mit Checkliste. So wird dein Unternehmen in der Google-Suche und auf Google Maps sichtbar.</description>
-      <category>Lokales SEO</category>
-    </item>
-    <item>
-      <title>Strukturierte Daten für SEO: Schema Markup einfach erklärt</title>
-      <link>https://shift07.ai/blog/strukturierte-daten-seo-schema-markup.html</link>
-      <guid>https://shift07.ai/blog/strukturierte-daten-seo-schema-markup.html</guid>
-      <pubDate>Wed, 01 Apr 2026 15:35:34 +0000</pubDate>
-      <description>Was sind strukturierte Daten und warum braucht deine Website Schema Markup? Lerne, wie du Rich Snippets in Google bekommst - mit Anleitung und Beispielen.</description>
-      <category>SEO Technik</category>
+      <title>Meta-Tags richtig einsetzen: Die vollständige Anleitung</title>
+      <link>https://shift07.ai/blog/meta-tags-richtig-einsetzen.html</link>
+      <guid>https://shift07.ai/blog/meta-tags-richtig-einsetzen.html</guid>
+      <pubDate>Fri, 03 Apr 2026 04:40:28 +0000</pubDate>
+      <description>Lerne, wie du Meta-Tags wie Title, Description und Open Graph korrekt für SEO einsetzt. Mit Checkliste, Beispielen und häufigen Fehlern.</description>
+      <category>SEO Grundlagen</category>
     </item>
     <item>
       <title>Open Graph Tags richtig einsetzen: So sehen deine Links auf Social Media perfekt aus</title>
       <link>https://shift07.ai/blog/open-graph-vorschau-social-media-preview.html</link>
       <guid>https://shift07.ai/blog/open-graph-vorschau-social-media-preview.html</guid>
-      <pubDate>Wed, 01 Apr 2026 14:01:00 +0000</pubDate>
-      <description>Lerne, wie Open Graph Tags funktionieren und warum sie entscheidend fur die Klickrate deiner geteilten Links sind. Mit kostenlosem Preview-Tool zum Testen.</description>
+      <pubDate>Thu, 02 Apr 2026 13:36:04 +0000</pubDate>
+      <description>Lerne, wie Open Graph Tags funktionieren und warum sie entscheidend für die Klickrate deiner geteilten Links sind. Mit kostenlosem Preview-Tool zum Testen.</description>
       <category>Social Media & SEO</category>
+    </item>
+    <item>
+      <title>Strukturierte Daten für SEO: Schema Markup einfach erklärt</title>
+      <link>https://shift07.ai/blog/strukturierte-daten-seo-schema-markup.html</link>
+      <guid>https://shift07.ai/blog/strukturierte-daten-seo-schema-markup.html</guid>
+      <pubDate>Thu, 02 Apr 2026 13:36:04 +0000</pubDate>
+      <description>Was sind strukturierte Daten und warum braucht deine Website Schema Markup? Lerne, wie du Rich Snippets in Google bekommst - mit Anleitung und Beispielen.</description>
+      <category>SEO Technik</category>
     </item>
     <item>
       <title>Website-Geschwindigkeit verbessern: 7 einfache Tipps</title>
       <link>https://shift07.ai/blog/website-geschwindigkeit-verbessern.html</link>
       <guid>https://shift07.ai/blog/website-geschwindigkeit-verbessern.html</guid>
-      <pubDate>Wed, 01 Apr 2026 12:32:50 +0000</pubDate>
+      <pubDate>Thu, 02 Apr 2026 13:36:04 +0000</pubDate>
       <description>Deine Website ist zu langsam? Mit diesen 7 praktischen Tipps verbesserst du die Ladezeit deiner Website und gewinnst mehr Besucher und bessere Rankings.</description>
       <category>Performance</category>
+    </item>
+    <item>
+      <title>Lokales SEO für kleine Unternehmen: Der komplette Leitfaden 2026</title>
+      <link>https://shift07.ai/blog/lokales-seo-kleine-unternehmen.html</link>
+      <guid>https://shift07.ai/blog/lokales-seo-kleine-unternehmen.html</guid>
+      <pubDate>Thu, 02 Apr 2026 13:36:04 +0000</pubDate>
+      <description>Lokales SEO hilft kleinen Unternehmen, in der Google-Suche und auf Google Maps sichtbar zu werden. Lerne die wichtigsten Maßnahmen für dein lokales Ranking.</description>
+      <category>Lokales SEO</category>
+    </item>
+    <item>
+      <title>Google My Business optimieren: Anleitung für lokale Unternehmen 2026</title>
+      <link>https://shift07.ai/blog/google-my-business-optimieren.html</link>
+      <guid>https://shift07.ai/blog/google-my-business-optimieren.html</guid>
+      <pubDate>Thu, 02 Apr 2026 13:36:04 +0000</pubDate>
+      <description>Google My Business optimieren: Schritt-für-Schritt-Anleitung mit Checkliste. So wird dein Unternehmen in der Google-Suche und auf Google Maps sichtbar.</description>
+      <category>Lokales SEO</category>
+    </item>
+    <item>
+      <title>HTTPS und SSL-Zertifikat: Warum deine Website verschlüsselt sein muss</title>
+      <link>https://shift07.ai/blog/https-ssl-zertifikat-website-sicherheit.html</link>
+      <guid>https://shift07.ai/blog/https-ssl-zertifikat-website-sicherheit.html</guid>
+      <pubDate>Thu, 02 Apr 2026 13:36:03 +0000</pubDate>
+      <description>Erfahre, warum HTTPS und ein SSL-Zertifikat für jede Website Pflicht sind. Wie du dein SSL-Zertifikat einrichtest, was es kostet und welche SEO-Vorteile es bringt.</description>
+      <category>Website-Sicherheit</category>
+    </item>
+    <item>
+      <title>Die 10 häufigsten Website-Fehler bei Handwerkern</title>
+      <link>https://shift07.ai/blog/website-fehler-handwerker.html</link>
+      <guid>https://shift07.ai/blog/website-fehler-handwerker.html</guid>
+      <pubDate>Thu, 02 Apr 2026 13:36:03 +0000</pubDate>
+      <description>Handwerker-Websites haben oft die gleichen SEO-Probleme. Erfahre die 10 häufigsten Fehler und wie du sie einfach behebst, um mehr Kunden über Google zu gewinnen.</description>
+      <category>SEO Praxis</category>
     </item>
   </channel>
 </rss>
