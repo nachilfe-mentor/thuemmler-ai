@@ -5,8 +5,24 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Fri, 03 Apr 2026 07:51:19 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 03 Apr 2026 11:07:38 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Meta-Tags richtig einsetzen: Die vollständige Anleitung</title>
+      <link>https://shift07.ai/blog/meta-tags-richtig-einsetzen.html</link>
+      <guid>https://shift07.ai/blog/meta-tags-richtig-einsetzen.html</guid>
+      <pubDate>Fri, 03 Apr 2026 11:07:19 +0000</pubDate>
+      <description>Lerne, wie du Meta-Tags wie Title, Description und Open Graph korrekt für SEO einsetzt. Mit Checkliste, Beispielen und häufigen Fehlern.</description>
+      <category>SEO Grundlagen</category>
+    </item>
+    <item>
+      <title>Canonical-Tags erklärt: Duplicate Content verhindern und Rankings schützen</title>
+      <link>https://shift07.ai/blog/canonical-tags-seo.html</link>
+      <guid>https://shift07.ai/blog/canonical-tags-seo.html</guid>
+      <pubDate>Fri, 03 Apr 2026 11:06:50 +0000</pubDate>
+      <description>Canonical-Tags sind das wichtigste Werkzeug gegen Duplicate Content. Erfahre, wann du sie brauchst, wie du sie richtig einsetzt und welche Fehler du vermeiden solltest.</description>
+      <category>Technisches SEO</category>
+    </item>
     <item>
       <title>Mobile Optimierung für Websites: Die komplette Checkliste 2026</title>
       <link>https://shift07.ai/blog/mobile-optimierung-website-checkliste.html</link>
@@ -21,14 +37,6 @@
       <guid>https://shift07.ai/blog/was-ist-seo.html</guid>
       <pubDate>Fri, 03 Apr 2026 04:41:04 +0000</pubDate>
       <description>Was ist SEO und warum ist es wichtig? Lerne die 8 wichtigsten Ranking-Faktoren kennen und erfahre, wie du deine Website für Suchmaschinen optimierst.</description>
-      <category>SEO Grundlagen</category>
-    </item>
-    <item>
-      <title>Meta-Tags richtig einsetzen: Die vollständige Anleitung</title>
-      <link>https://shift07.ai/blog/meta-tags-richtig-einsetzen.html</link>
-      <guid>https://shift07.ai/blog/meta-tags-richtig-einsetzen.html</guid>
-      <pubDate>Fri, 03 Apr 2026 04:40:28 +0000</pubDate>
-      <description>Lerne, wie du Meta-Tags wie Title, Description und Open Graph korrekt für SEO einsetzt. Mit Checkliste, Beispielen und häufigen Fehlern.</description>
       <category>SEO Grundlagen</category>
     </item>
     <item>
