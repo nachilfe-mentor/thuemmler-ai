@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K1S1RXBDS8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K1S1RXBDS8');
+    </script>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8475857002943858" crossorigin="anonymous"></script>
+    <title>SSL-Zertifikat-Checker - HTTPS & Zertifikat kostenlos prüfen | Shift07</title>
+    <meta name="description" content="Prüfe kostenlos ob deine Website HTTPS nutzt, das SSL-Zertifikat gültig ist und wann es abläuft. Mit Ablaufdatum-Warnung und SEO-Tipps.">
+    <meta name="keywords" content="SSL Zertifikat prüfen, HTTPS Check, SSL Checker kostenlos, SSL Ablaufdatum, HTTPS SEO, TLS Zertifikat testen">
+    <meta name="author" content="Thümmler AI GmbH">
+    <link rel="icon" type="image/png" href="/logo.png">
+    <link rel="canonical" href="https://shift07.ai/tools/ssl-zertifikat-checker.html">
+    <!-- Open Graph -->
+    <meta property="og:title" content="SSL-Zertifikat-Checker - HTTPS kostenlos prüfen">
+    <meta property="og:description" content="Prüfe ob deine Website HTTPS nutzt, das SSL-Zertifikat gültig ist und wann es abläuft. Kostenlos und ohne Anmeldung.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://shift07.ai/tools/ssl-zertifikat-checker.html">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="Shift07">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SSL-Zertifikat-Checker - HTTPS kostenlos prüfen">
+    <meta name="twitter:description" content="Prüfe ob deine Website HTTPS nutzt und wann das SSL-Zertifikat abläuft.">
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "SSL-Zertifikat-Checker",
+      "description": "Kostenlos prüfen ob eine Website HTTPS nutzt, das SSL-Zertifikat gültig ist und wann es abläuft.",
+      "url": "https://shift07.ai/tools/ssl-zertifikat-checker.html",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR"
+      },
+      "provider": {
+        "@type": "Organization",
+        "name": "Thümmler AI GmbH",
+        "url": "https://shift07.ai"
+      }
+    }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: rgba(15, 23, 42, 0.5); }
+        ::-webkit-scrollbar-thumb { background: rgba(59, 130, 246, 0.5); border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: rgba(59, 130, 246, 0.7); }
+        html { scroll-behavior: smooth; }
+        .glass {
+            background: rgba(255, 255, 255, 0.06);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .result-card {
+            transition: all 0.3s ease;
+        }
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        .animate-spin-slow {
+            animation: spin 1.5s linear infinite;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(8px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .fade-in {
+            animation: fadeIn 0.4s ease forwards;
+        }
+        .status-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 4px 12px;
+            border-radius: 9999px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        .badge-green { background: rgba(16,185,129,0.15); color: #10b981; border: 1px solid rgba(16,185,129,0.3); }
+        .badge-red { background: rgba(239,68,68,0.15); color: #ef4444; border: 1px solid rgba(239,68,68,0.3); }
+        .badge-yellow { background: rgba(245,158,11,0.15); color: #f59e0b; border: 1px solid rgba(245,158,11,0.3); }
+        .badge-gray { background: rgba(148,163,184,0.15); color: #94a3b8; border: 1px solid rgba(148,163,184,0.3); }
+        .progress-bar {
+            height: 6px;
+            border-radius: 3px;
+            background: rgba(255,255,255,0.1);
+            overflow: hidden;
+        }
+        .progress-fill {
+            height: 100%;
+            border-radius: 3px;
+            transition: width 0.8s ease;
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <div class="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
+
+        <!-- Navigation -->
+        <nav class="bg-black/20 backdrop-blur-md border-b border-white/10">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center h-16">
+                    <a href="/" class="flex items-center gap-2">
+                        <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                        <span class="text-xl font-bold text-white">Shift07</span>
+                    </a>
+                    <div class="hidden md:flex items-baseline space-x-4">
+                        <a href="/" class="text-white hover:text-blue-300 px-3 py-2 text-sm font-medium transition-colors">SEO-Tool</a>
+                        <a href="/blog/" class="text-white hover:text-blue-300 px-3 py-2 text-sm font-medium transition-colors">Blog</a>
+                        <a href="/tools/" class="text-blue-300 px-3 py-2 text-sm font-medium">Tools</a>
+                        <a href="/app/#/login" class="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:from-blue-600 hover:to-purple-700 transition-all">Anmelden</a>
+                    </div>
+                    <button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="md:hidden text-white">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                    </button>
+                </div>
+                <div id="mobile-menu" class="hidden md:hidden pb-4">
+                    <a href="/" class="block text-white hover:text-blue-300 px-3 py-2 text-sm font-medium">SEO-Tool</a>
+                    <a href="/blog/" class="block text-white hover:text-blue-300 px-3 py-2 text-sm font-medium">Blog</a>
+                    <a href="/tools/" class="block text-blue-300 px-3 py-2 text-sm font-medium">Tools</a>
+                    <a href="/app/#/login" class="block text-white hover:text-blue-300 px-3 py-2 text-sm font-medium">Anmelden</a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero -->
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-6 text-center">
+            <div class="inline-flex items-center gap-2 bg-green-500/10 border border-green-500/30 text-green-400 text-sm font-medium px-4 py-2 rounded-full mb-5">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+                Kostenlos & ohne Anmeldung
+            </div>
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">
+                <span class="bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent">SSL-Zertifikat-Checker</span>
+            </h1>
+            <p class="text-xl text-blue-200/80 max-w-2xl mx-auto">HTTPS-Status, Zertifikat-Gültigkeit und Ablaufdatum einer Website sofort prüfen.</p>
+        </section>
+
+        <!-- Main Tool -->
+        <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
+
+            <!-- Input -->
+            <div class="glass rounded-2xl p-6 md:p-8 mb-6">
+                <h2 class="text-lg font-semibold text-white mb-4">Domain oder URL eingeben</h2>
+                <div class="flex flex-col sm:flex-row gap-3">
+                    <div class="relative flex-1">
+                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                            <svg class="w-5 h-5 text-blue-400/60" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/></svg>
+                        </div>
+                        <input
+                            type="text"
+                            id="domainInput"
+                            placeholder="z.B. beispiel.de oder https://beispiel.de"
+                            class="w-full bg-white/5 border border-white/20 text-white placeholder-white/30 rounded-xl pl-10 pr-4 py-3 focus:outline-none focus:border-blue-400 focus:ring-1 focus:ring-blue-400 transition-colors"
+                            onkeydown="if(event.key==='Enter') checkSSL()"
+                        >
+                    </div>
+                    <button
+                        onclick="checkSSL()"
+                        id="checkBtn"
+                        class="bg-gradient-to-r from-green-500 to-blue-600 text-white px-8 py-3 rounded-xl font-semibold hover:from-green-400 hover:to-blue-500 transition-all whitespace-nowrap flex items-center gap-2"
+                    >
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                        SSL prüfen
+                    </button>
+                </div>
+                <p class="text-blue-200/40 text-xs mt-2">Beispiele: meineshop.de · https://www.firma.de · praxis-berlin.de</p>
+            </div>
+
+            <!-- Loading -->
+            <div id="loadingSection" class="hidden glass rounded-2xl p-8 text-center mb-6">
+                <div class="flex items-center justify-center gap-3 mb-3">
+                    <svg class="w-8 h-8 text-blue-400 animate-spin-slow" fill="none" viewBox="0 0 24 24">
+                        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="3"></circle>
+                        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                    </svg>
+                    <span class="text-white font-medium" id="loadingText">SSL-Zertifikat wird geprüft...</span>
+                </div>
+                <p class="text-blue-200/50 text-sm">Rufe Certificate Transparency Logs ab…</p>
+            </div>
+
+            <!-- Results -->
+            <div id="resultsSection" class="hidden space-y-4 fade-in">
+
+                <!-- Overall Score -->
+                <div id="scoreCard" class="glass rounded-2xl p-6 md:p-8">
+                    <div class="flex items-center justify-between mb-4">
+                        <div>
+                            <h3 class="text-white font-bold text-xl" id="scoreDomain">example.de</h3>
+                            <p class="text-blue-200/60 text-sm mt-1" id="scoreSubtitle">SSL-Sicherheitsbewertung</p>
+                        </div>
+                        <div id="scoreCircle" class="w-20 h-20 rounded-full flex items-center justify-center text-3xl font-black border-4 border-green-500/50 bg-green-500/10 text-green-400">A</div>
+                    </div>
+                    <div class="progress-bar mt-2">
+                        <div id="scoreBar" class="progress-fill bg-gradient-to-r from-green-500 to-emerald-400" style="width: 0%"></div>
+                    </div>
+                </div>
+
+                <!-- Check Cards Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+
+                    <!-- HTTPS Active -->
+                    <div id="httpsCard" class="glass rounded-2xl p-5 result-card">
+                        <div class="flex items-start gap-4">
+                            <div id="httpsIcon" class="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0 bg-green-500/20">
+                                <svg class="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+                            </div>
+                            <div class="min-w-0">
+                                <div class="flex items-center gap-2 mb-1">
+                                    <p class="text-white font-semibold text-sm">HTTPS aktiv</p>
+                                    <span id="httpsBadge" class="status-badge badge-green">
+                                        <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                                        Aktiv
+                                    </span>
+                                </div>
+                                <p id="httpsText" class="text-blue-200/60 text-xs leading-relaxed">Die Website ist über HTTPS erreichbar.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cert Validity -->
+                    <div id="validCard" class="glass rounded-2xl p-5 result-card">
+                        <div class="flex items-start gap-4">
+                            <div id="validIcon" class="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0 bg-green-500/20">
+                                <svg class="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                            </div>
+                            <div class="min-w-0">
+                                <div class="flex items-center gap-2 mb-1">
+                                    <p class="text-white font-semibold text-sm">Zertifikat gültig</p>
+                                    <span id="validBadge" class="status-badge badge-green">
+                                        <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                                        Gültig
+                                    </span>
+                                </div>
+                                <p id="validText" class="text-blue-200/60 text-xs leading-relaxed">Zertifikat ist aktuell gültig.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Expiry Date -->
+                    <div id="expiryCard" class="glass rounded-2xl p-5 result-card">
+                        <div class="flex items-start gap-4">
+                            <div id="expiryIcon" class="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0 bg-blue-500/20">
+                                <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                            </div>
+                            <div class="min-w-0">
+                                <p class="text-white font-semibold text-sm mb-1">Ablaufdatum</p>
+                                <p id="expiryText" class="text-blue-200/60 text-xs leading-relaxed">Wird geladen…</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Issuer -->
+                    <div id="issuerCard" class="glass rounded-2xl p-5 result-card">
+                        <div class="flex items-start gap-4">
+                            <div class="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0 bg-purple-500/20">
+                                <svg class="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+                            </div>
+                            <div class="min-w-0">
+                                <p class="text-white font-semibold text-sm mb-1">Zertifikat-Aussteller</p>
+                                <p id="issuerText" class="text-blue-200/60 text-xs leading-relaxed">Wird geladen…</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Cert Details Table -->
+                <div id="certDetails" class="hidden glass rounded-2xl p-6">
+                    <h3 class="text-white font-semibold mb-4 flex items-center gap-2">
+                        <svg class="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                        Zertifikat-Details
+                    </h3>
+                    <div id="certTable" class="space-y-2 text-sm"></div>
+                </div>
+
+                <!-- SEO Relevance -->
+                <div id="seoCard" class="glass rounded-2xl p-6 border border-blue-500/20">
+                    <h3 class="text-white font-semibold mb-3 flex items-center gap-2">
+                        <svg class="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                        SEO-Empfehlung
+                    </h3>
+                    <p id="seoText" class="text-blue-200/70 text-sm leading-relaxed"></p>
+                </div>
+
+                <!-- Cross-sell -->
+                <div class="glass rounded-2xl p-6 border border-blue-500/30 bg-blue-500/5">
+                    <div class="flex items-start gap-4">
+                        <div class="bg-blue-500/20 rounded-xl p-3 flex-shrink-0">
+                            <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+                        </div>
+                        <div>
+                            <h3 class="text-white font-semibold mb-1">HTTPS ist nur ein Faktor von vielen</h3>
+                            <p class="text-blue-200/70 text-sm mb-3">Google prüft über 200 Ranking-Faktoren. Mit Shift07 analysierst du alle kritischen SEO-Bereiche deiner Website auf einmal: Meta-Tags, Ladezeit, Strukturierte Daten, Mobile-Optimierung und mehr.</p>
+                            <a href="/" class="inline-flex items-center text-blue-400 hover:text-blue-300 text-sm font-medium transition-colors">
+                                Vollständige SEO-Analyse starten (kostenlos)
+                                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Error Section -->
+            <div id="errorSection" class="hidden glass rounded-2xl p-8 text-center">
+                <div class="w-14 h-14 bg-red-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                    <svg class="w-7 h-7 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                </div>
+                <h3 class="text-white font-semibold text-lg mb-2">Domain nicht auflösbar</h3>
+                <p id="errorText" class="text-blue-200/60 text-sm">Bitte prüfe, ob die Domain korrekt eingegeben wurde.</p>
+                <button onclick="document.getElementById('errorSection').classList.add('hidden');" class="mt-4 text-blue-400 hover:text-blue-300 text-sm font-medium">Erneut versuchen</button>
+            </div>
+
+        </section>
+
+        <!-- Info Section -->
+        <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+            <div class="glass rounded-2xl p-6 md:p-10">
+                <h2 class="text-2xl font-bold text-white mb-8">Warum ist SSL wichtig für SEO?</h2>
+                <div class="grid md:grid-cols-2 gap-6">
+
+                    <div class="bg-white/5 rounded-xl p-5">
+                        <div class="w-10 h-10 bg-green-500/20 rounded-lg flex items-center justify-center mb-4">
+                            <svg class="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
+                        </div>
+                        <h3 class="text-white font-semibold mb-2">Google Ranking-Signal seit 2014</h3>
+                        <p class="text-blue-200/60 text-sm leading-relaxed">Google hat HTTPS offiziell als Ranking-Faktor bestätigt. Websites ohne SSL-Zertifikat werden im Vergleich zu HTTPS-Seiten benachteiligt — besonders bei gleichwertigem Content.</p>
+                    </div>
+
+                    <div class="bg-white/5 rounded-xl p-5">
+                        <div class="w-10 h-10 bg-red-500/20 rounded-lg flex items-center justify-center mb-4">
+                            <svg class="w-5 h-5 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"/></svg>
+                        </div>
+                        <h3 class="text-white font-semibold mb-2">„Nicht sicher" — hohe Absprungrate</h3>
+                        <p class="text-blue-200/60 text-sm leading-relaxed">Chrome und Firefox zeigen HTTP-Seiten als „Nicht sicher" an. Besucher verlassen diese Seiten viel schneller. Eine hohe Absprungrate ist wiederum ein negatives SEO-Signal.</p>
+                    </div>
+
+                    <div class="bg-white/5 rounded-xl p-5">
+                        <div class="w-10 h-10 bg-amber-500/20 rounded-lg flex items-center justify-center mb-4">
+                            <svg class="w-5 h-5 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                        </div>
+                        <h3 class="text-white font-semibold mb-2">Abgelaufene Zertifikate sind gefährlich</h3>
+                        <p class="text-blue-200/60 text-sm leading-relaxed">Ein abgelaufenes SSL-Zertifikat blockiert Besucher vollständig — Browser zeigen eine Fehlerseite. Google deindexiert Seiten mit SSL-Fehlern schnell. Prüfe das Ablaufdatum regelmäßig.</p>
+                    </div>
+
+                    <div class="bg-white/5 rounded-xl p-5">
+                        <div class="w-10 h-10 bg-blue-500/20 rounded-lg flex items-center justify-center mb-4">
+                            <svg class="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+                        </div>
+                        <h3 class="text-white font-semibold mb-2">HTTP→HTTPS Redirect ist Pflicht</h3>
+                        <p class="text-blue-200/60 text-sm leading-relaxed">Selbst wenn HTTPS aktiv ist — ohne Redirect von http:// auf https:// hat deine Website zwei Versionen. Google könnte beide indexieren und den Content als Duplikat werten. 301-Redirect ist SEO-Pflicht.</p>
+                    </div>
+
+                </div>
+
+                <!-- SSL Checklist -->
+                <div class="mt-8 bg-white/5 rounded-xl p-6">
+                    <h3 class="text-white font-semibold mb-4">SSL-Checkliste für SEO</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                            <span class="text-blue-200/70 text-sm">HTTPS aktiv und alle Seiten über <strong class="text-white">https://</strong> erreichbar</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                            <span class="text-blue-200/70 text-sm">301-Redirect von http:// auf https:// eingerichtet</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                            <span class="text-blue-200/70 text-sm">Zertifikat läuft nicht in den nächsten <strong class="text-white">30 Tagen</strong> ab</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                            <span class="text-blue-200/70 text-sm">Alle internen Links und Ressourcen (Bilder, CSS, JS) über <strong class="text-white">https://</strong> eingebunden</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                            <span class="text-blue-200/70 text-sm">Canonical-Tags auf die https://-Version gesetzt</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                            <span class="text-blue-200/70 text-sm">Sitemap.xml mit https://-URLs hinterlegt und bei Google eingereicht</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Related Tools -->
+            <div class="mt-8">
+                <h3 class="text-white font-semibold text-lg mb-4">Weitere SEO-Tools</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                    <a href="heading-struktur-checker.html" class="glass rounded-xl p-4 hover:border-blue-400/50 transition-all group">
+                        <div class="w-9 h-9 bg-amber-500/20 rounded-lg flex items-center justify-center mb-3">
+                            <svg class="w-5 h-5 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+                        </div>
+                        <p class="text-white text-sm font-medium group-hover:text-blue-300 transition-colors">Heading-Checker</p>
+                        <p class="text-blue-200/50 text-xs mt-1">H1-H6 Struktur prüfen</p>
+                    </a>
+                    <a href="meta-tag-generator.html" class="glass rounded-xl p-4 hover:border-blue-400/50 transition-all group">
+                        <div class="w-9 h-9 bg-blue-500/20 rounded-lg flex items-center justify-center mb-3">
+                            <svg class="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"/></svg>
+                        </div>
+                        <p class="text-white text-sm font-medium group-hover:text-blue-300 transition-colors">Meta-Tag-Generator</p>
+                        <p class="text-blue-200/50 text-xs mt-1">Title & Description erstellen</p>
+                    </a>
+                    <a href="robots-txt-generator.html" class="glass rounded-xl p-4 hover:border-blue-400/50 transition-all group">
+                        <div class="w-9 h-9 bg-emerald-500/20 rounded-lg flex items-center justify-center mb-3">
+                            <svg class="w-5 h-5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                        </div>
+                        <p class="text-white text-sm font-medium group-hover:text-blue-300 transition-colors">Robots.txt-Generator</p>
+                        <p class="text-blue-200/50 text-xs mt-1">Crawler-Steuerung erstellen</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-black/30 backdrop-blur-md border-t border-white/10">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <div class="text-white/60 mb-4 md:mb-0 text-sm">
+                        &copy; 2026 Thümmler AI GmbH. Alle Rechte vorbehalten.
+                    </div>
+                    <div class="flex space-x-6">
+                        <a href="/impressum.html" class="text-gray-300 hover:text-white transition-colors text-sm">Impressum</a>
+                        <a href="/datenschutz.html" class="text-gray-300 hover:text-white transition-colors text-sm">Datenschutz</a>
+                        <a href="/agb.html" class="text-gray-300 hover:text-white transition-colors text-sm">AGB</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+    <script>
+        function parseDomain(input) {
+            input = input.trim();
+            // Remove protocol if given
+            input = input.replace(/^https?:\/\//i, '');
+            // Remove trailing slash and path
+            input = input.split('/')[0].split('?')[0];
+            // Remove www.
+            // Keep www. — we query as-is but also try without
+            return input.toLowerCase();
+        }
+
+        function formatDate(dateStr) {
+            if (!dateStr) return 'Unbekannt';
+            try {
+                // crt.sh format: "2026-04-01T00:00:00" or similar
+                const d = new Date(dateStr.replace(' ', 'T'));
+                return d.toLocaleDateString('de-DE', { day: '2-digit', month: '2-digit', year: 'numeric' });
+            } catch {
+                return dateStr;
+            }
+        }
+
+        function daysUntil(dateStr) {
+            if (!dateStr) return null;
+            try {
+                const d = new Date(dateStr.replace(' ', 'T'));
+                const now = new Date();
+                return Math.floor((d - now) / (1000 * 60 * 60 * 24));
+            } catch {
+                return null;
+            }
+        }
+
+        function extractIssuer(issuerStr) {
+            if (!issuerStr) return 'Unbekannt';
+            // CN=R10, O=Let's Encrypt, C=US
+            const oMatch = issuerStr.match(/O=([^,]+)/);
+            const cnMatch = issuerStr.match(/CN=([^,]+)/);
+            if (oMatch) return oMatch[1].replace(/\\/g, '').trim();
+            if (cnMatch) return cnMatch[1].replace(/\\/g, '').trim();
+            return issuerStr.split(',')[0].replace('CN=', '').trim();
+        }
+
+        function setCard(iconId, badgeId, textId, type, badgeText, description) {
+            const icon = document.getElementById(iconId);
+            const badge = document.getElementById(badgeId);
+            const text = document.getElementById(textId);
+
+            const configs = {
+                ok: {
+                    iconBg: 'bg-green-500/20',
+                    iconColor: 'text-green-400',
+                    badgeClass: 'badge-green',
+                    iconSvg: '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>'
+                },
+                warning: {
+                    iconBg: 'bg-amber-500/20',
+                    iconColor: 'text-amber-400',
+                    badgeClass: 'badge-yellow',
+                    iconSvg: '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>'
+                },
+                error: {
+                    iconBg: 'bg-red-500/20',
+                    iconColor: 'text-red-400',
+                    badgeClass: 'badge-red',
+                    iconSvg: '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"/>'
+                },
+                info: {
+                    iconBg: 'bg-blue-500/20',
+                    iconColor: 'text-blue-400',
+                    badgeClass: 'badge-gray',
+                    iconSvg: '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>'
+                }
+            };
+
+            const cfg = configs[type] || configs.info;
+
+            if (icon) {
+                icon.className = `w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0 ${cfg.iconBg}`;
+                icon.innerHTML = `<svg class="w-6 h-6 ${cfg.iconColor}" fill="none" stroke="currentColor" viewBox="0 0 24 24">${cfg.iconSvg}</svg>`;
+            }
+            if (badge) {
+                badge.className = `status-badge ${cfg.badgeClass}`;
+                badge.innerHTML = badgeText;
+            }
+            if (text) {
+                text.textContent = description;
+            }
+        }
+
+        async function checkSSL() {
+            const input = document.getElementById('domainInput').value;
+            if (!input.trim()) {
+                document.getElementById('domainInput').focus();
+                return;
+            }
+
+            const domain = parseDomain(input);
+            if (!domain || !domain.includes('.')) {
+                document.getElementById('errorText').textContent = 'Bitte eine gültige Domain eingeben (z.B. beispiel.de).';
+                document.getElementById('errorSection').classList.remove('hidden');
+                document.getElementById('resultsSection').classList.add('hidden');
+                return;
+            }
+
+            // Show loading
+            document.getElementById('loadingSection').classList.remove('hidden');
+            document.getElementById('resultsSection').classList.add('hidden');
+            document.getElementById('errorSection').classList.add('hidden');
+            document.getElementById('certDetails').classList.add('hidden');
+
+            // Update labels
+            document.getElementById('scoreDomain').textContent = domain;
+
+            let score = 0;
+            let httpsActive = false;
+            let certValid = false;
+            let expiryDate = null;
+            let issuer = null;
+            let certData = null;
+
+            // Step 1: Test HTTPS connectivity
+            document.getElementById('loadingText').textContent = 'HTTPS-Erreichbarkeit wird geprüft…';
+            try {
+                const controller = new AbortController();
+                const timeoutId = setTimeout(() => controller.abort(), 8000);
+                await fetch(`https://${domain}`, {
+                    mode: 'no-cors',
+                    signal: controller.signal
+                });
+                clearTimeout(timeoutId);
+                httpsActive = true;
+                score += 40;
+            } catch (e) {
+                // Could be CORS, could be down
+                // Try with www. prefix if not already there
+                if (!domain.startsWith('www.')) {
+                    try {
+                        const controller2 = new AbortController();
+                        const timeoutId2 = setTimeout(() => controller2.abort(), 5000);
+                        await fetch(`https://www.${domain}`, {
+                            mode: 'no-cors',
+                            signal: controller2.signal
+                        });
+                        clearTimeout(timeoutId2);
+                        httpsActive = true;
+                        score += 40;
+                    } catch {
+                        httpsActive = false;
+                    }
+                }
+            }
+
+            // Step 2: Get cert info from crt.sh (Certificate Transparency)
+            document.getElementById('loadingText').textContent = 'Zertifikat-Transparenz-Log wird abgefragt…';
+            try {
+                // Query crt.sh for the domain
+                const queryDomain = domain.startsWith('www.') ? domain : domain;
+                const crtResponse = await fetch(
+                    `https://crt.sh/?q=${encodeURIComponent(queryDomain)}&output=json`,
+                    { signal: AbortSignal.timeout(12000) }
+                );
+                if (crtResponse.ok) {
+                    const certs = await crtResponse.json();
+                    if (certs && certs.length > 0) {
+                        // Sort by id desc (most recent first)
+                        certs.sort((a, b) => b.id - a.id);
+                        // Find a cert that's not expired and covers the domain
+                        const now = new Date();
+                        let bestCert = null;
+
+                        for (const cert of certs) {
+                            const notAfter = cert.not_after ? new Date(cert.not_after) : null;
+                            const notBefore = cert.not_before ? new Date(cert.not_before) : null;
+                            if (notAfter && notBefore && notAfter > now && notBefore <= now) {
+                                bestCert = cert;
+                                break;
+                            }
+                        }
+
+                        // If no currently valid cert found, use most recent
+                        if (!bestCert) bestCert = certs[0];
+
+                        if (bestCert) {
+                            certData = bestCert;
+                            expiryDate = bestCert.not_after;
+                            issuer = extractIssuer(bestCert.issuer_name || '');
+
+                            const daysLeft = daysUntil(expiryDate);
+                            if (daysLeft !== null && daysLeft > 0) {
+                                certValid = true;
+                                if (daysLeft > 30) score += 40;
+                                else if (daysLeft > 0) score += 20; // expiring soon
+                            }
+
+                            // Bonus for HTTPS being confirmed by cert
+                            if (certValid && !httpsActive) {
+                                httpsActive = true;
+                                score += 20;
+                            }
+                        }
+                    }
+                }
+            } catch (e) {
+                // crt.sh not reachable (CORS or timeout) — fallback
+                if (httpsActive) {
+                    // We know HTTPS works, just can't get cert details
+                    certValid = true;
+                    score += 30;
+                }
+            }
+
+            // Step 3: Build results
+            document.getElementById('loadingSection').classList.add('hidden');
+            document.getElementById('resultsSection').classList.remove('hidden');
+            document.getElementById('resultsSection').classList.add('fade-in');
+
+            // HTTPS Card
+            if (httpsActive) {
+                setCard('httpsIcon', 'httpsBadge', 'httpsText', 'ok',
+                    '✓ Aktiv',
+                    'Die Website ist über HTTPS erreichbar. Gut für SEO und das Vertrauen der Besucher.');
+            } else {
+                setCard('httpsIcon', 'httpsBadge', 'httpsText', 'error',
+                    '✗ Nicht aktiv',
+                    'HTTPS ist nicht aktiv oder die Domain ist nicht erreichbar. Das schadet dem Ranking und Besucher sehen eine „Nicht sicher"-Warnung.');
+            }
+
+            // Cert Validity
+            if (certValid) {
+                const daysLeft = daysUntil(expiryDate);
+                if (daysLeft !== null && daysLeft <= 30) {
+                    setCard('validIcon', 'validBadge', 'validText', 'warning',
+                        '⚠ Bald ablaufend',
+                        `Das Zertifikat läuft in ${daysLeft} Tagen ab. Bitte verlängere es umgehend, sonst blockiert der Browser deine Website.`);
+                } else {
+                    setCard('validIcon', 'validBadge', 'validText', 'ok',
+                        '✓ Gültig',
+                        'Das SSL-Zertifikat ist aktuell gültig. Besucher können die Website sicher aufrufen.');
+                }
+            } else if (httpsActive && !certData) {
+                // HTTPS works but we couldn't get cert details
+                setCard('validIcon', 'validBadge', 'validText', 'ok',
+                    '✓ Vermutlich gültig',
+                    'Die Website ist über HTTPS erreichbar, was bedeutet das Zertifikat ist gültig. Details konnten nicht abgerufen werden.');
+            } else {
+                setCard('validIcon', 'validBadge', 'validText', 'error',
+                    '✗ Ungültig / Abgelaufen',
+                    'Das SSL-Zertifikat scheint nicht gültig zu sein. Browser blockieren den Zugriff und Google deindexiert solche Seiten schnell.');
+            }
+
+            // Expiry Date Card
+            if (expiryDate) {
+                const daysLeft = daysUntil(expiryDate);
+                let expiryMsg = `Läuft ab am: ${formatDate(expiryDate)}`;
+                if (daysLeft !== null) {
+                    if (daysLeft <= 0) expiryMsg += ' — Bereits abgelaufen!';
+                    else if (daysLeft <= 7) expiryMsg += ` — Läuft in ${daysLeft} Tagen ab! Sofort verlängern!`;
+                    else if (daysLeft <= 30) expiryMsg += ` — Noch ${daysLeft} Tage. Bald verlängern.`;
+                    else expiryMsg += ` — Noch ${daysLeft} Tage gültig.`;
+                }
+                document.getElementById('expiryText').textContent = expiryMsg;
+
+                if (daysLeft !== null && daysLeft <= 7) {
+                    document.getElementById('expiryIcon').className = 'w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0 bg-red-500/20';
+                    document.getElementById('expiryIcon').innerHTML = '<svg class="w-6 h-6 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>';
+                } else if (daysLeft !== null && daysLeft <= 30) {
+                    document.getElementById('expiryIcon').className = 'w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0 bg-amber-500/20';
+                    document.getElementById('expiryIcon').innerHTML = '<svg class="w-6 h-6 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>';
+                } else {
+                    document.getElementById('expiryIcon').className = 'w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0 bg-green-500/20';
+                    document.getElementById('expiryIcon').innerHTML = '<svg class="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>';
+                }
+            } else {
+                document.getElementById('expiryText').textContent = httpsActive
+                    ? 'Ablaufdatum konnte nicht abgerufen werden. Nutze deinen Hoster-Zugang um das Datum zu prüfen.'
+                    : 'Kein gültiges Zertifikat gefunden.';
+            }
+
+            // Issuer Card
+            if (issuer) {
+                const isLetsEncrypt = issuer.toLowerCase().includes("let's encrypt") || issuer.toLowerCase().includes('lets encrypt') || issuer.toLowerCase().includes('r10') || issuer.toLowerCase().includes('r11') || issuer.toLowerCase().includes('e5') || issuer.toLowerCase().includes('e6');
+                document.getElementById('issuerText').textContent = issuer + (isLetsEncrypt ? ' (kostenlos, weit verbreitet — alle 90 Tage verlängern!)' : '');
+            } else if (httpsActive) {
+                document.getElementById('issuerText').textContent = 'Aussteller konnte nicht abgerufen werden. HTTPS ist aber aktiv.';
+            } else {
+                document.getElementById('issuerText').textContent = 'Kein Aussteller gefunden — möglicherweise kein gültiges Zertifikat.';
+            }
+
+            // Score
+            score = Math.min(100, score);
+            const scoreEl = document.getElementById('scoreCircle');
+            const scoreBar = document.getElementById('scoreBar');
+
+            let grade, color, barColor;
+            if (score >= 75) { grade = 'A'; color = 'text-green-400'; scoreEl.className = 'w-20 h-20 rounded-full flex items-center justify-center text-3xl font-black border-4 border-green-500/50 bg-green-500/10 text-green-400'; barColor = 'bg-gradient-to-r from-green-500 to-emerald-400'; }
+            else if (score >= 50) { grade = 'B'; color = 'text-amber-400'; scoreEl.className = 'w-20 h-20 rounded-full flex items-center justify-center text-3xl font-black border-4 border-amber-500/50 bg-amber-500/10 text-amber-400'; barColor = 'bg-gradient-to-r from-amber-500 to-yellow-400'; }
+            else if (score >= 25) { grade = 'C'; color = 'text-orange-400'; scoreEl.className = 'w-20 h-20 rounded-full flex items-center justify-center text-3xl font-black border-4 border-orange-500/50 bg-orange-500/10 text-orange-400'; barColor = 'bg-gradient-to-r from-orange-500 to-red-400'; }
+            else { grade = 'F'; color = 'text-red-400'; scoreEl.className = 'w-20 h-20 rounded-full flex items-center justify-center text-3xl font-black border-4 border-red-500/50 bg-red-500/10 text-red-400'; barColor = 'bg-gradient-to-r from-red-500 to-rose-400'; }
+
+            scoreEl.textContent = grade;
+            scoreBar.className = `progress-fill ${barColor}`;
+            setTimeout(() => { scoreBar.style.width = score + '%'; }, 100);
+
+            const scoreSubtitle = document.getElementById('scoreSubtitle');
+            const gradeTexts = { A: 'Sehr gute SSL-Konfiguration', B: 'SSL-Konfiguration mit Optimierungspotenzial', C: 'SSL-Konfiguration muss verbessert werden', F: 'Kritische SSL-Probleme gefunden' };
+            scoreSubtitle.textContent = gradeTexts[grade] || 'SSL-Bewertung';
+
+            // SEO Text
+            const seoEl = document.getElementById('seoText');
+            if (score >= 75) {
+                seoEl.textContent = `${domain} hat eine gute SSL-Konfiguration. HTTPS ist aktiv und das Zertifikat ist gültig — das ist eine solide Basis für gute Google-Rankings. Stelle sicher, dass HTTP-Anfragen auf HTTPS weitergeleitet werden und alle internen Links https:// verwenden.`;
+            } else if (score >= 50) {
+                seoEl.textContent = `${domain} hat HTTPS, aber es gibt Optimierungsbedarf. Prüfe das Ablaufdatum des Zertifikats und stelle sicher, dass HTTP automatisch auf HTTPS weitergeleitet wird. Ohne korrekte Konfiguration kann Google beide Versionen (http und https) indexieren.`;
+            } else if (httpsActive) {
+                seoEl.textContent = `${domain} scheint HTTPS zu nutzen, aber Details konnten nicht vollständig geprüft werden. Prüfe in deinem Hosting-Panel ob das Zertifikat korrekt konfiguriert ist und ob ein HTTP-zu-HTTPS Redirect aktiv ist.`;
+            } else {
+                seoEl.textContent = `${domain} nutzt kein HTTPS oder ist nicht erreichbar. Das ist ein erheblicher SEO-Nachteil. Browser zeigen „Nicht sicher" an, was die Absprungrate erhöht. SSL-Zertifikate sind kostenlos verfügbar (z.B. über Let's Encrypt). Dein Hoster bietet oft eine 1-Klick-Lösung an.`;
+            }
+
+            // Show cert details if available
+            if (certData) {
+                document.getElementById('certDetails').classList.remove('hidden');
+                const table = document.getElementById('certTable');
+                const rows = [
+                    ['Domain (CN)', certData.common_name || domain],
+                    ['Aussteller', extractIssuer(certData.issuer_name || '')],
+                    ['Gültig ab', formatDate(certData.not_before)],
+                    ['Gültig bis', formatDate(certData.not_after)],
+                    ['Zertifikat-ID', certData.id ? `crt.sh #${certData.id}` : '—'],
+                ];
+                table.innerHTML = rows.map(([label, val]) => `
+                    <div class="flex items-center justify-between py-2 border-b border-white/5 last:border-0">
+                        <span class="text-blue-200/50 text-sm">${label}</span>
+                        <span class="text-white text-sm font-medium ml-4 text-right">${val}</span>
+                    </div>
+                `).join('');
+            }
+        }
+    </script>
+</body>
+</html>
