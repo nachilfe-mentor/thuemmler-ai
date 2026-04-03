@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K1S1RXBDS8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K1S1RXBDS8');
+    </script>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8475857002943858" crossorigin="anonymous"></script>
+    <title>Base64 Encoder & Decoder - Kostenlos online | Shift07</title>
+    <meta name="description" content="Text oder Binärdaten einfach und kostenlos zu Base64 kodieren oder dekodieren. Unterstützt Umlaute, Unicode und Datei-Uploads. 100% im Browser — keine Daten werden übertragen.">
+    <meta name="keywords" content="Base64 Encoder, Base64 Decoder, Base64 online, Base64 kodieren, Base64 dekodieren, Base64 converter">
+    <meta name="author" content="Thümmler AI GmbH">
+    <link rel="icon" type="image/png" href="/logo.png">
+    <link rel="canonical" href="https://shift07.ai/tools/base64-encoder-decoder.html">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Base64 Encoder & Decoder - Kostenlos online">
+    <meta property="og:description" content="Text oder Binärdaten einfach und kostenlos zu Base64 kodieren oder dekodieren. 100% im Browser — keine Daten werden übertragen.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://shift07.ai/tools/base64-encoder-decoder.html">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="Shift07">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Base64 Encoder & Decoder - Kostenlos online">
+    <meta name="twitter:description" content="Text zu Base64 kodieren oder dekodieren. 100% im Browser — keine Daten werden übertragen.">
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Base64 Encoder & Decoder",
+      "description": "Text oder Binärdaten einfach und kostenlos zu Base64 kodieren oder dekodieren. 100% im Browser — keine Daten werden übertragen.",
+      "url": "https://shift07.ai/tools/base64-encoder-decoder.html",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR"
+      },
+      "provider": {
+        "@type": "Organization",
+        "name": "Thümmler AI GmbH",
+        "url": "https://shift07.ai"
+      }
+    }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: rgba(15, 23, 42, 0.5); }
+        ::-webkit-scrollbar-thumb { background: rgba(59, 130, 246, 0.5); border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: rgba(59, 130, 246, 0.7); }
+        html { scroll-behavior: smooth; }
+        .glass {
+            background: rgba(255, 255, 255, 0.06);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        textarea {
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            color: #e2e8f0;
+            resize: vertical;
+            transition: border-color 0.2s;
+        }
+        textarea:focus {
+            outline: none;
+            border-color: rgba(99, 102, 241, 0.6);
+        }
+        textarea::placeholder { color: rgba(148, 163, 184, 0.5); }
+        .btn-primary {
+            background: linear-gradient(to right, #3b82f6, #6366f1);
+            color: white;
+            font-weight: 600;
+            padding: 0.75rem 2rem;
+            border-radius: 0.75rem;
+            transition: all 0.2s;
+            cursor: pointer;
+            border: none;
+        }
+        .btn-primary:hover { filter: brightness(1.1); transform: translateY(-1px); }
+        .btn-secondary {
+            background: rgba(255,255,255,0.08);
+            color: #cbd5e1;
+            font-weight: 500;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.75rem;
+            transition: all 0.2s;
+            cursor: pointer;
+            border: 1px solid rgba(255,255,255,0.12);
+        }
+        .btn-secondary:hover { background: rgba(255,255,255,0.13); color: white; }
+        .mode-btn {
+            padding: 0.6rem 1.5rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            border: none;
+        }
+        .mode-btn.active { background: linear-gradient(to right, #3b82f6, #6366f1); color: white; }
+        .mode-btn:not(.active) { background: rgba(255,255,255,0.06); color: #94a3b8; }
+        .mode-btn:not(.active):hover { background: rgba(255,255,255,0.11); color: #e2e8f0; }
+        .stat-badge { background: rgba(99,102,241,0.12); border: 1px solid rgba(99,102,241,0.25); color: #a5b4fc; padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.8rem; }
+        .error-msg { color: #f87171; font-size: 0.85rem; margin-top: 0.5rem; display: none; }
+        .success-flash { animation: flash 0.4s ease; }
+        @keyframes flash { 0%,100%{opacity:1} 50%{opacity:0.5} }
+    </style>
+</head>
+<body class="antialiased">
+    <div class="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
+
+        <!-- Navigation -->
+        <nav class="bg-black/20 backdrop-blur-md border-b border-white/10">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center h-16">
+                    <a href="/" class="flex items-center gap-2">
+                        <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                        <span class="text-xl font-bold text-white">Shift07</span>
+                    </a>
+                    <div class="hidden md:flex items-baseline space-x-4">
+                        <a href="/" class="text-white hover:text-blue-300 px-3 py-2 text-sm font-medium transition-colors">SEO-Tool</a>
+                        <a href="/blog/" class="text-white hover:text-blue-300 px-3 py-2 text-sm font-medium transition-colors">Blog</a>
+                        <a href="/tools/" class="text-blue-300 px-3 py-2 text-sm font-medium">Tools</a>
+                        <a href="/app/#/login" class="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:from-blue-600 hover:to-purple-700 transition-all">Anmelden</a>
+                    </div>
+                    <button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="md:hidden text-white">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                    </button>
+                </div>
+                <div id="mobile-menu" class="hidden md:hidden pb-4">
+                    <a href="/" class="block text-white hover:text-blue-300 px-3 py-2 text-sm font-medium">SEO-Tool</a>
+                    <a href="/blog/" class="block text-white hover:text-blue-300 px-3 py-2 text-sm font-medium">Blog</a>
+                    <a href="/tools/" class="block text-blue-300 px-3 py-2 text-sm font-medium">Tools</a>
+                    <a href="/app/#/login" class="block text-white hover:text-blue-300 px-3 py-2 text-sm font-medium">Anmelden</a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero -->
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-6 text-center">
+            <div class="inline-flex items-center gap-2 bg-indigo-500/10 border border-indigo-500/30 text-indigo-300 px-4 py-1.5 rounded-full text-sm font-medium mb-5">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+                100% im Browser — keine Daten werden gespeichert
+            </div>
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">
+                <span class="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Base64 Encoder & Decoder</span>
+            </h1>
+            <p class="text-xl text-blue-200/80 max-w-2xl mx-auto">Text, URLs oder Daten sofort zu Base64 kodieren oder dekodieren — sicher, schnell und kostenlos.</p>
+        </section>
+
+        <!-- Main Tool -->
+        <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+
+            <!-- Mode Switcher -->
+            <div class="flex items-center justify-center gap-2 mb-8">
+                <button class="mode-btn active" id="btn-encode" onclick="setMode('encode')">Kodieren (Text → Base64)</button>
+                <button class="mode-btn" id="btn-decode" onclick="setMode('decode')">Dekodieren (Base64 → Text)</button>
+            </div>
+
+            <!-- Input -->
+            <div class="glass rounded-2xl p-6 md:p-8 mb-6">
+                <div class="flex items-center justify-between mb-3">
+                    <label class="text-white font-semibold" id="input-label">Eingabe (Text)</label>
+                    <div class="flex items-center gap-2">
+                        <span class="stat-badge" id="input-chars">0 Zeichen</span>
+                        <button class="btn-secondary text-sm px-3 py-1.5" onclick="clearAll()">Leeren</button>
+                    </div>
+                </div>
+                <textarea
+                    id="input-text"
+                    rows="7"
+                    class="w-full rounded-xl px-4 py-3 text-sm font-mono"
+                    placeholder="Text hier eingeben…"
+                    oninput="onInputChange()"
+                ></textarea>
+                <p class="error-msg" id="error-msg">Ungültiger Base64-String. Bitte prüfe die Eingabe.</p>
+
+                <!-- File upload -->
+                <div class="mt-3 flex items-center gap-3">
+                    <label class="btn-secondary text-sm cursor-pointer flex items-center gap-2">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"/></svg>
+                        Datei hochladen
+                        <input type="file" class="hidden" id="file-input" onchange="handleFileUpload(this)">
+                    </label>
+                    <span class="text-gray-500 text-xs" id="file-name"></span>
+                </div>
+            </div>
+
+            <!-- Convert Button -->
+            <div class="flex justify-center mb-6">
+                <button class="btn-primary text-lg px-10" onclick="convert()">
+                    <span id="btn-label">Kodieren</span>
+                </button>
+            </div>
+
+            <!-- Output -->
+            <div class="glass rounded-2xl p-6 md:p-8">
+                <div class="flex items-center justify-between mb-3">
+                    <label class="text-white font-semibold" id="output-label">Ausgabe (Base64)</label>
+                    <div class="flex items-center gap-2">
+                        <span class="stat-badge" id="output-chars">0 Zeichen</span>
+                        <button class="btn-secondary text-sm px-3 py-1.5 flex items-center gap-1" onclick="copyOutput()" id="copy-btn">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                            Kopieren
+                        </button>
+                        <button class="btn-secondary text-sm px-3 py-1.5 flex items-center gap-1" onclick="downloadOutput()">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                            Download
+                        </button>
+                    </div>
+                </div>
+                <textarea
+                    id="output-text"
+                    rows="7"
+                    class="w-full rounded-xl px-4 py-3 text-sm font-mono"
+                    placeholder="Ergebnis erscheint hier…"
+                    readonly
+                ></textarea>
+            </div>
+
+            <!-- Cross-sell -->
+            <div class="glass rounded-2xl p-6 mt-6 border-blue-500/30 border mt-8">
+                <div class="flex items-start gap-4">
+                    <div class="bg-blue-500/20 rounded-lg p-3 flex-shrink-0">
+                        <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                    </div>
+                    <div>
+                        <h3 class="text-white font-semibold mb-1">Wie steht es um die SEO deiner Website?</h3>
+                        <p class="text-blue-200/70 text-sm mb-3">Fehlende Meta-Tags, langsame Ladezeiten, keine strukturierten Daten — finde alle SEO-Probleme deiner Website in einer kostenlosen Analyse.</p>
+                        <a href="/" class="inline-flex items-center text-blue-400 hover:text-blue-300 text-sm font-medium transition-colors">
+                            Jetzt kostenlos mit Shift07 prüfen
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Explanation Section -->
+            <div class="glass rounded-2xl p-6 md:p-8 mt-10">
+                <h2 class="text-2xl font-bold text-white mb-6">Was ist Base64 und wann brauche ich es?</h2>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-white/5 rounded-xl p-5">
+                        <div class="text-blue-400 mb-3">
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                        </div>
+                        <h3 class="text-white font-semibold mb-2">Was ist Base64?</h3>
+                        <p class="text-blue-200/70 text-sm">Base64 ist ein Kodierungsverfahren, das beliebige Binärdaten in einen Text aus 64 ASCII-Zeichen (A–Z, a–z, 0–9, +, /) umwandelt. So können Binärdaten sicher in Textkontexten übertragen werden.</p>
+                    </div>
+                    <div class="bg-white/5 rounded-xl p-5">
+                        <div class="text-purple-400 mb-3">
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                        </div>
+                        <h3 class="text-white font-semibold mb-2">Bilder in HTML einbetten</h3>
+                        <p class="text-blue-200/70 text-sm">Mit Base64 kannst du kleine Bilder direkt ins HTML oder CSS einbetten: <code style="color:#93c5fd;background:rgba(59,130,246,0.15);padding:2px 5px;border-radius:3px;font-size:0.85em;">src="data:image/png;base64,..."</code> — kein separater HTTP-Request nötig.</p>
+                    </div>
+                    <div class="bg-white/5 rounded-xl p-5">
+                        <div class="text-green-400 mb-3">
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                        </div>
+                        <h3 class="text-white font-semibold mb-2">E-Mail-Anhänge</h3>
+                        <p class="text-blue-200/70 text-sm">E-Mail-Protokolle (MIME) verwenden Base64, um Binärdateien wie PDFs oder Bilder als Anhang zu übertragen. Dein E-Mail-Client kodiert und dekodiert das automatisch.</p>
+                    </div>
+                    <div class="bg-white/5 rounded-xl p-5">
+                        <div class="text-yellow-400 mb-3">
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+                        </div>
+                        <h3 class="text-white font-semibold mb-2">APIs und Authentifizierung</h3>
+                        <p class="text-blue-200/70 text-sm">HTTP Basic Authentication überträgt Zugangsdaten als Base64-String im Header. Viele APIs nutzen Base64 für Tokens oder Binärdaten in JSON-Feldern. <strong style="color:#f1f5f9;">Achtung: Base64 ist keine Verschlüsselung!</strong></p>
+                    </div>
+                </div>
+
+                <div class="mt-6 bg-yellow-500/10 border border-yellow-500/30 rounded-xl p-4 flex gap-3">
+                    <svg class="w-5 h-5 text-yellow-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+                    <p class="text-yellow-200/80 text-sm"><strong class="text-yellow-300">Sicherheitshinweis:</strong> Base64 ist <em>keine</em> Verschlüsselung — kodierte Daten können von jedem einfach dekodiert werden. Für Passwörter und sensible Daten niemals Base64 allein verwenden. Verwende echte Verschlüsselung (AES, RSA) oder Hashing (bcrypt, Argon2).</p>
+                </div>
+            </div>
+
+            <!-- Related Tools -->
+            <div class="glass rounded-2xl p-6 mt-8">
+                <h2 class="text-lg font-bold text-white mb-4">Weitere nützliche Tools</h2>
+                <div class="grid sm:grid-cols-3 gap-4">
+                    <a href="/tools/meta-tag-generator.html" class="bg-white/5 hover:bg-white/10 rounded-xl p-4 transition-colors group">
+                        <p class="text-white font-medium text-sm group-hover:text-blue-300 transition-colors">Meta-Tag-Generator</p>
+                        <p class="text-gray-400 text-xs mt-1">Title & Description erstellen</p>
+                    </a>
+                    <a href="/tools/open-graph-vorschau.html" class="bg-white/5 hover:bg-white/10 rounded-xl p-4 transition-colors group">
+                        <p class="text-white font-medium text-sm group-hover:text-blue-300 transition-colors">Open-Graph-Vorschau</p>
+                        <p class="text-gray-400 text-xs mt-1">Social Media Preview testen</p>
+                    </a>
+                    <a href="/tools/qr-code-generator.html" class="bg-white/5 hover:bg-white/10 rounded-xl p-4 transition-colors group">
+                        <p class="text-white font-medium text-sm group-hover:text-blue-300 transition-colors">QR-Code-Generator</p>
+                        <p class="text-gray-400 text-xs mt-1">QR-Codes kostenlos erstellen</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-black/30 backdrop-blur-md border-t border-white/10">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <div class="text-white/60 mb-4 md:mb-0 text-sm">
+                        &copy; 2026 Thümmler AI GmbH. Alle Rechte vorbehalten.
+                    </div>
+                    <div class="flex space-x-6">
+                        <a href="/impressum.html" class="text-gray-300 hover:text-white transition-colors text-sm">Impressum</a>
+                        <a href="/datenschutz.html" class="text-gray-300 hover:text-white transition-colors text-sm">Datenschutz</a>
+                        <a href="/agb.html" class="text-gray-300 hover:text-white transition-colors text-sm">AGB</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        let currentMode = 'encode';
+
+        function setMode(mode) {
+            currentMode = mode;
+            document.getElementById('btn-encode').classList.toggle('active', mode === 'encode');
+            document.getElementById('btn-decode').classList.toggle('active', mode === 'decode');
+            document.getElementById('input-label').textContent = mode === 'encode' ? 'Eingabe (Text)' : 'Eingabe (Base64)';
+            document.getElementById('output-label').textContent = mode === 'encode' ? 'Ausgabe (Base64)' : 'Ausgabe (Text)';
+            document.getElementById('btn-label').textContent = mode === 'encode' ? 'Kodieren' : 'Dekodieren';
+            document.getElementById('input-text').placeholder = mode === 'encode' ? 'Text hier eingeben…' : 'Base64-String hier eingeben…';
+            document.getElementById('error-msg').style.display = 'none';
+            // Auto-convert if there's input
+            if (document.getElementById('input-text').value.trim()) convert();
+        }
+
+        function onInputChange() {
+            const val = document.getElementById('input-text').value;
+            document.getElementById('input-chars').textContent = val.length + ' Zeichen';
+            document.getElementById('error-msg').style.display = 'none';
+            // Live convert
+            if (val.trim()) {
+                try { doConvert(val); }
+                catch(e) { /* silence on live typing */ }
+            } else {
+                document.getElementById('output-text').value = '';
+                document.getElementById('output-chars').textContent = '0 Zeichen';
+            }
+        }
+
+        function doConvert(input) {
+            let result;
+            if (currentMode === 'encode') {
+                // Encode with full Unicode support
+                result = btoa(unescape(encodeURIComponent(input)));
+            } else {
+                // Decode with full Unicode support
+                try {
+                    result = decodeURIComponent(escape(atob(input.trim())));
+                } catch(e) {
+                    throw new Error('invalid');
+                }
+            }
+            document.getElementById('output-text').value = result;
+            document.getElementById('output-chars').textContent = result.length + ' Zeichen';
+            return result;
+        }
+
+        function convert() {
+            const input = document.getElementById('input-text').value;
+            if (!input.trim()) return;
+            try {
+                doConvert(input);
+                document.getElementById('error-msg').style.display = 'none';
+            } catch(e) {
+                if (currentMode === 'decode') {
+                    document.getElementById('error-msg').style.display = 'block';
+                    document.getElementById('output-text').value = '';
+                    document.getElementById('output-chars').textContent = '0 Zeichen';
+                }
+            }
+        }
+
+        function clearAll() {
+            document.getElementById('input-text').value = '';
+            document.getElementById('output-text').value = '';
+            document.getElementById('input-chars').textContent = '0 Zeichen';
+            document.getElementById('output-chars').textContent = '0 Zeichen';
+            document.getElementById('error-msg').style.display = 'none';
+            document.getElementById('file-name').textContent = '';
+        }
+
+        function copyOutput() {
+            const output = document.getElementById('output-text').value;
+            if (!output) return;
+            navigator.clipboard.writeText(output).then(() => {
+                const btn = document.getElementById('copy-btn');
+                const orig = btn.innerHTML;
+                btn.innerHTML = '<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> Kopiert!';
+                btn.style.background = 'rgba(34,197,94,0.2)';
+                btn.style.color = '#4ade80';
+                setTimeout(() => { btn.innerHTML = orig; btn.style.background = ''; btn.style.color = ''; }, 2000);
+            });
+        }
+
+        function downloadOutput() {
+            const output = document.getElementById('output-text').value;
+            if (!output) return;
+            const ext = currentMode === 'encode' ? '.b64' : '.txt';
+            const blob = new Blob([output], { type: 'text/plain' });
+            const a = document.createElement('a');
+            a.href = URL.createObjectURL(blob);
+            a.download = 'shift07-base64' + ext;
+            a.click();
+            URL.revokeObjectURL(a.href);
+        }
+
+        function handleFileUpload(input) {
+            const file = input.files[0];
+            if (!file) return;
+            document.getElementById('file-name').textContent = file.name + ' (' + (file.size / 1024).toFixed(1) + ' KB)';
+            const reader = new FileReader();
+            if (currentMode === 'encode') {
+                reader.onload = function(e) {
+                    // For encode: show raw text (or binary as text)
+                    const text = e.target.result;
+                    document.getElementById('input-text').value = text;
+                    document.getElementById('input-chars').textContent = text.length + ' Zeichen';
+                    convert();
+                };
+                reader.readAsText(file, 'UTF-8');
+            } else {
+                reader.onload = function(e) {
+                    const text = e.target.result;
+                    document.getElementById('input-text').value = text;
+                    document.getElementById('input-chars').textContent = text.length + ' Zeichen';
+                    convert();
+                };
+                reader.readAsText(file, 'UTF-8');
+            }
+        }
+    </script>
+</body>
+</html>
