@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Fri, 03 Apr 2026 12:45:21 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 04 Apr 2026 00:57:21 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>robots.txt richtig konfigurieren: Die vollständige Anleitung</title>
+      <link>https://shift07.ai/blog/robots-txt-konfigurieren.html</link>
+      <guid>https://shift07.ai/blog/robots-txt-konfigurieren.html</guid>
+      <pubDate>Sat, 04 Apr 2026 00:56:52 +0000</pubDate>
+      <description>Lerne, wie du deine robots.txt Datei richtig konfigurierst, welche Direktiven du kennst musst und welche Fehler du unbedingt vermeiden solltest.</description>
+      <category>Technisches SEO</category>
+    </item>
     <item>
       <title>Meta-Tags richtig einsetzen: Die vollständige Anleitung</title>
       <link>https://shift07.ai/blog/meta-tags-richtig-einsetzen.html</link>
