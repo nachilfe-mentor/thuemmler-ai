@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sitemap-Validator: sitemap.xml kostenlos prüfen und Fehler finden | Shift07 Blog</title>
+    <meta name="description" content="Mit unserem kostenlosen Sitemap-Validator prüfst du deine sitemap.xml auf XML-Fehler, ungültige URLs, Duplikate und Formatprobleme — direkt im Browser, ohne Anmeldung.">
+    <meta name="author" content="Thümmler AI GmbH">
+    <link rel="icon" type="image/png" href="/logo.png">
+    <link rel="canonical" href="https://shift07.ai/blog/sitemap-validator-tool.html">
+    <link rel="alternate" type="application/rss+xml" title="Shift07 Blog" href="https://shift07.ai/feed.xml">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Sitemap-Validator: sitemap.xml kostenlos prüfen und Fehler finden | Shift07 Blog">
+    <meta property="og:description" content="Mit unserem kostenlosen Sitemap-Validator prüfst du deine sitemap.xml auf XML-Fehler, ungültige URLs, Duplikate und Formatprobleme — direkt im Browser, ohne Anmeldung.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://shift07.ai/blog/sitemap-validator-tool.html">
+    <meta property="og:image" content="https://shift07.ai/blog/images/sitemap-validator-tool.png">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="Shift07">
+    <meta property="article:published_time" content="2026-04-04T10:00:00+02:00">
+    <meta property="article:section" content="Technisches SEO">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Sitemap-Validator: sitemap.xml kostenlos prüfen und Fehler finden">
+    <meta name="twitter:description" content="Mit unserem kostenlosen Sitemap-Validator prüfst du deine sitemap.xml auf XML-Fehler, ungültige URLs, Duplikate und Formatprobleme.">
+    <meta name="twitter:image" content="https://shift07.ai/blog/images/sitemap-validator-tool.png">
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Sitemap-Validator: sitemap.xml kostenlos prüfen und Fehler finden",
+      "description": "Mit unserem kostenlosen Sitemap-Validator prüfst du deine sitemap.xml auf XML-Fehler, ungültige URLs, Duplikate und Formatprobleme — direkt im Browser, ohne Anmeldung.",
+      "image": "https://shift07.ai/blog/images/sitemap-validator-tool.png",
+      "datePublished": "2026-04-04T10:00:00+02:00",
+      "dateModified": "2026-04-04T10:00:00+02:00",
+      "author": {
+        "@type": "Organization",
+        "name": "Shift07",
+        "url": "https://shift07.ai"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Shift07",
+        "url": "https://shift07.ai",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://shift07.ai/assets/logo.png"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://shift07.ai/blog/sitemap-validator-tool.html"
+      }
+    }
+    </script>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K1S1RXBDS8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K1S1RXBDS8');
+    </script>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8475857002943858" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: rgba(15, 23, 42, 0.5); }
+        ::-webkit-scrollbar-thumb { background: rgba(59, 130, 246, 0.5); border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: rgba(59, 130, 246, 0.7); }
+        html { scroll-behavior: smooth; }
+        .article-content h2 { font-size: 1.5rem; font-weight: 700; color: #fff; margin-top: 2.5rem; margin-bottom: 1rem; }
+        .article-content h3 { font-size: 1.25rem; font-weight: 600; color: #e2e8f0; margin-top: 2rem; margin-bottom: 0.75rem; }
+        .article-content p { color: #cbd5e1; line-height: 1.8; margin-bottom: 1.25rem; }
+        .article-content ul, .article-content ol { color: #cbd5e1; margin-bottom: 1.25rem; padding-left: 1.5rem; }
+        .article-content li { margin-bottom: 0.5rem; line-height: 1.7; }
+        .article-content ul li { list-style-type: disc; }
+        .article-content ol li { list-style-type: decimal; }
+        .article-content a { color: #60a5fa; text-decoration: underline; text-underline-offset: 2px; }
+        .article-content a:hover { color: #93bbfc; }
+        .article-content blockquote { border-left: 4px solid #3b82f6; padding-left: 1.25rem; margin: 1.5rem 0; color: #94a3b8; font-style: italic; }
+        .article-content code { background: rgba(59, 130, 246, 0.15); color: #93c5fd; padding: 0.15rem 0.4rem; border-radius: 0.25rem; font-size: 0.9em; }
+        .article-content pre { background: rgba(15, 23, 42, 0.8); border: 1px solid rgba(255,255,255,0.1); border-radius: 0.75rem; padding: 1.25rem; overflow-x: auto; margin-bottom: 1.5rem; }
+        .article-content pre code { background: none; padding: 0; color: #e2e8f0; }
+        .article-content strong { color: #f1f5f9; }
+    </style>
+</head>
+<body class="bg-slate-900 text-white min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-slate-900/80 backdrop-blur-xl border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <a href="/" class="flex items-center gap-2">
+                    <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                    <span class="text-xl font-bold text-white">Shift07</span>
+                </a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="/" class="text-gray-300 hover:text-white transition-colors">SEO-Tool</a>
+                    <a href="/blog/" class="text-white font-medium border-b-2 border-blue-500 pb-0.5">Blog</a>
+                    <a href="/tools/" class="text-gray-300 hover:text-white transition-colors">Tools</a>
+                    <a href="/app/#/login" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-5 py-2 rounded-lg font-medium transition-all">Anmelden</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-gray-300 hover:text-white">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900/95 border-b border-white/10">
+            <div class="px-4 py-3 space-y-2">
+                <a href="/" class="block py-2 text-gray-300 hover:text-white">SEO-Tool</a>
+                <a href="/blog/" class="block py-2 text-white font-medium">Blog</a>
+                <a href="/tools/" class="block py-2 text-gray-300 hover:text-white">Tools</a>
+                <a href="/app/#/login" class="block py-2 text-blue-400 hover:text-blue-300">Anmelden</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Image -->
+    <section class="pt-16 relative">
+        <div class="h-[400px] relative overflow-hidden">
+            <img src="/blog/images/sitemap-validator-tool.png" alt="Sitemap-Validator: sitemap.xml kostenlos prüfen" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/60 to-transparent"></div>
+            <div class="absolute inset-0 flex items-end justify-center pb-12">
+                <div class="text-center px-4 max-w-4xl">
+                    <span class="inline-block text-sm font-semibold px-4 py-1.5 bg-white/10 text-white/90 rounded-full mb-4">Technisches SEO</span>
+                    <h1 class="text-3xl md:text-5xl font-extrabold text-white leading-tight">Sitemap-Validator: sitemap.xml kostenlos prüfen und Fehler finden</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Article Content -->
+    <section class="py-12 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col lg:flex-row gap-12">
+
+                <!-- Main Content -->
+                <article class="lg:w-2/3">
+                    <!-- Meta -->
+                    <div class="flex flex-wrap items-center gap-4 text-sm text-gray-400 mb-10 pb-6 border-b border-white/10">
+                        <div class="flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+                            Shift07 Team
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                            4. April 2026
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                            7 Min. Lesezeit
+                        </div>
+                        <span class="text-xs font-semibold px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full">Technisches SEO</span>
+                    </div>
+
+                    <!-- Article Body -->
+                    <div class="article-content">
+
+                        <p>Eine fehlerhafte sitemap.xml kann dazu führen, dass Google wichtige Seiten deiner Website gar nicht erst crawlt. Dabei sieht man den Fehler der Datei von außen nicht an — sie ist einfach da, wird von Google ignoriert, und deine Seiten ranken schlechter als sie müssten. Mit unserem kostenlosen <a href="/tools/sitemap-validator.html">Sitemap-Validator</a> kannst du deine sitemap.xml in Sekunden auf alle häufigen Probleme prüfen — ohne Anmeldung, ohne Software-Download, vollständig im Browser.</p>
+
+                        <h2>Warum du deine sitemap.xml regelmäßig prüfen solltest</h2>
+
+                        <p>Die sitemap.xml ist eine der wichtigsten technischen SEO-Dateien deiner Website. Sie teilt Google mit, welche Seiten existieren, wann sie zuletzt geändert wurden, und wie oft sie aktualisiert werden. Stimmt das Format nicht, reagiert Google still — es crawlt die Sitemap einfach nicht oder ignoriert fehlerhafte Einträge.</p>
+
+                        <p>Häufige Probleme, die wir in der Praxis sehen:</p>
+                        <ul>
+                            <li>Die Sitemap ist kein valides XML (vergessene Anführungszeichen, falsch geschlossene Tags)</li>
+                            <li>URLs beginnen mit <code>http://</code> statt <code>https://</code> — obwohl die Website längst HTTPS hat</li>
+                            <li>Doppelte URLs in der Sitemap verschwenden Crawl-Budget</li>
+                            <li>Ungültige <code>priority</code>-Werte (z.B. <code>1.5</code> statt maximal <code>1.0</code>)</li>
+                            <li>Falsche Datumsformate bei <code>lastmod</code> — Google ignoriert diese dann stillschweigend</li>
+                            <li>Mehr als 50.000 URLs in einer einzigen Sitemap-Datei</li>
+                        </ul>
+
+                        <p>All das sind Fehler, die leicht passieren — besonders wenn die Sitemap automatisch von einem CMS oder Plugin generiert wird. Ein <strong>Sitemap-Validator</strong> findet diese Probleme bevor Google sie findet.</p>
+
+                        <h2>Sitemap-Validator direkt nutzen: So geht's</h2>
+
+                        <p>Unser <a href="/tools/sitemap-validator.html">kostenloser Sitemap-Validator</a> arbeitet vollständig im Browser. Deine Sitemap-Daten werden nie auf unsere Server übertragen. So verwendest du das Tool:</p>
+
+                        <ol>
+                            <li><strong>Sitemap im Browser aufrufen:</strong> Tippe in deinen Browser <code>deine-domain.de/sitemap.xml</code> ein. Die meisten Websites haben ihre Sitemap an dieser Adresse. Falls nicht, schau in der <code>robots.txt</code> nach — dort ist die Sitemap-URL oft hinterlegt.</li>
+                            <li><strong>Inhalt kopieren:</strong> Im Browser mit <strong>Strg+A</strong> alles markieren, dann <strong>Strg+C</strong> kopieren.</li>
+                            <li><strong>In den Validator einfügen:</strong> Gehe zum <a href="/tools/sitemap-validator.html">Sitemap-Validator</a>, füge den Inhalt in das Textfeld ein und klicke auf „Sitemap validieren".</li>
+                            <li><strong>Ergebnis auswerten:</strong> Der Validator zeigt dir einen Score, alle Fehler, Warnungen und positiven Prüfungen — mit konkreten Hinweisen was zu tun ist.</li>
+                        </ol>
+
+                        <blockquote>Tipp: Falls du einen Sitemap-Index hast (eine Datei, die auf weitere Sitemaps verweist), kannst du entweder den Index oder eine der enthaltenen Unter-Sitemaps prüfen.</blockquote>
+
+                        <h2>Was der Sitemap-Validator prüft</h2>
+
+                        <h3>1. XML-Struktur und Wohlgeformtheit</h3>
+                        <p>Zuerst prüft der Validator, ob die eingefügte Datei überhaupt valides XML ist. Schon ein einziges fehlendes Anführungszeichen oder ein nicht geschlossenes Tag macht die gesamte Sitemap für Google unlesbar. Der Validator zeigt dir genau, an welcher Stelle das Problem liegt.</p>
+
+                        <h3>2. Root-Element und Namespace</h3>
+                        <p>Eine korrekte Sitemap beginnt mit <code>&lt;urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"&gt;</code>. Ein Sitemap-Index beginnt mit <code>&lt;sitemapindex&gt;</code>. Der Validator erkennt beide Typen und prüft, ob der Google-konforme Namespace gesetzt ist.</p>
+
+                        <h3>3. URL-Format und Protokoll</h3>
+                        <p>Jede URL in der Sitemap muss mit <code>https://</code> oder <code>http://</code> beginnen. Der Validator warnt dich außerdem, wenn URLs noch mit <code>http://</code> angegeben sind — denn wenn deine Website HTTPS hat, sollten auch alle Sitemap-URLs HTTPS nutzen. Abweichungen zwischen Sitemap und realer URL können Google verwirren.</p>
+
+                        <h3>4. Duplikate erkennen</h3>
+                        <p>Doppelte URLs in einer Sitemap verschwenden Crawl-Budget und können als Signal für eine schlecht gepflegte Website gewertet werden. Der Validator zählt alle Duplikate und zeigt dir Beispiele.</p>
+
+                        <h3>5. Priority-Werte validieren</h3>
+                        <p>Der <code>&lt;priority&gt;</code>-Wert muss zwischen <code>0.0</code> und <code>1.0</code> liegen. Werte wie <code>1.5</code> oder <code>-0.1</code> sind ungültig. Wichtig: Google hat mehrfach kommuniziert, dass es <code>priority</code> nur noch als schwaches Signal wertet — trotzdem sollten ungültige Werte vermieden werden.</p>
+
+                        <h3>6. changefreq-Werte prüfen</h3>
+                        <p>Für <code>&lt;changefreq&gt;</code> sind nur diese Werte erlaubt: <code>always</code>, <code>hourly</code>, <code>daily</code>, <code>weekly</code>, <code>monthly</code>, <code>yearly</code>, <code>never</code>. Schreibfehler wie <code>montly</code> werden von Google ignoriert.</p>
+
+                        <h3>7. lastmod-Datumsformat</h3>
+                        <p>Das Datum bei <code>&lt;lastmod&gt;</code> muss im W3C-Format angegeben sein: entweder einfach als <code>YYYY-MM-DD</code> (z.B. <code>2026-04-04</code>) oder im vollen ISO-8601-Format mit Uhrzeit und Zeitzone (<code>2026-04-04T10:00:00+02:00</code>). Formate wie <code>04.04.2026</code> oder <code>April 4, 2026</code> werden von Google stillschweigend ignoriert.</p>
+
+                        <h3>8. Google-Limits prüfen</h3>
+                        <p>Eine einzige Sitemap-Datei darf maximal <strong>50.000 URLs</strong> enthalten und unkomprimiert nicht größer als <strong>50 MB</strong> sein. Der Validator warnt dich frühzeitig, wenn du dich diesem Limit näherst, und gibt einen Hinweis zum Aufteilen in einen Sitemap-Index.</p>
+
+                        <h2>Was die häufigsten Fehler bei deutschen Websites sind</h2>
+
+                        <p>In unserer Analyse von tausenden deutschen Business-Websites fallen immer wieder die gleichen Sitemap-Probleme auf:</p>
+
+                        <ul>
+                            <li><strong>http:// statt https://:</strong> Besonders bei älteren WordPress-Installationen, bei denen HTTPS nachträglich aktiviert wurde, enthält die Sitemap noch http://-URLs. Das Plugin generiert weiterhin die alte URL-Variante.</li>
+                            <li><strong>Fehlendes lastmod:</strong> Viele CMS-Plugins lassen <code>lastmod</code> weg oder setzen immer das gleiche Datum — dann verliert der Wert seinen Sinn für Google.</li>
+                            <li><strong>Alle Seiten mit priority 1.0:</strong> Wenn alle Seiten die höchste Priorität haben, hat keine Seite eine höhere Priorität. Setze die Startseite auf 1.0, wichtige Kategorieseiten auf 0.8-0.9, und normale Inhaltsseiten auf 0.5-0.7.</li>
+                            <li><strong>404-Seiten in der Sitemap:</strong> Gelöschte Seiten bleiben manchmal monatelang in der Sitemap. Google crawlt sie weiterhin, findet einen 404-Fehler und verschwendet Crawl-Budget.</li>
+                        </ul>
+
+                        <h2>Nach dem Validator: Sitemap bei Google einreichen</h2>
+
+                        <p>Wenn deine sitemap.xml die Validierung bestanden hat, ist der nächste Schritt die Einreichung bei Google. Wie das geht, haben wir ausführlich beschrieben in unserem Artikel <a href="/blog/sitemap-xml-erstellen-einreichen.html">Sitemap.xml erstellen und bei Google einreichen</a>.</p>
+
+                        <p>Vergiss außerdem nicht, die Sitemap-URL in deiner <a href="/blog/robots-txt-konfigurieren.html">robots.txt</a> einzutragen — so findet Google deine Sitemap auch ohne aktive Einreichung über die Search Console:</p>
+
+                        <pre><code>User-agent: *
+Disallow:
+
+Sitemap: https://deine-seite.de/sitemap.xml</code></pre>
+
+                        <p>Dieser Eintrag ist wichtig, weil Googlebot die robots.txt bei jedem Crawl liest und die dort genannte Sitemap automatisch verarbeitet.</p>
+
+                        <h2>Sitemap-Index: Wann du deine Sitemap aufteilen solltest</h2>
+
+                        <p>Für die meisten kleinen und mittleren Websites ist eine einzige sitemap.xml vollkommen ausreichend. Aber wenn deine Website wächst, kann eine Aufteilung sinnvoll werden:</p>
+
+                        <ul>
+                            <li>Du hast mehr als 10.000 URLs</li>
+                            <li>Du willst Blog-Artikel, Produkte und Kategorien in getrennten Sitemaps verwalten</li>
+                            <li>Du willst Bild-Sitemaps oder Video-Sitemaps separat einreichen</li>
+                            <li>Du nähernst dich dem 50.000-URL-Limit</li>
+                        </ul>
+
+                        <p>Ein Sitemap-Index sieht so aus:</p>
+
+                        <pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"&gt;
+  &lt;sitemap&gt;
+    &lt;loc&gt;https://example.com/sitemap-pages.xml&lt;/loc&gt;
+  &lt;/sitemap&gt;
+  &lt;sitemap&gt;
+    &lt;loc&gt;https://example.com/sitemap-blog.xml&lt;/loc&gt;
+  &lt;/sitemap&gt;
+&lt;/sitemapindex&gt;</code></pre>
+
+                        <p>Unser Sitemap-Validator erkennt Sitemap-Indizes automatisch und validiert sie entsprechend.</p>
+
+                        <h2>Sitemap und Core Web Vitals: Der Zusammenhang</h2>
+
+                        <p>Eine valide Sitemap allein verbessert natürlich keine <a href="/blog/core-web-vitals-erklaert.html">Core Web Vitals</a>. Aber sie beeinflusst, wie schnell Google neue Seiten indexiert und wie effizient das Crawl-Budget genutzt wird. Seiten, die Google regelmäßig crawlt und indexiert, profitieren auch schneller von Performance-Verbesserungen.</p>
+
+                        <p>Wenn du also an deiner Website arbeitest und Ladezeiten optimierst, sorgst du gleichzeitig dafür, dass diese Verbesserungen durch eine saubere Sitemap schnell bei Google ankommen.</p>
+
+                        <h2>Fazit: Sitemap-Validierung ist kein Aufwand — es ist Pflege</h2>
+
+                        <p>Eine sitemap.xml, die einmal korrekt eingerichtet wurde, läuft lange ohne Probleme. Aber nach größeren Website-Änderungen, CMS-Updates oder dem Wechsel auf HTTPS lohnt sich ein Blick in den Validator. Zehn Sekunden des Prüfens können verhindern, dass Google Seiten monatelang nicht findet.</p>
+
+                        <p>Nutze unseren <a href="/tools/sitemap-validator.html">kostenlosen Sitemap-Validator</a> — er zeigt dir sofort, ob deine sitemap.xml Google-konform ist, welche Fehler vorhanden sind und was du konkret verbessern kannst. Für die vollständige SEO-Analyse deiner Website empfehlen wir das <a href="/">Shift07 SEO-Tool</a>, das alle Ranking-Faktoren auf einmal prüft.</p>
+
+                    </div>
+
+                    <!-- Share / Back -->
+                    <div class="mt-12 pt-8 border-t border-white/10 flex items-center justify-between">
+                        <a href="/blog/" class="text-blue-400 hover:text-blue-300 flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+                            Zurück zum Blog
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Sidebar -->
+                <aside class="lg:w-1/3 space-y-8">
+                    <!-- CTA Box -->
+                    <div class="bg-gradient-to-br from-blue-600/20 to-indigo-600/20 border border-blue-500/30 rounded-2xl p-6 text-center">
+                        <h3 class="text-lg font-bold text-white mb-3">Sitemap jetzt validieren</h3>
+                        <p class="text-gray-400 text-sm mb-5">Prüfe deine sitemap.xml auf Fehler — kostenlos, sofort, ohne Anmeldung.</p>
+                        <a href="/tools/sitemap-validator.html" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-6 py-3 rounded-lg font-medium transition-all inline-block w-full">Sitemap-Validator öffnen</a>
+                    </div>
+
+                    <!-- Related Articles -->
+                    <div class="bg-slate-800/50 border border-white/10 rounded-2xl p-6">
+                        <h3 class="text-lg font-bold text-white mb-4">Weiterführende Artikel</h3>
+                        <div class="space-y-4">
+                            <a href="/blog/sitemap-xml-erstellen-einreichen.html" class="block group">
+                                <p class="text-sm text-gray-300 group-hover:text-blue-400 transition-colors font-medium">Sitemap.xml erstellen und bei Google einreichen</p>
+                                <p class="text-xs text-gray-500 mt-1">Technisches SEO</p>
+                            </a>
+                            <a href="/blog/robots-txt-konfigurieren.html" class="block group">
+                                <p class="text-sm text-gray-300 group-hover:text-blue-400 transition-colors font-medium">robots.txt richtig konfigurieren</p>
+                                <p class="text-xs text-gray-500 mt-1">Technisches SEO</p>
+                            </a>
+                            <a href="/blog/canonical-tags-seo.html" class="block group">
+                                <p class="text-sm text-gray-300 group-hover:text-blue-400 transition-colors font-medium">Canonical-Tags: Duplicate Content vermeiden</p>
+                                <p class="text-xs text-gray-500 mt-1">Technisches SEO</p>
+                            </a>
+                            <a href="/blog/core-web-vitals-erklaert.html" class="block group">
+                                <p class="text-sm text-gray-300 group-hover:text-blue-400 transition-colors font-medium">Core Web Vitals erklärt: LCP, CLS, INP</p>
+                                <p class="text-xs text-gray-500 mt-1">Performance SEO</p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Tool CTA -->
+                    <div class="bg-slate-800/50 border border-teal-500/30 rounded-2xl p-6">
+                        <h3 class="text-lg font-bold text-white mb-2">Weitere SEO-Tools</h3>
+                        <p class="text-gray-400 text-sm mb-4">Alle kostenlosen Tools für deine Website-Optimierung auf einen Blick.</p>
+                        <a href="/tools/" class="text-blue-400 hover:text-blue-300 text-sm font-medium flex items-center gap-1">
+                            Alle Tools ansehen
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                        </a>
+                    </div>
+                </aside>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer CTA -->
+    <section class="py-16 px-4 bg-gradient-to-r from-blue-900/30 to-indigo-900/30 border-t border-b border-white/5">
+        <div class="max-w-3xl mx-auto text-center">
+            <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">Vollständige SEO-Analyse deiner Website</h2>
+            <p class="text-gray-400 mb-8">Shift07 prüft nicht nur die Sitemap — sondern alle 8 SEO-Rankingfaktoren deiner Website automatisch.</p>
+            <a href="/" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-8 py-4 rounded-lg font-semibold transition-all inline-block text-lg">Jetzt kostenlos analysieren</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/10 bg-slate-900/50 py-12 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="flex items-center gap-2">
+                    <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                    <span class="text-lg font-bold text-white">Shift07</span>
+                </div>
+                <div class="flex items-center space-x-6 text-sm text-gray-400">
+                    <a href="/impressum.html" class="hover:text-white transition-colors">Impressum</a>
+                    <a href="/datenschutz.html" class="hover:text-white transition-colors">Datenschutz</a>
+                    <a href="/agb.html" class="hover:text-white transition-colors">AGB</a>
+                </div>
+                <p class="text-sm text-gray-500">&copy; 2026 Thümmler AI GmbH</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

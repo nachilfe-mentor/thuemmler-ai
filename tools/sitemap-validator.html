@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K1S1RXBDS8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K1S1RXBDS8');
+    </script>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8475857002943858" crossorigin="anonymous"></script>
+    <title>Sitemap-Validator - Sitemap.xml kostenlos prüfen | Shift07</title>
+    <meta name="description" content="Validiere deine sitemap.xml kostenlos: XML-Struktur, URL-Format, Duplikate, Priorität und changefreq prüfen. Detaillierter Bericht für besseres SEO.">
+    <meta name="keywords" content="Sitemap Validator, sitemap.xml prüfen, Sitemap validieren, XML Sitemap Checker, SEO Sitemap Tool">
+    <meta name="author" content="Thümmler AI GmbH">
+    <link rel="icon" type="image/png" href="/logo.png">
+    <link rel="canonical" href="https://shift07.ai/tools/sitemap-validator.html">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Sitemap-Validator - Sitemap.xml kostenlos prüfen">
+    <meta property="og:description" content="Validiere deine sitemap.xml: XML-Struktur, URL-Format, Duplikate und mehr. Kostenlos und ohne Anmeldung.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://shift07.ai/tools/sitemap-validator.html">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="Shift07">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Sitemap-Validator - Sitemap.xml kostenlos prüfen">
+    <meta name="twitter:description" content="Validiere deine sitemap.xml: XML-Struktur, URL-Format, Duplikate und mehr. Kostenlos und ohne Anmeldung.">
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Sitemap-Validator",
+      "description": "Kostenloser Sitemap-Validator: prüft XML-Struktur, URL-Format, Duplikate, Prioritätswerte und changefreq-Werte deiner sitemap.xml.",
+      "url": "https://shift07.ai/tools/sitemap-validator.html",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR"
+      },
+      "provider": {
+        "@type": "Organization",
+        "name": "Thümmler AI GmbH",
+        "url": "https://shift07.ai"
+      }
+    }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: rgba(15, 23, 42, 0.5); }
+        ::-webkit-scrollbar-thumb { background: rgba(59, 130, 246, 0.5); border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: rgba(59, 130, 246, 0.7); }
+        html { scroll-behavior: smooth; }
+        .glass {
+            background: rgba(255, 255, 255, 0.06);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .issue-error { border-left: 3px solid #ef4444; }
+        .issue-warning { border-left: 3px solid #f59e0b; }
+        .issue-ok { border-left: 3px solid #10b981; }
+        .score-circle {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 800;
+        }
+        textarea { resize: vertical; }
+        .tab-active { border-bottom: 2px solid #3b82f6; color: #93c5fd; }
+        .url-row:hover { background: rgba(255,255,255,0.05); }
+    </style>
+</head>
+<body class="antialiased">
+    <div class="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
+
+        <!-- Navigation -->
+        <nav class="bg-black/20 backdrop-blur-md border-b border-white/10">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center h-16">
+                    <a href="/" class="flex items-center gap-2">
+                        <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                        <span class="text-xl font-bold text-white">Shift07</span>
+                    </a>
+                    <div class="hidden md:flex items-baseline space-x-4">
+                        <a href="/" class="text-white hover:text-blue-300 px-3 py-2 text-sm font-medium transition-colors">SEO-Tool</a>
+                        <a href="/blog/" class="text-white hover:text-blue-300 px-3 py-2 text-sm font-medium transition-colors">Blog</a>
+                        <a href="/tools/" class="text-blue-300 px-3 py-2 text-sm font-medium">Tools</a>
+                        <a href="/app/#/login" class="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:from-blue-600 hover:to-purple-700 transition-all">Anmelden</a>
+                    </div>
+                    <button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="md:hidden text-white">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                    </button>
+                </div>
+                <div id="mobile-menu" class="hidden md:hidden pb-4">
+                    <a href="/" class="block text-white hover:text-blue-300 px-3 py-2 text-sm font-medium">SEO-Tool</a>
+                    <a href="/blog/" class="block text-white hover:text-blue-300 px-3 py-2 text-sm font-medium">Blog</a>
+                    <a href="/tools/" class="block text-blue-300 px-3 py-2 text-sm font-medium">Tools</a>
+                    <a href="/app/#/login" class="block text-white hover:text-blue-300 px-3 py-2 text-sm font-medium">Anmelden</a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero -->
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-6 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">
+                <span class="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Sitemap-Validator</span>
+            </h1>
+            <p class="text-xl text-blue-200/80 max-w-2xl mx-auto">Prüfe deine sitemap.xml auf Fehler, Duplikate und Best Practices — kostenlos und sofort im Browser.</p>
+        </section>
+
+        <!-- Main Tool -->
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+            <div class="grid lg:grid-cols-2 gap-8">
+
+                <!-- Input -->
+                <div class="glass rounded-xl p-6 md:p-8">
+                    <h2 class="text-xl font-semibold text-white mb-2">Sitemap-Inhalt einfügen</h2>
+                    <p class="text-blue-200/60 text-sm mb-5">Öffne deine sitemap.xml (z.B. https://deine-seite.de/sitemap.xml) und kopiere den gesamten Inhalt hierher.</p>
+
+                    <!-- Tabs -->
+                    <div class="flex border-b border-white/10 mb-4">
+                        <button id="tab-paste" onclick="switchTab('paste')" class="tab-active px-4 py-2 text-sm font-medium text-blue-300 mr-2 transition-colors">XML einfügen</button>
+                        <button id="tab-example" onclick="switchTab('example')" class="px-4 py-2 text-sm font-medium text-white/50 hover:text-white/80 transition-colors">Beispiel laden</button>
+                    </div>
+
+                    <textarea
+                        id="sitemapInput"
+                        rows="14"
+                        placeholder='<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://example.com/</loc>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+</urlset>'
+                        class="w-full bg-black/30 border border-white/10 rounded-lg px-4 py-3 text-white text-sm font-mono focus:outline-none focus:border-blue-500 placeholder-white/20"
+                    ></textarea>
+
+                    <div class="mt-2 text-right text-xs text-white/40" id="charCount">0 Zeichen</div>
+
+                    <button
+                        onclick="validateSitemap()"
+                        class="mt-4 w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all flex items-center justify-center gap-2"
+                    >
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                        Sitemap validieren
+                    </button>
+
+                    <!-- Sitemap abrufen Hinweis -->
+                    <div class="mt-4 p-3 bg-blue-500/10 border border-blue-500/20 rounded-lg">
+                        <p class="text-blue-200/70 text-xs">
+                            <strong class="text-blue-300">Tipp:</strong> Rufe deine Sitemap im Browser auf (z.B. <span class="font-mono text-blue-300">deine-seite.de/sitemap.xml</span>), dann mit <strong>Strg+A</strong> alles markieren und <strong>Strg+C</strong> kopieren.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Results -->
+                <div id="resultsPanel">
+                    <!-- Placeholder -->
+                    <div id="placeholder" class="glass rounded-xl p-8 text-center h-full flex flex-col items-center justify-center">
+                        <div class="w-20 h-20 bg-blue-500/20 rounded-full flex items-center justify-center mb-4">
+                            <svg class="w-10 h-10 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/></svg>
+                        </div>
+                        <p class="text-white/40 text-sm">Füge deine sitemap.xml ein<br>und klicke auf "Sitemap validieren"</p>
+                    </div>
+
+                    <!-- Results (hidden initially) -->
+                    <div id="results" class="hidden space-y-4">
+
+                        <!-- Score Card -->
+                        <div class="glass rounded-xl p-6">
+                            <div class="flex items-center gap-6">
+                                <div id="scoreCircle" class="score-circle bg-emerald-500/20 text-emerald-400 flex-shrink-0">
+                                    <span id="scoreValue">–</span>
+                                </div>
+                                <div>
+                                    <div id="scoreLabel" class="text-2xl font-bold text-white">Analysiere...</div>
+                                    <div id="scoreDesc" class="text-white/50 text-sm mt-1"></div>
+                                    <div class="flex gap-4 mt-2">
+                                        <span class="text-red-400 text-sm" id="errorCount"></span>
+                                        <span class="text-amber-400 text-sm" id="warningCount"></span>
+                                        <span class="text-emerald-400 text-sm" id="okCount"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Stats -->
+                        <div id="statsGrid" class="grid grid-cols-2 sm:grid-cols-4 gap-3"></div>
+
+                        <!-- Issues -->
+                        <div class="glass rounded-xl p-6">
+                            <h3 class="text-white font-semibold mb-4 flex items-center gap-2">
+                                <svg class="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+                                Validierungsergebnisse
+                            </h3>
+                            <div id="issuesList" class="space-y-3"></div>
+                        </div>
+
+                        <!-- URL List (collapsible) -->
+                        <div class="glass rounded-xl p-6">
+                            <button onclick="toggleUrls()" class="w-full flex items-center justify-between text-white font-semibold mb-2">
+                                <span class="flex items-center gap-2">
+                                    <svg class="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
+                                    <span id="urlListTitle">URLs anzeigen</span>
+                                </span>
+                                <svg id="urlArrow" class="w-4 h-4 text-white/50 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                            </button>
+                            <div id="urlListContainer" class="hidden">
+                                <div id="urlList" class="space-y-1 max-h-64 overflow-y-auto mt-3 text-sm"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cross-sell -->
+            <div class="glass rounded-xl p-6 mt-8 border-blue-500/30 border max-w-2xl mx-auto">
+                <div class="flex items-start gap-4">
+                    <div class="bg-blue-500/20 rounded-lg p-3 flex-shrink-0">
+                        <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                    </div>
+                    <div>
+                        <h3 class="text-white font-semibold mb-1">Vollständige SEO-Analyse mit Shift07</h3>
+                        <p class="text-blue-200/70 text-sm mb-3">Die Sitemap ist nur ein Faktor. Shift07 prüft alle 8 SEO-Rankingfaktoren deiner Website automatisch — Meta-Tags, Ladezeit, SSL, strukturierte Daten und mehr.</p>
+                        <a href="/" class="inline-flex items-center text-blue-400 hover:text-blue-300 text-sm font-medium transition-colors">
+                            Jetzt kostenlos mit Shift07 analysieren
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Explanation -->
+            <div class="glass rounded-xl p-6 md:p-8 mt-8">
+                <h2 class="text-2xl font-bold text-white mb-6">Was prüft der Sitemap-Validator?</h2>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-white/5 rounded-lg p-5">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div class="w-10 h-10 bg-red-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <svg class="w-5 h-5 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+                            </div>
+                            <h3 class="text-white font-semibold">XML-Struktur</h3>
+                        </div>
+                        <p class="text-white/60 text-sm">Ist die Datei valides XML? Enthält sie das richtige <code class="text-blue-300 bg-white/10 px-1 rounded">&lt;urlset&gt;</code> oder <code class="text-blue-300 bg-white/10 px-1 rounded">&lt;sitemapindex&gt;</code> Element mit dem korrekten Namespace?</p>
+                    </div>
+                    <div class="bg-white/5 rounded-lg p-5">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div class="w-10 h-10 bg-blue-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <svg class="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
+                            </div>
+                            <h3 class="text-white font-semibold">URL-Format</h3>
+                        </div>
+                        <p class="text-white/60 text-sm">Beginnen alle <code class="text-blue-300 bg-white/10 px-1 rounded">&lt;loc&gt;</code>-URLs mit <code class="text-blue-300 bg-white/10 px-1 rounded">https://</code>? Enthält jeder <code class="text-blue-300 bg-white/10 px-1 rounded">&lt;url&gt;</code>-Eintrag mindestens ein <code class="text-blue-300 bg-white/10 px-1 rounded">&lt;loc&gt;</code>-Element?</p>
+                    </div>
+                    <div class="bg-white/5 rounded-lg p-5">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div class="w-10 h-10 bg-amber-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <svg class="w-5 h-5 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                            </div>
+                            <h3 class="text-white font-semibold">Duplikate</h3>
+                        </div>
+                        <p class="text-white/60 text-sm">Enthält die Sitemap doppelte URLs? Doppelte Einträge verschwenden Crawl-Budget und können zu Verwirrung bei Google führen.</p>
+                    </div>
+                    <div class="bg-white/5 rounded-lg p-5">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div class="w-10 h-10 bg-purple-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <svg class="w-5 h-5 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+                            </div>
+                            <h3 class="text-white font-semibold">Priorität &amp; changefreq</h3>
+                        </div>
+                        <p class="text-white/60 text-sm">Sind <code class="text-blue-300 bg-white/10 px-1 rounded">&lt;priority&gt;</code>-Werte zwischen 0.0 und 1.0? Sind <code class="text-blue-300 bg-white/10 px-1 rounded">&lt;changefreq&gt;</code>-Werte gültig (always, hourly, daily, weekly, monthly, yearly, never)?</p>
+                    </div>
+                    <div class="bg-white/5 rounded-lg p-5">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div class="w-10 h-10 bg-emerald-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <svg class="w-5 h-5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                            </div>
+                            <h3 class="text-white font-semibold">Datumsformat (lastmod)</h3>
+                        </div>
+                        <p class="text-white/60 text-sm">Ist <code class="text-blue-300 bg-white/10 px-1 rounded">&lt;lastmod&gt;</code> im korrekten W3C-Format (YYYY-MM-DD oder ISO 8601)? Falsche Datumsformate ignoriert Google stillschweigend.</p>
+                    </div>
+                    <div class="bg-white/5 rounded-lg p-5">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div class="w-10 h-10 bg-cyan-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <svg class="w-5 h-5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                            </div>
+                            <h3 class="text-white font-semibold">Google-Limits</h3>
+                        </div>
+                        <p class="text-white/60 text-sm">Google erlaubt max. 50.000 URLs pro Sitemap-Datei. Größere Sitemaps müssen in einem Sitemap-Index aufgeteilt werden. Der Validator warnt dich, bevor du das Limit erreichst.</p>
+                    </div>
+                </div>
+
+                <!-- Robots.txt Hinweis -->
+                <div class="mt-6 p-4 bg-blue-500/10 border border-blue-500/20 rounded-lg">
+                    <p class="text-blue-200/80 text-sm">
+                        <strong class="text-blue-300">Nächster Schritt:</strong> Nachdem deine Sitemap validiert ist, stelle sicher, dass du die URL in deiner
+                        <a href="/blog/robots-txt-konfigurieren.html" class="text-blue-400 hover:text-blue-300 underline underline-offset-2">robots.txt</a> eingetragen hast: <code class="text-blue-300 bg-white/10 px-1 rounded">Sitemap: https://deine-seite.de/sitemap.xml</code>.
+                        Erfahre auch, wie du deine <a href="/blog/sitemap-xml-erstellen-einreichen.html" class="text-blue-400 hover:text-blue-300 underline underline-offset-2">Sitemap bei Google einreichen</a> kannst.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-black/30 backdrop-blur-md border-t border-white/10">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <div class="text-white/60 mb-4 md:mb-0 text-sm">
+                        &copy; 2026 Thümmler AI GmbH. Alle Rechte vorbehalten.
+                    </div>
+                    <div class="flex space-x-6">
+                        <a href="/impressum.html" class="text-gray-300 hover:text-white transition-colors text-sm">Impressum</a>
+                        <a href="/datenschutz.html" class="text-gray-300 hover:text-white transition-colors text-sm">Datenschutz</a>
+                        <a href="/agb.html" class="text-gray-300 hover:text-white transition-colors text-sm">AGB</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+    const EXAMPLE_SITEMAP = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://example.com/</loc>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://example.com/ueber-uns</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://example.com/leistungen</loc>
+    <lastmod>2026-03-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://example.com/blog/seo-tipps</loc>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://example.com/kontakt</loc>
+    <lastmod>2026-01-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+</urlset>`;
+
+    const textarea = document.getElementById('sitemapInput');
+
+    textarea.addEventListener('input', () => {
+        document.getElementById('charCount').textContent = textarea.value.length.toLocaleString('de-DE') + ' Zeichen';
+    });
+
+    function switchTab(tab) {
+        if (tab === 'example') {
+            textarea.value = EXAMPLE_SITEMAP;
+            document.getElementById('charCount').textContent = EXAMPLE_SITEMAP.length.toLocaleString('de-DE') + ' Zeichen';
+        }
+        document.getElementById('tab-paste').className = tab === 'paste' ? 'tab-active px-4 py-2 text-sm font-medium text-blue-300 mr-2 transition-colors' : 'px-4 py-2 text-sm font-medium text-white/50 hover:text-white/80 transition-colors mr-2';
+        document.getElementById('tab-example').className = tab === 'example' ? 'tab-active px-4 py-2 text-sm font-medium text-blue-300 transition-colors' : 'px-4 py-2 text-sm font-medium text-white/50 hover:text-white/80 transition-colors';
+    }
+
+    function toggleUrls() {
+        const container = document.getElementById('urlListContainer');
+        const arrow = document.getElementById('urlArrow');
+        container.classList.toggle('hidden');
+        arrow.style.transform = container.classList.contains('hidden') ? '' : 'rotate(180deg)';
+    }
+
+    const VALID_CHANGEFREQ = ['always', 'hourly', 'daily', 'weekly', 'monthly', 'yearly', 'never'];
+    const DATE_REGEX = /^\d{4}-\d{2}-\d{2}(T\d{2}:\d{2}(:\d{2})?([+-]\d{2}:\d{2}|Z)?)?$/;
+
+    function validateSitemap() {
+        const input = textarea.value.trim();
+        if (!input) {
+            alert('Bitte füge zuerst den Inhalt deiner sitemap.xml ein.');
+            return;
+        }
+
+        document.getElementById('placeholder').classList.add('hidden');
+        document.getElementById('results').classList.remove('hidden');
+
+        const issues = [];
+        let urls = [];
+        let isSitemapIndex = false;
+        let xmlDoc = null;
+        let xmlParseError = null;
+
+        // 1. XML-Parsing
+        try {
+            const parser = new DOMParser();
+            xmlDoc = parser.parseFromString(input, 'application/xml');
+            const parseErr = xmlDoc.querySelector('parsererror');
+            if (parseErr) {
+                xmlParseError = parseErr.textContent.split('\n')[0];
+            }
+        } catch (e) {
+            xmlParseError = e.message;
+        }
+
+        if (xmlParseError) {
+            issues.push({ type: 'error', title: 'XML-Fehler: Datei ist kein valides XML', desc: xmlParseError });
+            renderResults(issues, [], false, input.length);
+            return;
+        }
+
+        issues.push({ type: 'ok', title: 'XML-Syntax ist korrekt', desc: 'Die Datei ist wohlgeformtes XML.' });
+
+        // 2. Root-Element prüfen
+        const root = xmlDoc.documentElement;
+        const rootName = root.localName;
+
+        if (rootName === 'sitemapindex') {
+            isSitemapIndex = true;
+            issues.push({ type: 'ok', title: 'Sitemap-Index erkannt', desc: 'Die Datei ist ein gültiger Sitemap-Index (enthält mehrere Sitemaps).' });
+        } else if (rootName === 'urlset') {
+            issues.push({ type: 'ok', title: 'Sitemap-Typ: URL-Liste (urlset)', desc: 'Korrektes Root-Element für eine reguläre Sitemap.' });
+        } else {
+            issues.push({ type: 'error', title: `Ungültiges Root-Element: <${rootName}>`, desc: 'Das Root-Element muss <urlset> (für URLs) oder <sitemapindex> (für mehrere Sitemaps) sein.' });
+            renderResults(issues, [], false, input.length);
+            return;
+        }
+
+        // 3. Namespace prüfen
+        const ns = root.getAttribute('xmlns') || root.namespaceURI;
+        if (ns && ns.includes('sitemaps.org')) {
+            issues.push({ type: 'ok', title: 'Namespace korrekt', desc: `xmlns="${ns}"` });
+        } else if (!ns) {
+            issues.push({ type: 'warning', title: 'Kein Namespace angegeben', desc: 'Google empfiehlt den xmlns-Namespace: xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"' });
+        }
+
+        // 4. URLs / Sitemaps extrahieren
+        if (isSitemapIndex) {
+            const sitemapEls = xmlDoc.querySelectorAll('sitemap');
+            sitemapEls.forEach((sm, i) => {
+                const loc = sm.querySelector('loc');
+                if (loc) urls.push({ loc: loc.textContent.trim(), index: i + 1 });
+            });
+
+            if (urls.length === 0) {
+                issues.push({ type: 'error', title: 'Keine <sitemap>-Einträge gefunden', desc: 'Der Sitemap-Index enthält keine untergeordneten Sitemaps.' });
+            } else {
+                issues.push({ type: 'ok', title: `${urls.length} Sitemap-Einträge gefunden`, desc: 'Alle Einträge wurden erkannt.' });
+            }
+        } else {
+            const urlEls = xmlDoc.querySelectorAll('url');
+            let missingLocCount = 0;
+            let invalidUrlCount = 0;
+            let httpCount = 0;
+            let invalidPriorityCount = 0;
+            let invalidChangefreqCount = 0;
+            let invalidDateCount = 0;
+            let missingLastmod = 0;
+            const seen = new Set();
+            const duplicates = [];
+
+            urlEls.forEach((urlEl, i) => {
+                const locEl = urlEl.querySelector('loc');
+                const loc = locEl ? locEl.textContent.trim() : null;
+                const lastmod = urlEl.querySelector('lastmod')?.textContent.trim();
+                const priority = urlEl.querySelector('priority')?.textContent.trim();
+                const changefreq = urlEl.querySelector('changefreq')?.textContent.trim();
+
+                if (!loc) {
+                    missingLocCount++;
+                    return;
+                }
+
+                // URL-Format
+                if (!loc.startsWith('http://') && !loc.startsWith('https://')) {
+                    invalidUrlCount++;
+                } else if (loc.startsWith('http://')) {
+                    httpCount++;
+                }
+
+                // Duplikate
+                if (seen.has(loc)) {
+                    if (!duplicates.includes(loc)) duplicates.push(loc);
+                } else {
+                    seen.add(loc);
+                }
+
+                // Priorität
+                if (priority !== undefined && priority !== null && priority !== '') {
+                    const pVal = parseFloat(priority);
+                    if (isNaN(pVal) || pVal < 0 || pVal > 1) invalidPriorityCount++;
+                }
+
+                // Changefreq
+                if (changefreq && !VALID_CHANGEFREQ.includes(changefreq.toLowerCase())) {
+                    invalidChangefreqCount++;
+                }
+
+                // Lastmod
+                if (!lastmod) {
+                    missingLastmod++;
+                } else if (!DATE_REGEX.test(lastmod)) {
+                    invalidDateCount++;
+                }
+
+                urls.push({ loc, lastmod, priority, changefreq });
+            });
+
+            // URL-Count Check
+            if (urls.length === 0) {
+                issues.push({ type: 'error', title: 'Keine URLs gefunden', desc: 'Die Sitemap enthält keine <url>-Einträge.' });
+            } else if (urls.length > 50000) {
+                issues.push({ type: 'error', title: `Zu viele URLs: ${urls.length.toLocaleString('de-DE')} (Limit: 50.000)`, desc: 'Google verarbeitet maximal 50.000 URLs pro Sitemap-Datei. Teile die Sitemap in mehrere Dateien auf und erstelle einen Sitemap-Index.' });
+            } else if (urls.length > 40000) {
+                issues.push({ type: 'warning', title: `Viele URLs: ${urls.length.toLocaleString('de-DE')} (nähere dich dem 50.000er Limit)`, desc: 'Erwäge die Aufteilung auf mehrere Sitemap-Dateien um mehr Kontrolle zu haben.' });
+            } else {
+                issues.push({ type: 'ok', title: `${urls.length.toLocaleString('de-DE')} URLs — innerhalb des Limits`, desc: 'Google-Limit: max. 50.000 URLs pro Sitemap-Datei.' });
+            }
+
+            // Dateigröße schätzen (uncomprimiert)
+            const estimatedSize = input.length;
+            if (estimatedSize > 50 * 1024 * 1024) {
+                issues.push({ type: 'error', title: `Dateigröße überschreitet 50 MB (${(estimatedSize/1024/1024).toFixed(1)} MB)`, desc: 'Google verarbeitet Sitemaps mit max. 50 MB (unkomprimiert). Teile die Sitemap auf.' });
+            } else if (estimatedSize > 40 * 1024 * 1024) {
+                issues.push({ type: 'warning', title: `Dateigröße nähert sich dem Limit (${(estimatedSize/1024/1024).toFixed(1)} MB)`, desc: 'Das Google-Limit liegt bei 50 MB. Erwäge eine Aufteilung.' });
+            }
+
+            // Fehlende <loc>
+            if (missingLocCount > 0) {
+                issues.push({ type: 'error', title: `${missingLocCount} URL-Einträge ohne <loc>`, desc: 'Jeder <url>-Eintrag muss genau ein <loc>-Element enthalten.' });
+            }
+
+            // Ungültige URLs
+            if (invalidUrlCount > 0) {
+                issues.push({ type: 'error', title: `${invalidUrlCount} URLs ohne https:// oder http://`, desc: 'Alle URLs müssen mit einem absoluten Protokoll beginnen (https:// empfohlen).' });
+            } else if (urls.length > 0) {
+                issues.push({ type: 'ok', title: 'Alle URLs beginnen mit http(s)://', desc: 'Korrekte absolute URL-Formate.' });
+            }
+
+            // HTTP statt HTTPS
+            if (httpCount > 0) {
+                issues.push({ type: 'warning', title: `${httpCount} URLs nutzen http:// statt https://`, desc: 'Google bevorzugt HTTPS. Stelle sicher, dass deine Website HTTPS nutzt und aktualisiere die Sitemap entsprechend.' });
+            } else if (urls.length > 0 && invalidUrlCount === 0) {
+                issues.push({ type: 'ok', title: 'Alle URLs nutzen HTTPS', desc: 'Gut für Sicherheit und SEO-Ranking.' });
+            }
+
+            // Duplikate
+            if (duplicates.length > 0) {
+                issues.push({ type: 'error', title: `${duplicates.length} doppelte URL(s) gefunden`, desc: `Beispiele: ${duplicates.slice(0,3).join(', ')}${duplicates.length > 3 ? '...' : ''}. Doppelte URLs verschwenden Crawl-Budget.` });
+            } else if (urls.length > 1) {
+                issues.push({ type: 'ok', title: 'Keine doppelten URLs', desc: 'Alle URL-Einträge sind eindeutig.' });
+            }
+
+            // Priorität
+            if (invalidPriorityCount > 0) {
+                issues.push({ type: 'error', title: `${invalidPriorityCount} ungültige <priority>-Werte`, desc: 'Der Wert muss zwischen 0.0 und 1.0 liegen (z.B. 0.5, 0.8, 1.0).' });
+            }
+
+            // Changefreq
+            if (invalidChangefreqCount > 0) {
+                issues.push({ type: 'error', title: `${invalidChangefreqCount} ungültige <changefreq>-Werte`, desc: `Erlaubt: ${VALID_CHANGEFREQ.join(', ')}` });
+            }
+
+            // Lastmod
+            if (invalidDateCount > 0) {
+                issues.push({ type: 'warning', title: `${invalidDateCount} ungültige <lastmod>-Datumsformate`, desc: 'Korrekte Formate: YYYY-MM-DD oder ISO 8601 (z.B. 2026-04-01T12:00:00+02:00). Google ignoriert unbekannte Formate.' });
+            }
+
+            if (missingLastmod > 0 && missingLastmod < urls.length) {
+                issues.push({ type: 'warning', title: `${missingLastmod} von ${urls.length} URLs ohne <lastmod>`, desc: 'lastmod ist optional, hilft Google aber beim Crawl-Priorisieren. Empfohlen für alle URLs.' });
+            } else if (missingLastmod === 0 && urls.length > 0) {
+                issues.push({ type: 'ok', title: 'Alle URLs haben ein <lastmod>-Datum', desc: 'Google kann frische Inhalte bevorzugt crawlen.' });
+            }
+        }
+
+        renderResults(issues, urls, isSitemapIndex, input.length);
+    }
+
+    function renderResults(issues, urls, isSitemapIndex, charCount) {
+        // Score berechnen
+        const errors = issues.filter(i => i.type === 'error').length;
+        const warnings = issues.filter(i => i.type === 'warning').length;
+        const oks = issues.filter(i => i.type === 'ok').length;
+        const total = issues.length;
+        let score = Math.round((oks / total) * 100);
+
+        // Score Circle
+        const circle = document.getElementById('scoreCircle');
+        const val = document.getElementById('scoreValue');
+        const label = document.getElementById('scoreLabel');
+        const desc = document.getElementById('scoreDesc');
+
+        val.textContent = score + '%';
+
+        if (errors > 0) {
+            circle.className = 'score-circle bg-red-500/20 text-red-400 flex-shrink-0';
+            label.textContent = 'Fehler gefunden';
+            desc.textContent = 'Kritische Probleme beheben, bevor die Sitemap eingereicht wird.';
+        } else if (warnings > 0) {
+            circle.className = 'score-circle bg-amber-500/20 text-amber-400 flex-shrink-0';
+            label.textContent = 'Warnungen vorhanden';
+            desc.textContent = 'Keine kritischen Fehler, aber einige Punkte können verbessert werden.';
+        } else {
+            circle.className = 'score-circle bg-emerald-500/20 text-emerald-400 flex-shrink-0';
+            label.textContent = 'Sitemap valide!';
+            desc.textContent = 'Alle Prüfungen bestanden. Die Sitemap ist bereit für Google.';
+        }
+
+        document.getElementById('errorCount').textContent = errors > 0 ? `${errors} Fehler` : '';
+        document.getElementById('warningCount').textContent = warnings > 0 ? `${warnings} Warnungen` : '';
+        document.getElementById('okCount').textContent = oks > 0 ? `${oks} OK` : '';
+
+        // Stats
+        const statsGrid = document.getElementById('statsGrid');
+        const sizeKb = (charCount / 1024).toFixed(1);
+        const stats = [
+            { label: 'URLs', value: urls.length.toLocaleString('de-DE') },
+            { label: 'Typ', value: isSitemapIndex ? 'Index' : 'URL-Liste' },
+            { label: 'Größe', value: sizeKb + ' KB' },
+            { label: 'Limit', value: isSitemapIndex ? '–' : (Math.round((urls.length / 50000) * 100) + '%') + ' genutzt' },
+        ];
+
+        statsGrid.innerHTML = stats.map(s => `
+            <div class="glass rounded-lg p-4 text-center">
+                <div class="text-2xl font-bold text-white">${s.value}</div>
+                <div class="text-xs text-white/50 mt-1">${s.label}</div>
+            </div>
+        `).join('');
+
+        // Issues
+        const issuesList = document.getElementById('issuesList');
+        issuesList.innerHTML = issues.map(issue => {
+            const colors = { error: 'red', warning: 'amber', ok: 'emerald' };
+            const icons = {
+                error: '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>',
+                warning: '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>',
+                ok: '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>',
+            };
+            const c = colors[issue.type];
+            return `
+                <div class="issue-${issue.type} bg-${c}-500/5 rounded-lg p-4">
+                    <div class="flex items-start gap-3">
+                        <svg class="w-5 h-5 text-${c}-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">${icons[issue.type]}</svg>
+                        <div>
+                            <div class="text-white font-medium text-sm">${issue.title}</div>
+                            ${issue.desc ? `<div class="text-white/50 text-xs mt-1">${issue.desc}</div>` : ''}
+                        </div>
+                    </div>
+                </div>
+            `;
+        }).join('');
+
+        // URL Liste
+        const urlListTitle = document.getElementById('urlListTitle');
+        const urlList = document.getElementById('urlList');
+        urlListTitle.textContent = `${urls.length} URLs anzeigen`;
+
+        const displayUrls = urls.slice(0, 200);
+        urlList.innerHTML = displayUrls.map((u, i) => `
+            <div class="url-row flex items-center gap-3 p-2 rounded text-xs">
+                <span class="text-white/30 w-6 text-right flex-shrink-0">${i + 1}</span>
+                <span class="text-blue-300 font-mono truncate flex-1">${u.loc || '(kein loc)'}</span>
+                ${u.lastmod ? `<span class="text-white/40 flex-shrink-0 hidden sm:block">${u.lastmod}</span>` : ''}
+                ${u.priority ? `<span class="text-white/40 flex-shrink-0 hidden md:block">P: ${u.priority}</span>` : ''}
+            </div>
+        `).join('');
+
+        if (urls.length > 200) {
+            urlList.innerHTML += `<div class="text-center text-white/30 text-xs py-2">... und ${(urls.length - 200).toLocaleString('de-DE')} weitere URLs</div>`;
+        }
+    }
+    </script>
+</body>
+</html>
