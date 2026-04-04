@@ -5,22 +5,30 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Sat, 04 Apr 2026 04:09:32 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 04 Apr 2026 13:20:22 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Sitemap.xml erstellen und einreichen: Schritt-für-Schritt</title>
+      <link>https://shift07.ai/blog/sitemap-xml-erstellen-einreichen.html</link>
+      <guid>https://shift07.ai/blog/sitemap-xml-erstellen-einreichen.html</guid>
+      <pubDate>Sat, 04 Apr 2026 13:20:10 +0000</pubDate>
+      <description>Lerne, wie du eine sitemap.xml erstellst, richtig konfigurierst und bei Google einreichst. Mit Beispielen, Schritt-für-Schritt-Anleitung und häufigen Fehlern.</description>
+      <category>Technisches SEO</category>
+    </item>
+    <item>
+      <title>Sitemap-Validator: sitemap.xml kostenlos prüfen und Fehler finden</title>
+      <link>https://shift07.ai/blog/sitemap-validator-tool.html</link>
+      <guid>https://shift07.ai/blog/sitemap-validator-tool.html</guid>
+      <pubDate>Sat, 04 Apr 2026 13:19:39 +0000</pubDate>
+      <description>Mit unserem kostenlosen Sitemap-Validator prüfst du deine sitemap.xml auf XML-Fehler, ungültige URLs, Duplikate und Formatprobleme — direkt im Browser, ohne Anmeldung.</description>
+      <category>Technisches SEO</category>
+    </item>
     <item>
       <title>robots.txt richtig konfigurieren: Die vollständige Anleitung</title>
       <link>https://shift07.ai/blog/robots-txt-konfigurieren.html</link>
       <guid>https://shift07.ai/blog/robots-txt-konfigurieren.html</guid>
       <pubDate>Sat, 04 Apr 2026 04:09:17 +0000</pubDate>
       <description>Lerne, wie du deine robots.txt Datei richtig konfigurierst, welche Direktiven du kennst musst und welche Fehler du unbedingt vermeiden solltest.</description>
-      <category>Technisches SEO</category>
-    </item>
-    <item>
-      <title>Sitemap.xml erstellen und einreichen: Schritt-für-Schritt</title>
-      <link>https://shift07.ai/blog/sitemap-xml-erstellen-einreichen.html</link>
-      <guid>https://shift07.ai/blog/sitemap-xml-erstellen-einreichen.html</guid>
-      <pubDate>Sat, 04 Apr 2026 04:08:44 +0000</pubDate>
-      <description>Lerne, wie du eine sitemap.xml erstellst, richtig konfigurierst und bei Google einreichst. Mit Beispielen, Schritt-für-Schritt-Anleitung und häufigen Fehlern.</description>
       <category>Technisches SEO</category>
     </item>
     <item>
