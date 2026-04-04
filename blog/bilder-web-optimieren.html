@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K1S1RXBDS8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K1S1RXBDS8');
+    </script>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8475857002943858" crossorigin="anonymous"></script>
+    <title>Bilder für das Web optimieren: Format, Größe, Lazy Loading | Shift07 Blog</title>
+    <meta name="description" content="Bilder richtig fürs Web optimieren: WebP vs JPEG vs PNG, die richtige Bildgröße, Lazy Loading und Alt-Texte für SEO. Mit konkreten Anleitungen und Tool-Empfehlungen.">
+    <meta name="keywords" content="Bilder Web optimieren, WebP Format SEO, Lazy Loading einrichten, Bildgröße optimieren SEO, Alt-Text SEO, Bilder komprimieren Website">
+    <meta name="author" content="Laurenz Thümmler">
+    <link rel="icon" type="image/png" href="/logo.png">
+    <link rel="canonical" href="https://shift07.ai/blog/bilder-web-optimieren.html">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Bilder für das Web optimieren: Format, Größe, Lazy Loading">
+    <meta property="og:description" content="Bilder richtig fürs Web optimieren: WebP, JPEG, Lazy Loading und Alt-Texte für bessere Performance und SEO.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://shift07.ai/blog/bilder-web-optimieren.html">
+    <meta property="og:image" content="https://shift07.ai/blog/images/bilder-web-optimieren.png">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="Shift07">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Bilder für das Web optimieren: Format, Größe, Lazy Loading">
+    <meta name="twitter:description" content="WebP, Komprimierung, Lazy Loading: So werden Bilder zum SEO-Vorteil statt Bremsklotz.">
+    <meta name="twitter:image" content="https://shift07.ai/blog/images/bilder-web-optimieren.png">
+    <!-- Article Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Bilder für das Web optimieren: Format, Größe, Lazy Loading",
+      "description": "Bilder richtig fürs Web optimieren: WebP vs JPEG vs PNG, Bildgröße, Lazy Loading und Alt-Texte für SEO. Mit konkreten Anleitungen.",
+      "image": "https://shift07.ai/blog/images/bilder-web-optimieren.png",
+      "author": {
+        "@type": "Person",
+        "name": "Laurenz Thümmler"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Thümmler AI GmbH",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://shift07.ai/logo.png"
+        }
+      },
+      "datePublished": "2026-04-04",
+      "dateModified": "2026-04-04",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://shift07.ai/blog/bilder-web-optimieren.html"
+      }
+    }
+    </script>
+    <link rel="alternate" type="application/rss+xml" title="Shift07 Blog" href="https://shift07.ai/feed.xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+        .prose h2 { font-size: 1.5rem; font-weight: 700; color: white; margin-top: 2rem; margin-bottom: 0.75rem; }
+        .prose h3 { font-size: 1.2rem; font-weight: 600; color: #93c5fd; margin-top: 1.5rem; margin-bottom: 0.5rem; }
+        .prose p { color: rgba(191,219,254,0.85); line-height: 1.8; margin-bottom: 1rem; }
+        .prose ul { color: rgba(191,219,254,0.85); list-style-type: disc; padding-left: 1.5rem; margin-bottom: 1rem; }
+        .prose ol { color: rgba(191,219,254,0.85); list-style-type: decimal; padding-left: 1.5rem; margin-bottom: 1rem; }
+        .prose li { margin-bottom: 0.4rem; line-height: 1.7; }
+        .prose a { color: #60a5fa; text-decoration: underline; }
+        .prose a:hover { color: #93c5fd; }
+        .prose strong { color: white; font-weight: 600; }
+        .prose code { background: rgba(0,0,0,0.4); color: #86efac; padding: 2px 6px; border-radius: 4px; font-size: 0.875rem; font-family: monospace; }
+        .prose pre { background: rgba(0,0,0,0.5); border: 1px solid rgba(255,255,255,0.1); border-radius: 0.5rem; padding: 1rem; overflow-x: auto; margin-bottom: 1rem; }
+        .prose pre code { background: none; padding: 0; color: #86efac; }
+        .glass { background: rgba(255,255,255,0.06); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.1); }
+        .toc-link { color: rgba(147,197,253,0.8); text-decoration: none; font-size: 0.875rem; }
+        .toc-link:hover { color: #60a5fa; }
+        .comparison-table th { color: white; font-weight: 600; text-align: left; padding: 8px 12px; background: rgba(255,255,255,0.08); }
+        .comparison-table td { color: rgba(191,219,254,0.85); padding: 8px 12px; border-top: 1px solid rgba(255,255,255,0.08); font-size: 0.875rem; }
+        .comparison-table tr:hover td { background: rgba(255,255,255,0.04); }
+    </style>
+</head>
+<body class="antialiased">
+<div class="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
+
+    <!-- Navigation -->
+    <nav class="bg-black/20 backdrop-blur-md border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="/" class="flex items-center gap-2">
+                    <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                    <span class="text-xl font-bold text-white">Shift07</span>
+                </a>
+                <div class="hidden md:flex items-baseline space-x-4">
+                    <a href="/" class="text-white hover:text-blue-300 px-3 py-2 text-sm font-medium transition-colors">SEO-Tool</a>
+                    <a href="/blog/" class="text-blue-300 px-3 py-2 text-sm font-medium">Blog</a>
+                    <a href="/tools/" class="text-white hover:text-blue-300 px-3 py-2 text-sm font-medium transition-colors">Tools</a>
+                    <a href="/app/#/login" class="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:from-blue-600 hover:to-purple-700 transition-all">Anmelden</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Article Header -->
+    <header class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-8">
+        <div class="flex items-center gap-2 mb-4">
+            <a href="/blog/" class="text-blue-400 hover:text-blue-300 text-sm transition-colors">← Blog</a>
+            <span class="text-white/30 text-sm">/</span>
+            <span class="text-white/50 text-sm">Performance SEO</span>
+        </div>
+        <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight">
+            Bilder für das Web optimieren: Format, Größe, Lazy Loading
+        </h1>
+        <p class="text-xl text-blue-200/80 mb-6 leading-relaxed">
+            Bilder sind oft der größte Bremsklotz für die Ladezeit — und damit für dein Google-Ranking. So optimierst du sie richtig: vom Dateiformat über die Komprimierung bis zum Lazy Loading.
+        </p>
+        <div class="flex flex-wrap items-center gap-4 text-sm text-white/50">
+            <span>von <strong class="text-white/80">Laurenz Thümmler</strong></span>
+            <span>•</span>
+            <time datetime="2026-04-04">4. April 2026</time>
+            <span>•</span>
+            <span>11 Min. Lesezeit</span>
+        </div>
+    </header>
+
+    <!-- Hero Image -->
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mb-10">
+        <img src="images/bilder-web-optimieren.png"
+             alt="Bilder für das Web optimieren: Format, Größe, Lazy Loading für besseres SEO"
+             class="w-full rounded-2xl shadow-2xl border border-white/10">
+    </div>
+
+    <!-- Content -->
+    <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+        <div class="grid lg:grid-cols-4 gap-8">
+
+            <!-- TOC -->
+            <aside class="lg:col-span-1">
+                <div class="glass rounded-xl p-5 sticky top-6">
+                    <h3 class="text-white font-semibold text-sm mb-3">Inhaltsverzeichnis</h3>
+                    <ol class="space-y-2 list-decimal list-inside">
+                        <li><a href="#warum-wichtig" class="toc-link">Warum Bilder SEO beeinflussen</a></li>
+                        <li><a href="#formate" class="toc-link">Das richtige Format</a></li>
+                        <li><a href="#bildgroesse" class="toc-link">Bildgröße und Auflösung</a></li>
+                        <li><a href="#komprimierung" class="toc-link">Komprimierung</a></li>
+                        <li><a href="#lazy-loading" class="toc-link">Lazy Loading</a></li>
+                        <li><a href="#alt-texte" class="toc-link">Alt-Texte für SEO</a></li>
+                        <li><a href="#responsive" class="toc-link">Responsive Bilder</a></li>
+                        <li><a href="#checkliste" class="toc-link">Checkliste</a></li>
+                    </ol>
+                </div>
+            </aside>
+
+            <!-- Main Content -->
+            <div class="lg:col-span-3 prose max-w-none">
+
+                <p>
+                    Auf einer durchschnittlichen Website machen Bilder 50–70 % des gesamten Seiten-Gewichts aus. Ein einziges unkomprimiertes Foto kann 5 MB wiegen — und kostet auf mobilen Verbindungen mehrere Sekunden Ladezeit. Google bestraft das direkt: schlechte <a href="/blog/core-web-vitals-erklaert.html">Core Web Vitals</a>, niedrigeres Ranking, höhere Absprungrate.
+                </p>
+                <p>
+                    Die gute Nachricht: Bildoptimierung ist einer der wenigen SEO-Faktoren, bei dem du mit vergleichsweise wenig Aufwand sehr viel erreichen kannst.
+                </p>
+
+                <h2 id="warum-wichtig">Warum Bilder dein SEO-Ranking direkt beeinflussen</h2>
+                <p>
+                    Google misst seit dem Core Web Vitals-Update (2021) direkt, wie schnell Seiten laden — und benutzt diese Werte als Ranking-Faktor. Das wichtigste Bild-Metrik ist <strong>LCP (Largest Contentful Paint)</strong>: die Zeit bis das größte sichtbare Element geladen ist. Das ist in 80 % der Fälle ein Bild.
+                </p>
+                <p>
+                    Daneben zählen Bilder zur <strong>Seitengewicht</strong>-Berechnung, die die Gesamtladezeit beeinflusst. Und: Google Images ist eine eigene Suchmaschine. Korrekt ausgezeichnete Bilder ranken dort und bringen zusätzlichen organischen Traffic.
+                </p>
+
+                <h2 id="formate">Das richtige Bildformat wählen</h2>
+                <p>
+                    Nicht alle Bildformate sind gleich gut. Die Wahl des richtigen Formats kann die Dateigröße um 40–80 % reduzieren — ohne sichtbaren Qualitätsverlust.
+                </p>
+
+                <div class="overflow-x-auto my-6">
+                    <table class="comparison-table w-full rounded-xl overflow-hidden">
+                        <thead>
+                            <tr>
+                                <th>Format</th>
+                                <th>Beste Nutzung</th>
+                                <th>Komprimierung</th>
+                                <th>Transparenz</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong class="text-green-300">WebP</strong></td>
+                                <td>Fotos, Screenshots, UI-Bilder</td>
+                                <td>Sehr gut (25–35% kleiner als JPEG)</td>
+                                <td>Ja</td>
+                            </tr>
+                            <tr>
+                                <td><strong class="text-blue-300">AVIF</strong></td>
+                                <td>Fotos (moderne Browser)</td>
+                                <td>Exzellent (50% kleiner als JPEG)</td>
+                                <td>Ja</td>
+                            </tr>
+                            <tr>
+                                <td>JPEG / JPG</td>
+                                <td>Fotos (ältere Browser-Kompatibilität)</td>
+                                <td>Gut</td>
+                                <td>Nein</td>
+                            </tr>
+                            <tr>
+                                <td>PNG</td>
+                                <td>Logos, Screenshots mit Text, Icons</td>
+                                <td>Mittel (verlustfrei)</td>
+                                <td>Ja</td>
+                            </tr>
+                            <tr>
+                                <td>SVG</td>
+                                <td>Icons, Logos, Illustrationen</td>
+                                <td>Exzellent (skalierbar)</td>
+                                <td>Ja</td>
+                            </tr>
+                            <tr>
+                                <td>GIF</td>
+                                <td>Kurze Animationen (veraltet → lieber WebM/MP4)</td>
+                                <td>Schlecht</td>
+                                <td>Begrenzt</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>WebP: Der neue Standard</h3>
+                <p>
+                    <strong>WebP</strong> ist heute das empfohlene Format für Fotos und Screenshots. Es wird von allen modernen Browsern unterstützt (Chrome, Firefox, Safari seit 2020, Edge) und liefert bei gleicher Qualität 25–35 % kleinere Dateien als JPEG.
+                </p>
+                <p>
+                    Für maximale Kompatibilität kannst du das <code>&lt;picture&gt;</code>-Element verwenden:
+                </p>
+                <pre><code>&lt;picture&gt;
+  &lt;source srcset="bild.webp" type="image/webp"&gt;
+  &lt;source srcset="bild.jpg" type="image/jpeg"&gt;
+  &lt;img src="bild.jpg" alt="Beschreibung"&gt;
+&lt;/picture&gt;</code></pre>
+
+                <h3>SVG für Icons und Logos</h3>
+                <p>
+                    Für Logos, Icons und einfache Illustrationen ist SVG (Scalable Vector Graphics) unschlagbar: beliebig skalierbar ohne Qualitätsverlust, oft nur wenige Kilobyte groß und direkt ins HTML einbettbar.
+                </p>
+
+                <h2 id="bildgroesse">Bildgröße und Auflösung</h2>
+                <p>
+                    Ein häufiger Fehler: Bilder werden in voller Kamera-Auflösung (z.B. 6000×4000 Pixel, 8 MB) hochgeladen, obwohl sie auf der Website nur 800px breit dargestellt werden. Das ist reine Ressourcenverschwendung.
+                </p>
+
+                <h3>Faustregel für Bildbreiten</h3>
+                <ul>
+                    <li><strong>Hero-Bilder / Banner:</strong> max. 1920px breit, Qualität 80–85 %</li>
+                    <li><strong>Blog-Header:</strong> 1200×630px (passt auch für OG-Bild)</li>
+                    <li><strong>Produktbilder:</strong> 800–1200px, abhängig vom Anzeigebereich</li>
+                    <li><strong>Thumbnails:</strong> 300–400px</li>
+                    <li><strong>Icons:</strong> SVG oder 32–64px PNG</li>
+                </ul>
+
+                <h3>Retina / HiDPI-Displays</h3>
+                <p>
+                    Auf Retina-Displays (Apple-Geräte, viele Android-Phones) wird die CSS-Breite verdoppelt für die physischen Pixel. Ein Bild das 400px breit dargestellt wird, braucht 800px für scharfe Darstellung auf Retina-Displays. Du löst das elegant mit dem <code>srcset</code>-Attribut:
+                </p>
+                <pre><code>&lt;img src="bild-400.jpg"
+     srcset="bild-400.jpg 400w, bild-800.jpg 800w, bild-1200.jpg 1200w"
+     sizes="(max-width: 600px) 400px, (max-width: 1200px) 800px, 1200px"
+     alt="Beschreibung"&gt;</code></pre>
+                <p>
+                    Der Browser wählt automatisch die passende Größe — ältere Handys bekommen das kleine Bild, High-DPI-Displays das große.
+                </p>
+
+                <h2 id="komprimierung">Bilder komprimieren: Tools und Einstellungen</h2>
+                <p>
+                    Komprimierung reduziert die Dateigröße, ohne (bei korrekter Einstellung) sichtbare Qualitätseinbußen. Der Sweet Spot liegt bei den meisten Fotos zwischen 75–85 % JPEG-Qualität.
+                </p>
+
+                <h3>Kostenlose Online-Tools</h3>
+                <ul>
+                    <li><strong>Squoosh.app</strong> (von Google) — bestes Ergebnis, direkter Vorher-Nachher-Vergleich, unterstützt WebP und AVIF</li>
+                    <li><strong>TinyPNG / TinyJPG</strong> — einfach, schnell, API verfügbar</li>
+                    <li><strong>Compressor.io</strong> — guter visueller Vergleich</li>
+                </ul>
+
+                <h3>Kommandozeile (für Entwickler)</h3>
+                <pre><code># WebP konvertieren mit cwebp (kostenlos von Google)
+cwebp -q 80 bild.jpg -o bild.webp
+
+# JPEG optimieren mit ImageMagick
+convert bild.jpg -quality 80 -strip bild-optimiert.jpg
+
+# Batch-Konvertierung aller JPEGs in einem Ordner zu WebP
+for f in *.jpg; do cwebp -q 80 "$f" -o "${f%.jpg}.webp"; done</code></pre>
+
+                <h3>WordPress-Plugins</h3>
+                <p>
+                    Für WordPress gibt es Plugins die Bilder automatisch beim Upload komprimieren und in WebP konvertieren: <strong>Smush</strong>, <strong>ShortPixel</strong> oder <strong>Imagify</strong>. Die kostenlosen Versionen reichen für die meisten Websites.
+                </p>
+
+                <h2 id="lazy-loading">Lazy Loading: Bilder nur bei Bedarf laden</h2>
+                <p>
+                    Standardmäßig lädt der Browser alle Bilder einer Seite sofort — auch jene die sich ganz unten befinden und der Nutzer vielleicht nie zu Gesicht bekommt. <strong>Lazy Loading</strong> ändert das: Bilder werden erst geladen, wenn sie in den sichtbaren Bereich scrollen.
+                </p>
+
+                <h3>Native Lazy Loading (HTML-Attribut)</h3>
+                <p>
+                    Seit Chrome 76 und Firefox 75 funktioniert Lazy Loading ohne JavaScript — einfach das <code>loading="lazy"</code>-Attribut setzen:
+                </p>
+                <pre><code>&lt;img src="bild.jpg" alt="Beschreibung" loading="lazy"&gt;</code></pre>
+                <p>
+                    Das ist alles. Browserunterstützung liegt heute bei über 95 %. Für ältere Browser fällt das Attribut einfach weg und die Bilder werden normal geladen.
+                </p>
+
+                <h3>Was NICHT lazy-loaden</h3>
+                <p>
+                    Das LCP-Bild — also das größte Bild im sichtbaren Bereich beim ersten Laden — sollte <strong>nicht</strong> lazy-geloaden werden. Es sollte so schnell wie möglich laden. Verwende stattdessen <code>loading="eager"</code> (Standard) oder noch besser:
+                </p>
+                <pre><code>&lt;!-- LCP-Bild: sofort laden und vorausladen --&gt;
+&lt;link rel="preload" as="image" href="hero-bild.webp"&gt;
+&lt;img src="hero-bild.webp" alt="Hero Bild" loading="eager" fetchpriority="high"&gt;
+
+&lt;!-- Alle anderen Bilder: lazy laden --&gt;
+&lt;img src="weiteres-bild.webp" alt="Weiteres Bild" loading="lazy"&gt;</code></pre>
+
+                <div class="glass rounded-xl p-5 my-6">
+                    <p class="text-blue-200/80 text-sm mb-0"><strong class="text-white">LCP-Tipp:</strong> Das Hero-Bild deiner Seite ist meist das LCP-Element. Preloade es im &lt;head&gt; und lade es ohne lazy. Das allein kann deinen LCP-Wert um 500–1000ms verbessern — direkte Auswirkung auf Google-Ranking.</p>
+                </div>
+
+                <h2 id="alt-texte">Alt-Texte: Bilder für Google beschreiben</h2>
+                <p>
+                    Der Alt-Text (alternatives Textattribut) eines Bildes hat zwei Aufgaben: Er wird angezeigt wenn das Bild nicht geladen werden kann, und er hilft Google zu verstehen worum es auf dem Bild geht. Beides ist SEO-relevant.
+                </p>
+
+                <h3>Alt-Text richtig schreiben</h3>
+                <ul>
+                    <li><strong>Beschreibe was zu sehen ist</strong> — kein Keyword-Stuffing</li>
+                    <li><strong>Nutze das Haupt-Keyword</strong> wo es natürlich passt</li>
+                    <li><strong>Halte es kurz</strong> — 5–15 Wörter sind ideal</li>
+                    <li><strong>Keine redundanten Einleitungen</strong> — nicht "Bild von..." oder "Foto zeigt..."</li>
+                    <li><strong>Dekorative Bilder:</strong> leeres alt="" — Screenreader-Nutzer und Google überspringen sie dann</li>
+                </ul>
+
+                <pre><code>&lt;!-- Schlecht --&gt;
+&lt;img src="arzt.jpg" alt="Bild"&gt;
+&lt;img src="arzt.jpg" alt="Zahnarzt SEO Zahnarzt Berlin Zahnarzt Praxis"&gt;
+
+&lt;!-- Gut --&gt;
+&lt;img src="arzt.jpg" alt="Freundlicher Zahnarzt in moderner Praxis in Berlin-Mitte"&gt;
+
+&lt;!-- Dekorativ --&gt;
+&lt;img src="trennlinie.png" alt=""&gt;</code></pre>
+
+                <h3>Dateinamen: unterschätzt aber wichtig</h3>
+                <p>
+                    Auch der Dateiname gibt Google einen Hinweis. <code>DSC_4729.jpg</code> sagt nichts — <code>zahnarzt-berlin-mitte-praxis.webp</code> schon.
+                </p>
+
+                <h2 id="responsive">Responsive Bilder: perfekt auf jedem Gerät</h2>
+                <p>
+                    Responsive Design bedeutet auch responsive Bilder. Eine Technik die sich lohnt: <strong>Art Direction</strong> — verschiedene Bildausschnitte für verschiedene Bildschirmgrößen.
+                </p>
+                <pre><code>&lt;picture&gt;
+  &lt;!-- Mobil: quadratisch, Gesicht im Fokus --&gt;
+  &lt;source media="(max-width: 600px)"
+          srcset="portrait-square.webp" type="image/webp"&gt;
+  &lt;!-- Desktop: breites Panorama --&gt;
+  &lt;source media="(min-width: 601px)"
+          srcset="landscape-wide.webp" type="image/webp"&gt;
+  &lt;img src="landscape-wide.jpg" alt="Team in unserem Büro"&gt;
+&lt;/picture&gt;</code></pre>
+
+                <h3>width und height immer setzen</h3>
+                <p>
+                    Setze immer explizite <code>width</code>- und <code>height</code>-Attribute auf img-Tags. Das verhindert <strong>Cumulative Layout Shift (CLS)</strong> — das lästige Springen der Seite wenn Bilder laden. Ein guter CLS-Wert (unter 0,1) ist ein offizieller Google-Ranking-Faktor.
+                </p>
+                <pre><code>&lt;img src="bild.webp" alt="Beschreibung" width="800" height="600" loading="lazy"&gt;</code></pre>
+
+                <h2 id="checkliste">Bildoptimierungs-Checkliste</h2>
+                <div class="glass rounded-xl p-6 my-6">
+                    <h3 class="text-white font-semibold mb-4 mt-0">Checkliste: Bilder für das Web optimieren</h3>
+                    <ul class="space-y-2 list-none pl-0">
+                        <li class="flex items-start gap-2"><span class="text-green-400 mt-0.5 flex-shrink-0">✓</span><span>Fotos als WebP gespeichert (oder AVIF für moderne Browser)</span></li>
+                        <li class="flex items-start gap-2"><span class="text-green-400 mt-0.5 flex-shrink-0">✓</span><span>Logos und Icons als SVG (wo möglich)</span></li>
+                        <li class="flex items-start gap-2"><span class="text-green-400 mt-0.5 flex-shrink-0">✓</span><span>Bilder auf tatsächliche Anzeigebreite skaliert (kein 6000px-Foto für 800px-Slot)</span></li>
+                        <li class="flex items-start gap-2"><span class="text-green-400 mt-0.5 flex-shrink-0">✓</span><span>Komprimiert auf 75–85 % Qualität (mit Squoosh, TinyPNG oder ähnlich)</span></li>
+                        <li class="flex items-start gap-2"><span class="text-green-400 mt-0.5 flex-shrink-0">✓</span><span>LCP-Bild wird sofort geladen (kein lazy, ggf. preload)</span></li>
+                        <li class="flex items-start gap-2"><span class="text-green-400 mt-0.5 flex-shrink-0">✓</span><span>Alle anderen Bilder: loading="lazy"</span></li>
+                        <li class="flex items-start gap-2"><span class="text-green-400 mt-0.5 flex-shrink-0">✓</span><span>Alt-Texte für alle inhaltlichen Bilder gesetzt (nicht keyword-gestopft)</span></li>
+                        <li class="flex items-start gap-2"><span class="text-green-400 mt-0.5 flex-shrink-0">✓</span><span>Dekorative Bilder haben alt=""</span></li>
+                        <li class="flex items-start gap-2"><span class="text-green-400 mt-0.5 flex-shrink-0">✓</span><span>width und height Attribute gesetzt (verhindert Layout Shift / CLS)</span></li>
+                        <li class="flex items-start gap-2"><span class="text-green-400 mt-0.5 flex-shrink-0">✓</span><span>Dateinamen beschreibend (nicht IMG_001.jpg)</span></li>
+                        <li class="flex items-start gap-2"><span class="text-green-400 mt-0.5 flex-shrink-0">✓</span><span>srcset und sizes für responsive Bilder</span></li>
+                    </ul>
+                </div>
+
+                <h2>Wie viel Unterschied macht das wirklich?</h2>
+                <p>
+                    Um das zu verdeutlichen: Eine typische Website lädt 15–20 Bilder pro Seite. Wenn jedes Bild statt 500 KB nur 100 KB wiegt (dank WebP + Komprimierung), spart das 6–8 MB pro Seitenaufruf. Auf einer 3G-Verbindung ist das der Unterschied zwischen 8 Sekunden und 1,5 Sekunden Ladezeit.
+                </p>
+                <p>
+                    Kombiniert mit <a href="/blog/core-web-vitals-erklaert.html">gutem LCP und niedrigem CLS</a> und einer <a href="/blog/website-geschwindigkeit-verbessern.html">allgemein schnellen Website</a> ist Bildoptimierung einer der direktesten Hebel für bessere Google-Rankings — besonders auf mobilen Geräten.
+                </p>
+                <p>
+                    Willst du wissen ob deine Website Bildprobleme hat? Teste sie kostenlos mit <a href="/">unserer SEO-Analyse auf Shift07</a>.
+                </p>
+
+                <!-- Related Articles -->
+                <div class="glass rounded-xl p-6 mt-10">
+                    <h3 class="text-white font-semibold mb-4">Verwandte Artikel</h3>
+                    <div class="grid sm:grid-cols-2 gap-4">
+                        <a href="/blog/core-web-vitals-erklaert.html" class="block p-4 bg-white/5 rounded-lg hover:bg-white/10 transition-colors no-underline">
+                            <p class="text-white font-medium text-sm mb-1">Core Web Vitals erklärt: LCP, CLS, INP</p>
+                            <p class="text-blue-200/60 text-xs">Warum LCP direkt mit Bildern zusammenhängt.</p>
+                        </a>
+                        <a href="/blog/website-geschwindigkeit-verbessern.html" class="block p-4 bg-white/5 rounded-lg hover:bg-white/10 transition-colors no-underline">
+                            <p class="text-white font-medium text-sm mb-1">Website-Geschwindigkeit verbessern</p>
+                            <p class="text-blue-200/60 text-xs">Alle Faktoren für schnelle Ladezeiten im Überblick.</p>
+                        </a>
+                        <a href="/blog/mobile-optimierung-website-checkliste.html" class="block p-4 bg-white/5 rounded-lg hover:bg-white/10 transition-colors no-underline">
+                            <p class="text-white font-medium text-sm mb-1">Mobile Optimierung: Checkliste</p>
+                            <p class="text-blue-200/60 text-xs">Responsive Bilder sind Teil des Mobile-First-Index.</p>
+                        </a>
+                        <a href="/blog/strukturierte-daten-seo-schema-markup.html" class="block p-4 bg-white/5 rounded-lg hover:bg-white/10 transition-colors no-underline">
+                            <p class="text-white font-medium text-sm mb-1">Strukturierte Daten für SEO</p>
+                            <p class="text-blue-200/60 text-xs">ImageObject Schema-Markup für bessere Bilddarstellung in Google.</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <!-- CTA -->
+    <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+        <div class="glass rounded-2xl p-8 text-center border-blue-500/30 border">
+            <h2 class="text-2xl font-bold text-white mb-3">Hat deine Website Bild-Performance-Probleme?</h2>
+            <p class="text-blue-200/70 mb-6">Shift07 analysiert deine Website auf alle wichtigen Faktoren — inkl. Ladezeit und technische SEO-Issues. Kostenlos, in 30 Sekunden.</p>
+            <a href="/" class="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-3 rounded-xl font-semibold hover:from-blue-500 hover:to-indigo-500 transition-all inline-block">Kostenlose SEO-Analyse starten</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black/30 backdrop-blur-md border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="text-white/60 mb-4 md:mb-0 text-sm">&copy; 2026 Thümmler AI GmbH. Alle Rechte vorbehalten.</div>
+                <div class="flex space-x-6">
+                    <a href="/impressum.html" class="text-gray-300 hover:text-white transition-colors text-sm">Impressum</a>
+                    <a href="/datenschutz.html" class="text-gray-300 hover:text-white transition-colors text-sm">Datenschutz</a>
+                    <a href="/agb.html" class="text-gray-300 hover:text-white transition-colors text-sm">AGB</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+</body>
+</html>
