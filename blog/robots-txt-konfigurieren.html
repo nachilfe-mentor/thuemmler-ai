@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>robots.txt richtig konfigurieren: Die vollständige Anleitung | Shift07 Blog</title>
+    <meta name="description" content="Lerne, wie du deine robots.txt Datei richtig konfigurierst, welche Direktiven du kennst musst und welche Fehler du unbedingt vermeiden solltest.">
+    <meta name="author" content="Thümmler AI GmbH">
+    <link rel="icon" type="image/png" href="/logo.png">
+    <link rel="canonical" href="https://shift07.ai/blog/robots-txt-konfigurieren.html">
+    <link rel="alternate" type="application/rss+xml" title="Shift07 Blog" href="https://shift07.ai/feed.xml">
+    <!-- Open Graph -->
+    <meta property="og:title" content="robots.txt richtig konfigurieren: Die vollständige Anleitung | Shift07 Blog">
+    <meta property="og:description" content="Lerne, wie du deine robots.txt Datei richtig konfigurierst, welche Direktiven du kennst musst und welche Fehler du unbedingt vermeiden solltest.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://shift07.ai/blog/robots-txt-konfigurieren.html">
+    <meta property="og:image" content="https://shift07.ai/blog/images/robots-txt-konfigurieren.png">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="Shift07">
+    <meta property="article:published_time" content="2026-04-04T09:00:00+02:00">
+    <meta property="article:section" content="Technisches SEO">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="robots.txt richtig konfigurieren: Anleitung">
+    <meta name="twitter:description" content="Wie du die robots.txt Datei deiner Website richtig konfigurierst — mit Beispielen, Direktiven und häufigen Fehlern.">
+    <meta name="twitter:image" content="https://shift07.ai/blog/images/robots-txt-konfigurieren.png">
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "robots.txt richtig konfigurieren: Die vollständige Anleitung",
+      "description": "Lerne, wie du deine robots.txt Datei richtig konfigurierst, welche Direktiven du kennst musst und welche Fehler du unbedingt vermeiden solltest.",
+      "image": "https://shift07.ai/blog/images/robots-txt-konfigurieren.png",
+      "author": { "@type": "Person", "name": "Laurenz Thümmler" },
+      "publisher": { "@type": "Organization", "name": "Thümmler AI GmbH", "url": "https://shift07.ai" },
+      "datePublished": "2026-04-04T09:00:00+02:00",
+      "dateModified": "2026-04-04T09:00:00+02:00",
+      "mainEntityOfPage": { "@type": "WebPage", "@id": "https://shift07.ai/blog/robots-txt-konfigurieren.html" },
+      "keywords": ["robots.txt", "robots txt konfigurieren", "Crawling SEO", "Technisches SEO", "Noindex", "Disallow"]
+    }
+    </script>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K1S1RXBDS8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K1S1RXBDS8');
+    </script>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8475857002943858" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: { extend: { fontFamily: { 'inter': ['Inter', 'system-ui', '-apple-system', 'sans-serif'] } } }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: rgba(15, 23, 42, 0.5); }
+        ::-webkit-scrollbar-thumb { background: rgba(59, 130, 246, 0.5); border-radius: 4px; }
+        html { scroll-behavior: smooth; }
+        .glass { background: rgba(255,255,255,0.06); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.1); }
+        .prose-content h2 { font-size: 1.5rem; font-weight: 700; color: white; margin-top: 2.5rem; margin-bottom: 1rem; }
+        .prose-content h3 { font-size: 1.2rem; font-weight: 600; color: #93c5fd; margin-top: 1.8rem; margin-bottom: 0.75rem; }
+        .prose-content p { color: rgba(191,219,254,0.8); line-height: 1.8; margin-bottom: 1.2rem; }
+        .prose-content ul { color: rgba(191,219,254,0.8); margin-bottom: 1.2rem; padding-left: 1.5rem; }
+        .prose-content ul li { margin-bottom: 0.5rem; line-height: 1.7; list-style-type: disc; }
+        .prose-content ol { color: rgba(191,219,254,0.8); margin-bottom: 1.2rem; padding-left: 1.5rem; }
+        .prose-content ol li { margin-bottom: 0.5rem; line-height: 1.7; list-style-type: decimal; }
+        .prose-content strong { color: white; font-weight: 600; }
+        .prose-content a { color: #60a5fa; text-decoration: underline; }
+        .prose-content a:hover { color: #93c5fd; }
+        .code-block { background: rgba(0,0,0,0.5); border: 1px solid rgba(255,255,255,0.1); border-radius: 0.75rem; padding: 1.25rem; overflow-x: auto; margin: 1.5rem 0; }
+        .code-block pre { color: #86efac; font-family: 'Courier New', monospace; font-size: 0.875rem; line-height: 1.7; white-space: pre; }
+        .code-block .comment { color: #6b7280; }
+        .code-block .directive { color: #60a5fa; }
+        .code-block .value { color: #fbbf24; }
+        .tip-box { background: rgba(16,185,129,0.08); border: 1px solid rgba(16,185,129,0.25); border-radius: 0.75rem; padding: 1.25rem 1.5rem; margin: 1.5rem 0; }
+        .warning-box { background: rgba(245,158,11,0.08); border: 1px solid rgba(245,158,11,0.25); border-radius: 0.75rem; padding: 1.25rem 1.5rem; margin: 1.5rem 0; }
+        .danger-box { background: rgba(239,68,68,0.08); border: 1px solid rgba(239,68,68,0.25); border-radius: 0.75rem; padding: 1.25rem 1.5rem; margin: 1.5rem 0; }
+    </style>
+</head>
+<body class="antialiased">
+<div class="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
+
+    <!-- Navigation -->
+    <nav class="bg-black/20 backdrop-blur-md border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="/" class="flex items-center gap-2">
+                    <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                    <span class="text-xl font-bold text-white">Shift07</span>
+                </a>
+                <div class="hidden md:flex items-baseline space-x-4">
+                    <a href="/" class="text-white hover:text-blue-300 px-3 py-2 text-sm font-medium transition-colors">SEO-Tool</a>
+                    <a href="/blog/" class="text-blue-300 px-3 py-2 text-sm font-medium">Blog</a>
+                    <a href="/tools/" class="text-white hover:text-blue-300 px-3 py-2 text-sm font-medium transition-colors">Tools</a>
+                    <a href="/app/#/login" class="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:from-blue-600 hover:to-purple-700 transition-all">Anmelden</a>
+                </div>
+                <button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="md:hidden text-white">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                </button>
+            </div>
+            <div id="mobile-menu" class="hidden md:hidden pb-4">
+                <a href="/" class="block text-white hover:text-blue-300 px-3 py-2 text-sm font-medium">SEO-Tool</a>
+                <a href="/blog/" class="block text-blue-300 px-3 py-2 text-sm font-medium">Blog</a>
+                <a href="/tools/" class="block text-white hover:text-blue-300 px-3 py-2 text-sm font-medium">Tools</a>
+                <a href="/app/#/login" class="block text-white hover:text-blue-300 px-3 py-2 text-sm font-medium">Anmelden</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Article -->
+    <article class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+        <!-- Breadcrumb -->
+        <nav class="flex items-center gap-2 text-sm text-blue-200/50 mb-8">
+            <a href="/" class="hover:text-blue-300 transition-colors">Shift07</a>
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            <a href="/blog/" class="hover:text-blue-300 transition-colors">Blog</a>
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            <span class="text-blue-200/80">robots.txt richtig konfigurieren</span>
+        </nav>
+
+        <!-- Category & Meta -->
+        <div class="flex flex-wrap items-center gap-3 mb-6">
+            <span class="bg-blue-500/20 text-blue-300 text-xs font-semibold px-3 py-1 rounded-full border border-blue-500/30">Technisches SEO</span>
+            <span class="text-blue-200/50 text-sm">04. April 2026</span>
+            <span class="text-blue-200/50 text-sm">·</span>
+            <span class="text-blue-200/50 text-sm">10 Min. Lesezeit</span>
+        </div>
+
+        <!-- Headline -->
+        <h1 class="text-3xl md:text-4xl font-bold text-white leading-tight mb-4">
+            robots.txt richtig konfigurieren: Die vollständige Anleitung
+        </h1>
+        <p class="text-xl text-blue-200/70 leading-relaxed mb-8">
+            Die robots.txt ist eine der mächtigsten und gleichzeitig am häufigsten falsch eingesetzten Dateien im Technischen SEO. Ein einzelner Fehler kann dazu führen, dass Google deine gesamte Website nicht mehr crawlt. Dieser Artikel zeigt dir, wie du sie korrekt konfigurierst.
+        </p>
+
+        <!-- Header Image -->
+        <div class="rounded-2xl overflow-hidden mb-10 border border-white/10">
+            <img src="images/robots-txt-konfigurieren.png" alt="robots.txt richtig konfigurieren SEO Anleitung" class="w-full h-56 md:h-72 object-cover">
+        </div>
+
+        <!-- Article Content -->
+        <div class="prose-content">
+
+            <h2>Was ist die robots.txt und wozu dient sie?</h2>
+            <p>
+                Die <strong>robots.txt</strong> ist eine einfache Textdatei, die im Wurzelverzeichnis deiner Website liegt — also unter <code style="background: rgba(255,255,255,0.1); padding: 2px 6px; border-radius: 4px; color: #86efac;">https://deine-website.de/robots.txt</code>. Sie gibt Suchmaschinen-Crawlern Anweisungen, welche Teile deiner Website gecrawlt werden dürfen und welche nicht.
+            </p>
+            <p>
+                Das sogenannte <strong>Robots Exclusion Protocol</strong> (REP) legt fest, wie diese Datei aufgebaut sein muss. Googles Crawler (Googlebot), Bings Crawler (Bingbot) und alle anderen seriösen Bots lesen diese Datei, bevor sie deine Website crawlen, und halten sich — in der Regel — an die darin enthaltenen Anweisungen.
+            </p>
+            <p>
+                Wichtig: Die robots.txt ist <strong>kein Sicherheitsmechanismus</strong>. Sie verhindert nur das Crawlen, nicht das Indexieren. Wenn andere Websites auf eine gesperrte URL verlinken, kann Google sie trotzdem in den Suchergebnissen anzeigen — ohne Inhalt, aber als URL. Für echte Vertraulichkeit brauchst du serverseitige Zugangsbeschränkungen.
+            </p>
+
+            <h2>Die Grundstruktur einer robots.txt</h2>
+            <p>Eine robots.txt besteht aus Blöcken, sogenannten <strong>Records</strong>. Jeder Block beginnt mit einer <code style="background: rgba(255,255,255,0.1); padding: 2px 6px; border-radius: 4px; color: #86efac;">User-agent</code>-Zeile und enthält beliebig viele <code style="background: rgba(255,255,255,0.1); padding: 2px 6px; border-radius: 4px; color: #86efac;">Disallow</code>- und <code style="background: rgba(255,255,255,0.1); padding: 2px 6px; border-radius: 4px; color: #86efac;">Allow</code>-Direktiven:</p>
+
+            <div class="code-block">
+                <pre><span class="comment"># Dieser Block gilt für alle Crawler</span>
+<span class="directive">User-agent:</span> <span class="value">*</span>
+<span class="directive">Disallow:</span> <span class="value">/admin/</span>
+<span class="directive">Disallow:</span> <span class="value">/tmp/</span>
+<span class="directive">Allow:</span> <span class="value">/admin/public/</span>
+
+<span class="comment"># Dieser Block gilt nur für Googlebot</span>
+<span class="directive">User-agent:</span> <span class="value">Googlebot</span>
+<span class="directive">Disallow:</span> <span class="value">/no-google/</span>
+
+<span class="comment"># Sitemap-Verweis (empfohlen!)</span>
+<span class="directive">Sitemap:</span> <span class="value">https://deine-website.de/sitemap.xml</span></pre>
+            </div>
+
+            <h3>Die wichtigsten Direktiven erklärt</h3>
+            <ul>
+                <li><strong>User-agent:</strong> Gibt an, für welchen Crawler der folgende Block gilt. <code style="background: rgba(255,255,255,0.1); padding: 2px 6px; border-radius: 4px; color: #86efac;">*</code> steht für alle Crawler. Bekannte Werte: <code style="background: rgba(255,255,255,0.1); padding: 2px 6px; border-radius: 4px; color: #86efac;">Googlebot</code>, <code style="background: rgba(255,255,255,0.1); padding: 2px 6px; border-radius: 4px; color: #86efac;">Bingbot</code>, <code style="background: rgba(255,255,255,0.1); padding: 2px 6px; border-radius: 4px; color: #86efac;">GPTBot</code>.</li>
+                <li><strong>Disallow:</strong> Verbietet das Crawlen des angegebenen Pfades. Ein leeres Disallow (<code style="background: rgba(255,255,255,0.1); padding: 2px 6px; border-radius: 4px; color: #86efac;">Disallow:</code>) erlaubt alles.</li>
+                <li><strong>Allow:</strong> Erlaubt das Crawlen, auch wenn ein übergeordneter Pfad gesperrt ist. Hat Vorrang vor Disallow bei spezifischeren Pfaden.</li>
+                <li><strong>Sitemap:</strong> Gibt den Speicherort deiner Sitemap.xml an. Nicht alle Crawler folgen dieser Direktive, aber Google und Bing tun es.</li>
+                <li><strong>Crawl-delay:</strong> Empfiehlt dem Crawler eine Pause (in Sekunden) zwischen Anfragen. Googlebot ignoriert diese Direktive — für Google nutzt du die Search Console.</li>
+            </ul>
+
+            <div class="tip-box">
+                <p class="text-green-300 font-semibold mb-1">💡 Tipp: Sitemap-Direktive immer hinzufügen</p>
+                <p class="text-green-200/80 text-sm">Füge am Ende jeder robots.txt eine <code style="background: rgba(0,0,0,0.3); padding: 1px 5px; border-radius: 3px; color: #86efac;">Sitemap:</code>-Zeile ein. Das hilft Suchmaschinen, deine Sitemap schneller zu finden — auch wenn sie in der Search Console bereits hinterlegt ist.</p>
+            </div>
+
+            <h2>Häufige Anwendungsfälle mit Beispielen</h2>
+
+            <h3>1. Adminbereiche sperren</h3>
+            <p>Backend-Bereiche wie das WordPress-Admin-Panel sollte kein Crawler indexieren — sie bieten keinen SEO-Wert und können Sicherheitsrisiken offenlegen:</p>
+            <div class="code-block">
+                <pre><span class="directive">User-agent:</span> <span class="value">*</span>
+<span class="directive">Disallow:</span> <span class="value">/wp-admin/</span>
+<span class="directive">Allow:</span> <span class="value">/wp-admin/admin-ajax.php</span>
+<span class="directive">Disallow:</span> <span class="value">/wp-login.php</span></pre>
+            </div>
+            <p>Beachte: Die <code style="background: rgba(255,255,255,0.1); padding: 2px 6px; border-radius: 4px; color: #86efac;">admin-ajax.php</code> muss explizit erlaubt werden, da manche WordPress-Plugins sie für Frontend-Funktionen nutzen.</p>
+
+            <h3>2. Such- und Filterergebnisse sperren</h3>
+            <p>Interne Suchergebnisseiten und URL-Parameter erzeugen oft tausende von Duplicate-Content-URLs. Diese solltest du generell sperren:</p>
+            <div class="code-block">
+                <pre><span class="directive">User-agent:</span> <span class="value">*</span>
+<span class="directive">Disallow:</span> <span class="value">/search?</span>
+<span class="directive">Disallow:</span> <span class="value">/?s=</span>
+<span class="directive">Disallow:</span> <span class="value">/filter/</span></pre>
+            </div>
+
+            <h3>3. Staging- und Testumgebungen schützen</h3>
+            <p>Wenn deine Staging-Umgebung unter einer eigenen Domain läuft (z.B. staging.deine-website.de), sollte sie vollständig gesperrt werden:</p>
+            <div class="code-block">
+                <pre><span class="comment"># Komplette Sperrung aller Crawler</span>
+<span class="directive">User-agent:</span> <span class="value">*</span>
+<span class="directive">Disallow:</span> <span class="value">/</span></pre>
+            </div>
+
+            <h3>4. KI-Crawler blockieren</h3>
+            <p>Seit 2023 crawlen KI-Anbieter das Web für Trainingsdaten. Wer das nicht möchte, kann diese Crawler gezielt blockieren:</p>
+            <div class="code-block">
+                <pre><span class="directive">User-agent:</span> <span class="value">GPTBot</span>
+<span class="directive">Disallow:</span> <span class="value">/</span>
+
+<span class="directive">User-agent:</span> <span class="value">CCBot</span>
+<span class="directive">Disallow:</span> <span class="value">/</span>
+
+<span class="directive">User-agent:</span> <span class="value">Google-Extended</span>
+<span class="directive">Disallow:</span> <span class="value">/</span>
+
+<span class="directive">User-agent:</span> <span class="value">anthropic-ai</span>
+<span class="directive">Disallow:</span> <span class="value">/</span></pre>
+            </div>
+
+            <h2>Die wichtigsten Fehler, die du vermeiden musst</h2>
+
+            <div class="danger-box">
+                <p class="text-red-300 font-semibold mb-2">⚠️ Fehler 1: Alle Crawler versehentlich sperren</p>
+                <p class="text-red-200/80 text-sm">Ein <code style="background: rgba(0,0,0,0.3); padding: 1px 5px; border-radius: 3px; color: #fca5a5;">Disallow: /</code> unter <code style="background: rgba(0,0,0,0.3); padding: 1px 5px; border-radius: 3px; color: #fca5a5;">User-agent: *</code> sperrt deine gesamte Website für alle Crawler. Das ist der schlimmste Fehler den du machen kannst. Prüfe regelmäßig deine robots.txt auf diesen Eintrag.</p>
+            </div>
+
+            <div class="danger-box">
+                <p class="text-red-300 font-semibold mb-2">⚠️ Fehler 2: Crawling blockieren ≠ Indexierung verhindern</p>
+                <p class="text-red-200/80 text-sm">Viele Webmaster blockieren URLs in der robots.txt, die sie nicht in Google sehen wollen. Das funktioniert nicht zuverlässig. Wenn andere Seiten auf die URL verlinken, kann Google sie trotzdem indexieren. Für echten Ausschluss: <code style="background: rgba(0,0,0,0.3); padding: 1px 5px; border-radius: 3px; color: #fca5a5;">noindex</code> Meta-Tag oder X-Robots-Tag nutzen.</p>
+            </div>
+
+            <div class="warning-box">
+                <p class="text-yellow-300 font-semibold mb-2">⚠️ Fehler 3: CSS und JS blockieren</p>
+                <p class="text-yellow-200/80 text-sm">Ältere robots.txt-Konfigurationen blockierten oft <code style="background: rgba(0,0,0,0.3); padding: 1px 5px; border-radius: 3px; color: #fcd34d;">/wp-content/</code> oder Ressourcen-Ordner. Das verhindert, dass Google CSS und JavaScript lädt — und kann das Rendering und damit das Ranking verschlechtern. CSS- und JS-Ordner immer freigeben.</p>
+            </div>
+
+            <div class="warning-box">
+                <p class="text-yellow-300 font-semibold mb-2">⚠️ Fehler 4: Kein Sitemap-Verweis</p>
+                <p class="text-yellow-200/80 text-sm">Ohne <code style="background: rgba(0,0,0,0.3); padding: 1px 5px; border-radius: 3px; color: #fcd34d;">Sitemap:</code>-Direktive muss Google deine Sitemap selbst finden. Das funktioniert meistens, aber langsamer. Füge immer einen Sitemap-Verweis hinzu.</p>
+            </div>
+
+            <h2>Wie du die robots.txt für typische CMS konfigurierst</h2>
+
+            <h3>WordPress</h3>
+            <p>WordPress erstellt automatisch eine virtuelle robots.txt, wenn keine physische Datei vorhanden ist. Mit Plugins wie <strong>Yoast SEO</strong> oder <strong>Rank Math</strong> kannst du sie über das Backend bearbeiten. Eine gute WordPress-robots.txt sieht so aus:</p>
+            <div class="code-block">
+                <pre><span class="directive">User-agent:</span> <span class="value">*</span>
+<span class="directive">Disallow:</span> <span class="value">/wp-admin/</span>
+<span class="directive">Allow:</span> <span class="value">/wp-admin/admin-ajax.php</span>
+<span class="directive">Disallow:</span> <span class="value">/wp-includes/</span>
+<span class="directive">Allow:</span> <span class="value">/wp-content/uploads/</span>
+<span class="directive">Disallow:</span> <span class="value">/wp-login.php</span>
+<span class="directive">Disallow:</span> <span class="value">/?s=</span>
+<span class="directive">Disallow:</span> <span class="value">/search/</span>
+
+<span class="directive">Sitemap:</span> <span class="value">https://deine-website.de/sitemap.xml</span></pre>
+            </div>
+
+            <h3>Shopware / WooCommerce</h3>
+            <p>Bei Online-Shops sind besonders interne Such-, Filter- und Warenkorb-URLs zu sperren, um Crawl-Budget zu schonen:</p>
+            <div class="code-block">
+                <pre><span class="directive">User-agent:</span> <span class="value">*</span>
+<span class="directive">Disallow:</span> <span class="value">/checkout/</span>
+<span class="directive">Disallow:</span> <span class="value">/cart/</span>
+<span class="directive">Disallow:</span> <span class="value">/my-account/</span>
+<span class="directive">Disallow:</span> <span class="value">/?add-to-cart=</span>
+<span class="directive">Disallow:</span> <span class="value">/?filter_</span>
+
+<span class="directive">Sitemap:</span> <span class="value">https://dein-shop.de/sitemap.xml</span></pre>
+            </div>
+
+            <h2>robots.txt testen und überwachen</h2>
+            <p>
+                Nach jeder Änderung an der robots.txt solltest du sie testen. Google bietet dafür das <strong>robots.txt-Tester-Tool in der Search Console</strong> an. Dort siehst du sofort, ob eine URL gecrawlt werden darf oder gesperrt ist.
+            </p>
+            <p>So gehst du vor:</p>
+            <ol>
+                <li>Öffne die <a href="https://search.google.com/search-console" target="_blank" rel="noopener">Google Search Console</a></li>
+                <li>Navigiere zu <strong>Indexierung → robots.txt</strong></li>
+                <li>Gib eine URL ein und klicke auf "Testen"</li>
+                <li>Du siehst sofort, ob Googlebot die URL crawlen darf</li>
+            </ol>
+
+            <div class="tip-box">
+                <p class="text-green-300 font-semibold mb-1">💡 Tipp: robots.txt regelmäßig prüfen</p>
+                <p class="text-green-200/80 text-sm">Bei CMS-Updates oder Plugin-Installationen kann die robots.txt unbeabsichtigt verändert werden. Prüfe sie mindestens einmal pro Monat — oder nutze <a href="/" class="text-green-400 underline">die automatische SEO-Analyse von Shift07</a>, die Probleme in der robots.txt automatisch erkennt.</p>
+            </div>
+
+            <h2>robots.txt vs. noindex: Was wann verwenden?</h2>
+            <p>Eine häufige Frage ist, wann man die robots.txt verwenden sollte und wann das <code style="background: rgba(255,255,255,0.1); padding: 2px 6px; border-radius: 4px; color: #86efac;">noindex</code>-Meta-Tag. Die Antwort ist klar:</p>
+            <ul>
+                <li><strong>robots.txt Disallow:</strong> Verhindert das <em>Crawlen</em>. Die URL kann trotzdem indexiert werden (wenn sie verlinkt ist). Sinnvoll für Ressourcen die viel Crawl-Budget verbrauchen aber keinen Inhalt haben (Bilder-Ordner bei großen Archiven, API-Endpunkte, Admin-Bereiche).</li>
+                <li><strong>noindex Meta-Tag:</strong> Verhindert die <em>Indexierung</em>. Die URL wird gecrawlt, aber nicht in die Suchergebnisse aufgenommen. Sinnvoll für Danke-Seiten, interne Suche, Tag-Archive, Pagination.</li>
+                <li><strong>Beides zusammen: Nie!</strong> Wenn du eine URL via Disallow sperrst und <em>auch</em> ein noindex-Tag setzt, kann Google das noindex-Tag nicht lesen, weil er die Seite nicht crawlen darf. Das noindex wird ignoriert.</li>
+            </ul>
+
+            <p>
+                Für eine vollständige Kontrolle über die Indexierung empfiehlt sich der Einsatz von <a href="/blog/canonical-tags-seo.html">Canonical-Tags</a> in Kombination mit dem noindex-Meta-Tag — ohne den Crawling-Zugang zu sperren.
+            </p>
+
+            <h2>Zusammenfassung: Die 5 Regeln für eine gute robots.txt</h2>
+            <ol>
+                <li><strong>Sitemap-Direktive immer hinzufügen</strong> — Hilft Crawlern, deine wichtigen Seiten schneller zu finden.</li>
+                <li><strong>Nur nicht-indexierungswürdige Pfade sperren</strong> — Admin-Bereiche, API-Endpunkte, Duplikate.</li>
+                <li><strong>CSS und JavaScript nie sperren</strong> — Google braucht diese Ressourcen für korrektes Rendering.</li>
+                <li><strong>Nie robots.txt + noindex kombinieren</strong> — Eines von beidem, nie beides zusammen.</li>
+                <li><strong>Regelmäßig testen</strong> — Nach CMS-Updates oder Plugin-Änderungen sofort prüfen.</li>
+            </ol>
+
+            <p>
+                Willst du prüfen, ob deine Website weitere technische SEO-Probleme hat? Mit der <a href="/">kostenlosen Shift07 SEO-Analyse</a> siehst du in Sekunden alle wichtigen Schwachstellen — von der robots.txt über Meta-Tags bis hin zu <a href="/blog/strukturierte-daten-seo-schema-markup.html">strukturierten Daten</a>.
+            </p>
+
+        </div><!-- end prose-content -->
+
+        <!-- CTA Box -->
+        <div class="glass rounded-2xl p-6 mt-12 border-blue-500/30 border">
+            <div class="flex items-start gap-4">
+                <div class="bg-blue-500/20 rounded-xl p-3 flex-shrink-0">
+                    <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                </div>
+                <div>
+                    <h3 class="text-white font-semibold mb-1">robots.txt + alle SEO-Faktoren auf einen Blick prüfen</h3>
+                    <p class="text-blue-200/70 text-sm mb-3">Shift07 analysiert deine Website automatisch auf robots.txt-Probleme, fehlende Meta-Tags, Ladezeit-Issues und mehr. Kostenlos, ohne Anmeldung.</p>
+                    <a href="/" class="inline-flex items-center text-blue-400 hover:text-blue-300 text-sm font-medium transition-colors">
+                        Jetzt kostenlos analysieren
+                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Related Articles -->
+        <div class="mt-12">
+            <h3 class="text-white font-bold text-xl mb-6">Weitere Artikel zum Technischen SEO</h3>
+            <div class="grid sm:grid-cols-2 gap-4">
+                <a href="/blog/canonical-tags-seo.html" class="glass rounded-xl p-5 hover:border-blue-500/50 transition-all group">
+                    <span class="text-xs text-blue-400 font-medium mb-2 block">Technisches SEO</span>
+                    <h4 class="text-white font-semibold group-hover:text-blue-300 transition-colors mb-1">Canonical-Tags erklärt</h4>
+                    <p class="text-blue-200/60 text-sm">Duplicate Content verhindern und Rankings schützen.</p>
+                </a>
+                <a href="/blog/strukturierte-daten-seo-schema-markup.html" class="glass rounded-xl p-5 hover:border-blue-500/50 transition-all group">
+                    <span class="text-xs text-blue-400 font-medium mb-2 block">Technisches SEO</span>
+                    <h4 class="text-white font-semibold group-hover:text-blue-300 transition-colors mb-1">Strukturierte Daten einfach erklärt</h4>
+                    <p class="text-blue-200/60 text-sm">Schema Markup für bessere Suchergebnisse einsetzen.</p>
+                </a>
+                <a href="/blog/meta-tags-richtig-einsetzen.html" class="glass rounded-xl p-5 hover:border-blue-500/50 transition-all group">
+                    <span class="text-xs text-blue-400 font-medium mb-2 block">Technisches SEO</span>
+                    <h4 class="text-white font-semibold group-hover:text-blue-300 transition-colors mb-1">Meta-Tags richtig einsetzen</h4>
+                    <p class="text-blue-200/60 text-sm">Title, Description & Co. optimal konfigurieren.</p>
+                </a>
+                <a href="/blog/https-ssl-zertifikat-website-sicherheit.html" class="glass rounded-xl p-5 hover:border-blue-500/50 transition-all group">
+                    <span class="text-xs text-blue-400 font-medium mb-2 block">Technisches SEO</span>
+                    <h4 class="text-white font-semibold group-hover:text-blue-300 transition-colors mb-1">HTTPS & SSL-Zertifikat</h4>
+                    <p class="text-blue-200/60 text-sm">Warum HTTPS ein wichtiger Ranking-Faktor ist.</p>
+                </a>
+            </div>
+        </div>
+
+        <!-- Author Box -->
+        <div class="glass rounded-xl p-6 mt-10 flex items-start gap-4">
+            <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center flex-shrink-0">
+                <span class="text-white font-bold text-lg">L</span>
+            </div>
+            <div>
+                <p class="text-white font-semibold">Laurenz Thümmler</p>
+                <p class="text-blue-200/60 text-sm">Co-Founder von Shift07 · SEO & KI-Enthusiast</p>
+            </div>
+        </div>
+
+    </article>
+
+    <!-- Footer -->
+    <footer class="bg-black/30 backdrop-blur-md border-t border-white/10 mt-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="text-white/60 mb-4 md:mb-0 text-sm">&copy; 2026 Thümmler AI GmbH. Alle Rechte vorbehalten.</div>
+                <div class="flex space-x-6">
+                    <a href="/impressum.html" class="text-gray-300 hover:text-white transition-colors text-sm">Impressum</a>
+                    <a href="/datenschutz.html" class="text-gray-300 hover:text-white transition-colors text-sm">Datenschutz</a>
+                    <a href="/agb.html" class="text-gray-300 hover:text-white transition-colors text-sm">AGB</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+</body>
+</html>

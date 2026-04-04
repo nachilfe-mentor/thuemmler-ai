@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K1S1RXBDS8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K1S1RXBDS8');
+    </script>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8475857002943858" crossorigin="anonymous"></script>
+    <title>Title-Tag-Längen-Checker - Google SERP Vorschau kostenlos | Shift07</title>
+    <meta name="description" content="Prüfe kostenlos ob dein Seitentitel die optimale Länge für Google hat. Mit Live-SERP-Vorschau, Pixel-Breite und konkreten Verbesserungshinweisen.">
+    <meta name="keywords" content="Title Tag Länge prüfen, SEO Title Checker, Google SERP Vorschau, Seitentitel optimieren, Meta Title testen, Title Tag SEO">
+    <meta name="author" content="Thümmler AI GmbH">
+    <link rel="icon" type="image/png" href="/logo.png">
+    <link rel="canonical" href="https://shift07.ai/tools/title-tag-laengen-checker.html">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Title-Tag-Längen-Checker - Google SERP Vorschau kostenlos">
+    <meta property="og:description" content="Prüfe ob dein Seitentitel die optimale Länge für Google hat. Mit Live-SERP-Vorschau und konkreten SEO-Tipps.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://shift07.ai/tools/title-tag-laengen-checker.html">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="Shift07">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Title-Tag-Längen-Checker - Google SERP Vorschau">
+    <meta name="twitter:description" content="Prüfe ob dein Seitentitel die optimale Länge für Google hat. Mit Live-Vorschau.">
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Title-Tag-Längen-Checker",
+      "description": "Kostenlos prüfen ob der Seitentitel die optimale Länge für Google-Suchergebnisse hat. Mit Live-SERP-Vorschau und Pixel-Breiten-Analyse.",
+      "url": "https://shift07.ai/tools/title-tag-laengen-checker.html",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR"
+      },
+      "provider": {
+        "@type": "Organization",
+        "name": "Thümmler AI GmbH",
+        "url": "https://shift07.ai"
+      }
+    }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: rgba(15, 23, 42, 0.5); }
+        ::-webkit-scrollbar-thumb { background: rgba(59, 130, 246, 0.5); border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: rgba(59, 130, 246, 0.7); }
+        html { scroll-behavior: smooth; }
+        .glass {
+            background: rgba(255, 255, 255, 0.06);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(8px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .fade-in { animation: fadeIn 0.4s ease forwards; }
+        .status-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 3px 10px;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+        .badge-green { background: rgba(16,185,129,0.15); color: #10b981; border: 1px solid rgba(16,185,129,0.3); }
+        .badge-red { background: rgba(239,68,68,0.15); color: #ef4444; border: 1px solid rgba(239,68,68,0.3); }
+        .badge-yellow { background: rgba(245,158,11,0.15); color: #f59e0b; border: 1px solid rgba(245,158,11,0.3); }
+        .badge-blue { background: rgba(59,130,246,0.15); color: #60a5fa; border: 1px solid rgba(59,130,246,0.3); }
+
+        /* Google SERP Preview Styles */
+        .serp-preview {
+            background: #fff;
+            border-radius: 12px;
+            padding: 20px 24px;
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+        }
+        .serp-favicon {
+            width: 18px;
+            height: 18px;
+            background: #4285f4;
+            border-radius: 2px;
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 6px;
+        }
+        .serp-domain {
+            color: #202124;
+            font-size: 14px;
+            font-family: Arial, sans-serif;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .serp-breadcrumb {
+            color: #4d5156;
+            font-size: 12px;
+            font-family: Arial, sans-serif;
+            margin-top: 2px;
+        }
+        .serp-title {
+            font-size: 20px;
+            color: #1a0dab;
+            font-family: Arial, sans-serif;
+            line-height: 1.3;
+            margin-top: 5px;
+            cursor: pointer;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        .serp-title.truncated {
+            text-overflow: ellipsis;
+        }
+        .serp-title:hover { text-decoration: underline; }
+        .serp-description {
+            font-size: 14px;
+            color: #4d5156;
+            font-family: Arial, sans-serif;
+            line-height: 1.58;
+            margin-top: 4px;
+        }
+
+        /* Pixel bar */
+        .pixel-bar-track {
+            height: 8px;
+            border-radius: 4px;
+            background: rgba(255,255,255,0.1);
+            overflow: hidden;
+            position: relative;
+        }
+        .pixel-bar-fill {
+            height: 100%;
+            border-radius: 4px;
+            transition: width 0.3s ease, background 0.3s ease;
+        }
+        .pixel-bar-limit {
+            position: absolute;
+            top: 0;
+            height: 100%;
+            width: 2px;
+            background: rgba(255,255,255,0.4);
+        }
+
+        /* Character counter */
+        .char-counter {
+            font-size: 0.85rem;
+            font-weight: 600;
+            transition: color 0.2s ease;
+        }
+        .char-ok { color: #10b981; }
+        .char-warn { color: #f59e0b; }
+        .char-bad { color: #ef4444; }
+    </style>
+</head>
+<body class="antialiased">
+    <div class="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
+
+        <!-- Navigation -->
+        <nav class="bg-black/20 backdrop-blur-md border-b border-white/10">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center h-16">
+                    <a href="/" class="flex items-center gap-2">
+                        <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                        <span class="text-xl font-bold text-white">Shift07</span>
+                    </a>
+                    <div class="hidden md:flex items-baseline space-x-4">
+                        <a href="/" class="text-white hover:text-blue-300 px-3 py-2 text-sm font-medium transition-colors">SEO-Tool</a>
+                        <a href="/blog/" class="text-white hover:text-blue-300 px-3 py-2 text-sm font-medium transition-colors">Blog</a>
+                        <a href="/tools/" class="text-blue-300 px-3 py-2 text-sm font-medium">Tools</a>
+                        <a href="/app/#/login" class="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:from-blue-600 hover:to-purple-700 transition-all">Anmelden</a>
+                    </div>
+                    <button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="md:hidden text-white">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                    </button>
+                </div>
+                <div id="mobile-menu" class="hidden md:hidden pb-4">
+                    <a href="/" class="block text-white hover:text-blue-300 px-3 py-2 text-sm font-medium">SEO-Tool</a>
+                    <a href="/blog/" class="block text-white hover:text-blue-300 px-3 py-2 text-sm font-medium">Blog</a>
+                    <a href="/tools/" class="block text-blue-300 px-3 py-2 text-sm font-medium">Tools</a>
+                    <a href="/app/#/login" class="block text-white hover:text-blue-300 px-3 py-2 text-sm font-medium">Anmelden</a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero -->
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-6 text-center">
+            <div class="inline-flex items-center gap-2 bg-blue-500/10 border border-blue-500/30 text-blue-300 text-sm font-medium px-4 py-2 rounded-full mb-5">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+                Live Google-SERP-Vorschau
+            </div>
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">
+                <span class="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Title-Tag-Längen-Checker</span>
+            </h1>
+            <p class="text-xl text-blue-200/80 max-w-2xl mx-auto">Prüfe ob dein Seitentitel in Google-Suchergebnissen vollständig angezeigt wird — mit Live-Vorschau.</p>
+        </section>
+
+        <!-- Main Tool -->
+        <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
+
+            <!-- Input Card -->
+            <div class="glass rounded-2xl p-6 md:p-8 mb-6">
+                <div class="mb-5">
+                    <label class="block text-white font-semibold text-sm mb-2">Seitentitel (Title-Tag)</label>
+                    <textarea
+                        id="titleInput"
+                        rows="2"
+                        placeholder="z.B. Zahnarztpraxis Müller Berlin – Ihre Zahnarztpraxis im Herzen von Mitte"
+                        oninput="analyzeTitle()"
+                        class="w-full bg-white/5 border border-white/20 text-white placeholder-white/30 rounded-xl px-4 py-3 focus:outline-none focus:border-blue-400 focus:ring-1 focus:ring-blue-400 transition-colors resize-none text-sm"
+                    ></textarea>
+                    <div class="flex justify-between items-center mt-2">
+                        <span class="text-blue-200/40 text-xs">Tipp: Füge deinen echten Title-Tag ein und sieh sofort, wie er bei Google aussieht</span>
+                        <span class="char-counter" id="charCounter">0 Zeichen</span>
+                    </div>
+                </div>
+
+                <div class="mb-5">
+                    <label class="block text-white font-semibold text-sm mb-2">Domain (optional)</label>
+                    <input
+                        type="text"
+                        id="domainInput"
+                        placeholder="z.B. meine-praxis-berlin.de"
+                        oninput="analyzeTitle()"
+                        class="w-full bg-white/5 border border-white/20 text-white placeholder-white/30 rounded-xl px-4 py-3 focus:outline-none focus:border-blue-400 focus:ring-1 focus:ring-blue-400 transition-colors text-sm"
+                    >
+                </div>
+
+                <div>
+                    <label class="block text-white font-semibold text-sm mb-2">Meta-Description (optional)</label>
+                    <textarea
+                        id="descInput"
+                        rows="2"
+                        placeholder="z.B. Freundliche Zahnarztpraxis im Zentrum von Berlin-Mitte. Jetzt Termin vereinbaren ☎ 030 123 456"
+                        oninput="analyzeTitle()"
+                        class="w-full bg-white/5 border border-white/20 text-white placeholder-white/30 rounded-xl px-4 py-3 focus:outline-none focus:border-blue-400 focus:ring-1 focus:ring-blue-400 transition-colors resize-none text-sm"
+                    ></textarea>
+                    <div class="flex justify-end mt-1">
+                        <span class="char-counter" id="descCounter">0 Zeichen</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Live SERP Preview -->
+            <div class="glass rounded-2xl p-6 md:p-8 mb-6">
+                <h2 class="text-white font-semibold text-lg mb-4 flex items-center gap-2">
+                    <svg class="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17H3a2 2 0 01-2-2V5a2 2 0 012-2h14a2 2 0 012 2v10a2 2 0 01-2 2h-2"/></svg>
+                    Google-Vorschau
+                </h2>
+                <!-- SERP Container -->
+                <div class="bg-white rounded-xl p-5 shadow-lg">
+                    <div class="flex items-center mb-1">
+                        <div class="w-5 h-5 rounded-full bg-gray-200 mr-2 flex-shrink-0 overflow-hidden">
+                            <div class="w-full h-full bg-gradient-to-br from-blue-400 to-blue-600 rounded-full flex items-center justify-center">
+                                <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM4.332 8.027a6.012 6.012 0 011.912-2.706C6.512 5.73 6.974 6 7.5 6A1.5 1.5 0 019 7.5V8a2 2 0 004 0 2 2 0 011.523-1.943A5.977 5.977 0 0116 10c0 .34-.028.675-.083 1H15a2 2 0 00-2 2v2.197A5.973 5.973 0 0110 16v-2a2 2 0 00-2-2 2 2 0 01-2-2 2 2 0 00-1.668-1.973z" clip-rule="evenodd"/></svg>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="text-gray-800 text-sm font-medium leading-tight" id="serpDomain">deine-website.de</div>
+                            <div class="text-gray-500 text-xs">https://deine-website.de</div>
+                        </div>
+                        <div class="ml-auto">
+                            <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"/></svg>
+                        </div>
+                    </div>
+                    <div class="serp-title" id="serpTitle">Dein Seitentitel erscheint hier</div>
+                    <div class="serp-description" id="serpDesc">Deine Meta-Description erscheint hier. Gib oben deinen Title und deine Description ein, um zu sehen wie dein Suchergebnis bei Google aussieht.</div>
+                </div>
+                <div id="truncationWarning" class="hidden mt-3 flex items-center gap-2 text-yellow-400 text-sm">
+                    <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+                    <span id="truncationText">Der Titel wird in der Suche abgeschnitten.</span>
+                </div>
+            </div>
+
+            <!-- Analysis Cards -->
+            <div id="analysisSection" class="space-y-4 mb-6 fade-in">
+
+                <!-- Title Length Card -->
+                <div class="glass rounded-2xl p-6">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-white font-semibold">Titel-Analyse</h3>
+                        <span class="status-badge" id="titleBadge">Warte auf Eingabe</span>
+                    </div>
+
+                    <!-- Pixel bar -->
+                    <div class="mb-3">
+                        <div class="flex justify-between text-xs text-blue-200/60 mb-1">
+                            <span>Pixel-Breite</span>
+                            <span id="pixelCount">0 / 580 px</span>
+                        </div>
+                        <div class="pixel-bar-track">
+                            <div class="pixel-bar-fill" id="pixelFill" style="width: 0%; background: #10b981;"></div>
+                            <div class="pixel-bar-limit" style="left: 100%;"></div>
+                        </div>
+                        <div class="flex justify-between text-xs text-blue-200/40 mt-1">
+                            <span>0 px</span>
+                            <span class="text-yellow-400/70">≈ 480 px optimal</span>
+                            <span class="text-red-400/70">580 px Limit</span>
+                        </div>
+                    </div>
+
+                    <p class="text-blue-200/70 text-sm" id="titleFeedback">Gib einen Titel ein, um die Analyse zu starten.</p>
+                </div>
+
+                <!-- Description Length Card -->
+                <div class="glass rounded-2xl p-6">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-white font-semibold">Description-Analyse</h3>
+                        <span class="status-badge" id="descBadge">Warte auf Eingabe</span>
+                    </div>
+                    <div class="mb-3">
+                        <div class="flex justify-between text-xs text-blue-200/60 mb-1">
+                            <span>Zeichenanzahl</span>
+                            <span id="descCountDisplay">0 / 160 Zeichen</span>
+                        </div>
+                        <div class="pixel-bar-track">
+                            <div class="pixel-bar-fill" id="descFill" style="width: 0%; background: #10b981;"></div>
+                        </div>
+                        <div class="flex justify-between text-xs text-blue-200/40 mt-1">
+                            <span>0</span>
+                            <span class="text-yellow-400/70">≈ 120-155 optimal</span>
+                            <span class="text-red-400/70">160 Limit</span>
+                        </div>
+                    </div>
+                    <p class="text-blue-200/70 text-sm" id="descFeedback">Gib eine Meta-Description ein, um die Analyse zu starten.</p>
+                </div>
+
+                <!-- Tips Grid -->
+                <div class="glass rounded-2xl p-6">
+                    <h3 class="text-white font-semibold mb-4">Checkliste für optimale Titel</h3>
+                    <div id="checklistItems" class="space-y-3">
+                        <!-- dynamisch gefüllt -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cross-sell -->
+            <div class="glass rounded-2xl p-6 border-blue-500/30 border mb-12">
+                <div class="flex items-start gap-4">
+                    <div class="bg-blue-500/20 rounded-xl p-3 flex-shrink-0">
+                        <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+                    </div>
+                    <div>
+                        <h3 class="text-white font-semibold mb-1">Vollständige SEO-Analyse deiner Website</h3>
+                        <p class="text-blue-200/70 text-sm mb-3">Title-Tag ist nur ein Faktor. Mit Shift07 analysierst du alle wichtigen SEO-Punkte deiner Website auf einen Blick — Meta-Tags, Ladezeit, strukturierte Daten, Canonical-Tags und mehr.</p>
+                        <a href="/" class="inline-flex items-center text-blue-400 hover:text-blue-300 text-sm font-medium transition-colors">
+                            Jetzt kostenlos mit Shift07 prüfen
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Erklärung -->
+            <div class="glass rounded-2xl p-6 md:p-8 mb-12">
+                <h2 class="text-2xl font-bold text-white mb-6">Warum ist die Titel-Länge so wichtig für SEO?</h2>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-white/5 rounded-xl p-5">
+                        <div class="w-10 h-10 bg-blue-500/20 rounded-lg flex items-center justify-center mb-3">
+                            <svg class="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+                        </div>
+                        <h3 class="text-white font-semibold mb-2">Google misst in Pixeln, nicht Zeichen</h3>
+                        <p class="text-blue-200/70 text-sm leading-relaxed">Google schneidet Titel bei ca. 580 Pixel Breite ab. Ein "W" ist breiter als ein "i" — deshalb kommt es auf die Pixel-Breite an, nicht auf die Zeichenanzahl. Als Faustformel gilt: 50–60 Zeichen sind meistens sicher.</p>
+                    </div>
+                    <div class="bg-white/5 rounded-xl p-5">
+                        <div class="w-10 h-10 bg-purple-500/20 rounded-lg flex items-center justify-center mb-3">
+                            <svg class="w-5 h-5 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5"/></svg>
+                        </div>
+                        <h3 class="text-white font-semibold mb-2">Keyword am Anfang platzieren</h3>
+                        <p class="text-blue-200/70 text-sm leading-relaxed">Platziere das wichtigste Keyword möglichst am Anfang des Titels. Wenn der Titel abgeschnitten wird, bleibt das Keyword trotzdem sichtbar. Das verbessert die Klickrate und das Ranking.</p>
+                    </div>
+                    <div class="bg-white/5 rounded-xl p-5">
+                        <div class="w-10 h-10 bg-green-500/20 rounded-lg flex items-center justify-center mb-3">
+                            <svg class="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                        </div>
+                        <h3 class="text-white font-semibold mb-2">Eindeutig und beschreibend sein</h3>
+                        <p class="text-blue-200/70 text-sm leading-relaxed">Jede Seite braucht einen einzigartigen Titel. Doppelte Titel verwirren Google und Nutzer. Der Titel soll genau beschreiben, worum es auf der Seite geht — nicht irreführend oder übertrieben werbend.</p>
+                    </div>
+                    <div class="bg-white/5 rounded-xl p-5">
+                        <div class="w-10 h-10 bg-yellow-500/20 rounded-lg flex items-center justify-center mb-3">
+                            <svg class="w-5 h-5 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+                        </div>
+                        <h3 class="text-white font-semibold mb-2">Google kann Titel umschreiben</h3>
+                        <p class="text-blue-200/70 text-sm leading-relaxed">Seit 2021 schreibt Google Titel manchmal um, wenn sie zu kurz, irrelevant oder irreführend sind. Ein gut formulierter Titel, der den Seiteninhalt genau beschreibt, wird seltener von Google geändert.</p>
+                    </div>
+                </div>
+
+                <!-- Quick Reference Table -->
+                <div class="mt-8">
+                    <h3 class="text-white font-semibold mb-4">Schnell-Referenz: Titel & Description</h3>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-sm">
+                            <thead>
+                                <tr class="border-b border-white/10">
+                                    <th class="text-left text-blue-200/60 font-medium py-2 pr-4">Metrik</th>
+                                    <th class="text-left text-red-400 font-medium py-2 pr-4">Zu kurz</th>
+                                    <th class="text-left text-green-400 font-medium py-2 pr-4">Optimal</th>
+                                    <th class="text-left text-yellow-400 font-medium py-2">Zu lang</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-blue-200/70">
+                                <tr class="border-b border-white/5">
+                                    <td class="py-2 pr-4 font-medium text-white/80">Title-Tag</td>
+                                    <td class="py-2 pr-4">&lt; 30 Zeichen</td>
+                                    <td class="py-2 pr-4">50–60 Zeichen (≤ 480 px)</td>
+                                    <td class="py-2">&gt; 60 Zeichen / &gt; 580 px</td>
+                                </tr>
+                                <tr class="border-b border-white/5">
+                                    <td class="py-2 pr-4 font-medium text-white/80">Meta-Description</td>
+                                    <td class="py-2 pr-4">&lt; 80 Zeichen</td>
+                                    <td class="py-2 pr-4">120–155 Zeichen</td>
+                                    <td class="py-2">&gt; 160 Zeichen</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2 pr-4 font-medium text-white/80">Keywords</td>
+                                    <td class="py-2 pr-4">Kein Keyword</td>
+                                    <td class="py-2 pr-4">Haupt-KW am Anfang</td>
+                                    <td class="py-2">Keyword-Stuffing</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Related Tools -->
+            <div class="glass rounded-2xl p-6 mb-12">
+                <h3 class="text-white font-semibold mb-4">Weitere SEO-Tools</h3>
+                <div class="grid sm:grid-cols-2 gap-3">
+                    <a href="/tools/meta-tag-generator.html" class="flex items-center gap-3 bg-white/5 hover:bg-white/10 rounded-xl p-4 transition-colors group">
+                        <div class="w-9 h-9 bg-blue-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <svg class="w-4 h-4 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+                        </div>
+                        <div>
+                            <p class="text-white text-sm font-medium group-hover:text-blue-300 transition-colors">Meta-Tag-Generator</p>
+                            <p class="text-blue-200/50 text-xs">Title & Description erstellen</p>
+                        </div>
+                    </a>
+                    <a href="/tools/open-graph-vorschau.html" class="flex items-center gap-3 bg-white/5 hover:bg-white/10 rounded-xl p-4 transition-colors group">
+                        <div class="w-9 h-9 bg-purple-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <svg class="w-4 h-4 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"/></svg>
+                        </div>
+                        <div>
+                            <p class="text-white text-sm font-medium group-hover:text-blue-300 transition-colors">Open-Graph-Vorschau</p>
+                            <p class="text-blue-200/50 text-xs">Social-Media-Preview prüfen</p>
+                        </div>
+                    </a>
+                    <a href="/tools/ssl-zertifikat-checker.html" class="flex items-center gap-3 bg-white/5 hover:bg-white/10 rounded-xl p-4 transition-colors group">
+                        <div class="w-9 h-9 bg-green-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+                        </div>
+                        <div>
+                            <p class="text-white text-sm font-medium group-hover:text-blue-300 transition-colors">SSL-Zertifikat-Checker</p>
+                            <p class="text-blue-200/50 text-xs">HTTPS & Zertifikat prüfen</p>
+                        </div>
+                    </a>
+                    <a href="/tools/heading-struktur-checker.html" class="flex items-center gap-3 bg-white/5 hover:bg-white/10 rounded-xl p-4 transition-colors group">
+                        <div class="w-9 h-9 bg-yellow-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <svg class="w-4 h-4 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h8M4 18h8"/></svg>
+                        </div>
+                        <div>
+                            <p class="text-white text-sm font-medium group-hover:text-blue-300 transition-colors">Heading-Struktur-Checker</p>
+                            <p class="text-blue-200/50 text-xs">H1-H6 Hierarchie prüfen</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-black/30 backdrop-blur-md border-t border-white/10">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <div class="text-white/60 mb-4 md:mb-0 text-sm">
+                        &copy; 2026 Thümmler AI GmbH. Alle Rechte vorbehalten.
+                    </div>
+                    <div class="flex space-x-6">
+                        <a href="/impressum.html" class="text-gray-300 hover:text-white transition-colors text-sm">Impressum</a>
+                        <a href="/datenschutz.html" class="text-gray-300 hover:text-white transition-colors text-sm">Datenschutz</a>
+                        <a href="/agb.html" class="text-gray-300 hover:text-white transition-colors text-sm">AGB</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Pixel width estimation — approximates Google's rendering
+        // Using average character widths for Arial/sans-serif at ~18px (Google's approximate rendering)
+        const CHAR_WIDTHS = {
+            'f': 7, 'i': 5, 'j': 5, 'l': 5, 'r': 7, 't': 7,
+            'm': 17, 'w': 16, 'n': 12, 'u': 12, 'v': 12,
+            'a': 11, 'b': 12, 'c': 10, 'd': 12, 'e': 11, 'g': 12,
+            'h': 12, 'k': 11, 'o': 12, 'p': 12, 'q': 12, 's': 9,
+            'x': 10, 'y': 11, 'z': 10,
+            'F': 12, 'I': 5, 'J': 7, 'L': 10, 'T': 12,
+            'M': 17, 'W': 18, 'N': 14, 'U': 14, 'V': 14,
+            'A': 13, 'B': 13, 'C': 13, 'D': 14, 'E': 12, 'G': 14,
+            'H': 14, 'K': 13, 'O': 15, 'P': 13, 'Q': 15, 'R': 13,
+            'S': 11, 'X': 13, 'Y': 13, 'Z': 12,
+            ' ': 6, '.': 5, ',': 5, '-': 7, '|': 4, '–': 10, '—': 14,
+            '0': 12, '1': 8, '2': 11, '3': 11, '4': 12, '5': 11,
+            '6': 12, '7': 11, '8': 12, '9': 12,
+            'ä': 11, 'ö': 12, 'ü': 12, 'Ä': 13, 'Ö': 15, 'Ü': 14, 'ß': 12,
+        };
+        const DEFAULT_CHAR_WIDTH = 11;
+        const GOOGLE_TITLE_LIMIT_PX = 580;
+        const GOOGLE_TITLE_OPTIMAL_PX = 480;
+
+        function estimatePixelWidth(text) {
+            let width = 0;
+            for (const ch of text) {
+                width += (CHAR_WIDTHS[ch] || DEFAULT_CHAR_WIDTH);
+            }
+            return width;
+        }
+
+        function analyzeTitle() {
+            const title = document.getElementById('titleInput').value;
+            const domain = document.getElementById('domainInput').value || 'deine-website.de';
+            const desc = document.getElementById('descInput').value;
+
+            // Update SERP preview
+            updateSerpPreview(title, domain, desc);
+
+            // Title analysis
+            analyzeTitleMetrics(title);
+
+            // Description analysis
+            analyzeDescMetrics(desc);
+
+            // Checklist
+            updateChecklist(title, desc);
+        }
+
+        function updateSerpPreview(title, domain, desc) {
+            // Domain
+            const cleanDomain = domain.replace(/^https?:\/\//, '').replace(/^www\./, '').split('/')[0];
+            document.getElementById('serpDomain').textContent = cleanDomain || 'deine-website.de';
+
+            // Title
+            const titleEl = document.getElementById('serpTitle');
+            const pxWidth = estimatePixelWidth(title);
+            if (!title) {
+                titleEl.textContent = 'Dein Seitentitel erscheint hier';
+                titleEl.style.color = '#ccc';
+                document.getElementById('truncationWarning').classList.add('hidden');
+            } else if (pxWidth > GOOGLE_TITLE_LIMIT_PX) {
+                titleEl.textContent = title;
+                titleEl.style.color = '#1a0dab';
+                titleEl.classList.add('truncated');
+                // Show truncation point
+                let truncated = '';
+                let w = 0;
+                for (const ch of title) {
+                    w += (CHAR_WIDTHS[ch] || DEFAULT_CHAR_WIDTH);
+                    if (w > GOOGLE_TITLE_LIMIT_PX) {
+                        truncated += '…';
+                        break;
+                    }
+                    truncated += ch;
+                }
+                titleEl.textContent = truncated;
+                document.getElementById('truncationWarning').classList.remove('hidden');
+                document.getElementById('truncationText').textContent =
+                    `Der Titel wird bei ca. ${GOOGLE_TITLE_LIMIT_PX} px abgeschnitten. In der Suche erscheint nur: "${truncated}"`;
+            } else {
+                titleEl.textContent = title;
+                titleEl.style.color = '#1a0dab';
+                titleEl.classList.remove('truncated');
+                document.getElementById('truncationWarning').classList.add('hidden');
+            }
+
+            // Description
+            const descEl = document.getElementById('serpDesc');
+            if (!desc) {
+                descEl.textContent = 'Deine Meta-Description erscheint hier. Gib oben deine Description ein, um zu sehen wie dein Suchergebnis aussieht.';
+                descEl.style.color = '#9aa0a6';
+            } else if (desc.length > 160) {
+                descEl.textContent = desc.substring(0, 157) + '…';
+                descEl.style.color = '#4d5156';
+            } else {
+                descEl.textContent = desc;
+                descEl.style.color = '#4d5156';
+            }
+        }
+
+        function analyzeTitleMetrics(title) {
+            const len = title.length;
+            const px = estimatePixelWidth(title);
+            const pxPercent = Math.min((px / GOOGLE_TITLE_LIMIT_PX) * 100, 105);
+
+            // Char counter
+            const charEl = document.getElementById('charCounter');
+            charEl.textContent = `${len} Zeichen`;
+            if (len === 0) { charEl.className = 'char-counter'; }
+            else if (len < 30) { charEl.className = 'char-counter char-warn'; }
+            else if (len <= 60) { charEl.className = 'char-counter char-ok'; }
+            else { charEl.className = 'char-counter char-bad'; }
+
+            // Pixel bar
+            document.getElementById('pixelCount').textContent = `${px} / ${GOOGLE_TITLE_LIMIT_PX} px`;
+            const fillEl = document.getElementById('pixelFill');
+            fillEl.style.width = Math.min(pxPercent, 100) + '%';
+            if (px === 0) fillEl.style.background = '#64748b';
+            else if (px <= GOOGLE_TITLE_OPTIMAL_PX) fillEl.style.background = '#10b981';
+            else if (px <= GOOGLE_TITLE_LIMIT_PX) fillEl.style.background = '#f59e0b';
+            else fillEl.style.background = '#ef4444';
+
+            // Badge & feedback
+            const badge = document.getElementById('titleBadge');
+            const feedback = document.getElementById('titleFeedback');
+
+            if (len === 0) {
+                badge.textContent = 'Warte auf Eingabe';
+                badge.className = 'status-badge badge-blue';
+                feedback.textContent = 'Gib einen Titel ein, um die Analyse zu starten.';
+            } else if (len < 30) {
+                badge.textContent = 'Zu kurz';
+                badge.className = 'status-badge badge-red';
+                feedback.textContent = `Mit nur ${len} Zeichen (${px} px) ist der Titel zu kurz. Google nutzt den verfügbaren Platz nicht aus. Ziel: mindestens 50 Zeichen mit dem Haupt-Keyword am Anfang.`;
+            } else if (px > GOOGLE_TITLE_LIMIT_PX) {
+                badge.textContent = 'Zu lang — wird abgeschnitten';
+                badge.className = 'status-badge badge-red';
+                feedback.textContent = `Mit ${px} px überschreitet der Titel das Google-Limit von ${GOOGLE_TITLE_LIMIT_PX} px. Er wird in den Suchergebnissen abgeschnitten. Kürze ihn um ca. ${Math.ceil((px - GOOGLE_TITLE_OPTIMAL_PX) / 11)} Zeichen.`;
+            } else if (px > GOOGLE_TITLE_OPTIMAL_PX) {
+                badge.textContent = 'Knapp — beobachten';
+                badge.className = 'status-badge badge-yellow';
+                feedback.textContent = `Der Titel ist mit ${px} px im Grenzbereich (Optimal: ≤ ${GOOGLE_TITLE_OPTIMAL_PX} px, Limit: ${GOOGLE_TITLE_LIMIT_PX} px). Je nach Bildschirm und Suchanfrage könnte er knapp abgeschnitten werden. Prüfe ob du ihn etwas kürzen kannst.`;
+            } else {
+                badge.textContent = 'Perfekte Länge';
+                badge.className = 'status-badge badge-green';
+                feedback.textContent = `Ausgezeichnet! Mit ${px} px nutzt du den verfügbaren Platz optimal aus (${len} Zeichen). Der Titel wird in Google vollständig angezeigt.`;
+            }
+        }
+
+        function analyzeDescMetrics(desc) {
+            const len = desc.length;
+            const pct = Math.min((len / 160) * 100, 105);
+
+            document.getElementById('descCountDisplay').textContent = `${len} / 160 Zeichen`;
+
+            const fillEl = document.getElementById('descFill');
+            fillEl.style.width = Math.min(pct, 100) + '%';
+            if (len === 0) fillEl.style.background = '#64748b';
+            else if (len < 80) fillEl.style.background = '#ef4444';
+            else if (len <= 155) fillEl.style.background = '#10b981';
+            else fillEl.style.background = '#f59e0b';
+
+            const badge = document.getElementById('descBadge');
+            const feedback = document.getElementById('descFeedback');
+            const descEl = document.getElementById('descCounter');
+            descEl.textContent = `${len} Zeichen`;
+            if (len === 0) { descEl.className = 'char-counter'; }
+            else if (len < 80) { descEl.className = 'char-counter char-bad'; }
+            else if (len <= 155) { descEl.className = 'char-counter char-ok'; }
+            else { descEl.className = 'char-counter char-warn'; }
+
+            if (len === 0) {
+                badge.textContent = 'Warte auf Eingabe';
+                badge.className = 'status-badge badge-blue';
+                feedback.textContent = 'Gib eine Meta-Description ein, um die Analyse zu starten.';
+            } else if (len < 80) {
+                badge.textContent = 'Zu kurz';
+                badge.className = 'status-badge badge-red';
+                feedback.textContent = `Mit ${len} Zeichen ist die Description zu kurz. Google nutzt den Platz nicht aus und generiert often eine eigene, schlechtere Vorschau. Ziel: 120–155 Zeichen.`;
+            } else if (len > 160) {
+                badge.textContent = 'Zu lang';
+                badge.className = 'status-badge badge-yellow';
+                feedback.textContent = `Mit ${len} Zeichen ist die Description zu lang und wird bei ca. 160 Zeichen abgeschnitten. Kürze sie um ${len - 155} Zeichen.`;
+            } else if (len >= 120 && len <= 155) {
+                badge.textContent = 'Optimale Länge';
+                badge.className = 'status-badge badge-green';
+                feedback.textContent = `Perfekt! Mit ${len} Zeichen liegt deine Description im optimalen Bereich von 120–155 Zeichen.`;
+            } else {
+                badge.textContent = 'Akzeptabel';
+                badge.className = 'status-badge badge-yellow';
+                feedback.textContent = `Mit ${len} Zeichen ist die Description in Ordnung, aber der optimale Bereich wäre 120–155 Zeichen.`;
+            }
+        }
+
+        function updateChecklist(title, desc) {
+            const container = document.getElementById('checklistItems');
+            const checks = [
+                {
+                    label: 'Haupt-Keyword im Titel vorhanden',
+                    status: title.length > 5 ? 'manual' : 'empty',
+                    hint: 'Enthält dein Titel das wichtigste Keyword für diese Seite? Das Keyword sollte möglichst früh im Titel erscheinen.'
+                },
+                {
+                    label: 'Titel ist einzigartig (kein Duplikat)',
+                    status: title.length > 5 ? 'manual' : 'empty',
+                    hint: 'Jede Seite sollte einen einzigartigen Titel haben. Doppelte Titel schwächen das Ranking beider Seiten.'
+                },
+                {
+                    label: 'Optimale Länge (50–60 Zeichen / ≤ 480 px)',
+                    status: title.length === 0 ? 'empty' : (title.length >= 50 && estimatePixelWidth(title) <= GOOGLE_TITLE_OPTIMAL_PX) ? 'ok' : (title.length >= 30 && estimatePixelWidth(title) <= GOOGLE_TITLE_LIMIT_PX) ? 'warn' : 'bad',
+                    hint: 'Ein Titel zwischen 50 und 60 Zeichen nutzt den verfügbaren Platz optimal aus, ohne abgeschnitten zu werden.'
+                },
+                {
+                    label: 'Kein Keyword-Stuffing',
+                    status: title.length === 0 ? 'empty' : (() => {
+                        const words = title.toLowerCase().split(/\s+/);
+                        const freq = {};
+                        words.forEach(w => freq[w] = (freq[w] || 0) + 1);
+                        const max = Math.max(...Object.values(freq));
+                        return max >= 3 ? 'bad' : 'ok';
+                    })(),
+                    hint: 'Vermeide es, dasselbe Keyword mehrfach im Titel zu wiederholen. Das wirkt spammy und kann das Ranking verschlechtern.'
+                },
+                {
+                    label: 'Markenname sinnvoll eingebaut',
+                    status: title.length > 5 ? 'manual' : 'empty',
+                    hint: 'Für bekannte Marken lohnt es sich, den Markennamen am Ende des Titels einzubauen, z.B. "Keyword – Markenname".'
+                },
+                {
+                    label: 'Meta-Description vorhanden',
+                    status: desc.length === 0 ? 'bad' : desc.length >= 80 ? 'ok' : 'warn',
+                    hint: 'Eine gute Meta-Description erhöht die Klickrate in den Suchergebnissen, auch wenn sie kein direkter Ranking-Faktor ist.'
+                },
+            ];
+
+            container.innerHTML = checks.map(check => {
+                let iconHTML, textColor;
+                if (check.status === 'ok') {
+                    iconHTML = `<svg class="w-4 h-4 text-green-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>`;
+                    textColor = 'text-green-400';
+                } else if (check.status === 'bad') {
+                    iconHTML = `<svg class="w-4 h-4 text-red-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>`;
+                    textColor = 'text-red-400';
+                } else if (check.status === 'warn') {
+                    iconHTML = `<svg class="w-4 h-4 text-yellow-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01"/></svg>`;
+                    textColor = 'text-yellow-400';
+                } else if (check.status === 'manual') {
+                    iconHTML = `<svg class="w-4 h-4 text-blue-400/60 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>`;
+                    textColor = 'text-blue-400/60';
+                } else {
+                    iconHTML = `<svg class="w-4 h-4 text-white/20 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke-width="2"/></svg>`;
+                    textColor = 'text-white/30';
+                }
+                return `
+                    <div class="flex items-start gap-3">
+                        ${iconHTML}
+                        <div>
+                            <p class="text-white/80 text-sm font-medium">${check.label}</p>
+                            <p class="text-blue-200/50 text-xs mt-0.5">${check.hint}</p>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        // Initialize
+        analyzeTitle();
+    </script>
+</body>
+</html>
