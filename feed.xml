@@ -5,8 +5,24 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Sat, 04 Apr 2026 13:20:22 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 04 Apr 2026 16:27:12 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>robots.txt richtig konfigurieren: Die vollständige Anleitung</title>
+      <link>https://shift07.ai/blog/robots-txt-konfigurieren.html</link>
+      <guid>https://shift07.ai/blog/robots-txt-konfigurieren.html</guid>
+      <pubDate>Sat, 04 Apr 2026 16:27:00 +0000</pubDate>
+      <description>Lerne, wie du deine robots.txt Datei richtig konfigurierst, welche Direktiven du kennst musst und welche Fehler du unbedingt vermeiden solltest.</description>
+      <category>Technisches SEO</category>
+    </item>
+    <item>
+      <title>Crawl-Budget optimieren: So crawlt Google deine Website effizienter</title>
+      <link>https://shift07.ai/blog/crawl-budget-optimieren.html</link>
+      <guid>https://shift07.ai/blog/crawl-budget-optimieren.html</guid>
+      <pubDate>Sat, 04 Apr 2026 16:26:36 +0000</pubDate>
+      <description>Was ist das Crawl-Budget und wie optimierst du es? Erfahre, wie Google deine Website crawlt und welche Maßnahmen die Indexierung deutlich verbessern.</description>
+      <category>Technisches SEO</category>
+    </item>
     <item>
       <title>Sitemap.xml erstellen und einreichen: Schritt-für-Schritt</title>
       <link>https://shift07.ai/blog/sitemap-xml-erstellen-einreichen.html</link>
@@ -21,14 +37,6 @@
       <guid>https://shift07.ai/blog/sitemap-validator-tool.html</guid>
       <pubDate>Sat, 04 Apr 2026 13:19:39 +0000</pubDate>
       <description>Mit unserem kostenlosen Sitemap-Validator prüfst du deine sitemap.xml auf XML-Fehler, ungültige URLs, Duplikate und Formatprobleme — direkt im Browser, ohne Anmeldung.</description>
-      <category>Technisches SEO</category>
-    </item>
-    <item>
-      <title>robots.txt richtig konfigurieren: Die vollständige Anleitung</title>
-      <link>https://shift07.ai/blog/robots-txt-konfigurieren.html</link>
-      <guid>https://shift07.ai/blog/robots-txt-konfigurieren.html</guid>
-      <pubDate>Sat, 04 Apr 2026 04:09:17 +0000</pubDate>
-      <description>Lerne, wie du deine robots.txt Datei richtig konfigurierst, welche Direktiven du kennst musst und welche Fehler du unbedingt vermeiden solltest.</description>
       <category>Technisches SEO</category>
     </item>
     <item>
