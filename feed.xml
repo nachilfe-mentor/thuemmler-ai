@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Sat, 04 Apr 2026 00:57:21 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 04 Apr 2026 01:02:11 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Core Web Vitals erklärt: LCP, CLS und FID einfach verstehen</title>
+      <link>https://shift07.ai/blog/core-web-vitals-erklaert.html</link>
+      <guid>https://shift07.ai/blog/core-web-vitals-erklaert.html</guid>
+      <pubDate>Sat, 04 Apr 2026 01:01:48 +0000</pubDate>
+      <description>Was sind Core Web Vitals und wie beeinflussen sie dein Google-Ranking? LCP, CLS und FID verständlich erklärt — mit Grenzwerten, Messung und konkreten Tipps.</description>
+      <category>Performance SEO</category>
+    </item>
     <item>
       <title>robots.txt richtig konfigurieren: Die vollständige Anleitung</title>
       <link>https://shift07.ai/blog/robots-txt-konfigurieren.html</link>
