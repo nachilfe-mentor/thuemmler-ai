@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K1S1RXBDS8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K1S1RXBDS8');
+    </script>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8475857002943858" crossorigin="anonymous"></script>
+    <title>Indexierung prüfen: Ist deine Website bei Google? | Shift07 Blog</title>
+    <meta name="description" content="So prüfst du, ob Google deine Website indexiert hat. Alle Methoden erklärt: site:-Operator, Google Search Console, URL-Prüftool — plus Lösungen wenn Seiten fehlen.">
+    <meta name="keywords" content="Indexierung prüfen Google, Website indexiert, Google Search Console Indexierung, site: Operator, URL Prüftool Google, Seite nicht indexiert">
+    <meta name="author" content="Laurenz Thümmler">
+    <link rel="icon" type="image/png" href="/logo.png">
+    <link rel="canonical" href="https://shift07.ai/blog/indexierung-pruefen-google.html">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Indexierung prüfen: Ist deine Website bei Google?">
+    <meta property="og:description" content="So prüfst du, ob Google deine Website indexiert hat — mit allen Methoden und Lösungen wenn Seiten fehlen.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://shift07.ai/blog/indexierung-pruefen-google.html">
+    <meta property="og:image" content="https://shift07.ai/blog/images/indexierung-pruefen-google.png">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="Shift07">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Indexierung prüfen: Ist deine Website bei Google?">
+    <meta name="twitter:description" content="So prüfst du, ob Google deine Seiten indexiert — und was du tust wenn nicht.">
+    <meta name="twitter:image" content="https://shift07.ai/blog/images/indexierung-pruefen-google.png">
+    <!-- Article Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Indexierung prüfen: Ist deine Website bei Google?",
+      "description": "So prüfst du, ob Google deine Website indexiert hat. Alle Methoden erklärt: site:-Operator, Google Search Console, URL-Prüftool — plus Lösungen wenn Seiten fehlen.",
+      "image": "https://shift07.ai/blog/images/indexierung-pruefen-google.png",
+      "author": {
+        "@type": "Person",
+        "name": "Laurenz Thümmler"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Thümmler AI GmbH",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://shift07.ai/logo.png"
+        }
+      },
+      "datePublished": "2026-04-04",
+      "dateModified": "2026-04-04",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://shift07.ai/blog/indexierung-pruefen-google.html"
+      }
+    }
+    </script>
+    <link rel="alternate" type="application/rss+xml" title="Shift07 Blog" href="https://shift07.ai/feed.xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+        .prose h2 { font-size: 1.5rem; font-weight: 700; color: white; margin-top: 2rem; margin-bottom: 0.75rem; }
+        .prose h3 { font-size: 1.2rem; font-weight: 600; color: #93c5fd; margin-top: 1.5rem; margin-bottom: 0.5rem; }
+        .prose p { color: rgba(191,219,254,0.85); line-height: 1.8; margin-bottom: 1rem; }
+        .prose ul { color: rgba(191,219,254,0.85); list-style-type: disc; padding-left: 1.5rem; margin-bottom: 1rem; }
+        .prose ol { color: rgba(191,219,254,0.85); list-style-type: decimal; padding-left: 1.5rem; margin-bottom: 1rem; }
+        .prose li { margin-bottom: 0.4rem; line-height: 1.7; }
+        .prose a { color: #60a5fa; text-decoration: underline; }
+        .prose a:hover { color: #93c5fd; }
+        .prose strong { color: white; font-weight: 600; }
+        .prose code { background: rgba(0,0,0,0.4); color: #86efac; padding: 2px 6px; border-radius: 4px; font-size: 0.875rem; font-family: monospace; }
+        .prose pre { background: rgba(0,0,0,0.5); border: 1px solid rgba(255,255,255,0.1); border-radius: 0.5rem; padding: 1rem; overflow-x: auto; margin-bottom: 1rem; }
+        .prose pre code { background: none; padding: 0; color: #86efac; }
+        .glass { background: rgba(255,255,255,0.06); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.1); }
+        .toc-link { color: rgba(147,197,253,0.8); text-decoration: none; font-size: 0.875rem; }
+        .toc-link:hover { color: #60a5fa; }
+    </style>
+</head>
+<body class="antialiased">
+<div class="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
+
+    <!-- Navigation -->
+    <nav class="bg-black/20 backdrop-blur-md border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="/" class="flex items-center gap-2">
+                    <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                    <span class="text-xl font-bold text-white">Shift07</span>
+                </a>
+                <div class="hidden md:flex items-baseline space-x-4">
+                    <a href="/" class="text-white hover:text-blue-300 px-3 py-2 text-sm font-medium transition-colors">SEO-Tool</a>
+                    <a href="/blog/" class="text-blue-300 px-3 py-2 text-sm font-medium">Blog</a>
+                    <a href="/tools/" class="text-white hover:text-blue-300 px-3 py-2 text-sm font-medium transition-colors">Tools</a>
+                    <a href="/app/#/login" class="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:from-blue-600 hover:to-purple-700 transition-all">Anmelden</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Article Header -->
+    <header class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-8">
+        <div class="flex items-center gap-2 mb-4">
+            <a href="/blog/" class="text-blue-400 hover:text-blue-300 text-sm transition-colors">← Blog</a>
+            <span class="text-white/30 text-sm">/</span>
+            <span class="text-white/50 text-sm">Technisches SEO</span>
+        </div>
+        <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight">
+            Indexierung prüfen: Ist deine Website bei Google?
+        </h1>
+        <p class="text-xl text-blue-200/80 mb-6 leading-relaxed">
+            Eine Website zu haben reicht nicht — Google muss sie auch finden und indexieren. So prüfst du den Indexierungsstatus jeder Seite und löst häufige Probleme.
+        </p>
+        <div class="flex flex-wrap items-center gap-4 text-sm text-white/50">
+            <span>von <strong class="text-white/80">Laurenz Thümmler</strong></span>
+            <span>•</span>
+            <time datetime="2026-04-04">4. April 2026</time>
+            <span>•</span>
+            <span>10 Min. Lesezeit</span>
+        </div>
+    </header>
+
+    <!-- Hero Image -->
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mb-10">
+        <img src="images/indexierung-pruefen-google.png"
+             alt="Indexierung prüfen: Ist deine Website bei Google?"
+             class="w-full rounded-2xl shadow-2xl border border-white/10">
+    </div>
+
+    <!-- Content -->
+    <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+        <div class="grid lg:grid-cols-4 gap-8">
+
+            <!-- TOC -->
+            <aside class="lg:col-span-1">
+                <div class="glass rounded-xl p-5 sticky top-6">
+                    <h3 class="text-white font-semibold text-sm mb-3">Inhaltsverzeichnis</h3>
+                    <ol class="space-y-2 list-decimal list-inside">
+                        <li><a href="#was-ist-indexierung" class="toc-link">Was bedeutet Indexierung?</a></li>
+                        <li><a href="#site-operator" class="toc-link">Methode 1: site:-Operator</a></li>
+                        <li><a href="#search-console" class="toc-link">Methode 2: Search Console</a></li>
+                        <li><a href="#url-prueftool" class="toc-link">Methode 3: URL-Prüftool</a></li>
+                        <li><a href="#gruende-nicht-indexiert" class="toc-link">Gründe für fehlende Indexierung</a></li>
+                        <li><a href="#probleme-loesen" class="toc-link">Probleme lösen</a></li>
+                        <li><a href="#checkliste" class="toc-link">Checkliste</a></li>
+                    </ol>
+                </div>
+            </aside>
+
+            <!-- Main Content -->
+            <div class="lg:col-span-3 prose max-w-none">
+
+                <p>
+                    Du hast wochenlang an deiner Website gearbeitet — und trotzdem findet dich niemand bei Google. Ein häufiger Grund: Google hat deine Seiten schlicht noch nicht indexiert. Oder schlimmer: etwas blockiert aktiv die Indexierung.
+                </p>
+                <p>
+                    Die gute Nachricht: Du kannst in wenigen Minuten prüfen, ob und wie deine Website bei Google indexiert ist. Dieser Artikel zeigt alle Methoden — vom einfachen Google-Trick bis zur professionellen Search Console.
+                </p>
+
+                <h2 id="was-ist-indexierung">Was bedeutet Indexierung bei Google?</h2>
+                <p>
+                    Googles Crawler (Googlebot) besucht Websites, liest ihre Inhalte und nimmt diese in seinen <strong>Index</strong> auf — eine riesige Datenbank aller bekannten Webseiten. Nur indexierte Seiten können in den Suchergebnissen erscheinen.
+                </p>
+                <p>
+                    Der Prozess läuft in drei Schritten:
+                </p>
+                <ol>
+                    <li><strong>Crawlen:</strong> Googlebot besucht die URL und liest den HTML-Quellcode</li>
+                    <li><strong>Rendern:</strong> Google führt JavaScript aus und sieht die fertige Seite</li>
+                    <li><strong>Indexieren:</strong> Der Seiteninhalt wird im Google-Index gespeichert</li>
+                </ol>
+                <p>
+                    Wichtig: Gecrawlt ≠ indexiert. Google kann eine Seite besuchen, aber trotzdem entscheiden, sie nicht aufzunehmen — zum Beispiel wenn der Inhalt dünn ist, eine Canonical auf eine andere URL zeigt oder ein noindex-Tag gesetzt ist.
+                </p>
+
+                <h2 id="site-operator">Methode 1: Der site:-Operator (Schnellcheck)</h2>
+                <p>
+                    Der einfachste Weg zu prüfen, ob deine Domain bei Google bekannt ist, ist der <code>site:</code>-Operator in der Google-Suche:
+                </p>
+                <pre><code>site:deinedomain.de</code></pre>
+                <p>
+                    Google zeigt dir alle indexierten URLs deiner Domain. Erscheinen gar keine Ergebnisse, ist deine Domain entweder sehr neu oder hat ein ernstes Indexierungsproblem.
+                </p>
+
+                <h3>Was du siehst — und was es bedeutet</h3>
+                <ul>
+                    <li><strong>Viele Ergebnisse:</strong> Google kennt deine Website und indexiert Seiten aktiv</li>
+                    <li><strong>Wenige Ergebnisse:</strong> Manche Seiten werden möglicherweise blockiert oder sind doppelt (Duplicate Content)</li>
+                    <li><strong>0 Ergebnisse:</strong> Domain nicht indexiert — entweder sehr jung oder aktiv blockiert</li>
+                    <li><strong>Viel mehr als erwartet:</strong> Möglicherweise werden URL-Parameter oder Sitzungs-IDs als separate Seiten indexiert</li>
+                </ul>
+
+                <h3>Einzelne URLs prüfen</h3>
+                <p>Du kannst auch eine konkrete URL überprüfen:</p>
+                <pre><code>site:deinedomain.de/kontakt</code></pre>
+                <p>
+                    Erscheint genau diese URL in den Ergebnissen, ist sie indexiert. Erscheint sie nicht, aber andere Seiten deiner Domain schon, liegt das Problem spezifisch bei dieser Seite.
+                </p>
+
+                <div class="glass rounded-xl p-5 my-6">
+                    <p class="text-yellow-200/80 text-sm mb-0"><strong class="text-yellow-300">Einschränkung:</strong> Der site:-Operator liefert nur Näherungswerte. Google zeigt nicht alle indexierten URLs an und die Zahl ist oft ungenau. Für präzise Daten brauchst du die Search Console.</p>
+                </div>
+
+                <h2 id="search-console">Methode 2: Google Search Console (Empfohlen)</h2>
+                <p>
+                    Die <strong>Google Search Console</strong> (früher Webmaster Tools) ist das offizielle Google-Tool für Webmaster — und deine wichtigste Quelle für Indexierungsdaten.
+                </p>
+
+                <h3>So richtest du die Search Console ein</h3>
+                <ol>
+                    <li>Gehe zu <strong>search.google.com/search-console</strong></li>
+                    <li>Property hinzufügen: entweder "Domain" (alle Subdomains) oder "URL-Präfix" (spezifische URL)</li>
+                    <li>Verifizieren: z.B. über HTML-Tag im &lt;head&gt;, DNS-Eintrag oder Google Analytics</li>
+                    <li>24–48 Stunden warten, bis erste Daten erscheinen</li>
+                </ol>
+
+                <h3>Der Bericht "Seiten" (ehemals Abdeckung)</h3>
+                <p>
+                    Unter <em>Indexierung → Seiten</em> siehst du eine Übersicht aller bekannten URLs — aufgeteilt nach Status:
+                </p>
+                <ul>
+                    <li><strong>Indexiert:</strong> Google hat diese Seite in den Index aufgenommen — alles gut</li>
+                    <li><strong>Gecrawlt, aber nicht indexiert:</strong> Google hat die Seite besucht, aber für unwürdig befunden. Häufiger Grund: dünner Content</li>
+                    <li><strong>Erkannt, aber nicht gecrawlt:</strong> Google kennt die URL (z.B. aus der Sitemap), hat sie aber noch nicht besucht — oft nur eine Frage der Zeit</li>
+                    <li><strong>Ausgeschlossen:</strong> Seite wird aktiv nicht indexiert — durch noindex-Tag, Canonical, robots.txt o.ä.</li>
+                    <li><strong>Fehler:</strong> Crawl-Fehler, 404-Seiten, Server-Fehler — müssen aktiv behoben werden</li>
+                </ul>
+
+                <h3>Was du als Erstes prüfen solltest</h3>
+                <p>
+                    Öffne den Bericht und sortiere nach Anzahl der URLs pro Status. Schau besonders auf:
+                </p>
+                <ul>
+                    <li>"Gecrawlt, aber nicht indexiert" mit vielen URLs → Content-Qualität verbessern</li>
+                    <li>"Ausgeschlossen" durch Benutzer → noindex-Tags prüfen</li>
+                    <li>"Ausgeschlossen" durch robots.txt → <a href="/blog/robots-txt-konfigurieren.html">robots.txt prüfen</a></li>
+                    <li>Viele 404-Fehler → fehlende Weiterleitugen einrichten</li>
+                </ul>
+
+                <h2 id="url-prueftool">Methode 3: Das URL-Prüftool (für einzelne Seiten)</h2>
+                <p>
+                    Für eine detaillierte Analyse einer einzelnen URL bietet die Search Console das <strong>URL-Prüftool</strong>. Du findest es oben in der Search Console — einfach eine URL eingeben und Enter drücken.
+                </p>
+
+                <h3>Was das Tool zeigt</h3>
+                <ul>
+                    <li><strong>Indexierungsstatus:</strong> "URL ist bei Google" oder nicht</li>
+                    <li><strong>Letzter Crawl:</strong> Wann hat Googlebot die Seite zuletzt besucht?</li>
+                    <li><strong>Gerenderte Seite:</strong> Screenshot, wie Google deine Seite sieht (nach JavaScript-Rendering)</li>
+                    <li><strong>Canonical URL:</strong> Welche URL betrachtet Google als Haupt-URL?</li>
+                    <li><strong>Crawl erlaubt?:</strong> Wird die URL durch robots.txt blockiert?</li>
+                    <li><strong>Indexierung erlaubt?:</strong> Gibt es ein noindex-Tag?</li>
+                </ul>
+
+                <h3>Indexierung anfordern</h3>
+                <p>
+                    Hast du eine neue oder überarbeitete Seite und willst Google aktiv informieren? Klicke im URL-Prüftool auf <strong>"Indexierung anfordern"</strong>. Google wird die URL bevorzugt crawlen — meistens innerhalb weniger Stunden bis Tage.
+                </p>
+                <div class="glass rounded-xl p-5 my-6">
+                    <p class="text-blue-200/80 text-sm mb-0"><strong class="text-white">Tipp:</strong> Nutze "Indexierung anfordern" gezielt für wichtige neue Inhalte — z.B. nach einem neuen Blog-Artikel oder einer überarbeiteten Landing Page. Für die regelmäßige Indexierung sorgt eine gut gepflegte <a href="/blog/sitemap-xml-erstellen-einreichen.html">Sitemap.xml</a>.</p>
+                </div>
+
+                <h2 id="gruende-nicht-indexiert">Warum ist eine Seite nicht indexiert?</h2>
+                <p>
+                    Es gibt viele mögliche Gründe. Hier sind die häufigsten:
+                </p>
+
+                <h3>1. Noindex-Meta-Tag</h3>
+                <p>
+                    Das wichtigste und häufigste Problem. Prüfe, ob im &lt;head&gt; deiner Seite steht:
+                </p>
+                <pre><code>&lt;meta name="robots" content="noindex"&gt;</code></pre>
+                <p>
+                    Dieses Tag sagt Google explizit: "Bitte diese Seite nicht in den Index aufnehmen." Manchmal wird es versehentlich auf der gesamten Website gesetzt — z.B. in WordPress unter Einstellungen → Lesen → "Suchmaschinen davon abhalten".
+                </p>
+
+                <h3>2. Robots.txt-Sperrung</h3>
+                <p>
+                    Eine robots.txt-Disallow-Regel kann Googlebot am Crawlen hindern:
+                </p>
+                <pre><code>User-agent: *
+Disallow: /blog/</code></pre>
+                <p>
+                    Wichtig: Robots.txt verhindert das Crawlen, aber nicht unbedingt die Indexierung. Google kann eine URL trotzdem indexieren, wenn sie in anderen Seiten verlinkt ist — nur ohne den Inhalt gelesen zu haben. Mehr dazu in unserem Artikel zur <a href="/blog/robots-txt-konfigurieren.html">robots.txt-Konfiguration</a>.
+                </p>
+
+                <h3>3. Canonical auf eine andere URL</h3>
+                <p>
+                    Zeigt der Canonical-Tag auf eine andere URL, wird diese Seite als Duplikat behandelt und nicht indexiert. Prüfe:
+                </p>
+                <pre><code>&lt;link rel="canonical" href="https://example.de/andere-seite/"&gt;</code></pre>
+                <p>
+                    Der Canonical sollte normalerweise auf die eigene URL zeigen, außer du willst bewusst Duplicate Content konsolidieren. Mehr dazu in unserem Artikel zu <a href="/blog/canonical-tags-seo.html">Canonical-Tags</a>.
+                </p>
+
+                <h3>4. Dünner oder duplizierter Content</h3>
+                <p>
+                    Google indexiert bevorzugt Seiten mit einzigartigem, hochwertigem Inhalt. Seiten mit weniger als 300 Wörtern, Seiten die nur anderen Seiten ähneln oder Seiten ohne klaren Mehrwert werden oft ignoriert — auch wenn kein technisches Blockierungs-Tag existiert.
+                </p>
+
+                <h3>5. Website zu neu</h3>
+                <p>
+                    Neue Domains brauchen Zeit. Google muss erst Vertrauen aufbauen. Eine neue Website kann 4–12 Wochen brauchen, bis sie regelmäßig gecrawlt wird. Acceleratoren: Backlinks von anderen Websites, Sitemap einreichen, Social-Media-Präsenz.
+                </p>
+
+                <h3>6. Crawl-Fehler</h3>
+                <p>
+                    Server-Fehler (500er), zu viele Weiterleitungen oder Timeout-Fehler können Googlebot abschrecken. In der Search Console unter "Seiten" → "Crawl-Fehler" siehst du die betroffenen URLs.
+                </p>
+
+                <h3>7. JavaScript-Rendering-Probleme</h3>
+                <p>
+                    Wenn dein Inhalt ausschließlich per JavaScript geladen wird und Google ihn nicht rendern kann, bleibt die Seite inhaltsleer — und damit nicht indexierungswürdig. Das URL-Prüftool zeigt dir den Screenshot der gerenderten Seite.
+                </p>
+
+                <h2 id="probleme-loesen">Probleme lösen: Schritt für Schritt</h2>
+
+                <h3>Seite nicht indexiert, obwohl sie es sollte</h3>
+                <ol>
+                    <li>URL-Prüftool aufrufen → Grund für Nicht-Indexierung lesen</li>
+                    <li>noindex-Tag prüfen und entfernen falls vorhanden</li>
+                    <li>robots.txt prüfen — blockiert sie den Pfad?</li>
+                    <li>Canonical-Tag prüfen — zeigt er korrekt?</li>
+                    <li>Content-Qualität bewerten — mind. 500 Wörter, einzigartiger Inhalt?</li>
+                    <li>Indexierung anfordern über das URL-Prüftool</li>
+                    <li>URL zur Sitemap hinzufügen und Sitemap einreichen</li>
+                </ol>
+
+                <h3>Viel weniger Seiten indexiert als erwartet</h3>
+                <ol>
+                    <li>Search Console → Seiten-Bericht → alle Ausschlussgründe prüfen</li>
+                    <li>Sitemap.xml einreichen falls noch nicht geschehen</li>
+                    <li>Interne Verlinkung verbessern — jede Seite sollte mindestens von einer anderen Seite verlinkt werden</li>
+                    <li><a href="/blog/crawl-budget-optimieren.html">Crawl-Budget optimieren</a> — wichtige Seiten priorisieren</li>
+                    <li>Duplicate Content bereinigen</li>
+                </ol>
+
+                <h3>Seiten werden indexiert, die es nicht sollten</h3>
+                <ol>
+                    <li>noindex-Tag auf betroffene Seiten setzen</li>
+                    <li>Bei URL-Parametern: Search Console → URL-Parameter-Verwaltung</li>
+                    <li>Bei Staging-Websites: Passwortschutz oder robots.txt Disallow</li>
+                    <li>Canonical-Tags setzen um Duplikate zu konsolidieren</li>
+                </ol>
+
+                <h2 id="checkliste">Checkliste: Indexierung prüfen</h2>
+                <div class="glass rounded-xl p-6 my-6">
+                    <h3 class="text-white font-semibold mb-4 mt-0">Schnell-Checkliste Indexierung</h3>
+                    <ul class="space-y-2 list-none pl-0">
+                        <li class="flex items-start gap-2"><span class="text-green-400 mt-0.5 flex-shrink-0">✓</span><span>Google Search Console eingerichtet und verifiziert</span></li>
+                        <li class="flex items-start gap-2"><span class="text-green-400 mt-0.5 flex-shrink-0">✓</span><span>site:-Operator zeigt erwartete Anzahl URLs</span></li>
+                        <li class="flex items-start gap-2"><span class="text-green-400 mt-0.5 flex-shrink-0">✓</span><span>Kein unerwünschtes noindex-Tag auf wichtigen Seiten</span></li>
+                        <li class="flex items-start gap-2"><span class="text-green-400 mt-0.5 flex-shrink-0">✓</span><span>robots.txt blockiert keine wichtigen Seiten</span></li>
+                        <li class="flex items-start gap-2"><span class="text-green-400 mt-0.5 flex-shrink-0">✓</span><span>Canonical-Tags zeigen korrekt auf Haupt-URLs</span></li>
+                        <li class="flex items-start gap-2"><span class="text-green-400 mt-0.5 flex-shrink-0">✓</span><span>Sitemap.xml erstellt und in Search Console eingereicht</span></li>
+                        <li class="flex items-start gap-2"><span class="text-green-400 mt-0.5 flex-shrink-0">✓</span><span>Kein "Gecrawlt, aber nicht indexiert"-Problem bei wichtigen Seiten</span></li>
+                        <li class="flex items-start gap-2"><span class="text-green-400 mt-0.5 flex-shrink-0">✓</span><span>Crawl-Fehler im Seiten-Bericht auf 0 reduziert</span></li>
+                        <li class="flex items-start gap-2"><span class="text-green-400 mt-0.5 flex-shrink-0">✓</span><span>Wichtige neue Seiten über URL-Prüftool zur Indexierung angemeldet</span></li>
+                    </ul>
+                </div>
+
+                <h2>Fazit</h2>
+                <p>
+                    Indexierung ist die Grundvoraussetzung für jedes Ranking. Ohne Indexierung — kein Traffic. Die gute Nachricht: Die meisten Indexierungsprobleme sind technischer Natur und lassen sich mit etwas Diagnose schnell beheben.
+                </p>
+                <p>
+                    Nutze regelmäßig das URL-Prüftool und den Seiten-Bericht in der Search Console, um den Überblick zu behalten. Und wenn du eine vollständige technische SEO-Analyse deiner Website willst, probiere unsere <a href="/">kostenlose SEO-Analyse auf Shift07</a> — sie prüft alle wichtigen Faktoren auf einmal.
+                </p>
+
+                <!-- Related Articles -->
+                <div class="glass rounded-xl p-6 mt-10">
+                    <h3 class="text-white font-semibold mb-4">Verwandte Artikel</h3>
+                    <div class="grid sm:grid-cols-2 gap-4">
+                        <a href="/blog/sitemap-xml-erstellen-einreichen.html" class="block p-4 bg-white/5 rounded-lg hover:bg-white/10 transition-colors no-underline">
+                            <p class="text-white font-medium text-sm mb-1">Sitemap.xml erstellen und einreichen</p>
+                            <p class="text-blue-200/60 text-xs">So hilfst du Google, alle deine Seiten zu finden.</p>
+                        </a>
+                        <a href="/blog/crawl-budget-optimieren.html" class="block p-4 bg-white/5 rounded-lg hover:bg-white/10 transition-colors no-underline">
+                            <p class="text-white font-medium text-sm mb-1">Crawl-Budget optimieren</p>
+                            <p class="text-blue-200/60 text-xs">Wie Google deine Website crawlt — und wie du es steuerst.</p>
+                        </a>
+                        <a href="/blog/robots-txt-konfigurieren.html" class="block p-4 bg-white/5 rounded-lg hover:bg-white/10 transition-colors no-underline">
+                            <p class="text-white font-medium text-sm mb-1">robots.txt richtig konfigurieren</p>
+                            <p class="text-blue-200/60 text-xs">Steuere welche Seiten Googlebot crawlen darf.</p>
+                        </a>
+                        <a href="/blog/canonical-tags-seo.html" class="block p-4 bg-white/5 rounded-lg hover:bg-white/10 transition-colors no-underline">
+                            <p class="text-white font-medium text-sm mb-1">Canonical-Tags erklärt</p>
+                            <p class="text-blue-200/60 text-xs">Duplicate Content vermeiden mit Canonical-Tags.</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <!-- CTA -->
+    <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+        <div class="glass rounded-2xl p-8 text-center border-blue-500/30 border">
+            <h2 class="text-2xl font-bold text-white mb-3">Ist deine Website richtig indexiert?</h2>
+            <p class="text-blue-200/70 mb-6">Shift07 prüft deine Website auf alle wichtigen SEO-Faktoren — inklusive technische Probleme die die Indexierung verhindern könnten.</p>
+            <a href="/" class="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-3 rounded-xl font-semibold hover:from-blue-500 hover:to-indigo-500 transition-all inline-block">Kostenlose SEO-Analyse starten</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black/30 backdrop-blur-md border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="text-white/60 mb-4 md:mb-0 text-sm">&copy; 2026 Thümmler AI GmbH. Alle Rechte vorbehalten.</div>
+                <div class="flex space-x-6">
+                    <a href="/impressum.html" class="text-gray-300 hover:text-white transition-colors text-sm">Impressum</a>
+                    <a href="/datenschutz.html" class="text-gray-300 hover:text-white transition-colors text-sm">Datenschutz</a>
+                    <a href="/agb.html" class="text-gray-300 hover:text-white transition-colors text-sm">AGB</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+</body>
+</html>
