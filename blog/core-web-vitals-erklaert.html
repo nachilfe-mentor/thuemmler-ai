@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Core Web Vitals erklärt: LCP, CLS und FID einfach verstehen | Shift07 Blog</title>
+    <meta name="description" content="Was sind Core Web Vitals und wie beeinflussen sie dein Google-Ranking? LCP, CLS und FID verständlich erklärt — mit Grenzwerten, Messung und konkreten Tipps.">
+    <meta name="author" content="Thümmler AI GmbH">
+    <link rel="icon" type="image/png" href="/logo.png">
+    <link rel="canonical" href="https://shift07.ai/blog/core-web-vitals-erklaert.html">
+    <link rel="alternate" type="application/rss+xml" title="Shift07 Blog" href="https://shift07.ai/feed.xml">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Core Web Vitals erklärt: LCP, CLS und FID einfach verstehen | Shift07 Blog">
+    <meta property="og:description" content="Was sind Core Web Vitals und wie beeinflussen sie dein Google-Ranking? LCP, CLS und FID verständlich erklärt — mit Grenzwerten, Messung und konkreten Tipps.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://shift07.ai/blog/core-web-vitals-erklaert.html">
+    <meta property="og:image" content="https://shift07.ai/blog/images/core-web-vitals-erklaert.png">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="Shift07">
+    <meta property="article:published_time" content="2026-04-04T11:00:00+02:00">
+    <meta property="article:section" content="Performance SEO">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Core Web Vitals erklärt: LCP, CLS, FID verstehen">
+    <meta name="twitter:description" content="LCP, CLS und FID einfach erklärt — Grenzwerte, Messung und Optimierungstipps für bessere Rankings.">
+    <meta name="twitter:image" content="https://shift07.ai/blog/images/core-web-vitals-erklaert.png">
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Core Web Vitals erklärt: LCP, CLS und FID einfach verstehen",
+      "description": "Was sind Core Web Vitals und wie beeinflussen sie dein Google-Ranking? LCP, CLS und FID verständlich erklärt — mit Grenzwerten, Messung und konkreten Tipps.",
+      "image": "https://shift07.ai/blog/images/core-web-vitals-erklaert.png",
+      "author": { "@type": "Person", "name": "Laurenz Thümmler" },
+      "publisher": { "@type": "Organization", "name": "Thümmler AI GmbH", "url": "https://shift07.ai" },
+      "datePublished": "2026-04-04T11:00:00+02:00",
+      "dateModified": "2026-04-04T11:00:00+02:00",
+      "mainEntityOfPage": { "@type": "WebPage", "@id": "https://shift07.ai/blog/core-web-vitals-erklaert.html" },
+      "keywords": ["Core Web Vitals", "LCP", "CLS", "FID", "INP", "Page Experience", "Performance SEO", "Google Ranking"]
+    }
+    </script>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K1S1RXBDS8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K1S1RXBDS8');
+    </script>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8475857002943858" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: { extend: { fontFamily: { 'inter': ['Inter', 'system-ui', '-apple-system', 'sans-serif'] } } }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: rgba(15, 23, 42, 0.5); }
+        ::-webkit-scrollbar-thumb { background: rgba(59, 130, 246, 0.5); border-radius: 4px; }
+        html { scroll-behavior: smooth; }
+        .glass { background: rgba(255,255,255,0.06); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.1); }
+        .prose-content h2 { font-size: 1.5rem; font-weight: 700; color: white; margin-top: 2.5rem; margin-bottom: 1rem; }
+        .prose-content h3 { font-size: 1.2rem; font-weight: 600; color: #93c5fd; margin-top: 1.8rem; margin-bottom: 0.75rem; }
+        .prose-content p { color: rgba(191,219,254,0.8); line-height: 1.8; margin-bottom: 1.2rem; }
+        .prose-content ul { color: rgba(191,219,254,0.8); margin-bottom: 1.2rem; padding-left: 1.5rem; }
+        .prose-content ul li { margin-bottom: 0.5rem; line-height: 1.7; list-style-type: disc; }
+        .prose-content ol { color: rgba(191,219,254,0.8); margin-bottom: 1.2rem; padding-left: 1.5rem; }
+        .prose-content ol li { margin-bottom: 0.5rem; line-height: 1.7; list-style-type: decimal; }
+        .prose-content strong { color: white; font-weight: 600; }
+        .prose-content a { color: #60a5fa; text-decoration: underline; }
+        .prose-content a:hover { color: #93c5fd; }
+        .tip-box { background: rgba(16,185,129,0.08); border: 1px solid rgba(16,185,129,0.25); border-radius: 0.75rem; padding: 1.25rem 1.5rem; margin: 1.5rem 0; }
+        .info-box { background: rgba(59,130,246,0.08); border: 1px solid rgba(59,130,246,0.25); border-radius: 0.75rem; padding: 1.25rem 1.5rem; margin: 1.5rem 0; }
+        /* Metric Cards */
+        .metric-card { border-radius: 1rem; padding: 1.5rem; margin-bottom: 1.5rem; }
+        .metric-card.lcp { background: rgba(16,185,129,0.08); border: 1px solid rgba(16,185,129,0.25); }
+        .metric-card.cls { background: rgba(99,102,241,0.08); border: 1px solid rgba(99,102,241,0.25); }
+        .metric-card.inp { background: rgba(245,158,11,0.08); border: 1px solid rgba(245,158,11,0.25); }
+        .threshold-bar { display: flex; border-radius: 0.5rem; overflow: hidden; height: 10px; margin: 0.75rem 0; }
+        .threshold-good { background: #10b981; }
+        .threshold-needs { background: #f59e0b; }
+        .threshold-poor { background: #ef4444; }
+    </style>
+</head>
+<body class="antialiased">
+<div class="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
+
+    <!-- Navigation -->
+    <nav class="bg-black/20 backdrop-blur-md border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="/" class="flex items-center gap-2">
+                    <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                    <span class="text-xl font-bold text-white">Shift07</span>
+                </a>
+                <div class="hidden md:flex items-baseline space-x-4">
+                    <a href="/" class="text-white hover:text-blue-300 px-3 py-2 text-sm font-medium transition-colors">SEO-Tool</a>
+                    <a href="/blog/" class="text-blue-300 px-3 py-2 text-sm font-medium">Blog</a>
+                    <a href="/tools/" class="text-white hover:text-blue-300 px-3 py-2 text-sm font-medium transition-colors">Tools</a>
+                    <a href="/app/#/login" class="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:from-blue-600 hover:to-purple-700 transition-all">Anmelden</a>
+                </div>
+                <button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="md:hidden text-white">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                </button>
+            </div>
+            <div id="mobile-menu" class="hidden md:hidden pb-4">
+                <a href="/" class="block text-white hover:text-blue-300 px-3 py-2 text-sm font-medium">SEO-Tool</a>
+                <a href="/blog/" class="block text-blue-300 px-3 py-2 text-sm font-medium">Blog</a>
+                <a href="/tools/" class="block text-white hover:text-blue-300 px-3 py-2 text-sm font-medium">Tools</a>
+                <a href="/app/#/login" class="block text-white hover:text-blue-300 px-3 py-2 text-sm font-medium">Anmelden</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Article -->
+    <article class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+        <!-- Breadcrumb -->
+        <nav class="flex items-center gap-2 text-sm text-blue-200/50 mb-8">
+            <a href="/" class="hover:text-blue-300 transition-colors">Shift07</a>
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            <a href="/blog/" class="hover:text-blue-300 transition-colors">Blog</a>
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            <span class="text-blue-200/80">Core Web Vitals erklärt</span>
+        </nav>
+
+        <!-- Category & Meta -->
+        <div class="flex flex-wrap items-center gap-3 mb-6">
+            <span class="bg-green-500/20 text-green-300 text-xs font-semibold px-3 py-1 rounded-full border border-green-500/30">Performance SEO</span>
+            <span class="text-blue-200/50 text-sm">04. April 2026</span>
+            <span class="text-blue-200/50 text-sm">·</span>
+            <span class="text-blue-200/50 text-sm">12 Min. Lesezeit</span>
+        </div>
+
+        <!-- Headline -->
+        <h1 class="text-3xl md:text-4xl font-bold text-white leading-tight mb-4">
+            Core Web Vitals erklärt: LCP, CLS und INP einfach verstehen
+        </h1>
+        <p class="text-xl text-blue-200/70 leading-relaxed mb-8">
+            Seit 2021 fließen Core Web Vitals als direkter Rankingfaktor in Googles Algorithmus ein. Was bedeuten LCP, CLS und INP konkret — und wie verbessert man sie? Dieser Artikel gibt dir einen vollständigen Überblick.
+        </p>
+
+        <!-- Header Image -->
+        <div class="rounded-2xl overflow-hidden mb-10 border border-white/10">
+            <img src="images/core-web-vitals-erklaert.png" alt="Core Web Vitals LCP CLS FID erklärt SEO Performance" class="w-full h-56 md:h-72 object-cover">
+        </div>
+
+        <!-- Article Content -->
+        <div class="prose-content">
+
+            <h2>Was sind Core Web Vitals?</h2>
+            <p>
+                Core Web Vitals sind eine Gruppe von drei Performance-Metriken, die Google 2020 vorgestellt und 2021 als offiziellen Ranking-Faktor eingeführt hat. Sie messen die <strong>Nutzererfahrung</strong> einer Website aus der Perspektive eines echten Besuchers: Wie schnell wird die Seite sichtbar? Springt Inhalt ungewollt? Wie reaktionsschnell ist die Seite?
+            </p>
+            <p>
+                Google nennt diese drei Metriken zusammen als Teil des sogenannten <strong>Page Experience Signals</strong> — zusammen mit Mobile-Friendliness, HTTPS und dem Fehlen von intrusiven Interstitials. Ein gutes Abschneiden bei Core Web Vitals kann kein schlechtes Ranking durch fehlenden relevanten Content ausgleichen, aber es kann bei annähernd gleicher Relevanz den entscheidenden Unterschied machen.
+            </p>
+
+            <div class="info-box">
+                <p class="text-blue-300 font-semibold mb-1">Aktueller Stand (2026)</p>
+                <p class="text-blue-200/80 text-sm">Seit März 2024 hat Google FID (First Input Delay) durch <strong>INP (Interaction to Next Paint)</strong> ersetzt. Wer noch FID in seinen Reports sieht, analysiert historische Daten. Die aktuellen drei Core Web Vitals sind: <strong>LCP, CLS und INP</strong>.</p>
+            </div>
+
+            <h2>Die drei Core Web Vitals im Detail</h2>
+
+            <!-- LCP -->
+            <div class="metric-card lcp">
+                <div class="flex items-center gap-3 mb-3">
+                    <div class="w-12 h-12 bg-green-500/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                        <span class="text-green-400 font-black text-lg">LCP</span>
+                    </div>
+                    <div>
+                        <h3 class="text-white font-bold text-lg mb-0 mt-0">Largest Contentful Paint</h3>
+                        <p class="text-green-200/70 text-sm m-0">Wie schnell wird der größte Inhalt sichtbar?</p>
+                    </div>
+                </div>
+                <div class="threshold-bar">
+                    <div class="threshold-good" style="width: 42%;"></div>
+                    <div class="threshold-needs" style="width: 25%;"></div>
+                    <div class="threshold-poor" style="width: 33%;"></div>
+                </div>
+                <div class="flex justify-between text-xs mb-3">
+                    <span class="text-green-400">✓ Gut: ≤ 2,5 s</span>
+                    <span class="text-yellow-400">⚠ Verbesserungsbedarf: 2,5–4 s</span>
+                    <span class="text-red-400">✗ Schlecht: &gt; 4 s</span>
+                </div>
+                <p class="text-green-200/80 text-sm leading-relaxed">
+                    LCP misst die Zeit vom Start des Seitenladens bis der größte sichtbare Inhalt gerendert wird — meistens ein großes Bild, ein Video-Thumbnail oder ein großer Textblock. Das Ziel: unter 2,5 Sekunden für 75% der Besucher.<br><br>
+                    <strong class="text-white">Häufige Ursachen für schlechten LCP:</strong> Großes, nicht optimiertes Hero-Bild, langsamer Server (hoher TTFB), render-blockierende JavaScript/CSS, kein Preload für kritische Ressourcen.
+                </p>
+            </div>
+
+            <!-- CLS -->
+            <div class="metric-card cls">
+                <div class="flex items-center gap-3 mb-3">
+                    <div class="w-12 h-12 bg-indigo-500/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                        <span class="text-indigo-400 font-black text-lg">CLS</span>
+                    </div>
+                    <div>
+                        <h3 class="text-white font-bold text-lg mb-0 mt-0">Cumulative Layout Shift</h3>
+                        <p class="text-indigo-200/70 text-sm m-0">Springt der Inhalt während des Ladens?</p>
+                    </div>
+                </div>
+                <div class="threshold-bar">
+                    <div class="threshold-good" style="width: 38%;"></div>
+                    <div class="threshold-needs" style="width: 27%;"></div>
+                    <div class="threshold-poor" style="width: 35%;"></div>
+                </div>
+                <div class="flex justify-between text-xs mb-3">
+                    <span class="text-green-400">✓ Gut: ≤ 0,1</span>
+                    <span class="text-yellow-400">⚠ Verbesserungsbedarf: 0,1–0,25</span>
+                    <span class="text-red-400">✗ Schlecht: &gt; 0,25</span>
+                </div>
+                <p class="text-indigo-200/80 text-sm leading-relaxed">
+                    CLS misst, wie viel sich der sichtbare Inhalt einer Seite unerwartet verschiebt. Ein CLS von 0 bedeutet kein Springen; 0,1 ist das Maximum für eine gute Bewertung. Du kennst das Problem: Ein Banner lädt nach, drückt den Text nach unten, du klickst auf den falschen Link.<br><br>
+                    <strong class="text-white">Häufige Ursachen für schlechten CLS:</strong> Bilder ohne explizite Breite/Höhe, Werbebanner die nachgeladen werden, Web-Fonts die Layout-Verschiebung verursachen (FOUT), dynamisch eingefügte Inhalte oberhalb bestehender Elemente.
+                </p>
+            </div>
+
+            <!-- INP -->
+            <div class="metric-card inp">
+                <div class="flex items-center gap-3 mb-3">
+                    <div class="w-12 h-12 bg-yellow-500/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                        <span class="text-yellow-400 font-black text-lg">INP</span>
+                    </div>
+                    <div>
+                        <h3 class="text-white font-bold text-lg mb-0 mt-0">Interaction to Next Paint</h3>
+                        <p class="text-yellow-200/70 text-sm m-0">Wie schnell reagiert die Seite auf Interaktionen?</p>
+                    </div>
+                </div>
+                <div class="threshold-bar">
+                    <div class="threshold-good" style="width: 40%;"></div>
+                    <div class="threshold-needs" style="width: 25%;"></div>
+                    <div class="threshold-poor" style="width: 35%;"></div>
+                </div>
+                <div class="flex justify-between text-xs mb-3">
+                    <span class="text-green-400">✓ Gut: ≤ 200 ms</span>
+                    <span class="text-yellow-400">⚠ Verbesserungsbedarf: 200–500 ms</span>
+                    <span class="text-red-400">✗ Schlecht: &gt; 500 ms</span>
+                </div>
+                <p class="text-yellow-200/80 text-sm leading-relaxed">
+                    INP ersetzt seit März 2024 den veralteten FID. Es misst die Reaktionszeit auf alle Nutzerinteraktionen (Klicks, Taps, Tastatureingaben) über die gesamte Sitzung — nicht nur die erste. Der schlechteste Wert wird als Gesamtwert genommen.<br><br>
+                    <strong class="text-white">Häufige Ursachen für schlechten INP:</strong> Schweres, synchrones JavaScript, lange Tasks im Haupt-Thread, zu viele Third-Party-Scripts (Analytics, Chat-Widgets, Ad-Scripts), unoptimiertes Event-Handling.
+                </p>
+            </div>
+
+            <h2>Wie misst man Core Web Vitals?</h2>
+            <p>Google unterscheidet zwischen zwei Arten von Daten:</p>
+
+            <h3>1. Field Data (echte Nutzerdaten)</h3>
+            <p>
+                Field Data basiert auf realen Besucher-Daten, die Google über den Chrome User Experience Report (CrUX) sammelt. Diese Daten spiegeln wider, was echte Nutzer erleben — auf verschiedenen Geräten, Netzwerken und Standorten. Nur Field Data fließt direkt in das Google-Ranking ein.
+            </p>
+            <p><strong>Tools für Field Data:</strong></p>
+            <ul>
+                <li><strong>Google Search Console</strong> — "Core Web Vitals" Bericht zeigt URL-Gruppen mit gutem, schlechtem oder verbesserungswürdigem Status</li>
+                <li><strong>PageSpeed Insights</strong> (oben im Bericht, wenn genug Daten vorhanden) — zeigt Field-Daten für die spezifische URL</li>
+                <li><strong>Chrome User Experience Report</strong> (über BigQuery) — für detaillierte Analysen</li>
+            </ul>
+
+            <h3>2. Lab Data (Synthetische Messungen)</h3>
+            <p>
+                Lab Data misst die Performance in einer kontrollierten Umgebung. Diese Daten spiegeln nicht zwingend die echte Nutzererfahrung wider, sind aber sehr nützlich für die Ursachenanalyse und Optimierung.
+            </p>
+            <p><strong>Tools für Lab Data:</strong></p>
+            <ul>
+                <li><strong>PageSpeed Insights</strong> (unterer Teil des Berichts) — powered by Lighthouse</li>
+                <li><strong>Lighthouse</strong> (direkt in Chrome DevTools → Tab "Lighthouse") — ausführlichste Analyse</li>
+                <li><strong>WebPageTest</strong> — Detailanalyse mit Wasserfall-Diagramm</li>
+            </ul>
+
+            <div class="tip-box">
+                <p class="text-green-300 font-semibold mb-1">💡 Wo anfangen?</p>
+                <p class="text-green-200/80 text-sm">Öffne die <strong>Google Search Console</strong> unter "Erfahrung → Core Web Vitals" und schau dir die URL-Gruppen mit "Schlecht" an. Das sind die Seiten mit dem größten Handlungsbedarf. Dann öffne PageSpeed Insights für eine konkrete URL um die Ursachen zu sehen.</p>
+            </div>
+
+            <h2>Core Web Vitals verbessern: Die wichtigsten Maßnahmen</h2>
+
+            <h3>LCP verbessern</h3>
+            <ul>
+                <li><strong>Bilder komprimieren und in modernen Formaten anliefern.</strong> WebP ist bis zu 30% kleiner als JPEG bei gleicher Qualität. Für Bilder über 100 KB immer WebP oder AVIF verwenden.</li>
+                <li><strong>Hero-Bild preloaden.</strong> Füge <code style="background: rgba(255,255,255,0.1); padding: 2px 6px; border-radius: 4px; color: #86efac;">&lt;link rel="preload" as="image" href="hero.webp"&gt;</code> im &lt;head&gt; ein. Das weist den Browser an, das Bild sofort zu laden.</li>
+                <li><strong>Server-Antwortzeit (TTFB) reduzieren.</strong> Ein CDN, serverseitiges Caching oder ein schnellerer Hosting-Anbieter helfen direkt beim LCP.</li>
+                <li><strong>Render-blockierende Ressourcen entfernen.</strong> CSS und JS, die den Browser am Rendern hindern, direkt im HTML vermeiden.</li>
+                <li><strong>Lazy Loading nur für Below-the-Fold-Bilder.</strong> Das Hero-Bild darf nie <code style="background: rgba(255,255,255,0.1); padding: 2px 6px; border-radius: 4px; color: #86efac;">loading="lazy"</code> haben — das verzögert genau den LCP-Inhalt.</li>
+            </ul>
+
+            <h3>CLS verbessern</h3>
+            <ul>
+                <li><strong>Bildabmessungen immer angeben.</strong> Jedes <code style="background: rgba(255,255,255,0.1); padding: 2px 6px; border-radius: 4px; color: #86efac;">&lt;img&gt;</code>-Tag braucht width und height Attribute, damit der Browser Platz reserviert, bevor das Bild geladen ist.</li>
+                <li><strong>Werbeflächen reservieren.</strong> Wenn Ads dynamisch geladen werden, reserviere den Platz via CSS min-height. Ohne reservierten Platz springt der Inhalt beim Ad-Load.</li>
+                <li><strong>Font-Verschiebungen mit font-display: optional minimieren.</strong> <code style="background: rgba(255,255,255,0.1); padding: 2px 6px; border-radius: 4px; color: #86efac;">font-display: optional</code> verhindert Layout-Shifts durch Web-Font-Ladezeiten.</li>
+                <li><strong>Keine Inhalte dynamisch über bestehende Elemente einfügen</strong>, es sei denn als Reaktion auf eine Nutzerinteraktion.</li>
+            </ul>
+
+            <h3>INP verbessern</h3>
+            <ul>
+                <li><strong>JavaScript in kleinere Chunks aufteilen.</strong> Große JavaScript-Bundles blockieren den Haupt-Thread. Code-Splitting mit modernen Build-Tools hilft.</li>
+                <li><strong>Lange Tasks vermeiden.</strong> Jede Aufgabe im Haupt-Thread, die länger als 50 ms dauert, ist eine "Long Task" und blockiert Nutzer-Interaktionen. Nutze Chrome DevTools → Performance-Tab um sie zu finden.</li>
+                <li><strong>Third-Party-Scripts reduzieren.</strong> Analytics, Chat-Widgets, Social-Buttons und Ad-Scripts können den INP massiv verschlechtern. Prüfe, ob alle wirklich nötig sind, und lade sie wenn möglich asynchron oder mit Delay.</li>
+                <li><strong>Event-Handler optimieren.</strong> Komplexe Berechnungen in Event-Handlern (z.B. onClick) sollten in Web Workers oder in kleinere, nicht-blockierende Tasks aufgeteilt werden.</li>
+            </ul>
+
+            <h2>Core Web Vitals und Mobile-First</h2>
+            <p>
+                Google bewertet Core Web Vitals getrennt für Desktop und Mobile. Da Google seit 2021 vollständig auf <strong>Mobile-First Indexing</strong> umgestellt hat, sind die Mobile-Werte entscheidend. Viele Websites haben auf Desktop sehr gute Core Web Vitals, aber auf Mobile — wo die Mehrheit der Besucher kommt — schlechte Werte.
+            </p>
+            <p>
+                Prüfe deshalb immer sowohl Desktop- als auch Mobile-Werte in PageSpeed Insights. Besonders CLS und LCP unterscheiden sich oft stark: Auf Mobile laden Bilder langsamer und Layout-Shifts fallen mehr auf, weil der Viewport kleiner ist. Mehr dazu im Artikel über <a href="/blog/mobile-optimierung-website-checkliste.html">Mobile-Optimierung</a>.
+            </p>
+
+            <h2>Wie stark beeinflussen Core Web Vitals das Ranking?</h2>
+            <p>
+                Google hat nie genaue Gewichtungen veröffentlicht. In der Praxis zeigen Studien und Google-Aussagen, dass Core Web Vitals ein <strong>"Tiebreaker-Signal"</strong> sind: Bei sehr ähnlicher Relevanz und Qualität kann ein gutes Page Experience Signal den Ausschlag geben. Eine Seite mit exzellentem Content und schlechten Core Web Vitals wird in der Regel trotzdem gut ranken.
+            </p>
+            <p>
+                Interessanter ist der <strong>indirekte Effekt</strong>: Seiten mit schlechter Performance haben höhere Absprungraten. Nutzer, die eine Seite verlassen, weil sie zu langsam ist oder der Inhalt springt, senden negative Nutzersignale. Das wiederum kann langfristig das Ranking beeinflussen.
+            </p>
+            <p>
+                Laut Google-Studie steigt die Absprungrate um <strong>32%</strong>, wenn die Ladezeit von 1 auf 3 Sekunden steigt — und um 90%, wenn sie auf 5 Sekunden steigt. Gute Core Web Vitals sind also nicht nur ein Ranking-Signal, sondern direkt gut für deinen Umsatz.
+            </p>
+
+            <h2>Checkliste: Core Web Vitals optimieren</h2>
+            <ol>
+                <li>Search Console öffnen → Core Web Vitals Bericht prüfen → Problematische URL-Gruppen identifizieren</li>
+                <li>PageSpeed Insights für die schlechtesten URLs aufrufen → Field Data + Lab Data analysieren</li>
+                <li>LCP-Element identifizieren (im Lighthouse-Report angegeben) → Preload + Bildoptimierung</li>
+                <li>CLS-Quellen finden (Chrome DevTools → Performance → Layout Shifts) → Width/Height bei Bildern ergänzen</li>
+                <li>INP prüfen → Third-Party-Scripts auf Notwendigkeit prüfen → Lange Tasks in DevTools suchen</li>
+                <li>Nach Änderungen: Neuen Lighthouse-Test durchführen und Field Data in Search Console beobachten</li>
+            </ol>
+
+            <p>
+                Willst du schnell einen Überblick über die Performance und SEO-Qualität deiner Website? Mit der <a href="/">kostenlosen Shift07 SEO-Analyse</a> siehst du sofort die wichtigsten Probleme — von langsamen Ladezeiten über fehlende <a href="/blog/meta-tags-richtig-einsetzen.html">Meta-Tags</a> bis hin zu technischen Problemen wie einer falsch konfigurierten <a href="/blog/robots-txt-konfigurieren.html">robots.txt</a>.
+            </p>
+
+        </div><!-- end prose-content -->
+
+        <!-- CTA Box -->
+        <div class="glass rounded-2xl p-6 mt-12 border-blue-500/30 border">
+            <div class="flex items-start gap-4">
+                <div class="bg-green-500/20 rounded-xl p-3 flex-shrink-0">
+                    <svg class="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                </div>
+                <div>
+                    <h3 class="text-white font-semibold mb-1">Website-Performance jetzt prüfen</h3>
+                    <p class="text-blue-200/70 text-sm mb-3">Shift07 analysiert deine Website auf Performance-Probleme, fehlende Meta-Tags, robots.txt-Fehler und mehr. Kostenlos, ohne Anmeldung.</p>
+                    <a href="/" class="inline-flex items-center text-blue-400 hover:text-blue-300 text-sm font-medium transition-colors">
+                        Jetzt kostenlos analysieren
+                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Related Articles -->
+        <div class="mt-12">
+            <h3 class="text-white font-bold text-xl mb-6">Weitere Artikel zu Performance SEO</h3>
+            <div class="grid sm:grid-cols-2 gap-4">
+                <a href="/blog/website-geschwindigkeit-verbessern.html" class="glass rounded-xl p-5 hover:border-blue-500/50 transition-all group">
+                    <span class="text-xs text-green-400 font-medium mb-2 block">Performance SEO</span>
+                    <h4 class="text-white font-semibold group-hover:text-blue-300 transition-colors mb-1">Website-Geschwindigkeit verbessern</h4>
+                    <p class="text-blue-200/60 text-sm">10 Maßnahmen für eine schnellere Website.</p>
+                </a>
+                <a href="/blog/mobile-optimierung-website-checkliste.html" class="glass rounded-xl p-5 hover:border-blue-500/50 transition-all group">
+                    <span class="text-xs text-green-400 font-medium mb-2 block">Mobile SEO</span>
+                    <h4 class="text-white font-semibold group-hover:text-blue-300 transition-colors mb-1">Mobile-Optimierung Checkliste</h4>
+                    <p class="text-blue-200/60 text-sm">Warum Mobile-First so wichtig ist und wie du es umsetzt.</p>
+                </a>
+                <a href="/blog/https-ssl-zertifikat-website-sicherheit.html" class="glass rounded-xl p-5 hover:border-blue-500/50 transition-all group">
+                    <span class="text-xs text-blue-400 font-medium mb-2 block">Technisches SEO</span>
+                    <h4 class="text-white font-semibold group-hover:text-blue-300 transition-colors mb-1">HTTPS & SSL-Zertifikat</h4>
+                    <p class="text-blue-200/60 text-sm">Warum HTTPS ein direkter Ranking-Faktor ist.</p>
+                </a>
+                <a href="/blog/robots-txt-konfigurieren.html" class="glass rounded-xl p-5 hover:border-blue-500/50 transition-all group">
+                    <span class="text-xs text-blue-400 font-medium mb-2 block">Technisches SEO</span>
+                    <h4 class="text-white font-semibold group-hover:text-blue-300 transition-colors mb-1">robots.txt richtig konfigurieren</h4>
+                    <p class="text-blue-200/60 text-sm">Crawl-Budget optimal nutzen und Fehler vermeiden.</p>
+                </a>
+            </div>
+        </div>
+
+        <!-- Author Box -->
+        <div class="glass rounded-xl p-6 mt-10 flex items-start gap-4">
+            <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center flex-shrink-0">
+                <span class="text-white font-bold text-lg">L</span>
+            </div>
+            <div>
+                <p class="text-white font-semibold">Laurenz Thümmler</p>
+                <p class="text-blue-200/60 text-sm">Co-Founder von Shift07 · SEO & KI-Enthusiast</p>
+            </div>
+        </div>
+
+    </article>
+
+    <!-- Footer -->
+    <footer class="bg-black/30 backdrop-blur-md border-t border-white/10 mt-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="text-white/60 mb-4 md:mb-0 text-sm">&copy; 2026 Thümmler AI GmbH. Alle Rechte vorbehalten.</div>
+                <div class="flex space-x-6">
+                    <a href="/impressum.html" class="text-gray-300 hover:text-white transition-colors text-sm">Impressum</a>
+                    <a href="/datenschutz.html" class="text-gray-300 hover:text-white transition-colors text-sm">Datenschutz</a>
+                    <a href="/agb.html" class="text-gray-300 hover:text-white transition-colors text-sm">AGB</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+</body>
+</html>
