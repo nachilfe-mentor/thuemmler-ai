@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K1S1RXBDS8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K1S1RXBDS8');
+    </script>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8475857002943858" crossorigin="anonymous"></script>
+    <title>Internal-Link-Counter - Interne Links zählen und analysieren | Shift07</title>
+    <meta name="description" content="Internal-Link-Counter: Analysiere kostenlos alle internen Links einer Webseite. Zähle interne vs. externe Links, erkenne generische Ankertexte und finde SEO-Probleme.">
+    <meta name="keywords" content="internal link counter, interne links zählen, internal linking seo, ankertext analyse, interne verlinkung prüfen">
+    <meta name="author" content="Thümmler AI GmbH">
+    <link rel="icon" type="image/png" href="/logo.png">
+    <link rel="canonical" href="https://shift07.ai/tools/internal-link-counter.html">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Internal-Link-Counter - Interne Links zählen und analysieren">
+    <meta property="og:description" content="Analysiere kostenlos alle internen Links einer Webseite. Interne vs. externe Links, Ankertexte und SEO-Probleme auf einen Blick.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://shift07.ai/tools/internal-link-counter.html">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="Shift07">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Internal-Link-Counter - Interne Links zählen und analysieren">
+    <meta name="twitter:description" content="Analysiere kostenlos alle internen Links einer Webseite.">
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Internal-Link-Counter",
+      "description": "Analysiere kostenlos alle internen Links einer Webseite. Zähle interne vs. externe Links, erkenne generische Ankertexte und finde SEO-Probleme.",
+      "url": "https://shift07.ai/tools/internal-link-counter.html",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR"
+      },
+      "provider": {
+        "@type": "Organization",
+        "name": "Thümmler AI GmbH",
+        "url": "https://shift07.ai"
+      }
+    }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: rgba(15, 23, 42, 0.5); }
+        ::-webkit-scrollbar-thumb { background: rgba(59, 130, 246, 0.5); border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: rgba(59, 130, 246, 0.7); }
+        html { scroll-behavior: smooth; }
+        textarea { resize: vertical; }
+        .result-badge { display: inline-flex; align-items: center; padding: 0.2rem 0.6rem; border-radius: 9999px; font-size: 0.75rem; font-weight: 600; }
+        .badge-internal { background: rgba(59, 130, 246, 0.2); color: #60a5fa; }
+        .badge-external { background: rgba(168, 85, 247, 0.2); color: #c084fc; }
+        .badge-warn { background: rgba(234, 179, 8, 0.2); color: #facc15; }
+        .badge-ok { background: rgba(34, 197, 94, 0.2); color: #4ade80; }
+        .badge-error { background: rgba(239, 68, 68, 0.2); color: #f87171; }
+        .link-row:hover { background: rgba(255,255,255,0.03); }
+        #results { display: none; }
+    </style>
+</head>
+<body class="bg-slate-900 text-white min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-slate-900/80 backdrop-blur-xl border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <a href="../index.html" class="flex items-center gap-2">
+                    <img src="../logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                    <span class="text-xl font-bold text-white">Shift07</span>
+                </a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="../index.html" class="text-gray-300 hover:text-white transition-colors">SEO-Tool</a>
+                    <a href="../blog/" class="text-gray-300 hover:text-white transition-colors">Blog</a>
+                    <a href="./" class="text-white font-medium border-b-2 border-blue-500 pb-0.5">Tools</a>
+                    <a href="../app/#/login" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-5 py-2 rounded-lg font-medium transition-all">Anmelden</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-gray-300 hover:text-white">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900/95 border-b border-white/10">
+            <div class="px-4 py-3 space-y-2">
+                <a href="../index.html" class="block py-2 text-gray-300 hover:text-white">SEO-Tool</a>
+                <a href="../blog/" class="block py-2 text-gray-300 hover:text-white">Blog</a>
+                <a href="./" class="block py-2 text-white font-medium">Tools</a>
+                <a href="../app/#/login" class="block py-2 text-blue-400 hover:text-blue-300">Anmelden</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="pt-28 pb-12 px-4">
+        <div class="max-w-4xl mx-auto text-center">
+            <div class="inline-flex items-center gap-2 bg-blue-500/10 border border-blue-500/30 rounded-full px-4 py-2 text-blue-400 text-sm font-medium mb-6">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
+                Kostenloses SEO-Tool
+            </div>
+            <h1 class="text-3xl md:text-5xl font-extrabold mb-4">
+                Internal-Link-Counter
+            </h1>
+            <p class="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto">
+                HTML einfügen — alle internen und externen Links werden sofort analysiert. Ankertexte, Duplikate und SEO-Probleme auf einen Blick.
+            </p>
+        </div>
+    </section>
+
+    <!-- Tool -->
+    <main class="px-4 pb-20">
+        <div class="max-w-4xl mx-auto">
+
+            <!-- Input -->
+            <div class="bg-slate-800/50 border border-white/10 rounded-2xl p-6 mb-6">
+                <div class="flex flex-col md:flex-row gap-4 mb-4">
+                    <div class="flex-1">
+                        <label class="block text-sm font-medium text-gray-300 mb-2">Domain der Seite (optional)</label>
+                        <input type="text" id="domainInput" placeholder="z.B. meine-website.de" class="w-full bg-slate-700/50 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-blue-500/50 focus:bg-slate-700 transition-all">
+                        <p class="text-xs text-gray-500 mt-1">Wird genutzt um interne von externen Links zu unterscheiden</p>
+                    </div>
+                    <div class="flex items-end gap-3">
+                        <button onclick="loadDemo()" class="px-5 py-3 bg-slate-700 hover:bg-slate-600 border border-white/10 rounded-xl text-sm font-medium text-gray-300 hover:text-white transition-all">
+                            Demo-HTML laden
+                        </button>
+                        <button onclick="clearAll()" class="px-5 py-3 bg-slate-700 hover:bg-slate-600 border border-white/10 rounded-xl text-sm font-medium text-gray-400 hover:text-white transition-all">
+                            Leeren
+                        </button>
+                    </div>
+                </div>
+                <label class="block text-sm font-medium text-gray-300 mb-2">HTML-Quellcode der Seite</label>
+                <textarea id="htmlInput" rows="10" placeholder="HTML-Quellcode hier einfügen (Strg+U im Browser → alles kopieren)..." class="w-full bg-slate-700/50 border border-white/10 rounded-xl px-4 py-3 text-gray-300 placeholder-gray-500 font-mono text-sm focus:outline-none focus:border-blue-500/50 focus:bg-slate-700 transition-all"></textarea>
+                <div class="mt-4">
+                    <button onclick="analyzeLinks()" class="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white py-4 rounded-xl font-semibold text-lg transition-all flex items-center justify-center gap-2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+                        Links analysieren
+                    </button>
+                </div>
+            </div>
+
+            <!-- Results -->
+            <div id="results">
+
+                <!-- Stats Grid -->
+                <div id="statsGrid" class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6"></div>
+
+                <!-- Issues -->
+                <div id="issuesBox" class="hidden bg-yellow-500/10 border border-yellow-500/30 rounded-2xl p-6 mb-6">
+                    <h3 class="font-semibold text-yellow-300 mb-3 flex items-center gap-2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+                        SEO-Hinweise
+                    </h3>
+                    <ul id="issuesList" class="space-y-2 text-sm text-gray-300"></ul>
+                </div>
+
+                <!-- Internal Links -->
+                <div id="internalBox" class="bg-slate-800/50 border border-white/10 rounded-2xl p-6 mb-6">
+                    <h3 class="font-semibold text-white mb-4 flex items-center gap-2">
+                        <svg class="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
+                        Interne Links
+                        <span id="internalCount" class="result-badge badge-internal">0</span>
+                    </h3>
+                    <div id="internalList" class="space-y-1"></div>
+                </div>
+
+                <!-- External Links -->
+                <div id="externalBox" class="bg-slate-800/50 border border-white/10 rounded-2xl p-6 mb-6">
+                    <h3 class="font-semibold text-white mb-4 flex items-center gap-2">
+                        <svg class="w-5 h-5 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                        Externe Links
+                        <span id="externalCount" class="result-badge badge-external">0</span>
+                    </h3>
+                    <div id="externalList" class="space-y-1"></div>
+                </div>
+
+                <!-- Anchor Text Analysis -->
+                <div id="anchorBox" class="bg-slate-800/50 border border-white/10 rounded-2xl p-6 mb-6">
+                    <h3 class="font-semibold text-white mb-4 flex items-center gap-2">
+                        <svg class="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A2 2 0 013 12V7a2 2 0 012-2z"/></svg>
+                        Ankertexte (Top 10)
+                    </h3>
+                    <div id="anchorList" class="space-y-2"></div>
+                </div>
+
+            </div>
+
+            <!-- How it works -->
+            <div class="mt-12 bg-slate-800/30 border border-white/10 rounded-2xl p-8">
+                <h2 class="text-xl font-bold mb-4">Wie funktioniert das Tool?</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div>
+                        <div class="w-10 h-10 bg-blue-500/20 rounded-xl flex items-center justify-center mb-3">
+                            <span class="text-blue-400 font-bold">1</span>
+                        </div>
+                        <h3 class="font-semibold mb-2">HTML-Quellcode kopieren</h3>
+                        <p class="text-gray-400 text-sm">Öffne deine Website im Browser, drücke <code class="bg-slate-700 px-1 rounded">Strg+U</code> (Quellcode anzeigen), markiere alles (<code class="bg-slate-700 px-1 rounded">Strg+A</code>) und kopiere es.</p>
+                    </div>
+                    <div>
+                        <div class="w-10 h-10 bg-blue-500/20 rounded-xl flex items-center justify-center mb-3">
+                            <span class="text-blue-400 font-bold">2</span>
+                        </div>
+                        <h3 class="font-semibold mb-2">Domain eingeben (optional)</h3>
+                        <p class="text-gray-400 text-sm">Gib deine Domain ein (z.B. <em>meine-website.de</em>), damit das Tool interne Links von externen unterscheiden kann.</p>
+                    </div>
+                    <div>
+                        <div class="w-10 h-10 bg-blue-500/20 rounded-xl flex items-center justify-center mb-3">
+                            <span class="text-blue-400 font-bold">3</span>
+                        </div>
+                        <h3 class="font-semibold mb-2">Analyse starten</h3>
+                        <p class="text-gray-400 text-sm">Klicke auf "Links analysieren" — alle Links werden sofort ausgewertet: Anzahl, Ankertexte, Duplikate und SEO-Probleme.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SEO Info -->
+            <div class="mt-8 bg-slate-800/30 border border-white/10 rounded-2xl p-8">
+                <h2 class="text-xl font-bold mb-4">Warum interne Verlinkung für SEO wichtig ist</h2>
+                <div class="space-y-4 text-gray-300">
+                    <p>Interne Links verteilen den <strong>PageRank</strong> (Link Juice) innerhalb deiner Website und helfen Google, alle Seiten zu entdecken und deren Bedeutung zu verstehen. Seiten ohne interne Links werden von Google als weniger wichtig eingestuft und ranken schlechter.</p>
+                    <p>Besonders wichtig für SEO sind <strong>keyword-reiche Ankertexte</strong>: Statt "hier klicken" oder "mehr erfahren" solltest du beschreibende Texte nutzen wie "kostenlose SEO-Analyse starten" oder "Anleitung zur robots.txt-Konfiguration". Google nutzt Ankertexte um zu verstehen, worum es auf der verlinkten Seite geht.</p>
+                    <p>Als Faustregel: Jeder neue Blog-Artikel oder jede neue Seite sollte <strong>mindestens 2–3 interne Links</strong> erhalten — und selbst auf 2–3 andere Seiten verlinken. So entsteht ein starkes internes Netzwerk, das dein gesamtes Ranking hebt.</p>
+                </div>
+                <div class="mt-6 pt-6 border-t border-white/10 flex flex-wrap gap-4">
+                    <a href="../blog/was-ist-seo.html" class="text-blue-400 hover:text-blue-300 text-sm transition-colors">→ SEO-Grundlagen lernen</a>
+                    <a href="../blog/lokales-seo-kleine-unternehmen.html" class="text-blue-400 hover:text-blue-300 text-sm transition-colors">→ Lokales SEO für KMU</a>
+                    <a href="../index.html" class="text-blue-400 hover:text-blue-300 text-sm transition-colors">→ Komplette SEO-Analyse starten</a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/10 py-12 px-4">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div>
+                <a href="../index.html" class="flex items-center gap-2 mb-4">
+                    <img src="../logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                    <span class="text-xl font-bold">Shift07</span>
+                </a>
+                <p class="text-gray-400 text-sm">Professionelle SEO-Analyse für deine Website. Schnell, einfach, kostenlos.</p>
+            </div>
+            <div>
+                <h3 class="font-semibold mb-4">Tools</h3>
+                <ul class="space-y-2 text-gray-400 text-sm">
+                    <li><a href="./" class="hover:text-white transition-colors">Alle Tools</a></li>
+                    <li><a href="canonical-tag-checker.html" class="hover:text-white transition-colors">Canonical-Tag-Checker</a></li>
+                    <li><a href="title-tag-laengen-checker.html" class="hover:text-white transition-colors">Title-Tag-Checker</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="font-semibold mb-4">Blog</h3>
+                <ul class="space-y-2 text-gray-400 text-sm">
+                    <li><a href="../blog/" class="hover:text-white transition-colors">Alle Artikel</a></li>
+                    <li><a href="../blog/lokales-seo-kleine-unternehmen.html" class="hover:text-white transition-colors">Lokales SEO</a></li>
+                    <li><a href="../blog/was-ist-seo.html" class="hover:text-white transition-colors">Was ist SEO?</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="font-semibold mb-4">Unternehmen</h3>
+                <ul class="space-y-2 text-gray-400 text-sm">
+                    <li><a href="../impressum.html" class="hover:text-white transition-colors">Impressum</a></li>
+                    <li><a href="../datenschutz.html" class="hover:text-white transition-colors">Datenschutz</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto mt-8 pt-8 border-t border-white/10 text-center text-gray-500 text-sm">
+            © 2026 Thümmler AI GmbH · Potsdam · <a href="../impressum.html" class="hover:text-gray-300 transition-colors">Impressum</a>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        const GENERIC_ANCHORS = ['hier', 'mehr', 'weiterlesen', 'klicken', 'hier klicken', 'link', 'weiter', 'mehr erfahren', 'lesen', 'öffnen', 'seite', 'website', 'www', 'read more', 'click here', 'more', 'here', 'jetzt', 'anzeigen'];
+
+        function loadDemo() {
+            document.getElementById('domainInput').value = 'beispiel-handwerker.de';
+            document.getElementById('htmlInput').value = `<!DOCTYPE html>
+<html lang="de">
+<head>
+  <title>Maler Mustermann - Ihr Handwerker in Berlin</title>
+  <link rel="canonical" href="https://beispiel-handwerker.de/">
+</head>
+<body>
+  <nav>
+    <a href="/">Startseite</a>
+    <a href="/leistungen/">Leistungen</a>
+    <a href="/kontakt/">Kontakt</a>
+    <a href="/blog/">Blog</a>
+  </nav>
+  <main>
+    <h1>Maler Mustermann Berlin</h1>
+    <p>Wir sind Ihr <a href="/leistungen/innenarbeiten.html">Spezialist für Innenarbeiten</a> in Berlin.
+    Erfahren Sie mehr über unsere <a href="/leistungen/fassade.html">Fassadenmalerei</a> und
+    <a href="/leistungen/tapezieren.html">Tapezierarbeiten</a>.</p>
+    <p>Lesen Sie unsere <a href="/blog/tipps-wandfarbe.html">Tipps zur Wandfarbe</a> oder
+    <a href="https://www.google.com/maps" target="_blank" rel="noopener">finden Sie uns bei Google Maps</a>.</p>
+    <a href="/kontakt/" class="button">Hier anfragen</a>
+    <a href="/angebot/" class="button">Angebot anfordern</a>
+  </main>
+  <footer>
+    <a href="/impressum/">Impressum</a>
+    <a href="/datenschutz/">Datenschutz</a>
+    <a href="https://www.maler-innung-berlin.de" target="_blank">Maler-Innung Berlin</a>
+    <a href="https://www.instagram.com/malermustermann" target="_blank">Instagram</a>
+  </footer>
+</body>
+</html>`;
+        }
+
+        function clearAll() {
+            document.getElementById('htmlInput').value = '';
+            document.getElementById('domainInput').value = '';
+            document.getElementById('results').style.display = 'none';
+        }
+
+        function isInternal(href, domain) {
+            if (!href) return false;
+            if (href.startsWith('#') || href.startsWith('mailto:') || href.startsWith('tel:') || href.startsWith('javascript:')) return false;
+            if (!domain) {
+                // Without domain: relative links are internal
+                return !href.startsWith('http://') && !href.startsWith('https://') && !href.startsWith('//');
+            }
+            const cleanDomain = domain.replace(/^https?:\/\//, '').replace(/^www\./, '').replace(/\/$/, '').toLowerCase();
+            if (href.startsWith('/') || href.startsWith('./') || href.startsWith('../')) return true;
+            const hrefLower = href.toLowerCase().replace(/^https?:\/\//, '').replace(/^www\./, '');
+            return hrefLower.startsWith(cleanDomain);
+        }
+
+        function getAnchorText(el) {
+            const text = el.textContent.trim().replace(/\s+/g, ' ');
+            if (text) return text;
+            // Check for image alt
+            const img = el.querySelector('img');
+            if (img && img.alt) return '[Bild: ' + img.alt + ']';
+            if (img) return '[Bild ohne Alt-Text]';
+            return '[kein Ankertext]';
+        }
+
+        function isGeneric(text) {
+            return GENERIC_ANCHORS.includes(text.toLowerCase().trim());
+        }
+
+        function analyzeLinks() {
+            const html = document.getElementById('htmlInput').value.trim();
+            const domain = document.getElementById('domainInput').value.trim();
+
+            if (!html) {
+                alert('Bitte HTML-Quellcode eingeben.');
+                return;
+            }
+
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(html, 'text/html');
+            const allLinks = Array.from(doc.querySelectorAll('a[href]'));
+
+            const internal = [];
+            const external = [];
+            const issues = [];
+
+            // Categorize links
+            allLinks.forEach(link => {
+                const href = link.getAttribute('href') || '';
+                if (href.startsWith('mailto:') || href.startsWith('tel:') || href.startsWith('#') || href.startsWith('javascript:')) return;
+
+                const anchor = getAnchorText(link);
+                const rel = link.getAttribute('rel') || '';
+                const target = link.getAttribute('target') || '';
+
+                const linkObj = { href, anchor, rel, target };
+
+                if (isInternal(href, domain)) {
+                    internal.push(linkObj);
+                } else if (href.startsWith('http://') || href.startsWith('https://') || href.startsWith('//')) {
+                    external.push(linkObj);
+                } else if (!domain) {
+                    // No domain given: treat all relative as internal
+                    internal.push(linkObj);
+                }
+            });
+
+            // Issues
+            const noAnchor = [...internal, ...external].filter(l => l.anchor === '[kein Ankertext]' || l.anchor === '[Bild ohne Alt-Text]');
+            const genericInternal = internal.filter(l => isGeneric(l.anchor));
+            const externalNoRel = external.filter(l => !l.rel.includes('nofollow') && !l.rel.includes('noopener'));
+
+            // Duplicate internal links
+            const hrefCount = {};
+            internal.forEach(l => { hrefCount[l.href] = (hrefCount[l.href] || 0) + 1; });
+            const duplicates = Object.entries(hrefCount).filter(([_, c]) => c > 1);
+
+            if (internal.length === 0) {
+                issues.push({ type: 'error', text: 'Keine internen Links gefunden. Seiten ohne interne Links werden von Google schlechter bewertet.' });
+            } else if (internal.length < 3) {
+                issues.push({ type: 'warn', text: `Nur ${internal.length} interne Link(s) gefunden. Mindestens 3–5 interne Links pro Seite werden empfohlen.` });
+            }
+
+            if (noAnchor.length > 0) {
+                issues.push({ type: 'warn', text: `${noAnchor.length} Link(s) ohne beschreibenden Ankertext (leere Links oder Bilder ohne Alt-Text). Google nutzt Ankertexte für das Ranking der verlinkten Seite.` });
+            }
+
+            if (genericInternal.length > 0) {
+                const examples = genericInternal.slice(0, 3).map(l => `"${l.anchor}"`).join(', ');
+                issues.push({ type: 'warn', text: `${genericInternal.length} interne Link(s) mit generischem Ankertext: ${examples}. Nutze stattdessen beschreibende Ankertexte mit Keywords.` });
+            }
+
+            if (externalNoRel.length > 0) {
+                issues.push({ type: 'info', text: `${externalNoRel.length} externer Link(s) ohne rel="noopener". Für externe Links in neuem Tab wird rel="noopener noreferrer" empfohlen.` });
+            }
+
+            if (duplicates.length > 0) {
+                const ex = duplicates.slice(0, 2).map(([href, c]) => `"${href}" (${c}x)`).join(', ');
+                issues.push({ type: 'info', text: `Doppelte interne Links: ${ex}. Mehrfache Links zur selben URL verteilen PageRank ineffizient.` });
+            }
+
+            if (issues.length === 0 && internal.length >= 3) {
+                issues.push({ type: 'ok', text: 'Interne Verlinkung sieht gut aus! Alle internen Links haben Ankertexte und es gibt ausreichend viele Verlinkungen.' });
+            }
+
+            // Anchor text frequency
+            const anchorFreq = {};
+            [...internal, ...external].forEach(l => {
+                const key = l.anchor.toLowerCase();
+                anchorFreq[key] = (anchorFreq[key] || 0) + 1;
+            });
+            const topAnchors = Object.entries(anchorFreq).sort((a, b) => b[1] - a[1]).slice(0, 10);
+
+            // Render
+            renderStats(internal.length, external.length, allLinks.length, issues);
+            renderIssues(issues);
+            renderLinkList('internalList', internal, 'internalCount', true);
+            renderLinkList('externalList', external, 'externalCount', false);
+            renderAnchors(topAnchors);
+
+            document.getElementById('results').style.display = 'block';
+            document.getElementById('results').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        function renderStats(intCount, extCount, total, issues) {
+            const hasError = issues.some(i => i.type === 'error');
+            const hasWarn = issues.some(i => i.type === 'warn');
+            const statusColor = hasError ? 'red' : hasWarn ? 'yellow' : 'green';
+            const statusText = hasError ? 'Probleme gefunden' : hasWarn ? 'Hinweise' : 'Alles gut';
+
+            document.getElementById('statsGrid').innerHTML = `
+                <div class="bg-slate-800/50 border border-white/10 rounded-xl p-5 text-center">
+                    <div class="text-3xl font-extrabold text-white mb-1">${total}</div>
+                    <div class="text-sm text-gray-400">Links gesamt</div>
+                </div>
+                <div class="bg-slate-800/50 border border-blue-500/20 rounded-xl p-5 text-center">
+                    <div class="text-3xl font-extrabold text-blue-400 mb-1">${intCount}</div>
+                    <div class="text-sm text-gray-400">Interne Links</div>
+                </div>
+                <div class="bg-slate-800/50 border border-purple-500/20 rounded-xl p-5 text-center">
+                    <div class="text-3xl font-extrabold text-purple-400 mb-1">${extCount}</div>
+                    <div class="text-sm text-gray-400">Externe Links</div>
+                </div>
+                <div class="bg-slate-800/50 border border-${statusColor}-500/20 rounded-xl p-5 text-center">
+                    <div class="text-3xl font-extrabold text-${statusColor}-400 mb-1">${issues.length}</div>
+                    <div class="text-sm text-gray-400">${statusText}</div>
+                </div>
+            `;
+        }
+
+        function renderIssues(issues) {
+            const box = document.getElementById('issuesBox');
+            const list = document.getElementById('issuesList');
+            if (issues.length === 0) { box.classList.add('hidden'); return; }
+            box.classList.remove('hidden');
+
+            const icons = {
+                error: '<span class="text-red-400 font-bold">✗</span>',
+                warn: '<span class="text-yellow-400">⚠</span>',
+                info: '<span class="text-blue-400">ℹ</span>',
+                ok: '<span class="text-green-400">✓</span>'
+            };
+            list.innerHTML = issues.map(i => `
+                <li class="flex items-start gap-2">
+                    ${icons[i.type] || icons.info}
+                    <span>${i.text}</span>
+                </li>
+            `).join('');
+        }
+
+        function renderLinkList(containerId, links, countId, isInternal) {
+            const container = document.getElementById(containerId);
+            const countEl = document.getElementById(countId);
+            countEl.textContent = links.length;
+
+            if (links.length === 0) {
+                container.innerHTML = '<p class="text-gray-500 text-sm">Keine Links gefunden.</p>';
+                return;
+            }
+
+            container.innerHTML = links.slice(0, 50).map(l => {
+                const isGen = isGeneric(l.anchor);
+                const isEmpty = l.anchor === '[kein Ankertext]' || l.anchor === '[Bild ohne Alt-Text]';
+                const anchorClass = isEmpty ? 'text-red-400' : isGen ? 'text-yellow-400' : 'text-gray-300';
+
+                return `
+                <div class="link-row flex items-start gap-3 py-2 px-2 rounded-lg">
+                    <span class="flex-shrink-0 mt-0.5 result-badge ${isInternal ? 'badge-internal' : 'badge-external'} text-xs">
+                        ${isInternal ? '↩ intern' : '↗ extern'}
+                    </span>
+                    <div class="min-w-0 flex-1">
+                        <div class="${anchorClass} text-sm font-medium truncate">${escapeHtml(l.anchor)}</div>
+                        <div class="text-gray-500 text-xs truncate">${escapeHtml(l.href)}</div>
+                    </div>
+                    ${l.rel ? `<span class="flex-shrink-0 text-xs text-gray-600 hidden md:block">${escapeHtml(l.rel)}</span>` : ''}
+                </div>`;
+            }).join('');
+
+            if (links.length > 50) {
+                container.innerHTML += `<p class="text-gray-500 text-sm mt-2">... und ${links.length - 50} weitere Links (nur erste 50 angezeigt)</p>`;
+            }
+        }
+
+        function renderAnchors(anchors) {
+            const container = document.getElementById('anchorList');
+            if (anchors.length === 0) { container.innerHTML = '<p class="text-gray-500 text-sm">Keine Ankertexte gefunden.</p>'; return; }
+
+            const max = anchors[0][1];
+            container.innerHTML = anchors.map(([anchor, count]) => {
+                const pct = Math.round((count / max) * 100);
+                const isGen = isGeneric(anchor);
+                const barColor = isGen ? 'bg-yellow-500' : 'bg-blue-500';
+                const badge = isGen ? '<span class="result-badge badge-warn text-xs ml-2">generisch</span>' : '';
+                return `
+                <div>
+                    <div class="flex items-center gap-2 mb-1">
+                        <span class="text-sm text-gray-300 font-medium">${escapeHtml(anchor)}</span>
+                        ${badge}
+                        <span class="text-xs text-gray-500 ml-auto">${count}x</span>
+                    </div>
+                    <div class="h-2 bg-slate-700 rounded-full overflow-hidden">
+                        <div class="${barColor} h-full rounded-full transition-all" style="width: ${pct}%"></div>
+                    </div>
+                </div>`;
+            }).join('');
+        }
+
+        function escapeHtml(str) {
+            return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+        }
+    </script>
+</body>
+</html>
