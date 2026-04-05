@@ -5,8 +5,24 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Sun, 05 Apr 2026 18:55:50 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 05 Apr 2026 19:08:33 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Google Bewertungen bekommen: So sammelst du mehr Rezensionen (legal)</title>
+      <link>https://shift07.ai/blog/google-bewertungen-bekommen.html</link>
+      <guid>https://shift07.ai/blog/google-bewertungen-bekommen.html</guid>
+      <pubDate>Sun, 05 Apr 2026 19:08:20 +0000</pubDate>
+      <description>Mehr Google Bewertungen bekommen ohne Tricks: Bewährte Strategien für lokale Unternehmen, die legal funktionieren und dein Ranking nachhaltig verbessern.</description>
+      <category>Lokales SEO</category>
+    </item>
+    <item>
+      <title>Lokale Backlinks aufbauen: 8 Strategien für KMU</title>
+      <link>https://shift07.ai/blog/lokale-backlinks-aufbauen.html</link>
+      <guid>https://shift07.ai/blog/lokale-backlinks-aufbauen.html</guid>
+      <pubDate>Sun, 05 Apr 2026 19:07:49 +0000</pubDate>
+      <description>Lokale Backlinks aufbauen als kleines Unternehmen: 8 bewährte Strategien, die wirklich funktionieren – von Brancheneinträgen bis zu lokalen Kooperationen.</description>
+      <category>Lokales SEO</category>
+    </item>
     <item>
       <title>Google My Business optimieren: Anleitung für lokale Unternehmen 2026</title>
       <link>https://shift07.ai/blog/google-my-business-optimieren.html</link>
@@ -21,14 +37,6 @@
       <guid>https://shift07.ai/blog/nap-konsistenz-lokales-seo.html</guid>
       <pubDate>Sun, 05 Apr 2026 18:51:39 +0000</pubDate>
       <description>NAP-Konsistenz ist entscheidend für lokales SEO. Erfahre, warum einheitliche Unternehmensangaben dein Google-Ranking verbessern und wie du Inkonsistenzen aufspürst und behebst.</description>
-      <category>Lokales SEO</category>
-    </item>
-    <item>
-      <title>Google Bewertungen bekommen: So sammelst du mehr Rezensionen (legal)</title>
-      <link>https://shift07.ai/blog/google-bewertungen-bekommen.html</link>
-      <guid>https://shift07.ai/blog/google-bewertungen-bekommen.html</guid>
-      <pubDate>Sun, 05 Apr 2026 18:51:14 +0000</pubDate>
-      <description>Mehr Google Bewertungen bekommen ohne Tricks: Bewährte Strategien für lokale Unternehmen, die legal funktionieren und dein Ranking nachhaltig verbessern.</description>
       <category>Lokales SEO</category>
     </item>
     <item>
@@ -158,14 +166,6 @@
       <pubDate>Thu, 02 Apr 2026 13:36:04 +0000</pubDate>
       <description>Lokales SEO hilft kleinen Unternehmen, in der Google-Suche und auf Google Maps sichtbar zu werden. Lerne die wichtigsten Maßnahmen für dein lokales Ranking.</description>
       <category>Lokales SEO</category>
-    </item>
-    <item>
-      <title>HTTPS und SSL-Zertifikat: Warum deine Website verschlüsselt sein muss</title>
-      <link>https://shift07.ai/blog/https-ssl-zertifikat-website-sicherheit.html</link>
-      <guid>https://shift07.ai/blog/https-ssl-zertifikat-website-sicherheit.html</guid>
-      <pubDate>Thu, 02 Apr 2026 13:36:03 +0000</pubDate>
-      <description>Erfahre, warum HTTPS und ein SSL-Zertifikat für jede Website Pflicht sind. Wie du dein SSL-Zertifikat einrichtest, was es kostet und welche SEO-Vorteile es bringt.</description>
-      <category>Website-Sicherheit</category>
     </item>
   </channel>
 </rss>
