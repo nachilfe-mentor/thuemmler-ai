@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caching richtig einrichten: Browser-Cache & Server-Cache für schnellere Websites | Shift07 Blog</title>
+    <meta name="description" content="Caching richtig einrichten: So nutzt du Browser-Cache, Server-Cache und CDN für maximale Website-Geschwindigkeit und bessere Core Web Vitals.">
+    <meta name="author" content="Thümmler AI GmbH">
+    <link rel="icon" type="image/png" href="/logo.png">
+    <link rel="canonical" href="https://shift07.ai/blog/caching-website-einrichten.html">
+    <link rel="alternate" type="application/rss+xml" title="Shift07 Blog" href="https://shift07.ai/feed.xml">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Caching richtig einrichten: Browser-Cache & Server-Cache für schnellere Websites | Shift07 Blog">
+    <meta property="og:description" content="Caching richtig einrichten: So nutzt du Browser-Cache, Server-Cache und CDN für maximale Website-Geschwindigkeit und bessere Core Web Vitals.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://shift07.ai/blog/caching-website-einrichten.html">
+    <meta property="og:image" content="https://shift07.ai/blog/images/caching-website-einrichten.png">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="Shift07">
+    <meta property="article:published_time" content="2026-04-05T20:00:00+02:00">
+    <meta property="article:section" content="Performance SEO">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Caching richtig einrichten: Browser-Cache & Server-Cache">
+    <meta name="twitter:description" content="Caching richtig einrichten für maximale Website-Geschwindigkeit und bessere Core Web Vitals.">
+    <meta name="twitter:image" content="https://shift07.ai/blog/images/caching-website-einrichten.png">
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Caching richtig einrichten: Browser-Cache & Server-Cache für schnellere Websites",
+      "description": "Caching richtig einrichten: So nutzt du Browser-Cache, Server-Cache und CDN für maximale Website-Geschwindigkeit und bessere Core Web Vitals.",
+      "image": "https://shift07.ai/blog/images/caching-website-einrichten.png",
+      "datePublished": "2026-04-05T20:00:00+02:00",
+      "dateModified": "2026-04-05T20:00:00+02:00",
+      "author": {
+        "@type": "Organization",
+        "name": "Shift07",
+        "url": "https://shift07.ai"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Shift07",
+        "url": "https://shift07.ai",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://shift07.ai/assets/logo.png"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://shift07.ai/blog/caching-website-einrichten.html"
+      }
+    }
+    </script>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K1S1RXBDS8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K1S1RXBDS8');
+    </script>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8475857002943858" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: rgba(15, 23, 42, 0.5); }
+        ::-webkit-scrollbar-thumb { background: rgba(59, 130, 246, 0.5); border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: rgba(59, 130, 246, 0.7); }
+        html { scroll-behavior: smooth; }
+        .article-content h2 { font-size: 1.5rem; font-weight: 700; color: #fff; margin-top: 2.5rem; margin-bottom: 1rem; }
+        .article-content h3 { font-size: 1.25rem; font-weight: 600; color: #e2e8f0; margin-top: 2rem; margin-bottom: 0.75rem; }
+        .article-content p { color: #cbd5e1; line-height: 1.8; margin-bottom: 1.25rem; }
+        .article-content ul, .article-content ol { color: #cbd5e1; margin-bottom: 1.25rem; padding-left: 1.5rem; }
+        .article-content li { margin-bottom: 0.5rem; line-height: 1.7; }
+        .article-content ul li { list-style-type: disc; }
+        .article-content ol li { list-style-type: decimal; }
+        .article-content a { color: #60a5fa; text-decoration: underline; text-underline-offset: 2px; }
+        .article-content a:hover { color: #93bbfc; }
+        .article-content blockquote { border-left: 4px solid #3b82f6; padding-left: 1.25rem; margin: 1.5rem 0; color: #94a3b8; font-style: italic; }
+        .article-content code { background: rgba(59, 130, 246, 0.15); color: #93c5fd; padding: 0.15rem 0.4rem; border-radius: 0.25rem; font-size: 0.9em; }
+        .article-content pre { background: rgba(15, 23, 42, 0.8); border: 1px solid rgba(255,255,255,0.1); border-radius: 0.75rem; padding: 1.25rem; overflow-x: auto; margin-bottom: 1.5rem; }
+        .article-content pre code { background: none; padding: 0; color: #e2e8f0; }
+        .article-content strong { color: #f1f5f9; }
+        .cache-type { background: rgba(30, 41, 59, 0.8); border: 1px solid rgba(255,255,255,0.08); border-radius: 1rem; padding: 1.5rem; margin-bottom: 1.5rem; }
+        .tip-box { background: rgba(59, 130, 246, 0.08); border: 1px solid rgba(59, 130, 246, 0.25); border-radius: 0.75rem; padding: 1.25rem 1.5rem; margin: 1.5rem 0; }
+        .warning-box { background: rgba(245, 158, 11, 0.08); border: 1px solid rgba(245, 158, 11, 0.25); border-radius: 0.75rem; padding: 1.25rem 1.5rem; margin: 1.5rem 0; }
+        .checklist li { list-style: none !important; padding-left: 0 !important; display: flex; align-items: flex-start; gap: 0.5rem; }
+        .checklist li::before { content: "✓"; color: #34d399; font-weight: 700; flex-shrink: 0; }
+    </style>
+</head>
+<body class="bg-slate-900 text-white min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-slate-900/80 backdrop-blur-xl border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <a href="/" class="flex items-center gap-2">
+                    <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                    <span class="text-xl font-bold text-white">Shift07</span>
+                </a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="/" class="text-gray-300 hover:text-white transition-colors">SEO-Tool</a>
+                    <a href="/blog/" class="text-white font-medium border-b-2 border-blue-500 pb-0.5">Blog</a>
+                    <a href="/tools/" class="text-gray-300 hover:text-white transition-colors">Tools</a>
+                    <a href="/app/#/login" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-5 py-2 rounded-lg font-medium transition-all">Anmelden</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-gray-300 hover:text-white">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900/95 border-b border-white/10">
+            <div class="px-4 py-3 space-y-2">
+                <a href="/" class="block py-2 text-gray-300 hover:text-white">SEO-Tool</a>
+                <a href="/blog/" class="block py-2 text-white font-medium">Blog</a>
+                <a href="/tools/" class="block py-2 text-gray-300 hover:text-white">Tools</a>
+                <a href="/app/#/login" class="block py-2 text-blue-400 hover:text-blue-300">Anmelden</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Image -->
+    <section class="pt-16 relative">
+        <div class="h-[400px] bg-gradient-to-br from-orange-600 via-amber-700 to-yellow-800 relative overflow-hidden">
+            <div class="absolute inset-0 bg-black/40"></div>
+            <img src="/blog/images/caching-website-einrichten.png" alt="Caching für Websites richtig einrichten" class="absolute inset-0 w-full h-full object-cover opacity-30">
+            <div class="absolute inset-0 flex items-center justify-center">
+                <div class="text-center px-4 max-w-4xl">
+                    <span class="inline-block text-sm font-semibold px-4 py-1.5 bg-white/10 text-white/90 rounded-full mb-6">Performance SEO</span>
+                    <h1 class="text-3xl md:text-5xl font-extrabold text-white leading-tight">Caching richtig einrichten: Schnellere Websites durch Browser-Cache & Server-Cache</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Article Content -->
+    <section class="py-12 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col lg:flex-row gap-12">
+
+                <!-- Main Content -->
+                <article class="lg:w-2/3">
+                    <!-- Meta -->
+                    <div class="flex flex-wrap items-center gap-4 text-sm text-gray-400 mb-10 pb-6 border-b border-white/10">
+                        <div class="flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+                            Shift07 Team
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                            5. April 2026
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                            10 Min. Lesezeit
+                        </div>
+                        <span class="text-xs font-semibold px-3 py-1 bg-orange-500/20 text-orange-400 rounded-full">Performance SEO</span>
+                    </div>
+
+                    <!-- Article Body -->
+                    <div class="article-content">
+
+                        <img src="/blog/images/caching-website-einrichten.png" alt="Caching richtig einrichten für schnellere Websites und bessere Core Web Vitals" class="w-full rounded-2xl mb-8 shadow-2xl">
+
+                        <p>Wenn deine Website langsam lädt, verlierst du Besucher. Studien zeigen: <strong>53% der Nutzer verlassen eine Seite, wenn sie länger als 3 Sekunden zum Laden braucht</strong>. Und seit Google <a href="/blog/core-web-vitals-erklaert.html">Core Web Vitals</a> als Rankingfaktor eingeführt hat, kostet eine langsame Website nicht nur Besucher, sondern auch Suchmaschinen-Positionen.</p>
+
+                        <p>Eine der wirkungsvollsten Maßnahmen für mehr Speed ist <strong>Caching</strong> — und gleichzeitig eine der am häufigsten unterschätzten. Richtig eingerichtet kann Caching die Ladezeit deiner Website um 50–80% reduzieren, ohne dass du dein Hosting wechseln oder teures Code-Refactoring betreiben musst.</p>
+
+                        <p>In diesem Artikel erkläre ich dir, welche Arten von Caching es gibt, wie sie funktionieren, und wie du sie konkret auf deiner Website einrichtest — egal ob du WordPress, eine statische Website oder einen eigenen Server nutzt.</p>
+
+                        <h2>Was ist Caching und warum ist es so wichtig?</h2>
+
+                        <p>Caching bedeutet vereinfacht: Ergebnisse, die aufwändig zu berechnen oder herunterzuladen sind, werden zwischengespeichert — damit sie beim nächsten Abruf sofort verfügbar sind, ohne den Prozess zu wiederholen.</p>
+
+                        <p>Stell dir vor, du rufst eine WordPress-Seite auf. Ohne Cache muss der Server bei jedem Aufruf:</p>
+                        <ol>
+                            <li>PHP ausführen</li>
+                            <li>Die Datenbank abfragen</li>
+                            <li>Das HTML-Dokument zusammenbauen</li>
+                            <li>CSS, JavaScript und Bilder an den Browser senden</li>
+                        </ol>
+
+                        <p>Mit Cache wird das fertig generierte HTML direkt ausgeliefert — der Server überspringt PHP und Datenbank. Das ist dramatisch schneller.</p>
+
+                        <p>Für SEO ist Caching aus zwei Gründen wichtig: Erstens verbessert es direkt den LCP (Largest Contentful Paint) und TTFB (Time to First Byte) — beides Core Web Vitals. Zweitens ermöglicht ein schnelles Caching dem Google-Bot, mehr Seiten deiner Website in einem Crawl-Durchgang zu indexieren (besseres <a href="/blog/crawl-budget-optimieren.html">Crawl-Budget</a>).</p>
+
+                        <h2>Die 4 wichtigsten Cache-Typen im Überblick</h2>
+
+                        <div class="cache-type">
+                            <h3 style="margin-top: 0; color: #f97316;">1. Browser-Cache</h3>
+                            <p><strong>Was wird gecacht:</strong> Statische Ressourcen wie CSS, JavaScript, Bilder und Fonts direkt im Browser des Besuchers.</p>
+                            <p><strong>Wie es funktioniert:</strong> Der Server sendet HTTP-Header, die dem Browser sagen, wie lange eine Ressource lokal gespeichert werden soll. Beim zweiten Besuch lädt der Browser die Datei aus seinem eigenen Cache — null Netzwerklatenz.</p>
+                            <p><strong>Kontrolliert durch:</strong> HTTP-Header <code>Cache-Control</code>, <code>Expires</code>, <code>ETag</code>, <code>Last-Modified</code></p>
+                            <p><strong>Typische Dauer:</strong> Bilder: 1 Jahr | CSS/JS: 1 Woche bis 1 Jahr | HTML: 0 (immer aktuell) | Fonts: 1 Jahr</p>
+                        </div>
+
+                        <div class="cache-type">
+                            <h3 style="margin-top: 0; color: #f97316;">2. Server-Cache / Page-Cache</h3>
+                            <p><strong>Was wird gecacht:</strong> Fertig gerendertes HTML auf dem Server gespeichert.</p>
+                            <p><strong>Wie es funktioniert:</strong> Statt PHP + Datenbank bei jedem Request, wird die HTML-Datei direkt aus dem Dateisystem ausgeliefert. Für WordPress typischerweise 10–100× schneller.</p>
+                            <p><strong>Tools:</strong> WP Super Cache, W3 Total Cache, LiteSpeed Cache, Nginx FastCGI Cache, Varnish</p>
+                        </div>
+
+                        <div class="cache-type">
+                            <h3 style="margin-top: 0; color: #f97316;">3. CDN-Cache (Content Delivery Network)</h3>
+                            <p><strong>Was wird gecacht:</strong> Statische und teilweise dynamische Inhalte auf verteilten Servern weltweit.</p>
+                            <p><strong>Wie es funktioniert:</strong> Statt immer zum Ursprungs-Server zu fragen, wird der Inhalt vom nächstgelegenen CDN-Knoten ausgeliefert. Für deutsche Nutzer heißt das: Frankfurt oder Amsterdam statt z.B. Singapur.</p>
+                            <p><strong>Tools:</strong> Cloudflare (kostenloses Tier!), Bunny.net, AWS CloudFront, Fastly</p>
+                        </div>
+
+                        <div class="cache-type">
+                            <h3 style="margin-top: 0; color: #f97316;">4. Datenbank-Cache / Object-Cache</h3>
+                            <p><strong>Was wird gecacht:</strong> Ergebnisse häufiger Datenbankabfragen im RAM.</p>
+                            <p><strong>Wie es funktioniert:</strong> Redis oder Memcached speichern Abfrage-Ergebnisse im Arbeitsspeicher. Statt der Datenbank zu fragen, wird das gecachte Ergebnis in Millisekunden zurückgegeben.</p>
+                            <p><strong>Tools:</strong> Redis, Memcached (meist bei Managed WordPress oder VPS verfügbar)</p>
+                        </div>
+
+                        <h2>Browser-Cache einrichten: Die Cache-Control-Header</h2>
+
+                        <p>Browser-Caching wird über HTTP-Header gesteuert. Der wichtigste ist <code>Cache-Control</code>. Hier sind die relevantesten Direktiven:</p>
+
+                        <ul>
+                            <li><code>max-age=31536000</code> — Ressource 1 Jahr cachen (ideal für versionierte Assets)</li>
+                            <li><code>max-age=604800</code> — 1 Woche cachen</li>
+                            <li><code>no-cache</code> — Ressource nicht cachen (aber trotzdem validieren bei Revalidierung)</li>
+                            <li><code>no-store</code> — Gar nicht cachen (für sensible Daten)</li>
+                            <li><code>immutable</code> — Ressource verändert sich nie, nie revalidieren (ideal für versionierte Bundles)</li>
+                            <li><code>stale-while-revalidate=86400</code> — Veralteten Cache sofort ausliefern, im Hintergrund aktualisieren</li>
+                        </ul>
+
+                        <h3>Apache (.htaccess) — Caching einrichten</h3>
+
+                        <pre><code># Browser-Caching in Apache
+&lt;IfModule mod_expires.c&gt;
+  ExpiresActive On
+
+  # HTML: kurze Cache-Zeit (10 Minuten)
+  ExpiresByType text/html "access plus 10 minutes"
+
+  # CSS und JavaScript: 1 Woche
+  ExpiresByType text/css "access plus 1 week"
+  ExpiresByType application/javascript "access plus 1 week"
+  ExpiresByType text/javascript "access plus 1 week"
+
+  # Bilder: 1 Jahr
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/gif "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType image/x-icon "access plus 1 year"
+
+  # Fonts: 1 Jahr
+  ExpiresByType font/woff2 "access plus 1 year"
+  ExpiresByType font/woff "access plus 1 year"
+  ExpiresByType application/font-woff2 "access plus 1 year"
+&lt;/IfModule&gt;</code></pre>
+
+                        <h3>Nginx — Caching konfigurieren</h3>
+
+                        <pre><code># Browser-Caching in Nginx
+location ~* \.(css|js)$ {
+  expires 7d;
+  add_header Cache-Control "public, max-age=604800";
+}
+
+location ~* \.(jpg|jpeg|png|gif|webp|svg|ico)$ {
+  expires 1y;
+  add_header Cache-Control "public, max-age=31536000, immutable";
+}
+
+location ~* \.(woff|woff2|ttf|otf|eot)$ {
+  expires 1y;
+  add_header Cache-Control "public, max-age=31536000, immutable";
+}</code></pre>
+
+                        <div class="tip-box">
+                            <p><strong>Cache-Busting für CSS/JS:</strong> Wenn du CSS oder JavaScript mit langer Cache-Zeit auslieferst, aber eine aktualisierte Version pushen willst, funktioniert das über <strong>Dateinamens-Versionierung</strong>: Statt <code>style.css</code> wird <code>style.v2.css</code> oder <code>style.css?v=1234</code> geladen. WordPress macht das automatisch über den <code>wp_enqueue_style</code> Versions-Parameter.</p>
+                        </div>
+
+                        <h2>WordPress-Caching einrichten: Die besten Plugins</h2>
+
+                        <p>Für WordPress gibt es mehrere ausgezeichnete Caching-Plugins. Du brauchst nur eines davon:</p>
+
+                        <h3>Option 1: WP Super Cache (einfachste Lösung)</h3>
+                        <ol>
+                            <li>Plugin installieren und aktivieren</li>
+                            <li>Einstellungen → WP Super Cache → "Caching An (Empfohlen)" aktivieren</li>
+                            <li>"Einfach" Modus auswählen (für die meisten Websites ausreichend)</li>
+                            <li>"Cache aktualisieren" klicken</li>
+                        </ol>
+
+                        <h3>Option 2: LiteSpeed Cache (beste Performance)</h3>
+                        <p>Falls dein Hosting LiteSpeed-Server nutzt (z.B. Strato, Hetzner mit LiteSpeed), ist LiteSpeed Cache das leistungsstärkste Plugin. Es nutzt den Server-Cache direkt auf HTTP-Ebene — schneller als PHP-basierte Lösungen.</p>
+                        <ol>
+                            <li>Plugin installieren, "Cache aktivieren"</li>
+                            <li>Page Optimize: CSS/JS minifizieren und kombinieren aktivieren</li>
+                            <li>Image Lazy Load aktivieren</li>
+                        </ol>
+
+                        <h3>Option 3: W3 Total Cache (fortgeschritten)</h3>
+                        <p>Das komplexeste Plugin mit den meisten Optionen. Nur empfehlenswert, wenn du weißt was du tust — Fehlkonfigurationen können zu Darstellungsproblemen führen. Gut für Websites mit Redis/Memcached-Zugang.</p>
+
+                        <div class="warning-box">
+                            <p style="color: #fbbf24; font-weight: 600; margin-bottom: 0.5rem;">⚠️ Wichtig: Nie zwei Caching-Plugins gleichzeitig!</p>
+                            <p style="color: #94a3b8; margin: 0;">WP Super Cache + W3 Total Cache zusammen aktivieren führt zu Konflikten und Fehlern. Entscheide dich für eines.</p>
+                        </div>
+
+                        <h2>Cloudflare kostenlos nutzen — CDN + Cache in einem</h2>
+
+                        <p>Cloudflare ist eines der besten kostenlosen Tools zur Website-Beschleunigung überhaupt. Der kostenlose Plan bietet:</p>
+                        <ul>
+                            <li>CDN mit über 300 Standorten weltweit</li>
+                            <li>Automatisches Caching statischer Ressourcen</li>
+                            <li>HTTPS-Zertifikat kostenlos</li>
+                            <li>DDoS-Schutz</li>
+                            <li>Automatische Bildoptimierung (Polish)</li>
+                            <li>Minifizierung von HTML/CSS/JS</li>
+                        </ul>
+
+                        <h3>Cloudflare einrichten (Schritt für Schritt):</h3>
+                        <ol>
+                            <li>Account auf cloudflare.com erstellen (kostenlos)</li>
+                            <li>"Website hinzufügen" → deine Domain eingeben</li>
+                            <li>Kostenloser Plan wählen</li>
+                            <li>Cloudflare scannt deine DNS-Einträge automatisch</li>
+                            <li>Nameserver bei deinem Domain-Registrar auf die Cloudflare-Nameserver umstellen</li>
+                            <li>Warten (24–48 Stunden DNS-Propagation)</li>
+                            <li>Fertig — Cloudflare ist aktiv</li>
+                        </ol>
+
+                        <p><strong>Caching-Level einstellen:</strong> In Cloudflare → Caching → Konfiguration → "Standard" oder "Aggressive" wählen. Bei statischen Websites: "Alles cachen" über eine Page Rule.</p>
+
+                        <h2>Cache-Header mit den Chrome DevTools prüfen</h2>
+
+                        <p>So prüfst du, ob dein Caching funktioniert:</p>
+                        <ol>
+                            <li>Chrome öffnen → F12 (DevTools)</li>
+                            <li>Reiter "Network" wählen</li>
+                            <li>Seite neu laden (ohne Cache: Ctrl+Shift+R für harten Reload)</li>
+                            <li>Auf eine CSS- oder Bild-Datei klicken</li>
+                            <li>Reiter "Headers" → Response Headers prüfen</li>
+                        </ol>
+                        <p>Du solltest <code>Cache-Control: max-age=...</code> und/oder <code>Expires: ...</code> sehen. Wenn du nach dem zweiten Laden "(from disk cache)" oder "(from memory cache)" in der Size-Spalte siehst — Cache funktioniert.</p>
+
+                        <h2>Cache-Invalidierung: Wenn sich Inhalte ändern</h2>
+
+                        <p>Caching hat einen Nachteil: Wenn du Inhalte aktualisierst, bekommen Besucher noch die alte Version aus dem Cache. Die Lösung heißt <strong>Cache-Invalidierung</strong>.</p>
+
+                        <ul>
+                            <li><strong>WordPress-Plugins</strong> invalidieren den Cache automatisch, wenn du einen Beitrag veröffentlichst oder aktualisierst</li>
+                            <li><strong>Cloudflare</strong>: Im Dashboard unter "Caching → Cache löschen" einzelne URLs oder alle Dateien leeren</li>
+                            <li><strong>HTML kurz cachen</strong>: Setze die Cache-Zeit für HTML-Dokumente auf maximal 10–30 Minuten, dann werden Änderungen schnell sichtbar</li>
+                            <li><strong>Purge-Hooks</strong>: Bei Shopware, TYPO3 oder eigenen CMS gibt es oft automatische Purge-Funktionen bei Content-Änderungen</li>
+                        </ul>
+
+                        <h2>Was sollte man NICHT cachen?</h2>
+
+                        <p>Nicht alles darf gecacht werden — vor allem nicht:</p>
+                        <ul>
+                            <li>Eingeloggte Benutzer-Seiten (jeder Nutzer sieht personalisierten Inhalt)</li>
+                            <li>Warenkorb und Checkout-Seiten (E-Commerce)</li>
+                            <li>Admin-Bereiche (WordPress /wp-admin)</li>
+                            <li>Seiten mit dynamischen Formularen die CSRF-Tokens enthalten</li>
+                            <li>API-Antworten mit personalisierten Daten</li>
+                        </ul>
+                        <p>Caching-Plugins erkennen eingeloggte Nutzer automatisch und schalten Cache für diese ab.</p>
+
+                        <h2>Caching und Core Web Vitals: Der direkte Zusammenhang</h2>
+
+                        <p>Richtig eingerichtetes Caching wirkt direkt auf drei <a href="/blog/core-web-vitals-erklaert.html">Core Web Vitals</a>:</p>
+                        <ul>
+                            <li><strong>TTFB (Time to First Byte)</strong> — Server-Cache reduziert ihn drastisch, von oft 500–2000ms auf unter 100ms</li>
+                            <li><strong>LCP (Largest Contentful Paint)</strong> — Schnelleres TTFB + gecachte Bilder verbessern LCP direkt</li>
+                            <li><strong>CLS (Cumulative Layout Shift)</strong> — Indirekt: wenn Fonts und CSS schneller laden, gibt es weniger Layout-Verschiebungen</li>
+                        </ul>
+
+                        <p>Kombiniere Caching mit <a href="/blog/bilder-web-optimieren.html">optimierten Bildern</a> und gut verwalteten <a href="/blog/website-geschwindigkeit-verbessern.html">Ladezeiten</a> — das sind die drei stärksten Performance-Hebel für eine typische Website.</p>
+
+                        <h2>Checkliste: Caching auf deiner Website</h2>
+
+                        <div style="background: rgba(30, 41, 59, 0.8); border: 1px solid rgba(255,255,255,0.08); border-radius: 1rem; padding: 1.5rem; margin: 1.5rem 0;">
+                            <p style="color: #f1f5f9; font-weight: 600; margin-bottom: 1rem;">Browser-Cache</p>
+                            <ul class="checklist">
+                                <li>Cache-Control-Header für CSS/JS/Bilder konfiguriert</li>
+                                <li>Bilder und Fonts mit 1-Jahres-Ablauf gecacht</li>
+                                <li>HTML-Dokumente kurz oder gar nicht gecacht (max. 10 Min.)</li>
+                                <li>DevTools prüfen: "(from disk cache)" sichtbar beim zweiten Laden</li>
+                            </ul>
+                            <p style="color: #f1f5f9; font-weight: 600; margin: 1rem 0;">Server-Cache (WordPress)</p>
+                            <ul class="checklist">
+                                <li>Caching-Plugin installiert und aktiviert (WP Super Cache / LiteSpeed Cache)</li>
+                                <li>Nur eines — nie zwei Caching-Plugins gleichzeitig</li>
+                                <li>Admin-Bereich und Checkout vom Cache ausgenommen</li>
+                                <li>Cache-Invalidierung beim Veröffentlichen funktioniert</li>
+                            </ul>
+                            <p style="color: #f1f5f9; font-weight: 600; margin: 1rem 0;">CDN (Optional, aber empfohlen)</p>
+                            <ul class="checklist">
+                                <li>Cloudflare-Account erstellt und DNS umgestellt</li>
+                                <li>Caching-Level auf "Standard" oder höher gestellt</li>
+                                <li>HTTPS über Cloudflare aktiv (kostenlos)</li>
+                                <li>Minifizierung für HTML/CSS/JS aktiviert</li>
+                            </ul>
+                        </div>
+
+                        <h2>Fazit: Caching ist die schnellste Rendite im Performance-SEO</h2>
+
+                        <p>Von allen Performance-Maßnahmen hat <strong>Caching das beste Aufwand-Nutzen-Verhältnis</strong>. Einmal richtig eingerichtet, arbeitet es dauerhaft im Hintergrund und macht deine Website schneller — für jeden Besucher, bei jedem Seitenaufruf.</p>
+
+                        <p>Der einfachste Einstieg: Browser-Cache über <code>.htaccess</code> aktivieren + Cloudflare kostenlos einrichten. Das dauert weniger als eine Stunde und kann die Ladezeit deiner Website halbieren.</p>
+
+                        <p>Im nächsten Artikel dieser Performance-Reihe schauen wir uns <strong>Render-Blocking-Ressourcen</strong> an — also CSS und JavaScript, das den Browser daran hindert, die Seite anzuzeigen, bis es vollständig geladen ist. Zusammen mit Caching ist das der zweite große Performance-Hebel für bessere <a href="/blog/core-web-vitals-erklaert.html">Core Web Vitals</a>.</p>
+
+                    </div>
+
+                    <!-- Share / Back -->
+                    <div class="mt-12 pt-8 border-t border-white/10 flex items-center justify-between">
+                        <a href="/blog/" class="text-blue-400 hover:text-blue-300 flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+                            Zurück zum Blog
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Sidebar -->
+                <aside class="lg:w-1/3 space-y-8">
+                    <!-- CTA Box -->
+                    <div class="bg-gradient-to-br from-blue-600/20 to-indigo-600/20 border border-blue-500/30 rounded-2xl p-6 text-center">
+                        <h3 class="text-lg font-bold text-white mb-3">Kostenlose SEO-Analyse</h3>
+                        <p class="text-gray-400 text-sm mb-5">Finde heraus, wie gut deine Website für Suchmaschinen optimiert ist.</p>
+                        <a href="/" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-6 py-3 rounded-lg font-medium transition-all inline-block w-full">Jetzt testen</a>
+                    </div>
+
+                    <!-- Related Articles -->
+                    <div class="bg-slate-800/50 border border-white/10 rounded-2xl p-6">
+                        <h3 class="text-lg font-bold text-white mb-4">Performance SEO Cluster</h3>
+                        <div class="space-y-4">
+                            <a href="/blog/website-geschwindigkeit-verbessern.html" class="block group">
+                                <p class="text-sm text-gray-300 group-hover:text-blue-400 transition-colors font-medium">Website-Geschwindigkeit verbessern: 7 Tipps</p>
+                                <p class="text-xs text-gray-500 mt-1">Performance SEO</p>
+                            </a>
+                            <a href="/blog/core-web-vitals-erklaert.html" class="block group">
+                                <p class="text-sm text-gray-300 group-hover:text-blue-400 transition-colors font-medium">Core Web Vitals erklärt: LCP, CLS, INP</p>
+                                <p class="text-xs text-gray-500 mt-1">Performance SEO</p>
+                            </a>
+                            <a href="/blog/bilder-web-optimieren.html" class="block group">
+                                <p class="text-sm text-gray-300 group-hover:text-blue-400 transition-colors font-medium">Bilder für das Web optimieren: WebP, Lazy Loading</p>
+                                <p class="text-xs text-gray-500 mt-1">Performance SEO</p>
+                            </a>
+                            <a href="/blog/crawl-budget-optimieren.html" class="block group">
+                                <p class="text-sm text-gray-300 group-hover:text-blue-400 transition-colors font-medium">Crawl-Budget optimieren</p>
+                                <p class="text-xs text-gray-500 mt-1">Technisches SEO</p>
+                            </a>
+                        </div>
+                    </div>
+                </aside>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer CTA -->
+    <section class="py-16 px-4 bg-gradient-to-r from-blue-900/30 to-indigo-900/30 border-t border-b border-white/5">
+        <div class="max-w-3xl mx-auto text-center">
+            <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">Teste deine Website jetzt kostenlos</h2>
+            <p class="text-gray-400 mb-8">Erhalte eine vollständige SEO-Analyse mit konkreten Verbesserungsvorschlägen.</p>
+            <form action="/" method="get" class="flex flex-col sm:flex-row gap-3 max-w-xl mx-auto">
+                <input type="url" placeholder="https://deine-website.de" class="flex-1 bg-slate-800 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-blue-500">
+                <a href="/" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-8 py-3 rounded-lg font-medium transition-all whitespace-nowrap">Analyse starten</a>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/10 bg-slate-900/50 py-12 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="flex items-center gap-2">
+                    <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                    <span class="text-lg font-bold text-white">Shift07</span>
+                </div>
+                <div class="flex items-center space-x-6 text-sm text-gray-400">
+                    <a href="/impressum.html" class="hover:text-white transition-colors">Impressum</a>
+                    <a href="/datenschutz.html" class="hover:text-white transition-colors">Datenschutz</a>
+                    <a href="/agb.html" class="hover:text-white transition-colors">AGB</a>
+                </div>
+                <p class="text-sm text-gray-500">&copy; 2026 Thümmler AI GmbH</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
