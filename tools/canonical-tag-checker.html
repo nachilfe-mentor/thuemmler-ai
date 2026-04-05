@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K1S1RXBDS8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K1S1RXBDS8');
+    </script>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8475857002943858" crossorigin="anonymous"></script>
+    <title>Canonical-Tag-Checker - Canonical URLs prüfen | Shift07</title>
+    <meta name="description" content="Canonical-Tag-Checker: Prüfe kostenlos ob deine Webseite korrekte rel=canonical Tags hat. Erkenne fehlende, doppelte oder falsche Canonical-URLs sofort.">
+    <meta name="keywords" content="canonical tag checker, canonical url prüfen, rel canonical, canonical tag seo, duplicate content">
+    <meta name="author" content="Thümmler AI GmbH">
+    <link rel="icon" type="image/png" href="/logo.png">
+    <link rel="canonical" href="https://shift07.ai/tools/canonical-tag-checker.html">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Canonical-Tag-Checker - Canonical URLs prüfen">
+    <meta property="og:description" content="Prüfe kostenlos ob deine Webseite korrekte rel=canonical Tags hat. Erkenne fehlende, doppelte oder falsche Canonical-URLs sofort.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://shift07.ai/tools/canonical-tag-checker.html">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="Shift07">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Canonical-Tag-Checker - Canonical URLs prüfen">
+    <meta name="twitter:description" content="Prüfe kostenlos ob deine Webseite korrekte rel=canonical Tags hat.">
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Canonical-Tag-Checker",
+      "description": "Prüfe kostenlos ob deine Webseite korrekte rel=canonical Tags hat. Erkenne fehlende, doppelte oder falsche Canonical-URLs sofort.",
+      "url": "https://shift07.ai/tools/canonical-tag-checker.html",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR"
+      },
+      "provider": {
+        "@type": "Organization",
+        "name": "Thümmler AI GmbH",
+        "url": "https://shift07.ai"
+      }
+    }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: rgba(15, 23, 42, 0.5); }
+        ::-webkit-scrollbar-thumb { background: rgba(59, 130, 246, 0.5); border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: rgba(59, 130, 246, 0.7); }
+        html { scroll-behavior: smooth; }
+        .glass {
+            background: rgba(255, 255, 255, 0.06);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .status-ok { background: rgba(34,197,94,0.1); border-color: rgba(34,197,94,0.3); }
+        .status-warn { background: rgba(245,158,11,0.1); border-color: rgba(245,158,11,0.3); }
+        .status-error { background: rgba(239,68,68,0.1); border-color: rgba(239,68,68,0.3); }
+        .check-item { display: flex; align-items: flex-start; gap: 0.75rem; padding: 0.75rem 1rem; border-radius: 0.5rem; margin-bottom: 0.5rem; border: 1px solid; }
+        textarea { resize: vertical; }
+    </style>
+</head>
+<body class="antialiased">
+    <div class="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
+        <!-- Navigation -->
+        <nav class="bg-black/20 backdrop-blur-md border-b border-white/10">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center h-16">
+                    <a href="/" class="flex items-center gap-2">
+                        <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                        <span class="text-xl font-bold text-white">Shift07</span>
+                    </a>
+                    <div class="hidden md:flex items-baseline space-x-4">
+                        <a href="/" class="text-white hover:text-blue-300 px-3 py-2 text-sm font-medium transition-colors">SEO-Tool</a>
+                        <a href="/blog/" class="text-white hover:text-blue-300 px-3 py-2 text-sm font-medium transition-colors">Blog</a>
+                        <a href="/tools/" class="text-blue-300 px-3 py-2 text-sm font-medium">Tools</a>
+                        <a href="/app/#/login" class="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:from-blue-600 hover:to-purple-700 transition-all">Anmelden</a>
+                    </div>
+                    <button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="md:hidden text-white">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                    </button>
+                </div>
+                <div id="mobile-menu" class="hidden md:hidden pb-4">
+                    <a href="/" class="block text-white hover:text-blue-300 px-3 py-2 text-sm font-medium">SEO-Tool</a>
+                    <a href="/blog/" class="block text-white hover:text-blue-300 px-3 py-2 text-sm font-medium">Blog</a>
+                    <a href="/tools/" class="block text-blue-300 px-3 py-2 text-sm font-medium">Tools</a>
+                    <a href="/app/#/login" class="block text-white hover:text-blue-300 px-3 py-2 text-sm font-medium">Anmelden</a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero -->
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-6 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">
+                <span class="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Canonical-Tag-Checker</span>
+            </h1>
+            <p class="text-xl text-blue-200/80 max-w-2xl mx-auto">Prüfe den HTML-Quellcode deiner Seite auf korrekte <code class="bg-white/10 px-2 py-0.5 rounded text-sm">rel="canonical"</code> Tags — kostenlos und ohne Installation.</p>
+        </section>
+
+        <!-- Main Tool -->
+        <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+
+            <!-- Input -->
+            <div class="glass rounded-xl p-6 md:p-8 mb-6">
+                <div class="flex items-center justify-between mb-4">
+                    <h2 class="text-xl font-semibold text-white">HTML-Quellcode einfügen</h2>
+                    <button id="demoBtn" class="text-sm text-blue-400 hover:text-blue-300 transition-colors flex items-center gap-1">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                        Demo laden
+                    </button>
+                </div>
+                <p class="text-blue-200/60 text-sm mb-4">Öffne den Quellcode deiner Seite (Strg+U im Browser), kopiere den <code class="bg-white/10 px-1 rounded">&lt;head&gt;</code>-Bereich und füge ihn hier ein.</p>
+                <textarea
+                    id="htmlInput"
+                    class="w-full h-48 bg-black/30 border border-white/10 rounded-lg p-4 text-white/90 text-sm font-mono placeholder-white/30 focus:outline-none focus:border-blue-500 transition-colors"
+                    placeholder="&lt;!DOCTYPE html&gt;&#10;&lt;html&gt;&#10;&lt;head&gt;&#10;  &lt;link rel=&quot;canonical&quot; href=&quot;https://example.de/seite/&quot;&gt;&#10;  ...&#10;&lt;/head&gt;&#10;&lt;body&gt;..."></textarea>
+
+                <div class="mt-4 flex flex-col sm:flex-row gap-3">
+                    <input
+                        type="url"
+                        id="pageUrlInput"
+                        class="flex-1 bg-black/30 border border-white/10 rounded-lg px-4 py-2.5 text-white/90 text-sm placeholder-white/30 focus:outline-none focus:border-blue-500 transition-colors"
+                        placeholder="Aktuelle Seiten-URL (optional, z.B. https://example.de/seite/)">
+                    <button id="checkBtn" class="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-2.5 rounded-lg text-sm font-semibold hover:from-blue-600 hover:to-purple-700 transition-all flex items-center justify-center gap-2">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                        Canonical prüfen
+                    </button>
+                </div>
+            </div>
+
+            <!-- Results -->
+            <div id="results" class="hidden">
+
+                <!-- Overall Status -->
+                <div id="overallStatus" class="glass rounded-xl p-6 mb-6 border-2">
+                    <div class="flex items-center gap-4">
+                        <div id="statusIcon" class="text-4xl"></div>
+                        <div>
+                            <h3 id="statusTitle" class="text-xl font-bold text-white"></h3>
+                            <p id="statusText" class="text-white/70 text-sm mt-1"></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Found Canonicals -->
+                <div id="canonicalFound" class="glass rounded-xl p-6 mb-6 hidden">
+                    <h3 class="text-lg font-semibold text-white mb-4">Gefundene Canonical-Tags</h3>
+                    <div id="canonicalList" class="space-y-3"></div>
+                </div>
+
+                <!-- Checks -->
+                <div class="glass rounded-xl p-6 mb-6">
+                    <h3 class="text-lg font-semibold text-white mb-4">Analyse-Ergebnisse</h3>
+                    <div id="checksList" class="space-y-2"></div>
+                </div>
+
+                <!-- Recommendation -->
+                <div id="recommendationBox" class="glass rounded-xl p-6 mb-6 border border-blue-500/30 hidden">
+                    <h3 class="text-lg font-semibold text-white mb-3">Empfehlung</h3>
+                    <div id="recommendationContent" class="text-white/80 text-sm leading-relaxed"></div>
+                </div>
+
+            </div>
+
+            <!-- Cross-sell -->
+            <div class="glass rounded-xl p-6 border border-blue-500/30">
+                <div class="flex items-start gap-4">
+                    <div class="bg-blue-500/20 rounded-lg p-3 flex-shrink-0">
+                        <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                    </div>
+                    <div>
+                        <h3 class="text-white font-semibold mb-1">Vollständige SEO-Analyse für deine Website</h3>
+                        <p class="text-blue-200/70 text-sm mb-3">Shift07 prüft Canonical-Tags, Meta-Tags, Ladezeiten, Structured Data und 50+ weitere SEO-Faktoren — automatisch und kostenlos.</p>
+                        <a href="/" class="inline-flex items-center text-blue-400 hover:text-blue-300 text-sm font-medium transition-colors">
+                            Jetzt kostenlos mit Shift07 prüfen
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Info Section -->
+            <div class="glass rounded-xl p-6 md:p-8 mt-8">
+                <h2 class="text-2xl font-bold text-white mb-6">Was ist ein Canonical-Tag?</h2>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-white/5 rounded-xl p-5">
+                        <div class="text-2xl mb-3">🔗</div>
+                        <h3 class="text-white font-semibold mb-2">Was er tut</h3>
+                        <p class="text-white/70 text-sm">Der <code class="bg-white/10 px-1 rounded">rel="canonical"</code> Tag teilt Google mit, welche URL die "offizielle" Version einer Seite ist. Bei Duplicate Content verhindert er, dass Google die falsche Seite indexiert.</p>
+                    </div>
+                    <div class="bg-white/5 rounded-xl p-5">
+                        <div class="text-2xl mb-3">📋</div>
+                        <h3 class="text-white font-semibold mb-2">Korrektes Format</h3>
+                        <p class="text-white/70 text-sm">Muss im <code class="bg-white/10 px-1 rounded">&lt;head&gt;</code> stehen, absolute URL verwenden (mit https://), nur einmal pro Seite vorhanden sein.</p>
+                        <code class="block mt-2 text-xs bg-black/30 rounded p-2 text-blue-300">&lt;link rel="canonical" href="https://example.de/seite/"&gt;</code>
+                    </div>
+                    <div class="bg-white/5 rounded-xl p-5">
+                        <div class="text-2xl mb-3">⚠️</div>
+                        <h3 class="text-white font-semibold mb-2">Typische Fehler</h3>
+                        <ul class="text-white/70 text-sm space-y-1">
+                            <li>• Kein Canonical-Tag vorhanden</li>
+                            <li>• Mehrere Canonical-Tags pro Seite</li>
+                            <li>• Relative statt absolute URL</li>
+                            <li>• Canonical zeigt auf andere Seite (Cross-Canonical)</li>
+                            <li>• HTTP statt HTTPS im Canonical</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white/5 rounded-xl p-5">
+                        <div class="text-2xl mb-3">✅</div>
+                        <h3 class="text-white font-semibold mb-2">Best Practices</h3>
+                        <ul class="text-white/70 text-sm space-y-1">
+                            <li>• Immer HTTPS verwenden</li>
+                            <li>• Trailing Slash konsistent setzen</li>
+                            <li>• Auf jeder Seite einen Self-Canonical setzen</li>
+                            <li>• Bei Duplikaten auf die kanonische Version verweisen</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="mt-6 pt-6 border-t border-white/10">
+                    <p class="text-white/60 text-sm">Mehr über Canonical-Tags erfahren: <a href="/blog/canonical-tags-seo.html" class="text-blue-400 hover:text-blue-300">Canonical-Tags erklärt: Warum sie wichtig sind und wie du sie richtig einsetzt</a></p>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-black/30 backdrop-blur-md border-t border-white/10">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <div class="text-white/60 mb-4 md:mb-0 text-sm">
+                        &copy; 2026 Thümmler AI GmbH. Alle Rechte vorbehalten.
+                    </div>
+                    <div class="flex space-x-6">
+                        <a href="/impressum.html" class="text-gray-300 hover:text-white transition-colors text-sm">Impressum</a>
+                        <a href="/datenschutz.html" class="text-gray-300 hover:text-white transition-colors text-sm">Datenschutz</a>
+                        <a href="/agb.html" class="text-gray-300 hover:text-white transition-colors text-sm">AGB</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        const DEMO_HTML = `<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beispiel-Seite | Meine Website</title>
+    <meta name="description" content="Beschreibung der Seite.">
+    <link rel="canonical" href="https://example.de/beispiel-seite/">
+</head>
+<body>
+<h1>Hallo Welt</h1>
+</body>
+</html>`;
+
+        document.getElementById('demoBtn').addEventListener('click', function() {
+            document.getElementById('htmlInput').value = DEMO_HTML;
+            document.getElementById('pageUrlInput').value = 'https://example.de/beispiel-seite/';
+        });
+
+        document.getElementById('checkBtn').addEventListener('click', checkCanonical);
+        document.getElementById('htmlInput').addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' && e.ctrlKey) checkCanonical();
+        });
+
+        function checkCanonical() {
+            const html = document.getElementById('htmlInput').value.trim();
+            const pageUrl = document.getElementById('pageUrlInput').value.trim();
+
+            if (!html) {
+                alert('Bitte füge zuerst HTML-Code ein.');
+                return;
+            }
+
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(html, 'text/html');
+
+            // Find all canonical links
+            const canonicalLinks = doc.querySelectorAll('link[rel="canonical"]');
+            const canonicalCount = canonicalLinks.length;
+            const canonicalUrls = Array.from(canonicalLinks).map(el => ({
+                href: el.getAttribute('href') || '',
+                fullTag: el.outerHTML
+            }));
+
+            // Also check for canonical in raw HTML (case-insensitive) since DOMParser might normalize
+            const rawCanonicalMatches = html.match(/rel=["']canonical["'][^>]*href=["']([^"']+)["']|href=["']([^"']+)["'][^>]*rel=["']canonical["']/gi) || [];
+            const rawCanonicalUrls = rawCanonicalMatches.map(m => {
+                const hrefMatch = m.match(/href=["']([^"']+)["']/i);
+                return hrefMatch ? hrefMatch[1] : '';
+            }).filter(Boolean);
+
+            // Merge results
+            const allCanonicalUrls = [...new Set([...canonicalUrls.map(c => c.href), ...rawCanonicalUrls])].filter(Boolean);
+            const totalCount = Math.max(canonicalCount, allCanonicalUrls.length);
+
+            runChecks(allCanonicalUrls, totalCount, pageUrl, html);
+        }
+
+        function runChecks(canonicalUrls, count, pageUrl, html) {
+            const checks = [];
+            let score = 0;
+            let maxScore = 0;
+            let recommendations = [];
+
+            // Check 1: Canonical vorhanden
+            maxScore += 30;
+            if (count === 0) {
+                checks.push({ status: 'error', title: 'Kein Canonical-Tag gefunden', desc: 'Diese Seite hat keinen <link rel="canonical"> Tag. Google kann dann selbst entscheiden, welche URL als kanonisch gilt — oft ungünstig.' });
+                recommendations.push('Füge einen Canonical-Tag im &lt;head&gt; ein: <code>&lt;link rel="canonical" href="https://deine-domain.de/seite/"&gt;</code>');
+            } else if (count === 1) {
+                checks.push({ status: 'ok', title: 'Genau ein Canonical-Tag vorhanden', desc: 'Gut — die Seite hat genau einen Canonical-Tag.' });
+                score += 30;
+            } else {
+                checks.push({ status: 'error', title: `${count} Canonical-Tags gefunden (zu viele!)`, desc: 'Mehrere Canonical-Tags auf einer Seite verwirren Google. Nur einer davon wird berücksichtigt, und welcher das ist, ist nicht vorhersagbar.' });
+                recommendations.push('Entferne alle Canonical-Tags bis auf einen. Behalte nur den Tag, der auf die korrekte URL zeigt.');
+            }
+
+            if (count > 0 && canonicalUrls.length > 0) {
+                const canonicalUrl = canonicalUrls[0];
+
+                // Check 2: Absolute URL
+                maxScore += 20;
+                if (canonicalUrl.startsWith('http://') || canonicalUrl.startsWith('https://')) {
+                    checks.push({ status: 'ok', title: 'Absolute URL verwendet', desc: `Der Canonical-Tag enthält eine absolute URL: ${escapeHtml(canonicalUrl)}` });
+                    score += 20;
+                } else if (canonicalUrl.startsWith('/')) {
+                    checks.push({ status: 'warn', title: 'Relative URL im Canonical-Tag', desc: `Canonical-Tags sollten absolute URLs enthalten. Gefunden: ${escapeHtml(canonicalUrl)}` });
+                    recommendations.push(`Ändere den Canonical-Tag von "${escapeHtml(canonicalUrl)}" auf eine absolute URL mit Domain und Protokoll.`);
+                    score += 5;
+                } else {
+                    checks.push({ status: 'error', title: 'Ungültige URL im Canonical-Tag', desc: `Die URL "${escapeHtml(canonicalUrl)}" ist weder absolut noch ein relativer Pfad.` });
+                    recommendations.push('Verwende eine vollständige absolute URL im Canonical-Tag (beginnt mit https://).');
+                }
+
+                // Check 3: HTTPS
+                maxScore += 20;
+                if (canonicalUrl.startsWith('https://')) {
+                    checks.push({ status: 'ok', title: 'HTTPS im Canonical-Tag', desc: 'Der Canonical-Tag verwendet HTTPS — korrekt für sichere Websites.' });
+                    score += 20;
+                } else if (canonicalUrl.startsWith('http://')) {
+                    checks.push({ status: 'warn', title: 'HTTP statt HTTPS im Canonical-Tag', desc: `Der Canonical-Tag zeigt auf eine HTTP-URL: ${escapeHtml(canonicalUrl)}` });
+                    recommendations.push('Ändere das Protokoll im Canonical-Tag von http:// auf https://, falls deine Website HTTPS unterstützt.');
+                    score += 5;
+                }
+
+                // Check 4: Self-referential (wenn pageUrl angegeben)
+                if (pageUrl) {
+                    maxScore += 20;
+                    const normalizedPageUrl = normalizeUrl(pageUrl);
+                    const normalizedCanonical = normalizeUrl(canonicalUrl);
+
+                    if (normalizedPageUrl === normalizedCanonical) {
+                        checks.push({ status: 'ok', title: 'Self-Canonical korrekt', desc: 'Der Canonical-Tag zeigt auf diese Seite selbst — das ist für eindeutige Seiten die korrekte Einstellung.' });
+                        score += 20;
+                    } else if (isSameDomain(pageUrl, canonicalUrl)) {
+                        checks.push({ status: 'warn', title: 'Cross-Canonical auf gleicher Domain', desc: `Canonical zeigt auf ${escapeHtml(canonicalUrl)}, aber die aktuelle Seite ist ${escapeHtml(pageUrl)}. Ist das beabsichtigt (Duplicate Content)?` });
+                        recommendations.push('Prüfe ob diese Seite bewusst auf eine andere URL verweist (z.B. wegen Duplicate Content) oder ob es sich um einen Fehler handelt.');
+                        score += 10;
+                    } else if (canonicalUrl.startsWith('http')) {
+                        checks.push({ status: 'error', title: 'Canonical zeigt auf andere Domain', desc: `Canonical zeigt auf ${escapeHtml(canonicalUrl)}, aber die Seite ist auf ${escapeHtml(pageUrl)}. Das ist ein Cross-Domain-Canonical — nur sinnvoll bei syndizierten Inhalten.` });
+                        recommendations.push('Prüfe ob der Canonical-Tag auf die richtige Domain zeigt. Ein Cross-Domain-Canonical überträgt SEO-Wert an die andere Domain.');
+                    }
+                } else {
+                    checks.push({ status: 'ok', title: 'Canonical-URL vorhanden', desc: `Canonical-URL: ${escapeHtml(canonicalUrl)} — Gib die Seiten-URL ein, um den Self-Canonical-Check durchzuführen.` });
+                }
+
+                // Check 5: Trailing slash konsistenz
+                maxScore += 10;
+                if (canonicalUrl.includes('?') || canonicalUrl.includes('#')) {
+                    checks.push({ status: 'warn', title: 'URL-Parameter oder Fragment im Canonical', desc: `Der Canonical enthält ${canonicalUrl.includes('?') ? 'Query-Parameter' : 'Fragment-Identifier'}. Canonical-URLs sollten clean sein.` });
+                    recommendations.push('Entferne URL-Parameter (? ...) und Fragment-Identifier (# ...) aus dem Canonical-Tag, außer sie sind Teil der kanonischen URL.');
+                } else {
+                    checks.push({ status: 'ok', title: 'Canonical-URL ist sauber', desc: 'Keine URL-Parameter oder Fragment-Identifier im Canonical-Tag gefunden.' });
+                    score += 10;
+                }
+            }
+
+            // Render
+            renderResults(canonicalUrls, count, score, maxScore, checks, recommendations);
+        }
+
+        function normalizeUrl(url) {
+            try {
+                const u = new URL(url);
+                // Remove trailing slash, lowercase host
+                let path = u.pathname.replace(/\/$/, '') || '/';
+                return (u.protocol + '//' + u.host.toLowerCase() + path).toLowerCase();
+            } catch (e) {
+                return url.toLowerCase().replace(/\/$/, '');
+            }
+        }
+
+        function isSameDomain(url1, url2) {
+            try {
+                return new URL(url1).host === new URL(url2).host;
+            } catch (e) {
+                return false;
+            }
+        }
+
+        function escapeHtml(str) {
+            return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+        }
+
+        function renderResults(canonicalUrls, count, score, maxScore, checks, recommendations) {
+            document.getElementById('results').classList.remove('hidden');
+            document.getElementById('results').scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+            // Overall status
+            const pct = maxScore > 0 ? Math.round((score / maxScore) * 100) : 0;
+            const overallEl = document.getElementById('overallStatus');
+            const iconEl = document.getElementById('statusIcon');
+            const titleEl = document.getElementById('statusTitle');
+            const textEl = document.getElementById('statusText');
+
+            if (pct >= 80) {
+                overallEl.className = 'glass rounded-xl p-6 mb-6 border-2 status-ok';
+                iconEl.textContent = '✅';
+                titleEl.textContent = 'Canonical-Tag korrekt konfiguriert';
+                textEl.textContent = `Score: ${pct}% — Dein Canonical-Tag ist gut eingerichtet. Google weiß, welche URL als kanonisch gilt.`;
+            } else if (pct >= 50) {
+                overallEl.className = 'glass rounded-xl p-6 mb-6 border-2 status-warn';
+                iconEl.textContent = '⚠️';
+                titleEl.textContent = 'Canonical-Tag vorhanden, aber mit Problemen';
+                textEl.textContent = `Score: ${pct}% — Es gibt Verbesserungsbedarf. Sieh dir die Empfehlungen unten an.`;
+            } else {
+                overallEl.className = 'glass rounded-xl p-6 mb-6 border-2 status-error';
+                iconEl.textContent = '❌';
+                titleEl.textContent = count === 0 ? 'Kein Canonical-Tag gefunden' : 'Canonical-Tag fehlerhaft konfiguriert';
+                textEl.textContent = `Score: ${pct}% — ${count === 0 ? 'Ohne Canonical-Tag kann Google eine beliebige URL als kanonisch wählen.' : 'Der Canonical-Tag hat kritische Fehler, die das Ranking beeinflussen können.'}`;
+            }
+
+            // Found canonicals
+            if (canonicalUrls.length > 0) {
+                document.getElementById('canonicalFound').classList.remove('hidden');
+                const listEl = document.getElementById('canonicalList');
+                listEl.innerHTML = canonicalUrls.map((url, i) => `
+                    <div class="flex items-start gap-3 bg-white/5 rounded-lg p-3">
+                        <span class="text-xs font-bold text-white/40 mt-0.5">#${i+1}</span>
+                        <div class="flex-1 min-w-0">
+                            <code class="text-blue-300 text-sm break-all">${escapeHtml(url)}</code>
+                        </div>
+                        <a href="${escapeHtml(url)}" target="_blank" rel="noopener" class="text-blue-400 hover:text-blue-300 flex-shrink-0">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                        </a>
+                    </div>
+                `).join('');
+            } else {
+                document.getElementById('canonicalFound').classList.add('hidden');
+            }
+
+            // Checks
+            const checksEl = document.getElementById('checksList');
+            checksEl.innerHTML = checks.map(c => {
+                const cls = c.status === 'ok' ? 'status-ok' : c.status === 'warn' ? 'status-warn' : 'status-error';
+                const icon = c.status === 'ok' ? '✓' : c.status === 'warn' ? '!' : '✗';
+                const iconColor = c.status === 'ok' ? 'text-green-400' : c.status === 'warn' ? 'text-amber-400' : 'text-red-400';
+                return `<div class="check-item ${cls}">
+                    <span class="${iconColor} font-bold text-lg w-5 text-center flex-shrink-0">${icon}</span>
+                    <div>
+                        <p class="text-white font-medium text-sm">${c.title}</p>
+                        <p class="text-white/60 text-xs mt-0.5">${c.desc}</p>
+                    </div>
+                </div>`;
+            }).join('');
+
+            // Recommendations
+            if (recommendations.length > 0) {
+                document.getElementById('recommendationBox').classList.remove('hidden');
+                document.getElementById('recommendationContent').innerHTML = '<ul class="space-y-2">' +
+                    recommendations.map(r => `<li class="flex items-start gap-2"><span class="text-blue-400 mt-0.5">→</span><span>${r}</span></li>`).join('') +
+                    '</ul>';
+            } else {
+                document.getElementById('recommendationBox').classList.add('hidden');
+            }
+        }
+    </script>
+</body>
+</html>
