@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K1S1RXBDS8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K1S1RXBDS8');
+    </script>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8475857002943858" crossorigin="anonymous"></script>
+    <title>Duplicate Meta Finder - Doppelte Title-Tags & Meta-Descriptions finden | Shift07</title>
+    <meta name="description" content="Finde doppelte Title-Tags und Meta-Descriptions auf deiner Website. Mehrere HTML-Seiten gleichzeitig analysieren – kostenlos und 100% im Browser.">
+    <meta name="keywords" content="duplicate meta finder, doppelte title tags, doppelte meta description, duplicate content SEO, SEO tool kostenlos">
+    <meta name="author" content="Thümmler AI GmbH">
+    <link rel="icon" type="image/png" href="/logo.png">
+    <link rel="canonical" href="https://shift07.ai/tools/duplicate-meta-finder.html">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Duplicate Meta Finder - Doppelte Title-Tags & Meta-Descriptions finden">
+    <meta property="og:description" content="Finde doppelte Title-Tags und Meta-Descriptions auf deiner Website. Mehrere HTML-Seiten gleichzeitig analysieren – kostenlos und 100% im Browser.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://shift07.ai/tools/duplicate-meta-finder.html">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="Shift07">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Duplicate Meta Finder - Doppelte Title-Tags & Meta-Descriptions finden">
+    <meta name="twitter:description" content="Finde doppelte Title-Tags und Meta-Descriptions auf mehreren HTML-Seiten gleichzeitig – kostenlos.">
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Duplicate Meta Finder",
+      "description": "Finde doppelte Title-Tags und Meta-Descriptions auf deiner Website. Mehrere HTML-Seiten gleichzeitig analysieren.",
+      "url": "https://shift07.ai/tools/duplicate-meta-finder.html",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR"
+      },
+      "provider": {
+        "@type": "Organization",
+        "name": "Thümmler AI GmbH",
+        "url": "https://shift07.ai"
+      }
+    }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: rgba(15, 23, 42, 0.5); }
+        ::-webkit-scrollbar-thumb { background: rgba(59, 130, 246, 0.5); border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: rgba(59, 130, 246, 0.7); }
+        html { scroll-behavior: smooth; }
+
+        .file-drop-zone {
+            border: 2px dashed rgba(99, 102, 241, 0.4);
+            border-radius: 1rem;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.2s;
+            cursor: pointer;
+            background: rgba(99, 102, 241, 0.04);
+        }
+        .file-drop-zone:hover, .file-drop-zone.drag-over {
+            border-color: rgba(99, 102, 241, 0.8);
+            background: rgba(99, 102, 241, 0.08);
+        }
+        .file-drop-zone input[type="file"] {
+            display: none;
+        }
+
+        .result-card {
+            background: rgba(30, 41, 59, 0.8);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 0.75rem;
+            padding: 1rem 1.25rem;
+            margin-bottom: 0.75rem;
+        }
+        .duplicate-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+            font-size: 0.7rem;
+            font-weight: 600;
+            padding: 0.2rem 0.6rem;
+            border-radius: 9999px;
+        }
+        .badge-error { background: rgba(239,68,68,0.15); color: #f87171; }
+        .badge-warning { background: rgba(245,158,11,0.15); color: #fbbf24; }
+        .badge-ok { background: rgba(52,211,153,0.15); color: #34d399; }
+        .badge-missing { background: rgba(148,163,184,0.15); color: #94a3b8; }
+
+        .text-truncate-2 {
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.75rem;
+        }
+        @media (min-width: 640px) {
+            .stats-grid { grid-template-columns: repeat(4, 1fr); }
+        }
+        .stat-card {
+            background: rgba(30, 41, 59, 0.6);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 0.75rem;
+            padding: 1rem;
+            text-align: center;
+        }
+    </style>
+</head>
+<body class="bg-slate-900 text-white min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-slate-900/80 backdrop-blur-xl border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <a href="/" class="flex items-center gap-2">
+                    <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                    <span class="text-xl font-bold text-white">Shift07</span>
+                </a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="/" class="text-gray-300 hover:text-white transition-colors">SEO-Tool</a>
+                    <a href="/blog/" class="text-gray-300 hover:text-white transition-colors">Blog</a>
+                    <a href="/tools/" class="text-white font-medium border-b-2 border-blue-500 pb-0.5">Tools</a>
+                    <a href="/app/#/login" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-5 py-2 rounded-lg font-medium transition-all">Anmelden</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-gray-300 hover:text-white">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900/95 border-b border-white/10">
+            <div class="px-4 py-3 space-y-2">
+                <a href="/" class="block py-2 text-gray-300 hover:text-white">SEO-Tool</a>
+                <a href="/blog/" class="block py-2 text-gray-300 hover:text-white">Blog</a>
+                <a href="/tools/" class="block py-2 text-white font-medium">Tools</a>
+                <a href="/app/#/login" class="block py-2 text-blue-400 hover:text-blue-300">Anmelden</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="pt-24 pb-12 px-4">
+        <div class="max-w-4xl mx-auto text-center">
+            <div class="inline-flex items-center gap-2 bg-purple-500/10 border border-purple-500/20 rounded-full px-4 py-1.5 mb-6">
+                <span class="text-purple-400 text-sm font-medium">SEO On-Page Tool</span>
+            </div>
+            <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-4 leading-tight">
+                Duplicate Meta Finder
+            </h1>
+            <p class="text-xl text-gray-400 mb-8 max-w-2xl mx-auto">
+                Finde doppelte Title-Tags und Meta-Descriptions über mehrere Seiten hinweg. Lade deine HTML-Dateien hoch — Analyse läuft komplett im Browser.
+            </p>
+        </div>
+    </section>
+
+    <!-- Tool -->
+    <section class="pb-12 px-4">
+        <div class="max-w-4xl mx-auto">
+
+            <!-- Upload Zone -->
+            <div class="bg-slate-800/50 border border-white/10 rounded-2xl p-6 mb-6">
+                <h2 class="text-lg font-bold text-white mb-4">HTML-Dateien hochladen</h2>
+
+                <div class="file-drop-zone" id="dropZone" onclick="document.getElementById('fileInput').click()">
+                    <input type="file" id="fileInput" multiple accept=".html,.htm">
+                    <div class="text-gray-400">
+                        <svg class="w-12 h-12 mx-auto mb-3 text-purple-400/60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/>
+                        </svg>
+                        <p class="text-white font-medium mb-1">Dateien hierher ziehen oder klicken</p>
+                        <p class="text-sm">Mehrere .html oder .htm Dateien gleichzeitig wählen</p>
+                    </div>
+                </div>
+
+                <div id="fileList" class="mt-4 hidden">
+                    <div class="flex items-center justify-between mb-3">
+                        <p class="text-sm text-gray-400"><span id="fileCount">0</span> Dateien geladen</p>
+                        <button onclick="clearFiles()" class="text-xs text-red-400 hover:text-red-300 transition-colors">Alle entfernen</button>
+                    </div>
+                    <div id="fileItems" class="space-y-1 max-h-40 overflow-y-auto"></div>
+                </div>
+
+                <!-- Demo Button -->
+                <div class="mt-4 pt-4 border-t border-white/10">
+                    <p class="text-xs text-gray-500 mb-2">Oder Demo starten mit Beispiel-Daten:</p>
+                    <button onclick="loadDemo()" class="text-sm text-purple-400 hover:text-purple-300 underline transition-colors">Demo: 5 Beispiel-Seiten analysieren</button>
+                </div>
+            </div>
+
+            <!-- Options -->
+            <div class="bg-slate-800/50 border border-white/10 rounded-2xl p-6 mb-6">
+                <h2 class="text-lg font-bold text-white mb-4">Analyse-Optionen</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <label class="flex items-center gap-3 cursor-pointer">
+                        <input type="checkbox" id="checkTitle" checked class="w-4 h-4 accent-purple-500">
+                        <div>
+                            <p class="text-sm font-medium text-white">Title-Tags prüfen</p>
+                            <p class="text-xs text-gray-500">Doppelte &lt;title&gt; Elemente finden</p>
+                        </div>
+                    </label>
+                    <label class="flex items-center gap-3 cursor-pointer">
+                        <input type="checkbox" id="checkDesc" checked class="w-4 h-4 accent-purple-500">
+                        <div>
+                            <p class="text-sm font-medium text-white">Meta-Descriptions prüfen</p>
+                            <p class="text-xs text-gray-500">Doppelte meta description Tags finden</p>
+                        </div>
+                    </label>
+                    <label class="flex items-center gap-3 cursor-pointer">
+                        <input type="checkbox" id="checkMissing" checked class="w-4 h-4 accent-purple-500">
+                        <div>
+                            <p class="text-sm font-medium text-white">Fehlende Tags anzeigen</p>
+                            <p class="text-xs text-gray-500">Seiten ohne Title oder Description markieren</p>
+                        </div>
+                    </label>
+                    <label class="flex items-center gap-3 cursor-pointer">
+                        <input type="checkbox" id="checkLength" checked class="w-4 h-4 accent-purple-500">
+                        <div>
+                            <p class="text-sm font-medium text-white">Längen-Check</p>
+                            <p class="text-xs text-gray-500">Zu kurze / zu lange Texte markieren</p>
+                        </div>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Analyze Button -->
+            <button id="analyzeBtn" onclick="analyze()" disabled
+                class="w-full py-4 rounded-xl font-semibold text-white bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 transition-all disabled:opacity-40 disabled:cursor-not-allowed text-lg mb-8">
+                Jetzt analysieren
+            </button>
+
+            <!-- Results -->
+            <div id="results" class="hidden">
+
+                <!-- Stats -->
+                <div class="mb-6">
+                    <h2 class="text-lg font-bold text-white mb-3">Übersicht</h2>
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div id="statPages" class="text-2xl font-bold text-white">0</div>
+                            <div class="text-xs text-gray-400 mt-1">Seiten analysiert</div>
+                        </div>
+                        <div class="stat-card">
+                            <div id="statDupTitles" class="text-2xl font-bold text-red-400">0</div>
+                            <div class="text-xs text-gray-400 mt-1">Doppelte Title-Tags</div>
+                        </div>
+                        <div class="stat-card">
+                            <div id="statDupDescs" class="text-2xl font-bold text-red-400">0</div>
+                            <div class="text-xs text-gray-400 mt-1">Doppelte Descriptions</div>
+                        </div>
+                        <div class="stat-card">
+                            <div id="statMissing" class="text-2xl font-bold text-yellow-400">0</div>
+                            <div class="text-xs text-gray-400 mt-1">Fehlende Tags</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Score -->
+                <div id="scoreBox" class="bg-slate-800/50 border border-white/10 rounded-2xl p-6 mb-6 text-center hidden">
+                    <div id="scoreEmoji" class="text-4xl mb-2"></div>
+                    <div id="scoreText" class="text-lg font-bold text-white mb-1"></div>
+                    <div id="scoreSubtext" class="text-sm text-gray-400"></div>
+                </div>
+
+                <!-- Duplicate Title Groups -->
+                <div id="dupTitleSection" class="hidden mb-6">
+                    <h2 class="text-lg font-bold text-white mb-3 flex items-center gap-2">
+                        <span class="w-5 h-5 bg-red-500/20 text-red-400 rounded-full flex items-center justify-center text-xs">!</span>
+                        Doppelte Title-Tags
+                    </h2>
+                    <div id="dupTitleList"></div>
+                </div>
+
+                <!-- Duplicate Description Groups -->
+                <div id="dupDescSection" class="hidden mb-6">
+                    <h2 class="text-lg font-bold text-white mb-3 flex items-center gap-2">
+                        <span class="w-5 h-5 bg-red-500/20 text-red-400 rounded-full flex items-center justify-center text-xs">!</span>
+                        Doppelte Meta-Descriptions
+                    </h2>
+                    <div id="dupDescList"></div>
+                </div>
+
+                <!-- Per-page details -->
+                <div id="pageSection" class="mb-6">
+                    <div class="flex items-center justify-between mb-3">
+                        <h2 class="text-lg font-bold text-white">Details pro Seite</h2>
+                        <div class="flex gap-2">
+                            <button onclick="filterPages('all')" id="filterAll" class="text-xs px-3 py-1 rounded-full bg-white/10 text-white">Alle</button>
+                            <button onclick="filterPages('issues')" id="filterIssues" class="text-xs px-3 py-1 rounded-full bg-white/5 text-gray-400">Nur Probleme</button>
+                            <button onclick="filterPages('ok')" id="filterOk" class="text-xs px-3 py-1 rounded-full bg-white/5 text-gray-400">Nur OK</button>
+                        </div>
+                    </div>
+                    <div id="pageList"></div>
+                </div>
+
+                <!-- Export -->
+                <div class="mt-6 pt-6 border-t border-white/10 flex gap-3">
+                    <button onclick="exportCSV()" class="flex-1 py-3 rounded-xl border border-white/10 text-gray-300 hover:text-white hover:border-white/30 transition-all text-sm font-medium">
+                        Als CSV exportieren
+                    </button>
+                    <button onclick="copyReport()" class="flex-1 py-3 rounded-xl border border-purple-500/30 text-purple-400 hover:text-purple-300 hover:border-purple-500/60 transition-all text-sm font-medium">
+                        Report kopieren
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Info Section -->
+    <section class="py-12 px-4 border-t border-white/5">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-2xl font-bold text-white mb-6">Warum sind doppelte Meta-Tags ein SEO-Problem?</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-slate-800/50 border border-white/10 rounded-xl p-5">
+                    <h3 class="text-white font-semibold mb-2">Doppelte Title-Tags</h3>
+                    <p class="text-gray-400 text-sm">Wenn zwei Seiten denselben Title-Tag haben, weiß Google nicht, welche Seite für ein Keyword ranken soll. Das führt zu Keyword-Kannibalisierung — beide Seiten konkurrieren gegeneinander und beide verlieren.</p>
+                </div>
+                <div class="bg-slate-800/50 border border-white/10 rounded-xl p-5">
+                    <h3 class="text-white font-semibold mb-2">Doppelte Meta-Descriptions</h3>
+                    <p class="text-gray-400 text-sm">Google zeigt Meta-Descriptions in den Suchergebnissen an. Identische Beschreibungen für verschiedene Seiten signalisieren mangelnde Einzigartigkeit und Google ersetzt sie oft durch eigene, automatisch generierte Texte.</p>
+                </div>
+                <div class="bg-slate-800/50 border border-white/10 rounded-xl p-5">
+                    <h3 class="text-white font-semibold mb-2">Fehlende Title-Tags</h3>
+                    <p class="text-gray-400 text-sm">Eine Seite ohne Title-Tag verpasst einen der wichtigsten On-Page SEO-Faktoren. Google generiert dann einen eigenen Titel aus dem Seiteninhalt — oft mit suboptimalem Ergebnis für das Ranking.</p>
+                </div>
+                <div class="bg-slate-800/50 border border-white/10 rounded-xl p-5">
+                    <h3 class="text-white font-semibold mb-2">Längen-Empfehlungen</h3>
+                    <p class="text-gray-400 text-sm">Title-Tags: 50–60 Zeichen (max. ~580px). Meta-Descriptions: 120–160 Zeichen. Zu lange Texte werden in den Suchergebnissen abgeschnitten, zu kurze verpassen wertvolle Keyword-Chancen.</p>
+                </div>
+            </div>
+            <div class="mt-6 p-4 bg-blue-500/10 border border-blue-500/20 rounded-xl">
+                <p class="text-sm text-blue-300">Mehr zum Thema: <a href="/blog/meta-tags-richtig-einsetzen.html" class="underline hover:text-blue-200">Meta-Tags richtig einsetzen</a> und <a href="/tools/title-tag-laengen-checker.html" class="underline hover:text-blue-200">Title-Tag-Längen-Checker</a> — für einzelne Seiten mit SERP-Vorschau.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-12 px-4 bg-gradient-to-r from-blue-900/30 to-indigo-900/30 border-t border-b border-white/5">
+        <div class="max-w-3xl mx-auto text-center">
+            <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">Vollständige SEO-Analyse deiner Website</h2>
+            <p class="text-gray-400 mb-8">Meta-Tags, Ladezeit, strukturierte Daten und mehr — alles in einer kostenlosen Analyse.</p>
+            <a href="/" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-8 py-4 rounded-xl font-semibold transition-all inline-block">Kostenlose SEO-Analyse starten</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/10 bg-slate-900/50 py-12 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="flex items-center gap-2">
+                    <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                    <span class="text-lg font-bold text-white">Shift07</span>
+                </div>
+                <div class="flex items-center space-x-6 text-sm text-gray-400">
+                    <a href="/impressum.html" class="hover:text-white transition-colors">Impressum</a>
+                    <a href="/datenschutz.html" class="hover:text-white transition-colors">Datenschutz</a>
+                    <a href="/agb.html" class="hover:text-white transition-colors">AGB</a>
+                </div>
+                <p class="text-sm text-gray-500">&copy; 2026 Thümmler AI GmbH</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // ===================== STATE =====================
+        let pages = []; // { name, html, title, description, titleLen, descLen }
+        let currentFilter = 'all';
+
+        // ===================== FILE HANDLING =====================
+        const dropZone = document.getElementById('dropZone');
+        const fileInput = document.getElementById('fileInput');
+
+        dropZone.addEventListener('dragover', e => { e.preventDefault(); dropZone.classList.add('drag-over'); });
+        dropZone.addEventListener('dragleave', () => dropZone.classList.remove('drag-over'));
+        dropZone.addEventListener('drop', e => {
+            e.preventDefault();
+            dropZone.classList.remove('drag-over');
+            handleFiles(e.dataTransfer.files);
+        });
+
+        fileInput.addEventListener('change', e => handleFiles(e.target.files));
+
+        function handleFiles(fileList) {
+            const htmlFiles = Array.from(fileList).filter(f => f.name.match(/\.html?$/i));
+            if (!htmlFiles.length) { alert('Bitte nur .html oder .htm Dateien hochladen.'); return; }
+
+            let loaded = 0;
+            htmlFiles.forEach(file => {
+                const reader = new FileReader();
+                reader.onload = e => {
+                    const parser = new DOMParser();
+                    const doc = parser.parseFromString(e.target.result, 'text/html');
+                    const titleEl = doc.querySelector('title');
+                    const descEl = doc.querySelector('meta[name="description"]');
+                    pages.push({
+                        name: file.name,
+                        title: titleEl ? titleEl.textContent.trim() : null,
+                        description: descEl ? descEl.getAttribute('content')?.trim() : null,
+                    });
+                    loaded++;
+                    if (loaded === htmlFiles.length) renderFileList();
+                };
+                reader.readAsText(file);
+            });
+        }
+
+        function renderFileList() {
+            document.getElementById('fileList').classList.remove('hidden');
+            document.getElementById('fileCount').textContent = pages.length;
+            document.getElementById('analyzeBtn').disabled = false;
+
+            const container = document.getElementById('fileItems');
+            container.innerHTML = pages.map((p, i) => `
+                <div class="flex items-center gap-2 text-sm">
+                    <svg class="w-4 h-4 text-gray-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                    <span class="text-gray-300">${escHtml(p.name)}</span>
+                    <button onclick="removePage(${i})" class="ml-auto text-gray-600 hover:text-red-400 transition-colors">×</button>
+                </div>
+            `).join('');
+        }
+
+        function removePage(index) {
+            pages.splice(index, 1);
+            if (pages.length === 0) {
+                document.getElementById('fileList').classList.add('hidden');
+                document.getElementById('analyzeBtn').disabled = true;
+            } else {
+                renderFileList();
+            }
+        }
+
+        function clearFiles() {
+            pages = [];
+            document.getElementById('fileList').classList.add('hidden');
+            document.getElementById('analyzeBtn').disabled = true;
+            document.getElementById('results').classList.add('hidden');
+            fileInput.value = '';
+        }
+
+        // ===================== DEMO DATA =====================
+        function loadDemo() {
+            pages = [
+                { name: 'index.html', title: 'Muster GmbH – Ihr Elektriker in Frankfurt', description: 'Professionelle Elektroinstallationen in Frankfurt am Main. Wir sind Ihr zuverlässiger Partner für alle elektrischen Arbeiten.' },
+                { name: 'leistungen.html', title: 'Leistungen – Muster GmbH', description: 'Unsere Leistungen im Überblick: Elektroinstallation, Wartung, Reparatur. Jetzt Angebot anfordern.' },
+                { name: 'kontakt.html', title: 'Muster GmbH – Ihr Elektriker in Frankfurt', description: 'Kontaktieren Sie uns – Muster GmbH Elektrotechnik Frankfurt. Tel: 069 1234567, info@muster-gmbh.de' },
+                { name: 'ueber-uns.html', title: 'Über uns – Muster GmbH Elektrotechnik', description: 'Unsere Leistungen im Überblick: Elektroinstallation, Wartung, Reparatur. Jetzt Angebot anfordern.' },
+                { name: 'impressum.html', title: null, description: null },
+            ];
+            document.getElementById('fileList').classList.remove('hidden');
+            document.getElementById('fileCount').textContent = pages.length;
+            document.getElementById('analyzeBtn').disabled = false;
+
+            const container = document.getElementById('fileItems');
+            container.innerHTML = pages.map((p, i) => `
+                <div class="flex items-center gap-2 text-sm">
+                    <svg class="w-4 h-4 text-purple-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                    <span class="text-gray-300">${escHtml(p.name)}</span>
+                    <span class="text-xs text-purple-400 ml-1">(Demo)</span>
+                </div>
+            `).join('');
+        }
+
+        // ===================== ANALYSIS =====================
+        function analyze() {
+            if (!pages.length) return;
+
+            const checkTitle = document.getElementById('checkTitle').checked;
+            const checkDesc = document.getElementById('checkDesc').checked;
+            const checkMissing = document.getElementById('checkMissing').checked;
+            const checkLength = document.getElementById('checkLength').checked;
+
+            // Find duplicates
+            const titleGroups = {};
+            const descGroups = {};
+
+            pages.forEach((p, i) => {
+                if (p.title) {
+                    const key = p.title.toLowerCase().trim();
+                    if (!titleGroups[key]) titleGroups[key] = [];
+                    titleGroups[key].push(i);
+                }
+                if (p.description) {
+                    const key = p.description.toLowerCase().trim();
+                    if (!descGroups[key]) descGroups[key] = [];
+                    descGroups[key].push(i);
+                }
+            });
+
+            const dupTitles = Object.entries(titleGroups).filter(([,v]) => v.length > 1);
+            const dupDescs = Object.entries(descGroups).filter(([,v]) => v.length > 1);
+
+            // Build set of page indices with issues
+            const titleDupPages = new Set(dupTitles.flatMap(([,v]) => v));
+            const descDupPages = new Set(dupDescs.flatMap(([,v]) => v));
+
+            // Count missing
+            let missingCount = 0;
+            pages.forEach(p => {
+                if ((checkMissing) && (!p.title || !p.description)) missingCount++;
+            });
+
+            // Stats
+            document.getElementById('statPages').textContent = pages.length;
+            document.getElementById('statDupTitles').textContent = checkTitle ? dupTitles.length : '–';
+            document.getElementById('statDupDescs').textContent = checkDesc ? dupDescs.length : '–';
+            document.getElementById('statMissing').textContent = checkMissing ? missingCount : '–';
+
+            // Score
+            const issueCount = (checkTitle ? dupTitles.length : 0) + (checkDesc ? dupDescs.length : 0) + (checkMissing ? missingCount : 0);
+            renderScore(issueCount, pages.length);
+
+            // Duplicate title groups
+            const dupTitleSection = document.getElementById('dupTitleSection');
+            const dupTitleList = document.getElementById('dupTitleList');
+            if (checkTitle && dupTitles.length) {
+                dupTitleSection.classList.remove('hidden');
+                dupTitleList.innerHTML = dupTitles.map(([title, indices]) => `
+                    <div class="result-card">
+                        <div class="flex items-start gap-2 mb-2">
+                            <span class="duplicate-badge badge-error flex-shrink-0">DUPLIKAT (${indices.length}×)</span>
+                        </div>
+                        <p class="text-white font-medium text-sm mb-2">"${escHtml(title)}"</p>
+                        <div class="space-y-1">
+                            ${indices.map(i => `<p class="text-xs text-gray-400">📄 ${escHtml(pages[i].name)}</p>`).join('')}
+                        </div>
+                    </div>
+                `).join('');
+            } else {
+                dupTitleSection.classList.add('hidden');
+            }
+
+            // Duplicate desc groups
+            const dupDescSection = document.getElementById('dupDescSection');
+            const dupDescList = document.getElementById('dupDescList');
+            if (checkDesc && dupDescs.length) {
+                dupDescSection.classList.remove('hidden');
+                dupDescList.innerHTML = dupDescs.map(([desc, indices]) => `
+                    <div class="result-card">
+                        <div class="flex items-start gap-2 mb-2">
+                            <span class="duplicate-badge badge-error flex-shrink-0">DUPLIKAT (${indices.length}×)</span>
+                        </div>
+                        <p class="text-white font-medium text-sm mb-2">"${escHtml(desc.length > 100 ? desc.substring(0, 100) + '…' : desc)}"</p>
+                        <div class="space-y-1">
+                            ${indices.map(i => `<p class="text-xs text-gray-400">📄 ${escHtml(pages[i].name)}</p>`).join('')}
+                        </div>
+                    </div>
+                `).join('');
+            } else {
+                dupDescSection.classList.add('hidden');
+            }
+
+            // Per-page list
+            window.pageData = pages.map((p, i) => {
+                const issues = [];
+                if (!p.title) { issues.push({ type: 'missing', text: 'Kein Title-Tag' }); }
+                else if (titleDupPages.has(i) && checkTitle) { issues.push({ type: 'error', text: 'Title-Tag ist ein Duplikat' }); }
+                if (checkLength && p.title && p.title.length < 10) issues.push({ type: 'warning', text: `Title zu kurz (${p.title.length} Zeichen)` });
+                if (checkLength && p.title && p.title.length > 70) issues.push({ type: 'warning', text: `Title zu lang (${p.title.length} Zeichen)` });
+
+                if (!p.description) { if (checkMissing) issues.push({ type: 'missing', text: 'Keine Meta-Description' }); }
+                else if (descDupPages.has(i) && checkDesc) { issues.push({ type: 'error', text: 'Meta-Description ist ein Duplikat' }); }
+                if (checkLength && p.description && p.description.length < 50) issues.push({ type: 'warning', text: `Description zu kurz (${p.description.length} Zeichen)` });
+                if (checkLength && p.description && p.description.length > 165) issues.push({ type: 'warning', text: `Description zu lang (${p.description.length} Zeichen)` });
+
+                return { ...p, issues, hasIssues: issues.length > 0 };
+            });
+
+            renderPageList(window.pageData);
+
+            document.getElementById('results').classList.remove('hidden');
+            document.getElementById('results').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        function renderScore(issueCount, total) {
+            const box = document.getElementById('scoreBox');
+            const emoji = document.getElementById('scoreEmoji');
+            const text = document.getElementById('scoreText');
+            const sub = document.getElementById('scoreSubtext');
+            box.classList.remove('hidden');
+
+            if (issueCount === 0) {
+                emoji.textContent = '🎉';
+                text.textContent = 'Keine Duplikate gefunden!';
+                sub.textContent = 'Alle analysierten Seiten haben einzigartige Meta-Tags.';
+                box.style.borderColor = 'rgba(52, 211, 153, 0.3)';
+                box.style.background = 'rgba(52, 211, 153, 0.05)';
+            } else if (issueCount <= 2) {
+                emoji.textContent = '⚠️';
+                text.textContent = `${issueCount} Problem${issueCount > 1 ? 'e' : ''} gefunden`;
+                sub.textContent = 'Kleinere Duplikate — schnell behebbar.';
+                box.style.borderColor = 'rgba(245, 158, 11, 0.3)';
+                box.style.background = 'rgba(245, 158, 11, 0.05)';
+            } else {
+                emoji.textContent = '🚨';
+                text.textContent = `${issueCount} Probleme gefunden`;
+                sub.textContent = 'Mehrere Duplikate beeinträchtigen dein Ranking. Zeitnah beheben!';
+                box.style.borderColor = 'rgba(239, 68, 68, 0.3)';
+                box.style.background = 'rgba(239, 68, 68, 0.05)';
+            }
+        }
+
+        function renderPageList(data) {
+            const container = document.getElementById('pageList');
+            const filtered = currentFilter === 'issues' ? data.filter(p => p.hasIssues)
+                           : currentFilter === 'ok' ? data.filter(p => !p.hasIssues)
+                           : data;
+
+            if (!filtered.length) {
+                container.innerHTML = '<p class="text-gray-500 text-sm text-center py-4">Keine Einträge für diesen Filter.</p>';
+                return;
+            }
+
+            container.innerHTML = filtered.map(p => {
+                const titleBadge = !p.title ? `<span class="duplicate-badge badge-missing">FEHLT</span>`
+                    : p.issues.some(i => i.text.includes('Title-Tag ist ein Duplikat')) ? `<span class="duplicate-badge badge-error">DUPLIKAT</span>`
+                    : p.issues.some(i => i.text.includes('Title zu')) ? `<span class="duplicate-badge badge-warning">LÄNGE</span>`
+                    : `<span class="duplicate-badge badge-ok">OK</span>`;
+
+                const descBadge = !p.description ? `<span class="duplicate-badge badge-missing">FEHLT</span>`
+                    : p.issues.some(i => i.text.includes('Meta-Description ist ein Duplikat')) ? `<span class="duplicate-badge badge-error">DUPLIKAT</span>`
+                    : p.issues.some(i => i.text.includes('Description zu')) ? `<span class="duplicate-badge badge-warning">LÄNGE</span>`
+                    : `<span class="duplicate-badge badge-ok">OK</span>`;
+
+                return `
+                    <div class="result-card">
+                        <div class="flex items-center gap-2 mb-3">
+                            <svg class="w-4 h-4 text-gray-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                            <span class="text-white font-semibold text-sm">${escHtml(p.name)}</span>
+                            ${p.hasIssues ? '<span class="text-xs text-red-400">● ' + p.issues.length + ' Problem' + (p.issues.length > 1 ? 'e' : '') + '</span>' : '<span class="text-xs text-green-400">✓ Alles OK</span>'}
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                            <div>
+                                <div class="flex items-center gap-2 mb-1">
+                                    <span class="text-xs text-gray-500">Title-Tag</span>
+                                    ${titleBadge}
+                                    ${p.title ? `<span class="text-xs text-gray-600">${p.title.length} Z.</span>` : ''}
+                                </div>
+                                <p class="text-xs text-gray-400 text-truncate-2">${p.title ? escHtml(p.title) : '<em>Nicht vorhanden</em>'}</p>
+                            </div>
+                            <div>
+                                <div class="flex items-center gap-2 mb-1">
+                                    <span class="text-xs text-gray-500">Meta-Description</span>
+                                    ${descBadge}
+                                    ${p.description ? `<span class="text-xs text-gray-600">${p.description.length} Z.</span>` : ''}
+                                </div>
+                                <p class="text-xs text-gray-400 text-truncate-2">${p.description ? escHtml(p.description) : '<em>Nicht vorhanden</em>'}</p>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        function filterPages(mode) {
+            currentFilter = mode;
+            document.querySelectorAll('[id^="filter"]').forEach(btn => {
+                btn.classList.remove('bg-white/10', 'text-white');
+                btn.classList.add('bg-white/5', 'text-gray-400');
+            });
+            document.getElementById('filter' + mode.charAt(0).toUpperCase() + mode.slice(1)).classList.add('bg-white/10', 'text-white');
+            document.getElementById('filter' + mode.charAt(0).toUpperCase() + mode.slice(1)).classList.remove('bg-white/5', 'text-gray-400');
+            if (window.pageData) renderPageList(window.pageData);
+        }
+
+        // ===================== EXPORT =====================
+        function exportCSV() {
+            if (!window.pageData) return;
+            const rows = [['Datei', 'Title-Tag', 'Title-Länge', 'Meta-Description', 'Desc-Länge', 'Probleme']];
+            window.pageData.forEach(p => {
+                rows.push([
+                    p.name,
+                    p.title || '',
+                    p.title ? p.title.length : 0,
+                    p.description || '',
+                    p.description ? p.description.length : 0,
+                    p.issues.map(i => i.text).join('; ')
+                ]);
+            });
+            const csv = rows.map(r => r.map(c => `"${String(c).replace(/"/g, '""')}"`).join(',')).join('\n');
+            const blob = new Blob(['\uFEFF' + csv], { type: 'text/csv;charset=utf-8;' });
+            const a = document.createElement('a');
+            a.href = URL.createObjectURL(blob);
+            a.download = 'duplicate-meta-report.csv';
+            a.click();
+        }
+
+        function copyReport() {
+            if (!window.pageData) return;
+            const lines = ['Duplicate Meta Finder — Report', '================================', ''];
+            window.pageData.forEach(p => {
+                lines.push(`📄 ${p.name}`);
+                lines.push(`  Title: ${p.title || '(fehlt)'} [${p.title ? p.title.length : 0} Z.]`);
+                lines.push(`  Desc:  ${p.description || '(fehlt)'} [${p.description ? p.description.length : 0} Z.]`);
+                if (p.issues.length) lines.push(`  ⚠ ${p.issues.map(i => i.text).join(', ')}`);
+                lines.push('');
+            });
+            navigator.clipboard.writeText(lines.join('\n')).then(() => {
+                const btn = event.target;
+                btn.textContent = 'Kopiert!';
+                setTimeout(() => btn.textContent = 'Report kopieren', 2000);
+            });
+        }
+
+        // ===================== UTILS =====================
+        function escHtml(str) {
+            return String(str).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+        }
+
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
