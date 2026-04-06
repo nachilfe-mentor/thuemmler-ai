@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K1S1RXBDS8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K1S1RXBDS8');
+    </script>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8475857002943858" crossorigin="anonymous"></script>
+    <title>Lesbarkeits-Score-Checker - Flesch-Kincaid für Deutsch | Shift07</title>
+    <meta name="description" content="Prüfe die Lesbarkeit deiner Texte kostenlos mit dem Flesch-Kincaid-Score für Deutsch. Analysiere Satzlänge, Silbenanzahl und Lesbarkeits-Level für bessere SEO-Texte.">
+    <meta name="keywords" content="Lesbarkeits Checker, Flesch Kincaid Deutsch, Lesbarkeit prüfen, Lesbarkeits Score, Text Lesbarkeit, SEO Text Optimierung, Flesch Reading Ease">
+    <meta name="author" content="Thümmler AI GmbH">
+    <link rel="icon" type="image/png" href="../logo.png">
+    <link rel="canonical" href="https://shift07.ai/tools/lesbarkeits-score-checker.html">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Lesbarkeits-Score-Checker - Flesch-Kincaid für Deutsch">
+    <meta property="og:description" content="Prüfe die Lesbarkeit deiner Texte kostenlos. Flesch-Kincaid-Score für Deutsch mit Satzanalyse und konkreten Verbesserungstipps.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://shift07.ai/tools/lesbarkeits-score-checker.html">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="Shift07">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Lesbarkeits-Score-Checker - Flesch-Kincaid für Deutsch">
+    <meta name="twitter:description" content="Prüfe die Lesbarkeit deiner Texte kostenlos. Flesch-Kincaid-Score für Deutsch.">
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Lesbarkeits-Score-Checker",
+      "description": "Kostenloser Lesbarkeits-Score-Checker für deutsche Texte. Berechnet den Flesch-Kincaid-Score und gibt konkrete Tipps zur Verbesserung der Lesbarkeit.",
+      "url": "https://shift07.ai/tools/lesbarkeits-score-checker.html",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR"
+      },
+      "provider": {
+        "@type": "Organization",
+        "name": "Thümmler AI GmbH",
+        "url": "https://shift07.ai"
+      }
+    }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: rgba(15, 23, 42, 0.5); }
+        ::-webkit-scrollbar-thumb { background: rgba(59, 130, 246, 0.5); border-radius: 4px; }
+        html { scroll-behavior: smooth; }
+        .glass {
+            background: rgba(255, 255, 255, 0.06);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .score-ring {
+            width: 180px;
+            height: 180px;
+            position: relative;
+        }
+        .score-ring svg {
+            transform: rotate(-90deg);
+        }
+        .score-ring .score-text {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .sentence-long { background: rgba(239, 68, 68, 0.2); border-left: 3px solid #ef4444; padding: 4px 8px; margin: 2px 0; border-radius: 4px; }
+        .sentence-medium { background: rgba(245, 158, 11, 0.15); border-left: 3px solid #f59e0b; padding: 4px 8px; margin: 2px 0; border-radius: 4px; }
+        .sentence-short { background: rgba(16, 185, 129, 0.15); border-left: 3px solid #10b981; padding: 4px 8px; margin: 2px 0; border-radius: 4px; }
+        .stat-card { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 0.75rem; padding: 1rem; text-align: center; }
+    </style>
+</head>
+<body class="antialiased">
+    <div class="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900/20 to-slate-900">
+
+        <!-- Navigation -->
+        <nav class="bg-black/20 backdrop-blur-md border-b border-white/10 sticky top-0 z-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center h-16">
+                    <a href="/" class="flex items-center gap-2">
+                        <img src="../logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                        <span class="text-xl font-bold text-white">Shift07</span>
+                    </a>
+                    <div class="hidden md:flex items-baseline space-x-4">
+                        <a href="/" class="text-white hover:text-blue-300 px-3 py-2 text-sm font-medium transition-colors">SEO-Tool</a>
+                        <a href="/blog/" class="text-white hover:text-blue-300 px-3 py-2 text-sm font-medium transition-colors">Blog</a>
+                        <a href="/tools/" class="text-blue-300 px-3 py-2 text-sm font-medium">Tools</a>
+                        <a href="/app/#/login" class="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:from-blue-600 hover:to-purple-700 transition-all">Anmelden</a>
+                    </div>
+                    <button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="md:hidden text-white">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                    </button>
+                </div>
+                <div id="mobile-menu" class="hidden md:hidden pb-4">
+                    <a href="/" class="block text-white hover:text-blue-300 px-3 py-2 text-sm">SEO-Tool</a>
+                    <a href="/blog/" class="block text-white hover:text-blue-300 px-3 py-2 text-sm">Blog</a>
+                    <a href="/tools/" class="block text-blue-300 px-3 py-2 text-sm">Tools</a>
+                    <a href="/app/#/login" class="block text-white hover:text-blue-300 px-3 py-2 text-sm">Anmelden</a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero -->
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-8 text-center">
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 bg-emerald-500/10 border border-emerald-500/20 rounded-full text-emerald-400 text-sm font-medium mb-6">
+                📖 Content-SEO Tool
+            </div>
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">
+                <span class="bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">Lesbarkeits-Score-Checker</span>
+            </h1>
+            <p class="text-xl text-slate-300 max-w-2xl mx-auto mb-4">Flesch-Kincaid für Deutsch — prüfe, wie gut lesbar deine SEO-Texte wirklich sind.</p>
+            <p class="text-sm text-slate-400 max-w-xl mx-auto">Gut lesbare Texte ranken besser: Google misst Verweildauer, Absprungrate und Nutzerzufriedenheit. Ein Flesch-Score ≥ 60 ist ideal für Webinhalte.</p>
+        </section>
+
+        <!-- Main Tool -->
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+            <div class="grid lg:grid-cols-5 gap-8">
+
+                <!-- Input Panel (3 cols) -->
+                <div class="lg:col-span-3">
+                    <div class="glass rounded-2xl p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <h2 class="text-lg font-semibold text-white">Text eingeben</h2>
+                            <button onclick="loadExample()" class="text-xs text-emerald-400 hover:text-emerald-300 border border-emerald-500/30 px-3 py-1 rounded-lg transition-colors">Demo-Text laden</button>
+                        </div>
+                        <textarea id="textInput"
+                            placeholder="Füge hier deinen deutschen Text ein..."
+                            class="w-full bg-black/30 border border-white/10 rounded-xl p-4 text-white/90 text-sm placeholder-white/30 focus:outline-none focus:border-emerald-500/50 resize-none"
+                            rows="16"
+                            oninput="updateLiveStats()"
+                        ></textarea>
+                        <div class="flex items-center justify-between mt-3">
+                            <div id="liveStats" class="flex gap-4 text-xs text-slate-400">
+                                <span id="wordCount">0 Wörter</span>
+                                <span id="sentenceCount">0 Sätze</span>
+                                <span id="charCount">0 Zeichen</span>
+                            </div>
+                            <div class="flex gap-2">
+                                <button onclick="clearText()" class="text-xs text-slate-400 hover:text-white px-3 py-1.5 border border-white/10 rounded-lg transition-colors">Leeren</button>
+                                <button onclick="analyzeText()" class="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-white px-6 py-2 rounded-xl text-sm font-medium transition-all">
+                                    Analysieren →
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Results Panel (2 cols) -->
+                <div class="lg:col-span-2 space-y-4">
+
+                    <!-- Score Ring -->
+                    <div class="glass rounded-2xl p-6 text-center">
+                        <h3 class="text-sm font-medium text-slate-400 mb-4">Flesch Reading Ease (Deutsch)</h3>
+                        <div class="flex justify-center mb-4">
+                            <div class="score-ring">
+                                <svg viewBox="0 0 180 180" class="w-full h-full">
+                                    <circle cx="90" cy="90" r="75" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="14"/>
+                                    <circle id="scoreCircle" cx="90" cy="90" r="75" fill="none"
+                                        stroke="#10b981" stroke-width="14"
+                                        stroke-linecap="round"
+                                        stroke-dasharray="471"
+                                        stroke-dashoffset="471"
+                                        style="transition: stroke-dashoffset 1s ease, stroke 0.5s ease;"/>
+                                </svg>
+                                <div class="score-text">
+                                    <div id="scoreValue" class="text-4xl font-bold text-white">–</div>
+                                    <div id="scoreLabel" class="text-xs text-slate-400 mt-1">Score</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="scoreLevel" class="text-sm font-medium text-slate-300">Text eingeben und analysieren</div>
+                        <div id="scoreSublevel" class="text-xs text-slate-500 mt-1"></div>
+                    </div>
+
+                    <!-- Stats Grid -->
+                    <div class="grid grid-cols-2 gap-3">
+                        <div class="stat-card">
+                            <div id="statWords" class="text-2xl font-bold text-white">–</div>
+                            <div class="text-xs text-slate-400 mt-1">Wörter</div>
+                        </div>
+                        <div class="stat-card">
+                            <div id="statSentences" class="text-2xl font-bold text-white">–</div>
+                            <div class="text-xs text-slate-400 mt-1">Sätze</div>
+                        </div>
+                        <div class="stat-card">
+                            <div id="statAvgWords" class="text-2xl font-bold text-white">–</div>
+                            <div class="text-xs text-slate-400 mt-1">Ø Wörter/Satz</div>
+                        </div>
+                        <div class="stat-card">
+                            <div id="statAvgSyllables" class="text-2xl font-bold text-white">–</div>
+                            <div class="text-xs text-slate-400 mt-1">Ø Silben/Wort</div>
+                        </div>
+                    </div>
+
+                    <!-- Rating Scale -->
+                    <div class="glass rounded-2xl p-4">
+                        <h3 class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-3">Bewertungsskala</h3>
+                        <div class="space-y-2">
+                            <div class="flex items-center justify-between text-xs">
+                                <div class="flex items-center gap-2"><span class="w-2.5 h-2.5 rounded-full bg-emerald-400 inline-block"></span><span class="text-slate-300">Sehr leicht (≥ 70)</span></div>
+                                <span class="text-slate-500">Grundschule / Alltag</span>
+                            </div>
+                            <div class="flex items-center justify-between text-xs">
+                                <div class="flex items-center gap-2"><span class="w-2.5 h-2.5 rounded-full bg-teal-400 inline-block"></span><span class="text-slate-300">Leicht (60–69)</span></div>
+                                <span class="text-slate-500">Blog, Nachrichten</span>
+                            </div>
+                            <div class="flex items-center justify-between text-xs">
+                                <div class="flex items-center gap-2"><span class="w-2.5 h-2.5 rounded-full bg-yellow-400 inline-block"></span><span class="text-slate-300">Mittel (40–59)</span></div>
+                                <span class="text-slate-500">Fachzeitschriften</span>
+                            </div>
+                            <div class="flex items-center justify-between text-xs">
+                                <div class="flex items-center gap-2"><span class="w-2.5 h-2.5 rounded-full bg-orange-400 inline-block"></span><span class="text-slate-300">Schwer (30–39)</span></div>
+                                <span class="text-slate-500">Akademisch</span>
+                            </div>
+                            <div class="flex items-center justify-between text-xs">
+                                <div class="flex items-center gap-2"><span class="w-2.5 h-2.5 rounded-full bg-red-400 inline-block"></span><span class="text-slate-300">Sehr schwer (< 30)</span></div>
+                                <span class="text-slate-500">Juristisch / Bürokratisch</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Detailed Results -->
+            <div id="detailedResults" class="hidden mt-8 grid md:grid-cols-2 gap-8">
+
+                <!-- Recommendations -->
+                <div class="glass rounded-2xl p-6">
+                    <h3 class="text-lg font-semibold text-white mb-4">💡 Verbesserungstipps</h3>
+                    <div id="recommendations" class="space-y-3"></div>
+                </div>
+
+                <!-- Sentence Analysis -->
+                <div class="glass rounded-2xl p-6">
+                    <h3 class="text-lg font-semibold text-white mb-1">📊 Satzanalyse</h3>
+                    <p class="text-xs text-slate-500 mb-4">
+                        <span class="inline-flex items-center gap-1"><span class="w-2 h-2 rounded-sm bg-green-400/40 border border-green-400 inline-block"></span> kurz (≤12 Wörter)</span>
+                        <span class="ml-3 inline-flex items-center gap-1"><span class="w-2 h-2 rounded-sm bg-yellow-400/30 border border-yellow-400 inline-block"></span> mittel (13–20)</span>
+                        <span class="ml-3 inline-flex items-center gap-1"><span class="w-2 h-2 rounded-sm bg-red-400/30 border border-red-400 inline-block"></span> lang (>20)</span>
+                    </p>
+                    <div id="sentenceList" class="text-xs space-y-1 max-h-72 overflow-y-auto pr-1" style="scrollbar-width: thin;"></div>
+                </div>
+            </div>
+
+            <!-- SEO Context Box -->
+            <div class="glass rounded-2xl p-6 mt-8">
+                <h3 class="text-lg font-semibold text-white mb-4">📈 Warum Lesbarkeit für SEO wichtig ist</h3>
+                <div class="grid md:grid-cols-3 gap-6 text-sm">
+                    <div>
+                        <div class="text-emerald-400 font-semibold mb-2">Verweildauer</div>
+                        <p class="text-slate-400">Gut lesbare Texte halten Nutzer länger auf der Seite. Google wertet längere Verweildauer als Zeichen von Qualität und belohnt die Seite mit besseren Rankings.</p>
+                    </div>
+                    <div>
+                        <div class="text-emerald-400 font-semibold mb-2">Absprungrate</div>
+                        <p class="text-slate-400">Schwer verständliche Texte erhöhen die Absprungrate. Nutzer, die sofort zurückspringen, senden Google ein negatives Signal — besonders auf mobilen Geräten.</p>
+                    </div>
+                    <div>
+                        <div class="text-emerald-400 font-semibold mb-2">Featured Snippets</div>
+                        <p class="text-slate-400">Google bevorzugt für Featured Snippets (Position 0) klare, leicht verständliche Texte auf B2-Niveau. Ein guter Flesch-Score erhöht deine Chance auf Position 0.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cross-Sell -->
+            <div class="mt-8 grid md:grid-cols-3 gap-4">
+                <a href="/tools/keyword-density-checker.html" class="glass rounded-xl p-4 hover:border-emerald-500/40 transition-all group">
+                    <div class="text-2xl mb-2">🎯</div>
+                    <div class="text-sm font-medium text-white group-hover:text-emerald-400 transition-colors">Keyword-Density-Checker</div>
+                    <div class="text-xs text-slate-500 mt-1">Keyword-Dichte analysieren</div>
+                </a>
+                <a href="/tools/internal-link-counter.html" class="glass rounded-xl p-4 hover:border-emerald-500/40 transition-all group">
+                    <div class="text-2xl mb-2">🔗</div>
+                    <div class="text-sm font-medium text-white group-hover:text-emerald-400 transition-colors">Internal-Link-Counter</div>
+                    <div class="text-xs text-slate-500 mt-1">Interne Verlinkung analysieren</div>
+                </a>
+                <a href="/" class="glass rounded-xl p-4 hover:border-emerald-500/40 transition-all group">
+                    <div class="text-2xl mb-2">🔍</div>
+                    <div class="text-sm font-medium text-white group-hover:text-emerald-400 transition-colors">Vollständige SEO-Analyse</div>
+                    <div class="text-xs text-slate-500 mt-1">Technische + Content-Analyse</div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="border-t border-white/10 py-8 px-4">
+            <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+                <div class="flex items-center gap-2">
+                    <img src="../logo.png" alt="Shift07 Logo" class="h-7 w-7">
+                    <span class="font-bold text-white">Shift07</span>
+                </div>
+                <div class="flex gap-6 text-sm text-slate-400">
+                    <a href="/impressum.html" class="hover:text-white transition-colors">Impressum</a>
+                    <a href="/datenschutz.html" class="hover:text-white transition-colors">Datenschutz</a>
+                    <a href="/tools/" class="hover:text-white transition-colors">Alle Tools</a>
+                    <a href="/blog/" class="hover:text-white transition-colors">Blog</a>
+                </div>
+                <p class="text-sm text-slate-500">&copy; 2026 Thümmler AI GmbH</p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Silbenzählung für Deutsch (approximiert)
+        function countSyllablesDE(word) {
+            word = word.toLowerCase().replace(/[^a-zäöüß]/g, '');
+            if (word.length === 0) return 0;
+            if (word.length <= 2) return 1;
+
+            // Diphthonge und Sonderfälle
+            word = word.replace(/[äöü]/g, 'X'); // Umlaute als eigene Silbe
+            word = word.replace(/ß/g, 'ss');
+            word = word.replace(/sch/g, 'X');
+            word = word.replace(/ch/g, 'X');
+
+            // Vokale zählen (Vokalsequenzen = 1 Silbe)
+            let syllables = 0;
+            const vowels = 'aeiouXy';
+            let prevWasVowel = false;
+            for (let i = 0; i < word.length; i++) {
+                const isVowel = vowels.includes(word[i]);
+                if (isVowel && !prevWasVowel) {
+                    syllables++;
+                }
+                prevWasVowel = isVowel;
+            }
+
+            // Stilles 'e' am Ende (z.B. "Seite" → 2, nicht 3)
+            if (word.endsWith('e') && syllables > 1) {
+                syllables--;
+            }
+
+            return Math.max(1, syllables);
+        }
+
+        function splitIntoSentences(text) {
+            // Typische Abkürzungen schützen
+            text = text.replace(/\b(Dr|Prof|Mr|Mrs|etc|bzw|ggf|z\.B|d\.h|u\.a|i\.d\.R)\./gi, '$1<DOT>');
+            const sentences = text.split(/[.!?]+(?:\s|$)/).filter(s => s.trim().length > 3);
+            return sentences.map(s => s.replace(/<DOT>/g, '.').trim());
+        }
+
+        function countWords(text) {
+            return text.trim().split(/\s+/).filter(w => w.length > 0);
+        }
+
+        function analyzeText() {
+            const text = document.getElementById('textInput').value.trim();
+            if (!text || text.split(/\s+/).filter(w => w.length > 0).length < 20) {
+                alert('Bitte mindestens 20 Wörter eingeben für eine aussagekräftige Analyse.');
+                return;
+            }
+
+            const sentences = splitIntoSentences(text);
+            const words = countWords(text);
+            const totalWords = words.length;
+            const totalSentences = Math.max(sentences.length, 1);
+
+            // Silben zählen
+            let totalSyllables = 0;
+            words.forEach(w => {
+                totalSyllables += countSyllablesDE(w.replace(/[^a-zA-ZäöüÄÖÜß]/g, ''));
+            });
+
+            const avgWordsPerSentence = totalWords / totalSentences;
+            const avgSyllablesPerWord = totalSyllables / totalWords;
+
+            // Flesch Reading Ease (Amstad-Formel für Deutsch)
+            // FRE = 180 - ASL - (58.5 × ASW)
+            // ASL = average sentence length, ASW = average syllables per word
+            const fleschScore = Math.round(180 - avgWordsPerSentence - (58.5 * avgSyllablesPerWord));
+            const clampedScore = Math.max(0, Math.min(100, fleschScore));
+
+            // Update Score Ring
+            const circumference = 471;
+            const offset = circumference - (clampedScore / 100) * circumference;
+            const circle = document.getElementById('scoreCircle');
+            circle.style.strokeDashoffset = offset;
+
+            // Score color
+            let color, level, sublevel;
+            if (clampedScore >= 70) {
+                color = '#10b981'; level = '🟢 Sehr gut lesbar'; sublevel = 'Ideal für Webinhalte und Blogs';
+            } else if (clampedScore >= 60) {
+                color = '#34d399'; level = '🟢 Gut lesbar'; sublevel = 'Sehr geeignet für Online-Texte';
+            } else if (clampedScore >= 50) {
+                color = '#fbbf24'; level = '🟡 Mittelmäßig'; sublevel = 'Für allgemeines Publikum noch zugänglich';
+            } else if (clampedScore >= 40) {
+                color = '#f97316'; level = '🟠 Schwierig'; sublevel = 'Besser für Fachpublikum geeignet';
+            } else if (clampedScore >= 30) {
+                color = '#ef4444'; level = '🔴 Schwer verständlich'; sublevel = 'Für breites Publikum zu anspruchsvoll';
+            } else {
+                color = '#dc2626'; level = '🔴 Sehr schwer verständlich'; sublevel = 'Akademisch / juristisch';
+            }
+            circle.style.stroke = color;
+
+            document.getElementById('scoreValue').textContent = clampedScore;
+            document.getElementById('scoreLevel').textContent = level;
+            document.getElementById('scoreSublevel').textContent = sublevel;
+
+            // Stats
+            document.getElementById('statWords').textContent = totalWords;
+            document.getElementById('statSentences').textContent = totalSentences;
+            document.getElementById('statAvgWords').textContent = avgWordsPerSentence.toFixed(1);
+            document.getElementById('statAvgSyllables').textContent = avgSyllablesPerWord.toFixed(2);
+
+            // Recommendations
+            const recs = [];
+            if (avgWordsPerSentence > 20) {
+                recs.push({
+                    icon: '✂️',
+                    color: 'red',
+                    title: 'Sätze kürzen',
+                    text: `Deine Sätze sind im Durchschnitt ${avgWordsPerSentence.toFixed(1)} Wörter lang. Ideal sind ≤ 15 Wörter. Teile lange Sätze mit Punkt oder Komma auf.`
+                });
+            } else if (avgWordsPerSentence > 15) {
+                recs.push({
+                    icon: '✂️',
+                    color: 'yellow',
+                    title: 'Sätze leicht kürzen',
+                    text: `Sätze sind ${avgWordsPerSentence.toFixed(1)} Wörter lang. Etwas unterhalb 15 Wörter wäre optimaler für Web-Texte.`
+                });
+            } else {
+                recs.push({
+                    icon: '✅',
+                    color: 'green',
+                    title: 'Satzlänge optimal',
+                    text: `Durchschnittlich ${avgWordsPerSentence.toFixed(1)} Wörter pro Satz — das ist ideal für gut lesbare Web-Texte.`
+                });
+            }
+
+            if (avgSyllablesPerWord > 2.5) {
+                recs.push({
+                    icon: '📝',
+                    color: 'red',
+                    title: 'Einfachere Wörter wählen',
+                    text: `Deine Wörter haben im Schnitt ${avgSyllablesPerWord.toFixed(2)} Silben — das ist sehr hoch. Ersetze Fachwörter durch kürzere Alternativen: "nutzen" statt "berücksichtigen", "prüfen" statt "überprüfen".`
+                });
+            } else if (avgSyllablesPerWord > 2.0) {
+                recs.push({
+                    icon: '📝',
+                    color: 'yellow',
+                    title: 'Wortlänge beachten',
+                    text: `Ø ${avgSyllablesPerWord.toFixed(2)} Silben/Wort. Deutsch neigt zu langen Wörtern — versuche manchmal kürzere Synonyme zu wählen.`
+                });
+            } else {
+                recs.push({
+                    icon: '✅',
+                    color: 'green',
+                    title: 'Wortlänge gut',
+                    text: `Ø ${avgSyllablesPerWord.toFixed(2)} Silben/Wort — deine Wortwahl ist für deutsche Texte angemessen knapp.`
+                });
+            }
+
+            if (clampedScore < 60) {
+                recs.push({
+                    icon: '💡',
+                    color: 'blue',
+                    title: 'SEO-Tipp: Lesbarkeit erhöhen',
+                    text: 'Für bessere SEO-Performance: Nutze Aufzählungslisten, Zwischenüberschriften (H2/H3) und kurze Absätze. Das erhöht die Verweildauer und verbessert deine Rankings.'
+                });
+            }
+
+            const colorMap = { red: 'text-red-400 bg-red-400/10 border-red-400/20', yellow: 'text-yellow-400 bg-yellow-400/10 border-yellow-400/20', green: 'text-emerald-400 bg-emerald-400/10 border-emerald-400/20', blue: 'text-blue-400 bg-blue-400/10 border-blue-400/20' };
+            document.getElementById('recommendations').innerHTML = recs.map(r => `
+                <div class="border rounded-xl p-3 ${colorMap[r.color]}">
+                    <div class="font-semibold text-sm mb-1">${r.icon} ${r.title}</div>
+                    <p class="text-xs opacity-80">${r.text}</p>
+                </div>
+            `).join('');
+
+            // Sentence Analysis
+            const sentHtml = sentences.map((s, i) => {
+                const wCount = countWords(s).length;
+                let cls = 'sentence-short';
+                if (wCount > 20) cls = 'sentence-long';
+                else if (wCount > 12) cls = 'sentence-medium';
+                return `<div class="${cls}"><span class="text-slate-400 mr-2">${i+1}.</span><span class="text-white/80">${s.length > 120 ? s.substring(0, 120) + '...' : s}</span> <span class="text-slate-500 ml-1">(${wCount} Wörter)</span></div>`;
+            }).join('');
+            document.getElementById('sentenceList').innerHTML = sentHtml || '<p class="text-slate-500 text-xs">Keine Sätze erkannt.</p>';
+
+            document.getElementById('detailedResults').classList.remove('hidden');
+        }
+
+        function updateLiveStats() {
+            const text = document.getElementById('textInput').value;
+            const words = countWords(text).length;
+            const sentences = splitIntoSentences(text).length;
+            document.getElementById('wordCount').textContent = `${words} Wörter`;
+            document.getElementById('sentenceCount').textContent = `${sentences} Sätze`;
+            document.getElementById('charCount').textContent = `${text.length} Zeichen`;
+        }
+
+        function clearText() {
+            document.getElementById('textInput').value = '';
+            updateLiveStats();
+            document.getElementById('detailedResults').classList.add('hidden');
+            document.getElementById('scoreValue').textContent = '–';
+            document.getElementById('scoreLevel').textContent = 'Text eingeben und analysieren';
+            document.getElementById('scoreSublevel').textContent = '';
+            document.getElementById('scoreCircle').style.strokeDashoffset = '471';
+        }
+
+        function loadExample() {
+            document.getElementById('textInput').value = `Suchmaschinenoptimierung ist ein wichtiger Bestandteil jeder digitalen Marketingstrategie. Wer im Internet gefunden werden möchte, kommt an SEO nicht vorbei. Dabei geht es darum, die eigene Website so zu gestalten, dass sie von Google möglichst weit oben in den Suchergebnissen angezeigt wird.
+
+Der erste Schritt ist die Keyword-Recherche. Finden Sie heraus, welche Suchbegriffe Ihre Zielgruppe verwendet. Tools wie der Google Keyword Planner oder Ubersuggest helfen dabei. Wählen Sie Keywords mit gutem Suchvolumen und überschaubarem Wettbewerb.
+
+Gute Inhalte sind das Herzstück jeder SEO-Strategie. Schreiben Sie Texte, die wirklich helfen. Beantworten Sie die Fragen Ihrer Leser konkret und klar. Vermeiden Sie zu lange Schachtelsätze. Kurze Sätze sind leichter zu lesen. Sie wirken professionell und glaubwürdig.
+
+Technische SEO umfasst schnelle Ladezeiten, ein sauberes HTML-Gerüst und eine mobile Darstellung. Google bevorzugt Websites, die schnell laden und auf dem Smartphone gut aussehen. Prüfen Sie regelmäßig Ihre Core Web Vitals mit dem Google Search Console-Tool.
+
+Interne Verlinkung hilft Suchmaschinen, Ihre Seite zu verstehen. Verlinken Sie verwandte Artikel miteinander. Nutzen Sie aussagekräftige Ankertexte. So stärken Sie wichtige Seiten und verbessern die Nutzererfahrung gleichzeitig.`;
+            updateLiveStats();
+        }
+    </script>
+</body>
+</html>
