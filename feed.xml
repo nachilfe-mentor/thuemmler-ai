@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Mon, 06 Apr 2026 03:34:36 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 06 Apr 2026 03:39:27 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Heading-Struktur optimieren: H1 bis H6 richtig einsetzen</title>
+      <link>https://shift07.ai/blog/heading-struktur-optimieren.html</link>
+      <guid>https://shift07.ai/blog/heading-struktur-optimieren.html</guid>
+      <pubDate>Mon, 06 Apr 2026 03:39:03 +0000</pubDate>
+      <description>Erfahre, wie du H1 bis H6 Überschriften für SEO und Nutzer korrekt einsetzt. Mit Praxisbeispielen, häufigen Fehlern und einer Checkliste für die perfekte Heading-Hierarchie.</description>
+      <category>On-Page SEO</category>
+    </item>
     <item>
       <title>Keyword-Recherche für Einsteiger: So findest du die richtigen Keywords</title>
       <link>https://shift07.ai/blog/keyword-recherche-einsteiger.html</link>
@@ -157,14 +165,6 @@
       <guid>https://shift07.ai/blog/mobile-optimierung-website-checkliste.html</guid>
       <pubDate>Fri, 03 Apr 2026 07:50:52 +0000</pubDate>
       <description>Mobile Optimierung für deine Website: Checkliste mit 15 konkreten Schritten für Responsive Design, Ladezeit, Touch-Bedienung und Mobile-First SEO.</description>
-      <category>SEO Grundlagen</category>
-    </item>
-    <item>
-      <title>Was ist SEO? Ein verständlicher Leitfaden für Einsteiger</title>
-      <link>https://shift07.ai/blog/was-ist-seo.html</link>
-      <guid>https://shift07.ai/blog/was-ist-seo.html</guid>
-      <pubDate>Fri, 03 Apr 2026 04:41:04 +0000</pubDate>
-      <description>Was ist SEO und warum ist es wichtig? Lerne die 8 wichtigsten Ranking-Faktoren kennen und erfahre, wie du deine Website für Suchmaschinen optimierst.</description>
       <category>SEO Grundlagen</category>
     </item>
   </channel>
