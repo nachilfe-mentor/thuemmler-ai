@@ -5,13 +5,13 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Mon, 06 Apr 2026 03:39:27 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 06 Apr 2026 05:17:14 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>Heading-Struktur optimieren: H1 bis H6 richtig einsetzen</title>
       <link>https://shift07.ai/blog/heading-struktur-optimieren.html</link>
       <guid>https://shift07.ai/blog/heading-struktur-optimieren.html</guid>
-      <pubDate>Mon, 06 Apr 2026 03:39:03 +0000</pubDate>
+      <pubDate>Mon, 06 Apr 2026 05:17:03 +0000</pubDate>
       <description>Erfahre, wie du H1 bis H6 Überschriften für SEO und Nutzer korrekt einsetzt. Mit Praxisbeispielen, häufigen Fehlern und einer Checkliste für die perfekte Heading-Hierarchie.</description>
       <category>On-Page SEO</category>
     </item>
@@ -19,8 +19,16 @@
       <title>Keyword-Recherche für Einsteiger: So findest du die richtigen Keywords</title>
       <link>https://shift07.ai/blog/keyword-recherche-einsteiger.html</link>
       <guid>https://shift07.ai/blog/keyword-recherche-einsteiger.html</guid>
-      <pubDate>Mon, 06 Apr 2026 03:29:31 +0000</pubDate>
+      <pubDate>Mon, 06 Apr 2026 05:16:49 +0000</pubDate>
       <description>Keyword-Recherche ist die Basis jedes erfolgreichen SEO-Projekts. Lerne, wie du mit kostenlosen Tools die richtigen Keywords findest, analysierst und gezielt einsetzt.</description>
+      <category>On-Page SEO</category>
+    </item>
+    <item>
+      <title>Interne Verlinkung: Strategie für bessere SEO-Rankings</title>
+      <link>https://shift07.ai/blog/interne-verlinkung-seo-strategie.html</link>
+      <guid>https://shift07.ai/blog/interne-verlinkung-seo-strategie.html</guid>
+      <pubDate>Mon, 06 Apr 2026 05:16:14 +0000</pubDate>
+      <description>Interne Verlinkung richtig einsetzen: So verteilst du Link-Juice, stärkst wichtige Seiten und verbesserst deine SEO-Rankings nachhaltig. Mit Checkliste und konkreten Beispielen.</description>
       <category>On-Page SEO</category>
     </item>
     <item>
@@ -158,14 +166,6 @@
       <pubDate>Fri, 03 Apr 2026 11:06:50 +0000</pubDate>
       <description>Canonical-Tags sind das wichtigste Werkzeug gegen Duplicate Content. Erfahre, wann du sie brauchst, wie du sie richtig einsetzt und welche Fehler du vermeiden solltest.</description>
       <category>Technisches SEO</category>
-    </item>
-    <item>
-      <title>Mobile Optimierung für Websites: Die komplette Checkliste 2026</title>
-      <link>https://shift07.ai/blog/mobile-optimierung-website-checkliste.html</link>
-      <guid>https://shift07.ai/blog/mobile-optimierung-website-checkliste.html</guid>
-      <pubDate>Fri, 03 Apr 2026 07:50:52 +0000</pubDate>
-      <description>Mobile Optimierung für deine Website: Checkliste mit 15 konkreten Schritten für Responsive Design, Ladezeit, Touch-Bedienung und Mobile-First SEO.</description>
-      <category>SEO Grundlagen</category>
     </item>
   </channel>
 </rss>
