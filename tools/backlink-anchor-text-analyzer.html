@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K1S1RXBDS8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K1S1RXBDS8');
+    </script>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8475857002943858" crossorigin="anonymous"></script>
+    <title>Backlink-Anchor-Text-Analyzer - Ankertexte kostenlos analysieren | Shift07</title>
+    <meta name="description" content="Backlink-Anchor-Text-Analyzer: Analysiere kostenlos die Anchor-Text-Verteilung deines Backlink-Profils. CSV-Import aus Ahrefs, SEMrush und Google Search Console.">
+    <meta name="keywords" content="backlink anchor text analyzer, ankertext analyse, backlink profil prüfen, anchor text distribution, seo backlinks">
+    <meta name="author" content="Thümmler AI GmbH">
+    <link rel="icon" type="image/png" href="/logo.png">
+    <link rel="canonical" href="https://shift07.ai/tools/backlink-anchor-text-analyzer.html">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Backlink-Anchor-Text-Analyzer - Ankertexte kostenlos analysieren">
+    <meta property="og:description" content="Analysiere kostenlos die Anchor-Text-Verteilung deines Backlink-Profils. Erkenne Überoptimierung, generische Ankertexte und erhalte konkrete SEO-Empfehlungen.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://shift07.ai/tools/backlink-anchor-text-analyzer.html">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="Shift07">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Backlink-Anchor-Text-Analyzer - Ankertexte kostenlos analysieren">
+    <meta name="twitter:description" content="Analysiere kostenlos die Anchor-Text-Verteilung deines Backlink-Profils.">
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Backlink-Anchor-Text-Analyzer",
+      "description": "Analysiere kostenlos die Anchor-Text-Verteilung deines Backlink-Profils. CSV-Import aus Ahrefs, SEMrush und Google Search Console.",
+      "url": "https://shift07.ai/tools/backlink-anchor-text-analyzer.html",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR"
+      },
+      "provider": {
+        "@type": "Organization",
+        "name": "Thümmler AI GmbH",
+        "url": "https://shift07.ai"
+      }
+    }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { 'inter': ['Inter', 'system-ui', '-apple-system', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: rgba(15, 23, 42, 0.5); }
+        ::-webkit-scrollbar-thumb { background: rgba(59, 130, 246, 0.5); border-radius: 4px; }
+        html { scroll-behavior: smooth; }
+        .bar-fill { transition: width 0.6s cubic-bezier(.4,0,.2,1); }
+        .type-badge { display: inline-flex; align-items: center; padding: 0.15rem 0.6rem; border-radius: 9999px; font-size: 0.75rem; font-weight: 600; }
+        .tab-btn.active { background: rgba(99,102,241,0.2); color: #818cf8; border-color: rgba(99,102,241,0.4); }
+    </style>
+</head>
+<body class="bg-slate-900 text-white min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-slate-900/80 backdrop-blur-xl border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <a href="/" class="flex items-center gap-2">
+                    <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                    <span class="text-xl font-bold text-white">Shift07</span>
+                </a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="/" class="text-gray-300 hover:text-white transition-colors">SEO-Tool</a>
+                    <a href="/blog/" class="text-gray-300 hover:text-white transition-colors">Blog</a>
+                    <a href="/tools/" class="text-white font-medium border-b-2 border-blue-500 pb-0.5">Tools</a>
+                    <a href="/app/#/login" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-5 py-2 rounded-lg font-medium transition-all">Anmelden</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-gray-300 hover:text-white">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900/95 border-b border-white/10">
+            <div class="px-4 py-3 space-y-2">
+                <a href="/" class="block py-2 text-gray-300 hover:text-white">SEO-Tool</a>
+                <a href="/blog/" class="block py-2 text-gray-300 hover:text-white">Blog</a>
+                <a href="/tools/" class="block py-2 text-white font-medium">Tools</a>
+                <a href="/app/#/login" class="block py-2 text-blue-400 hover:text-blue-300">Anmelden</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="pt-24 pb-8 px-4">
+        <div class="max-w-4xl mx-auto text-center">
+            <div class="inline-flex items-center gap-2 bg-indigo-500/10 border border-indigo-500/20 rounded-full px-4 py-1.5 mb-6">
+                <svg class="w-4 h-4 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
+                <span class="text-sm text-indigo-300 font-medium">Backlink-Analyse</span>
+            </div>
+            <h1 class="text-3xl md:text-5xl font-extrabold text-white mb-4">Backlink-Anchor-Text-Analyzer</h1>
+            <p class="text-gray-400 text-lg max-w-2xl mx-auto">Analysiere die Anchor-Text-Verteilung deines Backlink-Profils. Erkenne Überoptimierung und hole dir konkrete SEO-Empfehlungen — 100% kostenlos und direkt im Browser.</p>
+        </div>
+    </section>
+
+    <!-- Main Tool -->
+    <section class="py-8 px-4">
+        <div class="max-w-4xl mx-auto space-y-6">
+
+            <!-- Input Mode Tabs -->
+            <div class="bg-slate-800/50 border border-white/10 rounded-2xl p-6">
+                <div class="flex gap-3 mb-6 flex-wrap">
+                    <button onclick="switchTab('csv')" id="tab-csv" class="tab-btn active px-4 py-2 rounded-lg border border-white/10 text-sm font-medium transition-all">CSV-Daten einfügen</button>
+                    <button onclick="switchTab('manual')" id="tab-manual" class="tab-btn px-4 py-2 rounded-lg border border-white/10 text-sm font-medium text-gray-400 transition-all">Ankertexte (Liste)</button>
+                </div>
+
+                <!-- CSV Tab -->
+                <div id="panel-csv">
+                    <p class="text-sm text-gray-400 mb-3">Füge CSV-Daten aus <strong class="text-gray-300">Ahrefs</strong>, <strong class="text-gray-300">SEMrush</strong> oder einer anderen Quelle ein. Erwartetes Format: <code class="bg-slate-700 px-1.5 py-0.5 rounded text-xs text-blue-300">Quell-URL,Ziel-URL,Ankertext</code> (eine Zeile pro Backlink, mit oder ohne Header).</p>
+                    <textarea id="csv-input" rows="8" placeholder="source_url,target_url,anchor_text&#10;https://blog.example.com/article1,https://meine-seite.de/,SEO Analyse Tool&#10;https://forum.example.org/thread,https://meine-seite.de/,hier klicken&#10;https://news.example.net/post,https://meine-seite.de/,https://meine-seite.de/&#10;https://beispiel.de/seite,https://meine-seite.de/,meine-seite.de" class="w-full bg-slate-900/50 border border-white/10 rounded-xl px-4 py-3 text-sm text-gray-300 focus:outline-none focus:border-indigo-500 resize-y font-mono"></textarea>
+                    <div class="mt-3 flex justify-between items-center">
+                        <span class="text-xs text-gray-500">Tipp: Exportiere Backlinks als CSV aus deinem SEO-Tool und füge die Spalten quell-url, ziel-url, ankertext ein.</span>
+                        <button onclick="loadDemo()" class="text-xs text-indigo-400 hover:text-indigo-300 underline">Demo-Daten laden</button>
+                    </div>
+                </div>
+
+                <!-- Manual Tab -->
+                <div id="panel-manual" class="hidden">
+                    <p class="text-sm text-gray-400 mb-3">Trage Ankertexte ein — einen pro Zeile. Ideal für einen schnellen Check deiner wichtigsten Backlinks.</p>
+                    <textarea id="manual-input" rows="8" placeholder="SEO Analyse kostenlos&#10;Shift07&#10;hier klicken&#10;https://meine-seite.de&#10;meine-seite.de&#10;Website analysieren&#10;On-Page SEO Tool&#10;mehr erfahren" class="w-full bg-slate-900/50 border border-white/10 rounded-xl px-4 py-3 text-sm text-gray-300 focus:outline-none focus:border-indigo-500 resize-y font-mono"></textarea>
+                </div>
+
+                <!-- Brand/Keyword Config -->
+                <div class="mt-5 pt-5 border-t border-white/10 grid md:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-300 mb-1.5">Markenname(n) <span class="text-gray-500 font-normal">(kommagetrennt)</span></label>
+                        <input id="brand-input" type="text" placeholder="z.B. Shift07, shift07.ai, Thümmler AI" class="w-full bg-slate-900/50 border border-white/10 rounded-lg px-3 py-2 text-sm text-gray-300 focus:outline-none focus:border-indigo-500">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-300 mb-1.5">Ziel-Keyword(s) <span class="text-gray-500 font-normal">(kommagetrennt)</span></label>
+                        <input id="keyword-input" type="text" placeholder="z.B. SEO Analyse, Website analysieren" class="w-full bg-slate-900/50 border border-white/10 rounded-lg px-3 py-2 text-sm text-gray-300 focus:outline-none focus:border-indigo-500">
+                    </div>
+                </div>
+
+                <button onclick="analyze()" class="mt-5 w-full bg-gradient-to-r from-indigo-600 to-blue-600 hover:from-indigo-500 hover:to-blue-500 text-white py-3 rounded-xl font-semibold transition-all flex items-center justify-center gap-2">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+                    Anchor-Text-Profil analysieren
+                </button>
+                <div id="error-msg" class="hidden mt-3 p-3 bg-red-500/10 border border-red-500/30 rounded-lg text-red-400 text-sm"></div>
+            </div>
+
+            <!-- Results -->
+            <div id="results" class="hidden space-y-6">
+
+                <!-- Summary Stats -->
+                <div id="stats-grid" class="grid grid-cols-2 md:grid-cols-4 gap-4"></div>
+
+                <!-- Distribution Chart -->
+                <div class="bg-slate-800/50 border border-white/10 rounded-2xl p-6">
+                    <h2 class="text-lg font-bold text-white mb-5">Anchor-Text-Typen — Verteilung</h2>
+                    <div id="dist-chart" class="space-y-3"></div>
+                </div>
+
+                <!-- Top Anchors -->
+                <div class="bg-slate-800/50 border border-white/10 rounded-2xl p-6">
+                    <div class="flex items-center justify-between mb-5">
+                        <h2 class="text-lg font-bold text-white">Top-Ankertexte (nach Häufigkeit)</h2>
+                        <span id="top-count" class="text-xs text-gray-500"></span>
+                    </div>
+                    <div id="top-anchors" class="space-y-2"></div>
+                </div>
+
+                <!-- Recommendations -->
+                <div id="recommendations" class="bg-slate-800/50 border border-white/10 rounded-2xl p-6">
+                    <h2 class="text-lg font-bold text-white mb-4">SEO-Empfehlungen</h2>
+                    <div id="recs-list" class="space-y-3"></div>
+                </div>
+
+                <!-- Export -->
+                <div class="flex gap-3 flex-wrap">
+                    <button onclick="copyReport()" class="flex items-center gap-2 bg-slate-700 hover:bg-slate-600 text-white px-5 py-2.5 rounded-lg text-sm font-medium transition-all">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                        Report kopieren
+                    </button>
+                    <button onclick="document.getElementById('results').scrollIntoView({behavior:'smooth'})" class="flex items-center gap-2 bg-indigo-600/20 hover:bg-indigo-600/30 border border-indigo-500/30 text-indigo-400 px-5 py-2.5 rounded-lg text-sm font-medium transition-all">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/></svg>
+                        Nach oben
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Info Section -->
+    <section class="py-12 px-4 border-t border-white/5">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-2xl font-bold text-white mb-6">Was ist Anchor-Text-Analyse?</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-slate-800/30 border border-white/5 rounded-xl p-5">
+                    <h3 class="font-semibold text-white mb-2">Warum Ankertexte wichtig sind</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Der Ankertext eines Backlinks sagt Google, wofür eine Seite relevant ist. Zu viele exakte Keyword-Übereinstimmungen können als Überoptimierung gewertet werden. Eine natürliche Mischung aus Marken-, generischen und Keyword-Ankertexten ist ideal.</p>
+                </div>
+                <div class="bg-slate-800/30 border border-white/5 rounded-xl p-5">
+                    <h3 class="font-semibold text-white mb-2">Ideale Verteilung</h3>
+                    <ul class="text-gray-400 text-sm space-y-1.5">
+                        <li>🏷️ <strong class="text-gray-300">Branded:</strong> 40–60 % (natürlichste Linkform)</li>
+                        <li>🔑 <strong class="text-gray-300">Exakt/Partial Match:</strong> 5–20 % (nicht überoptimieren)</li>
+                        <li>🔗 <strong class="text-gray-300">Nackte URL:</strong> 10–20 % (sehr natürlich)</li>
+                        <li>📝 <strong class="text-gray-300">Generisch:</strong> 10–20 % (hier klicken, mehr, etc.)</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-6 bg-blue-500/10 border border-blue-500/20 rounded-xl p-5">
+                <p class="text-sm text-blue-300">Weitere Infos zur Backlink-Strategie findest du im <a href="/blog/" class="underline hover:text-blue-200">Shift07 Blog</a>. Analysiere auch die technische Basis deiner Website mit der <a href="/" class="underline hover:text-blue-200">kostenlosen SEO-Analyse</a>.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/10 bg-slate-900/50 py-12 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="flex items-center gap-2">
+                    <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                    <span class="text-lg font-bold text-white">Shift07</span>
+                </div>
+                <div class="flex items-center space-x-6 text-sm text-gray-400">
+                    <a href="/impressum.html" class="hover:text-white transition-colors">Impressum</a>
+                    <a href="/datenschutz.html" class="hover:text-white transition-colors">Datenschutz</a>
+                    <a href="/agb.html" class="hover:text-white transition-colors">AGB</a>
+                </div>
+                <p class="text-sm text-gray-500">&copy; 2026 Thümmler AI GmbH</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+    // ─── Tab Logic ───────────────────────────────────────────────────────────
+    function switchTab(tab) {
+        ['csv','manual'].forEach(t => {
+            document.getElementById('panel-' + t).classList.add('hidden');
+            document.getElementById('tab-' + t).classList.remove('active');
+            document.getElementById('tab-' + t).classList.add('text-gray-400');
+        });
+        document.getElementById('panel-' + tab).classList.remove('hidden');
+        document.getElementById('tab-' + tab).classList.add('active');
+        document.getElementById('tab-' + tab).classList.remove('text-gray-400');
+    }
+
+    // ─── Demo Data ────────────────────────────────────────────────────────────
+    function loadDemo() {
+        const demo = `source_url,target_url,anchor_text
+https://seo-blog.de/artikel/tools,https://shift07.de/,Shift07
+https://webmaster-tipps.net/forum,https://shift07.de/,shift07.de
+https://marketing-guide.org/seo,https://shift07.de/,SEO Analyse kostenlos
+https://digitalagentur-test.de,https://shift07.de/,Website kostenlos analysieren
+https://techreview.de/tools,https://shift07.de/,hier klicken
+https://seo-checker.com/compare,https://shift07.de/,mehr erfahren
+https://webkatalog.de/eintrag,https://shift07.de/,https://shift07.de/
+https://branchenverzeichnis.at/,https://shift07.de/,https://shift07.de/app
+https://social-share.example.com,https://shift07.de/,Shift07 SEO Tool
+https://review-platform.io/apps,https://shift07.de/,Shift07 - Kostenlose SEO Analyse
+https://community.wordpress.org,https://shift07.de/,SEO kostenlos prüfen
+https://forum.selfhtml.org/answer,https://shift07.de/,kostenloses SEO-Tool
+https://resource-page.de/links,https://shift07.de/,Thümmler AI
+https://blog-post.example.com,https://shift07.de/,shift07
+https://news.example.net/startup,https://shift07.de/,Website analysieren
+https://podcastnotes.de/episode,https://shift07.de/,Shift07
+https://digital-tools.de/liste,https://shift07.de/,SEO Analyse Tool Shift07
+https://webagentur.example/empfehlungen,https://shift07.de/,mehr Infos
+https://gastbeitrag.blog.de/seo,https://shift07.de/,Website-SEO verbessern
+https://it-tipps.de/tools-2026,https://shift07.de/,zum Tool`;
+        document.getElementById('csv-input').value = demo;
+        document.getElementById('brand-input').value = 'Shift07, shift07.de, Thümmler AI';
+        document.getElementById('keyword-input').value = 'SEO Analyse, Website analysieren, SEO Tool';
+    }
+
+    // ─── Analysis Engine ──────────────────────────────────────────────────────
+    const GENERIC_ANCHORS = new Set([
+        'hier','hier klicken','klicken','click here','more','mehr','mehr erfahren',
+        'weiterlesen','read more','mehr lesen','website','webseite','homepage',
+        'mehr infos','mehr informationen','zum tool','zum artikel','link','this',
+        'source','quelle','besuchen','jetzt besuchen','weiter','continue','check it out'
+    ]);
+
+    function classify(anchor, brands, keywords) {
+        const a = anchor.trim().toLowerCase();
+        if (!a || a === '(not provided)' || a === 'image' || a === '[image]') return 'image';
+        if (/^https?:\/\//i.test(a) || /^www\./i.test(a) || /^[a-z0-9-]+\.[a-z]{2,}/i.test(a)) return 'naked';
+        if (GENERIC_ANCHORS.has(a)) return 'generic';
+        for (const b of brands) {
+            if (b && a.includes(b.toLowerCase().trim())) return 'branded';
+        }
+        for (const k of keywords) {
+            if (!k) continue;
+            const kl = k.toLowerCase().trim();
+            if (a === kl) return 'exact';
+            if (a.includes(kl) || kl.includes(a)) return 'partial';
+        }
+        return 'other';
+    }
+
+    function parseCSV(text) {
+        const lines = text.trim().split('\n').filter(l => l.trim());
+        const anchors = [];
+        for (let i = 0; i < lines.length; i++) {
+            const line = lines[i].trim();
+            // Skip header line
+            if (i === 0 && /anchor|anker|text|keyword/i.test(line)) continue;
+            // Try to split by comma (last field = anchor)
+            const parts = line.split(',');
+            if (parts.length >= 3) {
+                anchors.push(parts.slice(2).join(',').replace(/^["']|["']$/g, '').trim());
+            } else if (parts.length === 2) {
+                anchors.push(parts[1].replace(/^["']|["']$/g, '').trim());
+            } else {
+                anchors.push(line.replace(/^["']|["']$/g, '').trim());
+            }
+        }
+        return anchors.filter(a => a.length > 0);
+    }
+
+    function parseManual(text) {
+        return text.trim().split('\n').map(l => l.trim()).filter(l => l.length > 0);
+    }
+
+    function analyze() {
+        const errEl = document.getElementById('error-msg');
+        errEl.classList.add('hidden');
+
+        const mode = document.getElementById('panel-csv').classList.contains('hidden') ? 'manual' : 'csv';
+        const rawText = mode === 'csv'
+            ? document.getElementById('csv-input').value
+            : document.getElementById('manual-input').value;
+
+        if (!rawText.trim()) {
+            errEl.textContent = 'Bitte gib Daten ein oder lade die Demo-Daten.';
+            errEl.classList.remove('hidden');
+            return;
+        }
+
+        const anchors = mode === 'csv' ? parseCSV(rawText) : parseManual(rawText);
+        if (anchors.length === 0) {
+            errEl.textContent = 'Keine Ankertexte gefunden. Bitte prüfe das Format.';
+            errEl.classList.remove('hidden');
+            return;
+        }
+
+        const brands = document.getElementById('brand-input').value.split(',').map(s => s.trim()).filter(Boolean);
+        const keywords = document.getElementById('keyword-input').value.split(',').map(s => s.trim()).filter(Boolean);
+
+        // Classify
+        const categories = { branded: 0, exact: 0, partial: 0, generic: 0, naked: 0, image: 0, other: 0 };
+        const anchorMap = new Map();
+        const anchorTypes = new Map();
+
+        for (const a of anchors) {
+            const type = classify(a, brands, keywords);
+            categories[type]++;
+            const key = a.toLowerCase().trim();
+            anchorMap.set(key, (anchorMap.get(key) || 0) + 1);
+            anchorTypes.set(key, type);
+        }
+
+        renderResults(anchors.length, categories, anchorMap, anchorTypes, brands, keywords);
+    }
+
+    const TYPE_META = {
+        branded: { label: 'Branded', color: '#6366f1', bg: 'rgba(99,102,241,0.15)', border: 'rgba(99,102,241,0.4)', emoji: '🏷️' },
+        exact:   { label: 'Exakter Match', color: '#f59e0b', bg: 'rgba(245,158,11,0.15)', border: 'rgba(245,158,11,0.4)', emoji: '🎯' },
+        partial: { label: 'Partieller Match', color: '#10b981', bg: 'rgba(16,185,129,0.15)', border: 'rgba(16,185,129,0.4)', emoji: '🔑' },
+        generic: { label: 'Generisch', color: '#94a3b8', bg: 'rgba(148,163,184,0.15)', border: 'rgba(148,163,184,0.3)', emoji: '📝' },
+        naked:   { label: 'Nackte URL', color: '#3b82f6', bg: 'rgba(59,130,246,0.15)', border: 'rgba(59,130,246,0.4)', emoji: '🔗' },
+        image:   { label: 'Bild / Leer', color: '#8b5cf6', bg: 'rgba(139,92,246,0.15)', border: 'rgba(139,92,246,0.3)', emoji: '🖼️' },
+        other:   { label: 'Sonstige', color: '#64748b', bg: 'rgba(100,116,139,0.1)', border: 'rgba(100,116,139,0.3)', emoji: '📌' },
+    };
+
+    function pct(n, total) { return total > 0 ? Math.round(n / total * 100) : 0; }
+
+    function renderResults(total, categories, anchorMap, anchorTypes, brands, keywords) {
+        // Stats
+        const keywordMatch = categories.exact + categories.partial;
+        document.getElementById('stats-grid').innerHTML = [
+            { label: 'Gesamt Backlinks', value: total, icon: '🔗', color: 'blue' },
+            { label: 'Anchor-Text-Typen', value: Object.values(categories).filter(v => v > 0).length, icon: '📊', color: 'indigo' },
+            { label: 'Keyword-Match', value: keywordMatch + ' (' + pct(keywordMatch, total) + '%)' , icon: '🎯', color: 'amber' },
+            { label: 'Branded Links', value: categories.branded + ' (' + pct(categories.branded, total) + '%)', icon: '🏷️', color: 'green' },
+        ].map(s => `<div class="bg-${s.color}-500/10 border border-${s.color}-500/20 rounded-xl p-4 text-center">
+            <div class="text-2xl mb-1">${s.icon}</div>
+            <div class="text-xl font-bold text-white">${s.value}</div>
+            <div class="text-xs text-gray-400 mt-0.5">${s.label}</div>
+        </div>`).join('');
+
+        // Distribution Chart
+        const sorted = Object.entries(categories)
+            .filter(([,v]) => v > 0)
+            .sort((a, b) => b[1] - a[1]);
+        document.getElementById('dist-chart').innerHTML = sorted.map(([type, count]) => {
+            const m = TYPE_META[type];
+            const p = pct(count, total);
+            return `<div class="flex items-center gap-3">
+                <div class="w-28 text-xs text-gray-400 text-right flex-shrink-0 flex items-center justify-end gap-1">
+                    <span>${m.emoji}</span> ${m.label}
+                </div>
+                <div class="flex-1 bg-slate-900/50 rounded-full h-5 overflow-hidden">
+                    <div class="h-5 rounded-full bar-fill flex items-center pl-2" style="width:${Math.max(p,2)}%; background:${m.color}22; border:1px solid ${m.border};">
+                        <span class="text-xs font-semibold" style="color:${m.color}">${p > 8 ? p + '%' : ''}</span>
+                    </div>
+                </div>
+                <div class="w-16 text-right flex-shrink-0">
+                    <span class="text-xs font-semibold text-white">${count}</span>
+                    <span class="text-xs text-gray-500"> (${p}%)</span>
+                </div>
+            </div>`;
+        }).join('');
+
+        // Top Anchors
+        const topList = [...anchorMap.entries()].sort((a, b) => b[1] - a[1]).slice(0, 25);
+        document.getElementById('top-count').textContent = anchorMap.size + ' einzigartige Ankertexte';
+        document.getElementById('top-anchors').innerHTML = topList.map(([anchor, count], i) => {
+            const type = anchorTypes.get(anchor) || 'other';
+            const m = TYPE_META[type];
+            const barW = Math.max(4, pct(count, topList[0][1]));
+            return `<div class="flex items-center gap-3 py-1.5 border-b border-white/5">
+                <span class="text-xs text-gray-600 w-5 text-right flex-shrink-0">${i+1}</span>
+                <div class="flex-1 min-w-0">
+                    <div class="flex items-center gap-2 flex-wrap">
+                        <span class="text-sm text-gray-200 truncate max-w-xs" title="${anchor}">${anchor || '(leer)'}</span>
+                        <span class="type-badge text-xs flex-shrink-0" style="background:${m.bg};color:${m.color};border:1px solid ${m.border}">${m.emoji} ${m.label}</span>
+                    </div>
+                    <div class="mt-1.5 bg-slate-900/50 rounded-full h-1.5 w-full">
+                        <div class="h-1.5 rounded-full" style="width:${barW}%; background:${m.color}88;"></div>
+                    </div>
+                </div>
+                <span class="text-sm font-semibold text-white flex-shrink-0 w-8 text-right">${count}×</span>
+            </div>`;
+        }).join('');
+
+        // Recommendations
+        const recs = [];
+        const exactPct = pct(categories.exact, total);
+        const partialPct = pct(categories.partial, total);
+        const brandedPct = pct(categories.branded, total);
+        const genericPct = pct(categories.generic, total);
+        const nakedPct = pct(categories.naked, total);
+        const kmPct = exactPct + partialPct;
+
+        if (kmPct > 30) {
+            recs.push({ type: 'danger', icon: '⚠️', text: `<strong>Überoptimierungsrisiko:</strong> ${kmPct}% der Ankertexte sind Keyword-Matches (Ziel: unter 20%). Googles Penguin-Algorithmus wertet unnatürlich viele exakte Keyword-Ankertexte als Manipulation. Bemühe dich um mehr Branded- und generische Links.` });
+        } else if (kmPct > 20) {
+            recs.push({ type: 'warning', icon: '⚡', text: `<strong>Keyword-Match knapp erhöht:</strong> ${kmPct}% Keyword-Ankertexte. Beobachte diese Zahl und vermeide gezielte Keyword-Anchor-Kampagnen.` });
+        } else {
+            recs.push({ type: 'success', icon: '✅', text: `<strong>Keyword-Match im grünen Bereich:</strong> ${kmPct}% — gesundes Verhältnis ohne Überoptimierungsrisiko.` });
+        }
+
+        if (brandedPct < 20 && total >= 10) {
+            recs.push({ type: 'warning', icon: '🏷️', text: `<strong>Zu wenig Branded-Links:</strong> Nur ${brandedPct}% tragen deinen Markennamen als Ankertext. Natürliche Backlinks entstehen meist durch Markenerwähnungen. Prüfe, ob du aktiv für Branded-Links bekannt machst.` });
+        } else if (brandedPct >= 40) {
+            recs.push({ type: 'success', icon: '✅', text: `<strong>Gutes Branded-Profil:</strong> ${brandedPct}% Branded-Ankertexte — das signalisiert Google Autorität und Natürlichkeit.` });
+        }
+
+        if (genericPct > 30) {
+            recs.push({ type: 'info', icon: '📝', text: `<strong>Viele generische Ankertexte:</strong> ${genericPct}% wie "hier klicken", "mehr" oder "weiterlesen". Das ist an sich nicht schlimm, bietet aber keine Rankingsignale. Versuche, bei zukünftigen Kooperationen keyword-reichere Ankertexte zu vereinbaren.` });
+        }
+
+        if (nakedPct < 5 && total >= 15) {
+            recs.push({ type: 'info', icon: '🔗', text: `<strong>Wenige nackte URLs:</strong> Nur ${nakedPct}% nackte URL-Links. Diese sind sehr natürlich (z.B. in Foren, Direktzitaten). Ein höherer Anteil würde das Profil diversifizieren.` });
+        }
+
+        if (categories.other > total * 0.3) {
+            recs.push({ type: 'info', icon: '📌', text: `<strong>Viele "Sonstige" Ankertexte:</strong> Gib Markennamen und Ziel-Keywords ein, um eine präzisere Kategorisierung zu erhalten.` });
+        }
+
+        if (recs.length === 0) {
+            recs.push({ type: 'success', icon: '✅', text: '<strong>Alles im grünen Bereich!</strong> Dein Anchor-Text-Profil sieht natürlich aus.' });
+        }
+
+        const typeColors = { danger: 'red', warning: 'amber', success: 'green', info: 'blue' };
+        document.getElementById('recs-list').innerHTML = recs.map(r => {
+            const c = typeColors[r.type] || 'blue';
+            return `<div class="flex gap-3 p-3 bg-${c}-500/10 border border-${c}-500/20 rounded-xl">
+                <span class="text-lg flex-shrink-0 mt-0.5">${r.icon}</span>
+                <p class="text-sm text-gray-300 leading-relaxed">${r.text}</p>
+            </div>`;
+        }).join('');
+
+        document.getElementById('results').classList.remove('hidden');
+        document.getElementById('results').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // ─── Report Export ────────────────────────────────────────────────────────
+    function copyReport() {
+        const lines = ['=== Backlink-Anchor-Text-Analyse (Shift07) ==='];
+        const stats = document.getElementById('stats-grid').innerText.replace(/\n+/g, ' | ');
+        lines.push('\n[Zusammenfassung]\n' + stats);
+        lines.push('\n[Top-Ankertexte]\n' + document.getElementById('top-anchors').innerText);
+        lines.push('\n[Empfehlungen]\n' + document.getElementById('recs-list').innerText);
+        lines.push('\n--- Erstellt mit shift07.ai ---');
+        navigator.clipboard.writeText(lines.join('\n')).then(() => {
+            const btn = event.target.closest('button');
+            const orig = btn.innerHTML;
+            btn.innerHTML = '<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> Kopiert!';
+            setTimeout(() => btn.innerHTML = orig, 2000);
+        });
+    }
+
+    document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+        document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+    </script>
+</body>
+</html>
