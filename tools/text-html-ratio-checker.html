@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K1S1RXBDS8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K1S1RXBDS8');
+    </script>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8475857002943858" crossorigin="anonymous"></script>
+    <title>Text-zu-HTML-Ratio-Checker - Text/HTML-Verhältnis kostenlos prüfen | Shift07</title>
+    <meta name="description" content="Prüfe das Text-zu-HTML-Verhältnis deiner Webseite kostenlos. Ein gutes Text/HTML-Ratio verbessert dein SEO-Ranking. Analysiere jetzt deinen HTML-Code.">
+    <meta name="keywords" content="text zu html ratio, text html verhältnis checker, text html ratio seo, html code analyse, seo tool kostenlos">
+    <meta name="author" content="Thümmler AI GmbH">
+    <link rel="icon" type="image/png" href="/logo.png">
+    <link rel="canonical" href="https://shift07.ai/tools/text-html-ratio-checker.html">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Text-zu-HTML-Ratio-Checker - Text/HTML-Verhältnis kostenlos prüfen">
+    <meta property="og:description" content="Prüfe das Text-zu-HTML-Verhältnis deiner Webseite kostenlos. Ein gutes Text/HTML-Ratio verbessert dein SEO-Ranking.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://shift07.ai/tools/text-html-ratio-checker.html">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="Shift07">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Text-zu-HTML-Ratio-Checker - Text/HTML-Verhältnis kostenlos prüfen">
+    <meta name="twitter:description" content="Prüfe das Text-zu-HTML-Verhältnis deiner Webseite kostenlos. Ein gutes Text/HTML-Ratio verbessert dein SEO-Ranking.">
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Text-zu-HTML-Ratio-Checker",
+      "description": "Prüfe das Text-zu-HTML-Verhältnis deiner Webseite kostenlos. Ein gutes Text/HTML-Ratio verbessert dein SEO-Ranking.",
+      "url": "https://shift07.ai/tools/text-html-ratio-checker.html",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR"
+      },
+      "provider": {
+        "@type": "Organization",
+        "name": "Thümmler AI GmbH",
+        "url": "https://shift07.ai"
+      }
+    }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: rgba(15, 23, 42, 0.5); }
+        ::-webkit-scrollbar-thumb { background: rgba(59, 130, 246, 0.5); border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: rgba(59, 130, 246, 0.7); }
+        html { scroll-behavior: smooth; }
+        .glass {
+            background: rgba(255, 255, 255, 0.06);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .ratio-bar-bg { background: rgba(255,255,255,0.08); border-radius: 9999px; height: 12px; overflow: hidden; }
+        .ratio-bar-fill { height: 100%; border-radius: 9999px; transition: width 0.8s cubic-bezier(0.4,0,0.2,1); }
+        textarea { resize: vertical; }
+        .score-circle {
+            width: 120px; height: 120px; border-radius: 50%;
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            border: 4px solid;
+            transition: all 0.5s ease;
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <div class="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
+        <!-- Navigation -->
+        <nav class="bg-black/20 backdrop-blur-md border-b border-white/10">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center h-16">
+                    <a href="/" class="flex items-center gap-2">
+                        <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                        <span class="text-xl font-bold text-white">Shift07</span>
+                    </a>
+                    <div class="hidden md:flex items-baseline space-x-4">
+                        <a href="/" class="text-white hover:text-blue-300 px-3 py-2 text-sm font-medium transition-colors">SEO-Tool</a>
+                        <a href="/blog/" class="text-white hover:text-blue-300 px-3 py-2 text-sm font-medium transition-colors">Blog</a>
+                        <a href="/tools/" class="text-blue-300 px-3 py-2 text-sm font-medium">Tools</a>
+                        <a href="/app/#/login" class="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:from-blue-600 hover:to-purple-700 transition-all">Anmelden</a>
+                    </div>
+                    <button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="md:hidden text-white">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                    </button>
+                </div>
+                <div id="mobile-menu" class="hidden md:hidden pb-4">
+                    <a href="/" class="block text-white hover:text-blue-300 px-3 py-2 text-sm font-medium">SEO-Tool</a>
+                    <a href="/blog/" class="block text-white hover:text-blue-300 px-3 py-2 text-sm font-medium">Blog</a>
+                    <a href="/tools/" class="block text-blue-300 px-3 py-2 text-sm font-medium">Tools</a>
+                    <a href="/app/#/login" class="block text-white hover:text-blue-300 px-3 py-2 text-sm font-medium">Anmelden</a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero -->
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-6 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">
+                <span class="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Text-zu-HTML-Ratio-Checker</span>
+            </h1>
+            <p class="text-xl text-blue-200/80 max-w-2xl mx-auto">Analysiere das Verhältnis von sichtbarem Text zu HTML-Code — ein wichtiger SEO-Qualitätsfaktor für Google.</p>
+        </section>
+
+        <!-- Main Tool -->
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+            <div class="grid lg:grid-cols-2 gap-8">
+
+                <!-- Input Form -->
+                <div class="glass rounded-xl p-6 md:p-8">
+                    <h2 class="text-xl font-semibold text-white mb-6">HTML-Code eingeben</h2>
+
+                    <div class="mb-4">
+                        <label class="block text-sm font-medium text-blue-200 mb-2">HTML-Quellcode deiner Seite</label>
+                        <textarea id="htmlInput" rows="14"
+                            class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-blue-400 focus:ring-1 focus:ring-blue-400 font-mono text-sm"
+                            placeholder="Füge hier den vollständigen HTML-Quellcode deiner Seite ein (Strg+A auf der Seite, Quellcode mit Strg+U öffnen)..."></textarea>
+                    </div>
+
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="flex-1 h-px bg-white/10"></div>
+                        <span class="text-white/40 text-sm">oder</span>
+                        <div class="flex-1 h-px bg-white/10"></div>
+                    </div>
+
+                    <div class="mb-6">
+                        <label class="block text-sm font-medium text-blue-200 mb-2">Demo-Beispiel laden</label>
+                        <div class="flex gap-2">
+                            <button onclick="loadExample('good')" class="flex-1 bg-green-600/20 hover:bg-green-600/30 border border-green-500/30 text-green-300 px-4 py-2 rounded-lg text-sm font-medium transition-all">
+                                Gutes Beispiel
+                            </button>
+                            <button onclick="loadExample('bad')" class="flex-1 bg-red-600/20 hover:bg-red-600/30 border border-red-500/30 text-red-300 px-4 py-2 rounded-lg text-sm font-medium transition-all">
+                                Schlechtes Beispiel
+                            </button>
+                        </div>
+                    </div>
+
+                    <button onclick="analyzeRatio()"
+                        class="w-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center gap-2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+                        Ratio analysieren
+                    </button>
+                </div>
+
+                <!-- Output -->
+                <div class="space-y-6">
+
+                    <!-- Score Display -->
+                    <div id="resultPanel" class="glass rounded-xl p-6 md:p-8 hidden">
+                        <h2 class="text-xl font-semibold text-white mb-6">Analyse-Ergebnis</h2>
+
+                        <!-- Main Score -->
+                        <div class="flex items-center gap-6 mb-8">
+                            <div id="scoreCircle" class="score-circle border-gray-500">
+                                <span id="scorePercent" class="text-3xl font-extrabold text-white">0%</span>
+                                <span class="text-xs text-white/60 mt-1">Ratio</span>
+                            </div>
+                            <div class="flex-1">
+                                <div id="scoreLabel" class="text-lg font-bold text-white mb-1">—</div>
+                                <div id="scoreMessage" class="text-sm text-white/70"></div>
+                            </div>
+                        </div>
+
+                        <!-- Ratio Bar -->
+                        <div class="mb-6">
+                            <div class="flex justify-between text-xs text-white/60 mb-1">
+                                <span>HTML-Code</span>
+                                <span>Sichtbarer Text</span>
+                            </div>
+                            <div class="ratio-bar-bg">
+                                <div id="ratioBarText" class="ratio-bar-fill bg-gradient-to-r from-blue-500 to-green-500" style="width:0%"></div>
+                            </div>
+                            <div class="flex justify-between text-xs mt-1">
+                                <span id="htmlPercent" class="text-red-300/80">—% HTML</span>
+                                <span id="textPercent" class="text-green-300/80">—% Text</span>
+                            </div>
+                        </div>
+
+                        <!-- Stats Grid -->
+                        <div class="grid grid-cols-3 gap-3 mb-6">
+                            <div class="bg-white/5 rounded-lg p-3 text-center">
+                                <div id="statHtmlBytes" class="text-lg font-bold text-white">—</div>
+                                <div class="text-xs text-white/50 mt-1">HTML-Bytes</div>
+                            </div>
+                            <div class="bg-white/5 rounded-lg p-3 text-center">
+                                <div id="statTextBytes" class="text-lg font-bold text-white">—</div>
+                                <div class="text-xs text-white/50 mt-1">Text-Bytes</div>
+                            </div>
+                            <div class="bg-white/5 rounded-lg p-3 text-center">
+                                <div id="statWordCount" class="text-lg font-bold text-white">—</div>
+                                <div class="text-xs text-white/50 mt-1">Wörter</div>
+                            </div>
+                        </div>
+
+                        <!-- Recommendations -->
+                        <div id="recommendations" class="space-y-3"></div>
+                    </div>
+
+                    <!-- Empty State -->
+                    <div id="emptyState" class="glass rounded-xl p-8 text-center">
+                        <div class="text-5xl mb-4">📊</div>
+                        <h3 class="text-white font-semibold mb-2">Warte auf deine Analyse</h3>
+                        <p class="text-white/50 text-sm">Füge HTML-Code ein und klicke auf "Ratio analysieren"</p>
+                    </div>
+
+                    <!-- Cross-sell -->
+                    <div class="glass rounded-xl p-6 border-blue-500/30 border">
+                        <div class="flex items-start gap-4">
+                            <div class="bg-blue-500/20 rounded-lg p-3 flex-shrink-0">
+                                <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                            </div>
+                            <div>
+                                <h3 class="text-white font-semibold mb-1">Vollständige SEO-Analyse</h3>
+                                <p class="text-blue-200/70 text-sm mb-3">Das Text/HTML-Ratio ist nur ein Faktor. Shift07 prüft alle 50+ SEO-Signale deiner Website in 60 Sekunden.</p>
+                                <a href="/" class="inline-flex items-center text-blue-400 hover:text-blue-300 text-sm font-medium transition-colors">
+                                    Jetzt kostenlos mit Shift07 prüfen
+                                    <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Explanation Section -->
+            <div class="glass rounded-xl p-6 md:p-8 mt-12">
+                <h2 class="text-2xl font-bold text-white mb-6">Was ist das Text-zu-HTML-Ratio?</h2>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-white/5 rounded-xl p-5">
+                        <div class="flex items-center gap-3 mb-3">
+                            <span class="text-2xl">📐</span>
+                            <h3 class="text-white font-semibold">Definition</h3>
+                        </div>
+                        <p class="text-white/70 text-sm leading-relaxed">Das Text-zu-HTML-Ratio gibt an, wie viel Prozent deiner Seite aus sichtbarem Text bestehen — im Verhältnis zum gesamten HTML-Code. Ein Wert von 25% bedeutet: Ein Viertel des HTML-Codes ist sichtbarer Text, drei Viertel sind Tags, Scripts und Styles.</p>
+                    </div>
+                    <div class="bg-white/5 rounded-xl p-5">
+                        <div class="flex items-center gap-3 mb-3">
+                            <span class="text-2xl">🎯</span>
+                            <h3 class="text-white font-semibold">Optimaler Bereich</h3>
+                        </div>
+                        <p class="text-white/70 text-sm leading-relaxed">Suchmaschinen bevorzugen Seiten mit einem Text/HTML-Ratio zwischen <strong class="text-white">25% und 70%</strong>. Unter 10% deutet auf Code-Bloat oder dünn besetzten Content hin. Über 70% ist ebenfalls möglich — wichtiger ist die absolute Textmenge und -qualität.</p>
+                    </div>
+                    <div class="bg-white/5 rounded-xl p-5">
+                        <div class="flex items-center gap-3 mb-3">
+                            <span class="text-2xl">⚡</span>
+                            <h3 class="text-white font-semibold">Warum ist es SEO-relevant?</h3>
+                        </div>
+                        <p class="text-white/70 text-sm leading-relaxed">Google crawlt deinen HTML-Code, um Inhalte zu verstehen. Je größer das Verhältnis von Code zu Text, desto mehr "Rauschen" muss der Crawler durchdringen, um den eigentlichen Inhalt zu finden. Schlanker Code mit viel relevantem Text erleichtert das Crawlen und Indexieren.</p>
+                    </div>
+                    <div class="bg-white/5 rounded-xl p-5">
+                        <div class="flex items-center gap-3 mb-3">
+                            <span class="text-2xl">🔧</span>
+                            <h3 class="text-white font-semibold">Wie verbessern?</h3>
+                        </div>
+                        <ul class="text-white/70 text-sm leading-relaxed space-y-1">
+                            <li>• CSS und JavaScript in externe Dateien auslagern</li>
+                            <li>• Unnötige HTML-Kommentare entfernen</li>
+                            <li>• Redundante verschachtelte Tags reduzieren</li>
+                            <li>• Mehr hochwertigen Textinhalt hinzufügen</li>
+                            <li>• Inline-Styles durch CSS-Klassen ersetzen</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Bewertungsskala -->
+                <div class="mt-8">
+                    <h3 class="text-white font-semibold mb-4">Bewertungsskala</h3>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+                        <div class="bg-red-900/20 border border-red-500/30 rounded-lg p-3 text-center">
+                            <div class="text-red-400 font-bold text-lg">0–10%</div>
+                            <div class="text-red-300/70 text-xs mt-1">Kritisch — sehr wenig Text</div>
+                        </div>
+                        <div class="bg-yellow-900/20 border border-yellow-500/30 rounded-lg p-3 text-center">
+                            <div class="text-yellow-400 font-bold text-lg">10–25%</div>
+                            <div class="text-yellow-300/70 text-xs mt-1">Verbesserungsbedarf</div>
+                        </div>
+                        <div class="bg-green-900/20 border border-green-500/30 rounded-lg p-3 text-center">
+                            <div class="text-green-400 font-bold text-lg">25–70%</div>
+                            <div class="text-green-300/70 text-xs mt-1">Ideal für SEO</div>
+                        </div>
+                        <div class="bg-blue-900/20 border border-blue-500/30 rounded-lg p-3 text-center">
+                            <div class="text-blue-400 font-bold text-lg">&gt;70%</div>
+                            <div class="text-blue-300/70 text-xs mt-1">Sehr textlastig — ok</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Weitere Tools -->
+                <div class="mt-8 pt-6 border-t border-white/10">
+                    <h3 class="text-white font-semibold mb-4">Weitere SEO-Tools</h3>
+                    <div class="flex flex-wrap gap-3">
+                        <a href="/tools/keyword-density-checker.html" class="bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Keyword-Density-Checker</a>
+                        <a href="/tools/heading-struktur-checker.html" class="bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Heading-Struktur-Checker</a>
+                        <a href="/tools/lesbarkeits-score-checker.html" class="bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Lesbarkeits-Score-Checker</a>
+                        <a href="/tools/internal-link-counter.html" class="bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Internal-Link-Counter</a>
+                        <a href="/tools/duplicate-meta-finder.html" class="bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Duplicate-Meta-Finder</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-black/30 backdrop-blur-md border-t border-white/10">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <div class="text-white/60 mb-4 md:mb-0 text-sm">
+                        &copy; 2026 Thümmler AI GmbH. Alle Rechte vorbehalten.
+                    </div>
+                    <div class="flex space-x-6">
+                        <a href="/impressum.html" class="text-gray-300 hover:text-white transition-colors text-sm">Impressum</a>
+                        <a href="/datenschutz.html" class="text-gray-300 hover:text-white transition-colors text-sm">Datenschutz</a>
+                        <a href="/agb.html" class="text-gray-300 hover:text-white transition-colors text-sm">AGB</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // ---- BEISPIEL-HTML ----
+        const examples = {
+            good: `<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meine SEO-optimierte Seite</title>
+    <meta name="description" content="Eine gut optimierte Seite mit hohem Text-Anteil.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/blog/">Blog</a>
+        <a href="/kontakt.html">Kontakt</a>
+    </nav>
+    <main>
+        <h1>SEO-Tipps für bessere Rankings</h1>
+        <p>Suchmaschinenoptimierung ist ein langfristiger Prozess, der technische Grundlagen, hochwertigen Content und strategischen Linkaufbau vereint. Wer alle drei Bereiche beherrscht, kann langfristig organischen Traffic aufbauen, der nicht von Werbebudgets abhängt.</p>
+        <h2>Was ist On-Page SEO?</h2>
+        <p>On-Page SEO umfasst alle Maßnahmen, die direkt auf deiner Website durchgeführt werden: Keyword-Optimierung, Heading-Struktur, interne Verlinkung, Meta-Tags und die technische Performance. Diese Faktoren beeinflussen direkt, wie Google deine Seite bewertet und einordnet.</p>
+        <h2>Die wichtigsten On-Page Faktoren</h2>
+        <ul>
+            <li>Title-Tag mit Haupt-Keyword in den ersten 60 Zeichen</li>
+            <li>Meta-Description als Klick-Einladung (120–155 Zeichen)</li>
+            <li>H1 mit dem primären Keyword — nur einmal pro Seite</li>
+            <li>Sinnvolle H2/H3-Struktur für Lesbarkeit und Crawlbarkeit</li>
+            <li>Interne Links mit keyword-reichen Ankertexten</li>
+        </ul>
+        <h2>Wie lange dauert SEO?</h2>
+        <p>Erste Ergebnisse sind oft nach 3–6 Monaten sichtbar. Rankings für kompetitive Keywords können 12–24 Monate dauern. Wichtig ist kontinuierliche Arbeit: regelmäßige neue Inhalte, technische Pflege und schrittweiser Linkaufbau.</p>
+    </main>
+    <footer>
+        <p>Copyright 2026 - Alle Rechte vorbehalten</p>
+    </footer>
+</body>
+</html>`,
+            bad: `<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+var x=1;var y=2;var z=3;function foo(){return x+y+z;}function bar(){var a=[];for(var i=0;i<100;i++){a.push(i*2);}return a;}function baz(){var result={};var keys=['alpha','beta','gamma','delta','epsilon'];for(var j=0;j<keys.length;j++){result[keys[j]]=j*3;}return result;}window.onload=function(){foo();bar();baz();};
+</script>
+<style type="text/css">
+body{margin:0;padding:0;font-family:Arial;}.container{width:960px;margin:0 auto;padding:20px;}.header{background:#336699;color:#fff;padding:30px;}.header h1{font-size:28px;font-weight:bold;margin:0;padding:0;}.navigation{background:#444;padding:10px;}.navigation a{color:#fff;text-decoration:none;margin-right:15px;font-size:14px;}.navigation a:hover{color:#aaccff;}.main-content{float:left;width:640px;padding:20px;}.sidebar{float:right;width:280px;padding:20px;}.footer{clear:both;background:#333;color:#fff;padding:20px;text-align:center;}
+</style>
+<title>Webseite</title>
+</head>
+<body>
+<div class="header"><h1>Herzlich Willkommen</h1></div>
+<div class="navigation"><a href="/">Home</a></div>
+<div class="container">
+<div class="main-content">
+<p>Wir bieten Dienstleistungen an.</p>
+</div>
+</div>
+<div class="footer"><p>&copy; 2026</p></div>
+</body>
+</html>`
+        };
+
+        function loadExample(type) {
+            document.getElementById('htmlInput').value = examples[type];
+        }
+
+        function extractText(html) {
+            // Entferne Script-Tags und Style-Tags komplett
+            let text = html
+                .replace(/<script[\s\S]*?<\/script>/gi, '')
+                .replace(/<style[\s\S]*?<\/style>/gi, '')
+                .replace(/<!--[\s\S]*?-->/g, '')
+                .replace(/<[^>]+>/g, ' ')
+                .replace(/&nbsp;/g, ' ')
+                .replace(/&amp;/g, '&')
+                .replace(/&lt;/g, '<')
+                .replace(/&gt;/g, '>')
+                .replace(/&quot;/g, '"')
+                .replace(/&#[0-9]+;/g, ' ')
+                .replace(/\s+/g, ' ')
+                .trim();
+            return text;
+        }
+
+        function countWords(text) {
+            return text.split(/\s+/).filter(w => w.length > 0).length;
+        }
+
+        function formatBytes(bytes) {
+            if (bytes < 1024) return bytes + ' B';
+            return (bytes / 1024).toFixed(1) + ' KB';
+        }
+
+        function analyzeRatio() {
+            const html = document.getElementById('htmlInput').value.trim();
+            if (!html) {
+                alert('Bitte füge zunächst HTML-Code ein.');
+                return;
+            }
+
+            const htmlBytes = new TextEncoder().encode(html).length;
+            const extractedText = extractText(html);
+            const textBytes = new TextEncoder().encode(extractedText).length;
+            const wordCount = countWords(extractedText);
+
+            const ratio = htmlBytes > 0 ? Math.round((textBytes / htmlBytes) * 100) : 0;
+            const htmlRatioPercent = 100 - ratio;
+
+            // Score-Darstellung
+            let scoreLabel, scoreMessage, scoreColor, borderColor;
+            if (ratio < 10) {
+                scoreLabel = 'Kritisch';
+                scoreMessage = 'Sehr wenig sichtbarer Text. Google sieht vor allem Code. Füge mehr hochwertigen Textinhalt hinzu.';
+                scoreColor = 'from-red-600 to-red-800';
+                borderColor = '#ef4444';
+            } else if (ratio < 25) {
+                scoreLabel = 'Verbesserungsbedarf';
+                scoreMessage = 'Das Ratio ist unter dem empfohlenen Wert. Lagere Scripts/Styles aus und ergänze mehr Text.';
+                scoreColor = 'from-yellow-500 to-orange-600';
+                borderColor = '#f59e0b';
+            } else if (ratio <= 70) {
+                scoreLabel = 'Gut — SEO-freundlich';
+                scoreMessage = 'Ausgezeichnetes Text/HTML-Verhältnis! Deine Seite liegt im optimalen Bereich für Suchmaschinen.';
+                scoreColor = 'from-green-500 to-emerald-600';
+                borderColor = '#10b981';
+            } else {
+                scoreLabel = 'Sehr textlastig';
+                scoreMessage = 'Sehr hoher Text-Anteil — kein Problem, aber stelle sicher, dass Styles extern eingebunden sind.';
+                scoreColor = 'from-blue-500 to-indigo-600';
+                borderColor = '#3b82f6';
+            }
+
+            // UI updaten
+            document.getElementById('emptyState').classList.add('hidden');
+            document.getElementById('resultPanel').classList.remove('hidden');
+
+            document.getElementById('scorePercent').textContent = ratio + '%';
+            document.getElementById('scoreLabel').textContent = scoreLabel;
+            document.getElementById('scoreMessage').textContent = scoreMessage;
+            document.getElementById('scoreCircle').style.borderColor = borderColor;
+
+            // Ratio Bar
+            document.getElementById('ratioBarText').style.width = Math.min(ratio, 100) + '%';
+            document.getElementById('htmlPercent').textContent = htmlRatioPercent + '% HTML-Code';
+            document.getElementById('textPercent').textContent = ratio + '% Text';
+
+            // Stats
+            document.getElementById('statHtmlBytes').textContent = formatBytes(htmlBytes);
+            document.getElementById('statTextBytes').textContent = formatBytes(textBytes);
+            document.getElementById('statWordCount').textContent = wordCount.toLocaleString('de-DE');
+
+            // Empfehlungen
+            const recBox = document.getElementById('recommendations');
+            recBox.innerHTML = '';
+            const recs = [];
+
+            if (ratio < 10) {
+                recs.push({ icon: '🚨', type: 'error', text: 'Kritisch: Kaum sichtbarer Text gefunden. Füge aussagekräftigen Content hinzu.' });
+            }
+            if (htmlBytes > 100000) {
+                recs.push({ icon: '⚠️', type: 'warning', text: 'Große HTML-Datei (' + formatBytes(htmlBytes) + '). Lagere JavaScript und CSS in externe Dateien aus.' });
+            }
+            if (wordCount < 300) {
+                recs.push({ icon: '📝', type: 'warning', text: 'Nur ' + wordCount + ' Wörter gefunden. Google bevorzugt Seiten mit mind. 300–500 Wörtern Textinhalt.' });
+            }
+            if (ratio >= 25 && ratio <= 70) {
+                recs.push({ icon: '✅', type: 'success', text: 'Sehr gutes Text/HTML-Verhältnis. Weiter so!' });
+            }
+            if (wordCount >= 300 && wordCount < 800) {
+                recs.push({ icon: '💡', type: 'info', text: 'Tipp: ' + wordCount + ' Wörter sind ein guter Start. Für umfassende Rankings helfen 800–2.000 Wörter pro Seite.' });
+            }
+            if (wordCount >= 800) {
+                recs.push({ icon: '✅', type: 'success', text: wordCount.toLocaleString('de-DE') + ' Wörter — sehr gute Content-Dichte für SEO-Rankings.' });
+            }
+
+            const colors = { error: 'red', warning: 'yellow', success: 'green', info: 'blue' };
+            recs.forEach(rec => {
+                const c = colors[rec.type];
+                recBox.innerHTML += `
+                    <div class="flex items-start gap-3 p-3 bg-${c}-900/20 border border-${c}-500/20 rounded-lg">
+                        <span class="text-lg flex-shrink-0">${rec.icon}</span>
+                        <p class="text-${c}-200 text-sm">${rec.text}</p>
+                    </div>`;
+            });
+        }
+    </script>
+</body>
+</html>
