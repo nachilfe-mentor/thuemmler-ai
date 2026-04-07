@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robots.txt-Tester – URL-Freigabe kostenlos simulieren | Shift07</title>
+    <meta name="description" content="Kostenloser Robots.txt-Tester: Prüfe ob Googlebot oder andere Crawler deine URLs crawlen dürfen. Paste deine robots.txt und teste beliebige URL-Pfade sofort.">
+    <meta name="author" content="Thümmler AI GmbH">
+    <link rel="icon" type="image/png" href="/logo.png">
+    <link rel="canonical" href="https://shift07.ai/tools/robots-txt-tester.html">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Robots.txt-Tester – URL-Freigabe kostenlos simulieren | Shift07">
+    <meta property="og:description" content="Prüfe ob Googlebot oder andere Crawler deine URLs crawlen dürfen. Kostenlos, sofort, ohne Anmeldung.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://shift07.ai/tools/robots-txt-tester.html">
+    <meta property="og:image" content="https://shift07.ai/blog/images/robots-txt-tester.png">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="Shift07">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Robots.txt-Tester – URL-Freigabe kostenlos simulieren">
+    <meta name="twitter:description" content="Prüfe ob Googlebot oder andere Crawler deine URLs crawlen dürfen.">
+    <meta name="twitter:image" content="https://shift07.ai/blog/images/robots-txt-tester.png">
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Robots.txt-Tester",
+      "description": "Kostenloser Robots.txt-Tester: Simuliere ob Googlebot oder andere Crawler deine URLs crawlen dürfen.",
+      "url": "https://shift07.ai/tools/robots-txt-tester.html",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Any",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR"
+      }
+    }
+    </script>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K1S1RXBDS8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K1S1RXBDS8');
+    </script>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8475857002943858" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { 'inter': ['Inter', 'system-ui', '-apple-system', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: rgba(15, 23, 42, 0.5); }
+        ::-webkit-scrollbar-thumb { background: rgba(59, 130, 246, 0.5); border-radius: 4px; }
+        .result-allowed { background: rgba(34, 197, 94, 0.1); border-color: rgba(34, 197, 94, 0.4); }
+        .result-blocked { background: rgba(239, 68, 68, 0.1); border-color: rgba(239, 68, 68, 0.4); }
+        .result-unknown { background: rgba(234, 179, 8, 0.1); border-color: rgba(234, 179, 8, 0.4); }
+        .test-row-allowed { background: rgba(34, 197, 94, 0.08); border-left: 3px solid #22c55e; }
+        .test-row-blocked { background: rgba(239, 68, 68, 0.08); border-left: 3px solid #ef4444; }
+        textarea { resize: vertical; }
+    </style>
+</head>
+<body class="bg-slate-900 text-white min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-slate-900/80 backdrop-blur-xl border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <a href="/" class="flex items-center gap-2">
+                    <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                    <span class="text-xl font-bold text-white">Shift07</span>
+                </a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="/" class="text-gray-300 hover:text-white transition-colors">SEO-Tool</a>
+                    <a href="/blog/" class="text-gray-300 hover:text-white transition-colors">Blog</a>
+                    <a href="/tools/" class="text-white font-medium border-b-2 border-blue-500 pb-0.5">Tools</a>
+                    <a href="/app/#/login" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-5 py-2 rounded-lg font-medium transition-all">Anmelden</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-gray-300 hover:text-white">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900/95 border-b border-white/10">
+            <div class="px-4 py-3 space-y-2">
+                <a href="/" class="block py-2 text-gray-300 hover:text-white">SEO-Tool</a>
+                <a href="/blog/" class="block py-2 text-gray-300 hover:text-white">Blog</a>
+                <a href="/tools/" class="block py-2 text-white font-medium">Tools</a>
+                <a href="/app/#/login" class="block py-2 text-blue-400 hover:text-blue-300">Anmelden</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="pt-24 pb-12 px-4 bg-gradient-to-br from-slate-900 via-red-950/20 to-slate-900">
+        <div class="max-w-4xl mx-auto text-center">
+            <div class="inline-flex items-center gap-2 text-sm font-medium text-red-400 bg-red-400/10 px-4 py-2 rounded-full mb-6">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                Kostenloses SEO-Tool
+            </div>
+            <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-4">Robots.txt-Tester</h1>
+            <p class="text-xl text-gray-400 max-w-2xl mx-auto">Simuliere ob Googlebot oder andere Crawler deine URLs crawlen dürfen. Paste deine <code class="text-red-400 bg-red-400/10 px-1.5 py-0.5 rounded text-base">robots.txt</code> und teste beliebige Pfade sofort.</p>
+        </div>
+    </section>
+
+    <!-- Main Tool -->
+    <section class="py-8 px-4">
+        <div class="max-w-5xl mx-auto">
+
+            <!-- Input Grid -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
+
+                <!-- Robots.txt Input -->
+                <div class="bg-slate-800/50 border border-white/10 rounded-2xl p-6">
+                    <div class="flex items-center justify-between mb-4">
+                        <h2 class="text-lg font-bold text-white">robots.txt Inhalt</h2>
+                        <button id="load-example" class="text-xs text-blue-400 hover:text-blue-300 underline">Beispiel laden</button>
+                    </div>
+                    <textarea
+                        id="robots-txt"
+                        rows="14"
+                        class="w-full bg-slate-900/80 border border-white/10 rounded-xl px-4 py-3 text-gray-300 font-mono text-sm focus:outline-none focus:border-blue-500 placeholder-gray-600"
+                        placeholder="User-agent: *&#10;Disallow: /admin/&#10;Disallow: /private/&#10;Allow: /&#10;&#10;User-agent: Googlebot&#10;Allow: /&#10;&#10;Sitemap: https://example.com/sitemap.xml"
+                    ></textarea>
+                    <p class="text-xs text-gray-500 mt-2">Tipp: Du findest deine robots.txt unter <code class="text-gray-400">https://deine-domain.de/robots.txt</code></p>
+                </div>
+
+                <!-- Test URLs -->
+                <div class="bg-slate-800/50 border border-white/10 rounded-2xl p-6">
+                    <h2 class="text-lg font-bold text-white mb-4">URLs zum Testen</h2>
+
+                    <!-- User Agent -->
+                    <div class="mb-4">
+                        <label class="block text-sm font-medium text-gray-300 mb-2">User-Agent simulieren</label>
+                        <select id="user-agent" class="w-full bg-slate-900/80 border border-white/10 rounded-xl px-4 py-2.5 text-white focus:outline-none focus:border-blue-500">
+                            <option value="Googlebot">Googlebot</option>
+                            <option value="Googlebot-Image">Googlebot-Image</option>
+                            <option value="Bingbot">Bingbot</option>
+                            <option value="*">* (alle Crawler)</option>
+                            <option value="custom">Eigener User-Agent…</option>
+                        </select>
+                        <input
+                            id="custom-agent"
+                            type="text"
+                            placeholder="Eigener User-Agent"
+                            class="hidden w-full mt-2 bg-slate-900/80 border border-white/10 rounded-xl px-4 py-2.5 text-white focus:outline-none focus:border-blue-500 placeholder-gray-600"
+                        >
+                    </div>
+
+                    <!-- URL Inputs -->
+                    <div class="mb-4">
+                        <label class="block text-sm font-medium text-gray-300 mb-2">URL-Pfade (einer pro Zeile)</label>
+                        <textarea
+                            id="test-urls"
+                            rows="8"
+                            class="w-full bg-slate-900/80 border border-white/10 rounded-xl px-4 py-3 text-gray-300 font-mono text-sm focus:outline-none focus:border-blue-500 placeholder-gray-600"
+                            placeholder="/&#10;/admin/&#10;/blog/&#10;/wp-login.php&#10;/api/private/"
+                        ></textarea>
+                        <p class="text-xs text-gray-500 mt-1">Nur den Pfad eingeben, z.B. <code class="text-gray-400">/blog/artikel</code></p>
+                    </div>
+
+                    <button
+                        id="test-btn"
+                        onclick="testRobots()"
+                        class="w-full bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-500 hover:to-orange-500 text-white py-3 rounded-xl font-semibold transition-all"
+                    >
+                        URLs testen
+                    </button>
+                </div>
+            </div>
+
+            <!-- Results -->
+            <div id="results" class="hidden">
+                <div class="bg-slate-800/50 border border-white/10 rounded-2xl p-6 mb-6">
+                    <div class="flex items-center justify-between mb-5">
+                        <h2 class="text-lg font-bold text-white">Testergebnis</h2>
+                        <div id="result-summary" class="text-sm text-gray-400"></div>
+                    </div>
+                    <div id="result-table" class="space-y-2"></div>
+                </div>
+
+                <!-- Parsed Rules -->
+                <div id="parsed-rules-section" class="bg-slate-800/50 border border-white/10 rounded-2xl p-6 mb-6">
+                    <h2 class="text-lg font-bold text-white mb-4">Erkannte Regeln für <span id="agent-display" class="text-red-400"></span></h2>
+                    <div id="parsed-rules" class="space-y-2 font-mono text-sm"></div>
+                </div>
+            </div>
+
+            <!-- Info Box -->
+            <div class="bg-slate-800/30 border border-white/5 rounded-2xl p-6 mb-8">
+                <h2 class="text-base font-bold text-white mb-3">Wie funktioniert robots.txt?</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+                    <div>
+                        <p class="text-blue-400 font-semibold mb-1">User-agent: Googlebot</p>
+                        <p class="text-gray-400">Gibt an, für welchen Crawler die folgenden Regeln gelten. <code class="text-gray-300">*</code> gilt für alle Crawler.</p>
+                    </div>
+                    <div>
+                        <p class="text-red-400 font-semibold mb-1">Disallow: /admin/</p>
+                        <p class="text-gray-400">Verbietet den Crawler-Zugriff auf diesen Pfad und alle Unterseiten.</p>
+                    </div>
+                    <div>
+                        <p class="text-green-400 font-semibold mb-1">Allow: /admin/logo.png</p>
+                        <p class="text-gray-400"><code>Allow</code> hat Vorrang vor <code>Disallow</code> wenn beide auf eine URL passen und die Pfadlänge gleich ist.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Related -->
+            <div class="bg-gradient-to-r from-blue-900/20 to-indigo-900/20 border border-blue-500/20 rounded-2xl p-6 text-center">
+                <p class="text-gray-300 mb-4">Passende Tools und Artikel:</p>
+                <div class="flex flex-wrap justify-center gap-3">
+                    <a href="/tools/robots-txt-generator.html" class="text-sm bg-slate-700 hover:bg-slate-600 text-white px-4 py-2 rounded-lg transition-colors">robots.txt Generator</a>
+                    <a href="/tools/sitemap-validator.html" class="text-sm bg-slate-700 hover:bg-slate-600 text-white px-4 py-2 rounded-lg transition-colors">Sitemap-Validator</a>
+                    <a href="/blog/robots-txt-konfigurieren.html" class="text-sm bg-blue-700/50 hover:bg-blue-700 text-blue-300 px-4 py-2 rounded-lg transition-colors">robots.txt richtig konfigurieren →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/10 bg-slate-900/50 py-12 px-4 mt-12">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="flex items-center gap-2">
+                    <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                    <span class="text-lg font-bold text-white">Shift07</span>
+                </div>
+                <div class="flex items-center space-x-6 text-sm text-gray-400">
+                    <a href="/impressum.html" class="hover:text-white transition-colors">Impressum</a>
+                    <a href="/datenschutz.html" class="hover:text-white transition-colors">Datenschutz</a>
+                    <a href="/agb.html" class="hover:text-white transition-colors">AGB</a>
+                </div>
+                <p class="text-sm text-gray-500">&copy; 2026 Thümmler AI GmbH</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // Custom user-agent toggle
+        document.getElementById('user-agent').addEventListener('change', function() {
+            const customInput = document.getElementById('custom-agent');
+            if (this.value === 'custom') {
+                customInput.classList.remove('hidden');
+            } else {
+                customInput.classList.add('hidden');
+            }
+        });
+
+        // Load example
+        document.getElementById('load-example').addEventListener('click', function() {
+            document.getElementById('robots-txt').value = `User-agent: *
+Disallow: /admin/
+Disallow: /wp-login.php
+Disallow: /wp-admin/
+Allow: /wp-admin/admin-ajax.php
+
+User-agent: Googlebot
+Disallow: /private/
+Allow: /
+
+User-agent: Bingbot
+Disallow: /
+
+Sitemap: https://example.com/sitemap.xml`;
+            document.getElementById('test-urls').value = `/
+/admin/
+/wp-login.php
+/wp-admin/
+/wp-admin/admin-ajax.php
+/blog/
+/private/artikel
+/kontakt`;
+        });
+
+        // Parse robots.txt
+        function parseRobots(content) {
+            const lines = content.split('\n').map(l => l.trim());
+            const groups = [];
+            let currentGroup = null;
+
+            for (const line of lines) {
+                if (!line || line.startsWith('#')) continue;
+
+                if (line.toLowerCase().startsWith('user-agent:')) {
+                    const agent = line.slice(11).trim();
+                    // Start new group or add agent to existing new group (multi-agent blocks)
+                    if (currentGroup && currentGroup.rules.length === 0) {
+                        currentGroup.agents.push(agent);
+                    } else {
+                        currentGroup = { agents: [agent], rules: [] };
+                        groups.push(currentGroup);
+                    }
+                } else if (line.toLowerCase().startsWith('disallow:') && currentGroup) {
+                    const path = line.slice(9).trim();
+                    currentGroup.rules.push({ type: 'Disallow', path });
+                } else if (line.toLowerCase().startsWith('allow:') && currentGroup) {
+                    const path = line.slice(6).trim();
+                    currentGroup.rules.push({ type: 'Allow', path });
+                } else if (line.toLowerCase().startsWith('sitemap:')) {
+                    // Ignore sitemaps for this tool
+                }
+            }
+            return groups;
+        }
+
+        // Get applicable rules for a user-agent
+        function getRulesForAgent(groups, targetAgent) {
+            // Find exact match first
+            const exactMatch = groups.filter(g =>
+                g.agents.some(a => a.toLowerCase() === targetAgent.toLowerCase())
+            );
+            const wildcardMatch = groups.filter(g =>
+                g.agents.some(a => a === '*')
+            );
+
+            // Combine: exact match takes precedence
+            const applicable = exactMatch.length > 0 ? exactMatch : wildcardMatch;
+            const rules = [];
+            for (const group of applicable) {
+                rules.push(...group.rules);
+            }
+            return rules;
+        }
+
+        // Check if path is allowed by rules (RFC 9309)
+        function isAllowed(rules, urlPath) {
+            if (rules.length === 0) return true; // No rules = allowed
+
+            // Normalize path
+            const path = urlPath || '/';
+
+            let bestMatchLength = -1;
+            let bestMatchResult = true; // Default: allowed
+
+            for (const rule of rules) {
+                const rulePath = rule.path;
+                if (!rulePath) {
+                    // Empty Disallow means allow all
+                    if (rule.type === 'Disallow') continue;
+                }
+
+                // Pattern matching: $ means end of URL, * is wildcard
+                const matchLen = matchPath(rulePath, path);
+                if (matchLen === null) continue;
+
+                if (matchLen > bestMatchLength || (matchLen === bestMatchLength && rule.type === 'Allow')) {
+                    bestMatchLength = matchLen;
+                    bestMatchResult = (rule.type === 'Allow');
+                }
+            }
+
+            return bestMatchResult;
+        }
+
+        // Returns match length or null if no match
+        function matchPath(rulePath, urlPath) {
+            // Convert robots.txt pattern to regex
+            let endsWithDollar = rulePath.endsWith('$');
+            let pattern = rulePath.replace(/\$$/, '');
+
+            // Escape regex special chars except * and $
+            let regexStr = pattern.replace(/[.+?^{}()|[\]\\]/g, '\\$&');
+            regexStr = regexStr.replace(/\*/g, '.*');
+
+            if (endsWithDollar) {
+                regexStr = '^' + regexStr + '$';
+            } else {
+                regexStr = '^' + regexStr;
+            }
+
+            try {
+                const regex = new RegExp(regexStr);
+                if (regex.test(urlPath)) {
+                    return pattern.length; // Use pattern length as specificity
+                }
+            } catch(e) {}
+            return null;
+        }
+
+        function testRobots() {
+            const robotsTxt = document.getElementById('robots-txt').value.trim();
+            const testUrlsRaw = document.getElementById('test-urls').value.trim();
+            const userAgentSelect = document.getElementById('user-agent').value;
+            const userAgent = userAgentSelect === 'custom'
+                ? document.getElementById('custom-agent').value.trim() || 'Googlebot'
+                : userAgentSelect;
+
+            if (!robotsTxt) {
+                alert('Bitte gib den Inhalt deiner robots.txt ein.');
+                return;
+            }
+            if (!testUrlsRaw) {
+                alert('Bitte gib mindestens einen URL-Pfad zum Testen ein.');
+                return;
+            }
+
+            const testUrls = testUrlsRaw.split('\n').map(u => u.trim()).filter(u => u);
+            const groups = parseRobots(robotsTxt);
+            const rules = getRulesForAgent(groups, userAgent);
+
+            let allowedCount = 0;
+            let blockedCount = 0;
+
+            // Render results
+            const tableHtml = testUrls.map(url => {
+                // Ensure URL starts with /
+                const path = url.startsWith('/') ? url : '/' + url;
+                const allowed = isAllowed(rules, path);
+
+                if (allowed) allowedCount++;
+                else blockedCount++;
+
+                const rowClass = allowed ? 'test-row-allowed' : 'test-row-blocked';
+                const badge = allowed
+                    ? '<span class="text-xs font-bold text-green-400 bg-green-400/10 px-2.5 py-1 rounded-full">✓ ERLAUBT</span>'
+                    : '<span class="text-xs font-bold text-red-400 bg-red-400/10 px-2.5 py-1 rounded-full">✗ BLOCKIERT</span>';
+
+                // Find matching rule
+                let matchingRule = 'Standard (erlaubt)';
+                let bestLen = -1;
+                let bestResult = null;
+                for (const rule of rules) {
+                    const ml = matchPath(rule.path, path);
+                    if (ml !== null && (ml > bestLen || (ml === bestLen && rule.type === 'Allow'))) {
+                        bestLen = ml;
+                        bestResult = rule;
+                    }
+                }
+                if (bestResult) {
+                    matchingRule = `${bestResult.type}: ${bestResult.path || '(leer)'}`;
+                } else if (rules.length === 0) {
+                    matchingRule = 'Keine Regeln gefunden';
+                }
+
+                return `<div class="flex items-center justify-between p-3 rounded-lg ${rowClass} mb-2">
+                    <div class="flex-1 min-w-0 mr-4">
+                        <code class="text-sm text-white font-mono">${escapeHtml(path)}</code>
+                        <p class="text-xs text-gray-400 mt-0.5">Passende Regel: <span class="text-gray-300">${escapeHtml(matchingRule)}</span></p>
+                    </div>
+                    ${badge}
+                </div>`;
+            }).join('');
+
+            document.getElementById('result-table').innerHTML = tableHtml;
+            document.getElementById('result-summary').textContent =
+                `${allowedCount} erlaubt · ${blockedCount} blockiert · User-Agent: ${userAgent}`;
+
+            // Render parsed rules
+            document.getElementById('agent-display').textContent = userAgent;
+            if (rules.length === 0) {
+                document.getElementById('parsed-rules').innerHTML =
+                    '<p class="text-gray-400 text-sm">Keine spezifischen Regeln für diesen User-Agent gefunden. Standard: alle URLs erlaubt.</p>';
+            } else {
+                document.getElementById('parsed-rules').innerHTML = rules.map(r => {
+                    const cls = r.type === 'Allow' ? 'text-green-400' : 'text-red-400';
+                    return `<div class="flex items-center gap-3 py-1.5 border-b border-white/5">
+                        <span class="${cls} w-20 text-xs font-bold">${r.type}</span>
+                        <code class="text-gray-300 text-xs">${escapeHtml(r.path || '(leer)')}</code>
+                    </div>`;
+                }).join('');
+            }
+
+            document.getElementById('results').classList.remove('hidden');
+            document.getElementById('results').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        function escapeHtml(str) {
+            return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+        }
+    </script>
+</body>
+</html>
