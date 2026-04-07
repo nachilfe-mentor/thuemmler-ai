@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Tue, 07 Apr 2026 03:16:34 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 07 Apr 2026 04:53:27 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Mobile Usability für SEO: Touchscreen-UX und Benutzerfreundlichkeit optimieren</title>
+      <link>https://shift07.ai/blog/touchscreen-ux-mobile-usability-seo.html</link>
+      <guid>https://shift07.ai/blog/touchscreen-ux-mobile-usability-seo.html</guid>
+      <pubDate>Tue, 07 Apr 2026 04:52:56 +0000</pubDate>
+      <description>Mobile Usability ist ein direkter Google-Rankingfaktor. Lerne, wie du Touchscreen-UX optimierst, Tipp-Ziele richtig dimensionierst und mobile Nutzbarkeit verbesserst.</description>
+      <category>Mobile SEO</category>
+    </item>
     <item>
       <title>Mobile Core Web Vitals optimieren: LCP, CLS und INP auf dem Smartphone verbessern</title>
       <link>https://shift07.ai/blog/mobile-core-web-vitals-optimieren.html</link>
@@ -158,14 +166,6 @@
       <pubDate>Sat, 04 Apr 2026 18:08:13 +0000</pubDate>
       <description>Was ist das Crawl-Budget und wie optimierst du es? Erfahre, wie Google deine Website crawlt und welche Maßnahmen die Indexierung deutlich verbessern.</description>
       <category>Technisches SEO</category>
-    </item>
-    <item>
-      <title>Indexierung prüfen: Ist deine Website bei Google?</title>
-      <link>https://shift07.ai/blog/indexierung-pruefen-google.html</link>
-      <guid>https://shift07.ai/blog/indexierung-pruefen-google.html</guid>
-      <pubDate>Sat, 04 Apr 2026 18:08:00 +0000</pubDate>
-      <description>So prüfst du, ob Google deine Website indexiert hat. Alle Methoden erklärt: site:-Operator, Google Search Console, URL-Prüftool — plus Lösungen wenn Seiten fehlen.</description>
-      <category>SEO</category>
     </item>
   </channel>
 </rss>
