@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K1S1RXBDS8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K1S1RXBDS8');
+    </script>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8475857002943858" crossorigin="anonymous"></script>
+    <title>Hreflang-Tag-Validator – Mehrsprachige SEO kostenlos prüfen | Shift07</title>
+    <meta name="description" content="Hreflang-Tags kostenlos prüfen und validieren. Erkenne fehlende x-default Tags, ungültige Sprachcodes, Duplikate und andere häufige Implementierungsfehler.">
+    <meta name="keywords" content="hreflang validator, hreflang prüfen, mehrsprachige SEO, internationales SEO, hreflang tag checker">
+    <meta name="author" content="Thümmler AI GmbH">
+    <link rel="icon" type="image/png" href="/logo.png">
+    <link rel="canonical" href="https://shift07.ai/tools/hreflang-tag-validator.html">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Hreflang-Tag-Validator – Mehrsprachige SEO kostenlos prüfen">
+    <meta property="og:description" content="Hreflang-Tags kostenlos validieren. Erkenne fehlende x-default Tags, ungültige Sprachcodes und andere Implementierungsfehler in deiner internationalen SEO.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://shift07.ai/tools/hreflang-tag-validator.html">
+    <meta property="og:image" content="https://shift07.ai/tools/images/hreflang-tag-validator.png">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="Shift07">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Hreflang-Tag-Validator – Mehrsprachige SEO kostenlos prüfen">
+    <meta name="twitter:description" content="Hreflang-Tags kostenlos validieren. Erkenne fehlende x-default Tags, ungültige Sprachcodes und andere Implementierungsfehler.">
+    <meta name="twitter:image" content="https://shift07.ai/tools/images/hreflang-tag-validator.png">
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Hreflang-Tag-Validator",
+      "description": "Hreflang-Tags kostenlos prüfen und validieren. Erkenne fehlende x-default Tags, ungültige Sprachcodes, Duplikate und andere häufige Implementierungsfehler.",
+      "url": "https://shift07.ai/tools/hreflang-tag-validator.html",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR"
+      },
+      "provider": {
+        "@type": "Organization",
+        "name": "Shift07",
+        "url": "https://shift07.ai"
+      }
+    }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { 'inter': ['Inter', 'system-ui', '-apple-system', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: rgba(15, 23, 42, 0.5); }
+        ::-webkit-scrollbar-thumb { background: rgba(59, 130, 246, 0.5); border-radius: 4px; }
+        html { scroll-behavior: smooth; }
+        textarea { resize: vertical; }
+    </style>
+</head>
+<body class="bg-slate-900 text-white min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-slate-900/80 backdrop-blur-xl border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <a href="/" class="flex items-center gap-2">
+                    <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                    <span class="text-xl font-bold text-white">Shift07</span>
+                </a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="/" class="text-gray-300 hover:text-white transition-colors">SEO-Tool</a>
+                    <a href="/blog/" class="text-gray-300 hover:text-white transition-colors">Blog</a>
+                    <a href="/tools/" class="text-white font-medium border-b-2 border-blue-500 pb-0.5">Tools</a>
+                    <a href="/app/#/login" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-5 py-2 rounded-lg font-medium transition-all">Anmelden</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-gray-300 hover:text-white">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900/95 border-b border-white/10">
+            <div class="px-4 py-3 space-y-2">
+                <a href="/" class="block py-2 text-gray-300 hover:text-white">SEO-Tool</a>
+                <a href="/blog/" class="block py-2 text-gray-300 hover:text-white">Blog</a>
+                <a href="/tools/" class="block py-2 text-white font-medium">Tools</a>
+                <a href="/app/#/login" class="block py-2 text-blue-400 hover:text-blue-300">Anmelden</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="pt-24 pb-12 px-4">
+        <div class="max-w-4xl mx-auto text-center">
+            <span class="inline-block text-sm font-semibold px-4 py-1.5 bg-blue-500/10 text-blue-400 rounded-full mb-6 border border-blue-500/20">Internationales SEO</span>
+            <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-6 leading-tight">
+                Hreflang-Tag-Validator
+            </h1>
+            <p class="text-xl text-gray-400 mb-8 max-w-2xl mx-auto">
+                Prüfe deine Hreflang-Implementierung kostenlos auf Fehler. Erkenne ungültige Sprachcodes, fehlende x-default Tags, Duplikate und andere häufige Probleme.
+            </p>
+        </div>
+    </section>
+
+    <!-- Tool -->
+    <section class="pb-16 px-4">
+        <div class="max-w-4xl mx-auto">
+
+            <!-- Input -->
+            <div class="bg-slate-800/50 border border-white/10 rounded-2xl p-6 mb-8">
+                <h2 class="text-lg font-bold text-white mb-4">HTML-Quellcode eingeben</h2>
+                <p class="text-gray-400 text-sm mb-4">
+                    Öffne den Quellcode deiner Seite (im Browser: <kbd class="bg-slate-700 px-1.5 py-0.5 rounded text-xs">Strg+U</kbd> / <kbd class="bg-slate-700 px-1.5 py-0.5 rounded text-xs">Cmd+U</kbd>), kopiere den <code class="bg-slate-700 px-1.5 py-0.5 rounded text-xs">&lt;head&gt;</code>-Bereich und füge ihn hier ein. Alternativ kannst du auch nur die Hreflang-Tags direkt einfügen.
+                </p>
+                <textarea
+                    id="html-input"
+                    class="w-full bg-slate-900/80 border border-white/10 rounded-xl px-4 py-3 text-gray-300 placeholder-gray-600 focus:outline-none focus:border-blue-500 font-mono text-sm"
+                    rows="8"
+                    placeholder='Beispiel:
+&lt;link rel="alternate" hreflang="de" href="https://example.de/"&gt;
+&lt;link rel="alternate" hreflang="de-AT" href="https://example.de/at/"&gt;
+&lt;link rel="alternate" hreflang="en" href="https://example.com/"&gt;
+&lt;link rel="alternate" hreflang="x-default" href="https://example.com/"&gt;'
+                ></textarea>
+                <div class="mt-4 flex gap-3">
+                    <button
+                        id="validate-btn"
+                        onclick="validateHreflang()"
+                        class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-8 py-3 rounded-xl font-semibold transition-all"
+                    >
+                        Hreflang-Tags prüfen
+                    </button>
+                    <button
+                        onclick="clearAll()"
+                        class="bg-slate-700 hover:bg-slate-600 text-gray-300 px-6 py-3 rounded-xl font-medium transition-all"
+                    >
+                        Löschen
+                    </button>
+                    <button
+                        onclick="loadExample()"
+                        class="bg-slate-700 hover:bg-slate-600 text-gray-300 px-6 py-3 rounded-xl font-medium transition-all"
+                    >
+                        Beispiel laden
+                    </button>
+                </div>
+            </div>
+
+            <!-- Results -->
+            <div id="results" class="hidden">
+
+                <!-- Score Banner -->
+                <div id="score-banner" class="rounded-2xl p-6 mb-6 border flex items-center gap-4"></div>
+
+                <!-- Tags Found -->
+                <div id="tags-found" class="bg-slate-800/50 border border-white/10 rounded-2xl p-6 mb-6">
+                    <h3 class="text-lg font-bold text-white mb-4" id="tags-title">Gefundene Hreflang-Tags</h3>
+                    <div id="tags-list" class="space-y-2 font-mono text-sm"></div>
+                </div>
+
+                <!-- Issues -->
+                <div id="issues-section" class="bg-slate-800/50 border border-white/10 rounded-2xl p-6 mb-6">
+                    <h3 class="text-lg font-bold text-white mb-4">Gefundene Probleme</h3>
+                    <div id="issues-list" class="space-y-3"></div>
+                </div>
+
+                <!-- Checks Summary -->
+                <div class="bg-slate-800/50 border border-white/10 rounded-2xl p-6 mb-6">
+                    <h3 class="text-lg font-bold text-white mb-4">Prüfungen im Überblick</h3>
+                    <div id="checks-list" class="space-y-2"></div>
+                </div>
+
+                <!-- Tips -->
+                <div class="bg-blue-900/20 border border-blue-500/20 rounded-2xl p-6">
+                    <h3 class="text-lg font-bold text-white mb-3">Tipps zur Hreflang-Implementierung</h3>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li class="flex items-start gap-2"><span class="text-blue-400 mt-0.5">→</span> Jede Sprachversion muss gegenseitig auf alle anderen verweisen (bidirektionale Links)</li>
+                        <li class="flex items-start gap-2"><span class="text-blue-400 mt-0.5">→</span> <code class="bg-slate-700 px-1 rounded">x-default</code> definiert die Fallback-Seite für alle Nutzer ohne passende Sprachversion</li>
+                        <li class="flex items-start gap-2"><span class="text-blue-400 mt-0.5">→</span> Verwende ISO 639-1 Sprachcodes (z.B. <code class="bg-slate-700 px-1 rounded">de</code>, <code class="bg-slate-700 px-1 rounded">en</code>) und optional ISO 3166-1 Regionscodes (z.B. <code class="bg-slate-700 px-1 rounded">de-AT</code>)</li>
+                        <li class="flex items-start gap-2"><span class="text-blue-400 mt-0.5">→</span> Hreflang-Tags können im <code class="bg-slate-700 px-1 rounded">&lt;head&gt;</code>, im HTTP-Header oder in der Sitemap implementiert werden</li>
+                        <li class="flex items-start gap-2"><span class="text-blue-400 mt-0.5">→</span> Google ignoriert Hreflang nicht, wenn Fehler vorliegen — es werden dann einfach keine Sprachsignale übermittelt</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- How to Use -->
+            <div class="mt-10 bg-slate-800/30 border border-white/5 rounded-2xl p-6">
+                <h2 class="text-xl font-bold text-white mb-4">Wie funktioniert dieses Tool?</h2>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div>
+                        <div class="text-blue-400 font-bold text-2xl mb-2">1.</div>
+                        <h3 class="font-semibold text-white mb-1">Quellcode öffnen</h3>
+                        <p class="text-gray-400 text-sm">Drücke Strg+U (Windows) oder Cmd+U (Mac) in deinem Browser, um den Quellcode deiner Seite anzuzeigen.</p>
+                    </div>
+                    <div>
+                        <div class="text-blue-400 font-bold text-2xl mb-2">2.</div>
+                        <h3 class="font-semibold text-white mb-1">Einfügen</h3>
+                        <p class="text-gray-400 text-sm">Kopiere den &lt;head&gt;-Bereich oder nur die Hreflang-Tags und füge sie in das Textfeld ein.</p>
+                    </div>
+                    <div>
+                        <div class="text-blue-400 font-bold text-2xl mb-2">3.</div>
+                        <h3 class="font-semibold text-white mb-1">Ergebnis erhalten</h3>
+                        <p class="text-gray-400 text-sm">Das Tool analysiert deine Hreflang-Tags und zeigt konkrete Fehler mit Lösungshinweisen an.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Info Artikel -->
+            <div class="mt-8 bg-slate-800/30 border border-white/5 rounded-2xl p-6">
+                <h2 class="text-xl font-bold text-white mb-3">Warum sind Hreflang-Tags wichtig für SEO?</h2>
+                <p class="text-gray-400 text-sm leading-relaxed mb-4">
+                    Hreflang-Tags sind HTML-Attribute, die Google und anderen Suchmaschinen mitteilen, für welche Sprachen und Regionen eine bestimmte Seite gedacht ist. Ohne korrekte Hreflang-Implementierung kann Google nicht zuverlässig die richtige Sprachversion einer Website in den Suchergebnissen anzeigen.
+                </p>
+                <p class="text-gray-400 text-sm leading-relaxed mb-4">
+                    Fehler in der Hreflang-Implementierung gehören zu den häufigsten Problemen bei mehrsprachigen Websites. Typische Fehler sind fehlende x-default Tags, ungültige Sprachcodes, fehlende gegenseitige Verlinkungen oder doppelte Sprachcodes.
+                </p>
+                <div class="flex flex-wrap gap-3 mt-4">
+                    <a href="/blog/was-ist-seo.html" class="text-blue-400 hover:text-blue-300 text-sm underline">Was ist SEO?</a>
+                    <a href="/blog/meta-tags-richtig-einsetzen.html" class="text-blue-400 hover:text-blue-300 text-sm underline">Meta-Tags richtig einsetzen</a>
+                    <a href="/blog/strukturierte-daten-seo-schema-markup.html" class="text-blue-400 hover:text-blue-300 text-sm underline">Strukturierte Daten für SEO</a>
+                    <a href="/blog/canonical-tags-seo.html" class="text-blue-400 hover:text-blue-300 text-sm underline">Canonical-Tags erklärt</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-16 px-4 bg-gradient-to-r from-blue-900/30 to-indigo-900/30 border-t border-b border-white/5">
+        <div class="max-w-3xl mx-auto text-center">
+            <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">Vollständige SEO-Analyse deiner Website</h2>
+            <p class="text-gray-400 mb-8">Prüfe alle SEO-Faktoren auf einmal — technisches SEO, Meta-Tags, Ladezeit und mehr.</p>
+            <a href="/" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-10 py-4 rounded-xl font-semibold transition-all inline-block">Kostenlose SEO-Analyse starten</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/10 bg-slate-900/50 py-12 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="flex items-center gap-2">
+                    <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                    <span class="text-lg font-bold text-white">Shift07</span>
+                </div>
+                <div class="flex items-center space-x-6 text-sm text-gray-400">
+                    <a href="/impressum.html" class="hover:text-white transition-colors">Impressum</a>
+                    <a href="/datenschutz.html" class="hover:text-white transition-colors">Datenschutz</a>
+                    <a href="/agb.html" class="hover:text-white transition-colors">AGB</a>
+                </div>
+                <p class="text-sm text-gray-500">&copy; 2026 Thümmler AI GmbH</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // Gültige ISO 639-1 Sprachcodes (häufigste)
+        const VALID_LANG_CODES = new Set([
+            'af','sq','am','ar','hy','az','eu','be','bn','bs','bg','ca','zh','hr','cs','da',
+            'nl','en','eo','et','fi','fr','gl','ka','de','el','gu','ht','ha','he','hi','hu',
+            'is','id','ga','it','ja','jv','kn','kk','km','ko','ku','ky','lo','la','lv','lt',
+            'lb','mk','mg','ms','ml','mt','mi','mr','mn','my','ne','no','nb','nn','or','ps',
+            'fa','pl','pt','pa','ro','ru','sm','gd','sr','st','sn','sd','si','sk','sl','so',
+            'es','su','sw','sv','tl','tg','ta','te','th','tr','uk','ur','uz','vi','cy','xh',
+            'yi','yo','zu'
+        ]);
+
+        // Gültige ISO 3166-1 Alpha-2 Regionscodes
+        const VALID_REGION_CODES = new Set([
+            'AF','AX','AL','DZ','AS','AD','AO','AI','AQ','AG','AR','AM','AW','AU','AT','AZ',
+            'BS','BH','BD','BB','BY','BE','BZ','BJ','BM','BT','BO','BQ','BA','BW','BV','BR',
+            'IO','BN','BG','BF','BI','CV','KH','CM','CA','KY','CF','TD','CL','CN','CX','CC',
+            'CO','KM','CG','CD','CK','CR','CI','HR','CU','CW','CY','CZ','DK','DJ','DM','DO',
+            'EC','EG','SV','GQ','ER','EE','SZ','ET','FK','FO','FJ','FI','FR','GF','PF','TF',
+            'GA','GM','GE','DE','GH','GI','GR','GL','GD','GP','GU','GT','GG','GN','GW','GY',
+            'HT','HM','VA','HN','HK','HU','IS','IN','ID','IR','IQ','IE','IM','IL','IT','JM',
+            'JP','JE','JO','KZ','KE','KI','KP','KR','KW','KG','LA','LV','LB','LS','LR','LY',
+            'LI','LT','LU','MO','MG','MW','MY','MV','ML','MT','MH','MQ','MR','MU','YT','MX',
+            'FM','MD','MC','MN','ME','MS','MA','MZ','MM','NA','NR','NP','NL','NC','NZ','NI',
+            'NE','NG','NU','NF','MK','MP','NO','OM','PK','PW','PS','PA','PG','PY','PE','PH',
+            'PN','PL','PT','PR','QA','RE','RO','RU','RW','BL','SH','KN','LC','MF','PM','VC',
+            'WS','SM','ST','SA','SN','RS','SC','SL','SG','SX','SK','SI','SB','SO','ZA','GS',
+            'SS','ES','LK','SD','SR','SJ','SE','CH','SY','TW','TJ','TZ','TH','TL','TG','TK',
+            'TO','TT','TN','TR','TM','TC','TV','UG','UA','AE','GB','US','UM','UY','UZ','VU',
+            'VE','VN','VG','VI','WF','EH','YE','ZM','ZW'
+        ]);
+
+        function parseHreflangTags(html) {
+            const tags = [];
+            // Match link tags with rel="alternate" and hreflang attribute
+            const regex = /<link[^>]+>/gi;
+            const matches = html.match(regex) || [];
+
+            for (const match of matches) {
+                const relMatch = match.match(/rel=["']([^"']+)["']/i);
+                const hreflangMatch = match.match(/hreflang=["']([^"']+)["']/i);
+                const hrefMatch = match.match(/href=["']([^"']+)["']/i);
+
+                if (relMatch && hreflangMatch && hrefMatch) {
+                    const rel = relMatch[1].trim().toLowerCase();
+                    if (rel === 'alternate') {
+                        tags.push({
+                            hreflang: hreflangMatch[1].trim().toLowerCase(),
+                            href: hrefMatch[1].trim(),
+                            raw: match
+                        });
+                    }
+                }
+            }
+
+            // Also check if user pasted raw hreflang tags without being inside a link
+            // Try parsing just hreflang="..." href="..." patterns
+            if (tags.length === 0) {
+                const simpleRegex = /hreflang=["']([^"']+)["'][^>]*href=["']([^"']+)["']|href=["']([^"']+)["'][^>]*hreflang=["']([^"']+)["']/gi;
+                let m;
+                while ((m = simpleRegex.exec(html)) !== null) {
+                    const hreflang = (m[1] || m[4]).trim().toLowerCase();
+                    const href = (m[2] || m[3]).trim();
+                    tags.push({ hreflang, href, raw: m[0] });
+                }
+            }
+
+            return tags;
+        }
+
+        function validateLangCode(code) {
+            if (code === 'x-default') return { valid: true, type: 'special' };
+
+            const parts = code.split('-');
+            const lang = parts[0].toLowerCase();
+            const region = parts[1] ? parts[1].toUpperCase() : null;
+
+            if (!VALID_LANG_CODES.has(lang)) {
+                return { valid: false, reason: `Ungültiger Sprachcode "${lang}" (kein gültiger ISO 639-1 Code)` };
+            }
+
+            if (region && !VALID_REGION_CODES.has(region)) {
+                return { valid: false, reason: `Ungültiger Regionscode "${region}" (kein gültiger ISO 3166-1 Alpha-2 Code)` };
+            }
+
+            return { valid: true, type: region ? 'lang-region' : 'lang-only' };
+        }
+
+        function validateHreflang() {
+            const html = document.getElementById('html-input').value.trim();
+            if (!html) {
+                alert('Bitte füge HTML-Code oder Hreflang-Tags ein.');
+                return;
+            }
+
+            const tags = parseHreflangTags(html);
+            const issues = [];
+            const checks = [];
+
+            if (tags.length === 0) {
+                document.getElementById('results').classList.remove('hidden');
+                document.getElementById('score-banner').innerHTML = `
+                    <div class="text-4xl">❌</div>
+                    <div>
+                        <div class="text-xl font-bold text-red-400">Keine Hreflang-Tags gefunden</div>
+                        <div class="text-gray-400 text-sm">Im eingefügten Code wurden keine gültigen Hreflang-Tags entdeckt. Bitte prüfe den Quellcode erneut.</div>
+                    </div>
+                `;
+                document.getElementById('score-banner').className = 'rounded-2xl p-6 mb-6 border flex items-center gap-4 bg-red-900/20 border-red-500/30';
+                document.getElementById('tags-found').classList.add('hidden');
+                document.getElementById('issues-section').classList.add('hidden');
+                document.querySelector('.bg-slate-800\\/50.border.border-white\\/10.rounded-2xl.p-6.mb-6:last-child')?.classList?.add('hidden');
+                return;
+            }
+
+            // === CHECK 1: Alle Tags anzeigen ===
+            document.getElementById('tags-title').textContent = `Gefundene Hreflang-Tags (${tags.length})`;
+            const tagsList = document.getElementById('tags-list');
+            tagsList.innerHTML = '';
+            for (const tag of tags) {
+                const langCheck = validateLangCode(tag.hreflang);
+                const isValid = langCheck.valid;
+                tagsList.innerHTML += `
+                    <div class="flex items-center gap-3 bg-slate-900/50 rounded-lg px-4 py-2.5">
+                        <span class="${isValid ? 'text-green-400' : 'text-red-400'} text-lg">${isValid ? '✓' : '✗'}</span>
+                        <span class="text-blue-300">${tag.hreflang}</span>
+                        <span class="text-gray-500">→</span>
+                        <span class="text-gray-300 truncate text-xs">${tag.href}</span>
+                    </div>
+                `;
+            }
+
+            // === CHECK 2: Doppelte Sprachcodes ===
+            const langCodes = tags.map(t => t.hreflang);
+            const langCodeCounts = {};
+            for (const code of langCodes) {
+                langCodeCounts[code] = (langCodeCounts[code] || 0) + 1;
+            }
+            const duplicates = Object.entries(langCodeCounts).filter(([, count]) => count > 1);
+            if (duplicates.length > 0) {
+                issues.push({
+                    type: 'error',
+                    title: 'Doppelte Sprachcodes',
+                    desc: `Folgende Hreflang-Codes kommen mehrfach vor: ${duplicates.map(([c]) => c).join(', ')}. Jeder Sprachcode darf nur einmal vergeben werden.`
+                });
+                checks.push({ ok: false, label: 'Keine doppelten Sprachcodes', detail: `${duplicates.length} Duplikat(e) gefunden` });
+            } else {
+                checks.push({ ok: true, label: 'Keine doppelten Sprachcodes', detail: 'Alle Sprachcodes sind eindeutig' });
+            }
+
+            // === CHECK 3: x-default vorhanden ===
+            const hasXDefault = langCodes.includes('x-default');
+            if (!hasXDefault) {
+                issues.push({
+                    type: 'warning',
+                    title: 'x-default fehlt',
+                    desc: 'Kein x-default Hreflang-Tag gefunden. Google empfiehlt x-default für alle mehrsprachigen Websites — es definiert die Standardseite für Nutzer, deren Sprache nicht abgedeckt ist. Füge hinzu: <link rel="alternate" hreflang="x-default" href="https://deine-default-url.de/">'
+                });
+                checks.push({ ok: false, label: 'x-default vorhanden', detail: 'Fehlt — empfohlen von Google' });
+            } else {
+                checks.push({ ok: true, label: 'x-default vorhanden', detail: 'Korrekt implementiert' });
+            }
+
+            // === CHECK 4: Gültige Sprachcodes ===
+            const invalidCodes = [];
+            for (const tag of tags) {
+                if (tag.hreflang === 'x-default') continue;
+                const check = validateLangCode(tag.hreflang);
+                if (!check.valid) {
+                    invalidCodes.push({ code: tag.hreflang, reason: check.reason });
+                }
+            }
+            if (invalidCodes.length > 0) {
+                for (const inv of invalidCodes) {
+                    issues.push({
+                        type: 'error',
+                        title: `Ungültiger Sprachcode: "${inv.code}"`,
+                        desc: inv.reason + '. Google ignoriert Hreflang-Tags mit ungültigen Codes.'
+                    });
+                }
+                checks.push({ ok: false, label: 'Gültige ISO-Sprachcodes', detail: `${invalidCodes.length} ungültiger Code(s) gefunden` });
+            } else {
+                checks.push({ ok: true, label: 'Gültige ISO-Sprachcodes', detail: 'Alle Codes folgen ISO 639-1 Standard' });
+            }
+
+            // === CHECK 5: Absolute URLs ===
+            const relativeUrls = tags.filter(t => !t.href.startsWith('http://') && !t.href.startsWith('https://'));
+            if (relativeUrls.length > 0) {
+                issues.push({
+                    type: 'error',
+                    title: 'Relative URLs gefunden',
+                    desc: `${relativeUrls.length} Hreflang-Tag(s) verwenden relative URLs (${relativeUrls.map(t => t.href).join(', ')}). Hreflang-Tags erfordern absolute URLs inklusive Protokoll (https://).`
+                });
+                checks.push({ ok: false, label: 'Absolute URLs', detail: `${relativeUrls.length} relative URL(s) gefunden` });
+            } else {
+                checks.push({ ok: true, label: 'Absolute URLs', detail: 'Alle URLs sind absolut' });
+            }
+
+            // === CHECK 6: Gemischtes HTTP/HTTPS ===
+            const httpUrls = tags.filter(t => t.href.startsWith('http://'));
+            const httpsUrls = tags.filter(t => t.href.startsWith('https://'));
+            if (httpUrls.length > 0 && httpsUrls.length > 0) {
+                issues.push({
+                    type: 'warning',
+                    title: 'Gemischte HTTP/HTTPS URLs',
+                    desc: 'Einige Hreflang-Tags verwenden HTTP, andere HTTPS. Stelle sicher, dass alle URLs konsistent HTTPS verwenden.'
+                });
+                checks.push({ ok: false, label: 'Konsistentes HTTPS', detail: 'Gemischte Protokolle gefunden' });
+            } else if (httpUrls.length > 0) {
+                issues.push({
+                    type: 'warning',
+                    title: 'HTTP statt HTTPS',
+                    desc: 'Alle Hreflang-Tags verwenden HTTP. Da Google HTTPS bevorzugt, sollten die URLs auf HTTPS umgestellt werden.'
+                });
+                checks.push({ ok: false, label: 'HTTPS-URLs', detail: 'Nur HTTP URLs gefunden' });
+            } else {
+                checks.push({ ok: true, label: 'HTTPS-URLs', detail: 'Alle URLs verwenden HTTPS' });
+            }
+
+            // === CHECK 7: Trailing Slash Konsistenz ===
+            const withSlash = tags.filter(t => {
+                try { const u = new URL(t.href); return u.pathname.endsWith('/'); } catch { return false; }
+            });
+            const withoutSlash = tags.filter(t => {
+                try { const u = new URL(t.href); return !u.pathname.endsWith('/') && u.pathname !== ''; } catch { return false; }
+            });
+            if (withSlash.length > 0 && withoutSlash.length > 0) {
+                issues.push({
+                    type: 'warning',
+                    title: 'Inkonsistenter Trailing Slash',
+                    desc: 'Einige URLs enden mit "/" und andere nicht. Stelle sicher, dass alle Hreflang-URLs konsistent formatiert sind.'
+                });
+                checks.push({ ok: false, label: 'Konsistenter Trailing Slash', detail: 'Inkonsistente URL-Formatierung' });
+            } else {
+                checks.push({ ok: true, label: 'Konsistenter Trailing Slash', detail: 'URL-Format ist einheitlich' });
+            }
+
+            // === Ergebnis rendern ===
+            const errorCount = issues.filter(i => i.type === 'error').length;
+            const warningCount = issues.filter(i => i.type === 'warning').length;
+
+            // Score Banner
+            const scoreBanner = document.getElementById('score-banner');
+            if (errorCount === 0 && warningCount === 0) {
+                scoreBanner.className = 'rounded-2xl p-6 mb-6 border flex items-center gap-4 bg-green-900/20 border-green-500/30';
+                scoreBanner.innerHTML = `
+                    <div class="text-5xl">✅</div>
+                    <div>
+                        <div class="text-xl font-bold text-green-400">Keine Fehler gefunden!</div>
+                        <div class="text-gray-400 text-sm">${tags.length} Hreflang-Tags analysiert. Deine Implementierung sieht gut aus.</div>
+                    </div>
+                `;
+            } else if (errorCount > 0) {
+                scoreBanner.className = 'rounded-2xl p-6 mb-6 border flex items-center gap-4 bg-red-900/20 border-red-500/30';
+                scoreBanner.innerHTML = `
+                    <div class="text-5xl">❌</div>
+                    <div>
+                        <div class="text-xl font-bold text-red-400">${errorCount} Fehler, ${warningCount} Warnungen</div>
+                        <div class="text-gray-400 text-sm">${tags.length} Hreflang-Tags analysiert. Bitte behebe die gefundenen Fehler, damit Google deine Hreflang-Tags korrekt verarbeiten kann.</div>
+                    </div>
+                `;
+            } else {
+                scoreBanner.className = 'rounded-2xl p-6 mb-6 border flex items-center gap-4 bg-yellow-900/20 border-yellow-500/30';
+                scoreBanner.innerHTML = `
+                    <div class="text-5xl">⚠️</div>
+                    <div>
+                        <div class="text-xl font-bold text-yellow-400">${warningCount} Hinweise gefunden</div>
+                        <div class="text-gray-400 text-sm">${tags.length} Hreflang-Tags analysiert. Keine kritischen Fehler, aber beachte die Hinweise für eine optimale Implementierung.</div>
+                    </div>
+                `;
+            }
+
+            // Issues
+            const issuesList = document.getElementById('issues-list');
+            if (issues.length === 0) {
+                document.getElementById('issues-section').classList.add('hidden');
+            } else {
+                document.getElementById('issues-section').classList.remove('hidden');
+                issuesList.innerHTML = issues.map(issue => `
+                    <div class="flex gap-3 p-4 rounded-xl ${issue.type === 'error' ? 'bg-red-900/20 border border-red-500/20' : 'bg-yellow-900/20 border border-yellow-500/20'}">
+                        <span class="text-xl flex-shrink-0">${issue.type === 'error' ? '❌' : '⚠️'}</span>
+                        <div>
+                            <div class="font-semibold ${issue.type === 'error' ? 'text-red-300' : 'text-yellow-300'} mb-1">${issue.title}</div>
+                            <div class="text-gray-400 text-sm">${issue.desc}</div>
+                        </div>
+                    </div>
+                `).join('');
+            }
+
+            // Checks
+            const checksList = document.getElementById('checks-list');
+            checksList.innerHTML = checks.map(check => `
+                <div class="flex items-center gap-3 py-2 border-b border-white/5">
+                    <span class="${check.ok ? 'text-green-400' : 'text-red-400'} text-lg flex-shrink-0">${check.ok ? '✓' : '✗'}</span>
+                    <span class="text-gray-300 flex-1">${check.label}</span>
+                    <span class="text-gray-500 text-sm">${check.detail}</span>
+                </div>
+            `).join('');
+
+            document.getElementById('results').classList.remove('hidden');
+            document.getElementById('tags-found').classList.remove('hidden');
+            document.getElementById('results').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        function clearAll() {
+            document.getElementById('html-input').value = '';
+            document.getElementById('results').classList.add('hidden');
+        }
+
+        function loadExample() {
+            document.getElementById('html-input').value = `<link rel="alternate" hreflang="de" href="https://example.de/">
+<link rel="alternate" hreflang="de-AT" href="https://example.de/at/">
+<link rel="alternate" hreflang="de-CH" href="https://example.ch/">
+<link rel="alternate" hreflang="en" href="https://example.com/">
+<link rel="alternate" hreflang="en-US" href="https://example.com/us/">
+<link rel="alternate" hreflang="en-GB" href="https://example.com/uk/">
+<link rel="alternate" hreflang="x-default" href="https://example.com/">`;
+        }
+    </script>
+</body>
+</html>
