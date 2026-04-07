@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Mon, 06 Apr 2026 07:16:59 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 07 Apr 2026 01:23:11 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Featured Snippets gewinnen: So erreichst du Position 0 bei Google</title>
+      <link>https://shift07.ai/blog/featured-snippets-position-0.html</link>
+      <guid>https://shift07.ai/blog/featured-snippets-position-0.html</guid>
+      <pubDate>Tue, 07 Apr 2026 01:22:46 +0000</pubDate>
+      <description>Featured Snippets sind die begehrte Position 0 bei Google. Lerne, wie du deine Inhalte richtig strukturierst, um Snippet-Plätze zu gewinnen und mehr Traffic zu erzielen.</description>
+      <category>On-Page SEO</category>
+    </item>
     <item>
       <title>Content-Länge und SEO: Wie lang sollte ein Artikel sein?</title>
       <link>https://shift07.ai/blog/content-laenge-seo-wie-lang-artikel.html</link>
@@ -158,14 +166,6 @@
       <pubDate>Sat, 04 Apr 2026 13:19:39 +0000</pubDate>
       <description>Mit unserem kostenlosen Sitemap-Validator prüfst du deine sitemap.xml auf XML-Fehler, ungültige URLs, Duplikate und Formatprobleme — direkt im Browser, ohne Anmeldung.</description>
       <category>Technisches SEO</category>
-    </item>
-    <item>
-      <title>Core Web Vitals erklärt: LCP, CLS und FID einfach verstehen</title>
-      <link>https://shift07.ai/blog/core-web-vitals-erklaert.html</link>
-      <guid>https://shift07.ai/blog/core-web-vitals-erklaert.html</guid>
-      <pubDate>Sat, 04 Apr 2026 01:01:48 +0000</pubDate>
-      <description>Was sind Core Web Vitals und wie beeinflussen sie dein Google-Ranking? LCP, CLS und FID verständlich erklärt — mit Grenzwerten, Messung und konkreten Tipps.</description>
-      <category>Performance SEO</category>
     </item>
   </channel>
 </rss>
