@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page-Speed-Estimator – Ladezeit-Score kostenlos schätzen | Shift07</title>
+    <meta name="description" content="Schätze die Ladezeit-Performance deiner Website anhand messbarer Faktoren: Seitengewicht, Ressourcen, Server, Caching und mehr. Kostenloser Page-Speed-Estimator.">
+    <link rel="icon" type="image/png" href="/logo.png">
+    <link rel="canonical" href="https://shift07.ai/tools/page-speed-estimator.html">
+    <link rel="alternate" type="application/rss+xml" title="Shift07 Blog" href="https://shift07.ai/feed.xml">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Page-Speed-Estimator – Ladezeit-Score kostenlos schätzen">
+    <meta property="og:description" content="Schätze die Ladezeit-Performance deiner Website anhand messbarer Faktoren: Seitengewicht, Ressourcen, Server, Caching und mehr.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://shift07.ai/tools/page-speed-estimator.html">
+    <meta property="og:image" content="https://shift07.ai/tools/images/page-speed-estimator.png">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="Shift07">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Page-Speed-Estimator – Ladezeit kostenlos schätzen">
+    <meta name="twitter:description" content="Schätze die Ladezeit-Performance deiner Website anhand messbarer Faktoren.">
+    <meta name="twitter:image" content="https://shift07.ai/tools/images/page-speed-estimator.png">
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Page-Speed-Estimator",
+      "description": "Schätze die Ladezeit-Performance deiner Website anhand messbarer Faktoren: Seitengewicht, Ressourcen, Server, Caching und mehr.",
+      "url": "https://shift07.ai/tools/page-speed-estimator.html",
+      "applicationCategory": "SEO Tool",
+      "operatingSystem": "Any",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+      "publisher": { "@type": "Organization", "name": "Shift07", "url": "https://shift07.ai" }
+    }
+    </script>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8475857002943858" crossorigin="anonymous"></script>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K1S1RXBDS8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K1S1RXBDS8');
+    </script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0a0a0a; color: #e0e0e0; line-height: 1.7; min-height: 100vh; }
+        header { background: rgba(0,0,0,0.85); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(255,165,0,0.2); padding: 1rem 2rem; position: sticky; top: 0; z-index: 100; }
+        header nav { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+        header .logo { font-size: 1.5rem; font-weight: 700; color: #ff8c00; text-decoration: none; }
+        header .nav-links a { color: #ccc; text-decoration: none; margin-left: 1.5rem; font-size: 0.95rem; transition: color 0.2s; }
+        header .nav-links a:hover { color: #ff8c00; }
+        .hero { background: linear-gradient(135deg, #0a0a1a 0%, #0a0a0a 60%, #1a0a00 100%); padding: 3.5rem 2rem 2.5rem; text-align: center; border-bottom: 1px solid rgba(255,165,0,0.1); }
+        .hero .badge { display: inline-block; background: rgba(255,140,0,0.1); border: 1px solid rgba(255,140,0,0.3); color: #ff8c00; padding: 0.3rem 0.9rem; border-radius: 20px; font-size: 0.78rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 1rem; }
+        .hero h1 { font-size: clamp(1.7rem, 3.5vw, 2.5rem); font-weight: 800; max-width: 750px; margin: 0 auto 0.8rem; line-height: 1.2; }
+        .hero h1 span { color: #ff8c00; }
+        .hero p { color: #aaa; max-width: 600px; margin: 0 auto; font-size: 1rem; }
+        .tool-wrapper { max-width: 860px; margin: 2.5rem auto; padding: 0 1.5rem 5rem; }
+        .tool-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,165,0,0.2); border-radius: 16px; padding: 2rem; margin-bottom: 2rem; }
+        .tool-card h2 { font-size: 1.15rem; font-weight: 700; margin-bottom: 1.5rem; color: #ff8c00; display: flex; align-items: center; gap: 0.6rem; }
+        label { display: block; font-size: 0.88rem; color: #bbb; margin-bottom: 0.5rem; font-weight: 500; }
+        .input-row { display: grid; grid-template-columns: 1fr auto; gap: 0.8rem; align-items: end; margin-bottom: 1.5rem; }
+        input[type="url"], input[type="number"], select {
+            width: 100%; padding: 0.75rem 1rem; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.15);
+            border-radius: 8px; color: #e0e0e0; font-size: 0.95rem; outline: none; transition: border-color 0.2s;
+        }
+        input:focus, select:focus { border-color: #ff8c00; }
+        .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; margin-bottom: 1.5rem; }
+        .form-group { display: flex; flex-direction: column; gap: 0.4rem; }
+        .btn { background: #ff8c00; color: #000; font-weight: 700; border: none; padding: 0.8rem 2rem; border-radius: 8px; cursor: pointer; font-size: 1rem; transition: background 0.2s; white-space: nowrap; }
+        .btn:hover { background: #ffa500; }
+        .btn:disabled { background: #555; color: #888; cursor: not-allowed; }
+        /* Score ring */
+        .score-section { text-align: center; padding: 2rem 0 1rem; }
+        .score-ring-wrapper { position: relative; width: 180px; height: 180px; margin: 0 auto 1rem; }
+        .score-ring-wrapper svg { transform: rotate(-90deg); }
+        .score-circle-bg { fill: none; stroke: rgba(255,255,255,0.08); stroke-width: 14; }
+        .score-circle { fill: none; stroke-width: 14; stroke-linecap: round; transition: stroke-dashoffset 1s ease, stroke 0.5s; }
+        .score-label { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; }
+        .score-number { font-size: 2.5rem; font-weight: 800; line-height: 1; }
+        .score-text { font-size: 0.72rem; color: #888; text-transform: uppercase; letter-spacing: 0.06em; }
+        .score-grade { font-size: 1.1rem; font-weight: 700; margin-top: 0.5rem; }
+        /* Factor bars */
+        .factors-grid { display: grid; gap: 1rem; margin-top: 1.5rem; }
+        .factor-row { display: grid; grid-template-columns: 180px 1fr 60px; align-items: center; gap: 0.8rem; }
+        .factor-name { font-size: 0.88rem; color: #ccc; }
+        .factor-bar-bg { background: rgba(255,255,255,0.08); border-radius: 4px; height: 8px; overflow: hidden; }
+        .factor-bar { height: 100%; border-radius: 4px; transition: width 0.8s ease; }
+        .factor-score { font-size: 0.88rem; font-weight: 600; text-align: right; }
+        /* Recommendations */
+        .reco-list { list-style: none; padding: 0; }
+        .reco-item { display: flex; gap: 0.8rem; align-items: flex-start; padding: 0.9rem 0; border-bottom: 1px solid rgba(255,255,255,0.05); }
+        .reco-item:last-child { border-bottom: none; }
+        .reco-icon { flex-shrink: 0; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.8rem; font-weight: 700; }
+        .reco-icon.warn { background: rgba(255,165,0,0.15); color: #ff8c00; }
+        .reco-icon.bad { background: rgba(255,80,80,0.15); color: #ff6b6b; }
+        .reco-icon.ok { background: rgba(80,200,80,0.15); color: #50c878; }
+        .reco-text strong { display: block; font-size: 0.92rem; color: #fff; }
+        .reco-text span { font-size: 0.83rem; color: #999; }
+        /* Summary boxes */
+        .summary-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 1rem; margin-top: 1rem; }
+        .summary-card { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 10px; padding: 1rem 1.2rem; text-align: center; }
+        .summary-card .val { font-size: 1.6rem; font-weight: 800; color: #ff8c00; }
+        .summary-card .key { font-size: 0.78rem; color: #777; text-transform: uppercase; letter-spacing: 0.05em; margin-top: 0.2rem; }
+        .hidden { display: none; }
+        /* Info box */
+        .info-box { background: rgba(255,140,0,0.06); border: 1px solid rgba(255,140,0,0.2); border-radius: 10px; padding: 1.2rem 1.5rem; margin-bottom: 1.5rem; font-size: 0.9rem; color: #bbb; }
+        .info-box strong { color: #ff8c00; }
+        .article-section { margin-top: 3rem; }
+        .article-section h2 { font-size: 1.35rem; font-weight: 700; margin-bottom: 1rem; color: #fff; border-left: 4px solid #ff8c00; padding-left: 0.9rem; }
+        .article-section h3 { font-size: 1.05rem; font-weight: 600; color: #ffb347; margin: 1.5rem 0 0.6rem; }
+        .article-section p, .article-section li { color: #bbb; font-size: 0.95rem; margin-bottom: 0.8rem; }
+        .article-section ul { padding-left: 1.3rem; }
+        .article-section a { color: #ff8c00; }
+        footer { background: #111; border-top: 1px solid rgba(255,165,0,0.1); padding: 2.5rem 2rem; text-align: center; color: #666; font-size: 0.88rem; }
+        footer a { color: #888; }
+        @media (max-width: 600px) {
+            .form-grid { grid-template-columns: 1fr; }
+            .factor-row { grid-template-columns: 130px 1fr 50px; }
+            .input-row { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="/" class="logo">Shift07</a>
+    <div class="nav-links">
+      <a href="/blog.html">Blog</a>
+      <a href="/tools.html">Tools</a>
+      <a href="/">SEO-Analyse</a>
+    </div>
+  </nav>
+</header>
+
+<div class="hero">
+  <span class="badge">Performance SEO</span>
+  <h1>Page-Speed-<span>Estimator</span></h1>
+  <p>Schätze die Ladezeit-Performance deiner Website anhand bekannter Faktoren — ohne Plugin, ohne Server-Zugriff.</p>
+</div>
+
+<div class="tool-wrapper">
+
+  <!-- Tool Input -->
+  <div class="tool-card">
+    <h2>
+      <svg width="20" height="20" fill="none" stroke="#ff8c00" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+      Performance-Faktoren eingeben
+    </h2>
+
+    <div class="info-box">
+      <strong>Wie funktioniert das?</strong> Du gibst bekannte Faktoren deiner Website ein — Seitengewicht, Anzahl Requests, Hosting etc. Der Estimator bewertet jeden Faktor einzeln und errechnet einen gewichteten Performance-Score (0–100), ähnlich wie Google Lighthouse.
+    </div>
+
+    <div class="form-grid">
+      <div class="form-group">
+        <label for="pageSize">Gesamtes Seitengewicht (KB) <span style="color:#888;font-size:0.8rem">inklusive aller Ressourcen</span></label>
+        <input type="number" id="pageSize" placeholder="z.B. 2400" min="0" max="99999">
+      </div>
+      <div class="form-group">
+        <label for="requestCount">Anzahl HTTP-Requests</label>
+        <input type="number" id="requestCount" placeholder="z.B. 85" min="0" max="9999">
+      </div>
+      <div class="form-group">
+        <label for="imageSize">Bildgewicht (KB)</label>
+        <input type="number" id="imageSize" placeholder="z.B. 1200" min="0" max="99999">
+      </div>
+      <div class="form-group">
+        <label for="jsSize">JavaScript-Gewicht (KB)</label>
+        <input type="number" id="jsSize" placeholder="z.B. 450" min="0" max="99999">
+      </div>
+      <div class="form-group">
+        <label for="cssSize">CSS-Gewicht (KB)</label>
+        <input type="number" id="cssSize" placeholder="z.B. 120" min="0" max="99999">
+      </div>
+      <div class="form-group">
+        <label for="ttfb">TTFB (ms) <span style="color:#888;font-size:0.8rem">Server-Antwortzeit</span></label>
+        <input type="number" id="ttfb" placeholder="z.B. 350" min="0" max="9999">
+      </div>
+      <div class="form-group">
+        <label for="hosting">Hosting-Qualität</label>
+        <select id="hosting">
+          <option value="">— bitte wählen —</option>
+          <option value="5">Premium Cloud (Cloudflare, Vercel, Netlify)</option>
+          <option value="4">Managed WordPress / VPS (z.B. Hetzner)</option>
+          <option value="3">Shared Hosting (STRATO, 1&1 Premium)</option>
+          <option value="2">Günstiger Shared Host</option>
+          <option value="1">Sehr langsamer Hoster / lokaler Server</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="caching">Caching-Strategie</label>
+        <select id="caching">
+          <option value="">— bitte wählen —</option>
+          <option value="5">CDN + Browser-Cache + Server-Cache (optimal)</option>
+          <option value="4">Browser-Cache + Server-Cache</option>
+          <option value="3">Nur Browser-Cache</option>
+          <option value="2">Minimales Caching</option>
+          <option value="1">Kein Caching</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="https">HTTPS / SSL</label>
+        <select id="https">
+          <option value="">— bitte wählen —</option>
+          <option value="5">HTTPS aktiv + HSTS</option>
+          <option value="4">HTTPS aktiv</option>
+          <option value="2">HTTP (kein SSL)</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="lazyload">Lazy Loading für Bilder</label>
+        <select id="lazyload">
+          <option value="">— bitte wählen —</option>
+          <option value="5">Ja, vollständig implementiert</option>
+          <option value="3">Teilweise</option>
+          <option value="1">Nein</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="compression">Gzip / Brotli Komprimierung</label>
+        <select id="compression">
+          <option value="">— bitte wählen —</option>
+          <option value="5">Brotli aktiv</option>
+          <option value="4">Gzip aktiv</option>
+          <option value="1">Keine Komprimierung</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="renderblocking">Render-Blocking Ressourcen</label>
+        <select id="renderblocking">
+          <option value="">— bitte wählen —</option>
+          <option value="5">Keine (defer/async überall)</option>
+          <option value="3">Wenige (1–3 blockierende Ressourcen)</option>
+          <option value="1">Viele (&gt;5 blockierende Ressourcen)</option>
+        </select>
+      </div>
+    </div>
+
+    <div style="text-align:center; margin-top: 0.5rem;">
+      <button class="btn" onclick="calculateScore()">Performance-Score schätzen</button>
+    </div>
+  </div>
+
+  <!-- Result Section -->
+  <div id="result" class="hidden">
+
+    <!-- Score Ring -->
+    <div class="tool-card">
+      <h2>
+        <svg width="20" height="20" fill="none" stroke="#ff8c00" stroke-width="2" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        Performance-Score
+      </h2>
+
+      <div class="score-section">
+        <div class="score-ring-wrapper">
+          <svg width="180" height="180" viewBox="0 0 180 180">
+            <circle class="score-circle-bg" cx="90" cy="90" r="76"/>
+            <circle class="score-circle" id="scoreCircle" cx="90" cy="90" r="76" stroke-dasharray="477.5" stroke-dashoffset="477.5"/>
+          </svg>
+          <div class="score-label">
+            <div class="score-number" id="scoreNum">—</div>
+            <div class="score-text">/ 100</div>
+          </div>
+        </div>
+        <div class="score-grade" id="scoreGrade"></div>
+        <p id="scoreDesc" style="color:#999; font-size:0.9rem; max-width:420px; margin:0.6rem auto 0;"></p>
+      </div>
+
+      <!-- Summary -->
+      <div class="summary-grid" id="summaryGrid"></div>
+    </div>
+
+    <!-- Factor Breakdown -->
+    <div class="tool-card">
+      <h2>
+        <svg width="20" height="20" fill="none" stroke="#ff8c00" stroke-width="2" viewBox="0 0 24 24"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
+        Faktor-Analyse
+      </h2>
+      <div class="factors-grid" id="factorsGrid"></div>
+    </div>
+
+    <!-- Recommendations -->
+    <div class="tool-card">
+      <h2>
+        <svg width="20" height="20" fill="none" stroke="#ff8c00" stroke-width="2" viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+        Empfehlungen
+      </h2>
+      <ul class="reco-list" id="recoList"></ul>
+    </div>
+
+  </div>
+
+  <!-- Artikel-Bereich -->
+  <div class="article-section">
+    <h2>Was ist der Page-Speed-Estimator?</h2>
+    <p>Der Page-Speed-Estimator ist ein kostenfreies Tool, mit dem du die Performance-Qualität deiner Website einschätzen kannst — ohne direkte URL-Messung. Du gibst bekannte Werte ein (Seitengewicht, Requests, TTFB, Caching-Strategie etc.) und erhältst einen gewichteten Score von 0 bis 100.</p>
+    <p>Das Tool orientiert sich an den Bewertungskriterien von <strong>Google Lighthouse</strong> und den <a href="/blog/core-web-vitals-erklaert.html">Core Web Vitals</a>. Es ist ideal für eine schnelle Selbst-Einschätzung oder für Agenturarbeiten, bei denen du viele Projekte parallel bewerten möchtest.</p>
+
+    <h3>Welche Faktoren beeinflussen die Ladezeit?</h3>
+    <p>Die Ladegeschwindigkeit einer Website hängt von vielen Faktoren ab. Die wichtigsten sind:</p>
+    <ul>
+      <li><strong>Seitengewicht:</strong> Je mehr KB eine Seite wiegt, desto länger dauert das Laden. Ziel: unter 1.500 KB gesamt.</li>
+      <li><strong>Anzahl HTTP-Requests:</strong> Jede Datei (Bild, CSS, JS, Font) erzeugt einen Request. Weniger ist besser. Ziel: unter 50.</li>
+      <li><strong>TTFB (Time to First Byte):</strong> Wie schnell antwortet der Server? Ziel: unter 200ms. Mehr dazu in unserem <a href="/blog/ttfb-verbessern-server-antwortzeit.html">TTFB-Artikel</a>.</li>
+      <li><strong>Bilder:</strong> Unkomprimierte Bilder sind der häufigste Performance-Killer. Nutze WebP/AVIF und <a href="/blog/bilder-web-optimieren.html">optimiere deine Bilder konsequent</a>.</li>
+      <li><strong>Render-Blocking-Ressourcen:</strong> CSS und JS, die den Browser blockieren, verzögern den First Paint. Mehr dazu in unserem Artikel über <a href="/blog/render-blocking-ressourcen-entfernen.html">Render-Blocking-Ressourcen</a>.</li>
+      <li><strong>Caching:</strong> Gut konfiguriertes Caching beschleunigt Wiederholungsbesuche dramatisch. Mehr in unserem <a href="/blog/caching-website-einrichten.html">Caching-Guide</a>.</li>
+    </ul>
+
+    <h3>Score-Interpretation</h3>
+    <ul>
+      <li><strong>90–100 (Exzellent):</strong> Deine Website ist top-optimiert. Google bewertet dich positiv als Ranking-Faktor.</li>
+      <li><strong>70–89 (Gut):</strong> Solide Performance, kleinere Verbesserungen möglich.</li>
+      <li><strong>50–69 (Verbesserungsbedarf):</strong> Messbare Ladezeit-Probleme — priorisiere die größten Bremsen.</li>
+      <li><strong>Unter 50 (Kritisch):</strong> Deutliche Performance-Probleme, die Google-Ranking und Conversion-Rate negativ beeinflussen.</li>
+    </ul>
+
+    <h3>Nächste Schritte nach dem Score</h3>
+    <p>Wenn du deinen Score kennst, starte mit den Faktoren, die den größten Hebel haben. In der Regel sind das: Bildoptimierung (größter Gewinn), JavaScript-Reduktion und TTFB-Verbesserung durch besseres Hosting oder <a href="/blog/caching-website-einrichten.html">serverseitiges Caching</a>.</p>
+    <p>Für eine umfassende Analyse aller SEO-Probleme auf deiner Website nutze unsere <a href="/">kostenlose Shift07-Analyse</a> — sie prüft über 40 Faktoren inklusive technischem SEO, Meta-Tags und Ladezeit.</p>
+  </div>
+
+</div>
+
+<footer>
+  <p>&copy; 2026 Thümmler AI GmbH &bull; <a href="/impressum.html">Impressum</a> &bull; <a href="/datenschutz.html">Datenschutz</a></p>
+  <p style="margin-top:0.5rem;"><a href="/blog.html">Blog</a> &bull; <a href="/tools.html">Tools</a> &bull; <a href="/feed.xml">RSS-Feed</a></p>
+</footer>
+
+<script>
+// ───────────── Weights & scoring functions ─────────────
+const WEIGHTS = {
+  pageSize: 0.15,
+  requestCount: 0.12,
+  imageSize: 0.13,
+  jsSize: 0.10,
+  cssSize: 0.05,
+  ttfb: 0.15,
+  hosting: 0.08,
+  caching: 0.08,
+  https: 0.04,
+  lazyload: 0.04,
+  compression: 0.04,
+  renderblocking: 0.02
+};
+
+function scorePageSize(kb) {
+  if (!kb) return null;
+  if (kb <= 500) return 100;
+  if (kb <= 1000) return 90;
+  if (kb <= 1500) return 78;
+  if (kb <= 2500) return 62;
+  if (kb <= 4000) return 42;
+  if (kb <= 6000) return 25;
+  return 10;
+}
+function scoreRequests(n) {
+  if (!n) return null;
+  if (n <= 20) return 100;
+  if (n <= 35) return 88;
+  if (n <= 50) return 74;
+  if (n <= 75) return 56;
+  if (n <= 100) return 38;
+  if (n <= 150) return 20;
+  return 8;
+}
+function scoreImageSize(kb) {
+  if (!kb) return null;
+  if (kb <= 200) return 100;
+  if (kb <= 500) return 88;
+  if (kb <= 900) return 72;
+  if (kb <= 1500) return 52;
+  if (kb <= 2500) return 32;
+  return 12;
+}
+function scoreJsSize(kb) {
+  if (!kb) return null;
+  if (kb <= 100) return 100;
+  if (kb <= 200) return 88;
+  if (kb <= 400) return 72;
+  if (kb <= 700) return 52;
+  if (kb <= 1000) return 32;
+  return 12;
+}
+function scoreCssSize(kb) {
+  if (!kb) return null;
+  if (kb <= 50) return 100;
+  if (kb <= 100) return 90;
+  if (kb <= 200) return 75;
+  if (kb <= 400) return 55;
+  return 30;
+}
+function scoreTtfb(ms) {
+  if (!ms) return null;
+  if (ms <= 100) return 100;
+  if (ms <= 200) return 90;
+  if (ms <= 400) return 72;
+  if (ms <= 600) return 52;
+  if (ms <= 1000) return 32;
+  if (ms <= 2000) return 15;
+  return 5;
+}
+function scoreSelect(val) {
+  if (!val) return null;
+  return Number(val) * 20;
+}
+
+function calculateScore() {
+  const pageSize = parseFloat(document.getElementById('pageSize').value);
+  const requestCount = parseFloat(document.getElementById('requestCount').value);
+  const imageSize = parseFloat(document.getElementById('imageSize').value);
+  const jsSize = parseFloat(document.getElementById('jsSize').value);
+  const cssSize = parseFloat(document.getElementById('cssSize').value);
+  const ttfb = parseFloat(document.getElementById('ttfb').value);
+  const hosting = document.getElementById('hosting').value;
+  const caching = document.getElementById('caching').value;
+  const https = document.getElementById('https').value;
+  const lazyload = document.getElementById('lazyload').value;
+  const compression = document.getElementById('compression').value;
+  const renderblocking = document.getElementById('renderblocking').value;
+
+  const factors = [
+    { key: 'pageSize', name: 'Seitengewicht', score: scorePageSize(pageSize), weight: WEIGHTS.pageSize, raw: pageSize, unit: 'KB', good: '≤1.500 KB', val: pageSize ? pageSize + ' KB' : null },
+    { key: 'requestCount', name: 'HTTP-Requests', score: scoreRequests(requestCount), weight: WEIGHTS.requestCount, val: requestCount ? requestCount + ' Requests' : null, good: '≤50' },
+    { key: 'imageSize', name: 'Bildgewicht', score: scoreImageSize(imageSize), weight: WEIGHTS.imageSize, val: imageSize ? imageSize + ' KB' : null, good: '≤900 KB' },
+    { key: 'jsSize', name: 'JavaScript', score: scoreJsSize(jsSize), weight: WEIGHTS.jsSize, val: jsSize ? jsSize + ' KB' : null, good: '≤400 KB' },
+    { key: 'cssSize', name: 'CSS', score: scoreCssSize(cssSize), weight: WEIGHTS.cssSize, val: cssSize ? cssSize + ' KB' : null, good: '≤200 KB' },
+    { key: 'ttfb', name: 'TTFB', score: scoreTtfb(ttfb), weight: WEIGHTS.ttfb, val: ttfb ? ttfb + ' ms' : null, good: '≤200 ms' },
+    { key: 'hosting', name: 'Hosting-Qualität', score: scoreSelect(hosting), weight: WEIGHTS.hosting, val: null, good: 'Premium' },
+    { key: 'caching', name: 'Caching', score: scoreSelect(caching), weight: WEIGHTS.caching, val: null, good: 'CDN + Cache' },
+    { key: 'https', name: 'HTTPS/SSL', score: scoreSelect(https), weight: WEIGHTS.https, val: null, good: 'HTTPS + HSTS' },
+    { key: 'lazyload', name: 'Lazy Loading', score: scoreSelect(lazyload), weight: WEIGHTS.lazyload, val: null, good: 'Vollständig' },
+    { key: 'compression', name: 'Komprimierung', score: scoreSelect(compression), weight: WEIGHTS.compression, val: null, good: 'Brotli/Gzip' },
+    { key: 'renderblocking', name: 'Render-Blocking', score: scoreSelect(renderblocking), weight: WEIGHTS.renderblocking, val: null, good: 'Keine' }
+  ];
+
+  // Weighted average (nur Felder mit Score)
+  let totalWeight = 0, weightedSum = 0;
+  factors.forEach(f => {
+    if (f.score !== null) {
+      totalWeight += f.weight;
+      weightedSum += f.score * f.weight;
+    }
+  });
+
+  const normalizedScore = totalWeight > 0 ? Math.round(weightedSum / totalWeight) : 0;
+
+  // Display score
+  document.getElementById('result').classList.remove('hidden');
+  const numEl = document.getElementById('scoreNum');
+  numEl.textContent = normalizedScore;
+
+  // Color
+  let color, grade, desc;
+  if (normalizedScore >= 90) {
+    color = '#50c878'; grade = 'Exzellent'; desc = 'Hervorragende Performance! Deine Website ist optimal für schnelle Ladezeiten konfiguriert.';
+  } else if (normalizedScore >= 70) {
+    color = '#8bc34a'; grade = 'Gut'; desc = 'Solide Performance. Einzelne Faktoren können noch optimiert werden.';
+  } else if (normalizedScore >= 50) {
+    color = '#ff8c00'; grade = 'Verbesserungsbedarf'; desc = 'Messbare Performance-Probleme. Arbeite die Empfehlungen unten systematisch ab.';
+  } else {
+    color = '#ff6b6b'; grade = 'Kritisch'; desc = 'Deutliche Performance-Mängel. Diese beeinflussen Google-Ranking und Conversion-Rate negativ.';
+  }
+  numEl.style.color = color;
+  document.getElementById('scoreGrade').textContent = grade;
+  document.getElementById('scoreGrade').style.color = color;
+  document.getElementById('scoreDesc').textContent = desc;
+
+  // Ring
+  const circumference = 2 * Math.PI * 76;
+  const offset = circumference * (1 - normalizedScore / 100);
+  const circle = document.getElementById('scoreCircle');
+  circle.style.stroke = color;
+  circle.style.strokeDashoffset = offset;
+
+  // Summary
+  const filled = factors.filter(f => f.score !== null).length;
+  const weakFactors = factors.filter(f => f.score !== null && f.score < 60).length;
+  document.getElementById('summaryGrid').innerHTML = `
+    <div class="summary-card"><div class="val">${normalizedScore}</div><div class="key">Gesamt-Score</div></div>
+    <div class="summary-card"><div class="val">${filled}</div><div class="key">Faktoren geprüft</div></div>
+    <div class="summary-card"><div class="val" style="color:#ff6b6b">${weakFactors}</div><div class="key">Schwachstellen</div></div>
+    <div class="summary-card"><div class="val" style="color:${color}">${grade}</div><div class="key">Bewertung</div></div>
+  `;
+
+  // Factor bars
+  const grid = document.getElementById('factorsGrid');
+  grid.innerHTML = '';
+  factors.forEach(f => {
+    if (f.score === null) return;
+    const barColor = f.score >= 80 ? '#50c878' : f.score >= 60 ? '#ff8c00' : '#ff6b6b';
+    grid.innerHTML += `
+      <div class="factor-row">
+        <div class="factor-name">${f.name}${f.val ? ' <small style="color:#666">('+f.val+')</small>' : ''}</div>
+        <div class="factor-bar-bg"><div class="factor-bar" style="width:${f.score}%;background:${barColor}"></div></div>
+        <div class="factor-score" style="color:${barColor}">${f.score}</div>
+      </div>`;
+  });
+
+  // Recommendations
+  const recos = [];
+  factors.forEach(f => {
+    if (f.score === null) return;
+    if (f.key === 'pageSize' && f.score < 70) recos.push({ level: f.score < 40 ? 'bad' : 'warn', title: 'Seitengewicht reduzieren', desc: `Aktuelle Seite: ${pageSize} KB. Ziel: unter 1.500 KB. Komprimiere Bilder, entferne ungenutzte Ressourcen.` });
+    if (f.key === 'requestCount' && f.score < 70) recos.push({ level: f.score < 40 ? 'bad' : 'warn', title: 'HTTP-Requests reduzieren', desc: `${requestCount} Requests sind zu viele. Fasse CSS/JS zusammen, nutze Sprites, entferne ungenutzte Bibliotheken.` });
+    if (f.key === 'imageSize' && f.score < 70) recos.push({ level: f.score < 40 ? 'bad' : 'warn', title: 'Bilder optimieren', desc: `Bildgewicht von ${imageSize} KB ist hoch. Konvertiere zu WebP/AVIF und nutze entsprechende Komprimierung.` });
+    if (f.key === 'jsSize' && f.score < 70) recos.push({ level: f.score < 40 ? 'bad' : 'warn', title: 'JavaScript reduzieren', desc: `${jsSize} KB JavaScript verlangsamt den Page Load. Entferne ungenutzte Libraries, nutze Code Splitting.` });
+    if (f.key === 'ttfb' && f.score < 70) recos.push({ level: f.score < 40 ? 'bad' : 'warn', title: 'TTFB verbessern', desc: `${ttfb} ms Server-Antwortzeit ist zu langsam. Ziel: unter 200ms. Verbessere Hosting oder aktiviere Server-seitiges Caching.` });
+    if (f.key === 'caching' && f.score < 60) recos.push({ level: 'warn', title: 'Caching aktivieren', desc: 'Caching kann Ladezeiten für Wiederholungsbesucher dramatisch reduzieren. Nutze Browser-Cache + CDN.' });
+    if (f.key === 'compression' && f.score < 60) recos.push({ level: 'warn', title: 'Komprimierung aktivieren', desc: 'Gzip oder Brotli kann das übertragene Volumen um 60–80% reduzieren. Aktiviere es auf deinem Server.' });
+    if (f.key === 'renderblocking' && f.score < 60) recos.push({ level: 'warn', title: 'Render-Blocking-Ressourcen entfernen', desc: 'Lade CSS und JS asynchron (defer/async). Inline-CSS für above-the-fold Inhalte hilft ebenfalls.' });
+  });
+
+  const goodFactors = factors.filter(f => f.score !== null && f.score >= 80);
+  goodFactors.slice(0, 2).forEach(f => recos.push({ level: 'ok', title: `${f.name} ist gut optimiert`, desc: `Score: ${f.score}/100 — weiter so!` }));
+
+  if (recos.length === 0) recos.push({ level: 'ok', title: 'Alle geprüften Faktoren sind gut', desc: 'Deine Website ist in hervorragendem Zustand. Führe regelmäßige Checks durch.' });
+
+  const recoList = document.getElementById('recoList');
+  recoList.innerHTML = recos.map(r => `
+    <li class="reco-item">
+      <div class="reco-icon ${r.level}">${r.level === 'bad' ? '!' : r.level === 'warn' ? '⚠' : '✓'}</div>
+      <div class="reco-text"><strong>${r.title}</strong><span>${r.desc}</span></div>
+    </li>`).join('');
+
+  document.getElementById('result').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+</script>
+
+</body>
+</html>
