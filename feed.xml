@@ -5,8 +5,24 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Wed, 08 Apr 2026 03:03:07 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 08 Apr 2026 04:44:36 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Kategorieseiten SEO: So optimierst du Shop-Kategorien für Google</title>
+      <link>https://shift07.ai/blog/kategorieseiten-seo-optimieren.html</link>
+      <guid>https://shift07.ai/blog/kategorieseiten-seo-optimieren.html</guid>
+      <pubDate>Wed, 08 Apr 2026 04:44:05 +0000</pubDate>
+      <description>Kategorieseiten SEO für Online-Shops: Beschreibungen, Heading-Struktur, interne Verlinkung, Facettennavigation und Crawl-Effizienz. Mehr organischer Traffic auf deine Shop-Kategorien.</description>
+      <category>E-Commerce SEO</category>
+    </item>
+    <item>
+      <title>Produktseiten SEO: So optimierst du Produktseiten für Google</title>
+      <link>https://shift07.ai/blog/produktseiten-seo-optimieren.html</link>
+      <guid>https://shift07.ai/blog/produktseiten-seo-optimieren.html</guid>
+      <pubDate>Wed, 08 Apr 2026 04:39:52 +0000</pubDate>
+      <description>Produktseiten SEO Schritt für Schritt: Titel, Beschreibungen, Bilder, Structured Data und mehr. So rankst du mit deinen Shop-Produkten bei Google auf Seite 1.</description>
+      <category>E-Commerce SEO</category>
+    </item>
     <item>
       <title>E-Commerce SEO: Der vollständige Leitfaden für Online-Shops 2026</title>
       <link>https://shift07.ai/blog/ecommerce-seo-leitfaden.html</link>
@@ -150,22 +166,6 @@
       <pubDate>Sun, 05 Apr 2026 20:54:54 +0000</pubDate>
       <description>Caching richtig einrichten: So nutzt du Browser-Cache, Server-Cache und CDN für maximale Website-Geschwindigkeit und bessere Core Web Vitals.</description>
       <category>Performance SEO</category>
-    </item>
-    <item>
-      <title>Google Bewertungen bekommen: So sammelst du mehr Rezensionen (legal)</title>
-      <link>https://shift07.ai/blog/google-bewertungen-bekommen.html</link>
-      <guid>https://shift07.ai/blog/google-bewertungen-bekommen.html</guid>
-      <pubDate>Sun, 05 Apr 2026 19:08:20 +0000</pubDate>
-      <description>Mehr Google Bewertungen bekommen ohne Tricks: Bewährte Strategien für lokale Unternehmen, die legal funktionieren und dein Ranking nachhaltig verbessern.</description>
-      <category>Lokales SEO</category>
-    </item>
-    <item>
-      <title>Lokale Backlinks aufbauen: 8 Strategien für KMU</title>
-      <link>https://shift07.ai/blog/lokale-backlinks-aufbauen.html</link>
-      <guid>https://shift07.ai/blog/lokale-backlinks-aufbauen.html</guid>
-      <pubDate>Sun, 05 Apr 2026 19:07:49 +0000</pubDate>
-      <description>Lokale Backlinks aufbauen als kleines Unternehmen: 8 bewährte Strategien, die wirklich funktionieren – von Brancheneinträgen bis zu lokalen Kooperationen.</description>
-      <category>Lokales SEO</category>
     </item>
   </channel>
 </rss>
