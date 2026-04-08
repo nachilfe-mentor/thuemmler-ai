@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sitemap-Generator – sitemap.xml kostenlos erstellen | Shift07</title>
+    <meta name="description" content="Kostenloser Sitemap-Generator: Erstelle eine gültige sitemap.xml aus deinen URLs in Sekunden. Mit Priorität, Änderungsfrequenz und lastmod. Direkt herunterladen.">
+    <meta name="author" content="Thümmler AI GmbH">
+    <link rel="icon" type="image/png" href="/logo.png">
+    <link rel="canonical" href="https://shift07.ai/tools/sitemap-generator.html">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Sitemap-Generator – sitemap.xml kostenlos erstellen | Shift07">
+    <meta property="og:description" content="Erstelle eine gültige sitemap.xml aus deinen URLs in Sekunden. Mit Priorität, Änderungsfrequenz und lastmod. Direkt herunterladen.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://shift07.ai/tools/sitemap-generator.html">
+    <meta property="og:image" content="https://shift07.ai/tools/images/sitemap-generator.png">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="Shift07">
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Sitemap-Generator",
+      "description": "Kostenloser Online-Sitemap-Generator: sitemap.xml aus URLs erstellen und herunterladen.",
+      "url": "https://shift07.ai/tools/sitemap-generator.html",
+      "applicationCategory": "SEO Tool",
+      "operatingSystem": "Web",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" }
+    }
+    </script>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K1S1RXBDS8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K1S1RXBDS8');
+    </script>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8475857002943858" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: { extend: { fontFamily: { 'inter': ['Inter', 'system-ui', 'sans-serif'] } } }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 font-inter">
+
+    <!-- Navigation -->
+    <nav class="bg-white border-b border-gray-200 sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="/" class="flex items-center space-x-2">
+                    <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                    <span class="text-xl font-bold text-gray-900">Shift07</span>
+                </a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="/" class="text-gray-600 hover:text-gray-900 font-medium">Home</a>
+                    <a href="/blog/" class="text-gray-600 hover:text-gray-900 font-medium">Blog</a>
+                    <a href="/tools/" class="text-gray-600 hover:text-gray-900 font-medium">Tools</a>
+                    <a href="/#pricing" class="bg-blue-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-blue-700">Kostenlos testen</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <div class="bg-white border-b border-gray-200">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+            <div class="flex items-center space-x-2 text-sm text-gray-500 mb-4">
+                <a href="/tools/" class="hover:text-blue-600">Tools</a>
+                <span>›</span>
+                <span>Sitemap-Generator</span>
+            </div>
+            <div class="flex items-start justify-between gap-6">
+                <div>
+                    <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
+                        Sitemap-Generator
+                    </h1>
+                    <p class="text-lg text-gray-600 max-w-2xl">
+                        Erstelle eine gültige <strong>sitemap.xml</strong> aus deinen URLs — kostenlos, ohne Registrierung, direkt im Browser. Mit Priorität, Änderungsfrequenz und lastmod.
+                    </p>
+                </div>
+                <img src="images/sitemap-generator.png" alt="Sitemap Generator Tool" class="hidden md:block w-32 h-32 rounded-xl object-cover shadow-sm shrink-0">
+            </div>
+        </div>
+    </div>
+
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+
+        <!-- Tool Card -->
+        <div class="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden mb-8">
+
+            <!-- Settings Row -->
+            <div class="bg-gray-50 border-b border-gray-200 px-6 py-4">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-1">Standard-Priorität</label>
+                        <select id="defaultPriority" class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            <option value="1.0">1.0 (Startseite)</option>
+                            <option value="0.9">0.9 (sehr wichtig)</option>
+                            <option value="0.8" selected>0.8 (wichtig)</option>
+                            <option value="0.7">0.7 (normal)</option>
+                            <option value="0.6">0.6 (weniger wichtig)</option>
+                            <option value="0.5">0.5 (gering)</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-1">Änderungsfrequenz</label>
+                        <select id="defaultChangefreq" class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            <option value="always">always</option>
+                            <option value="hourly">hourly</option>
+                            <option value="daily">daily</option>
+                            <option value="weekly" selected>weekly</option>
+                            <option value="monthly">monthly</option>
+                            <option value="yearly">yearly</option>
+                            <option value="never">never</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-1">Datum (lastmod)</label>
+                        <input type="date" id="defaultLastmod" class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    </div>
+                </div>
+            </div>
+
+            <!-- URL Input -->
+            <div class="px-6 py-5">
+                <div class="flex justify-between items-center mb-2">
+                    <label class="block text-sm font-semibold text-gray-700">URLs eingeben (eine pro Zeile)</label>
+                    <button onclick="loadExample()" class="text-xs text-blue-600 hover:text-blue-800 font-medium">Beispiel laden</button>
+                </div>
+                <textarea
+                    id="urlInput"
+                    class="w-full h-48 border border-gray-300 rounded-xl px-4 py-3 text-sm font-mono focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none"
+                    placeholder="https://meineshop.de/&#10;https://meineshop.de/ueber-uns&#10;https://meineshop.de/produkte/&#10;https://meineshop.de/produkte/laufschuhe-herren&#10;https://meineshop.de/kontakt"
+                    spellcheck="false"
+                ></textarea>
+                <div class="flex justify-between items-center mt-2">
+                    <p class="text-xs text-gray-500" id="urlCount">0 URLs eingegeben</p>
+                    <button onclick="clearInput()" class="text-xs text-gray-400 hover:text-red-500">Leeren</button>
+                </div>
+            </div>
+
+            <!-- Generate Button -->
+            <div class="px-6 pb-5">
+                <button onclick="generateSitemap()"
+                    class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-xl transition-colors text-sm">
+                    Sitemap generieren →
+                </button>
+            </div>
+
+        </div>
+
+        <!-- Result -->
+        <div id="resultSection" class="hidden bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden mb-8">
+            <div class="flex items-center justify-between px-6 py-4 bg-green-50 border-b border-green-200">
+                <div class="flex items-center space-x-2">
+                    <svg class="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                    <span class="font-semibold text-green-800" id="resultTitle">Sitemap erstellt</span>
+                </div>
+                <div class="flex gap-2">
+                    <button onclick="copyXML()"
+                        class="text-sm bg-white border border-green-300 text-green-700 px-4 py-1.5 rounded-lg hover:bg-green-50 font-medium transition-colors">
+                        Kopieren
+                    </button>
+                    <button onclick="downloadSitemap()"
+                        class="text-sm bg-green-600 text-white px-4 py-1.5 rounded-lg hover:bg-green-700 font-medium transition-colors">
+                        sitemap.xml herunterladen
+                    </button>
+                </div>
+            </div>
+            <div class="px-6 py-4">
+                <pre id="xmlOutput" class="bg-gray-50 border border-gray-200 rounded-xl p-4 text-xs font-mono overflow-x-auto whitespace-pre max-h-96 overflow-y-auto text-gray-700"></pre>
+            </div>
+
+            <!-- Next Steps -->
+            <div class="px-6 pb-5">
+                <div class="bg-blue-50 border border-blue-200 rounded-xl p-4">
+                    <p class="font-semibold text-blue-900 mb-2 text-sm">Nächste Schritte</p>
+                    <ol class="text-blue-800 text-sm space-y-1.5 list-decimal pl-4">
+                        <li>Lade die <code class="bg-blue-100 px-1 rounded">sitemap.xml</code> in das Stammverzeichnis deiner Website hoch (z.B. <code class="bg-blue-100 px-1 rounded">meineshop.de/sitemap.xml</code>)</li>
+                        <li>Füge die Sitemap in deine <code class="bg-blue-100 px-1 rounded">robots.txt</code> ein: <code class="bg-blue-100 px-1 rounded">Sitemap: https://deinedomain.de/sitemap.xml</code></li>
+                        <li>Reiche die Sitemap in der <strong>Google Search Console</strong> ein: Search Console → Sitemaps → URL eingeben → Senden</li>
+                        <li>Validiere deine Sitemap mit unserem <a href="/tools/sitemap-validator.html" class="underline hover:text-blue-600">Sitemap-Validator</a></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+        <!-- Error -->
+        <div id="errorSection" class="hidden bg-red-50 border border-red-200 rounded-xl px-6 py-4 mb-8">
+            <p class="text-red-800 text-sm font-medium" id="errorMsg"></p>
+        </div>
+
+        <!-- Info Boxes -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+            <div class="bg-white border border-gray-200 rounded-xl p-5">
+                <div class="text-2xl mb-2">📄</div>
+                <h3 class="font-semibold text-gray-800 mb-1 text-sm">Gültiges XML-Format</h3>
+                <p class="text-gray-500 text-xs">Generiert standardkonformes sitemap.xml nach dem sitemaps.org-Protokoll — kompatibel mit Google, Bing, Yandex.</p>
+            </div>
+            <div class="bg-white border border-gray-200 rounded-xl p-5">
+                <div class="text-2xl mb-2">⚡</div>
+                <h3 class="font-semibold text-gray-800 mb-1 text-sm">100% im Browser</h3>
+                <p class="text-gray-500 text-xs">Keine Serververbindung, keine Registrierung. Deine URLs verlassen deinen Browser nicht — maximale Datensicherheit.</p>
+            </div>
+            <div class="bg-white border border-gray-200 rounded-xl p-5">
+                <div class="text-2xl mb-2">🎛️</div>
+                <h3 class="font-semibold text-gray-800 mb-1 text-sm">Volle Kontrolle</h3>
+                <p class="text-gray-500 text-xs">Setze Priorität, Änderungsfrequenz und lastmod-Datum — global für alle URLs oder individuell anpassbar.</p>
+            </div>
+        </div>
+
+        <!-- Erklärer -->
+        <div class="bg-white rounded-2xl border border-gray-200 p-6 mb-8">
+            <h2 class="text-xl font-bold text-gray-900 mb-4">Was ist eine sitemap.xml und warum brauchst du sie?</h2>
+            <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                Eine <strong>sitemap.xml</strong> ist eine strukturierte Liste aller Seiten deiner Website, die du Google und anderen Suchmaschinen übergibst. Sie hilft Suchmaschinen dabei, alle Seiten deiner Website zuverlässig zu finden und zu indexieren — besonders wichtig bei:
+            </p>
+            <ul class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm text-gray-600 mb-4">
+                <li class="flex items-start"><span class="text-blue-500 mr-2 mt-0.5">→</span>Neuen Websites, die noch keine Backlinks haben</li>
+                <li class="flex items-start"><span class="text-blue-500 mr-2 mt-0.5">→</span>Großen Shops mit hunderten oder tausenden Produktseiten</li>
+                <li class="flex items-start"><span class="text-blue-500 mr-2 mt-0.5">→</span>Seiten mit schwacher interner Verlinkung</li>
+                <li class="flex items-start"><span class="text-blue-500 mr-2 mt-0.5">→</span>Websites mit dynamisch generiertem Content</li>
+                <li class="flex items-start"><span class="text-blue-500 mr-2 mt-0.5">→</span>Mehrsprachigen Websites</li>
+                <li class="flex items-start"><span class="text-blue-500 mr-2 mt-0.5">→</span>Häufig aktualisierten Seiten (Blogs, News)</li>
+            </ul>
+            <p class="text-gray-600 text-sm leading-relaxed">
+                Google <em>muss</em> einer Sitemap nicht folgen, aber sie gibt Google nützliche Signale: welche Seiten existieren, wie wichtig sie sind und wann sie zuletzt geändert wurden. Mehr dazu in unserem Artikel <a href="/blog/sitemap-xml-erstellen-einreichen.html" class="text-blue-600 hover:underline">Sitemap.xml erstellen und einreichen</a>.
+            </p>
+        </div>
+
+        <!-- Erklärung der Felder -->
+        <div class="bg-white rounded-2xl border border-gray-200 p-6 mb-8">
+            <h2 class="text-xl font-bold text-gray-900 mb-4">Die Sitemap-Felder erklärt</h2>
+            <div class="space-y-4">
+                <div class="flex gap-4">
+                    <div class="w-28 shrink-0">
+                        <code class="bg-blue-50 text-blue-700 px-2 py-1 rounded text-xs font-mono">&lt;loc&gt;</code>
+                    </div>
+                    <div>
+                        <p class="text-sm font-semibold text-gray-800">URL</p>
+                        <p class="text-xs text-gray-500 mt-0.5">Die vollständige URL der Seite inkl. https://. Pflichtfeld.</p>
+                    </div>
+                </div>
+                <div class="flex gap-4">
+                    <div class="w-28 shrink-0">
+                        <code class="bg-blue-50 text-blue-700 px-2 py-1 rounded text-xs font-mono">&lt;lastmod&gt;</code>
+                    </div>
+                    <div>
+                        <p class="text-sm font-semibold text-gray-800">Letzte Änderung</p>
+                        <p class="text-xs text-gray-500 mt-0.5">Wann wurde die Seite zuletzt geändert? Format: JJJJ-MM-TT. Hilft Google, häufig aktualisierte Seiten öfter zu crawlen.</p>
+                    </div>
+                </div>
+                <div class="flex gap-4">
+                    <div class="w-28 shrink-0">
+                        <code class="bg-blue-50 text-blue-700 px-2 py-1 rounded text-xs font-mono">&lt;changefreq&gt;</code>
+                    </div>
+                    <div>
+                        <p class="text-sm font-semibold text-gray-800">Änderungsfrequenz</p>
+                        <p class="text-xs text-gray-500 mt-0.5">Wie oft ändert sich die Seite? (always / hourly / daily / weekly / monthly / yearly / never). Google ignoriert dieses Feld weitgehend, aber Bing nutzt es.</p>
+                    </div>
+                </div>
+                <div class="flex gap-4">
+                    <div class="w-28 shrink-0">
+                        <code class="bg-blue-50 text-blue-700 px-2 py-1 rounded text-xs font-mono">&lt;priority&gt;</code>
+                    </div>
+                    <div>
+                        <p class="text-sm font-semibold text-gray-800">Priorität (0.0 – 1.0)</p>
+                        <p class="text-xs text-gray-500 mt-0.5">Relative Wichtigkeit der Seite im Verhältnis zu anderen Seiten deiner Website. Standardwert: 0.5. Tipp: Startseite = 1.0, Kategorien = 0.8, Produkte = 0.7, Impressum = 0.3.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Verwandte Tools -->
+        <div class="bg-white rounded-2xl border border-gray-200 p-6 mb-4">
+            <h2 class="text-lg font-bold text-gray-900 mb-4">Verwandte Tools</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+                <a href="/tools/sitemap-validator.html" class="flex items-center space-x-3 p-3 bg-gray-50 rounded-xl hover:bg-blue-50 transition-colors group">
+                    <span class="text-xl">✅</span>
+                    <div>
+                        <p class="font-medium text-gray-800 text-sm group-hover:text-blue-700">Sitemap-Validator</p>
+                        <p class="text-xs text-gray-500">sitemap.xml auf Fehler prüfen</p>
+                    </div>
+                </a>
+                <a href="/tools/robots-txt-generator.html" class="flex items-center space-x-3 p-3 bg-gray-50 rounded-xl hover:bg-blue-50 transition-colors group">
+                    <span class="text-xl">🤖</span>
+                    <div>
+                        <p class="font-medium text-gray-800 text-sm group-hover:text-blue-700">robots.txt Generator</p>
+                        <p class="text-xs text-gray-500">robots.txt erstellen</p>
+                    </div>
+                </a>
+                <a href="/tools/canonical-tag-checker.html" class="flex items-center space-x-3 p-3 bg-gray-50 rounded-xl hover:bg-blue-50 transition-colors group">
+                    <span class="text-xl">🔗</span>
+                    <div>
+                        <p class="font-medium text-gray-800 text-sm group-hover:text-blue-700">Canonical-Tag-Checker</p>
+                        <p class="text-xs text-gray-500">Canonical URLs prüfen</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-12 mt-10">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <img src="/logo.png" alt="Shift07" class="h-8 w-8">
+                        <span class="text-white font-bold text-lg">Shift07</span>
+                    </div>
+                    <p class="text-sm">KI-gestütztes SEO-Analyse-Tool für deutsche Websites.</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-3">Tools</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="/tools/sitemap-validator.html" class="hover:text-white">Sitemap-Validator</a></li>
+                        <li><a href="/tools/robots-txt-generator.html" class="hover:text-white">robots.txt Generator</a></li>
+                        <li><a href="/tools/canonical-tag-checker.html" class="hover:text-white">Canonical-Tag-Checker</a></li>
+                        <li><a href="/tools/" class="hover:text-white">Alle Tools →</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-3">Blog</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="/blog/sitemap-xml-erstellen-einreichen.html" class="hover:text-white">Sitemap erstellen & einreichen</a></li>
+                        <li><a href="/blog/sitemap-validator-tool.html" class="hover:text-white">Sitemap-Validator erklärt</a></li>
+                        <li><a href="/blog/robots-txt-konfigurieren.html" class="hover:text-white">robots.txt konfigurieren</a></li>
+                        <li><a href="/blog/" class="hover:text-white">Alle Artikel →</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-3">Unternehmen</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="/impressum.html" class="hover:text-white">Impressum</a></li>
+                        <li><a href="/datenschutz.html" class="hover:text-white">Datenschutz</a></li>
+                        <li><a href="mailto:team@shift07.ai" class="hover:text-white">Kontakt</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-sm text-center">
+                <p>© 2026 Thümmler AI GmbH · Leonardo-da-Vinci-Straße 15 · 14467 Potsdam</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Datum auf heute setzen
+        const today = new Date().toISOString().split('T')[0];
+        document.getElementById('defaultLastmod').value = today;
+
+        // URL-Zähler
+        document.getElementById('urlInput').addEventListener('input', function() {
+            const urls = parseURLs(this.value);
+            document.getElementById('urlCount').textContent = urls.length + ' URL' + (urls.length !== 1 ? 's' : '') + ' eingegeben';
+        });
+
+        function parseURLs(text) {
+            return text.split('\n')
+                .map(line => line.trim())
+                .filter(line => line.length > 0 && line.startsWith('http'));
+        }
+
+        function loadExample() {
+            document.getElementById('urlInput').value = `https://meineshop.de/\nhttps://meineshop.de/ueber-uns\nhttps://meineshop.de/kontakt\nhttps://meineshop.de/produkte/\nhttps://meineshop.de/produkte/laufschuhe-herren\nhttps://meineshop.de/produkte/laufschuhe-damen\nhttps://meineshop.de/produkte/sportbekleidung\nhttps://meineshop.de/blog/\nhttps://meineshop.de/blog/laufschuhe-vergleich\nhttps://meineshop.de/impressum\nhttps://meineshop.de/datenschutz`;
+            document.getElementById('urlInput').dispatchEvent(new Event('input'));
+        }
+
+        function clearInput() {
+            document.getElementById('urlInput').value = '';
+            document.getElementById('urlCount').textContent = '0 URLs eingegeben';
+            document.getElementById('resultSection').classList.add('hidden');
+            document.getElementById('errorSection').classList.add('hidden');
+        }
+
+        function escapeXML(str) {
+            return str
+                .replace(/&/g, '&amp;')
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;')
+                .replace(/"/g, '&quot;')
+                .replace(/'/g, '&apos;');
+        }
+
+        function generateSitemap() {
+            const input = document.getElementById('urlInput').value;
+            const urls = parseURLs(input);
+            const priority = document.getElementById('defaultPriority').value;
+            const changefreq = document.getElementById('defaultChangefreq').value;
+            const lastmod = document.getElementById('defaultLastmod').value;
+
+            document.getElementById('errorSection').classList.add('hidden');
+            document.getElementById('resultSection').classList.add('hidden');
+
+            if (urls.length === 0) {
+                document.getElementById('errorMsg').textContent = 'Bitte gib mindestens eine gültige URL ein (beginnt mit http:// oder https://).';
+                document.getElementById('errorSection').classList.remove('hidden');
+                return;
+            }
+
+            // Invalid URLs prüfen
+            const invalidUrls = urls.filter(url => {
+                try { new URL(url); return false; } catch { return true; }
+            });
+            if (invalidUrls.length > 0) {
+                document.getElementById('errorMsg').textContent = 'Ungültige URLs gefunden: ' + invalidUrls.slice(0, 3).join(', ') + (invalidUrls.length > 3 ? ` und ${invalidUrls.length - 3} weitere` : '');
+                document.getElementById('errorSection').classList.remove('hidden');
+                return;
+            }
+
+            let xml = '<?xml version="1.0" encoding="UTF-8"?>\n';
+            xml += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
+
+            urls.forEach(url => {
+                // Startseite bekommt automatisch höhere Priorität
+                let urlPriority = priority;
+                const urlObj = new URL(url);
+                if (urlObj.pathname === '/' || urlObj.pathname === '') {
+                    urlPriority = '1.0';
+                }
+
+                xml += '  <url>\n';
+                xml += `    <loc>${escapeXML(url)}</loc>\n`;
+                if (lastmod) {
+                    xml += `    <lastmod>${lastmod}</lastmod>\n`;
+                }
+                xml += `    <changefreq>${changefreq}</changefreq>\n`;
+                xml += `    <priority>${urlPriority}</priority>\n`;
+                xml += '  </url>\n';
+            });
+
+            xml += '</urlset>';
+
+            document.getElementById('xmlOutput').textContent = xml;
+            document.getElementById('resultTitle').textContent = `Sitemap erstellt – ${urls.length} URL${urls.length !== 1 ? 's' : ''}`;
+            document.getElementById('resultSection').classList.remove('hidden');
+
+            // Scroll to result
+            document.getElementById('resultSection').scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+            // GA Event
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'generate_sitemap', { 'event_category': 'tool', 'event_label': 'sitemap-generator', 'value': urls.length });
+            }
+        }
+
+        function copyXML() {
+            const xml = document.getElementById('xmlOutput').textContent;
+            navigator.clipboard.writeText(xml).then(() => {
+                const btn = event.target;
+                btn.textContent = 'Kopiert!';
+                btn.classList.replace('text-green-700', 'text-white');
+                btn.classList.replace('bg-white', 'bg-green-600');
+                setTimeout(() => {
+                    btn.textContent = 'Kopieren';
+                    btn.classList.replace('text-white', 'text-green-700');
+                    btn.classList.replace('bg-green-600', 'bg-white');
+                }, 2000);
+            });
+        }
+
+        function downloadSitemap() {
+            const xml = document.getElementById('xmlOutput').textContent;
+            const blob = new Blob([xml], { type: 'application/xml' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'sitemap.xml';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'download_sitemap', { 'event_category': 'tool', 'event_label': 'sitemap-generator' });
+            }
+        }
+    </script>
+
+</body>
+</html>
