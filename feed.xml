@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Wed, 08 Apr 2026 02:58:01 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 08 Apr 2026 03:03:07 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>E-Commerce SEO: Der vollständige Leitfaden für Online-Shops 2026</title>
+      <link>https://shift07.ai/blog/ecommerce-seo-leitfaden.html</link>
+      <guid>https://shift07.ai/blog/ecommerce-seo-leitfaden.html</guid>
+      <pubDate>Wed, 08 Apr 2026 03:02:45 +0000</pubDate>
+      <description>E-Commerce SEO Schritt für Schritt: Produktseiten, Kategorien, technisches SEO, Duplicate Content und mehr. Vollständiger Leitfaden für Online-Shop-Betreiber 2026.</description>
+      <category>E-Commerce SEO</category>
+    </item>
     <item>
       <title>Gastbeiträge für SEO: So baust du Backlinks durch Guest Posts</title>
       <link>https://shift07.ai/blog/gastbeitraege-seo-backlinks.html</link>
@@ -157,14 +165,6 @@
       <guid>https://shift07.ai/blog/lokale-backlinks-aufbauen.html</guid>
       <pubDate>Sun, 05 Apr 2026 19:07:49 +0000</pubDate>
       <description>Lokale Backlinks aufbauen als kleines Unternehmen: 8 bewährte Strategien, die wirklich funktionieren – von Brancheneinträgen bis zu lokalen Kooperationen.</description>
-      <category>Lokales SEO</category>
-    </item>
-    <item>
-      <title>Google My Business optimieren: Anleitung für lokale Unternehmen 2026</title>
-      <link>https://shift07.ai/blog/google-my-business-optimieren.html</link>
-      <guid>https://shift07.ai/blog/google-my-business-optimieren.html</guid>
-      <pubDate>Sun, 05 Apr 2026 18:51:41 +0000</pubDate>
-      <description>Google My Business optimieren: Schritt-für-Schritt-Anleitung mit Checkliste. So wird dein Unternehmen in der Google-Suche und auf Google Maps sichtbar.</description>
       <category>Lokales SEO</category>
     </item>
   </channel>
