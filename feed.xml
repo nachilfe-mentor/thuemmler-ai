@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Wed, 08 Apr 2026 01:10:22 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 08 Apr 2026 01:15:31 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Gastbeiträge für SEO: So baust du Backlinks durch Guest Posts</title>
+      <link>https://shift07.ai/blog/gastbeitraege-seo-backlinks.html</link>
+      <guid>https://shift07.ai/blog/gastbeitraege-seo-backlinks.html</guid>
+      <pubDate>Wed, 08 Apr 2026 01:15:06 +0000</pubDate>
+      <description>Gastbeiträge schreiben und hochwertige Backlinks gewinnen: Schritt-für-Schritt-Anleitung für erfolgreiche Guest Posts, von der Suche nach Blogs bis zur Outreach-E-Mail.</description>
+      <category>Linkaufbau & Backlinks</category>
+    </item>
     <item>
       <title>Linkaufbau-Strategien: 8 Wege zu hochwertigen Backlinks</title>
       <link>https://shift07.ai/blog/linkaufbau-strategien-backlinks.html</link>
@@ -157,14 +165,6 @@
       <guid>https://shift07.ai/blog/nap-konsistenz-lokales-seo.html</guid>
       <pubDate>Sun, 05 Apr 2026 18:51:39 +0000</pubDate>
       <description>NAP-Konsistenz ist entscheidend für lokales SEO. Erfahre, warum einheitliche Unternehmensangaben dein Google-Ranking verbessern und wie du Inkonsistenzen aufspürst und behebst.</description>
-      <category>Lokales SEO</category>
-    </item>
-    <item>
-      <title>Lokale Keywords finden und einsetzen: Anleitung für KMU</title>
-      <link>https://shift07.ai/blog/lokale-keywords-finden-einsetzen.html</link>
-      <guid>https://shift07.ai/blog/lokale-keywords-finden-einsetzen.html</guid>
-      <pubDate>Sun, 05 Apr 2026 00:28:41 +0000</pubDate>
-      <description>Wie du lokale Keywords für dein Unternehmen findest und richtig einsetzt. Schritt-für-Schritt-Anleitung mit kostenlosen Tools für bessere lokale Google-Rankings.</description>
       <category>Lokales SEO</category>
     </item>
   </channel>
