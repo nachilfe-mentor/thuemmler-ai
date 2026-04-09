@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Alt Tag Checker – Bilder-Alt-Texte kostenlos prüfen | Shift07</title>
+    <meta name="description" content="Prüfe kostenlos alle Bilder-Alt-Texte auf deiner Website: Fehlende, leere oder zu kurze Alt-Attribute erkennen und SEO-Potenzial nutzen. HTML einfügen und sofort analysieren.">
+    <meta name="author" content="Thümmler AI GmbH">
+    <link rel="icon" type="image/png" href="/logo.png">
+    <link rel="canonical" href="https://shift07.ai/tools/image-alt-tag-checker.html">
+    <link rel="alternate" type="application/rss+xml" title="Shift07 Blog" href="https://shift07.ai/feed.xml">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Image Alt Tag Checker – Bilder-Alt-Texte kostenlos prüfen | Shift07">
+    <meta property="og:description" content="Prüfe kostenlos alle Bilder-Alt-Texte: Fehlende, leere oder zu kurze Alt-Attribute erkennen und SEO-Potenzial nutzen.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://shift07.ai/tools/image-alt-tag-checker.html">
+    <meta property="og:image" content="https://shift07.ai/tools/images/image-alt-tag-checker.png">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="Shift07">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Image Alt Tag Checker – Alt-Texte kostenlos prüfen">
+    <meta name="twitter:description" content="Fehlende und unvollständige Alt-Texte bei Bildern erkennen und SEO verbessern.">
+    <meta name="twitter:image" content="https://shift07.ai/tools/images/image-alt-tag-checker.png">
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Image Alt Tag Checker",
+      "description": "Kostenloser Alt-Text-Checker für Bilder: Analysiert HTML-Code auf fehlende, leere oder zu kurze Alt-Attribute.",
+      "url": "https://shift07.ai/tools/image-alt-tag-checker.html",
+      "applicationCategory": "SEOApplication",
+      "operatingSystem": "Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR"
+      },
+      "provider": {
+        "@type": "Organization",
+        "name": "Shift07",
+        "url": "https://shift07.ai"
+      }
+    }
+    </script>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K1S1RXBDS8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K1S1RXBDS8');
+    </script>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8475857002943858" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { 'inter': ['Inter', 'system-ui', '-apple-system', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: rgba(15, 23, 42, 0.5); }
+        ::-webkit-scrollbar-thumb { background: rgba(59, 130, 246, 0.5); border-radius: 4px; }
+        html { scroll-behavior: smooth; }
+        .result-row:hover { background: rgba(255,255,255,0.03); }
+        .badge-error { background: rgba(239,68,68,0.15); color: #fca5a5; border: 1px solid rgba(239,68,68,0.3); }
+        .badge-warning { background: rgba(234,179,8,0.15); color: #fde68a; border: 1px solid rgba(234,179,8,0.3); }
+        .badge-ok { background: rgba(34,197,94,0.15); color: #86efac; border: 1px solid rgba(34,197,94,0.3); }
+        .badge-decorative { background: rgba(148,163,184,0.15); color: #94a3b8; border: 1px solid rgba(148,163,184,0.3); }
+        .score-ring { transform: rotate(-90deg); }
+        .truncate-path { max-width: 260px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    </style>
+</head>
+<body class="bg-slate-900 text-white min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-slate-900/80 backdrop-blur-xl border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <a href="/" class="flex items-center gap-2">
+                    <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                    <span class="text-xl font-bold text-white">Shift07</span>
+                </a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="/" class="text-gray-300 hover:text-white transition-colors">SEO-Tool</a>
+                    <a href="/blog/" class="text-gray-300 hover:text-white transition-colors">Blog</a>
+                    <a href="/tools/" class="text-white font-medium border-b-2 border-blue-500 pb-0.5">Tools</a>
+                    <a href="/app/#/login" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-5 py-2 rounded-lg font-medium transition-all">Anmelden</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-gray-300 hover:text-white">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900/95 border-b border-white/10">
+            <div class="px-4 py-3 space-y-2">
+                <a href="/" class="block py-2 text-gray-300 hover:text-white">SEO-Tool</a>
+                <a href="/blog/" class="block py-2 text-gray-300 hover:text-white">Blog</a>
+                <a href="/tools/" class="block py-2 text-white font-medium">Tools</a>
+                <a href="/app/#/login" class="block py-2 text-blue-400 hover:text-blue-300">Anmelden</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="pt-28 pb-12 px-4">
+        <div class="max-w-5xl mx-auto text-center">
+            <div class="inline-flex items-center gap-2 bg-blue-500/10 border border-blue-500/20 rounded-full px-4 py-2 mb-6">
+                <svg class="w-4 h-4 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                <span class="text-blue-400 text-sm font-medium">Kostenloser SEO-Checker</span>
+            </div>
+            <h1 class="text-4xl md:text-6xl font-extrabold text-white mb-6">
+                Image Alt Tag Checker
+            </h1>
+            <p class="text-xl text-gray-300 max-w-2xl mx-auto mb-4">
+                Füge deinen HTML-Quellcode ein und prüfe sofort alle Bilder auf fehlende, leere oder zu kurze Alt-Texte. Keine Installation, keine Anmeldung — vollständig lokal im Browser.
+            </p>
+            <p class="text-gray-400 text-sm">Alt-Texte verbessern SEO, Barrierefreiheit und Google Bilder-Rankings.</p>
+        </div>
+    </section>
+
+    <!-- Tool -->
+    <section class="px-4 pb-16">
+        <div class="max-w-5xl mx-auto">
+
+            <!-- Input -->
+            <div class="bg-slate-800/50 border border-white/10 rounded-2xl p-6 mb-6">
+                <div class="flex items-center justify-between mb-3">
+                    <label class="text-sm font-semibold text-gray-300">HTML-Quellcode einfügen</label>
+                    <div class="flex gap-2">
+                        <button id="btn-load-example" class="text-xs text-blue-400 hover:text-blue-300 underline">Beispiel laden</button>
+                        <button id="btn-clear" class="text-xs text-gray-400 hover:text-gray-300 underline">Leeren</button>
+                    </div>
+                </div>
+                <textarea
+                    id="html-input"
+                    rows="10"
+                    class="w-full bg-slate-900/70 border border-white/10 rounded-xl px-4 py-3 text-gray-200 font-mono text-sm placeholder-gray-600 focus:outline-none focus:border-blue-500/50 resize-y"
+                    placeholder="&lt;!DOCTYPE html&gt;&#10;&lt;html&gt;&#10;&lt;body&gt;&#10;  &lt;img src=&quot;hero.jpg&quot; alt=&quot;Unser Produkt&quot;&gt;&#10;  &lt;img src=&quot;icon.png&quot;&gt;&#10;  &lt;img src=&quot;logo.png&quot; alt=&quot;&quot;&gt;&#10;&lt;/body&gt;&#10;&lt;/html&gt;"
+                ></textarea>
+
+                <div class="flex items-center gap-3 mt-4">
+                    <button id="btn-analyze" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-semibold px-8 py-3 rounded-xl transition-all flex items-center gap-2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+                        Alt-Texte prüfen
+                    </button>
+                    <span class="text-gray-500 text-sm">Dein HTML verlässt niemals deinen Browser.</span>
+                </div>
+            </div>
+
+            <!-- Results (initially hidden) -->
+            <div id="results-section" class="hidden">
+
+                <!-- Score Summary -->
+                <div id="score-card" class="bg-slate-800/50 border border-white/10 rounded-2xl p-6 mb-6">
+                    <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
+                        <div class="md:col-span-1 flex flex-col items-center justify-center">
+                            <div class="relative w-24 h-24">
+                                <svg class="w-24 h-24 score-ring" viewBox="0 0 36 36">
+                                    <circle cx="18" cy="18" r="15.5" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="3"/>
+                                    <circle id="score-circle" cx="18" cy="18" r="15.5" fill="none" stroke="#3b82f6" stroke-width="3" stroke-dasharray="97.4 97.4" stroke-dashoffset="97.4" stroke-linecap="round"/>
+                                </svg>
+                                <div class="absolute inset-0 flex flex-col items-center justify-center">
+                                    <span id="score-value" class="text-2xl font-extrabold text-white">0</span>
+                                    <span class="text-xs text-gray-400">Score</span>
+                                </div>
+                            </div>
+                            <p id="score-label" class="text-sm font-semibold mt-2 text-center"></p>
+                        </div>
+                        <div class="md:col-span-4 grid grid-cols-2 md:grid-cols-4 gap-4">
+                            <div class="bg-slate-900/50 rounded-xl p-4 text-center">
+                                <div id="count-total" class="text-3xl font-extrabold text-white">0</div>
+                                <div class="text-xs text-gray-400 mt-1">Bilder gesamt</div>
+                            </div>
+                            <div class="bg-red-500/10 border border-red-500/20 rounded-xl p-4 text-center">
+                                <div id="count-missing" class="text-3xl font-extrabold text-red-400">0</div>
+                                <div class="text-xs text-gray-400 mt-1">Fehlendes Alt</div>
+                            </div>
+                            <div class="bg-yellow-500/10 border border-yellow-500/20 rounded-xl p-4 text-center">
+                                <div id="count-issues" class="text-3xl font-extrabold text-yellow-400">0</div>
+                                <div class="text-xs text-gray-400 mt-1">Verbesserbar</div>
+                            </div>
+                            <div class="bg-green-500/10 border border-green-500/20 rounded-xl p-4 text-center">
+                                <div id="count-ok" class="text-3xl font-extrabold text-green-400">0</div>
+                                <div class="text-xs text-gray-400 mt-1">Optimal</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Filter Tabs -->
+                <div class="flex gap-2 mb-4 flex-wrap">
+                    <button data-filter="all" class="filter-btn active-filter px-4 py-2 rounded-lg text-sm font-medium bg-blue-600 text-white transition-all">Alle</button>
+                    <button data-filter="error" class="filter-btn px-4 py-2 rounded-lg text-sm font-medium bg-slate-700 text-gray-300 hover:bg-slate-600 transition-all">Fehlt</button>
+                    <button data-filter="warning" class="filter-btn px-4 py-2 rounded-lg text-sm font-medium bg-slate-700 text-gray-300 hover:bg-slate-600 transition-all">Verbesserbar</button>
+                    <button data-filter="ok" class="filter-btn px-4 py-2 rounded-lg text-sm font-medium bg-slate-700 text-gray-300 hover:bg-slate-600 transition-all">Optimal</button>
+                    <button data-filter="decorative" class="filter-btn px-4 py-2 rounded-lg text-sm font-medium bg-slate-700 text-gray-300 hover:bg-slate-600 transition-all">Dekorativ</button>
+                </div>
+
+                <!-- Results Table -->
+                <div class="bg-slate-800/50 border border-white/10 rounded-2xl overflow-hidden">
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-sm">
+                            <thead>
+                                <tr class="border-b border-white/10">
+                                    <th class="text-left px-5 py-4 text-gray-400 font-semibold w-8">#</th>
+                                    <th class="text-left px-5 py-4 text-gray-400 font-semibold">Bild (src)</th>
+                                    <th class="text-left px-5 py-4 text-gray-400 font-semibold">Alt-Text</th>
+                                    <th class="text-left px-5 py-4 text-gray-400 font-semibold">Länge</th>
+                                    <th class="text-left px-5 py-4 text-gray-400 font-semibold">Status</th>
+                                    <th class="text-left px-5 py-4 text-gray-400 font-semibold">Empfehlung</th>
+                                </tr>
+                            </thead>
+                            <tbody id="results-body"></tbody>
+                        </table>
+                    </div>
+                    <div id="no-results" class="hidden text-center py-12 text-gray-400">
+                        Keine Bilder in dieser Kategorie gefunden.
+                    </div>
+                </div>
+
+                <!-- Export -->
+                <div class="mt-4 flex gap-3">
+                    <button id="btn-export-csv" class="px-5 py-2 bg-slate-700 hover:bg-slate-600 text-white text-sm font-medium rounded-lg transition-all flex items-center gap-2">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                        CSV exportieren
+                    </button>
+                    <button id="btn-new-analysis" class="px-5 py-2 bg-blue-600/20 hover:bg-blue-600/30 border border-blue-500/30 text-blue-400 text-sm font-medium rounded-lg transition-all">
+                        Neue Analyse
+                    </button>
+                </div>
+            </div>
+
+            <!-- Empty state -->
+            <div id="empty-state" class="text-center py-16 text-gray-500">
+                <svg class="w-16 h-16 mx-auto mb-4 opacity-30" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                <p>HTML-Code einfügen und auf "Alt-Texte prüfen" klicken</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Info Section -->
+    <section class="px-4 pb-20">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-2xl font-bold text-white mb-8 text-center">Warum sind Alt-Texte wichtig?</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+                <div class="bg-slate-800/40 border border-white/10 rounded-2xl p-6">
+                    <div class="w-10 h-10 bg-blue-500/20 rounded-xl flex items-center justify-center mb-4">
+                        <svg class="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+                    </div>
+                    <h3 class="font-bold text-white mb-2">Google Bildersuche</h3>
+                    <p class="text-gray-400 text-sm">Alt-Texte sind der wichtigste Faktor für das Ranking in der Google Bildersuche. Bilder ohne Alt-Text werden kaum indexiert.</p>
+                </div>
+                <div class="bg-slate-800/40 border border-white/10 rounded-2xl p-6">
+                    <div class="w-10 h-10 bg-purple-500/20 rounded-xl flex items-center justify-center mb-4">
+                        <svg class="w-5 h-5 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+                    </div>
+                    <h3 class="font-bold text-white mb-2">Barrierefreiheit (WCAG)</h3>
+                    <p class="text-gray-400 text-sm">Screen-Reader nutzen Alt-Texte, um Sehbehinderten Bilder zu beschreiben. WCAG 2.1 Level AA fordert Alt-Texte für alle informativen Bilder.</p>
+                </div>
+                <div class="bg-slate-800/40 border border-white/10 rounded-2xl p-6">
+                    <div class="w-10 h-10 bg-green-500/20 rounded-xl flex items-center justify-center mb-4">
+                        <svg class="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
+                    </div>
+                    <h3 class="font-bold text-white mb-2">Ranking-Signal</h3>
+                    <p class="text-gray-400 text-sm">Alt-Texte stärken die Keyword-Relevanz einer Seite. Richtig eingesetzte Alt-Attribute mit Haupt-Keyword verbessern das On-Page-SEO.</p>
+                </div>
+            </div>
+
+            <!-- Best Practices -->
+            <div class="bg-slate-800/40 border border-white/10 rounded-2xl p-8">
+                <h3 class="text-xl font-bold text-white mb-6">Best Practices für Alt-Texte</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <h4 class="font-semibold text-green-400 mb-3">✓ So machst du es richtig</h4>
+                        <ul class="space-y-2 text-gray-300 text-sm">
+                            <li>· Beschreibe das Bild konkret und aussagekräftig</li>
+                            <li>· Verwende das Haupt-Keyword natürlich — kein Keyword-Stuffing</li>
+                            <li>· Halte den Alt-Text zwischen 50-125 Zeichen</li>
+                            <li>· Bei dekorativen Bildern: <code class="text-blue-400">alt=""</code> (leer, aber vorhanden)</li>
+                            <li>· Bei verlinkten Bildern: beschreibe das Ziel des Links</li>
+                            <li>· Fange nicht mit "Bild von..." oder "Foto von..." an</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-red-400 mb-3">✗ Häufige Fehler</h4>
+                        <ul class="space-y-2 text-gray-300 text-sm">
+                            <li>· Alt-Attribut komplett weglassen</li>
+                            <li>· Dateinamen als Alt-Text ("img_123.jpg")</li>
+                            <li>· Zu langer Alt-Text (&gt; 125 Zeichen)</li>
+                            <li>· Keyword-Stuffing ("SEO Agentur SEO Berlin SEO günstig")</li>
+                            <li>· Selben Alt-Text für alle Bilder verwenden</li>
+                            <li>· Alt-Text und Title-Attribut identisch setzen</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="mt-6 pt-6 border-t border-white/10">
+                    <p class="text-gray-400 text-sm">
+                        Mehr zur Optimierung von Bildern für SEO: <a href="/blog/bilder-web-optimieren.html" class="text-blue-400 underline hover:text-blue-300">Bilder für das Web optimieren: Format, Größe, Lazy Loading</a> · <a href="/blog/strukturierte-daten-seo-schema-markup.html" class="text-blue-400 underline hover:text-blue-300">Strukturierte Daten für SEO</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/10 py-12 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center gap-2 mb-4">
+                        <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                        <span class="text-xl font-bold">Shift07</span>
+                    </div>
+                    <p class="text-gray-400 text-sm">KI-gestütztes SEO-Analyse-Tool für deutsche Websites.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-white mb-3">Produkt</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="/" class="hover:text-white transition-colors">SEO-Analyse</a></li>
+                        <li><a href="/tools/" class="hover:text-white transition-colors">Kostenlose Tools</a></li>
+                        <li><a href="/app/#/login" class="hover:text-white transition-colors">Anmelden</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-white mb-3">Verwandte Tools</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="/tools/heading-struktur-checker.html" class="hover:text-white transition-colors">Heading-Struktur-Checker</a></li>
+                        <li><a href="/tools/internal-link-counter.html" class="hover:text-white transition-colors">Internal-Link-Counter</a></li>
+                        <li><a href="/tools/keyword-density-checker.html" class="hover:text-white transition-colors">Keyword-Density-Checker</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-white mb-3">Unternehmen</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="/impressum.html" class="hover:text-white transition-colors">Impressum</a></li>
+                        <li><a href="/datenschutz.html" class="hover:text-white transition-colors">Datenschutz</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-white/10 pt-8 text-center text-gray-400 text-sm">
+                © 2026 Thümmler AI GmbH · Leonardo-da-Vinci-Straße 15, 14467 Potsdam
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // === State ===
+        let allImages = [];
+        let currentFilter = 'all';
+
+        // === Example HTML ===
+        const exampleHTML = `<!DOCTYPE html>
+<html lang="de">
+<body>
+  <!-- Gutes Bild mit korrektem Alt-Text -->
+  <img src="images/seo-analyse-screenshot.jpg" alt="Shift07 SEO-Analyse: Detaillierter Bericht für Website-Optimierung" width="800" height="450">
+
+  <!-- Bild ohne Alt-Attribut (Fehler!) -->
+  <img src="images/icon-arrow.png" width="24" height="24">
+
+  <!-- Bild mit leerem Alt-Text (dekorativ — korrekt!) -->
+  <img src="images/divider-line.svg" alt="" role="presentation">
+
+  <!-- Bild mit zu kurzem Alt-Text -->
+  <img src="images/team.jpg" alt="Team">
+
+  <!-- Bild mit Dateiname als Alt-Text (schlechte Praxis) -->
+  <img src="images/photo_001.jpg" alt="photo_001.jpg">
+
+  <!-- Bild mit sehr langem Alt-Text -->
+  <img src="images/infographic.png" alt="Diese Infografik zeigt sehr detailliert alle wichtigen SEO-Faktoren für das Jahr 2026 im Überblick inklusive technischem SEO, On-Page SEO, Off-Page SEO, lokaler SEO und Content-Strategie sowie deren Gewichtung nach dem aktuellen Google-Algorithmus">
+
+  <!-- Weiteres gutes Bild -->
+  <img src="images/keyword-research-tool.png" alt="Keyword-Recherche-Tool: Suchvolumen und Wettbewerb analysieren" width="600" height="340">
+
+  <!-- Bild mit leider leerem Alt-Attribut aber kein dekoratives Bild -->
+  <img src="images/produktbild-hauptseite.jpg" alt="">
+</body>
+</html>`;
+
+        // === Analyze Function ===
+        function analyzeHTML(html) {
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(html, 'text/html');
+            const imgs = doc.querySelectorAll('img');
+            const results = [];
+
+            imgs.forEach((img, idx) => {
+                const src = img.getAttribute('src') || '';
+                const hasAlt = img.hasAttribute('alt');
+                const altText = hasAlt ? img.getAttribute('alt') : null;
+                const altLen = altText !== null ? altText.length : 0;
+
+                let status, badge, recommendation;
+
+                if (!hasAlt) {
+                    // No alt attribute at all
+                    status = 'error';
+                    badge = 'Fehlt';
+                    recommendation = 'Alt-Attribut komplett fehlt. Beschreibenden Alt-Text hinzufügen (50–125 Zeichen).';
+                } else if (altText === '') {
+                    // Empty alt — could be intentional (decorative) or a mistake
+                    // We classify as "decorative" — valid for decorative images
+                    status = 'decorative';
+                    badge = 'Dekorativ';
+                    recommendation = 'Leerer Alt-Text signalisiert ein dekoratives Bild. Korrekt, wenn das Bild keine Information trägt. Falls informativ: Alt-Text ergänzen.';
+                } else if (/\.(jpg|jpeg|png|gif|webp|svg|avif|bmp)$/i.test(altText) || altText === src) {
+                    // Filename used as alt text
+                    status = 'error';
+                    badge = 'Dateiname';
+                    recommendation = 'Dateiname als Alt-Text ist keine Beschreibung. Informativen Alt-Text schreiben.';
+                } else if (altLen < 10) {
+                    // Very short
+                    status = 'warning';
+                    badge = 'Zu kurz';
+                    recommendation = `Alt-Text zu kurz (${altLen} Zeichen). Mindestens 10, besser 50–125 Zeichen.`;
+                } else if (altLen > 125) {
+                    // Too long
+                    status = 'warning';
+                    badge = 'Zu lang';
+                    recommendation = `Alt-Text zu lang (${altLen} Zeichen, Empfehlung: max. 125). Kürzen und auf das Wesentliche konzentrieren.`;
+                } else {
+                    // Good
+                    status = 'ok';
+                    badge = 'Optimal';
+                    recommendation = 'Alt-Text hat eine gute Länge und ist beschreibend. Super!';
+                }
+
+                // Check for keyword stuffing (repeated words)
+                if (status === 'ok' && altText) {
+                    const words = altText.toLowerCase().split(/\s+/).filter(w => w.length > 3);
+                    const wordCount = {};
+                    words.forEach(w => { wordCount[w] = (wordCount[w] || 0) + 1; });
+                    const maxRepeat = Math.max(...Object.values(wordCount));
+                    if (maxRepeat >= 3) {
+                        status = 'warning';
+                        badge = 'Keyword-Stuffing';
+                        recommendation = 'Ein Wort kommt sehr oft vor — mögliches Keyword-Stuffing. Alt-Text natürlicher formulieren.';
+                    }
+                }
+
+                results.push({ idx: idx + 1, src, hasAlt, altText, altLen, status, badge, recommendation });
+            });
+
+            return results;
+        }
+
+        // === Calculate Score ===
+        function calcScore(results) {
+            if (results.length === 0) return 100;
+            const weights = { ok: 1, decorative: 0.8, warning: 0.3, error: 0 };
+            const sum = results.reduce((acc, r) => acc + (weights[r.status] || 0), 0);
+            return Math.round((sum / results.length) * 100);
+        }
+
+        // === Render Results ===
+        function renderResults(filter = 'all') {
+            currentFilter = filter;
+            const tbody = document.getElementById('results-body');
+            const noResults = document.getElementById('no-results');
+
+            const filtered = filter === 'all' ? allImages : allImages.filter(r => r.status === filter);
+
+            if (filtered.length === 0) {
+                tbody.innerHTML = '';
+                noResults.classList.remove('hidden');
+                return;
+            }
+            noResults.classList.add('hidden');
+
+            tbody.innerHTML = filtered.map(r => {
+                const srcDisplay = r.src.length > 45 ? '...' + r.src.slice(-42) : r.src;
+                const altDisplay = r.altText === null ? '<em class="text-red-400">— fehlt —</em>' :
+                    r.altText === '' ? '<em class="text-gray-500">(leer)</em>' :
+                    r.altText.length > 50 ? escapeHtml(r.altText.slice(0, 50)) + '<span class="text-gray-500">…</span>' :
+                    escapeHtml(r.altText);
+
+                const badgeClass = r.status === 'error' ? 'badge-error' :
+                    r.status === 'warning' ? 'badge-warning' :
+                    r.status === 'ok' ? 'badge-ok' : 'badge-decorative';
+
+                return `<tr class="result-row border-b border-white/5 last:border-0" data-status="${r.status}">
+                    <td class="px-5 py-4 text-gray-500">${r.idx}</td>
+                    <td class="px-5 py-4 text-gray-300 font-mono text-xs truncate-path" title="${escapeHtml(r.src)}">${escapeHtml(srcDisplay)}</td>
+                    <td class="px-5 py-4 text-gray-300 text-xs max-w-xs">${altDisplay}</td>
+                    <td class="px-5 py-4 text-gray-400 text-xs">${r.altText === null ? '—' : r.altLen + ' Zeichen'}</td>
+                    <td class="px-5 py-4"><span class="px-2.5 py-1 rounded-full text-xs font-semibold ${badgeClass}">${r.badge}</span></td>
+                    <td class="px-5 py-4 text-gray-400 text-xs max-w-sm">${escapeHtml(r.recommendation)}</td>
+                </tr>`;
+            }).join('');
+        }
+
+        function escapeHtml(str) {
+            if (!str) return '';
+            return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+        }
+
+        // === Update UI ===
+        function updateUI(results) {
+            const score = calcScore(results);
+            const missing = results.filter(r => r.status === 'error').length;
+            const issues = results.filter(r => r.status === 'warning').length;
+            const ok = results.filter(r => r.status === 'ok' || r.status === 'decorative').length;
+
+            document.getElementById('count-total').textContent = results.length;
+            document.getElementById('count-missing').textContent = missing;
+            document.getElementById('count-issues').textContent = issues;
+            document.getElementById('count-ok').textContent = ok;
+            document.getElementById('score-value').textContent = score;
+
+            const circumference = 97.4;
+            const offset = circumference - (score / 100) * circumference;
+            const circle = document.getElementById('score-circle');
+            circle.style.strokeDashoffset = offset;
+            circle.style.stroke = score >= 80 ? '#22c55e' : score >= 50 ? '#eab308' : '#ef4444';
+
+            const label = document.getElementById('score-label');
+            if (score >= 80) { label.textContent = 'Gut'; label.className = 'text-sm font-semibold mt-2 text-center text-green-400'; }
+            else if (score >= 50) { label.textContent = 'Ausbaubar'; label.className = 'text-sm font-semibold mt-2 text-center text-yellow-400'; }
+            else { label.textContent = 'Kritisch'; label.className = 'text-sm font-semibold mt-2 text-center text-red-400'; }
+        }
+
+        // === Main Analyze Handler ===
+        document.getElementById('btn-analyze').addEventListener('click', () => {
+            const html = document.getElementById('html-input').value.trim();
+            if (!html) {
+                alert('Bitte HTML-Quellcode eingeben.');
+                return;
+            }
+
+            allImages = analyzeHTML(html);
+
+            if (allImages.length === 0) {
+                alert('Keine Bilder (<img> Tags) im HTML gefunden.');
+                return;
+            }
+
+            updateUI(allImages);
+            renderResults('all');
+
+            document.getElementById('empty-state').classList.add('hidden');
+            document.getElementById('results-section').classList.remove('hidden');
+
+            // scroll to results
+            document.getElementById('results-section').scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+            // gtag event
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'alt_tag_analysis', { 'total_images': allImages.length });
+            }
+        });
+
+        // === Filter Buttons ===
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.filter-btn').forEach(b => {
+                    b.classList.remove('bg-blue-600', 'text-white', 'active-filter');
+                    b.classList.add('bg-slate-700', 'text-gray-300');
+                });
+                btn.classList.add('bg-blue-600', 'text-white', 'active-filter');
+                btn.classList.remove('bg-slate-700', 'text-gray-300');
+                renderResults(btn.dataset.filter);
+            });
+        });
+
+        // === Example ===
+        document.getElementById('btn-load-example').addEventListener('click', () => {
+            document.getElementById('html-input').value = exampleHTML;
+        });
+
+        // === Clear ===
+        document.getElementById('btn-clear').addEventListener('click', () => {
+            document.getElementById('html-input').value = '';
+            document.getElementById('results-section').classList.add('hidden');
+            document.getElementById('empty-state').classList.remove('hidden');
+            allImages = [];
+        });
+
+        // === New Analysis ===
+        document.getElementById('btn-new-analysis').addEventListener('click', () => {
+            document.getElementById('html-input').value = '';
+            document.getElementById('results-section').classList.add('hidden');
+            document.getElementById('empty-state').classList.remove('hidden');
+            allImages = [];
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // === CSV Export ===
+        document.getElementById('btn-export-csv').addEventListener('click', () => {
+            if (allImages.length === 0) return;
+            const header = 'Nr,Bild (src),Alt-Text,Länge,Status,Empfehlung\n';
+            const rows = allImages.map(r =>
+                `${r.idx},"${(r.src||'').replace(/"/g,'""')}","${(r.altText===null?'FEHLT':r.altText).replace(/"/g,'""')}",${r.altLen},"${r.badge}","${r.recommendation.replace(/"/g,'""')}"`
+            ).join('\n');
+            const blob = new Blob(['\uFEFF' + header + rows], { type: 'text/csv;charset=utf-8;' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'alt-tag-analyse.csv';
+            a.click();
+            URL.revokeObjectURL(url);
+        });
+
+        // === Mobile Menu ===
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
