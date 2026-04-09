@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Thu, 09 Apr 2026 03:59:30 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 09 Apr 2026 04:04:47 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Content-Audit: Alte Inhalte überarbeiten und SEO-Rankings verbessern</title>
+      <link>https://shift07.ai/blog/content-audit-inhalte-aktualisieren.html</link>
+      <guid>https://shift07.ai/blog/content-audit-inhalte-aktualisieren.html</guid>
+      <pubDate>Thu, 09 Apr 2026 04:04:25 +0000</pubDate>
+      <description>Content-Audit Schritt für Schritt: Wie du alte Blogartikel analysierst, überarbeitest und aktualisierst — und so bestehende Rankings verbesserst statt immer neue Inhalte zu schreiben.</description>
+      <category>Content SEO</category>
+    </item>
     <item>
       <title>E-A-T: Expertise, Autorität und Vertrauen als Google-Qualitätssignale</title>
       <link>https://shift07.ai/blog/eat-google-qualitaetssignale.html</link>
@@ -157,14 +165,6 @@
       <guid>https://shift07.ai/blog/keyword-density-checker-tool.html</guid>
       <pubDate>Mon, 06 Apr 2026 05:28:59 +0000</pubDate>
       <description>Keyword-Dichte für SEO messen und optimieren: Was ist die ideale Keyword-Density (1–2%), wie misst du sie und wie vermeidest du Keyword-Stuffing. Mit kostenlosem Checker-Tool.</description>
-      <category>On-Page SEO</category>
-    </item>
-    <item>
-      <title>Heading-Struktur optimieren: H1 bis H6 richtig einsetzen</title>
-      <link>https://shift07.ai/blog/heading-struktur-optimieren.html</link>
-      <guid>https://shift07.ai/blog/heading-struktur-optimieren.html</guid>
-      <pubDate>Mon, 06 Apr 2026 05:17:03 +0000</pubDate>
-      <description>Erfahre, wie du H1 bis H6 Überschriften für SEO und Nutzer korrekt einsetzt. Mit Praxisbeispielen, häufigen Fehlern und einer Checkliste für die perfekte Heading-Hierarchie.</description>
       <category>On-Page SEO</category>
     </item>
   </channel>
