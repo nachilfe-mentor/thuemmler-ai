@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Wed, 08 Apr 2026 04:48:19 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 09 Apr 2026 00:24:55 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>WooCommerce SEO: Einstellungen, Plugins und Optimierungen</title>
+      <link>https://shift07.ai/blog/woocommerce-seo-einstellungen.html</link>
+      <guid>https://shift07.ai/blog/woocommerce-seo-einstellungen.html</guid>
+      <pubDate>Thu, 09 Apr 2026 00:24:32 +0000</pubDate>
+      <description>WooCommerce SEO Schritt für Schritt: Die wichtigsten Einstellungen, die besten Plugins (Yoast, RankMath) und konkrete Optimierungen für deinen Online-Shop.</description>
+      <category>E-Commerce SEO</category>
+    </item>
     <item>
       <title>Kategorieseiten SEO: So optimierst du Shop-Kategorien für Google</title>
       <link>https://shift07.ai/blog/kategorieseiten-seo-optimieren.html</link>
@@ -157,14 +165,6 @@
       <guid>https://shift07.ai/blog/ttfb-verbessern-server-antwortzeit.html</guid>
       <pubDate>Mon, 06 Apr 2026 01:46:50 +0000</pubDate>
       <description>TTFB (Time to First Byte) ist ein zentraler Ranking-Faktor. Lerne, wie du die Server-Antwortzeit mit Caching, CDN und Hosting-Optimierungen auf unter 200ms senkst.</description>
-      <category>Performance SEO</category>
-    </item>
-    <item>
-      <title>Caching richtig einrichten: Browser-Cache &amp; Server-Cache für schnellere Websites</title>
-      <link>https://shift07.ai/blog/caching-website-einrichten.html</link>
-      <guid>https://shift07.ai/blog/caching-website-einrichten.html</guid>
-      <pubDate>Sun, 05 Apr 2026 20:54:54 +0000</pubDate>
-      <description>Caching richtig einrichten: So nutzt du Browser-Cache, Server-Cache und CDN für maximale Website-Geschwindigkeit und bessere Core Web Vitals.</description>
       <category>Performance SEO</category>
     </item>
   </channel>
