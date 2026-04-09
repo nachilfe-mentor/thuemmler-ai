@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Thu, 09 Apr 2026 02:12:45 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 09 Apr 2026 02:18:16 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Pillar Pages und Content-Silos: Topical Authority aufbauen</title>
+      <link>https://shift07.ai/blog/pillar-pages-content-silos.html</link>
+      <guid>https://shift07.ai/blog/pillar-pages-content-silos.html</guid>
+      <pubDate>Thu, 09 Apr 2026 02:17:53 +0000</pubDate>
+      <description>Pillar Pages und Content-Silos erklärt: Wie du deine Website thematisch strukturierst, Topical Authority bei Google aufbaust und bessere Rankings erzielst.</description>
+      <category>Content SEO</category>
+    </item>
     <item>
       <title>Keyword-Clustering für SEO: Themen sinnvoll gruppieren</title>
       <link>https://shift07.ai/blog/keyword-clustering-seo.html</link>
@@ -157,14 +165,6 @@
       <guid>https://shift07.ai/blog/keyword-recherche-einsteiger.html</guid>
       <pubDate>Mon, 06 Apr 2026 05:16:49 +0000</pubDate>
       <description>Keyword-Recherche ist die Basis jedes erfolgreichen SEO-Projekts. Lerne, wie du mit kostenlosen Tools die richtigen Keywords findest, analysierst und gezielt einsetzt.</description>
-      <category>On-Page SEO</category>
-    </item>
-    <item>
-      <title>Interne Verlinkung: Strategie für bessere SEO-Rankings</title>
-      <link>https://shift07.ai/blog/interne-verlinkung-seo-strategie.html</link>
-      <guid>https://shift07.ai/blog/interne-verlinkung-seo-strategie.html</guid>
-      <pubDate>Mon, 06 Apr 2026 05:16:14 +0000</pubDate>
-      <description>Interne Verlinkung richtig einsetzen: So verteilst du Link-Juice, stärkst wichtige Seiten und verbesserst deine SEO-Rankings nachhaltig. Mit Checkliste und konkreten Beispielen.</description>
       <category>On-Page SEO</category>
     </item>
   </channel>
