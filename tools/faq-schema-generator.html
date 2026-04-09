@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ Schema Generator – JSON-LD für Rich Snippets kostenlos | Shift07</title>
+    <meta name="description" content="FAQ Schema Generator: Erstelle kostenlos JSON-LD Structured Data für FAQ-Rich-Snippets in Google. Einfach Fragen und Antworten eingeben, JSON-LD kopieren, fertig.">
+    <meta name="keywords" content="faq schema generator, faq json-ld generator, structured data faq, rich snippets faq, schema markup faq">
+    <meta name="author" content="Thümmler AI GmbH">
+    <link rel="icon" type="image/png" href="/logo.png">
+    <link rel="canonical" href="https://shift07.ai/tools/faq-schema-generator.html">
+    <!-- Open Graph -->
+    <meta property="og:title" content="FAQ Schema Generator – JSON-LD für Rich Snippets kostenlos">
+    <meta property="og:description" content="Erstelle kostenlos JSON-LD Structured Data für FAQ-Rich-Snippets in Google. Einfach Fragen und Antworten eingeben, JSON-LD kopieren, fertig.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://shift07.ai/tools/faq-schema-generator.html">
+    <meta property="og:image" content="https://shift07.ai/tools/images/faq-schema-generator.png">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="Shift07">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="FAQ Schema Generator – JSON-LD für Rich Snippets">
+    <meta name="twitter:description" content="Kostenlos JSON-LD für FAQ-Rich-Snippets generieren. Structured Data in Sekunden erstellen.">
+    <meta name="twitter:image" content="https://shift07.ai/tools/images/faq-schema-generator.png">
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "FAQ Schema Generator",
+      "description": "Kostenloser FAQ Schema Generator: JSON-LD Structured Data für FAQ-Rich-Snippets in Google erstellen.",
+      "url": "https://shift07.ai/tools/faq-schema-generator.html",
+      "applicationCategory": "SEOApplication",
+      "operatingSystem": "Any",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Shift07",
+        "url": "https://shift07.ai"
+      }
+    }
+    </script>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K1S1RXBDS8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K1S1RXBDS8');
+    </script>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8475857002943858" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { 'inter': ['Inter', 'system-ui', '-apple-system', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: rgba(15, 23, 42, 0.5); }
+        ::-webkit-scrollbar-thumb { background: rgba(59, 130, 246, 0.5); border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: rgba(59, 130, 246, 0.7); }
+        html { scroll-behavior: smooth; }
+        textarea { resize: vertical; }
+        .faq-item { transition: all 0.2s ease; }
+        .faq-item:hover { border-color: rgba(59, 130, 246, 0.5) !important; }
+        .json-output { font-family: 'Courier New', Courier, monospace; white-space: pre; overflow-x: auto; }
+        .preview-question { color: #1a0dab; }
+        .preview-answer { color: #4d5156; }
+        .copy-btn { transition: all 0.2s ease; }
+        .copy-btn.copied { background: rgba(34, 197, 94, 0.2) !important; border-color: rgba(34, 197, 94, 0.4) !important; color: #86efac !important; }
+    </style>
+</head>
+<body class="bg-slate-900 text-white min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-slate-900/80 backdrop-blur-xl border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <a href="/" class="flex items-center gap-2">
+                    <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                    <span class="text-xl font-bold text-white">Shift07</span>
+                </a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="/" class="text-gray-300 hover:text-white transition-colors">SEO-Tool</a>
+                    <a href="/blog/" class="text-gray-300 hover:text-white transition-colors">Blog</a>
+                    <a href="/tools/" class="text-white font-medium border-b-2 border-blue-500 pb-0.5">Tools</a>
+                    <a href="/app/#/login" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-5 py-2 rounded-lg font-medium transition-all">Anmelden</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-gray-300 hover:text-white">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900/95 border-b border-white/10">
+            <div class="px-4 py-3 space-y-2">
+                <a href="/" class="block py-2 text-gray-300 hover:text-white">SEO-Tool</a>
+                <a href="/blog/" class="block py-2 text-gray-300 hover:text-white">Blog</a>
+                <a href="/tools/" class="block py-2 text-white font-medium">Tools</a>
+                <a href="/app/#/login" class="block py-2 text-blue-400 hover:text-blue-300">Anmelden</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="pt-24 pb-10 px-4">
+        <div class="max-w-5xl mx-auto text-center">
+            <div class="inline-flex items-center gap-2 px-4 py-2 bg-blue-500/10 border border-blue-500/20 rounded-full text-blue-400 text-sm font-medium mb-6">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                Structured Data Tool
+            </div>
+            <h1 class="text-3xl md:text-5xl font-extrabold text-white leading-tight mb-4">FAQ Schema Generator</h1>
+            <p class="text-lg text-gray-400 max-w-2xl mx-auto">Erstelle JSON-LD Structured Data für FAQ-Rich-Snippets in Google. Fragen und Antworten eingeben — fertigen Code kopieren und einbinden.</p>
+        </div>
+    </section>
+
+    <!-- Main Tool -->
+    <section class="pb-16 px-4">
+        <div class="max-w-5xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+                <!-- Left: Input -->
+                <div class="space-y-6">
+                    <div class="bg-slate-800/50 border border-white/10 rounded-2xl p-6">
+                        <h2 class="text-lg font-bold text-white mb-4 flex items-center gap-2">
+                            <svg class="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
+                            FAQ-Einträge bearbeiten
+                        </h2>
+
+                        <div id="faq-list" class="space-y-4 mb-4">
+                            <!-- FAQs werden per JS eingefügt -->
+                        </div>
+
+                        <div class="flex gap-3">
+                            <button onclick="addFaq()" class="flex-1 flex items-center justify-center gap-2 py-2.5 bg-blue-600/20 hover:bg-blue-600/30 border border-blue-500/30 rounded-lg text-blue-400 text-sm font-medium transition-all">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
+                                Frage hinzufügen
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Info-Box -->
+                    <div class="bg-blue-600/10 border border-blue-500/20 rounded-xl p-4 text-sm text-gray-400">
+                        <p class="font-medium text-blue-400 mb-2">Warum FAQ Schema?</p>
+                        <p>Google zeigt FAQ-Rich-Snippets direkt in den Suchergebnissen an — mehr Sichtbarkeit ohne bessere Position. Für Seiten mit häufigen Fragen kann das die Klickrate (CTR) verdoppeln.</p>
+                    </div>
+                </div>
+
+                <!-- Right: Output -->
+                <div class="space-y-6">
+
+                    <!-- Live-Vorschau -->
+                    <div class="bg-slate-800/50 border border-white/10 rounded-2xl p-6">
+                        <h2 class="text-lg font-bold text-white mb-4 flex items-center gap-2">
+                            <svg class="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+                            Google SERP Vorschau
+                        </h2>
+                        <div id="serp-preview" class="bg-white rounded-xl p-4 min-h-24">
+                            <p class="text-gray-400 text-sm text-center py-4">Füge Fragen und Antworten hinzu, um die Vorschau zu sehen.</p>
+                        </div>
+                    </div>
+
+                    <!-- JSON-LD Output -->
+                    <div class="bg-slate-800/50 border border-white/10 rounded-2xl p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <h2 class="text-lg font-bold text-white flex items-center gap-2">
+                                <svg class="w-5 h-5 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+                                JSON-LD Code
+                            </h2>
+                            <button id="copy-btn" onclick="copyJson()" class="copy-btn flex items-center gap-2 px-4 py-1.5 bg-slate-700/50 hover:bg-slate-700 border border-white/10 rounded-lg text-sm text-gray-300 transition-all">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                                Kopieren
+                            </button>
+                        </div>
+                        <div id="json-output" class="json-output bg-slate-900/80 border border-white/10 rounded-xl p-4 text-sm text-gray-300 min-h-32 max-h-80 overflow-y-auto">
+                            <span class="text-gray-500">// JSON-LD erscheint hier sobald du Fragen eingibst...</span>
+                        </div>
+                        <p class="mt-3 text-xs text-gray-500">Diesen Code in einem <code class="text-gray-400">&lt;script type="application/ld+json"&gt;</code>-Tag im <code class="text-gray-400">&lt;head&gt;</code> deiner Seite einfügen.</p>
+                    </div>
+
+                    <!-- Validierungs-Hinweis -->
+                    <div class="bg-slate-800/50 border border-white/10 rounded-xl p-4 text-sm text-gray-400">
+                        <p class="font-medium text-white mb-2">Nach dem Einbinden:</p>
+                        <ul class="space-y-1">
+                            <li>• Teste mit Google Rich Results Test</li>
+                            <li>• Überprüfe mit Schema.org Validator</li>
+                            <li>• Beachte: Google zeigt max. 3 FAQs im Snippet</li>
+                            <li>• Antworten müssen auf der Seite sichtbar sein</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- How to use -->
+            <div class="mt-12 bg-slate-800/50 border border-white/10 rounded-2xl p-8">
+                <h2 class="text-xl font-bold text-white mb-6">So verwendest du den FAQ Schema Generator</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="flex gap-4">
+                        <div class="w-10 h-10 bg-blue-600/20 border border-blue-500/30 rounded-xl flex items-center justify-center flex-shrink-0">
+                            <span class="text-blue-400 font-bold">1</span>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-white mb-1">Fragen eingeben</h3>
+                            <p class="text-sm text-gray-400">Trage die häufigsten Fragen zu deiner Seite ein — und die dazugehörigen Antworten.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <div class="w-10 h-10 bg-blue-600/20 border border-blue-500/30 rounded-xl flex items-center justify-center flex-shrink-0">
+                            <span class="text-blue-400 font-bold">2</span>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-white mb-1">JSON-LD kopieren</h3>
+                            <p class="text-sm text-gray-400">Der JSON-LD Code wird automatisch generiert. Klicke auf "Kopieren" um ihn in die Zwischenablage zu laden.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <div class="w-10 h-10 bg-blue-600/20 border border-blue-500/30 rounded-xl flex items-center justify-center flex-shrink-0">
+                            <span class="text-blue-400 font-bold">3</span>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-white mb-1">Im &lt;head&gt; einbinden</h3>
+                            <p class="text-sm text-gray-400">Füge den Code in einem &lt;script type="application/ld+json"&gt;-Tag in den &lt;head&gt; deiner HTML-Seite ein.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SEO Info -->
+            <div class="mt-8 bg-slate-800/50 border border-white/10 rounded-2xl p-8">
+                <h2 class="text-xl font-bold text-white mb-4">Was sind FAQ Rich Snippets?</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-gray-400 text-sm leading-relaxed">
+                    <div>
+                        <p class="mb-4">FAQ Rich Snippets sind erweiterte Google-Suchergebnisse, die direkt unter dem normalen Suchergebnis aufklappbare Fragen und Antworten zeigen. Das macht dein Ergebnis deutlich sichtbarer — selbst wenn du auf Position 5 oder 6 rankst.</p>
+                        <p>Um FAQ Rich Snippets zu erhalten, muss deine Seite:</p>
+                        <ul class="list-disc pl-4 space-y-1 mt-2">
+                            <li>FAQPage JSON-LD Schema Markup enthalten</li>
+                            <li>Die Fragen und Antworten sichtbar auf der Seite zeigen</li>
+                            <li>Googles Richtlinien für Structured Data erfüllen</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p class="mb-4">Besonders effektiv sind FAQ Rich Snippets für:</p>
+                        <ul class="list-disc pl-4 space-y-1">
+                            <li>Produkt- und Service-Seiten ("Was kostet X?", "Wie lange dauert X?")</li>
+                            <li>Blog-Artikel mit häufigen Leserfragen</li>
+                            <li>Lokale Unternehmensseiten ("Haben Sie Parkmöglichkeiten?", "Wie sind Ihre Öffnungszeiten?")</li>
+                            <li>Ratgeber und How-to-Artikel</li>
+                        </ul>
+                        <p class="mt-4">Mehr dazu in unserem Artikel über <a href="/blog/strukturierte-daten-seo-schema-markup.html" class="text-blue-400 hover:text-blue-300 underline">Strukturierte Daten und Schema Markup</a>.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Related tools -->
+            <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4">
+                <a href="/tools/schema-markup-generator.html" class="group bg-slate-800/50 border border-white/10 hover:border-blue-500/40 rounded-xl p-5 transition-all">
+                    <h3 class="font-semibold text-white group-hover:text-blue-400 transition-colors mb-1">Schema-Markup-Generator</h3>
+                    <p class="text-sm text-gray-400">LocalBusiness JSON-LD für lokale Unternehmen</p>
+                </a>
+                <a href="/tools/sitemap-validator.html" class="group bg-slate-800/50 border border-white/10 hover:border-blue-500/40 rounded-xl p-5 transition-all">
+                    <h3 class="font-semibold text-white group-hover:text-blue-400 transition-colors mb-1">Sitemap-Validator</h3>
+                    <p class="text-sm text-gray-400">sitemap.xml kostenlos prüfen</p>
+                </a>
+                <a href="/tools/open-graph-checker.html" class="group bg-slate-800/50 border border-white/10 hover:border-blue-500/40 rounded-xl p-5 transition-all">
+                    <h3 class="font-semibold text-white group-hover:text-blue-400 transition-colors mb-1">Open-Graph-Checker</h3>
+                    <p class="text-sm text-gray-400">OG-Tags vollständig prüfen</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer CTA -->
+    <section class="py-16 px-4 bg-gradient-to-r from-blue-900/30 to-indigo-900/30 border-t border-b border-white/5">
+        <div class="max-w-3xl mx-auto text-center">
+            <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">Weitere SEO-Probleme finden?</h2>
+            <p class="text-gray-400 mb-8">Unsere kostenlose SEO-Analyse zeigt dir alle Schwachstellen deiner Website — von fehlenden Meta-Tags bis zu technischen Problemen.</p>
+            <a href="/" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-8 py-3 rounded-lg font-medium transition-all inline-block">Kostenlose SEO-Analyse</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/10 bg-slate-900/50 py-12 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="flex items-center gap-2">
+                    <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                    <span class="text-lg font-bold text-white">Shift07</span>
+                </div>
+                <div class="flex items-center space-x-6 text-sm text-gray-400">
+                    <a href="/impressum.html" class="hover:text-white transition-colors">Impressum</a>
+                    <a href="/datenschutz.html" class="hover:text-white transition-colors">Datenschutz</a>
+                    <a href="/agb.html" class="hover:text-white transition-colors">AGB</a>
+                </div>
+                <p class="text-sm text-gray-500">&copy; 2026 Thümmler AI GmbH</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // FAQ State
+        let faqs = [
+            { id: 1, question: '', answer: '' },
+            { id: 2, question: '', answer: '' }
+        ];
+        let nextId = 3;
+
+        function renderFaqs() {
+            const container = document.getElementById('faq-list');
+            container.innerHTML = '';
+            faqs.forEach((faq, index) => {
+                const div = document.createElement('div');
+                div.className = 'faq-item bg-slate-900/50 border border-white/10 rounded-xl p-4 space-y-3';
+                div.innerHTML = `
+                    <div class="flex items-center justify-between mb-1">
+                        <span class="text-xs font-semibold text-blue-400 uppercase tracking-wider">Frage ${index + 1}</span>
+                        ${faqs.length > 1 ? `<button onclick="removeFaq(${faq.id})" class="text-gray-500 hover:text-red-400 transition-colors">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+                        </button>` : ''}
+                    </div>
+                    <input
+                        type="text"
+                        placeholder="Frage eingeben, z.B. &quot;Was kostet die SEO-Analyse?&quot;"
+                        value="${escapeAttr(faq.question)}"
+                        oninput="updateFaq(${faq.id}, 'question', this.value)"
+                        class="w-full bg-slate-800 border border-white/10 rounded-lg px-3 py-2 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-blue-500"
+                    >
+                    <textarea
+                        placeholder="Antwort eingeben, z.B. &quot;Die SEO-Analyse ist kostenlos und dauert ca. 30 Sekunden.&quot;"
+                        oninput="updateFaq(${faq.id}, 'answer', this.value)"
+                        rows="2"
+                        class="w-full bg-slate-800 border border-white/10 rounded-lg px-3 py-2 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-blue-500"
+                    >${escapeHtml(faq.answer)}</textarea>
+                `;
+                container.appendChild(div);
+            });
+            generateOutput();
+        }
+
+        function escapeAttr(str) {
+            return str.replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+        }
+
+        function escapeHtml(str) {
+            return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+        }
+
+        function updateFaq(id, field, value) {
+            const faq = faqs.find(f => f.id === id);
+            if (faq) {
+                faq[field] = value;
+                generateOutput();
+            }
+        }
+
+        function addFaq() {
+            if (faqs.length >= 20) {
+                alert('Maximal 20 FAQ-Einträge möglich.');
+                return;
+            }
+            faqs.push({ id: nextId++, question: '', answer: '' });
+            renderFaqs();
+        }
+
+        function removeFaq(id) {
+            faqs = faqs.filter(f => f.id !== id);
+            renderFaqs();
+        }
+
+        function generateOutput() {
+            const validFaqs = faqs.filter(f => f.question.trim() && f.answer.trim());
+
+            // Update SERP Preview
+            const previewContainer = document.getElementById('serp-preview');
+            if (validFaqs.length === 0) {
+                previewContainer.innerHTML = '<p class="text-gray-400 text-sm text-center py-4">Füge Fragen und Antworten hinzu, um die Vorschau zu sehen.</p>';
+            } else {
+                let previewHtml = `
+                    <div class="mb-3 pb-2 border-b border-gray-200">
+                        <div class="text-xs text-gray-400 mb-1">shift07.ai/deine-seite.html</div>
+                        <div class="text-blue-700 text-sm font-medium">Deine Seite — Titel deiner Seite | Shift07</div>
+                        <div class="text-xs text-gray-600 mt-1">Beschreibung deiner Seite erscheint hier als Meta-Description...</div>
+                    </div>
+                    <div class="space-y-2">
+                `;
+                validFaqs.slice(0, 3).forEach(faq => {
+                    previewHtml += `
+                        <details class="group">
+                            <summary class="cursor-pointer flex items-center justify-between text-sm font-medium text-blue-800 hover:text-blue-600 py-1">
+                                ${escapeHtml(faq.question)}
+                                <svg class="w-4 h-4 text-gray-400 group-open:rotate-180 transition-transform flex-shrink-0 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                            </summary>
+                            <p class="text-xs text-gray-600 mt-1 pl-1">${escapeHtml(faq.answer)}</p>
+                        </details>
+                    `;
+                });
+                if (validFaqs.length > 3) {
+                    previewHtml += `<p class="text-xs text-gray-400 mt-1">+ ${validFaqs.length - 3} weitere Fragen (Google zeigt max. 3 an)</p>`;
+                }
+                previewHtml += '</div>';
+                previewContainer.innerHTML = previewHtml;
+            }
+
+            // Generate JSON-LD
+            const jsonOutput = document.getElementById('json-output');
+            if (validFaqs.length === 0) {
+                jsonOutput.innerHTML = '<span class="text-gray-500">// JSON-LD erscheint hier sobald du Fragen eingibst...</span>';
+                return;
+            }
+
+            const schema = {
+                "@context": "https://schema.org",
+                "@type": "FAQPage",
+                "mainEntity": validFaqs.map(faq => ({
+                    "@type": "Question",
+                    "name": faq.question.trim(),
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": faq.answer.trim()
+                    }
+                }))
+            };
+
+            const json = JSON.stringify(schema, null, 2);
+            const scriptTag = `<script type="application/ld+json">\n${json}\n<\/script>`;
+
+            // Syntax highlighting (simple)
+            const highlighted = escapeHtml(scriptTag)
+                .replace(/(&lt;script[^&]*&gt;|&lt;\/script&gt;)/g, '<span style="color:#f97316">$1</span>')
+                .replace(/"(@context|@type|mainEntity|name|acceptedAnswer|text)"/g, '<span style="color:#60a5fa">"$1"</span>')
+                .replace(/: "(.*?)"/g, ': <span style="color:#86efac">"$1"</span>');
+
+            jsonOutput.innerHTML = highlighted;
+        }
+
+        function copyJson() {
+            const validFaqs = faqs.filter(f => f.question.trim() && f.answer.trim());
+            if (validFaqs.length === 0) {
+                alert('Bitte füge zuerst mindestens eine Frage mit Antwort ein.');
+                return;
+            }
+
+            const schema = {
+                "@context": "https://schema.org",
+                "@type": "FAQPage",
+                "mainEntity": validFaqs.map(faq => ({
+                    "@type": "Question",
+                    "name": faq.question.trim(),
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": faq.answer.trim()
+                    }
+                }))
+            };
+            const json = JSON.stringify(schema, null, 2);
+            const scriptTag = `<script type="application/ld+json">\n${json}\n<\/script>`;
+
+            navigator.clipboard.writeText(scriptTag).then(() => {
+                const btn = document.getElementById('copy-btn');
+                btn.classList.add('copied');
+                btn.innerHTML = `
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                    Kopiert!
+                `;
+                setTimeout(() => {
+                    btn.classList.remove('copied');
+                    btn.innerHTML = `
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                        Kopieren
+                    `;
+                }, 2500);
+            });
+        }
+
+        // Initial render
+        renderFaqs();
+    </script>
+</body>
+</html>
