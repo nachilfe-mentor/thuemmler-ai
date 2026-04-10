@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Fri, 10 Apr 2026 03:02:34 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 10 Apr 2026 04:37:17 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Backlink-Profil analysieren und bereinigen: Schritt-für-Schritt</title>
+      <link>https://shift07.ai/blog/backlink-profil-analysieren-bereinigen.html</link>
+      <guid>https://shift07.ai/blog/backlink-profil-analysieren-bereinigen.html</guid>
+      <pubDate>Fri, 10 Apr 2026 04:36:54 +0000</pubDate>
+      <description>Wie analysierst du dein Backlink-Profil? Wann solltest du Backlinks disavowen? Diese Schritt-für-Schritt-Anleitung zeigt dir, wie du toxische Links erkennst und mit dem Google Disavow Tool entfernst.</description>
+      <category>Off-Page SEO</category>
+    </item>
     <item>
       <title>Linkjuice und PageRank: Wie Link-Stärke übertragen wird</title>
       <link>https://shift07.ai/blog/linkjuice-pagerank-seo.html</link>
@@ -157,14 +165,6 @@
       <guid>https://shift07.ai/blog/mobile-core-web-vitals-optimieren.html</guid>
       <pubDate>Tue, 07 Apr 2026 03:16:14 +0000</pubDate>
       <description>Mobile Core Web Vitals optimieren: So verbesserst du LCP, CLS und INP speziell auf dem Smartphone. Konkrete Maßnahmen, Tools und Checkliste für 2026.</description>
-      <category>Mobile SEO</category>
-    </item>
-    <item>
-      <title>AMP: Accelerated Mobile Pages erklärt – Was du 2026 wissen musst</title>
-      <link>https://shift07.ai/blog/amp-accelerated-mobile-pages-erklaert.html</link>
-      <guid>https://shift07.ai/blog/amp-accelerated-mobile-pages-erklaert.html</guid>
-      <pubDate>Tue, 07 Apr 2026 03:07:43 +0000</pubDate>
-      <description>AMP (Accelerated Mobile Pages) erklärt: Was ist AMP, wie funktioniert es, lohnt sich AMP noch 2026? Alles was Website-Betreiber wissen müssen – mit Vor- und Nachteilen.</description>
       <category>Mobile SEO</category>
     </item>
   </channel>
