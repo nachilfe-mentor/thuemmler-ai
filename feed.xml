@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Fri, 10 Apr 2026 01:18:54 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 10 Apr 2026 01:22:38 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Off-Page SEO: Der vollständige Leitfaden 2026</title>
+      <link>https://shift07.ai/blog/off-page-seo-leitfaden.html</link>
+      <guid>https://shift07.ai/blog/off-page-seo-leitfaden.html</guid>
+      <pubDate>Fri, 10 Apr 2026 01:22:12 +0000</pubDate>
+      <description>Off-Page SEO erklärt: Was Backlinks, externe Signale und Linkaufbau für dein Google-Ranking bedeuten. Der vollständige Leitfaden mit konkreten Strategien für 2026.</description>
+      <category>Off-Page SEO</category>
+    </item>
     <item>
       <title>Inhalte für Featured Snippets optimieren: Listen, Tabellen und direkte Antworten</title>
       <link>https://shift07.ai/blog/inhalte-featured-snippets-optimieren.html</link>
@@ -157,14 +165,6 @@
       <guid>https://shift07.ai/blog/featured-snippets-position-0.html</guid>
       <pubDate>Tue, 07 Apr 2026 01:22:46 +0000</pubDate>
       <description>Featured Snippets sind die begehrte Position 0 bei Google. Lerne, wie du deine Inhalte richtig strukturierst, um Snippet-Plätze zu gewinnen und mehr Traffic zu erzielen.</description>
-      <category>On-Page SEO</category>
-    </item>
-    <item>
-      <title>Content-Länge und SEO: Wie lang sollte ein Artikel sein?</title>
-      <link>https://shift07.ai/blog/content-laenge-seo-wie-lang-artikel.html</link>
-      <guid>https://shift07.ai/blog/content-laenge-seo-wie-lang-artikel.html</guid>
-      <pubDate>Mon, 06 Apr 2026 07:16:35 +0000</pubDate>
-      <description>Wie lang muss ein Blog-Artikel für gute Google-Rankings sein? Wir klären den Mythos der Mindest-Wortanzahl und zeigen, wann Länge wirklich zählt.</description>
       <category>On-Page SEO</category>
     </item>
   </channel>
