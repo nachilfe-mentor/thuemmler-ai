@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Fri, 10 Apr 2026 04:40:26 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 10 Apr 2026 04:43:53 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Natürlichen Linkaufbau messen: Tools und KPIs für Off-Page SEO</title>
+      <link>https://shift07.ai/blog/linkaufbau-messen-tools-kpis.html</link>
+      <guid>https://shift07.ai/blog/linkaufbau-messen-tools-kpis.html</guid>
+      <pubDate>Fri, 10 Apr 2026 04:43:30 +0000</pubDate>
+      <description>Wie misst du den Erfolg deines Linkaufbaus? Welche KPIs wirklich zählen, welche Tools du brauchst und wie du natürliches Wachstum von manipulativem Linkaufbau unterscheidest.</description>
+      <category>Off-Page SEO</category>
+    </item>
     <item>
       <title>Backlink-Profil analysieren und bereinigen: Schritt-für-Schritt</title>
       <link>https://shift07.ai/blog/backlink-profil-analysieren-bereinigen.html</link>
@@ -157,14 +165,6 @@
       <guid>https://shift07.ai/blog/touchscreen-ux-mobile-usability-seo.html</guid>
       <pubDate>Tue, 07 Apr 2026 04:52:56 +0000</pubDate>
       <description>Mobile Usability ist ein direkter Google-Rankingfaktor. Lerne, wie du Touchscreen-UX optimierst, Tipp-Ziele richtig dimensionierst und mobile Nutzbarkeit verbesserst.</description>
-      <category>Mobile SEO</category>
-    </item>
-    <item>
-      <title>Mobile Core Web Vitals optimieren: LCP, CLS und INP auf dem Smartphone verbessern</title>
-      <link>https://shift07.ai/blog/mobile-core-web-vitals-optimieren.html</link>
-      <guid>https://shift07.ai/blog/mobile-core-web-vitals-optimieren.html</guid>
-      <pubDate>Tue, 07 Apr 2026 03:16:14 +0000</pubDate>
-      <description>Mobile Core Web Vitals optimieren: So verbesserst du LCP, CLS und INP speziell auf dem Smartphone. Konkrete Maßnahmen, Tools und Checkliste für 2026.</description>
       <category>Mobile SEO</category>
     </item>
   </channel>
