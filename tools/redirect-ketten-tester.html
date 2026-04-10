@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirect-Ketten-Tester – HTTP-Weiterleitungen kostenlos prüfen | Shift07</title>
+    <meta name="description" content="Analysiere Redirect-Ketten mit unserem kostenlosen Tool. Füge HTML-Header ein und prüfe sofort, ob 301/302-Weiterleitungen korrekt konfiguriert sind und Linkjuice optimal weitergegeben wird.">
+    <meta name="author" content="Thümmler AI GmbH">
+    <link rel="icon" type="image/png" href="/logo.png">
+    <link rel="canonical" href="https://shift07.ai/tools/redirect-ketten-tester.html">
+    <link rel="alternate" type="application/rss+xml" title="Shift07 Blog" href="https://shift07.ai/feed.xml">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Redirect-Ketten-Tester – HTTP-Weiterleitungen kostenlos prüfen | Shift07">
+    <meta property="og:description" content="Prüfe Redirect-Ketten kostenlos: HTML-Header einfügen, sofort analysieren ob deine 301/302-Weiterleitungen SEO-optimal konfiguriert sind.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://shift07.ai/tools/redirect-ketten-tester.html">
+    <meta property="og:image" content="https://shift07.ai/tools/images/redirect-ketten-tester.png">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="Shift07">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Redirect-Ketten-Tester – HTTP-Weiterleitungen kostenlos prüfen">
+    <meta name="twitter:description" content="Prüfe Redirect-Ketten kostenlos: HTML-Header einfügen, sofort analysieren.">
+    <meta name="twitter:image" content="https://shift07.ai/tools/images/redirect-ketten-tester.png">
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Redirect-Ketten-Tester",
+      "description": "Kostenloser Redirect-Ketten-Tester: HTML-Header einfügen und sofort analysieren ob 301/302-Weiterleitungen SEO-optimal konfiguriert sind.",
+      "url": "https://shift07.ai/tools/redirect-ketten-tester.html",
+      "applicationCategory": "SEO Tool",
+      "operatingSystem": "Web",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+      "publisher": { "@type": "Organization", "name": "Shift07", "url": "https://shift07.ai" }
+    }
+    </script>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K1S1RXBDS8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K1S1RXBDS8');
+    </script>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6249676895923990" crossorigin="anonymous"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f8f9fc; color: #1a1a2e; line-height: 1.6; }
+        header { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); color: white; padding: 1rem 2rem; display: flex; align-items: center; justify-content: space-between; }
+        header a { color: white; text-decoration: none; font-size: 1.4rem; font-weight: 700; }
+        nav a { color: rgba(255,255,255,0.85); text-decoration: none; margin-left: 1.5rem; font-size: 0.95rem; }
+        nav a:hover { color: #6c63ff; }
+        .hero { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); color: white; padding: 2.5rem 2rem; text-align: center; }
+        .hero h1 { font-size: 2rem; font-weight: 800; margin-bottom: 0.75rem; }
+        .hero p { color: rgba(255,255,255,0.75); font-size: 1rem; max-width: 600px; margin: 0 auto; }
+        .tool-container { max-width: 900px; margin: 2rem auto; padding: 0 1.5rem; }
+        .tool-card { background: white; border-radius: 16px; padding: 2rem; box-shadow: 0 2px 16px rgba(0,0,0,0.07); margin-bottom: 2rem; }
+        .tool-card h2 { font-size: 1.1rem; font-weight: 700; margin-bottom: 1rem; color: #1a1a2e; display: flex; align-items: center; gap: 0.5rem; }
+        .tool-card h2::before { content: ""; width: 4px; height: 1.2em; background: #6c63ff; border-radius: 2px; display: inline-block; }
+        label { display: block; font-size: 0.9rem; font-weight: 600; color: #444; margin-bottom: 0.4rem; }
+        textarea { width: 100%; border: 2px solid #e2e8f0; border-radius: 10px; padding: 1rem; font-family: monospace; font-size: 0.85rem; resize: vertical; min-height: 180px; outline: none; transition: border-color 0.2s; color: #333; background: #fafafa; }
+        textarea:focus { border-color: #6c63ff; background: white; }
+        .or-divider { text-align: center; color: #aaa; font-size: 0.85rem; margin: 0.75rem 0; position: relative; }
+        .or-divider::before, .or-divider::after { content: ""; position: absolute; top: 50%; width: 44%; height: 1px; background: #e2e8f0; }
+        .or-divider::before { left: 0; }
+        .or-divider::after { right: 0; }
+        .input-row { display: flex; gap: 0.75rem; align-items: flex-end; }
+        .input-row input { flex: 1; border: 2px solid #e2e8f0; border-radius: 10px; padding: 0.75rem 1rem; font-size: 0.95rem; outline: none; transition: border-color 0.2s; }
+        .input-row input:focus { border-color: #6c63ff; }
+        .btn { background: linear-gradient(135deg, #6c63ff, #4f46e5); color: white; border: none; border-radius: 10px; padding: 0.75rem 1.5rem; font-size: 0.95rem; font-weight: 700; cursor: pointer; transition: opacity 0.2s, transform 0.1s; white-space: nowrap; }
+        .btn:hover { opacity: 0.9; transform: translateY(-1px); }
+        .btn:active { transform: translateY(0); }
+        .btn-secondary { background: #f0f0ff; color: #6c63ff; border: 2px solid #6c63ff; }
+        .btn-secondary:hover { background: #e8e8ff; }
+        .examples { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 0.5rem; }
+        .example-btn { background: #f0f0ff; color: #6c63ff; border: 1px solid #c8c5ff; border-radius: 6px; padding: 0.3rem 0.75rem; font-size: 0.8rem; cursor: pointer; transition: background 0.2s; }
+        .example-btn:hover { background: #e4e4ff; }
+        .results { display: none; }
+        .results.visible { display: block; }
+        .summary-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 1rem; margin-bottom: 1.5rem; }
+        .summary-card { background: #f8f9fc; border-radius: 10px; padding: 1rem; text-align: center; border: 2px solid #e2e8f0; }
+        .summary-card.good { border-color: #38a169; background: #f0fff4; }
+        .summary-card.warn { border-color: #f5a623; background: #fffbf0; }
+        .summary-card.bad { border-color: #e53e3e; background: #fff5f5; }
+        .summary-card .value { font-size: 2rem; font-weight: 800; color: #1a1a2e; }
+        .summary-card.good .value { color: #38a169; }
+        .summary-card.warn .value { color: #e6900a; }
+        .summary-card.bad .value { color: #e53e3e; }
+        .summary-card .label { font-size: 0.8rem; color: #666; margin-top: 0.25rem; }
+        .chain-visual { margin: 1.5rem 0; }
+        .chain-step { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem; }
+        .chain-arrow { color: #aaa; font-size: 1.2rem; margin: 0 0.25rem; }
+        .hop { background: white; border: 2px solid #e2e8f0; border-radius: 10px; padding: 0.75rem 1rem; flex: 1; display: flex; align-items: center; gap: 0.75rem; }
+        .hop.hop-start { border-color: #6c63ff; }
+        .hop.hop-good { border-color: #38a169; }
+        .hop.hop-warn { border-color: #f5a623; }
+        .hop.hop-bad { border-color: #e53e3e; }
+        .hop.hop-final { border-color: #4299e1; }
+        .status-badge { font-size: 0.75rem; font-weight: 700; padding: 2px 8px; border-radius: 4px; white-space: nowrap; }
+        .badge-301 { background: #c6f6d5; color: #276749; }
+        .badge-302 { background: #feebc8; color: #c05621; }
+        .badge-307 { background: #feebc8; color: #c05621; }
+        .badge-308 { background: #c6f6d5; color: #276749; }
+        .badge-200 { background: #bee3f8; color: #2a69ac; }
+        .badge-404 { background: #fed7d7; color: #c53030; }
+        .badge-other { background: #e2e8f0; color: #444; }
+        .hop-url { font-size: 0.82rem; color: #333; font-family: monospace; word-break: break-all; }
+        .hop-label { font-size: 0.75rem; color: #888; }
+        .issues-list { margin: 1rem 0; }
+        .issue-item { display: flex; align-items: flex-start; gap: 0.75rem; padding: 0.75rem; border-radius: 8px; margin-bottom: 0.5rem; }
+        .issue-item.error { background: #fff5f5; border-left: 3px solid #e53e3e; }
+        .issue-item.warning { background: #fffbf0; border-left: 3px solid #f5a623; }
+        .issue-item.info { background: #f0f4ff; border-left: 3px solid #4299e1; }
+        .issue-item.success { background: #f0fff4; border-left: 3px solid #38a169; }
+        .issue-icon { font-size: 1rem; flex-shrink: 0; margin-top: 0.1rem; }
+        .issue-text { font-size: 0.9rem; color: #333; }
+        .issue-text strong { color: #1a1a2e; }
+        .details-table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
+        .details-table th { background: #f0f0ff; color: #6c63ff; padding: 0.5rem 0.75rem; text-align: left; font-size: 0.8rem; }
+        .details-table td { padding: 0.5rem 0.75rem; border-bottom: 1px solid #f0f0f0; font-family: monospace; word-break: break-all; }
+        .score-ring-wrap { display: flex; flex-direction: column; align-items: center; margin: 0.5rem 0; }
+        .score-ring { width: 90px; height: 90px; }
+        .score-ring-text { font-size: 0.8rem; color: #666; margin-top: 0.25rem; }
+        .info-section { background: #f0f0ff; border-radius: 12px; padding: 1.5rem; margin-bottom: 1.5rem; }
+        .info-section h3 { font-size: 1rem; font-weight: 700; margin-bottom: 0.75rem; color: #4f46e5; }
+        .info-section ul { margin-left: 1.25rem; }
+        .info-section li { margin-bottom: 0.4rem; font-size: 0.9rem; color: #333; }
+        code { background: #e8e8ff; color: #4f46e5; padding: 1px 5px; border-radius: 3px; font-family: monospace; font-size: 0.85rem; }
+        footer { background: #1a1a2e; color: rgba(255,255,255,0.6); text-align: center; padding: 2rem; margin-top: 3rem; font-size: 0.9rem; }
+        footer a { color: rgba(255,255,255,0.8); }
+        a { color: #6c63ff; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        @media (max-width: 600px) { .hero h1 { font-size: 1.5rem; } header { flex-direction: column; gap: 0.5rem; } .input-row { flex-direction: column; } .summary-grid { grid-template-columns: repeat(2, 1fr); } }
+    </style>
+</head>
+<body>
+
+<header>
+    <a href="/">Shift07</a>
+    <nav>
+        <a href="/blog/">Blog</a>
+        <a href="/tools/">Tools</a>
+        <a href="/#pricing">Preise</a>
+    </nav>
+</header>
+
+<div class="hero">
+    <h1>Redirect-Ketten-Tester</h1>
+    <p>HTTP-Response-Header einfügen und sofort prüfen, ob deine Weiterleitungen SEO-optimal konfiguriert sind</p>
+</div>
+
+<div class="tool-container">
+
+    <!-- Input Card -->
+    <div class="tool-card">
+        <h2>HTTP-Response-Header eingeben</h2>
+
+        <label>Option 1: HTTP-Header-Text einfügen</label>
+        <p style="font-size:0.85rem;color:#888;margin-bottom:0.5rem;">Kopiere die HTTP-Header deiner URL(s) aus einem Tool wie curl, HTTPie oder dem Browser-DevTools-Netzwerk-Tab hier hinein.</p>
+        <textarea id="headerInput" placeholder="Beispiel:
+HTTP/1.1 301 Moved Permanently
+Location: https://www.example.de/neue-seite/
+
+HTTP/1.1 301 Moved Permanently
+Location: https://www.example.de/zielseite/
+
+HTTP/1.1 200 OK
+Content-Type: text/html; charset=utf-8"></textarea>
+
+        <div style="margin-top:0.75rem;">
+            <span style="font-size:0.82rem;color:#888;font-weight:600;">Beispiele laden:</span>
+            <div class="examples">
+                <button class="example-btn" onclick="loadExample('good')">✓ Sauberer 301</button>
+                <button class="example-btn" onclick="loadExample('chain')">⚠ Redirect-Kette (3 Hops)</button>
+                <button class="example-btn" onclick="loadExample('loop')">✕ Redirect-Loop</button>
+                <button class="example-btn" onclick="loadExample('mixed')">⚠ 301 → 302 → 200</button>
+                <button class="example-btn" onclick="loadExample('404')">✕ Endet mit 404</button>
+            </div>
+        </div>
+
+        <div class="or-divider" style="margin:1.25rem 0;">oder manuell eingeben</div>
+
+        <label>Option 2: Redirect-Schritte manuell eingeben</label>
+        <div id="manualSteps">
+            <div class="manual-step" style="margin-bottom:0.5rem;">
+                <div style="display:flex;gap:0.5rem;align-items:center;margin-bottom:0.25rem;">
+                    <select class="status-select" style="border:2px solid #e2e8f0;border-radius:8px;padding:0.5rem;font-size:0.9rem;outline:none;width:110px;">
+                        <option value="301">301</option>
+                        <option value="302">302</option>
+                        <option value="307">307</option>
+                        <option value="308">308</option>
+                        <option value="200">200</option>
+                        <option value="404">404</option>
+                    </select>
+                    <input type="text" class="url-input" placeholder="https://example.de/alte-seite/" style="flex:1;border:2px solid #e2e8f0;border-radius:8px;padding:0.5rem 0.75rem;font-size:0.9rem;outline:none;">
+                    <button onclick="removeStep(this)" style="background:#fed7d7;color:#c53030;border:none;border-radius:6px;padding:0.4rem 0.6rem;cursor:pointer;font-size:0.9rem;">✕</button>
+                </div>
+            </div>
+        </div>
+        <button onclick="addStep()" class="btn btn-secondary" style="font-size:0.85rem;padding:0.5rem 1rem;margin-top:0.25rem;">+ Schritt hinzufügen</button>
+
+        <div style="margin-top:1.25rem;display:flex;gap:0.75rem;flex-wrap:wrap;">
+            <button class="btn" onclick="analyzeAll()">🔍 Redirect-Kette analysieren</button>
+            <button class="btn btn-secondary" onclick="resetTool()">Zurücksetzen</button>
+        </div>
+    </div>
+
+    <!-- Results -->
+    <div class="results" id="results">
+
+        <!-- Score & Summary -->
+        <div class="tool-card">
+            <h2>Analyse-Ergebnis</h2>
+            <div class="summary-grid" id="summaryGrid"></div>
+            <div id="scoreSection" style="text-align:center;margin:1rem 0;"></div>
+        </div>
+
+        <!-- Chain Visualization -->
+        <div class="tool-card">
+            <h2>Redirect-Kette</h2>
+            <div class="chain-visual" id="chainVisual"></div>
+        </div>
+
+        <!-- Issues -->
+        <div class="tool-card">
+            <h2>Befunde &amp; Empfehlungen</h2>
+            <div class="issues-list" id="issuesList"></div>
+        </div>
+
+        <!-- Details Table -->
+        <div class="tool-card">
+            <h2>Details</h2>
+            <div style="overflow-x:auto;">
+                <table class="details-table">
+                    <thead><tr><th>#</th><th>Status</th><th>URL</th><th>Bewertung</th></tr></thead>
+                    <tbody id="detailsTable"></tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Info Section -->
+    <div class="info-section">
+        <h3>Was ist eine Redirect-Kette und warum ist sie wichtig für SEO?</h3>
+        <ul>
+            <li><strong>301 (Permanent):</strong> Empfohlen für dauerhafte Umleitungen. Überträgt ~95% des Linkjuice auf die Ziel-URL.</li>
+            <li><strong>302 (Temporary):</strong> Für temporäre Umleitungen. Überträgt weniger Linkjuice, da Google die ursprüngliche URL indexiert hält.</li>
+            <li><strong>307/308:</strong> Wie 302/301, aber method-sicher (POST bleibt POST). 308 = permanente Weiterleitung mit Methoden-Erhalt.</li>
+            <li><strong>Redirect-Kette:</strong> Mehrere Weiterleitungen hintereinander (A→B→C→D). Jeder Hop kostet Linkjuice und verlangsamt die Ladezeit.</li>
+            <li><strong>Redirect-Loop:</strong> Eine Kette die auf sich selbst zeigt (A→B→A). Browser und Crawler brechen nach wenigen Hops ab.</li>
+            <li><strong>Best Practice:</strong> Maximal 1 Redirect pro URL. Direkt vom Start auf das Ziel, keine Zwischenstationen.</li>
+        </ul>
+        <p style="margin-top:0.75rem;font-size:0.9rem;">Mehr erfahren: <a href="/blog/linkjuice-pagerank-seo.html">Linkjuice und PageRank: Wie Link-Stärke übertragen wird</a> · <a href="/blog/off-page-seo-leitfaden.html">Off-Page SEO: Der vollständige Leitfaden 2026</a></p>
+    </div>
+
+    <div style="text-align:center;margin:2rem 0;">
+        <p style="color:#666;font-size:0.9rem;">Weitere kostenlose SEO-Tools:</p>
+        <p style="margin-top:0.5rem;">
+            <a href="/tools/nofollow-link-checker.html">Nofollow-Link-Checker</a> ·
+            <a href="/tools/canonical-tag-checker.html">Canonical-Tag-Checker</a> ·
+            <a href="/tools/http-header-checker.html">HTTP-Header-Checker</a> ·
+            <a href="/tools/sitemap-validator.html">Sitemap-Validator</a>
+        </p>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2026 Thümmler AI GmbH · <a href="/impressum.html">Impressum</a> · <a href="/datenschutz.html">Datenschutz</a></p>
+    <p style="margin-top:0.5rem"><a href="/blog/">Blog</a> · <a href="/tools/">Tools</a> · <a href="https://shift07.ai">shift07.ai</a></p>
+</footer>
+
+<script>
+// ===== EXAMPLE DATA =====
+const examples = {
+    good: `HTTP/1.1 301 Moved Permanently\nLocation: https://www.example.de/neue-seite/\n\nHTTP/1.1 200 OK\nContent-Type: text/html`,
+    chain: `HTTP/1.1 301 Moved Permanently\nLocation: https://www.example.de/schritt-2/\n\nHTTP/1.1 301 Moved Permanently\nLocation: https://www.example.de/schritt-3/\n\nHTTP/1.1 200 OK\nContent-Type: text/html`,
+    loop: `HTTP/1.1 302 Found\nLocation: https://www.example.de/seite-b/\n\nHTTP/1.1 302 Found\nLocation: https://www.example.de/seite-a/\n\nHTTP/1.1 302 Found\nLocation: https://www.example.de/seite-b/`,
+    mixed: `HTTP/1.1 301 Moved Permanently\nLocation: https://www.example.de/zwischen/\n\nHTTP/1.1 302 Found\nLocation: https://www.example.de/ziel/\n\nHTTP/1.1 200 OK\nContent-Type: text/html`,
+    '404': `HTTP/1.1 301 Moved Permanently\nLocation: https://www.example.de/geloeschte-seite/\n\nHTTP/1.1 404 Not Found\nContent-Type: text/html`
+};
+
+function loadExample(key) {
+    document.getElementById('headerInput').value = examples[key];
+}
+
+// ===== MANUAL STEP BUILDER =====
+function addStep() {
+    const container = document.getElementById('manualSteps');
+    const div = document.createElement('div');
+    div.className = 'manual-step';
+    div.style.cssText = 'margin-bottom:0.5rem;';
+    div.innerHTML = `<div style="display:flex;gap:0.5rem;align-items:center;margin-bottom:0.25rem;">
+        <select class="status-select" style="border:2px solid #e2e8f0;border-radius:8px;padding:0.5rem;font-size:0.9rem;outline:none;width:110px;">
+            <option value="301">301</option><option value="302">302</option><option value="307">307</option>
+            <option value="308">308</option><option value="200">200</option><option value="404">404</option>
+        </select>
+        <input type="text" class="url-input" placeholder="https://example.de/seite/" style="flex:1;border:2px solid #e2e8f0;border-radius:8px;padding:0.5rem 0.75rem;font-size:0.9rem;outline:none;">
+        <button onclick="removeStep(this)" style="background:#fed7d7;color:#c53030;border:none;border-radius:6px;padding:0.4rem 0.6rem;cursor:pointer;font-size:0.9rem;">✕</button>
+    </div>`;
+    container.appendChild(div);
+}
+
+function removeStep(btn) {
+    const steps = document.querySelectorAll('.manual-step');
+    if (steps.length > 1) btn.closest('.manual-step').remove();
+}
+
+// ===== PARSE HEADERS =====
+function parseHeaders(text) {
+    const hops = [];
+    const blocks = text.trim().split(/\n\s*\n/);
+    for (const block of blocks) {
+        if (!block.trim()) continue;
+        const lines = block.trim().split('\n');
+        const statusLine = lines[0].trim();
+        const statusMatch = statusLine.match(/HTTP\/[\d.]+ (\d+)/i);
+        if (!statusMatch) continue;
+        const status = parseInt(statusMatch[1]);
+        let location = '';
+        for (let i = 1; i < lines.length; i++) {
+            const m = lines[i].match(/^location:\s*(.+)/i);
+            if (m) { location = m[1].trim(); break; }
+        }
+        hops.push({ status, location, raw: block.trim() });
+    }
+    return hops;
+}
+
+function parseManual() {
+    const steps = document.querySelectorAll('.manual-step');
+    const hops = [];
+    steps.forEach(s => {
+        const status = parseInt(s.querySelector('.status-select').value);
+        const url = s.querySelector('.url-input').value.trim();
+        hops.push({ status, location: url, raw: `${status} ${url}` });
+    });
+    return hops;
+}
+
+// ===== ANALYSIS =====
+function analyzeAll() {
+    const headerText = document.getElementById('headerInput').value.trim();
+    let hops = headerText ? parseHeaders(headerText) : parseManual();
+
+    if (hops.length === 0) {
+        alert('Bitte gib mindestens einen HTTP-Response-Header oder Redirect-Schritt ein.');
+        return;
+    }
+
+    renderResults(hops);
+    document.getElementById('results').classList.add('visible');
+    document.getElementById('results').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+function analyzeHops(hops) {
+    const issues = [];
+    const redirectStatuses = [301, 302, 307, 308];
+    const redirectCount = hops.filter(h => redirectStatuses.includes(h.status)).length;
+    const finalHop = hops[hops.length - 1];
+    const finalStatus = finalHop ? finalHop.status : 0;
+
+    // Check for loops
+    const locationsSeen = new Set();
+    let hasLoop = false;
+    for (const hop of hops) {
+        if (hop.location && locationsSeen.has(hop.location)) { hasLoop = true; break; }
+        if (hop.location) locationsSeen.add(hop.location);
+    }
+
+    if (hasLoop) {
+        issues.push({ type: 'error', icon: '✕', title: 'Redirect-Loop erkannt!', text: 'Eine oder mehrere URLs verweisen zirkulär aufeinander. Browser und Crawler brechen nach wenigen Hops mit einem Fehler ab. Sofort beheben!' });
+    }
+
+    if (redirectCount > 3) {
+        issues.push({ type: 'error', icon: '✕', title: 'Zu viele Redirects', text: `${redirectCount} Weiterleitungen hintereinander. Google und Browser limitieren auf ~5 Hops. Verkürze die Kette auf maximal 1–2 Redirects.` });
+    } else if (redirectCount > 1) {
+        issues.push({ type: 'warning', icon: '⚠', title: `Redirect-Kette: ${redirectCount} Weiterleitungen`, text: 'Mehrere Redirects hintereinander verlangsamen das Crawlen und verringern den übertragenen Linkjuice. Direkt auf das Ziel weiterleiten (1 Hop).' });
+    } else if (redirectCount === 1) {
+        issues.push({ type: 'success', icon: '✓', title: 'Sauberer einzelner Redirect', text: 'Nur eine Weiterleitung — ideal für SEO. Linkjuice wird optimal übertragen.' });
+    }
+
+    // Check 302/307 when permanent intended
+    const has302 = hops.some(h => h.status === 302 || h.status === 307);
+    if (has302 && redirectCount > 0) {
+        issues.push({ type: 'warning', icon: '⚠', title: '302/307 statt 301 gefunden', text: 'Temporäre Weiterleitungen (302/307) übertragen weniger Linkjuice als permanente (301/308). Falls die Weiterleitung dauerhaft ist, nutze 301.' });
+    }
+
+    // Final status
+    if (finalStatus === 200) {
+        if (redirectCount === 0) {
+            issues.push({ type: 'info', icon: 'ℹ', title: 'Kein Redirect — direkte 200-Antwort', text: 'Die URL gibt direkt HTTP 200 zurück. Kein Redirect-Problem erkannt.' });
+        } else {
+            issues.push({ type: 'success', icon: '✓', title: 'Ziel-URL liefert HTTP 200', text: 'Die finale URL antwortet korrekt mit 200 OK.' });
+        }
+    } else if (finalStatus === 404) {
+        issues.push({ type: 'error', icon: '✕', title: 'Ziel-URL gibt 404 zurück!', text: 'Die finale Ziel-URL existiert nicht. Der Redirect führt in eine Sackgasse — Besucher und Linkjuice gehen verloren. Sofort korrigieren.' });
+    } else if (finalStatus >= 500) {
+        issues.push({ type: 'error', icon: '✕', title: `Server-Fehler ${finalStatus} an der Ziel-URL`, text: 'Die Ziel-URL antwortet mit einem Server-Fehler. Das blockiert Google beim Crawlen.' });
+    } else if (finalStatus >= 400) {
+        issues.push({ type: 'error', icon: '✕', title: `Client-Fehler ${finalStatus} an der Ziel-URL`, text: 'Die Ziel-URL gibt einen Client-Fehler zurück. Prüfe, ob die URL korrekt konfiguriert ist.' });
+    } else if (redirectStatuses.includes(finalStatus)) {
+        issues.push({ type: 'warning', icon: '⚠', title: 'Kette endet mit weiterem Redirect', text: 'Die Analyse zeigt keinen finalen 200-Status. Möglicherweise sind noch weitere Hops vorhanden.' });
+    }
+
+    // Calculate score
+    let score = 100;
+    if (hasLoop) score -= 60;
+    if (redirectCount > 3) score -= 40;
+    else if (redirectCount > 1) score -= 20;
+    if (finalStatus === 404 || finalStatus >= 500) score -= 40;
+    if (has302 && redirectCount > 0) score -= 10;
+    score = Math.max(0, score);
+
+    return { issues, redirectCount, finalStatus, hasLoop, score };
+}
+
+// ===== RENDER =====
+function statusBadgeClass(status) {
+    if (status === 301 || status === 308) return 'badge-301';
+    if (status === 302 || status === 307) return 'badge-302';
+    if (status === 200) return 'badge-200';
+    if (status === 404) return 'badge-404';
+    return 'badge-other';
+}
+
+function hopClass(hop, idx, total) {
+    if (idx === 0) return 'hop hop-start';
+    if (hop.status === 200) return 'hop hop-final';
+    if (hop.status === 404 || hop.status >= 500) return 'hop hop-bad';
+    if (hop.status === 302 || hop.status === 307) return 'hop hop-warn';
+    if (hop.status === 301 || hop.status === 308) return 'hop hop-good';
+    return 'hop';
+}
+
+function scoreColor(score) {
+    if (score >= 80) return '#38a169';
+    if (score >= 50) return '#f5a623';
+    return '#e53e3e';
+}
+
+function renderResults(hops) {
+    const analysis = analyzeHops(hops);
+
+    // Summary grid
+    const sg = document.getElementById('summaryGrid');
+    const finalClass = analysis.finalStatus === 200 ? 'good' : (analysis.finalStatus >= 400 || analysis.hasLoop ? 'bad' : 'warn');
+    const redirectClass = analysis.redirectCount === 0 ? 'good' : (analysis.redirectCount === 1 ? 'good' : (analysis.redirectCount <= 3 ? 'warn' : 'bad'));
+    sg.innerHTML = `
+        <div class="summary-card ${redirectClass}">
+            <div class="value">${analysis.redirectCount}</div>
+            <div class="label">Redirect-Hops</div>
+        </div>
+        <div class="summary-card ${analysis.hasLoop ? 'bad' : 'good'}">
+            <div class="value">${analysis.hasLoop ? '✕' : '✓'}</div>
+            <div class="label">Loop-Freiheit</div>
+        </div>
+        <div class="summary-card ${finalClass}">
+            <div class="value">${analysis.finalStatus || '?'}</div>
+            <div class="label">Final-Status</div>
+        </div>
+        <div class="summary-card ${analysis.score >= 80 ? 'good' : (analysis.score >= 50 ? 'warn' : 'bad')}">
+            <div class="value">${analysis.score}</div>
+            <div class="label">SEO-Score</div>
+        </div>`;
+
+    // Score ring
+    const sc = scoreColor(analysis.score);
+    const circ = 2 * Math.PI * 36;
+    const dash = (analysis.score / 100) * circ;
+    document.getElementById('scoreSection').innerHTML = `
+        <div class="score-ring-wrap">
+            <svg class="score-ring" viewBox="0 0 90 90">
+                <circle cx="45" cy="45" r="36" fill="none" stroke="#e2e8f0" stroke-width="8"/>
+                <circle cx="45" cy="45" r="36" fill="none" stroke="${sc}" stroke-width="8"
+                    stroke-dasharray="${dash.toFixed(1)} ${circ.toFixed(1)}"
+                    stroke-linecap="round" transform="rotate(-90 45 45)"/>
+                <text x="45" y="50" text-anchor="middle" font-size="18" font-weight="800" fill="${sc}">${analysis.score}</text>
+            </svg>
+            <div class="score-ring-text">SEO-Score (0–100)</div>
+        </div>`;
+
+    // Chain visual
+    const cv = document.getElementById('chainVisual');
+    let chainHtml = '';
+    hops.forEach((hop, i) => {
+        const isFirst = i === 0;
+        const urlDisplay = hop.location || (hop.raw ? hop.raw.substring(0, 60) : 'n/a');
+        chainHtml += `<div class="chain-step">
+            ${i > 0 ? '<div class="chain-arrow">→</div>' : ''}
+            <div class="${hopClass(hop, i, hops.length)}">
+                <span class="status-badge ${statusBadgeClass(hop.status)}">${hop.status}</span>
+                <div>
+                    <div class="hop-url">${escHtml(urlDisplay)}</div>
+                    <div class="hop-label">${isFirst ? 'Ausgangs-Response' : (hop.status === 200 ? 'Finale URL' : 'Weiterleitung zu')}</div>
+                </div>
+            </div>
+        </div>`;
+    });
+    cv.innerHTML = chainHtml || '<p style="color:#888">Keine Schritte erkannt.</p>';
+
+    // Issues
+    const il = document.getElementById('issuesList');
+    il.innerHTML = analysis.issues.map(iss => `
+        <div class="issue-item ${iss.type}">
+            <div class="issue-icon">${iss.icon}</div>
+            <div class="issue-text"><strong>${iss.title}</strong><br>${iss.text}</div>
+        </div>`).join('');
+
+    // Details table
+    const dt = document.getElementById('detailsTable');
+    dt.innerHTML = hops.map((hop, i) => {
+        let rating = '';
+        if (hop.status === 301 || hop.status === 308) rating = '✓ Permanent (gut)';
+        else if (hop.status === 302 || hop.status === 307) rating = '⚠ Temporär';
+        else if (hop.status === 200) rating = '✓ OK';
+        else if (hop.status === 404) rating = '✕ Nicht gefunden';
+        else rating = hop.status >= 500 ? '✕ Server-Fehler' : `${hop.status}`;
+        return `<tr>
+            <td>${i + 1}</td>
+            <td><span class="status-badge ${statusBadgeClass(hop.status)}">${hop.status}</span></td>
+            <td>${escHtml(hop.location || '(final)')}</td>
+            <td>${rating}</td>
+        </tr>`;
+    }).join('');
+}
+
+function escHtml(s) {
+    return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+
+function resetTool() {
+    document.getElementById('headerInput').value = '';
+    document.getElementById('results').classList.remove('visible');
+    const steps = document.querySelectorAll('.manual-step');
+    steps.forEach((s, i) => { if (i > 0) s.remove(); else { s.querySelector('.status-select').value = '301'; s.querySelector('.url-input').value = ''; } });
+}
+</script>
+</body>
+</html>
