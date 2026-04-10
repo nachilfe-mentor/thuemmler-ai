@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Fri, 10 Apr 2026 01:22:38 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 10 Apr 2026 02:56:58 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Dofollow vs. Nofollow Links: Der vollständige SEO-Leitfaden 2026</title>
+      <link>https://shift07.ai/blog/dofollow-nofollow-links-seo.html</link>
+      <guid>https://shift07.ai/blog/dofollow-nofollow-links-seo.html</guid>
+      <pubDate>Fri, 10 Apr 2026 02:56:31 +0000</pubDate>
+      <description>Dofollow vs. Nofollow Links erklärt: Was ist der Unterschied, welche Link-Attribute gibt es (ugc, sponsored), und wie wirkst du dich auf dein SEO aus?</description>
+      <category>Off-Page SEO</category>
+    </item>
     <item>
       <title>Off-Page SEO: Der vollständige Leitfaden 2026</title>
       <link>https://shift07.ai/blog/off-page-seo-leitfaden.html</link>
@@ -158,14 +166,6 @@
       <pubDate>Tue, 07 Apr 2026 01:31:40 +0000</pubDate>
       <description>Mobile SEO ist kein optionaler Bonus mehr — Google indexiert Websites zuerst auf dem Smartphone. Lerne, wie Responsive Design und der Mobile-First Index dein Ranking beeinflussen.</description>
       <category>Mobile SEO</category>
-    </item>
-    <item>
-      <title>Featured Snippets gewinnen: So erreichst du Position 0 bei Google</title>
-      <link>https://shift07.ai/blog/featured-snippets-position-0.html</link>
-      <guid>https://shift07.ai/blog/featured-snippets-position-0.html</guid>
-      <pubDate>Tue, 07 Apr 2026 01:22:46 +0000</pubDate>
-      <description>Featured Snippets sind die begehrte Position 0 bei Google. Lerne, wie du deine Inhalte richtig strukturierst, um Snippet-Plätze zu gewinnen und mehr Traffic zu erzielen.</description>
-      <category>On-Page SEO</category>
     </item>
   </channel>
 </rss>
