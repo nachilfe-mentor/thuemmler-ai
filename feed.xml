@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Sat, 11 Apr 2026 03:47:27 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 11 Apr 2026 03:50:41 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Keyword-Kannibalisierung erkennen und beheben: Wenn eigene Seiten konkurrieren</title>
+      <link>https://shift07.ai/blog/keyword-kannibalisierung-erkennen-beheben.html</link>
+      <guid>https://shift07.ai/blog/keyword-kannibalisierung-erkennen-beheben.html</guid>
+      <pubDate>Sat, 11 Apr 2026 03:50:14 +0000</pubDate>
+      <description>Keyword-Kannibalisierung erkennen und lösen: Wenn mehrere Seiten dasselbe Keyword targetieren, kämpfen sie gegeneinander. Diagnose, Ursachen und Lösungen im Überblick.</description>
+      <category>OnPage-SEO</category>
+    </item>
     <item>
       <title>Technisches SEO Audit: Die vollständige Schritt-für-Schritt Anleitung 2026</title>
       <link>https://shift07.ai/blog/technisches-seo-audit-anleitung.html</link>
@@ -157,14 +165,6 @@
       <guid>https://shift07.ai/blog/produktseiten-seo-optimieren.html</guid>
       <pubDate>Wed, 08 Apr 2026 04:39:52 +0000</pubDate>
       <description>Produktseiten SEO Schritt für Schritt: Titel, Beschreibungen, Bilder, Structured Data und mehr. So rankst du mit deinen Shop-Produkten bei Google auf Seite 1.</description>
-      <category>E-Commerce SEO</category>
-    </item>
-    <item>
-      <title>E-Commerce SEO: Der vollständige Leitfaden für Online-Shops 2026</title>
-      <link>https://shift07.ai/blog/ecommerce-seo-leitfaden.html</link>
-      <guid>https://shift07.ai/blog/ecommerce-seo-leitfaden.html</guid>
-      <pubDate>Wed, 08 Apr 2026 03:02:45 +0000</pubDate>
-      <description>E-Commerce SEO Schritt für Schritt: Produktseiten, Kategorien, technisches SEO, Duplicate Content und mehr. Vollständiger Leitfaden für Online-Shop-Betreiber 2026.</description>
       <category>E-Commerce SEO</category>
     </item>
   </channel>
