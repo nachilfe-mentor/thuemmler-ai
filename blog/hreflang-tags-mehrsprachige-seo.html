@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hreflang-Tags: Mehrsprachige Websites für Google optimieren | Shift07 Blog</title>
+    <meta name="description" content="Hreflang-Tags richtig einsetzen: So zeigst du Google, welche Sprachversion einer Seite für welches Land gedacht ist. Anleitung mit Beispielen und häufigen Fehlern.">
+    <meta name="author" content="Thümmler AI GmbH">
+    <link rel="icon" type="image/png" href="/logo.png">
+    <link rel="canonical" href="https://shift07.ai/blog/hreflang-tags-mehrsprachige-seo.html">
+    <link rel="alternate" type="application/rss+xml" title="Shift07 Blog" href="https://shift07.ai/feed.xml">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Hreflang-Tags: Mehrsprachige Websites für Google optimieren | Shift07 Blog">
+    <meta property="og:description" content="Hreflang-Tags richtig einsetzen: So zeigst du Google, welche Sprachversion einer Seite für welches Land gedacht ist. Anleitung mit Beispielen und häufigen Fehlern.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://shift07.ai/blog/hreflang-tags-mehrsprachige-seo.html">
+    <meta property="og:image" content="https://shift07.ai/blog/images/hreflang-tags-mehrsprachige-seo.png">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="Shift07">
+    <meta property="article:published_time" content="2026-04-11T08:00:00+02:00">
+    <meta property="article:section" content="Technisches SEO">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Hreflang-Tags: Mehrsprachige Websites für Google optimieren">
+    <meta name="twitter:description" content="Hreflang-Tags richtig einsetzen: So zeigst du Google, welche Sprachversion einer Seite für welches Land gedacht ist.">
+    <meta name="twitter:image" content="https://shift07.ai/blog/images/hreflang-tags-mehrsprachige-seo.png">
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Hreflang-Tags: Mehrsprachige Websites für Google optimieren",
+      "description": "Hreflang-Tags richtig einsetzen: So zeigst du Google, welche Sprachversion einer Seite für welches Land gedacht ist. Anleitung mit Beispielen und häufigen Fehlern.",
+      "image": "https://shift07.ai/blog/images/hreflang-tags-mehrsprachige-seo.png",
+      "datePublished": "2026-04-11T08:00:00+02:00",
+      "dateModified": "2026-04-11T08:00:00+02:00",
+      "author": {
+        "@type": "Organization",
+        "name": "Shift07",
+        "url": "https://shift07.ai"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Shift07",
+        "url": "https://shift07.ai",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://shift07.ai/assets/logo.png"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://shift07.ai/blog/hreflang-tags-mehrsprachige-seo.html"
+      }
+    }
+    </script>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K1S1RXBDS8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K1S1RXBDS8');
+    </script>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8475857002943858" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: rgba(15, 23, 42, 0.5); }
+        ::-webkit-scrollbar-thumb { background: rgba(59, 130, 246, 0.5); border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: rgba(59, 130, 246, 0.7); }
+        html { scroll-behavior: smooth; }
+        .article-content h2 { font-size: 1.5rem; font-weight: 700; color: #fff; margin-top: 2.5rem; margin-bottom: 1rem; }
+        .article-content h3 { font-size: 1.25rem; font-weight: 600; color: #e2e8f0; margin-top: 2rem; margin-bottom: 0.75rem; }
+        .article-content p { color: #cbd5e1; line-height: 1.8; margin-bottom: 1.25rem; }
+        .article-content ul, .article-content ol { color: #cbd5e1; margin-bottom: 1.25rem; padding-left: 1.5rem; }
+        .article-content li { margin-bottom: 0.5rem; line-height: 1.7; }
+        .article-content ul li { list-style-type: disc; }
+        .article-content ol li { list-style-type: decimal; }
+        .article-content a { color: #60a5fa; text-decoration: underline; text-underline-offset: 2px; }
+        .article-content a:hover { color: #93bbfc; }
+        .article-content blockquote { border-left: 4px solid #3b82f6; padding-left: 1.25rem; margin: 1.5rem 0; color: #94a3b8; font-style: italic; }
+        .article-content code { background: rgba(59, 130, 246, 0.15); color: #93c5fd; padding: 0.15rem 0.4rem; border-radius: 0.25rem; font-size: 0.9em; }
+        .article-content pre { background: rgba(15, 23, 42, 0.8); border: 1px solid rgba(255,255,255,0.1); border-radius: 0.75rem; padding: 1.25rem; overflow-x: auto; margin-bottom: 1.5rem; }
+        .article-content pre code { background: none; padding: 0; color: #e2e8f0; }
+        .article-content strong { color: #f1f5f9; }
+        .article-content table { width: 100%; border-collapse: collapse; margin-bottom: 1.5rem; }
+        .article-content th { background: rgba(59, 130, 246, 0.2); color: #e2e8f0; padding: 0.75rem 1rem; text-align: left; font-weight: 600; border: 1px solid rgba(255,255,255,0.1); }
+        .article-content td { color: #cbd5e1; padding: 0.75rem 1rem; border: 1px solid rgba(255,255,255,0.08); }
+        .article-content tr:nth-child(even) td { background: rgba(255,255,255,0.03); }
+    </style>
+</head>
+<body class="bg-slate-900 text-white min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-slate-900/80 backdrop-blur-xl border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <a href="/" class="flex items-center gap-2">
+                    <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                    <span class="text-xl font-bold text-white">Shift07</span>
+                </a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="/" class="text-gray-300 hover:text-white transition-colors">SEO-Tool</a>
+                    <a href="/blog/" class="text-white font-medium border-b-2 border-blue-500 pb-0.5">Blog</a>
+                    <a href="/tools/" class="text-gray-300 hover:text-white transition-colors">Tools</a>
+                    <a href="/app/#/login" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-5 py-2 rounded-lg font-medium transition-all">Anmelden</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-gray-300 hover:text-white">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900/95 border-b border-white/10">
+            <div class="px-4 py-3 space-y-2">
+                <a href="/" class="block py-2 text-gray-300 hover:text-white">SEO-Tool</a>
+                <a href="/blog/" class="block py-2 text-white font-medium">Blog</a>
+                <a href="/tools/" class="block py-2 text-gray-300 hover:text-white">Tools</a>
+                <a href="/app/#/login" class="block py-2 text-blue-400 hover:text-blue-300">Anmelden</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Image -->
+    <section class="pt-16 relative">
+        <div class="h-[400px] bg-gradient-to-br from-blue-600 via-indigo-700 to-purple-800 relative overflow-hidden">
+            <img src="/blog/images/hreflang-tags-mehrsprachige-seo.png" alt="Hreflang-Tags für mehrsprachige SEO" class="absolute inset-0 w-full h-full object-cover opacity-30">
+            <div class="absolute inset-0 bg-black/40"></div>
+            <div class="absolute inset-0 flex items-center justify-center">
+                <div class="text-center px-4 max-w-4xl">
+                    <span class="inline-block text-sm font-semibold px-4 py-1.5 bg-white/10 text-white/90 rounded-full mb-6">Technisches SEO</span>
+                    <h1 class="text-3xl md:text-5xl font-extrabold text-white leading-tight">Hreflang-Tags: Mehrsprachige Websites für Google optimieren</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Article Content -->
+    <section class="py-12 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col lg:flex-row gap-12">
+
+                <!-- Main Content -->
+                <article class="lg:w-2/3">
+                    <!-- Meta -->
+                    <div class="flex flex-wrap items-center gap-4 text-sm text-gray-400 mb-10 pb-6 border-b border-white/10">
+                        <div class="flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+                            Shift07 Team
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                            11. April 2026
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                            10 Min. Lesezeit
+                        </div>
+                        <span class="text-xs font-semibold px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full">Technisches SEO</span>
+                    </div>
+
+                    <!-- Article Body -->
+                    <div class="article-content">
+
+                        <img src="/blog/images/hreflang-tags-mehrsprachige-seo.png" alt="Hreflang-Tags für mehrsprachige SEO optimieren" class="w-full rounded-2xl mb-8 border border-white/10">
+
+                        <p>Du betreibst eine Website in mehreren Sprachen oder für verschiedene Länder — und fragst dich, warum Google manchmal die falsche Sprachversion in den Suchergebnissen anzeigt? Der Grund ist meistens ein fehlender oder fehlerhafter <strong>Hreflang-Tag</strong>. Dieses kleine Stück HTML-Code entscheidet darüber, welche Version deiner Website Nutzer aus welchem Land sehen.</p>
+
+                        <p>In diesem Artikel erklärst du dir, wie Hreflang-Tags funktionieren, wie du sie korrekt implementierst und welche Fehler du unbedingt vermeiden musst. Dazu zeige ich dir die häufigsten Fallen, die selbst erfahrene SEOs immer wieder treffen.</p>
+
+                        <h2>Was sind Hreflang-Tags?</h2>
+
+                        <p>Hreflang ist ein HTML-Attribut, das Google (und Yandex) mitteilt, für welche Sprache und welche Region eine bestimmte Seite erstellt wurde. Es wurde 2011 von Google eingeführt, um das Problem der <strong>mehrsprachigen und länderspezifischen Inhalte</strong> zu lösen.</p>
+
+                        <p>Ohne Hreflang hat Google keine verlässliche Möglichkeit zu wissen, welche Version einer Seite es einem Nutzer aus Deutschland, Österreich oder der Schweiz zeigen soll — auch wenn alle drei dieselbe Sprache sprechen. Mit Hreflang sagst du Google exakt: "Diese Seite ist auf Deutsch für Nutzer in Deutschland."</p>
+
+                        <blockquote>Hreflang ist kein Ranking-Faktor — es ist ein Signal für die <strong>Sprach- und Regionszuweisung</strong>. Es verhindert, dass die falsche Version deiner Seite in den Suchergebnissen erscheint.</blockquote>
+
+                        <p>Wichtig: Hreflang wird von Google und Yandex unterstützt, aber <strong>nicht von Bing</strong>. Bing nutzt stattdessen das <code>content-language</code> HTTP-Header-Attribut.</p>
+
+                        <h2>Wann brauchst du Hreflang-Tags?</h2>
+
+                        <p>Hreflang ist notwendig, wenn deine Website:</p>
+
+                        <ul>
+                            <li><strong>Mehrere Sprachen</strong> hat (z.B. Deutsch und Englisch)</li>
+                            <li><strong>Denselben Inhalt in verschiedenen Ländern</strong> zeigt (z.B. de-DE, de-AT, de-CH)</li>
+                            <li>Verschiedene URLs für verschiedene Sprachversionen nutzt (Unterverzeichnisse, Subdomains oder separate Domains)</li>
+                        </ul>
+
+                        <p>Wenn deine Website nur auf Deutsch ist und sich ausschließlich an deutsche Nutzer richtet, brauchst du keine Hreflang-Tags. Das gilt auch dann, wenn du technisch korrekte <a href="/blog/canonical-tags-seo.html">Canonical-Tags</a> verwendest, um Duplicate-Content zu vermeiden.</p>
+
+                        <h3>URL-Strukturen für mehrsprachige Websites</h3>
+
+                        <p>Es gibt drei gängige Ansätze, wie du mehrsprachige Inhalte auf verschiedene URLs verteilst:</p>
+
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Struktur</th>
+                                    <th>Beispiel</th>
+                                    <th>Empfehlung</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Unterverzeichnisse (ccTLD)</td>
+                                    <td>example.de/de/, example.de/en/</td>
+                                    <td>Empfohlen für die meisten Websites</td>
+                                </tr>
+                                <tr>
+                                    <td>Subdomains</td>
+                                    <td>de.example.com, en.example.com</td>
+                                    <td>Möglich, aber SEO-Kraft verteilt sich</td>
+                                </tr>
+                                <tr>
+                                    <td>Separate Domains</td>
+                                    <td>example.de, example.com</td>
+                                    <td>Maximal länderspezifisch, aber teuer</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h2>Hreflang-Syntax: So sieht ein Tag aus</h2>
+
+                        <p>Ein Hreflang-Tag hat folgendes Format im <code>&lt;head&gt;</code>-Bereich deiner HTML-Seite:</p>
+
+                        <pre><code>&lt;link rel="alternate" hreflang="de" href="https://example.de/produkt/"&gt;
+&lt;link rel="alternate" hreflang="de-AT" href="https://example.de/at/produkt/"&gt;
+&lt;link rel="alternate" hreflang="en" href="https://example.com/product/"&gt;
+&lt;link rel="alternate" hreflang="x-default" href="https://example.com/product/"&gt;</code></pre>
+
+                        <p>Jede Seite verweist auf <strong>alle ihre Sprachvarianten</strong> — inklusive sich selbst. Das ist die Grundregel der Hreflang-Implementierung.</p>
+
+                        <h3>Sprachcodes und Ländercodes</h3>
+
+                        <p>Der Wert des <code>hreflang</code>-Attributs besteht aus einem zweistelligen <strong>ISO 639-1 Sprachcode</strong> und einem optionalen zweistelligen <strong>ISO 3166-1 Ländercode</strong>:</p>
+
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Hreflang-Wert</th>
+                                    <th>Bedeutung</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><code>de</code></td>
+                                    <td>Deutsch, alle deutschsprachigen Länder</td>
+                                </tr>
+                                <tr>
+                                    <td><code>de-DE</code></td>
+                                    <td>Deutsch, speziell für Deutschland</td>
+                                </tr>
+                                <tr>
+                                    <td><code>de-AT</code></td>
+                                    <td>Deutsch, speziell für Österreich</td>
+                                </tr>
+                                <tr>
+                                    <td><code>de-CH</code></td>
+                                    <td>Deutsch, speziell für die Schweiz</td>
+                                </tr>
+                                <tr>
+                                    <td><code>en</code></td>
+                                    <td>Englisch, alle englischsprachigen Länder</td>
+                                </tr>
+                                <tr>
+                                    <td><code>en-US</code></td>
+                                    <td>Englisch, speziell für die USA</td>
+                                </tr>
+                                <tr>
+                                    <td><code>x-default</code></td>
+                                    <td>Standard für alle anderen Sprachen/Länder</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <p>Der <strong>x-default</strong>-Tag ist besonders wichtig: Er zeigt Google, welche Seite für Nutzer angezeigt werden soll, die zu keiner der anderen Sprachversionen passen.</p>
+
+                        <h2>Drei Implementierungsmethoden</h2>
+
+                        <p>Du kannst Hreflang-Tags auf drei verschiedene Wege implementieren. Jede Methode hat Vor- und Nachteile:</p>
+
+                        <h3>1. HTML-Tags im &lt;head&gt;</h3>
+
+                        <p>Die direkteste Methode. Füge alle Hreflang-Referenzen direkt in den <code>&lt;head&gt;</code>-Bereich jeder Seite ein:</p>
+
+                        <pre><code>&lt;!-- Auf der deutschen Seite (example.de/produkt/) --&gt;
+&lt;link rel="alternate" hreflang="de-DE" href="https://example.de/produkt/"&gt;
+&lt;link rel="alternate" hreflang="de-AT" href="https://example.de/at/produkt/"&gt;
+&lt;link rel="alternate" hreflang="en-US" href="https://example.com/product/"&gt;
+&lt;link rel="alternate" hreflang="x-default" href="https://example.com/product/"&gt;
+
+&lt;!-- Dieselben Tags auch auf example.de/at/produkt/ und example.com/product/ einfügen! --&gt;</code></pre>
+
+                        <p><strong>Vorteil:</strong> Einfach, direkt, von Google sicher erkannt.<br>
+                        <strong>Nachteil:</strong> Bei vielen Seiten aufwändig zu pflegen.</p>
+
+                        <h3>2. HTTP-Header (für PDFs und andere Nicht-HTML-Dateien)</h3>
+
+                        <p>Wenn du Hreflang für PDFs oder andere Nicht-HTML-Ressourcen benötigst, kannst du es über den HTTP-Header setzen:</p>
+
+                        <pre><code>Link: &lt;https://example.de/dokument.pdf&gt;; rel="alternate"; hreflang="de-DE",
+      &lt;https://example.com/document.pdf&gt;; rel="alternate"; hreflang="en-US"</code></pre>
+
+                        <p>Für HTML-Seiten ist diese Methode nicht empfohlen, da sie schwieriger zu debuggen ist. Mehr dazu im Artikel zu <a href="/blog/robots-txt-konfigurieren.html">HTTP-Headern und robots.txt</a>.</p>
+
+                        <h3>3. In der Sitemap.xml</h3>
+
+                        <p>Die skalierbarste Methode für große Websites. Du fügst Hreflang-Informationen direkt in deine <a href="/blog/sitemap-xml-erstellen-einreichen.html">sitemap.xml</a> ein:</p>
+
+                        <pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"&gt;
+  &lt;url&gt;
+    &lt;loc&gt;https://example.de/produkt/&lt;/loc&gt;
+    &lt;xhtml:link rel="alternate" hreflang="de-DE" href="https://example.de/produkt/"/&gt;
+    &lt;xhtml:link rel="alternate" hreflang="en-US" href="https://example.com/product/"/&gt;
+    &lt;xhtml:link rel="alternate" hreflang="x-default" href="https://example.com/product/"/&gt;
+  &lt;/url&gt;
+  &lt;url&gt;
+    &lt;loc&gt;https://example.com/product/&lt;/loc&gt;
+    &lt;xhtml:link rel="alternate" hreflang="de-DE" href="https://example.de/produkt/"/&gt;
+    &lt;xhtml:link rel="alternate" hreflang="en-US" href="https://example.com/product/"/&gt;
+    &lt;xhtml:link rel="alternate" hreflang="x-default" href="https://example.com/product/"/&gt;
+  &lt;/url&gt;
+&lt;/urlset&gt;</code></pre>
+
+                        <p><strong>Vorteil:</strong> Zentral verwaltet, skaliert gut bei hunderten Seiten.<br>
+                        <strong>Nachteil:</strong> Fehler in der Sitemap können alle Hreflang-Signale auf einmal korrumpieren.</p>
+
+                        <h2>Die Gegenseitigkeitsregel: Das wichtigste Prinzip</h2>
+
+                        <p>Die wichtigste Regel bei Hreflang ist die <strong>Gegenseitigkeit</strong> (Reciprocity): Wenn Seite A auf Seite B verweist, muss Seite B auch auf Seite A zurückverweisen.</p>
+
+                        <p>Konkret: Wenn deine deutsche Seite eine Hreflang-Referenz auf die englische Version hat, muss die englische Seite genau dieselbe Referenz zurück auf die deutsche Seite haben — und außerdem auf sich selbst.</p>
+
+                        <pre><code>&lt;!-- Deutsche Seite: /de/produkt/ --&gt;
+&lt;link rel="alternate" hreflang="de" href="https://example.de/de/produkt/"&gt;
+&lt;link rel="alternate" hreflang="en" href="https://example.de/en/product/"&gt;
+
+&lt;!-- Englische Seite: /en/product/ — MUSS DIESELBEN TAGS HABEN! --&gt;
+&lt;link rel="alternate" hreflang="de" href="https://example.de/de/produkt/"&gt;
+&lt;link rel="alternate" hreflang="en" href="https://example.de/en/product/"&gt;</code></pre>
+
+                        <p>Google ignoriert Hreflang-Tags, wenn die Gegenseitigkeit fehlt. Das ist der häufigste Fehler überhaupt.</p>
+
+                        <h2>Die 7 häufigsten Hreflang-Fehler</h2>
+
+                        <h3>1. Fehlende Gegenseitigkeit</h3>
+                        <p>Seite A verweist auf Seite B, aber Seite B verweist nicht zurück auf Seite A. Folge: Google ignoriert den Tag komplett.</p>
+
+                        <h3>2. Relative statt absolute URLs</h3>
+                        <p>Falsch: <code>hreflang="de" href="/produkt/"</code><br>
+                        Richtig: <code>hreflang="de" href="https://example.de/produkt/"</code><br>
+                        Hreflang-Tags funktionieren <strong>nur mit absoluten URLs</strong>.</p>
+
+                        <h3>3. Falsche Sprachcodes</h3>
+                        <p><code>hreflang="german"</code> oder <code>hreflang="ger"</code> sind ungültig. Es muss <code>hreflang="de"</code> sein. Nutze ausschließlich ISO 639-1 Codes.</p>
+
+                        <h3>4. Kein x-default Tag</h3>
+                        <p>Wenn kein <code>x-default</code> gesetzt ist, hat Google keine Fallback-URL für Nutzer, die zu keiner der definierten Sprachversionen passen.</p>
+
+                        <h3>5. Mehrere Seiten mit demselben Hreflang-Wert</h3>
+                        <p>Wenn zwei verschiedene Seiten dasselbe Hreflang-Paar haben (z.B. beide claimen <code>hreflang="de-DE"</code>), entsteht ein Konflikt. Google muss dann raten, welche die richtige ist.</p>
+
+                        <h3>6. Canonical und Hreflang im Widerspruch</h3>
+                        <p>Wenn eine Seite einen <a href="/blog/canonical-tags-seo.html">Canonical-Tag</a> hat, der auf eine andere URL zeigt, sollte das Hreflang-Tag auf die kanonische URL zeigen — nicht auf die aktuelle. Widersprüche führen zur Verwirrung des Crawlers.</p>
+
+                        <h3>7. Noindex-Seiten mit Hreflang</h3>
+                        <p>Eine Seite, die per <a href="/blog/robots-txt-konfigurieren.html">robots.txt oder noindex</a> blockiert ist, sollte keine Hreflang-Referenzen verwenden. Google kann diese Seiten nicht crawlen und die Tags werden ignoriert.</p>
+
+                        <h2>Hreflang testen und debuggen</h2>
+
+                        <p>Bevor du Hreflang live schaltest, solltest du deine Implementierung auf Fehler prüfen. Nutze dazu unseren kostenlosen <a href="/tools/hreflang-tag-validator.html">Hreflang-Tag-Validator</a> — er prüft Syntax, Sprachcodes und die Gegenseitigkeitsregel in Sekundenschnelle.</p>
+
+                        <p>Zusätzlich hilft die <strong>Google Search Console</strong>: Unter "Internationale Ausrichtung" → "Sprache" siehst du alle erkannten Hreflang-Fehler direkt in deiner Property.</p>
+
+                        <p>Eine vollständige Checkliste für die Überprüfung:</p>
+
+                        <ul>
+                            <li>Sind alle URLs absolut (mit https://)?</li>
+                            <li>Ist die Gegenseitigkeit vollständig (A→B und B→A)?</li>
+                            <li>Verweist jede Seite auch auf sich selbst?</li>
+                            <li>Ist ein <code>x-default</code> gesetzt?</li>
+                            <li>Sind alle Sprachcodes nach ISO 639-1 korrekt?</li>
+                            <li>Gibt es Konflikte mit Canonical-Tags?</li>
+                            <li>Sind alle referenzierten Seiten crawlbar (kein noindex, kein robots.txt-Block)?</li>
+                        </ul>
+
+                        <h2>Hreflang und die Indexierung</h2>
+
+                        <p>Hreflang beeinflusst, wie Google Seiten <strong>zuordnet</strong> — nicht ob sie indexiert werden. Das <a href="/blog/indexierung-pruefen-google.html">Indexierungsverhalten</a> wird durch andere Faktoren gesteuert: robots.txt, noindex-Tags und die Qualität des Inhalts.</p>
+
+                        <p>Google kann trotz korrekter Hreflang-Tags entscheiden, nicht alle Sprachversionen zu indexieren — z.B. wenn der Inhalt zu ähnlich ist und als Duplicate Content gewertet wird. In diesem Fall hilft ein starker Canonical-Tag kombiniert mit echten Inhaltsunterschieden zwischen den Versionen.</p>
+
+                        <h2>Praktisches Beispiel: Deutsch-österreichische Website</h2>
+
+                        <p>Stell dir vor, du hast eine Website, die sich an Nutzer in Deutschland und Österreich richtet. Der Inhalt ist auf Deutsch, aber mit leichten regionalen Unterschieden (z.B. unterschiedliche Preise oder Bezeichnungen). So setzt du Hreflang korrekt um:</p>
+
+                        <pre><code>&lt;!-- Auf https://example.de/produkt/ --&gt;
+&lt;link rel="alternate" hreflang="de-DE" href="https://example.de/produkt/"&gt;
+&lt;link rel="alternate" hreflang="de-AT" href="https://example.de/at/produkt/"&gt;
+&lt;link rel="alternate" hreflang="x-default" href="https://example.de/produkt/"&gt;
+
+&lt;!-- Auf https://example.de/at/produkt/ --&gt;
+&lt;link rel="alternate" hreflang="de-DE" href="https://example.de/produkt/"&gt;
+&lt;link rel="alternate" hreflang="de-AT" href="https://example.de/at/produkt/"&gt;
+&lt;link rel="alternate" hreflang="x-default" href="https://example.de/produkt/"&gt;</code></pre>
+
+                        <p>Damit sieht ein Nutzer in Deutschland die Version unter <code>/produkt/</code> und ein Nutzer in Österreich die Version unter <code>/at/produkt/</code>.</p>
+
+                        <h2>Fazit: Hreflang richtig einsetzen lohnt sich</h2>
+
+                        <p>Hreflang-Tags sind komplex und fehleranfällig — aber für mehrsprachige Websites sind sie unverzichtbar. Ein korrekt implementierter Hreflang verhindert, dass Google die falsche Sprachversion rankt, reduziert Duplicate-Content-Probleme und verbessert die User Experience für internationale Besucher.</p>
+
+                        <p>Die wichtigsten Punkte zusammengefasst:</p>
+
+                        <ul>
+                            <li>Immer absolute URLs verwenden</li>
+                            <li>Gegenseitigkeit zwischen allen Varianten sicherstellen</li>
+                            <li>Jede Seite verweist auch auf sich selbst</li>
+                            <li>x-default für den Fallback nicht vergessen</li>
+                            <li>Regelmäßig mit dem <a href="/tools/hreflang-tag-validator.html">Hreflang-Validator</a> prüfen</li>
+                            <li>Keine Widersprüche mit Canonical-Tags erzeugen</li>
+                        </ul>
+
+                        <p>Wenn du eine mehrsprachige Website betreibst und noch keine Hreflang-Tags gesetzt hast, ist das die erste Maßnahme, die du angehen solltest. Die Implementierung dauert — je nach CMS — weniger als eine Stunde und hat direkte Auswirkungen auf die Sichtbarkeit in den jeweiligen Ländern.</p>
+
+                        <p>Mehr über technische SEO-Grundlagen findest du in unserem Artikel zu <a href="/blog/meta-tags-richtig-einsetzen.html">Meta-Tags richtig einsetzen</a> sowie in der umfassenden Anleitung zu <a href="/blog/strukturierte-daten-seo-schema-markup.html">Strukturierten Daten und Schema Markup</a>.</p>
+
+                    </div>
+
+                    <!-- Share / Back -->
+                    <div class="mt-12 pt-8 border-t border-white/10 flex items-center justify-between">
+                        <a href="/blog/" class="text-blue-400 hover:text-blue-300 flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+                            Zurück zum Blog
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Sidebar -->
+                <aside class="lg:w-1/3 space-y-8">
+                    <!-- CTA Box -->
+                    <div class="bg-gradient-to-br from-blue-600/20 to-indigo-600/20 border border-blue-500/30 rounded-2xl p-6 text-center">
+                        <h3 class="text-lg font-bold text-white mb-3">Kostenlose SEO-Analyse</h3>
+                        <p class="text-gray-400 text-sm mb-5">Finde heraus, wie gut deine Website für Suchmaschinen optimiert ist.</p>
+                        <a href="/" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-6 py-3 rounded-lg font-medium transition-all inline-block w-full">Jetzt testen</a>
+                    </div>
+
+                    <!-- Tool CTA -->
+                    <div class="bg-slate-800/50 border border-white/10 rounded-2xl p-6 text-center">
+                        <h3 class="text-lg font-bold text-white mb-3">Hreflang-Tag-Validator</h3>
+                        <p class="text-gray-400 text-sm mb-4">Prüfe deine Hreflang-Tags auf Syntaxfehler, falsche Sprachcodes und fehlende Gegenseitigkeit.</p>
+                        <a href="/tools/hreflang-tag-validator.html" class="bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 text-white px-6 py-3 rounded-lg font-medium transition-all inline-block w-full">Kostenlos prüfen</a>
+                    </div>
+
+                    <!-- Related Articles -->
+                    <div class="bg-slate-800/50 border border-white/10 rounded-2xl p-6">
+                        <h3 class="text-lg font-bold text-white mb-4">Weitere Artikel</h3>
+                        <div class="space-y-4">
+                            <a href="/blog/canonical-tags-seo.html" class="block group">
+                                <p class="text-sm text-gray-300 group-hover:text-blue-400 transition-colors font-medium">Canonical-Tags erklärt: Duplicate Content verhindern</p>
+                                <p class="text-xs text-gray-500 mt-1">Tech-SEO</p>
+                            </a>
+                            <a href="/blog/sitemap-xml-erstellen-einreichen.html" class="block group">
+                                <p class="text-sm text-gray-300 group-hover:text-blue-400 transition-colors font-medium">Sitemap.xml erstellen und einreichen</p>
+                                <p class="text-xs text-gray-500 mt-1">Tech-SEO</p>
+                            </a>
+                            <a href="/blog/robots-txt-konfigurieren.html" class="block group">
+                                <p class="text-sm text-gray-300 group-hover:text-blue-400 transition-colors font-medium">robots.txt richtig konfigurieren</p>
+                                <p class="text-xs text-gray-500 mt-1">Tech-SEO</p>
+                            </a>
+                            <a href="/blog/meta-tags-richtig-einsetzen.html" class="block group">
+                                <p class="text-sm text-gray-300 group-hover:text-blue-400 transition-colors font-medium">Meta-Tags richtig einsetzen</p>
+                                <p class="text-xs text-gray-500 mt-1">Tech-SEO</p>
+                            </a>
+                        </div>
+                    </div>
+
+                </aside>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer CTA -->
+    <section class="py-16 px-4 bg-gradient-to-r from-blue-900/30 to-indigo-900/30 border-t border-b border-white/5">
+        <div class="max-w-3xl mx-auto text-center">
+            <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">Teste deine Website jetzt kostenlos</h2>
+            <p class="text-gray-400 mb-8">Erhalte eine vollständige SEO-Analyse mit konkreten Verbesserungsvorschlägen.</p>
+            <form action="/" method="get" class="flex flex-col sm:flex-row gap-3 max-w-xl mx-auto">
+                <input type="url" placeholder="https://deine-website.de" class="flex-1 bg-slate-800 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-blue-500">
+                <a href="/" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-8 py-3 rounded-lg font-medium transition-all whitespace-nowrap">Analyse starten</a>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/10 bg-slate-900/50 py-12 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="flex items-center gap-2">
+                    <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                    <span class="text-lg font-bold text-white">Shift07</span>
+                </div>
+                <div class="flex items-center space-x-6 text-sm text-gray-400">
+                    <a href="/impressum.html" class="hover:text-white transition-colors">Impressum</a>
+                    <a href="/datenschutz.html" class="hover:text-white transition-colors">Datenschutz</a>
+                    <a href="/agb.html" class="hover:text-white transition-colors">AGB</a>
+                </div>
+                <p class="text-sm text-gray-500">&copy; 2026 Thümmler AI GmbH</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
