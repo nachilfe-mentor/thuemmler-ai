@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Sat, 11 Apr 2026 02:07:54 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 11 Apr 2026 03:44:06 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Technisches SEO Audit: Die vollständige Schritt-für-Schritt Anleitung 2026</title>
+      <link>https://shift07.ai/blog/technisches-seo-audit-anleitung.html</link>
+      <guid>https://shift07.ai/blog/technisches-seo-audit-anleitung.html</guid>
+      <pubDate>Sat, 11 Apr 2026 03:43:33 +0000</pubDate>
+      <description>Technisches SEO Audit vollständig durchführen: Crawling, HTTPS, Core Web Vitals, Structured Data, hreflang und mehr — mit Checkliste und kostenlosen Tools.</description>
+      <category>Tech-SEO</category>
+    </item>
     <item>
       <title>IndexNow: Der neue URL-Submission-Standard für schnellere Indexierung</title>
       <link>https://shift07.ai/blog/indexnow-url-submission-standard.html</link>
@@ -158,14 +166,6 @@
       <pubDate>Wed, 08 Apr 2026 03:02:45 +0000</pubDate>
       <description>E-Commerce SEO Schritt für Schritt: Produktseiten, Kategorien, technisches SEO, Duplicate Content und mehr. Vollständiger Leitfaden für Online-Shop-Betreiber 2026.</description>
       <category>E-Commerce SEO</category>
-    </item>
-    <item>
-      <title>Gastbeiträge für SEO: So baust du Backlinks durch Guest Posts</title>
-      <link>https://shift07.ai/blog/gastbeitraege-seo-backlinks.html</link>
-      <guid>https://shift07.ai/blog/gastbeitraege-seo-backlinks.html</guid>
-      <pubDate>Wed, 08 Apr 2026 02:52:49 +0000</pubDate>
-      <description>Gastbeiträge schreiben und hochwertige Backlinks gewinnen: Schritt-für-Schritt-Anleitung für erfolgreiche Guest Posts, von der Suche nach Blogs bis zur Outreach-E-Mail.</description>
-      <category>Linkaufbau & Backlinks</category>
     </item>
   </channel>
 </rss>
