@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Fri, 10 Apr 2026 04:43:53 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 11 Apr 2026 00:18:49 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Hreflang-Tags: Mehrsprachige Websites für Google optimieren</title>
+      <link>https://shift07.ai/blog/hreflang-tags-mehrsprachige-seo.html</link>
+      <guid>https://shift07.ai/blog/hreflang-tags-mehrsprachige-seo.html</guid>
+      <pubDate>Sat, 11 Apr 2026 00:18:17 +0000</pubDate>
+      <description>Hreflang-Tags richtig einsetzen: So zeigst du Google, welche Sprachversion einer Seite für welches Land gedacht ist. Anleitung mit Beispielen und häufigen Fehlern.</description>
+      <category>Technisches SEO</category>
+    </item>
     <item>
       <title>Natürlichen Linkaufbau messen: Tools und KPIs für Off-Page SEO</title>
       <link>https://shift07.ai/blog/linkaufbau-messen-tools-kpis.html</link>
@@ -158,14 +166,6 @@
       <pubDate>Tue, 07 Apr 2026 06:05:30 +0000</pubDate>
       <description>Backlinks sind einer der wichtigsten Ranking-Faktoren bei Google. Lerne, was Backlinks sind, warum sie so wichtig für SEO sind und wie du hochwertige Links für deine Website aufbaust.</description>
       <category>Linkaufbau</category>
-    </item>
-    <item>
-      <title>Mobile Usability für SEO: Touchscreen-UX und Benutzerfreundlichkeit optimieren</title>
-      <link>https://shift07.ai/blog/touchscreen-ux-mobile-usability-seo.html</link>
-      <guid>https://shift07.ai/blog/touchscreen-ux-mobile-usability-seo.html</guid>
-      <pubDate>Tue, 07 Apr 2026 04:52:56 +0000</pubDate>
-      <description>Mobile Usability ist ein direkter Google-Rankingfaktor. Lerne, wie du Touchscreen-UX optimierst, Tipp-Ziele richtig dimensionierst und mobile Nutzbarkeit verbesserst.</description>
-      <category>Mobile SEO</category>
     </item>
   </channel>
 </rss>
