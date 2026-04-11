@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Sat, 11 Apr 2026 00:25:29 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 11 Apr 2026 02:01:01 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Log-Datei-Analyse für SEO: Crawler-Verhalten verstehen</title>
+      <link>https://shift07.ai/blog/log-datei-analyse-seo.html</link>
+      <guid>https://shift07.ai/blog/log-datei-analyse-seo.html</guid>
+      <pubDate>Sat, 11 Apr 2026 02:00:35 +0000</pubDate>
+      <description>Log-Datei-Analyse für SEO erklärt: Wie du Server-Logs auswertest, Googlebot-Aktivität verstehst und Crawl-Probleme aufdeckst. Schritt-für-Schritt Anleitung mit Tools und Praxistipps.</description>
+      <category>Technisches SEO</category>
+    </item>
     <item>
       <title>JavaScript SEO: Wie Google SPA-Websites crawlt und indexiert</title>
       <link>https://shift07.ai/blog/javascript-seo-spa-indexierung.html</link>
@@ -158,14 +166,6 @@
       <pubDate>Wed, 08 Apr 2026 02:52:05 +0000</pubDate>
       <description>Broken-Link-Building erklärt: Wie du kaputte Links auf anderen Websites findest und als Hebel für hochwertige Backlinks nutzt. Mit Schritt-für-Schritt-Anleitung.</description>
       <category>Linkaufbau</category>
-    </item>
-    <item>
-      <title>Linkaufbau-Strategien: 8 Wege zu hochwertigen Backlinks</title>
-      <link>https://shift07.ai/blog/linkaufbau-strategien-backlinks.html</link>
-      <guid>https://shift07.ai/blog/linkaufbau-strategien-backlinks.html</guid>
-      <pubDate>Wed, 08 Apr 2026 01:04:27 +0000</pubDate>
-      <description>8 bewährte Linkaufbau-Strategien für hochwertige Backlinks: Gastbeiträge, Broken-Link-Building, HARO und mehr. Steigere dein Google-Ranking nachhaltig.</description>
-      <category>SEO</category>
     </item>
   </channel>
 </rss>
