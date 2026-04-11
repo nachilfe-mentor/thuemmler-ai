@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K1S1RXBDS8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K1S1RXBDS8');
+    </script>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8475857002943858" crossorigin="anonymous"></script>
+    <title>JavaScript SEO Checker – JS-abhängige Inhalte kostenlos prüfen | Shift07</title>
+    <meta name="description" content="JavaScript SEO Checker: Prüfe kostenlos, ob wichtige SEO-Elemente wie Title, Meta-Description, H1 und Body-Text im statischen HTML vorhanden sind – oder nur per JavaScript geladen werden.">
+    <meta name="keywords" content="JavaScript SEO Checker, JS SEO, SPA SEO, JavaScript Rendering SEO, Googlebot JavaScript">
+    <meta name="author" content="Thümmler AI GmbH">
+    <link rel="icon" type="image/png" href="/logo.png">
+    <link rel="canonical" href="https://shift07.ai/tools/javascript-seo-checker.html">
+    <!-- Open Graph -->
+    <meta property="og:title" content="JavaScript SEO Checker – JS-abhängige Inhalte kostenlos prüfen">
+    <meta property="og:description" content="Prüfe ob wichtige SEO-Elemente im statischen HTML vorhanden sind oder nur durch JavaScript geladen werden.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://shift07.ai/tools/javascript-seo-checker.html">
+    <meta property="og:image" content="https://shift07.ai/tools/images/javascript-seo-checker.png">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="Shift07">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="JavaScript SEO Checker – JS-abhängige Inhalte prüfen">
+    <meta name="twitter:description" content="Prüfe ob wichtige SEO-Elemente im statischen HTML vorhanden sind oder nur durch JavaScript geladen werden.">
+    <meta name="twitter:image" content="https://shift07.ai/tools/images/javascript-seo-checker.png">
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "JavaScript SEO Checker",
+      "description": "Prüfe ob wichtige SEO-Elemente im statischen HTML vorhanden sind oder nur durch JavaScript geladen werden.",
+      "url": "https://shift07.ai/tools/javascript-seo-checker.html",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR"
+      },
+      "provider": {
+        "@type": "Organization",
+        "name": "Thümmler AI GmbH",
+        "url": "https://shift07.ai"
+      }
+    }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { 'inter': ['Inter', 'system-ui', '-apple-system', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: rgba(15, 23, 42, 0.5); }
+        ::-webkit-scrollbar-thumb { background: rgba(59, 130, 246, 0.5); border-radius: 4px; }
+        html { scroll-behavior: smooth; }
+        .glass {
+            background: rgba(255, 255, 255, 0.06);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .check-item { transition: all 0.3s ease; }
+        .check-ok { background: rgba(34, 197, 94, 0.1); border-color: rgba(34, 197, 94, 0.3); }
+        .check-warn { background: rgba(234, 179, 8, 0.1); border-color: rgba(234, 179, 8, 0.3); }
+        .check-fail { background: rgba(239, 68, 68, 0.1); border-color: rgba(239, 68, 68, 0.3); }
+        .score-ring {
+            transform: rotate(-90deg);
+            transform-origin: 50% 50%;
+            transition: stroke-dashoffset 1s ease;
+        }
+        textarea::placeholder { color: rgba(148, 163, 184, 0.5); }
+    </style>
+</head>
+<body class="antialiased">
+    <div class="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
+
+        <!-- Navigation -->
+        <nav class="bg-black/20 backdrop-blur-md border-b border-white/10">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center h-16">
+                    <a href="/" class="flex items-center gap-2">
+                        <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                        <span class="text-xl font-bold text-white">Shift07</span>
+                    </a>
+                    <div class="hidden md:flex items-baseline space-x-4">
+                        <a href="/" class="text-white hover:text-blue-300 px-3 py-2 text-sm font-medium transition-colors">SEO-Tool</a>
+                        <a href="/blog/" class="text-white hover:text-blue-300 px-3 py-2 text-sm font-medium transition-colors">Blog</a>
+                        <a href="/tools/" class="text-blue-300 px-3 py-2 text-sm font-medium">Tools</a>
+                        <a href="/app/#/login" class="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:from-blue-600 hover:to-purple-700 transition-all">Anmelden</a>
+                    </div>
+                    <button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="md:hidden text-white">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                    </button>
+                </div>
+                <div id="mobile-menu" class="hidden md:hidden pb-4">
+                    <a href="/" class="block text-white hover:text-blue-300 px-3 py-2 text-sm font-medium">SEO-Tool</a>
+                    <a href="/blog/" class="block text-white hover:text-blue-300 px-3 py-2 text-sm font-medium">Blog</a>
+                    <a href="/tools/" class="block text-blue-300 px-3 py-2 text-sm font-medium">Tools</a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero -->
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-6 text-center">
+            <div class="inline-flex items-center gap-2 bg-yellow-500/20 border border-yellow-500/30 text-yellow-300 px-4 py-1.5 rounded-full text-sm font-medium mb-6">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                JavaScript SEO
+            </div>
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">
+                <span class="bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">JavaScript SEO Checker</span>
+            </h1>
+            <p class="text-xl text-blue-200/80 max-w-2xl mx-auto">Prüfe ob deine SEO-Elemente im statischen HTML vorhanden sind — oder ob Google sie erst durch JavaScript-Rendering sehen kann.</p>
+        </section>
+
+        <!-- Main Tool -->
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+            <div class="grid lg:grid-cols-2 gap-8">
+
+                <!-- Input -->
+                <div class="glass rounded-xl p-6 md:p-8">
+                    <h2 class="text-xl font-semibold text-white mb-2">HTML-Quelltext einfügen</h2>
+                    <p class="text-blue-200/60 text-sm mb-5">Füge den <strong class="text-blue-300">rohen HTML-Quelltext</strong> deiner Seite ein (Strg+U im Browser → alles kopieren). Nicht das gerenderte DOM, sondern den tatsächlichen HTTP-Response.</p>
+
+                    <div class="mb-4">
+                        <label class="block text-sm font-medium text-blue-200/80 mb-2">HTML-Quelltext (Strg+U im Browser)</label>
+                        <textarea id="htmlInput" rows="18" placeholder="&lt;!DOCTYPE html&gt;&#10;&lt;html lang=&quot;de&quot;&gt;&#10;&lt;head&gt;&#10;  &lt;title&gt;...&lt;/title&gt;&#10;  ...&#10;&lt;/head&gt;&#10;&lt;body&gt;&#10;  ...&#10;&lt;/body&gt;&#10;&lt;/html&gt;" class="w-full bg-slate-800/60 border border-white/10 rounded-xl px-4 py-3 text-white text-sm font-mono placeholder-slate-500 focus:outline-none focus:border-yellow-500/50 resize-y leading-relaxed"></textarea>
+                    </div>
+
+                    <button onclick="analyzeHTML()" class="w-full bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-400 hover:to-orange-400 text-white px-6 py-3 rounded-xl font-semibold transition-all shadow-lg shadow-yellow-500/20">
+                        JavaScript SEO analysieren
+                    </button>
+
+                    <!-- Hint Box -->
+                    <div class="mt-4 bg-slate-800/40 rounded-xl p-4 border border-white/5">
+                        <p class="text-xs text-slate-400 leading-relaxed">
+                            <strong class="text-slate-300">Wo finde ich den Quelltext?</strong><br>
+                            Öffne deine Website → Rechtsklick → "Seitenquelltext anzeigen" (oder Strg+U). Das ist der rohe HTML-Code, den Googles Crawler zuerst sieht — <em>bevor</em> JavaScript ausgeführt wird.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Results -->
+                <div>
+                    <!-- Score Ring -->
+                    <div id="scoreSection" class="glass rounded-xl p-6 md:p-8 mb-6 hidden">
+                        <div class="flex items-center gap-6">
+                            <div class="relative flex-shrink-0">
+                                <svg class="w-28 h-28" viewBox="0 0 100 100">
+                                    <circle cx="50" cy="50" r="42" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="10"/>
+                                    <circle id="scoreCircle" cx="50" cy="50" r="42" fill="none" stroke="#eab308" stroke-width="10"
+                                        stroke-dasharray="264" stroke-dashoffset="264" class="score-ring" stroke-linecap="round"/>
+                                </svg>
+                                <div class="absolute inset-0 flex flex-col items-center justify-center">
+                                    <span id="scoreNumber" class="text-3xl font-bold text-white">0</span>
+                                    <span class="text-xs text-slate-400">/100</span>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 id="scoreLabel" class="text-xl font-bold text-white mb-1">Warte auf Eingabe</h3>
+                                <p id="scoreDesc" class="text-blue-200/60 text-sm"></p>
+                                <div id="scoreSummary" class="mt-2 flex gap-3 flex-wrap"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Check Results -->
+                    <div id="resultsSection" class="glass rounded-xl p-6 md:p-8 hidden">
+                        <h2 class="text-xl font-semibold text-white mb-5">Prüfergebnisse</h2>
+                        <div id="checkList" class="space-y-3"></div>
+                    </div>
+
+                    <!-- Placeholder before analysis -->
+                    <div id="placeholder" class="glass rounded-xl p-8 text-center">
+                        <div class="w-16 h-16 bg-yellow-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
+                            </svg>
+                        </div>
+                        <p class="text-slate-400 text-sm">Füge deinen HTML-Quelltext ein und klicke auf "Analysieren".</p>
+                        <p class="text-slate-500 text-xs mt-2">Alle Prüfungen laufen lokal in deinem Browser — kein Upload, kein Server.</p>
+                    </div>
+
+                    <!-- Cross-sell -->
+                    <div class="glass rounded-xl p-6 mt-6 border-yellow-500/30 border">
+                        <div class="flex items-start gap-4">
+                            <div class="bg-yellow-500/20 rounded-lg p-3 flex-shrink-0">
+                                <svg class="w-6 h-6 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                            </div>
+                            <div>
+                                <h3 class="text-white font-semibold mb-1">Vollständige SEO-Analyse</h3>
+                                <p class="text-blue-200/70 text-sm mb-3">Shift07 analysiert deine Website automatisch auf über 50 SEO-Faktoren — inkl. Ladezeit, Meta-Tags und technischen Problemen.</p>
+                                <a href="/" class="inline-flex items-center text-yellow-400 hover:text-yellow-300 text-sm font-medium transition-colors">
+                                    Jetzt kostenlos mit Shift07 prüfen
+                                    <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Explanation Section -->
+            <div class="glass rounded-xl p-6 md:p-8 mt-12">
+                <h2 class="text-2xl font-bold text-white mb-2">Warum ist JavaScript SEO wichtig?</h2>
+                <p class="text-blue-200/70 mb-6">Googlebots Fähigkeit, JavaScript zu rendern, hat sich stark verbessert — aber es gibt immer noch Unterschiede zwischen dem, was Google <em>sofort</em> sieht und dem, was erst nach JS-Ausführung sichtbar wird.</p>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="bg-slate-800/40 rounded-xl p-5 border border-white/5">
+                        <div class="w-10 h-10 bg-red-500/20 rounded-lg flex items-center justify-center mb-3">
+                            <svg class="w-5 h-5 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                        </div>
+                        <h3 class="text-white font-semibold mb-2">Two-Wave Indexing</h3>
+                        <p class="text-slate-400 text-sm">Google crawlt HTML zuerst (Wave 1) und rendert JavaScript erst später (Wave 2). Inhalte in Wave 2 können Stunden bis Tage verzögert indexiert werden.</p>
+                    </div>
+                    <div class="bg-slate-800/40 rounded-xl p-5 border border-white/5">
+                        <div class="w-10 h-10 bg-yellow-500/20 rounded-lg flex items-center justify-center mb-3">
+                            <svg class="w-5 h-5 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                        </div>
+                        <h3 class="text-white font-semibold mb-2">Crawl Budget</h3>
+                        <p class="text-slate-400 text-sm">JS-Rendering verbraucht mehr Crawl-Budget. Bei Websites mit tausenden Seiten kann das dazu führen, dass einige Seiten gar nicht vollständig gerendert werden.</p>
+                    </div>
+                    <div class="bg-slate-800/40 rounded-xl p-5 border border-white/5">
+                        <div class="w-10 h-10 bg-green-500/20 rounded-lg flex items-center justify-center mb-3">
+                            <svg class="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                        </div>
+                        <h3 class="text-white font-semibold mb-2">Best Practice</h3>
+                        <p class="text-slate-400 text-sm">Alle kritischen SEO-Elemente (Title, Description, H1, Body-Text, Links) sollten im initialen HTML vorhanden sein — unabhängig von JavaScript.</p>
+                    </div>
+                    <div class="bg-slate-800/40 rounded-xl p-5 border border-white/5">
+                        <div class="w-10 h-10 bg-blue-500/20 rounded-lg flex items-center justify-center mb-3">
+                            <svg class="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
+                        </div>
+                        <h3 class="text-white font-semibold mb-2">SPA-Websites</h3>
+                        <p class="text-slate-400 text-sm">Single Page Applications (React, Vue, Angular) laden Inhalte oft komplett per JavaScript. Ohne Server-Side Rendering (SSR) oder Static Generation sieht Google nur eine leere Shell.</p>
+                    </div>
+                    <div class="bg-slate-800/40 rounded-xl p-5 border border-white/5">
+                        <div class="w-10 h-10 bg-purple-500/20 rounded-lg flex items-center justify-center mb-3">
+                            <svg class="w-5 h-5 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+                        </div>
+                        <h3 class="text-white font-semibold mb-2">Was dieser Checker prüft</h3>
+                        <p class="text-slate-400 text-sm">Title, Meta-Description, H1, Body-Text-Menge, Canonical, OG-Tags, JSON-LD, noindex-Status, interne Links und mehr — alles im rohen HTML-Quelltext.</p>
+                    </div>
+                    <div class="bg-slate-800/40 rounded-xl p-5 border border-white/5">
+                        <div class="w-10 h-10 bg-orange-500/20 rounded-lg flex items-center justify-center mb-3">
+                            <svg class="w-5 h-5 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 9v6m4-6v6m7-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                        </div>
+                        <h3 class="text-white font-semibold mb-2">Lösung: SSR / Prerendering</h3>
+                        <p class="text-slate-400 text-sm">Next.js, Nuxt.js oder Prerender.io ermöglichen es, JavaScript-Apps als statisches HTML auszuliefern. Googlebot sieht dann alle Inhalte sofort — kein Rendering-Delay.</p>
+                    </div>
+                </div>
+
+                <!-- Related Tools & Articles -->
+                <div class="mt-8 pt-6 border-t border-white/10">
+                    <h3 class="text-lg font-semibold text-white mb-4">Verwandte Tools &amp; Artikel</h3>
+                    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                        <a href="/tools/hreflang-tag-validator.html" class="bg-slate-800/40 rounded-xl p-4 border border-white/5 hover:border-blue-500/30 transition-colors group">
+                            <p class="text-sm font-medium text-white group-hover:text-blue-400 transition-colors">Hreflang-Tag-Validator</p>
+                            <p class="text-xs text-slate-500 mt-1">Mehrsprachige SEO prüfen</p>
+                        </a>
+                        <a href="/tools/canonical-tag-checker.html" class="bg-slate-800/40 rounded-xl p-4 border border-white/5 hover:border-blue-500/30 transition-colors group">
+                            <p class="text-sm font-medium text-white group-hover:text-blue-400 transition-colors">Canonical-Tag-Checker</p>
+                            <p class="text-xs text-slate-500 mt-1">Canonical-URLs prüfen</p>
+                        </a>
+                        <a href="/tools/meta-tag-generator.html" class="bg-slate-800/40 rounded-xl p-4 border border-white/5 hover:border-blue-500/30 transition-colors group">
+                            <p class="text-sm font-medium text-white group-hover:text-blue-400 transition-colors">Meta-Tag-Generator</p>
+                            <p class="text-xs text-slate-500 mt-1">Meta-Tags erstellen</p>
+                        </a>
+                        <a href="/blog/hreflang-tags-mehrsprachige-seo.html" class="bg-slate-800/40 rounded-xl p-4 border border-white/5 hover:border-blue-500/30 transition-colors group">
+                            <p class="text-sm font-medium text-white group-hover:text-blue-400 transition-colors">Hreflang-Tags Anleitung</p>
+                            <p class="text-xs text-slate-500 mt-1">Mehrsprachige Websites optimieren</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-black/30 backdrop-blur-md border-t border-white/10">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <div class="text-white/60 mb-4 md:mb-0 text-sm">&copy; 2026 Thümmler AI GmbH. Alle Rechte vorbehalten.</div>
+                    <div class="flex space-x-6">
+                        <a href="/impressum.html" class="text-gray-300 hover:text-white transition-colors text-sm">Impressum</a>
+                        <a href="/datenschutz.html" class="text-gray-300 hover:text-white transition-colors text-sm">Datenschutz</a>
+                        <a href="/agb.html" class="text-gray-300 hover:text-white transition-colors text-sm">AGB</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+    function analyzeHTML() {
+        const raw = document.getElementById('htmlInput').value.trim();
+        if (!raw) {
+            alert('Bitte füge deinen HTML-Quelltext ein.');
+            return;
+        }
+
+        const checks = [];
+
+        // Helper: text content extraction (strip tags)
+        function stripTags(html) {
+            return html.replace(/<script[\s\S]*?<\/script>/gi, '')
+                       .replace(/<style[\s\S]*?<\/style>/gi, '')
+                       .replace(/<[^>]+>/g, ' ')
+                       .replace(/\s+/g, ' ')
+                       .trim();
+        }
+
+        // 1. Title Tag
+        const titleMatch = raw.match(/<title[^>]*>([\s\S]*?)<\/title>/i);
+        if (titleMatch) {
+            const title = titleMatch[1].trim();
+            if (title.length === 0) {
+                checks.push({ id: 'title', label: 'Title-Tag', status: 'fail', icon: '❌', detail: 'Title-Tag ist leer.', fix: 'Füge einen aussagekräftigen Seitentitel hinzu (50–60 Zeichen).' });
+            } else if (title.length < 10) {
+                checks.push({ id: 'title', label: 'Title-Tag', status: 'warn', icon: '⚠️', detail: `Title vorhanden, aber sehr kurz: "${title}" (${title.length} Zeichen)`, fix: 'Ideal sind 50–60 Zeichen mit dem Haupt-Keyword.' });
+            } else if (title.length > 70) {
+                checks.push({ id: 'title', label: 'Title-Tag', status: 'warn', icon: '⚠️', detail: `Title zu lang: "${title.substring(0,60)}..." (${title.length} Zeichen)`, fix: 'Kürze den Title auf max. 60 Zeichen, damit er nicht abgeschnitten wird.' });
+            } else {
+                checks.push({ id: 'title', label: 'Title-Tag', status: 'ok', icon: '✅', detail: `"${title}" (${title.length} Zeichen)`, fix: null });
+            }
+        } else {
+            checks.push({ id: 'title', label: 'Title-Tag', status: 'fail', icon: '❌', detail: 'Kein Title-Tag im statischen HTML gefunden.', fix: 'Der Title-Tag könnte per JavaScript gesetzt werden — das verzögert die Indexierung. Setze ihn direkt im HTML.' });
+        }
+
+        // 2. Meta Description
+        const descMatch = raw.match(/<meta[^>]+name=["']description["'][^>]+content=["']([^"']*)["']/i)
+                       || raw.match(/<meta[^>]+content=["']([^"']*)["'][^>]+name=["']description["']/i);
+        if (descMatch) {
+            const desc = descMatch[1].trim();
+            if (desc.length === 0) {
+                checks.push({ id: 'desc', label: 'Meta-Description', status: 'fail', icon: '❌', detail: 'Meta-Description ist leer.', fix: 'Schreibe eine beschreibende Meta-Description mit 120–160 Zeichen.' });
+            } else if (desc.length < 50) {
+                checks.push({ id: 'desc', label: 'Meta-Description', status: 'warn', icon: '⚠️', detail: `Zu kurz: "${desc}" (${desc.length} Zeichen)`, fix: 'Ideal sind 120–160 Zeichen für maximale Sichtbarkeit in SERPs.' });
+            } else if (desc.length > 165) {
+                checks.push({ id: 'desc', label: 'Meta-Description', status: 'warn', icon: '⚠️', detail: `Zu lang: ${desc.length} Zeichen (wird in SERPs abgeschnitten)`, fix: 'Kürze die Description auf max. 160 Zeichen.' });
+            } else {
+                checks.push({ id: 'desc', label: 'Meta-Description', status: 'ok', icon: '✅', detail: `${desc.length} Zeichen vorhanden`, fix: null });
+            }
+        } else {
+            checks.push({ id: 'desc', label: 'Meta-Description', status: 'fail', icon: '❌', detail: 'Keine Meta-Description im statischen HTML gefunden.', fix: 'Füge eine Meta-Description direkt im HTML-Head ein — nicht per JavaScript.' });
+        }
+
+        // 3. H1 Tag
+        const h1Match = raw.match(/<h1[^>]*>([\s\S]*?)<\/h1>/i);
+        if (h1Match) {
+            const h1 = stripTags(h1Match[1]).trim();
+            const h1Count = (raw.match(/<h1[^>]*>/gi) || []).length;
+            if (h1Count > 1) {
+                checks.push({ id: 'h1', label: 'H1-Überschrift', status: 'warn', icon: '⚠️', detail: `${h1Count} H1-Tags gefunden — nur einer empfohlen. Erster: "${h1.substring(0,60)}"`, fix: 'Verwende pro Seite genau eine H1-Überschrift.' });
+            } else if (h1.length === 0) {
+                checks.push({ id: 'h1', label: 'H1-Überschrift', status: 'warn', icon: '⚠️', detail: 'H1-Tag ist leer (möglicher Platzhalter).', fix: 'Füge den H1-Text direkt ins HTML ein, nicht als JS-Render.' });
+            } else {
+                checks.push({ id: 'h1', label: 'H1-Überschrift', status: 'ok', icon: '✅', detail: `"${h1.substring(0, 70)}${h1.length > 70 ? '...' : ''}"`, fix: null });
+            }
+        } else {
+            checks.push({ id: 'h1', label: 'H1-Überschrift', status: 'fail', icon: '❌', detail: 'Kein H1-Tag im statischen HTML gefunden.', fix: 'Fehlt der H1 im Quelltext? Er könnte per JS gerendert werden. Google muss ihn aber im ersten Crawl sehen.' });
+        }
+
+        // 4. Body Text Volume
+        const bodyMatch = raw.match(/<body[^>]*>([\s\S]*)<\/body>/i);
+        let textVolume = 0;
+        if (bodyMatch) {
+            const bodyText = stripTags(bodyMatch[1]);
+            const words = bodyText.split(/\s+/).filter(w => w.length > 2);
+            textVolume = words.length;
+            if (textVolume < 50) {
+                checks.push({ id: 'bodytext', label: 'Textinhalt (Body)', status: 'fail', icon: '❌', detail: `Nur ~${textVolume} Wörter im statischen HTML — Seite könnte eine JS-Shell sein.`, fix: 'Kritischer Hinweis: Fast kein Text im rohen HTML. SPA ohne SSR? Implementiere Server-Side Rendering oder Static Site Generation.' });
+            } else if (textVolume < 200) {
+                checks.push({ id: 'bodytext', label: 'Textinhalt (Body)', status: 'warn', icon: '⚠️', detail: `~${textVolume} Wörter im statischen HTML — relativ wenig.`, fix: 'Prüfe, ob Hauptinhalte per JavaScript nachgeladen werden. Inhalte im initialen HTML sind für SEO besser.' });
+            } else {
+                checks.push({ id: 'bodytext', label: 'Textinhalt (Body)', status: 'ok', icon: '✅', detail: `~${textVolume} Wörter im statischen HTML gefunden`, fix: null });
+            }
+        }
+
+        // 5. Canonical Tag
+        const canonMatch = raw.match(/<link[^>]+rel=["']canonical["'][^>]+href=["']([^"']*)["']/i)
+                        || raw.match(/<link[^>]+href=["']([^"']*)["'][^>]+rel=["']canonical["']/i);
+        if (canonMatch) {
+            checks.push({ id: 'canonical', label: 'Canonical-Tag', status: 'ok', icon: '✅', detail: `Canonical: ${canonMatch[1]}`, fix: null });
+        } else {
+            checks.push({ id: 'canonical', label: 'Canonical-Tag', status: 'warn', icon: '⚠️', detail: 'Kein Canonical-Tag gefunden.', fix: 'Füge einen Canonical-Tag hinzu um Duplicate-Content zu vermeiden.' });
+        }
+
+        // 6. Noindex Check
+        const noindexMatch = raw.match(/<meta[^>]+name=["']robots["'][^>]+content=["'][^"']*noindex[^"']*["']/i)
+                          || raw.match(/<meta[^>]+content=["'][^"']*noindex[^"']*["'][^>]+name=["']robots["']/i);
+        if (noindexMatch) {
+            checks.push({ id: 'noindex', label: 'Noindex-Status', status: 'fail', icon: '❌', detail: 'WARNUNG: noindex-Tag gefunden! Diese Seite wird von Google nicht indexiert.', fix: 'Entferne den noindex-Tag wenn die Seite in den Suchergebnissen erscheinen soll.' });
+        } else {
+            checks.push({ id: 'noindex', label: 'Noindex-Status', status: 'ok', icon: '✅', detail: 'Kein noindex gefunden — Seite ist für Indexierung freigegeben.', fix: null });
+        }
+
+        // 7. Open Graph Tags
+        const ogTitle = raw.match(/<meta[^>]+property=["']og:title["']/i);
+        const ogDesc = raw.match(/<meta[^>]+property=["']og:description["']/i);
+        const ogImage = raw.match(/<meta[^>]+property=["']og:image["']/i);
+        const ogCount = [ogTitle, ogDesc, ogImage].filter(Boolean).length;
+        if (ogCount === 3) {
+            checks.push({ id: 'og', label: 'Open Graph Tags', status: 'ok', icon: '✅', detail: 'og:title, og:description und og:image vorhanden.', fix: null });
+        } else if (ogCount > 0) {
+            const missing = [];
+            if (!ogTitle) missing.push('og:title');
+            if (!ogDesc) missing.push('og:description');
+            if (!ogImage) missing.push('og:image');
+            checks.push({ id: 'og', label: 'Open Graph Tags', status: 'warn', icon: '⚠️', detail: `Unvollständig — fehlend: ${missing.join(', ')}`, fix: 'Ergänze die fehlenden OG-Tags für optimale Social-Media-Vorschauen.' });
+        } else {
+            checks.push({ id: 'og', label: 'Open Graph Tags', status: 'warn', icon: '⚠️', detail: 'Keine Open Graph Tags gefunden.', fix: 'Füge mindestens og:title, og:description und og:image hinzu.' });
+        }
+
+        // 8. Structured Data (JSON-LD)
+        const jsonldMatch = raw.match(/<script[^>]+type=["']application\/ld\+json["'][\s\S]*?<\/script>/i);
+        if (jsonldMatch) {
+            let schemaType = 'unbekannt';
+            try {
+                const jsonStr = jsonldMatch[0].replace(/<script[^>]+>/, '').replace(/<\/script>/, '');
+                const schema = JSON.parse(jsonStr);
+                schemaType = schema['@type'] || 'unbekannt';
+            } catch(e) {}
+            checks.push({ id: 'jsonld', label: 'Structured Data (JSON-LD)', status: 'ok', icon: '✅', detail: `JSON-LD gefunden: @type="${schemaType}"`, fix: null });
+        } else {
+            checks.push({ id: 'jsonld', label: 'Structured Data (JSON-LD)', status: 'warn', icon: '⚠️', detail: 'Kein JSON-LD Schema Markup gefunden.', fix: 'Füge strukturierte Daten hinzu (Article, Product, LocalBusiness etc.) für Rich Snippets.' });
+        }
+
+        // 9. Internal Links
+        const linkMatches = raw.match(/<a[^>]+href=["'][^"']*["'][^>]*>/gi) || [];
+        const internalLinks = linkMatches.filter(l => {
+            const href = (l.match(/href=["']([^"']*)["']/) || [])[1] || '';
+            return href.startsWith('/') || href.startsWith('#') || (!href.startsWith('http') && !href.startsWith('mailto') && href.length > 0);
+        });
+        if (internalLinks.length >= 3) {
+            checks.push({ id: 'links', label: 'Interne Links', status: 'ok', icon: '✅', detail: `${internalLinks.length} interne Links gefunden.`, fix: null });
+        } else if (internalLinks.length > 0) {
+            checks.push({ id: 'links', label: 'Interne Links', status: 'warn', icon: '⚠️', detail: `Nur ${internalLinks.length} interne Link${internalLinks.length === 1 ? '' : 's'} gefunden.`, fix: 'Mehr interne Links helfen Google, deine Website-Struktur zu verstehen.' });
+        } else {
+            checks.push({ id: 'links', label: 'Interne Links', status: 'fail', icon: '❌', detail: 'Keine internen Links im statischen HTML gefunden.', fix: 'Werden Links per JavaScript erzeugt? Das kann Navigation für Google-Crawler schwierig machen.' });
+        }
+
+        // 10. Lang Attribute
+        const langMatch = raw.match(/<html[^>]+lang=["']([^"']*)["']/i);
+        if (langMatch) {
+            checks.push({ id: 'lang', label: 'HTML lang-Attribut', status: 'ok', icon: '✅', detail: `lang="${langMatch[1]}" gesetzt.`, fix: null });
+        } else {
+            checks.push({ id: 'lang', label: 'HTML lang-Attribut', status: 'warn', icon: '⚠️', detail: 'Kein lang-Attribut im html-Tag gefunden.', fix: 'Füge lang="de" (oder die passende Sprache) zum html-Tag hinzu.' });
+        }
+
+        // Calculate Score
+        const weights = { title: 20, desc: 15, h1: 15, bodytext: 20, canonical: 5, noindex: 10, og: 5, jsonld: 5, links: 3, lang: 2 };
+        let totalScore = 0;
+        checks.forEach(c => {
+            const w = weights[c.id] || 3;
+            if (c.status === 'ok') totalScore += w;
+            else if (c.status === 'warn') totalScore += w * 0.5;
+        });
+        totalScore = Math.round(totalScore);
+
+        // Render results
+        renderResults(checks, totalScore);
+    }
+
+    function renderResults(checks, score) {
+        document.getElementById('placeholder').classList.add('hidden');
+        document.getElementById('scoreSection').classList.remove('hidden');
+        document.getElementById('resultsSection').classList.remove('hidden');
+
+        // Score ring
+        const circumference = 264;
+        const offset = circumference - (score / 100) * circumference;
+        const circle = document.getElementById('scoreCircle');
+        circle.style.strokeDashoffset = offset;
+
+        let color, label, desc;
+        if (score >= 80) { color = '#22c55e'; label = 'Sehr gut'; desc = 'Kritische SEO-Elemente sind im statischen HTML vorhanden.'; }
+        else if (score >= 60) { color = '#eab308'; label = 'Gut'; desc = 'Die meisten SEO-Elemente sind vorhanden, einige sollten verbessert werden.'; }
+        else if (score >= 40) { color = '#f97316'; label = 'Verbesserungsbedarf'; desc = 'Mehrere wichtige SEO-Elemente fehlen im statischen HTML.'; }
+        else { color = '#ef4444'; label = 'Kritisch'; desc = 'Viele SEO-Elemente fehlen — möglicherweise eine JS-only Seite ohne SSR.'; }
+
+        circle.setAttribute('stroke', color);
+        document.getElementById('scoreNumber').textContent = score;
+        document.getElementById('scoreLabel').textContent = label;
+        document.getElementById('scoreDesc').textContent = desc;
+
+        // Summary badges
+        const okCount = checks.filter(c => c.status === 'ok').length;
+        const warnCount = checks.filter(c => c.status === 'warn').length;
+        const failCount = checks.filter(c => c.status === 'fail').length;
+        document.getElementById('scoreSummary').innerHTML = `
+            <span class="text-xs px-2 py-1 bg-green-500/20 text-green-400 rounded-full">${okCount} OK</span>
+            ${warnCount > 0 ? `<span class="text-xs px-2 py-1 bg-yellow-500/20 text-yellow-400 rounded-full">${warnCount} Warnung${warnCount > 1 ? 'en' : ''}</span>` : ''}
+            ${failCount > 0 ? `<span class="text-xs px-2 py-1 bg-red-500/20 text-red-400 rounded-full">${failCount} Fehler</span>` : ''}
+        `;
+
+        // Check list
+        const container = document.getElementById('checkList');
+        container.innerHTML = '';
+        checks.forEach(c => {
+            const bgClass = c.status === 'ok' ? 'check-ok' : (c.status === 'warn' ? 'check-warn' : 'check-fail');
+            const textColor = c.status === 'ok' ? 'text-green-400' : (c.status === 'warn' ? 'text-yellow-400' : 'text-red-400');
+            const div = document.createElement('div');
+            div.className = `check-item rounded-xl p-4 border ${bgClass}`;
+            div.innerHTML = `
+                <div class="flex items-start gap-3">
+                    <span class="text-lg flex-shrink-0 mt-0.5">${c.icon}</span>
+                    <div class="flex-1 min-w-0">
+                        <div class="flex items-center gap-2 mb-1">
+                            <span class="text-sm font-semibold ${textColor}">${c.label}</span>
+                        </div>
+                        <p class="text-xs text-slate-300 break-words">${c.detail}</p>
+                        ${c.fix ? `<p class="text-xs text-slate-500 mt-1.5 italic">Empfehlung: ${c.fix}</p>` : ''}
+                    </div>
+                </div>
+            `;
+            container.appendChild(div);
+        });
+    }
+
+    // Keyboard shortcut: Enter in textarea does not submit (textarea is multiline)
+    document.addEventListener('keydown', function(e) {
+        if ((e.ctrlKey || e.metaKey) && e.key === 'Enter') {
+            analyzeHTML();
+        }
+    });
+    </script>
+</body>
+</html>
