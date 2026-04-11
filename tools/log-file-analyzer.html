@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K1S1RXBDS8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K1S1RXBDS8');
+    </script>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8475857002943858" crossorigin="anonymous"></script>
+    <title>Log-File-Analyzer – Server-Logs für SEO auswerten | Shift07</title>
+    <meta name="description" content="Server-Logs kostenlos analysieren: Crawler-Frequenz, Googlebot-Aktivität, meistgecrawlte URLs und HTTP-Statusverteilung. Paste-basiert, 100% lokal.">
+    <meta name="keywords" content="log file analyzer, server log seo, googlebot crawl analyse, access log auswerten, apache nginx log analyse">
+    <meta name="author" content="Thümmler AI GmbH">
+    <link rel="icon" type="image/png" href="/logo.png">
+    <link rel="canonical" href="https://shift07.ai/tools/log-file-analyzer.html">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Log-File-Analyzer – Server-Logs für SEO auswerten kostenlos">
+    <meta property="og:description" content="Server-Logs analysieren: Crawler-Frequenz, Googlebot-Aktivität, meistgecrawlte URLs und HTTP-Statusverteilung. Paste-basiert, 100% lokal.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://shift07.ai/tools/log-file-analyzer.html">
+    <meta property="og:image" content="https://shift07.ai/tools/images/log-file-analyzer.png">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="Shift07">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Log-File-Analyzer – Server-Logs für SEO auswerten">
+    <meta name="twitter:description" content="Server-Logs analysieren: Crawler-Frequenz, Googlebot-Aktivität und meistgecrawlte URLs. Kostenlos und lokal.">
+    <meta name="twitter:image" content="https://shift07.ai/tools/images/log-file-analyzer.png">
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Log-File-Analyzer",
+      "description": "Server-Logs kostenlos analysieren: Crawler-Frequenz, Googlebot-Aktivität, meistgecrawlte URLs und HTTP-Statusverteilung.",
+      "url": "https://shift07.ai/tools/log-file-analyzer.html",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR"
+      },
+      "provider": {
+        "@type": "Organization",
+        "name": "Thümmler AI GmbH",
+        "url": "https://shift07.ai"
+      }
+    }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: rgba(15, 23, 42, 0.5); }
+        ::-webkit-scrollbar-thumb { background: rgba(59, 130, 246, 0.5); border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: rgba(59, 130, 246, 0.7); }
+        html { scroll-behavior: smooth; }
+        .glass {
+            background: rgba(255, 255, 255, 0.06);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .stat-card {
+            background: rgba(255,255,255,0.06);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 0.75rem;
+            padding: 1.25rem;
+            text-align: center;
+        }
+        .bar-fill {
+            height: 100%;
+            border-radius: 4px;
+            transition: width 0.4s ease;
+        }
+        .status-2xx { color: #4ade80; }
+        .status-3xx { color: #60a5fa; }
+        .status-4xx { color: #f87171; }
+        .status-5xx { color: #f97316; }
+        .bot-googlebot { color: #4ade80; }
+        .bot-bingbot { color: #60a5fa; }
+        .bot-other { color: #a78bfa; }
+        .hidden { display: none; }
+        textarea { resize: vertical; }
+        .progress-bar-track { background: rgba(255,255,255,0.08); border-radius: 4px; height: 8px; overflow: hidden; }
+    </style>
+</head>
+<body class="antialiased">
+    <div class="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
+        <!-- Navigation -->
+        <nav class="bg-black/20 backdrop-blur-md border-b border-white/10">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center h-16">
+                    <a href="/" class="flex items-center gap-2">
+                        <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                        <span class="text-xl font-bold text-white">Shift07</span>
+                    </a>
+                    <div class="hidden md:flex items-center space-x-8">
+                        <a href="/" class="text-gray-300 hover:text-white transition-colors text-sm">SEO-Tool</a>
+                        <a href="/blog/" class="text-gray-300 hover:text-white transition-colors text-sm">Blog</a>
+                        <a href="/tools/" class="text-white font-medium text-sm border-b-2 border-blue-500 pb-0.5">Tools</a>
+                        <a href="/app/#/login" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-5 py-2 rounded-lg text-sm font-medium transition-all">Anmelden</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero -->
+        <section class="pt-20 pb-12 px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <div class="inline-flex items-center gap-2 bg-blue-500/20 border border-blue-500/30 rounded-full px-4 py-1.5 text-sm text-blue-300 font-medium mb-6">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                    Tech-SEO Tool
+                </div>
+                <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-4 leading-tight">
+                    Log-File-Analyzer
+                </h1>
+                <p class="text-xl text-gray-300 max-w-2xl mx-auto">
+                    Server-Logs für SEO auswerten: Crawler-Frequenz, Googlebot-Aktivität, meistgecrawlte URLs und HTTP-Statusverteilung. Direkt im Browser — keine Daten verlassen deinen Computer.
+                </p>
+            </div>
+        </section>
+
+        <!-- Main Tool -->
+        <section class="pb-16 px-4">
+            <div class="max-w-5xl mx-auto space-y-6">
+
+                <!-- Input -->
+                <div class="glass rounded-2xl p-6">
+                    <div class="flex items-center justify-between mb-4">
+                        <h2 class="text-lg font-bold text-white">Log-Datei einfügen</h2>
+                        <div class="flex gap-2">
+                            <button id="loadSampleBtn" class="text-xs text-blue-400 hover:text-blue-300 border border-blue-500/30 rounded-lg px-3 py-1.5 transition-colors">
+                                Beispiel laden
+                            </button>
+                            <button id="clearBtn" class="text-xs text-gray-400 hover:text-gray-300 border border-white/10 rounded-lg px-3 py-1.5 transition-colors">
+                                Leeren
+                            </button>
+                        </div>
+                    </div>
+                    <textarea id="logInput"
+                        class="w-full h-48 bg-slate-900/60 border border-white/10 rounded-xl px-4 py-3 text-gray-300 text-sm font-mono focus:outline-none focus:border-blue-500/50 placeholder-gray-600"
+                        placeholder="Apache/Nginx Combined Log Format einfügen:&#10;66.249.65.62 - - [15/Apr/2026:10:30:01 +0000] &quot;GET /seite.html HTTP/1.1&quot; 200 1234 &quot;-&quot; &quot;Googlebot/2.1&quot;&#10;..."
+                        spellcheck="false"></textarea>
+                    <div class="mt-3 flex items-center justify-between">
+                        <p class="text-xs text-gray-500">Unterstützt: Apache Combined Log Format, Nginx Access Log. Daten werden nur lokal verarbeitet.</p>
+                        <span id="lineCount" class="text-xs text-gray-500">0 Zeilen</span>
+                    </div>
+                    <button id="analyzeBtn"
+                        class="mt-4 w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-6 py-3 rounded-xl font-semibold transition-all text-sm">
+                        Log-Datei analysieren
+                    </button>
+                </div>
+
+                <!-- Results (hidden initially) -->
+                <div id="results" class="hidden space-y-6">
+
+                    <!-- Summary Stats -->
+                    <div class="glass rounded-2xl p-6">
+                        <h2 class="text-lg font-bold text-white mb-4">Übersicht</h2>
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                            <div class="stat-card">
+                                <div id="statTotal" class="text-3xl font-bold text-blue-400">—</div>
+                                <div class="text-xs text-gray-400 mt-1">Anfragen gesamt</div>
+                            </div>
+                            <div class="stat-card">
+                                <div id="statBots" class="text-3xl font-bold text-green-400">—</div>
+                                <div class="text-xs text-gray-400 mt-1">Bot-Anfragen</div>
+                            </div>
+                            <div class="stat-card">
+                                <div id="statUnique" class="text-3xl font-bold text-purple-400">—</div>
+                                <div class="text-xs text-gray-400 mt-1">Unique URLs</div>
+                            </div>
+                            <div class="stat-card">
+                                <div id="statErrors" class="text-3xl font-bold text-red-400">—</div>
+                                <div class="text-xs text-gray-400 mt-1">4xx/5xx Fehler</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Two Column: Bots + Status -->
+                    <div class="grid md:grid-cols-2 gap-6">
+
+                        <!-- Bot Distribution -->
+                        <div class="glass rounded-2xl p-6">
+                            <h2 class="text-lg font-bold text-white mb-4">Crawler-Aktivität</h2>
+                            <div id="botList" class="space-y-3"></div>
+                        </div>
+
+                        <!-- HTTP Status Distribution -->
+                        <div class="glass rounded-2xl p-6">
+                            <h2 class="text-lg font-bold text-white mb-4">HTTP-Status-Verteilung</h2>
+                            <div id="statusList" class="space-y-3"></div>
+                        </div>
+
+                    </div>
+
+                    <!-- Top Crawled URLs -->
+                    <div class="glass rounded-2xl p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <h2 class="text-lg font-bold text-white">Meistgecrawlte URLs</h2>
+                            <div class="flex gap-2">
+                                <button id="filterAll" class="text-xs px-3 py-1.5 rounded-lg bg-blue-600 text-white font-medium">Alle</button>
+                                <button id="filterBots" class="text-xs px-3 py-1.5 rounded-lg bg-white/10 text-gray-300 hover:bg-white/20">Nur Bots</button>
+                                <button id="filterErrors" class="text-xs px-3 py-1.5 rounded-lg bg-white/10 text-gray-300 hover:bg-white/20">Nur Fehler</button>
+                            </div>
+                        </div>
+                        <div id="urlTable" class="overflow-x-auto">
+                            <table class="w-full text-sm">
+                                <thead>
+                                    <tr class="border-b border-white/10">
+                                        <th class="text-left text-gray-400 font-medium pb-2 pr-4">#</th>
+                                        <th class="text-left text-gray-400 font-medium pb-2 pr-4">URL</th>
+                                        <th class="text-right text-gray-400 font-medium pb-2 pr-4">Anfragen</th>
+                                        <th class="text-right text-gray-400 font-medium pb-2">Letzter Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="urlTableBody" class="divide-y divide-white/5"></tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Crawl Timeline (hourly) -->
+                    <div class="glass rounded-2xl p-6">
+                        <h2 class="text-lg font-bold text-white mb-4">Crawl-Verlauf nach Stunde</h2>
+                        <div id="timeline" class="space-y-1"></div>
+                        <p class="text-xs text-gray-500 mt-3">Zeigt Bot-Anfragen pro Stunde. Hohe Werte = aktives Crawling.</p>
+                    </div>
+
+                    <!-- SEO Insights -->
+                    <div id="insights" class="glass rounded-2xl p-6">
+                        <h2 class="text-lg font-bold text-white mb-4">SEO-Erkenntnisse</h2>
+                        <div id="insightsList" class="space-y-3"></div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Info Section -->
+        <section class="py-12 px-4 bg-black/20 border-t border-white/10">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-2xl font-bold text-white mb-6 text-center">Wie du die Log-Analyse für SEO nutzt</h2>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="glass rounded-xl p-5">
+                        <div class="w-10 h-10 bg-blue-500/20 rounded-lg flex items-center justify-center mb-3">
+                            <svg class="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+                        </div>
+                        <h3 class="text-white font-semibold mb-2">Crawl-Budget erkennen</h3>
+                        <p class="text-gray-400 text-sm">Sieh wie oft Googlebot deine wichtigen Seiten besucht. Werden kritische URLs zu selten gecrawlt? Das deutet auf ein Crawl-Budget-Problem hin.</p>
+                    </div>
+                    <div class="glass rounded-xl p-5">
+                        <div class="w-10 h-10 bg-red-500/20 rounded-lg flex items-center justify-center mb-3">
+                            <svg class="w-5 h-5 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                        </div>
+                        <h3 class="text-white font-semibold mb-2">404-Fehler aufdecken</h3>
+                        <p class="text-gray-400 text-sm">Welche URLs gibt Googlebot mit 404 zurück? Das sind tote Links die Crawl-Budget verschwenden. Richte 301-Redirects ein oder repariere die Links.</p>
+                    </div>
+                    <div class="glass rounded-xl p-5">
+                        <div class="w-10 h-10 bg-green-500/20 rounded-lg flex items-center justify-center mb-3">
+                            <svg class="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+                        </div>
+                        <h3 class="text-white font-semibold mb-2">Crawl-Frequenz optimieren</h3>
+                        <p class="text-gray-400 text-sm">Werden unwichtige URLs häufiger gecrawlt als wichtige? Mit robots.txt und noindex kannst du das Crawl-Budget auf die wertvollen Seiten lenken.</p>
+                    </div>
+                </div>
+                <div class="mt-8 text-center">
+                    <p class="text-gray-400 mb-4">Mehr über Log-Datei-Analyse für SEO erfahren:</p>
+                    <a href="/blog/log-datei-analyse-seo.html" class="inline-flex items-center gap-2 bg-blue-600/20 border border-blue-500/30 text-blue-300 hover:text-blue-200 px-5 py-2.5 rounded-lg transition-colors text-sm font-medium">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+                        Log-Datei-Analyse für SEO: Der vollständige Guide
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Related Tools -->
+        <section class="py-12 px-4 border-t border-white/10">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-xl font-bold text-white mb-6 text-center">Weitere SEO-Tools</h2>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+                    <a href="/tools/robots-txt-tester.html" class="glass rounded-xl p-4 text-center hover:border-blue-500/40 transition-all">
+                        <p class="text-sm font-medium text-gray-300 hover:text-white">Robots.txt-Tester</p>
+                    </a>
+                    <a href="/tools/sitemap-validator.html" class="glass rounded-xl p-4 text-center hover:border-blue-500/40 transition-all">
+                        <p class="text-sm font-medium text-gray-300 hover:text-white">Sitemap-Validator</p>
+                    </a>
+                    <a href="/tools/redirect-ketten-tester.html" class="glass rounded-xl p-4 text-center hover:border-blue-500/40 transition-all">
+                        <p class="text-sm font-medium text-gray-300 hover:text-white">Redirect-Ketten-Tester</p>
+                    </a>
+                    <a href="/tools/http-header-checker.html" class="glass rounded-xl p-4 text-center hover:border-blue-500/40 transition-all">
+                        <p class="text-sm font-medium text-gray-300 hover:text-white">HTTP-Header-Checker</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="border-t border-white/10 bg-black/20 py-10 px-4">
+            <div class="max-w-7xl mx-auto">
+                <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                    <div class="flex items-center gap-2">
+                        <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                        <span class="text-lg font-bold text-white">Shift07</span>
+                    </div>
+                    <div class="flex items-center space-x-6 text-sm text-gray-400">
+                        <a href="/impressum.html" class="hover:text-white transition-colors">Impressum</a>
+                        <a href="/datenschutz.html" class="hover:text-white transition-colors">Datenschutz</a>
+                        <a href="/agb.html" class="hover:text-white transition-colors">AGB</a>
+                    </div>
+                    <p class="text-sm text-gray-500">&copy; 2026 Thümmler AI GmbH</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+    // Sample log data
+    const SAMPLE_LOG = `66.249.65.62 - - [11/Apr/2026:08:15:01 +0000] "GET /blog/was-ist-seo.html HTTP/1.1" 200 4521 "-" "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"
+66.249.65.63 - - [11/Apr/2026:08:17:22 +0000] "GET /tools/keyword-density-checker.html HTTP/1.1" 200 3201 "-" "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"
+157.55.39.14 - - [11/Apr/2026:08:22:45 +0000] "GET / HTTP/1.1" 200 8932 "-" "Mozilla/5.0 (compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm)"
+66.249.65.62 - - [11/Apr/2026:08:31:10 +0000] "GET /blog/meta-tags-richtig-einsetzen.html HTTP/1.1" 200 5234 "-" "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"
+192.168.1.100 - - [11/Apr/2026:09:01:05 +0000] "GET /blog/was-ist-seo.html HTTP/1.1" 200 4521 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+66.249.65.64 - - [11/Apr/2026:09:14:33 +0000] "GET /blog/alte-seite.html HTTP/1.1" 404 523 "-" "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"
+66.249.65.62 - - [11/Apr/2026:09:30:01 +0000] "GET /tools/robots-txt-tester.html HTTP/1.1" 200 3890 "-" "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"
+157.55.39.15 - - [11/Apr/2026:10:05:22 +0000] "GET /blog/sitemap-xml-erstellen-einreichen.html HTTP/1.1" 301 0 "-" "Mozilla/5.0 (compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm)"
+66.249.65.62 - - [11/Apr/2026:10:22:11 +0000] "GET /blog/canonical-tags-seo.html HTTP/1.1" 200 4120 "-" "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"
+192.168.1.101 - - [11/Apr/2026:10:45:00 +0000] "GET /tools/sitemap-validator.html HTTP/1.1" 200 3200 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)"
+66.249.65.63 - - [11/Apr/2026:11:01:05 +0000] "GET /wp-login.php HTTP/1.1" 404 200 "-" "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"
+66.249.65.62 - - [11/Apr/2026:11:15:33 +0000] "GET /blog/was-ist-seo.html HTTP/1.1" 200 4521 "-" "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"
+85.208.96.185 - - [11/Apr/2026:12:00:01 +0000] "GET / HTTP/1.1" 200 8932 "-" "AhrefsBot/7.0; +http://ahrefs.com/robot/"
+66.249.65.62 - - [11/Apr/2026:12:30:45 +0000] "GET /blog/core-web-vitals-erklaert.html HTTP/1.1" 200 4800 "-" "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"
+192.168.1.102 - - [11/Apr/2026:13:11:22 +0000] "GET /blog/was-ist-seo.html HTTP/1.1" 200 4521 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 16_0 like Mac OS X)"
+66.249.65.64 - - [11/Apr/2026:13:45:01 +0000] "GET /tools/ssl-zertifikat-checker.html HTTP/1.1" 200 3100 "-" "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"
+157.55.39.16 - - [11/Apr/2026:14:20:33 +0000] "GET /blog/robots-txt-konfigurieren.html HTTP/1.1" 200 4300 "-" "Mozilla/5.0 (compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm)"
+66.249.65.62 - - [11/Apr/2026:15:05:11 +0000] "GET /app/ HTTP/1.1" 200 5200 "-" "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"
+66.249.65.62 - - [11/Apr/2026:15:30:22 +0000] "GET /api/internal/secret HTTP/1.1" 403 0 "-" "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"
+192.168.1.100 - - [11/Apr/2026:16:00:00 +0000] "GET /blog/canonical-tags-seo.html HTTP/1.1" 200 4120 "-" "Mozilla/5.0 (Windows NT 10.0)"`;
+
+    // Bot detection patterns
+    const BOT_PATTERNS = {
+        'Googlebot': /googlebot/i,
+        'Google AdsBot': /adsbot-google/i,
+        'Google Image Bot': /googlebot-image/i,
+        'Bingbot': /bingbot/i,
+        'AhrefsBot': /ahrefsbot/i,
+        'SEMrushBot': /semrushbot/i,
+        'MJ12bot': /mj12bot/i,
+        'DotBot': /dotbot/i,
+        'YandexBot': /yandexbot/i,
+        'Screaming Frog': /screaming.frog/i,
+        'SiteAuditBot': /siteauditbot/i,
+    };
+
+    // Parse a single log line (Apache/Nginx Combined Log Format)
+    function parseLogLine(line) {
+        // Pattern: IP - user [datetime] "METHOD URL PROTO" STATUS BYTES "referer" "useragent"
+        const m = line.match(/^(\S+)\s+\S+\s+\S+\s+\[([^\]]+)\]\s+"(\S+)\s+(\S+)\s+\S+"\s+(\d+)\s+\S+\s+"[^"]*"\s+"([^"]*)"$/);
+        if (!m) return null;
+        return {
+            ip: m[1],
+            datetime: m[2],
+            method: m[3],
+            url: m[4],
+            status: parseInt(m[5]),
+            useragent: m[6],
+            hour: m[2].match(/:(\d{2}):/)?.[1] || '00'
+        };
+    }
+
+    function detectBot(ua) {
+        for (const [name, pattern] of Object.entries(BOT_PATTERNS)) {
+            if (pattern.test(ua)) return name;
+        }
+        return null;
+    }
+
+    function getBotColor(name) {
+        if (name.startsWith('Google')) return { text: 'text-green-400', bg: 'bg-green-400' };
+        if (name.startsWith('Bing')) return { text: 'text-blue-400', bg: 'bg-blue-400' };
+        if (name === 'AhrefsBot' || name === 'SEMrushBot') return { text: 'text-yellow-400', bg: 'bg-yellow-400' };
+        return { text: 'text-purple-400', bg: 'bg-purple-400' };
+    }
+
+    function getStatusColor(status) {
+        if (status >= 200 && status < 300) return { text: 'text-green-400', bg: 'bg-green-400', label: '2xx Erfolg' };
+        if (status >= 300 && status < 400) return { text: 'text-blue-400', bg: 'bg-blue-400', label: '3xx Weiterleitung' };
+        if (status >= 400 && status < 500) return { text: 'text-red-400', bg: 'bg-red-400', label: '4xx Client-Fehler' };
+        if (status >= 500) return { text: 'text-orange-400', bg: 'bg-orange-400', label: '5xx Server-Fehler' };
+        return { text: 'text-gray-400', bg: 'bg-gray-400', label: 'Sonstige' };
+    }
+
+    let parsedData = [];
+
+    function analyze(filter) {
+        let filtered;
+        if (filter === 'bots') {
+            filtered = parsedData.filter(r => r.bot);
+        } else if (filter === 'errors') {
+            filtered = parsedData.filter(r => r.status >= 400);
+        } else {
+            filtered = parsedData;
+        }
+
+        // URL frequency
+        const urlCounts = {};
+        const urlLastStatus = {};
+        filtered.forEach(r => {
+            urlCounts[r.url] = (urlCounts[r.url] || 0) + 1;
+            urlLastStatus[r.url] = r.status;
+        });
+
+        const sortedUrls = Object.entries(urlCounts).sort((a, b) => b[1] - a[1]).slice(0, 20);
+
+        const tbody = document.getElementById('urlTableBody');
+        tbody.innerHTML = '';
+        const maxCount = sortedUrls[0]?.[1] || 1;
+        sortedUrls.forEach(([url, count], i) => {
+            const status = urlLastStatus[url];
+            const sc = getStatusColor(status);
+            const pct = Math.round((count / maxCount) * 100);
+            tbody.innerHTML += `<tr>
+                <td class="py-2 pr-3 text-gray-500 text-xs align-middle">${i+1}</td>
+                <td class="py-2 pr-3 align-middle">
+                    <div class="text-gray-300 text-xs font-mono truncate max-w-xs">${url}</div>
+                    <div class="progress-bar-track mt-1 w-full"><div class="bar-fill bg-blue-500/50" style="width:${pct}%"></div></div>
+                </td>
+                <td class="py-2 pr-3 text-right text-white font-medium text-sm align-middle">${count}</td>
+                <td class="py-2 text-right align-middle"><span class="text-xs font-semibold ${sc.text}">${status}</span></td>
+            </tr>`;
+        });
+    }
+
+    document.getElementById('analyzeBtn').addEventListener('click', function() {
+        const raw = document.getElementById('logInput').value.trim();
+        if (!raw) return;
+
+        const lines = raw.split('\n').filter(l => l.trim());
+        parsedData = [];
+
+        lines.forEach(line => {
+            const r = parseLogLine(line.trim());
+            if (r) {
+                r.bot = detectBot(r.useragent);
+                parsedData.push(r);
+            }
+        });
+
+        if (parsedData.length === 0) {
+            alert('Keine gültigen Log-Zeilen gefunden. Bitte Apache/Nginx Combined Log Format verwenden.');
+            return;
+        }
+
+        // Stats
+        const total = parsedData.length;
+        const bots = parsedData.filter(r => r.bot);
+        const uniqueUrls = new Set(parsedData.map(r => r.url)).size;
+        const errors = parsedData.filter(r => r.status >= 400).length;
+
+        document.getElementById('statTotal').textContent = total.toLocaleString('de');
+        document.getElementById('statBots').textContent = bots.length.toLocaleString('de');
+        document.getElementById('statUnique').textContent = uniqueUrls.toLocaleString('de');
+        document.getElementById('statErrors').textContent = errors.toLocaleString('de');
+
+        // Bot distribution
+        const botCounts = {};
+        bots.forEach(r => {
+            botCounts[r.bot] = (botCounts[r.bot] || 0) + 1;
+        });
+        const sortedBots = Object.entries(botCounts).sort((a, b) => b[1] - a[1]);
+        const maxBot = sortedBots[0]?.[1] || 1;
+        const botList = document.getElementById('botList');
+        botList.innerHTML = '';
+        if (sortedBots.length === 0) {
+            botList.innerHTML = '<p class="text-gray-500 text-sm">Keine bekannten Bots erkannt.</p>';
+        }
+        sortedBots.forEach(([name, count]) => {
+            const pct = Math.round((count / maxBot) * 100);
+            const c = getBotColor(name);
+            botList.innerHTML += `<div>
+                <div class="flex justify-between text-sm mb-1">
+                    <span class="${c.text} font-medium">${name}</span>
+                    <span class="text-gray-400">${count} (${Math.round(count/total*100)}%)</span>
+                </div>
+                <div class="progress-bar-track"><div class="bar-fill ${c.bg} opacity-70" style="width:${pct}%"></div></div>
+            </div>`;
+        });
+
+        // Status distribution
+        const statusGroups = {'2xx': 0, '3xx': 0, '4xx': 0, '5xx': 0};
+        parsedData.forEach(r => {
+            const key = Math.floor(r.status / 100) + 'xx';
+            if (statusGroups[key] !== undefined) statusGroups[key]++;
+        });
+        const statusList = document.getElementById('statusList');
+        statusList.innerHTML = '';
+        Object.entries(statusGroups).forEach(([group, count]) => {
+            if (count === 0) return;
+            const pct = Math.round((count / total) * 100);
+            const labels = {'2xx': {text:'text-green-400', bg:'bg-green-400', label:'Erfolg (2xx)'}, '3xx': {text:'text-blue-400', bg:'bg-blue-400', label:'Weiterleitung (3xx)'}, '4xx': {text:'text-red-400', bg:'bg-red-400', label:'Client-Fehler (4xx)'}, '5xx': {text:'text-orange-400', bg:'bg-orange-400', label:'Server-Fehler (5xx)'}};
+            const c = labels[group];
+            statusList.innerHTML += `<div>
+                <div class="flex justify-between text-sm mb-1">
+                    <span class="${c.text} font-medium">${c.label}</span>
+                    <span class="text-gray-400">${count} (${pct}%)</span>
+                </div>
+                <div class="progress-bar-track"><div class="bar-fill ${c.bg} opacity-70" style="width:${pct}%"></div></div>
+            </div>`;
+        });
+
+        // Timeline (hourly bot crawls)
+        const hourCounts = {};
+        for (let h = 0; h < 24; h++) hourCounts[String(h).padStart(2,'0')] = 0;
+        bots.forEach(r => {
+            if (r.hour in hourCounts) hourCounts[r.hour]++;
+        });
+        const maxHour = Math.max(...Object.values(hourCounts)) || 1;
+        const timeline = document.getElementById('timeline');
+        timeline.innerHTML = '';
+        Object.entries(hourCounts).forEach(([h, count]) => {
+            const pct = Math.round((count / maxHour) * 100);
+            const barW = Math.max(pct, 1);
+            timeline.innerHTML += `<div class="flex items-center gap-2">
+                <span class="text-xs text-gray-500 w-8">${h}:00</span>
+                <div class="flex-1 progress-bar-track">
+                    <div class="bar-fill bg-blue-500/60" style="width:${barW}%"></div>
+                </div>
+                <span class="text-xs text-gray-400 w-8 text-right">${count}</span>
+            </div>`;
+        });
+
+        // SEO Insights
+        const insights = [];
+        const googlebotCount = botCounts['Googlebot'] || 0;
+        const notFoundBot = bots.filter(r => r.status === 404);
+        const forbiddenBot = bots.filter(r => r.status === 403);
+        const urlWith404 = [...new Set(notFoundBot.map(r => r.url))];
+        const crawlRatio = total > 0 ? Math.round(bots.length / total * 100) : 0;
+
+        if (googlebotCount > 0) {
+            insights.push({icon:'✅', color:'text-green-400', text:`Googlebot hat ${googlebotCount} Anfragen gestellt — deine Website wird aktiv gecrawlt.`});
+        } else {
+            insights.push({icon:'⚠️', color:'text-yellow-400', text:`Kein Googlebot erkannt. Entweder ist der Zeitraum zu kurz oder Google hat Probleme deine Website zu erreichen.`});
+        }
+
+        if (urlWith404.length > 0) {
+            insights.push({icon:'🔴', color:'text-red-400', text:`${urlWith404.length} URL(s) liefern 404 an Bots: ${urlWith404.slice(0,3).join(', ')}${urlWith404.length > 3 ? '...' : ''}. Richte 301-Redirects ein oder repariere diese Links.`});
+        }
+
+        if (forbiddenBot.length > 0) {
+            const forbUrls = [...new Set(forbiddenBot.map(r => r.url))];
+            insights.push({icon:'🟡', color:'text-yellow-400', text:`${forbUrls.length} URL(s) geben 403 zurück für Bots: ${forbUrls.join(', ')}. Prüfe ob diese URLs bewusst gesperrt sind.`});
+        }
+
+        if (statusGroups['5xx'] > 0) {
+            insights.push({icon:'🔴', color:'text-red-400', text:`${statusGroups['5xx']} Server-Fehler (5xx) erkannt. Server-Fehler beim Googlebot-Crawl können zu Indexierungsproblemen führen.`});
+        }
+
+        const redirectBots = bots.filter(r => r.status >= 300 && r.status < 400);
+        if (redirectBots.length > bots.length * 0.1 && redirectBots.length > 0) {
+            insights.push({icon:'🟡', color:'text-yellow-400', text:`${redirectBots.length} Bot-Anfragen landen auf Weiterleitungen (${Math.round(redirectBots.length/bots.length*100)}%). Viele Redirects verschwenden Crawl-Budget.`});
+        }
+
+        const insightsList = document.getElementById('insightsList');
+        insightsList.innerHTML = '';
+        insights.forEach(ins => {
+            insightsList.innerHTML += `<div class="flex items-start gap-3 p-3 rounded-lg bg-white/5">
+                <span class="text-lg">${ins.icon}</span>
+                <p class="${ins.color} text-sm leading-relaxed">${ins.text}</p>
+            </div>`;
+        });
+
+        // Default URL table
+        analyze('all');
+
+        document.getElementById('results').classList.remove('hidden');
+        document.getElementById('results').scrollIntoView({behavior: 'smooth', block: 'start'});
+    });
+
+    // Filter buttons
+    document.getElementById('filterAll').addEventListener('click', function() {
+        document.querySelectorAll('#filterAll, #filterBots, #filterErrors').forEach(b => b.className = 'text-xs px-3 py-1.5 rounded-lg bg-white/10 text-gray-300 hover:bg-white/20');
+        this.className = 'text-xs px-3 py-1.5 rounded-lg bg-blue-600 text-white font-medium';
+        analyze('all');
+    });
+    document.getElementById('filterBots').addEventListener('click', function() {
+        document.querySelectorAll('#filterAll, #filterBots, #filterErrors').forEach(b => b.className = 'text-xs px-3 py-1.5 rounded-lg bg-white/10 text-gray-300 hover:bg-white/20');
+        this.className = 'text-xs px-3 py-1.5 rounded-lg bg-blue-600 text-white font-medium';
+        analyze('bots');
+    });
+    document.getElementById('filterErrors').addEventListener('click', function() {
+        document.querySelectorAll('#filterAll, #filterBots, #filterErrors').forEach(b => b.className = 'text-xs px-3 py-1.5 rounded-lg bg-white/10 text-gray-300 hover:bg-white/20');
+        this.className = 'text-xs px-3 py-1.5 rounded-lg bg-blue-600 text-white font-medium';
+        analyze('errors');
+    });
+
+    // Load sample
+    document.getElementById('loadSampleBtn').addEventListener('click', function() {
+        document.getElementById('logInput').value = SAMPLE_LOG;
+        document.getElementById('lineCount').textContent = SAMPLE_LOG.split('\n').length + ' Zeilen';
+    });
+
+    // Clear
+    document.getElementById('clearBtn').addEventListener('click', function() {
+        document.getElementById('logInput').value = '';
+        document.getElementById('lineCount').textContent = '0 Zeilen';
+        document.getElementById('results').classList.add('hidden');
+    });
+
+    // Line count
+    document.getElementById('logInput').addEventListener('input', function() {
+        const lines = this.value.split('\n').filter(l => l.trim()).length;
+        document.getElementById('lineCount').textContent = lines + ' Zeilen';
+    });
+    </script>
+</body>
+</html>
