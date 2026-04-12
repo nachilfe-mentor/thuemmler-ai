@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title-Tag & SERP-Preview-Generator – Live-Vorschau kostenlos | Shift07</title>
+    <meta name="description" content="Title-Tag und Meta-Description live in der Google-SERP-Vorschau testen: Zeichenzähler, Pixel-Breite, CTR-Score und Optimierungshinweise — kostenlos und ohne Login.">
+    <meta name="author" content="Thümmler AI GmbH">
+    <link rel="icon" type="image/png" href="/logo.png">
+    <link rel="canonical" href="https://shift07.ai/tools/title-tag-serp-preview-generator.html">
+    <link rel="alternate" type="application/rss+xml" title="Shift07 Blog" href="https://shift07.ai/feed.xml">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Title-Tag & SERP-Preview-Generator – Live-Vorschau kostenlos | Shift07">
+    <meta property="og:description" content="Title-Tag und Meta-Description live als Google-SERP-Snippet vorschau: mit Zeichenzähler, Pixel-Analyse und CTR-Score.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://shift07.ai/tools/title-tag-serp-preview-generator.html">
+    <meta property="og:image" content="https://shift07.ai/tools/images/title-tag-serp-preview-generator.png">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="Shift07">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Title-Tag & SERP-Preview-Generator – kostenlos">
+    <meta name="twitter:description" content="Live-Vorschau deines Google-Snippets: Title-Tag, Meta-Description, Zeichenzähler und CTR-Optimierung.">
+    <meta name="twitter:image" content="https://shift07.ai/tools/images/title-tag-serp-preview-generator.png">
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Title-Tag & SERP-Preview-Generator",
+      "description": "Title-Tag und Meta-Description live als Google-SERP-Snippet vorschauen mit Zeichenzähler, Pixel-Breite und CTR-Score.",
+      "url": "https://shift07.ai/tools/title-tag-serp-preview-generator.html",
+      "applicationCategory": "WebApplication",
+      "operatingSystem": "Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Shift07",
+        "url": "https://shift07.ai"
+      }
+    }
+    </script>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K1S1RXBDS8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K1S1RXBDS8');
+    </script>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5320024109732594" crossorigin="anonymous"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: #1a1a1a; background: #0f0f1a; min-height: 100vh; }
+        header { background: #0f0f1a; border-bottom: 1px solid #1e1b4b; padding: 1rem 2rem; display: flex; align-items: center; gap: 1rem; }
+        header a { text-decoration: none; color: #e0e0ff; font-weight: 700; font-size: 1.2rem; }
+        header a span { color: #818cf8; }
+        nav { margin-left: auto; display: flex; gap: 1.5rem; }
+        nav a { text-decoration: none; color: #9ca3af; font-size: 0.9rem; }
+        nav a:hover { color: #818cf8; }
+        .hero { text-align: center; padding: 3rem 1.5rem 2rem; }
+        .hero h1 { font-size: 2rem; font-weight: 800; color: #fff; margin-bottom: 0.7rem; }
+        .hero p { color: #9ca3af; font-size: 1rem; max-width: 560px; margin: 0 auto 1.5rem; }
+        .badge { display: inline-block; background: #1e1b4b; color: #818cf8; font-size: 0.75rem; font-weight: 600; padding: 0.3rem 0.8rem; border-radius: 20px; margin-bottom: 1rem; border: 1px solid #312e81; }
+        .tool-container { max-width: 860px; margin: 0 auto; padding: 0 1.5rem 4rem; }
+        /* Input Section */
+        .input-card { background: #1a1a2e; border: 1px solid #2d2b55; border-radius: 14px; padding: 1.5rem; margin-bottom: 1.5rem; }
+        .input-card h2 { font-size: 1rem; font-weight: 700; color: #e0e0ff; margin-bottom: 1.2rem; display: flex; align-items: center; gap: 0.5rem; }
+        .input-group { margin-bottom: 1.2rem; }
+        .input-group label { display: flex; justify-content: space-between; align-items: center; font-size: 0.85rem; font-weight: 600; color: #c4b5fd; margin-bottom: 0.5rem; }
+        .input-group label .counter { font-size: 0.8rem; font-weight: 700; }
+        .input-group input, .input-group textarea {
+            width: 100%; background: #0f0f1a; border: 1.5px solid #312e81; border-radius: 8px;
+            color: #e0e0ff; padding: 0.7rem 0.9rem; font-size: 0.95rem; outline: none;
+            transition: border-color 0.2s; font-family: inherit; resize: vertical;
+        }
+        .input-group input:focus, .input-group textarea:focus { border-color: #818cf8; }
+        .input-group textarea { min-height: 80px; }
+        .pixel-bar { height: 6px; border-radius: 3px; background: #1e1b4b; margin-top: 0.5rem; overflow: hidden; }
+        .pixel-bar-fill { height: 100%; border-radius: 3px; transition: width 0.3s, background 0.3s; }
+        .bar-hint { font-size: 0.75rem; color: #6b7280; margin-top: 0.3rem; display: flex; justify-content: space-between; }
+        /* SERP Preview */
+        .preview-card { background: #fff; border-radius: 14px; padding: 1.5rem; margin-bottom: 1.5rem; }
+        .preview-card h2 { font-size: 0.9rem; font-weight: 700; color: #374151; margin-bottom: 1.2rem; display: flex; align-items: center; gap: 0.5rem; }
+        .serp-result { max-width: 600px; font-family: Arial, sans-serif; }
+        .serp-favicon { display: flex; align-items: center; gap: 8px; margin-bottom: 4px; }
+        .serp-favicon .favicon-placeholder { width: 18px; height: 18px; background: #4f46e5; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 10px; color: #fff; font-weight: 700; }
+        .serp-favicon .site-name { font-size: 14px; color: #202124; }
+        .serp-favicon .breadcrumb { font-size: 12px; color: #5f6368; margin-left: 4px; }
+        .serp-title { font-size: 20px; color: #1a0dab; margin: 2px 0 5px; line-height: 1.3; cursor: pointer; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; max-width: 600px; font-weight: 400; }
+        .serp-title:hover { text-decoration: underline; }
+        .serp-description { font-size: 14px; color: #4d5156; line-height: 1.58; max-width: 600px; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+        .serp-date { font-size: 13px; color: #70757a; }
+        .serp-box { background: #f8f9fa; border: 1px solid #dfe1e5; border-radius: 10px; padding: 1rem 1.2rem; margin-top: 1rem; }
+        /* Mobile Preview */
+        .mobile-preview { background: #fff; border-radius: 14px; padding: 1.5rem; margin-bottom: 1.5rem; }
+        .mobile-preview h2 { font-size: 0.9rem; font-weight: 700; color: #374151; margin-bottom: 1.2rem; display: flex; align-items: center; gap: 0.5rem; }
+        .mobile-serp { max-width: 360px; background: #fff; border: 1px solid #dfe1e5; border-radius: 10px; padding: 0.8rem 1rem; font-family: Arial, sans-serif; }
+        .mobile-serp .m-site { font-size: 12px; color: #5f6368; margin-bottom: 2px; display: flex; align-items: center; gap: 6px; }
+        .mobile-serp .m-favicon { width: 16px; height: 16px; background: #4f46e5; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 9px; color: #fff; font-weight: 700; flex-shrink: 0; }
+        .mobile-serp .m-title { font-size: 16px; color: #1a0dab; margin: 3px 0 4px; line-height: 1.3; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; }
+        .mobile-serp .m-desc { font-size: 13px; color: #4d5156; line-height: 1.5; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; }
+        /* Score Section */
+        .score-card { background: #1a1a2e; border: 1px solid #2d2b55; border-radius: 14px; padding: 1.5rem; margin-bottom: 1.5rem; }
+        .score-card h2 { font-size: 1rem; font-weight: 700; color: #e0e0ff; margin-bottom: 1.2rem; }
+        .score-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; }
+        .score-item { background: #0f0f1a; border-radius: 10px; padding: 1rem; border: 1px solid #2d2b55; }
+        .score-item .score-label { font-size: 0.75rem; color: #9ca3af; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.4rem; }
+        .score-item .score-value { font-size: 1.5rem; font-weight: 800; }
+        .score-item .score-hint { font-size: 0.75rem; color: #6b7280; margin-top: 0.3rem; }
+        .status-ok { color: #10b981; }
+        .status-warn { color: #f59e0b; }
+        .status-error { color: #ef4444; }
+        /* Hints */
+        .hints-list { list-style: none; margin: 0; }
+        .hints-list li { padding: 0.6rem 0.8rem; margin-bottom: 0.5rem; border-radius: 8px; font-size: 0.88rem; display: flex; align-items: flex-start; gap: 0.5rem; }
+        .hints-list li.hint-ok { background: #052e16; color: #6ee7b7; border: 1px solid #065f46; }
+        .hints-list li.hint-warn { background: #431407; color: #fed7aa; border: 1px solid #9a3412; }
+        .hints-list li.hint-error { background: #450a0a; color: #fca5a5; border: 1px solid #991b1b; }
+        /* Tips Section */
+        .tips-card { background: #1a1a2e; border: 1px solid #2d2b55; border-radius: 14px; padding: 1.5rem; margin-bottom: 1.5rem; }
+        .tips-card h2 { font-size: 1rem; font-weight: 700; color: #e0e0ff; margin-bottom: 1rem; }
+        .tips-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+        @media (max-width: 600px) { .tips-grid { grid-template-columns: 1fr; } .score-grid { grid-template-columns: 1fr 1fr; } }
+        .tip-item { background: #0f0f1a; border-radius: 10px; padding: 1rem; border: 1px solid #2d2b55; }
+        .tip-item h3 { font-size: 0.85rem; font-weight: 700; color: #c4b5fd; margin-bottom: 0.4rem; }
+        .tip-item p { font-size: 0.8rem; color: #9ca3af; line-height: 1.5; }
+        .copy-btn { background: #4f46e5; color: #fff; border: none; padding: 0.5rem 1.2rem; border-radius: 6px; cursor: pointer; font-size: 0.85rem; font-weight: 600; display: inline-flex; align-items: center; gap: 0.4rem; transition: background 0.2s; }
+        .copy-btn:hover { background: #4338ca; }
+        .copy-btn.copied { background: #059669; }
+        .cta-section { background: linear-gradient(135deg, #312e81, #4c1d95); border-radius: 14px; padding: 2rem; text-align: center; margin-bottom: 2rem; }
+        .cta-section h2 { font-size: 1.3rem; font-weight: 800; color: #fff; margin-bottom: 0.6rem; }
+        .cta-section p { color: #c4b5fd; font-size: 0.9rem; margin-bottom: 1.2rem; }
+        .cta-section a { background: #fff; color: #4f46e5; padding: 0.7rem 1.6rem; border-radius: 8px; font-weight: 700; text-decoration: none; font-size: 0.95rem; }
+        .cta-section a:hover { background: #f5f3ff; }
+        .info-section { color: #9ca3af; font-size: 0.9rem; line-height: 1.7; }
+        .info-section h2 { color: #e0e0ff; font-size: 1.1rem; font-weight: 700; margin: 1.5rem 0 0.7rem; }
+        .info-section a { color: #818cf8; text-decoration: none; }
+        .info-section a:hover { text-decoration: underline; }
+        footer { background: #0a0a14; color: #6b7280; padding: 2rem; text-align: center; font-size: 0.85rem; border-top: 1px solid #1e1b4b; }
+        footer a { color: #818cf8; text-decoration: none; }
+    </style>
+</head>
+<body>
+<header>
+    <a href="/"><span>Shift</span>07</a>
+    <nav>
+        <a href="/blog/">Blog</a>
+        <a href="/tools/">Tools</a>
+        <a href="/">SEO-Analyse</a>
+    </nav>
+</header>
+
+<div class="hero">
+    <span class="badge">🔍 SERP-Vorschau-Tool</span>
+    <h1>Title-Tag & SERP-Preview-Generator</h1>
+    <p>Tipp deinen Title-Tag und deine Meta-Description ein — sieh sofort, wie dein Google-Snippet aussieht. Mit Zeichenzähler, Pixel-Analyse und CTR-Score.</p>
+</div>
+
+<div class="tool-container">
+
+    <!-- Input Section -->
+    <div class="input-card">
+        <h2>✏️ Eingabe</h2>
+
+        <div class="input-group">
+            <label>
+                Title-Tag (Seitentitel)
+                <span class="counter" id="title-counter" style="color: #10b981;">0 / 60 Zeichen</span>
+            </label>
+            <input type="text" id="title-input" placeholder="z. B. Keyword-Recherche Anleitung: So findest du die besten Keywords 2026"
+                   maxlength="120" autocomplete="off">
+            <div class="pixel-bar"><div class="pixel-bar-fill" id="title-pxbar" style="width:0%; background:#10b981;"></div></div>
+            <div class="bar-hint"><span id="title-px-text">0 px</span><span>Empfehlung: max. 580 px (≈ 60 Zeichen)</span></div>
+        </div>
+
+        <div class="input-group">
+            <label>
+                Meta-Description
+                <span class="counter" id="desc-counter" style="color: #10b981;">0 / 155 Zeichen</span>
+            </label>
+            <textarea id="desc-input" placeholder="z. B. Schritt-für-Schritt Keyword-Recherche für Anfänger: Tools, Long-Tail-Keywords und häufige Fehler — mit kostenloser Checkliste." maxlength="300"></textarea>
+            <div class="pixel-bar"><div class="pixel-bar-fill" id="desc-pxbar" style="width:0%; background:#10b981;"></div></div>
+            <div class="bar-hint"><span id="desc-px-text">0 px</span><span>Empfehlung: max. 920 px (≈ 155 Zeichen)</span></div>
+        </div>
+
+        <div class="input-group">
+            <label>
+                Seiten-URL <span style="font-weight:400;color:#6b7280;">(optional)</span>
+            </label>
+            <input type="text" id="url-input" placeholder="z. B. https://meinefirma.de/blog/keyword-recherche">
+        </div>
+
+        <div class="input-group">
+            <label>
+                Keyword im Fokus <span style="font-weight:400;color:#6b7280;">(optional — für Keyword-Hervorhebung)</span>
+            </label>
+            <input type="text" id="kw-input" placeholder="z. B. Keyword-Recherche Anleitung">
+        </div>
+    </div>
+
+    <!-- SERP Desktop Preview -->
+    <div class="preview-card">
+        <h2>🖥️ Desktop-Vorschau (Google)</h2>
+        <div class="serp-result">
+            <div class="serp-favicon">
+                <div class="favicon-placeholder" id="fav-letter">S</div>
+                <div>
+                    <div class="site-name" id="preview-sitename">meinefirma.de</div>
+                    <div class="breadcrumb" id="preview-breadcrumb">›  Blog</div>
+                </div>
+            </div>
+            <div class="serp-title" id="preview-title">Dein Title-Tag erscheint hier</div>
+            <div class="serp-date" id="preview-date" style="display:none; font-size:13px; color:#70757a; margin-bottom:3px;"></div>
+            <div class="serp-description" id="preview-desc">Deine Meta-Description erscheint hier. Schreibe einen überzeugenden Text, der Nutzer zum Klicken animiert.</div>
+        </div>
+    </div>
+
+    <!-- SERP Mobile Preview -->
+    <div class="mobile-preview">
+        <h2>📱 Mobile-Vorschau</h2>
+        <div class="mobile-serp">
+            <div class="m-site">
+                <div class="m-favicon" id="m-fav-letter">S</div>
+                <span id="m-sitename">meinefirma.de</span>
+            </div>
+            <div class="m-title" id="m-preview-title">Dein Title-Tag erscheint hier</div>
+            <div class="m-desc" id="m-preview-desc">Deine Meta-Description erscheint hier.</div>
+        </div>
+    </div>
+
+    <!-- Score Section -->
+    <div class="score-card">
+        <h2>📊 Snippet-Bewertung</h2>
+        <div class="score-grid">
+            <div class="score-item">
+                <div class="score-label">Title-Tag Länge</div>
+                <div class="score-value" id="score-title-len">—</div>
+                <div class="score-hint" id="score-title-hint">Noch kein Titel eingegeben</div>
+            </div>
+            <div class="score-item">
+                <div class="score-label">Meta-Description</div>
+                <div class="score-value" id="score-desc-len">—</div>
+                <div class="score-hint" id="score-desc-hint">Noch keine Description eingegeben</div>
+            </div>
+            <div class="score-item">
+                <div class="score-label">Keyword im Titel</div>
+                <div class="score-value" id="score-kw-title">—</div>
+                <div class="score-hint" id="score-kw-title-hint">Keyword eingeben um zu prüfen</div>
+            </div>
+            <div class="score-item">
+                <div class="score-label">Keyword in Description</div>
+                <div class="score-value" id="score-kw-desc">—</div>
+                <div class="score-hint" id="score-kw-desc-hint">Keyword eingeben um zu prüfen</div>
+            </div>
+        </div>
+
+        <div style="margin-top: 1.2rem;">
+            <p style="font-size: 0.85rem; color: #9ca3af; margin-bottom: 0.8rem;">Optimierungshinweise:</p>
+            <ul class="hints-list" id="hints-list">
+                <li class="hint-warn">⚡ Gib Title-Tag und Meta-Description ein, um Hinweise zu erhalten.</li>
+            </ul>
+        </div>
+
+        <div style="margin-top: 1rem; display:flex; justify-content:flex-end;">
+            <button class="copy-btn" id="copy-meta-btn" onclick="copyMetaTags()">
+                <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                HTML-Meta-Tags kopieren
+            </button>
+        </div>
+    </div>
+
+    <!-- Tips -->
+    <div class="tips-card">
+        <h2>💡 Optimierungstipps für bessere CTR</h2>
+        <div class="tips-grid">
+            <div class="tip-item">
+                <h3>🎯 Keyword vorne im Titel</h3>
+                <p>Platziere das wichtigste Keyword möglichst am Anfang des Title-Tags — Google fett markiert es in den Suchergebnissen, was die Aufmerksamkeit erhöht.</p>
+            </div>
+            <div class="tip-item">
+                <h3>🔢 Zahlen erhöhen die CTR</h3>
+                <p>Titel mit konkreten Zahlen ("7 Tipps", "2026", "5 Minuten") werden im Durchschnitt 20–30 % häufiger angeklickt als abstrakte Formulierungen.</p>
+            </div>
+            <div class="tip-item">
+                <h3>❓ W-Fragen als Titel</h3>
+                <p>Fragen wie "Wie funktioniert...?" oder "Was ist...?" signalisieren, dass du die Frage direkt beantwortest — ideal für informational Suchintentionen.</p>
+            </div>
+            <div class="tip-item">
+                <h3>📢 CTA in der Meta-Description</h3>
+                <p>Phrases wie "Jetzt prüfen", "Kostenlos starten" oder "Anleitung lesen" in der Description erhöhen die Klickrate deutlich. Formuliere als Handlungsaufforderung.</p>
+            </div>
+            <div class="tip-item">
+                <h3>⚠️ Abschneiden vermeiden</h3>
+                <p>Stelle sicher, dass die wichtigsten Informationen in den ersten 580 px (Titel) bzw. 920 px (Description) stehen — der Rest wird abgeschnitten.</p>
+            </div>
+            <div class="tip-item">
+                <h3>🔄 Unique Selling Point</h3>
+                <p>Was macht deine Seite besser als die anderen? Kostenlos? Schneller? Mit Checkliste? Kommuniziere es in der Description — das ist der einzige Text, mit dem du Nutzer überzeugst.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="cta-section">
+        <h2>Vollständige SEO-Analyse deiner Website</h2>
+        <p>Prüfe nicht nur Title-Tag und Meta-Description, sondern alle SEO-Faktoren deiner gesamten Website — kostenlos und ohne Anmeldung.</p>
+        <a href="https://shift07.ai">Kostenlose SEO-Analyse starten →</a>
+    </div>
+
+    <!-- Info Section -->
+    <div class="info-section">
+        <h2>Was ist ein Title-Tag und warum ist er wichtig für SEO?</h2>
+        <p>Der Title-Tag (HTML-Element <code>&lt;title&gt;</code>) ist der anklickbare blaue Titel in den Google-Suchergebnissen. Er ist einer der stärksten On-Page-SEO-Faktoren und hat direkten Einfluss auf:</p>
+        <ul style="margin: 0.5rem 0 0.8rem 1.3rem;">
+            <li>Ranking bei Google (Haupt-Keyword im Titel ist wichtig)</li>
+            <li>Click-Through-Rate (CTR) — wie viele Nutzer auf dein Ergebnis klicken</li>
+            <li>Erkennbarkeit in Browser-Tabs und Bookmarks</li>
+        </ul>
+        <p>Google empfiehlt, den Title-Tag auf maximal 580 Pixel Breite zu begrenzen (entspricht etwa 50–60 Zeichen). Längere Titel werden abgeschnitten und mit "..." angezeigt.</p>
+
+        <h2>Was ist eine Meta-Description?</h2>
+        <p>Die Meta-Description (HTML-Element <code>&lt;meta name="description"&gt;</code>) ist der Beschreibungstext unterhalb des Titels in den Suchergebnissen. Sie ist <strong>kein direkter Ranking-Faktor</strong>, beeinflusst aber die CTR erheblich — und damit indirekt das Ranking.</p>
+        <p>Eine gute Meta-Description: enthält das Haupt-Keyword, hat eine klare Handlungsaufforderung und ist maximal 155 Zeichen lang. Lies unseren ausführlichen <a href="/blog/meta-description-optimieren-guide.html">Meta-Description-Guide</a> für alle Details.</p>
+
+        <h2>Wie berechne ich die Pixel-Breite meines Titels?</h2>
+        <p>Google bricht Snippets nicht bei einer festen Zeichenanzahl ab, sondern bei einer maximalen Pixel-Breite von ca. 580 Pixel für Desktops und ~400 Pixel für Mobilgeräte. Dabei wird Arial 20px (Desktop) bzw. 16px (Mobile) als Schriftart verwendet. Dieses Tool simuliert diese Berechnung im Browser.</p>
+        <p>Weitere SEO-Tools: <a href="/tools/title-tag-laengen-checker.html">Title-Tag-Längen-Checker</a> · <a href="/tools/meta-tag-generator.html">Meta-Tag-Generator</a> · <a href="/tools/duplicate-meta-finder.html">Duplicate-Meta-Finder</a></p>
+        <p>Mehr zum Thema: <a href="/blog/heading-struktur-optimieren.html">Heading-Struktur optimieren</a> · <a href="/blog/content-briefing-erstellen-seo-texte.html">Content-Briefing erstellen</a> · <a href="/blog/suchintention-verstehen-seo.html">Suchintention verstehen</a></p>
+    </div>
+</div>
+
+<footer>
+    <p>© 2026 Thümmler AI GmbH · <a href="/impressum.html">Impressum</a> · <a href="/datenschutz.html">Datenschutz</a> · <a href="/blog/">Blog</a> · <a href="/tools/">Tools</a></p>
+</footer>
+
+<script>
+// ---- Pixel-width calculator ----
+function getTextPixelWidth(text, font) {
+    const canvas = document.createElement('canvas');
+    const ctx = canvas.getContext('2d');
+    ctx.font = font;
+    return ctx.measureText(text).width;
+}
+
+// ---- Update SERP preview ----
+function update() {
+    const title = document.getElementById('title-input').value;
+    const desc = document.getElementById('desc-input').value;
+    const url = document.getElementById('url-input').value.trim();
+    const kw = document.getElementById('kw-input').value.trim().toLowerCase();
+
+    // Parse URL for display
+    let siteName = 'meinefirma.de';
+    let breadcrumb = '› Blog';
+    let favLetter = 'S';
+    if (url) {
+        try {
+            const u = new URL(url.startsWith('http') ? url : 'https://' + url);
+            siteName = u.hostname.replace('www.', '');
+            favLetter = siteName.charAt(0).toUpperCase();
+            const path = u.pathname;
+            if (path && path !== '/') {
+                const parts = path.split('/').filter(Boolean);
+                breadcrumb = '› ' + parts.map(p => p.charAt(0).toUpperCase() + p.slice(1).replace(/-/g, ' ')).join(' › ');
+            } else {
+                breadcrumb = '';
+            }
+        } catch(e) {
+            siteName = url.replace(/https?:\/\/(www\.)?/, '').split('/')[0];
+            favLetter = siteName.charAt(0).toUpperCase();
+        }
+    }
+
+    // Update favicon / sitename
+    document.getElementById('fav-letter').textContent = favLetter;
+    document.getElementById('m-fav-letter').textContent = favLetter;
+    document.getElementById('preview-sitename').textContent = siteName;
+    document.getElementById('m-sitename').textContent = siteName;
+    document.getElementById('preview-breadcrumb').textContent = breadcrumb;
+
+    // Highlight keyword in title and desc
+    function highlight(text, kw) {
+        if (!kw || !text) return text || '';
+        const regex = new RegExp('(' + kw.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'gi');
+        return text.replace(regex, '<strong>$1</strong>');
+    }
+
+    // Update title preview
+    const titleDisplay = title || 'Dein Title-Tag erscheint hier';
+    document.getElementById('preview-title').innerHTML = highlight(titleDisplay, kw);
+    document.getElementById('m-preview-title').innerHTML = highlight(titleDisplay, kw);
+
+    // Update desc preview
+    const descDisplay = desc || 'Deine Meta-Description erscheint hier. Schreibe einen überzeugenden Text, der Nutzer zum Klicken animiert.';
+    document.getElementById('preview-desc').innerHTML = highlight(descDisplay, kw);
+    document.getElementById('m-preview-desc').innerHTML = highlight(descDisplay, kw);
+
+    // ---- Title pixel width ----
+    const titlePx = title ? Math.round(getTextPixelWidth(title, '20px Arial')) : 0;
+    const titleMaxPx = 580;
+    const titlePct = Math.min(100, (titlePx / titleMaxPx) * 100);
+    const titleCharLen = title.length;
+
+    document.getElementById('title-px-text').textContent = titlePx + ' px';
+    document.getElementById('title-pxbar').style.width = titlePct + '%';
+
+    let titleColor, titleStatus, titleHint;
+    if (titleCharLen === 0) {
+        titleColor = '#6b7280'; titleStatus = '—'; titleHint = 'Noch kein Titel';
+    } else if (titleCharLen <= 60 && titlePx <= 580) {
+        titleColor = '#10b981'; titleStatus = '✓ ' + titleCharLen + ' Zeichen'; titleHint = 'Perfekte Länge';
+    } else if (titleCharLen <= 70 && titlePx <= 640) {
+        titleColor = '#f59e0b'; titleStatus = '⚠ ' + titleCharLen + ' Zeichen'; titleHint = 'Grenzwertig — kürzen empfohlen';
+    } else {
+        titleColor = '#ef4444'; titleStatus = '✗ ' + titleCharLen + ' Zeichen'; titleHint = 'Zu lang — wird abgeschnitten';
+    }
+    document.getElementById('title-pxbar').style.background = titleColor;
+    document.getElementById('title-counter').textContent = titleCharLen + ' / 60 Zeichen';
+    document.getElementById('title-counter').style.color = titleColor;
+    document.getElementById('score-title-len').textContent = titleStatus;
+    document.getElementById('score-title-len').className = 'score-value ' + (titleCharLen === 0 ? '' : titlePx <= 580 ? 'status-ok' : titlePx <= 640 ? 'status-warn' : 'status-error');
+    document.getElementById('score-title-hint').textContent = titleHint;
+
+    // ---- Desc pixel width ----
+    const descPx = desc ? Math.round(getTextPixelWidth(desc, '14px Arial')) : 0;
+    const descMaxPx = 920;
+    const descPct = Math.min(100, (descPx / descMaxPx) * 100);
+    const descCharLen = desc.length;
+
+    document.getElementById('desc-px-text').textContent = descPx + ' px';
+    document.getElementById('desc-pxbar').style.width = descPct + '%';
+
+    let descColor, descStatus, descHint;
+    if (descCharLen === 0) {
+        descColor = '#6b7280'; descStatus = '—'; descHint = 'Noch keine Description';
+    } else if (descCharLen >= 120 && descCharLen <= 155 && descPx <= 920) {
+        descColor = '#10b981'; descStatus = '✓ ' + descCharLen + ' Zeichen'; descHint = 'Perfekte Länge';
+    } else if (descCharLen < 120) {
+        descColor = '#f59e0b'; descStatus = '⚠ ' + descCharLen + ' Zeichen'; descHint = 'Zu kurz — mehr Text nutzen';
+    } else if (descCharLen <= 165 && descPx <= 970) {
+        descColor = '#f59e0b'; descStatus = '⚠ ' + descCharLen + ' Zeichen'; descHint = 'Etwas zu lang — kürzen empfohlen';
+    } else {
+        descColor = '#ef4444'; descStatus = '✗ ' + descCharLen + ' Zeichen'; descHint = 'Zu lang — wird abgeschnitten';
+    }
+    document.getElementById('desc-pxbar').style.background = descColor;
+    document.getElementById('desc-counter').textContent = descCharLen + ' / 155 Zeichen';
+    document.getElementById('desc-counter').style.color = descColor;
+    document.getElementById('score-desc-len').textContent = descStatus;
+    document.getElementById('score-desc-len').className = 'score-value ' + (descCharLen === 0 ? '' : (descCharLen >= 120 && descPx <= 920) ? 'status-ok' : descPx > 920 ? 'status-error' : 'status-warn');
+    document.getElementById('score-desc-hint').textContent = descHint;
+
+    // ---- Keyword checks ----
+    if (kw) {
+        const kwInTitle = title.toLowerCase().includes(kw);
+        const kwInDesc = desc.toLowerCase().includes(kw);
+        const kwAtStart = title.toLowerCase().startsWith(kw) || (title.toLowerCase().indexOf(kw) < 20);
+
+        document.getElementById('score-kw-title').textContent = kwInTitle ? (kwAtStart ? '✓ Vorne' : '✓ Vorhanden') : '✗ Fehlt';
+        document.getElementById('score-kw-title').className = 'score-value ' + (kwInTitle ? 'status-ok' : 'status-error');
+        document.getElementById('score-kw-title-hint').textContent = kwInTitle ? (kwAtStart ? 'Optimal: Keyword steht weit vorne' : 'Vorhanden — möglichst nach vorne') : 'Keyword fehlt im Titel!';
+
+        document.getElementById('score-kw-desc').textContent = kwInDesc ? '✓ Vorhanden' : '✗ Fehlt';
+        document.getElementById('score-kw-desc').className = 'score-value ' + (kwInDesc ? 'status-ok' : 'status-error');
+        document.getElementById('score-kw-desc-hint').textContent = kwInDesc ? 'Keyword in Description — Google fett es hervor' : 'Keyword fehlt in der Description';
+    } else {
+        document.getElementById('score-kw-title').textContent = '—';
+        document.getElementById('score-kw-title').className = 'score-value';
+        document.getElementById('score-kw-title-hint').textContent = 'Keyword eingeben um zu prüfen';
+        document.getElementById('score-kw-desc').textContent = '—';
+        document.getElementById('score-kw-desc').className = 'score-value';
+        document.getElementById('score-kw-desc-hint').textContent = 'Keyword eingeben um zu prüfen';
+    }
+
+    // ---- Hints ----
+    const hints = [];
+    if (!title) {
+        hints.push({ type: 'warn', text: '⚡ Gib einen Title-Tag ein, um Hinweise zu erhalten.' });
+    } else {
+        if (titlePx <= 580) hints.push({ type: 'ok', text: '✓ Title-Tag: Länge im optimalen Bereich (' + titlePx + ' px / ' + titleCharLen + ' Zeichen)' });
+        else hints.push({ type: 'error', text: '✗ Title-Tag zu lang: ' + titlePx + ' px / ' + titleCharLen + ' Zeichen → wird in Google abgeschnitten' });
+
+        if (kw && !title.toLowerCase().includes(kw)) hints.push({ type: 'error', text: '✗ Haupt-Keyword "' + kw + '" fehlt im Title-Tag — unbedingt ergänzen!' });
+        else if (kw) hints.push({ type: 'ok', text: '✓ Haupt-Keyword "' + kw + '" im Title-Tag vorhanden' });
+
+        // Check for year / numbers
+        if (/\d{4}|\d+/.test(title)) hints.push({ type: 'ok', text: '✓ Zahl im Titel — erhöht die CTR' });
+        else hints.push({ type: 'warn', text: '⚠ Kein Jahr / keine Zahl im Titel — Zahlen erhöhen die CTR um bis zu 30 %' });
+
+        // Title starts with keyword?
+        if (kw && title.toLowerCase().indexOf(kw) > 30) hints.push({ type: 'warn', text: '⚠ Keyword steht spät im Titel — möglichst in den ersten 30 Zeichen platzieren' });
+    }
+
+    if (!desc) {
+        hints.push({ type: 'warn', text: '⚠ Keine Meta-Description — Google zeigt dann automatisch generierten Text' });
+    } else {
+        if (descCharLen >= 120 && descPx <= 920) hints.push({ type: 'ok', text: '✓ Meta-Description: Länge optimal (' + descPx + ' px / ' + descCharLen + ' Zeichen)' });
+        else if (descCharLen < 120) hints.push({ type: 'warn', text: '⚠ Meta-Description zu kurz (' + descCharLen + ' Zeichen) — Ziel: 120–155 Zeichen' });
+        else hints.push({ type: 'error', text: '✗ Meta-Description zu lang (' + descCharLen + ' Zeichen) — wird abgeschnitten' });
+
+        if (kw && !desc.toLowerCase().includes(kw)) hints.push({ type: 'warn', text: '⚠ Keyword "' + kw + '" fehlt in der Meta-Description — Google kann es dann nicht fett markieren' });
+
+        // CTA check
+        const ctaWords = ['jetzt', 'kostenlos', 'gratis', 'hier', 'anleitung', 'guide', 'starten', 'entdecken', 'erfahre'];
+        const hasCtA = ctaWords.some(w => desc.toLowerCase().includes(w));
+        if (hasCtA) hints.push({ type: 'ok', text: '✓ Handlungsaufforderung in der Description erkannt' });
+        else hints.push({ type: 'warn', text: '⚠ Kein CTA in der Description ("Jetzt", "Kostenlos", "Entdecke" etc.) — CTR-Verlust möglich' });
+    }
+
+    // Render hints
+    const hintsHtml = hints.map(h =>
+        '<li class="hint-' + h.type + '">' + h.text + '</li>'
+    ).join('');
+    document.getElementById('hints-list').innerHTML = hintsHtml;
+}
+
+// ---- Copy meta tags ----
+function copyMetaTags() {
+    const title = document.getElementById('title-input').value;
+    const desc = document.getElementById('desc-input').value;
+    const url = document.getElementById('url-input').value;
+    let html = '';
+    if (title) html += '<title>' + title.replace(/</g,'&lt;').replace(/>/g,'&gt;') + '</title>\n';
+    if (desc) html += '<meta name="description" content="' + desc.replace(/"/g,'&quot;') + '">\n';
+    if (url) html += '<link rel="canonical" href="' + url + '">\n';
+    if (title) {
+        html += '<meta property="og:title" content="' + title.replace(/"/g,'&quot;') + '">\n';
+        html += '<meta name="twitter:title" content="' + title.replace(/"/g,'&quot;') + '">\n';
+    }
+    if (desc) {
+        html += '<meta property="og:description" content="' + desc.replace(/"/g,'&quot;') + '">\n';
+        html += '<meta name="twitter:description" content="' + desc.replace(/"/g,'&quot;') + '">\n';
+    }
+
+    navigator.clipboard.writeText(html).then(() => {
+        const btn = document.getElementById('copy-meta-btn');
+        btn.textContent = '✓ Kopiert!';
+        btn.classList.add('copied');
+        setTimeout(() => {
+            btn.innerHTML = '<svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg> HTML-Meta-Tags kopieren';
+            btn.classList.remove('copied');
+        }, 2000);
+    });
+}
+
+// ---- Event listeners ----
+document.getElementById('title-input').addEventListener('input', update);
+document.getElementById('desc-input').addEventListener('input', update);
+document.getElementById('url-input').addEventListener('input', update);
+document.getElementById('kw-input').addEventListener('input', update);
+
+// Initial call
+update();
+
+// Example prefill
+function prefill() {
+    document.getElementById('title-input').value = 'Keyword-Recherche Anleitung: So findest du die besten Keywords 2026';
+    document.getElementById('desc-input').value = 'Keyword-Recherche für Anfänger: Die besten kostenlosen Tools, Long-Tail-Keywords finden und häufige Fehler vermeiden — mit Schritt-für-Schritt-Anleitung.';
+    document.getElementById('url-input').value = 'https://meinefirma.de/blog/keyword-recherche-anleitung';
+    document.getElementById('kw-input').value = 'keyword-recherche';
+    update();
+}
+// Auto-prefill on load for demonstration
+window.addEventListener('load', function() {
+    // Leave empty by default — user inputs their own
+});
+</script>
+</body>
+</html>
