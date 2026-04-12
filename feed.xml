@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Sun, 12 Apr 2026 01:05:20 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 12 Apr 2026 01:08:52 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Meta-Description optimieren: Der komplette Guide 2026</title>
+      <link>https://shift07.ai/blog/meta-description-optimieren-guide.html</link>
+      <guid>https://shift07.ai/blog/meta-description-optimieren-guide.html</guid>
+      <pubDate>Sun, 12 Apr 2026 01:08:27 +0000</pubDate>
+      <description>Meta-Description optimieren für bessere CTR: Zeichenanzahl, Keywords, emotionale Trigger und konkrete Vorlagen — der vollständige Leitfaden 2026.</description>
+      <category>OnPage-SEO</category>
+    </item>
     <item>
       <title>Suchintention verstehen: Informational, Navigational, Transactional, Commercial</title>
       <link>https://shift07.ai/blog/suchintention-verstehen-seo.html</link>
@@ -157,14 +165,6 @@
       <guid>https://shift07.ai/blog/woocommerce-seo-einstellungen.html</guid>
       <pubDate>Thu, 09 Apr 2026 00:24:32 +0000</pubDate>
       <description>WooCommerce SEO Schritt für Schritt: Die wichtigsten Einstellungen, die besten Plugins (Yoast, RankMath) und konkrete Optimierungen für deinen Online-Shop.</description>
-      <category>E-Commerce SEO</category>
-    </item>
-    <item>
-      <title>Kategorieseiten SEO: So optimierst du Shop-Kategorien für Google</title>
-      <link>https://shift07.ai/blog/kategorieseiten-seo-optimieren.html</link>
-      <guid>https://shift07.ai/blog/kategorieseiten-seo-optimieren.html</guid>
-      <pubDate>Wed, 08 Apr 2026 04:44:05 +0000</pubDate>
-      <description>Kategorieseiten SEO für Online-Shops: Beschreibungen, Heading-Struktur, interne Verlinkung, Facettennavigation und Crawl-Effizienz. Mehr organischer Traffic auf deine Shop-Kategorien.</description>
       <category>E-Commerce SEO</category>
     </item>
   </channel>
