@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Sun, 12 Apr 2026 04:28:28 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 12 Apr 2026 04:31:29 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Ladezeit als Ranking-Faktor: Wie Page Speed dein Google-Ranking beeinflusst</title>
+      <link>https://shift07.ai/blog/ladezeit-ranking-faktor-page-speed.html</link>
+      <guid>https://shift07.ai/blog/ladezeit-ranking-faktor-page-speed.html</guid>
+      <pubDate>Sun, 12 Apr 2026 04:31:07 +0000</pubDate>
+      <description>Ladezeit als Google-Ranking-Faktor erklärt: Wie Page Speed Rankings beeinflusst, was Core Web Vitals damit zu tun haben und wie du deine Website messbar schneller machst.</description>
+      <category>Performance-SEO</category>
+    </item>
     <item>
       <title>Content-Recycling: Alte Inhalte auffrischen für mehr Traffic</title>
       <link>https://shift07.ai/blog/content-recycling-alte-inhalte-traffic.html</link>
@@ -157,14 +165,6 @@
       <guid>https://shift07.ai/blog/eat-google-qualitaetssignale.html</guid>
       <pubDate>Thu, 09 Apr 2026 03:59:06 +0000</pubDate>
       <description>E-A-T erklärt: Wie Google Expertise, Authoritativeness und Trustworthiness bewertet und warum diese Qualitätssignale dein Ranking entscheiden. Mit konkreten Maßnahmen.</description>
-      <category>Content SEO</category>
-    </item>
-    <item>
-      <title>Pillar Pages und Content-Silos: Topical Authority aufbauen</title>
-      <link>https://shift07.ai/blog/pillar-pages-content-silos.html</link>
-      <guid>https://shift07.ai/blog/pillar-pages-content-silos.html</guid>
-      <pubDate>Thu, 09 Apr 2026 02:17:53 +0000</pubDate>
-      <description>Pillar Pages und Content-Silos erklärt: Wie du deine Website thematisch strukturierst, Topical Authority bei Google aufbaust und bessere Rankings erzielst.</description>
       <category>Content SEO</category>
     </item>
   </channel>
