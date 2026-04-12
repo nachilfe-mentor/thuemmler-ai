@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Sun, 12 Apr 2026 02:46:47 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 12 Apr 2026 02:50:06 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>TF-IDF und Semantic SEO: Thematische Relevanz aufbauen</title>
+      <link>https://shift07.ai/blog/tf-idf-semantic-seo-thematische-relevanz.html</link>
+      <guid>https://shift07.ai/blog/tf-idf-semantic-seo-thematische-relevanz.html</guid>
+      <pubDate>Sun, 12 Apr 2026 02:49:41 +0000</pubDate>
+      <description>TF-IDF und Semantic SEO erklärt: Wie du thematische Relevanz aufbaust, LSI-Keywords nutzt und durch Topical Authority langfristig bessere Rankings erreichst.</description>
+      <category>OnPage-SEO</category>
+    </item>
     <item>
       <title>Content-Briefing erstellen: So planst du SEO-Texte richtig</title>
       <link>https://shift07.ai/blog/content-briefing-erstellen-seo-texte.html</link>
@@ -158,14 +166,6 @@
       <pubDate>Thu, 09 Apr 2026 02:12:09 +0000</pubDate>
       <description>Keyword-Clustering erklärt: Warum du Keywords nicht einzeln optimieren solltest und wie du mit Themen-Clustern bessere Rankings erzielst. Schritt-für-Schritt-Anleitung.</description>
       <category>Content SEO</category>
-    </item>
-    <item>
-      <title>Facettennavigation SEO: Filter-URLs richtig handhaben</title>
-      <link>https://shift07.ai/blog/facettennavigation-seo-filter-urls.html</link>
-      <guid>https://shift07.ai/blog/facettennavigation-seo-filter-urls.html</guid>
-      <pubDate>Thu, 09 Apr 2026 00:29:37 +0000</pubDate>
-      <description>Facettennavigation SEO: So gehst du mit Filter-URLs in Online-Shops um. Canonical-Tags, noindex, robots.txt und Crawl-Budget-Schutz für E-Commerce-Filter.</description>
-      <category>E-Commerce SEO</category>
     </item>
   </channel>
 </rss>
