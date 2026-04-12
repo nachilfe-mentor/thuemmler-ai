@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Sun, 12 Apr 2026 01:08:52 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 12 Apr 2026 02:43:18 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Content-Briefing erstellen: So planst du SEO-Texte richtig</title>
+      <link>https://shift07.ai/blog/content-briefing-erstellen-seo-texte.html</link>
+      <guid>https://shift07.ai/blog/content-briefing-erstellen-seo-texte.html</guid>
+      <pubDate>Sun, 12 Apr 2026 02:42:51 +0000</pubDate>
+      <description>Content-Briefing erstellen für SEO-Texte: Schritt-für-Schritt-Anleitung mit Vorlage, Keyword-Analyse, Suchintention und Struktur-Planung — damit jeder Text rankt.</description>
+      <category>OnPage-SEO</category>
+    </item>
     <item>
       <title>Meta-Description optimieren: Der komplette Guide 2026</title>
       <link>https://shift07.ai/blog/meta-description-optimieren-guide.html</link>
@@ -157,14 +165,6 @@
       <guid>https://shift07.ai/blog/facettennavigation-seo-filter-urls.html</guid>
       <pubDate>Thu, 09 Apr 2026 00:29:37 +0000</pubDate>
       <description>Facettennavigation SEO: So gehst du mit Filter-URLs in Online-Shops um. Canonical-Tags, noindex, robots.txt und Crawl-Budget-Schutz für E-Commerce-Filter.</description>
-      <category>E-Commerce SEO</category>
-    </item>
-    <item>
-      <title>WooCommerce SEO: Einstellungen, Plugins und Optimierungen</title>
-      <link>https://shift07.ai/blog/woocommerce-seo-einstellungen.html</link>
-      <guid>https://shift07.ai/blog/woocommerce-seo-einstellungen.html</guid>
-      <pubDate>Thu, 09 Apr 2026 00:24:32 +0000</pubDate>
-      <description>WooCommerce SEO Schritt für Schritt: Die wichtigsten Einstellungen, die besten Plugins (Yoast, RankMath) und konkrete Optimierungen für deinen Online-Shop.</description>
       <category>E-Commerce SEO</category>
     </item>
   </channel>
