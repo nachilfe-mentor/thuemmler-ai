@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Mon, 13 Apr 2026 00:15:36 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 13 Apr 2026 01:51:25 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>JavaScript-Performance für SEO: Lazy Loading, Code Splitting, Defer</title>
+      <link>https://shift07.ai/blog/javascript-performance-seo-lazy-loading-code-splitting.html</link>
+      <guid>https://shift07.ai/blog/javascript-performance-seo-lazy-loading-code-splitting.html</guid>
+      <pubDate>Mon, 13 Apr 2026 01:50:59 +0000</pubDate>
+      <description>Wie JavaScript dein SEO-Ranking beeinflusst: Lazy Loading, Code Splitting und Defer richtig einsetzen. Schritt-für-Schritt-Anleitung mit Code-Beispielen für bessere Core Web Vitals 2026.</description>
+      <category>Performance</category>
+    </item>
     <item>
       <title>Core Web Vitals verbessern: LCP, CLS, INP optimieren — Schritt für Schritt</title>
       <link>https://shift07.ai/blog/core-web-vitals-verbessern-lcp-cls-inp.html</link>
@@ -157,14 +165,6 @@
       <guid>https://shift07.ai/blog/inhalte-featured-snippets-optimieren.html</guid>
       <pubDate>Fri, 10 Apr 2026 01:14:10 +0000</pubDate>
       <description>Wie du Inhalte strukturieren musst, damit Google sie als Featured Snippet auswählt: direkte Antworten, Listen, Tabellen und Paragraph-Snippets Schritt für Schritt erklärt.</description>
-      <category>Content SEO</category>
-    </item>
-    <item>
-      <title>Content-Audit: Alte Inhalte überarbeiten und SEO-Rankings verbessern</title>
-      <link>https://shift07.ai/blog/content-audit-inhalte-aktualisieren.html</link>
-      <guid>https://shift07.ai/blog/content-audit-inhalte-aktualisieren.html</guid>
-      <pubDate>Thu, 09 Apr 2026 04:04:25 +0000</pubDate>
-      <description>Content-Audit Schritt für Schritt: Wie du alte Blogartikel analysierst, überarbeitest und aktualisierst — und so bestehende Rankings verbesserst statt immer neue Inhalte zu schreiben.</description>
       <category>Content SEO</category>
     </item>
   </channel>
