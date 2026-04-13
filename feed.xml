@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Mon, 13 Apr 2026 05:35:54 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 13 Apr 2026 05:39:22 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Keyword-Recherche mit kostenlosen Tools: Google Suggest, Answer the Public &amp; mehr</title>
+      <link>https://shift07.ai/blog/keyword-recherche-kostenlose-tools.html</link>
+      <guid>https://shift07.ai/blog/keyword-recherche-kostenlose-tools.html</guid>
+      <pubDate>Mon, 13 Apr 2026 05:39:02 +0000</pubDate>
+      <description>Keyword-Recherche kostenlos durchführen: Google Suggest, Answer the Public, Ubersuggest und weitere Tools im Vergleich. Mit Schritt-für-Schritt-Anleitung.</description>
+      <category>OnPage-SEO</category>
+    </item>
     <item>
       <title>Title-Tag optimieren: Die vollständige Anleitung 2026</title>
       <link>https://shift07.ai/blog/title-tag-optimieren-seo.html</link>
@@ -157,14 +165,6 @@
       <guid>https://shift07.ai/blog/backlink-profil-analysieren-bereinigen.html</guid>
       <pubDate>Fri, 10 Apr 2026 04:36:54 +0000</pubDate>
       <description>Wie analysierst du dein Backlink-Profil? Wann solltest du Backlinks disavowen? Diese Schritt-für-Schritt-Anleitung zeigt dir, wie du toxische Links erkennst und mit dem Google Disavow Tool entfernst.</description>
-      <category>Off-Page SEO</category>
-    </item>
-    <item>
-      <title>Linkjuice und PageRank: Wie Link-Stärke übertragen wird</title>
-      <link>https://shift07.ai/blog/linkjuice-pagerank-seo.html</link>
-      <guid>https://shift07.ai/blog/linkjuice-pagerank-seo.html</guid>
-      <pubDate>Fri, 10 Apr 2026 03:02:12 +0000</pubDate>
-      <description>Was ist Linkjuice? Wie funktioniert PageRank? Dieser Leitfaden erklärt, wie Link-Stärke durch Verlinkungen übertragen wird und wie du das für dein SEO nutzt.</description>
       <category>Off-Page SEO</category>
     </item>
   </channel>
