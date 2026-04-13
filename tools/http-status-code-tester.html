@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTTP-Status-Code-Tester – Redirect & Response kostenlos prüfen | Shift07</title>
+    <meta name="description" content="Prüfe HTTP-Status-Codes kostenlos: 200 OK, 301 Redirect, 404 Not Found, 500 Server Error — mit SEO-Bewertung und Handlungsempfehlung.">
+    <link rel="canonical" href="https://shift07.ai/tools/http-status-code-tester.html">
+    <link rel="icon" type="image/png" href="/logo.png">
+    <link rel="alternate" type="application/rss+xml" title="Shift07 Blog" href="https://shift07.ai/feed.xml">
+    <!-- Open Graph -->
+    <meta property="og:title" content="HTTP-Status-Code-Tester – Redirect & Response kostenlos prüfen">
+    <meta property="og:description" content="Prüfe HTTP-Status-Codes kostenlos: 200 OK, 301 Redirect, 404 Not Found, 500 Server Error — mit SEO-Bewertung und Handlungsempfehlung.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://shift07.ai/tools/http-status-code-tester.html">
+    <meta property="og:image" content="https://shift07.ai/tools/images/http-status-code-tester.png">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="Shift07">
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "HTTP-Status-Code-Tester",
+      "description": "Prüfe HTTP-Status-Codes kostenlos: 200 OK, 301 Redirect, 404 Not Found, 500 Server Error — mit SEO-Bewertung und Handlungsempfehlung.",
+      "url": "https://shift07.ai/tools/http-status-code-tester.html",
+      "applicationCategory": "SEO Tool",
+      "operatingSystem": "Web Browser",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+      "provider": { "@type": "Organization", "name": "Shift07", "url": "https://shift07.ai" }
+    }
+    </script>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K1S1RXBDS8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K1S1RXBDS8');
+    </script>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8475857002943858" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: rgba(15, 23, 42, 0.5); }
+        ::-webkit-scrollbar-thumb { background: rgba(59, 130, 246, 0.5); border-radius: 4px; }
+        html { scroll-behavior: smooth; }
+        .status-badge-2xx { background: rgba(34,197,94,0.15); border: 1px solid rgba(34,197,94,0.4); color: #4ade80; }
+        .status-badge-3xx { background: rgba(234,179,8,0.15); border: 1px solid rgba(234,179,8,0.4); color: #fbbf24; }
+        .status-badge-4xx { background: rgba(239,68,68,0.15); border: 1px solid rgba(239,68,68,0.4); color: #f87171; }
+        .status-badge-5xx { background: rgba(168,85,247,0.15); border: 1px solid rgba(168,85,247,0.4); color: #c084fc; }
+        .status-badge-unknown { background: rgba(100,116,139,0.15); border: 1px solid rgba(100,116,139,0.4); color: #94a3b8; }
+    </style>
+</head>
+<body class="bg-slate-900 text-white min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-slate-900/80 backdrop-blur-xl border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <a href="/" class="flex items-center gap-2">
+                    <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                    <span class="text-xl font-bold text-white">Shift07</span>
+                </a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="/" class="text-gray-300 hover:text-white transition-colors">SEO-Tool</a>
+                    <a href="/blog/" class="text-gray-300 hover:text-white transition-colors">Blog</a>
+                    <a href="/tools/" class="text-white font-medium border-b-2 border-blue-500 pb-0.5">Tools</a>
+                    <a href="/app/#/login" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-5 py-2 rounded-lg font-medium transition-all">Anmelden</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-gray-300 hover:text-white">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900/95 border-b border-white/10">
+            <div class="px-4 py-3 space-y-2">
+                <a href="/" class="block py-2 text-gray-300 hover:text-white">SEO-Tool</a>
+                <a href="/blog/" class="block py-2 text-gray-300 hover:text-white">Blog</a>
+                <a href="/tools/" class="block py-2 text-white font-medium">Tools</a>
+                <a href="/app/#/login" class="block py-2 text-blue-400 hover:text-blue-300">Anmelden</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="pt-24 pb-10 px-4 text-center">
+        <div class="max-w-3xl mx-auto">
+            <div class="inline-flex items-center gap-2 bg-orange-500/10 border border-orange-500/20 rounded-full px-4 py-2 mb-6">
+                <span class="text-orange-400 text-sm font-semibold">Tech-SEO Tool</span>
+            </div>
+            <h1 class="text-4xl md:text-5xl font-black text-white mb-4">
+                HTTP-Status-Code-Tester
+            </h1>
+            <p class="text-xl text-gray-300 mb-3">
+                Prüfe welchen HTTP-Status eine URL zurückgibt — mit SEO-Bewertung und konkreter Handlungsempfehlung.
+            </p>
+            <p class="text-gray-400 text-sm">
+                Analysiert 200 OK · 301/302 Redirects · 404 Not Found · 410 Gone · 500 Server Error und mehr.
+            </p>
+        </div>
+    </section>
+
+    <!-- Tool Card -->
+    <section class="max-w-3xl mx-auto px-4 pb-16">
+        <div class="bg-slate-800/60 border border-white/10 rounded-2xl p-6 md:p-8">
+
+            <!-- URL Input -->
+            <div class="mb-6">
+                <label class="block text-sm font-semibold text-gray-300 mb-2">URL prüfen</label>
+                <div class="flex gap-3">
+                    <input type="url" id="urlInput" placeholder="https://example.de/ihre-seite"
+                           class="flex-1 bg-slate-900/70 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-orange-500 text-sm transition-colors">
+                    <button onclick="checkUrl()" id="checkBtn"
+                            class="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-400 hover:to-red-400 text-white font-bold px-6 py-3 rounded-xl transition-all whitespace-nowrap">
+                        Prüfen
+                    </button>
+                </div>
+                <div class="flex gap-2 mt-3 flex-wrap">
+                    <span class="text-xs text-gray-500">Beispiele:</span>
+                    <button onclick="setExample('https://shift07.ai')" class="text-xs text-orange-400 hover:text-orange-300 underline">shift07.ai</button>
+                    <button onclick="setExample('https://shift07.ai/nicht-gefunden')" class="text-xs text-orange-400 hover:text-orange-300 underline">404-Seite</button>
+                    <button onclick="setExample('https://httpstat.us/301')" class="text-xs text-orange-400 hover:text-orange-300 underline">301 Redirect</button>
+                    <button onclick="setExample('https://httpstat.us/500')" class="text-xs text-orange-400 hover:text-orange-300 underline">500 Error</button>
+                </div>
+            </div>
+
+            <!-- Batch Check -->
+            <div class="mb-6 border-t border-white/10 pt-6">
+                <label class="block text-sm font-semibold text-gray-300 mb-2">Mehrere URLs prüfen (eine pro Zeile)</label>
+                <textarea id="batchInput" rows="4" placeholder="https://example.de/seite-1&#10;https://example.de/seite-2&#10;https://example.de/alte-url"
+                          class="w-full bg-slate-900/70 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-orange-500 text-sm transition-colors resize-none"></textarea>
+                <button onclick="checkBatch()" id="batchBtn"
+                        class="mt-3 bg-slate-700 hover:bg-slate-600 text-white font-semibold px-5 py-2 rounded-lg transition-all text-sm">
+                    Alle prüfen (max. 20)
+                </button>
+            </div>
+
+            <!-- Loading -->
+            <div id="loading" class="hidden text-center py-8">
+                <div class="inline-block w-10 h-10 border-4 border-orange-500/30 border-t-orange-500 rounded-full animate-spin mb-3"></div>
+                <p class="text-gray-400 text-sm" id="loadingMsg">Verbindung wird geprüft...</p>
+            </div>
+
+            <!-- Single Result -->
+            <div id="result" class="hidden"></div>
+
+            <!-- Batch Results -->
+            <div id="batchResults" class="hidden mt-6">
+                <h3 class="text-white font-bold mb-4" id="batchTitle">Ergebnisse</h3>
+                <div id="batchList" class="space-y-2"></div>
+            </div>
+        </div>
+
+        <!-- AdSense -->
+        <div class="my-8 text-center">
+            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8475857002943858" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        </div>
+
+        <!-- Status Code Reference -->
+        <div class="bg-slate-800/40 border border-white/10 rounded-2xl p-6">
+            <h2 class="text-xl font-bold text-white mb-5">HTTP-Status-Code Referenz für SEO</h2>
+
+            <!-- 2xx -->
+            <div class="mb-6">
+                <h3 class="text-green-400 font-semibold text-sm uppercase tracking-wide mb-3">2xx — Erfolg</h3>
+                <div class="space-y-2">
+                    <div class="flex items-start gap-3 bg-slate-900/40 rounded-xl p-4">
+                        <span class="status-badge-2xx px-3 py-1 rounded-lg font-mono font-bold text-sm whitespace-nowrap">200 OK</span>
+                        <div>
+                            <p class="text-white font-medium text-sm">Alles in Ordnung</p>
+                            <p class="text-gray-400 text-xs mt-1">Die Seite existiert und ist erreichbar. Für SEO optimal — Google indexiert und bewertet diese Seite normal.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-3 bg-slate-900/40 rounded-xl p-4">
+                        <span class="status-badge-2xx px-3 py-1 rounded-lg font-mono font-bold text-sm whitespace-nowrap">204 No Content</span>
+                        <div>
+                            <p class="text-white font-medium text-sm">Kein Inhalt</p>
+                            <p class="text-gray-400 text-xs mt-1">Server antwortet ohne Inhalt. Für API-Endpunkte normal, für indexierbare Seiten problematisch.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3xx -->
+            <div class="mb-6">
+                <h3 class="text-yellow-400 font-semibold text-sm uppercase tracking-wide mb-3">3xx — Weiterleitungen</h3>
+                <div class="space-y-2">
+                    <div class="flex items-start gap-3 bg-slate-900/40 rounded-xl p-4">
+                        <span class="status-badge-3xx px-3 py-1 rounded-lg font-mono font-bold text-sm whitespace-nowrap">301 Moved Permanently</span>
+                        <div>
+                            <p class="text-white font-medium text-sm">Dauerhafte Weiterleitung — SEO-freundlich</p>
+                            <p class="text-gray-400 text-xs mt-1">Überträgt ~95% des PageRanks auf die neue URL. Verwende bei URL-Änderungen, Domain-Wechsel oder www vs. non-www Konsolidierung.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-3 bg-slate-900/40 rounded-xl p-4">
+                        <span class="status-badge-3xx px-3 py-1 rounded-lg font-mono font-bold text-sm whitespace-nowrap">302 Found</span>
+                        <div>
+                            <p class="text-white font-medium text-sm">Temporäre Weiterleitung — mit Vorsicht verwenden</p>
+                            <p class="text-gray-400 text-xs mt-1">Überträgt weniger PageRank als 301. Google indexiert manchmal noch die Original-URL. Nur verwenden wenn wirklich temporär.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-3 bg-slate-900/40 rounded-xl p-4">
+                        <span class="status-badge-3xx px-3 py-1 rounded-lg font-mono font-bold text-sm whitespace-nowrap">307 Temporary Redirect</span>
+                        <div>
+                            <p class="text-white font-medium text-sm">Temporäre Weiterleitung (HTTP/1.1)</p>
+                            <p class="text-gray-400 text-xs mt-1">Behält die HTTP-Methode bei (POST bleibt POST). Für Login-Weiterleitungen gedacht, nicht für normales SEO.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-3 bg-slate-900/40 rounded-xl p-4">
+                        <span class="status-badge-3xx px-3 py-1 rounded-lg font-mono font-bold text-sm whitespace-nowrap">308 Permanent Redirect</span>
+                        <div>
+                            <p class="text-white font-medium text-sm">Dauerhafte Weiterleitung (HTTP/1.1)</p>
+                            <p class="text-gray-400 text-xs mt-1">Wie 301, behält aber die HTTP-Methode bei. Von Google wie eine 301-Weiterleitung behandelt.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4xx -->
+            <div class="mb-6">
+                <h3 class="text-red-400 font-semibold text-sm uppercase tracking-wide mb-3">4xx — Client-Fehler</h3>
+                <div class="space-y-2">
+                    <div class="flex items-start gap-3 bg-slate-900/40 rounded-xl p-4">
+                        <span class="status-badge-4xx px-3 py-1 rounded-lg font-mono font-bold text-sm whitespace-nowrap">404 Not Found</span>
+                        <div>
+                            <p class="text-white font-medium text-sm">Seite nicht gefunden — SEO-Schaden möglich</p>
+                            <p class="text-gray-400 text-xs mt-1">Google entfernt die Seite aus dem Index. Backlinks auf 404-URLs verlieren ihre Kraft. Richte eine 301-Weiterleitung auf eine relevante Seite ein.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-3 bg-slate-900/40 rounded-xl p-4">
+                        <span class="status-badge-4xx px-3 py-1 rounded-lg font-mono font-bold text-sm whitespace-nowrap">410 Gone</span>
+                        <div>
+                            <p class="text-white font-medium text-sm">Seite dauerhaft entfernt — schnellere Deindexierung</p>
+                            <p class="text-gray-400 text-xs mt-1">Signalisiert Google, dass die Seite dauerhaft weg ist. Google entfernt sie schneller aus dem Index als bei 404. Verwende bei absichtlich gelöschten Seiten.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-3 bg-slate-900/40 rounded-xl p-4">
+                        <span class="status-badge-4xx px-3 py-1 rounded-lg font-mono font-bold text-sm whitespace-nowrap">403 Forbidden</span>
+                        <div>
+                            <p class="text-white font-medium text-sm">Zugriff verweigert</p>
+                            <p class="text-gray-400 text-xs mt-1">Google kann die Seite nicht crawlen. Wenn Seiten 403 zurückgeben die indexiert sein sollen, ist das ein Problem für Sichtbarkeit und Rankings.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-3 bg-slate-900/40 rounded-xl p-4">
+                        <span class="status-badge-4xx px-3 py-1 rounded-lg font-mono font-bold text-sm whitespace-nowrap">429 Too Many Requests</span>
+                        <div>
+                            <p class="text-white font-medium text-sm">Rate Limit überschritten</p>
+                            <p class="text-gray-400 text-xs mt-1">Wenn Google diesen Status erhält, verlangsamt der Crawler. Das reduziert das Crawl-Budget. Überprüfe deine Server-Einstellungen für Googlebot.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5xx -->
+            <div>
+                <h3 class="text-purple-400 font-semibold text-sm uppercase tracking-wide mb-3">5xx — Server-Fehler</h3>
+                <div class="space-y-2">
+                    <div class="flex items-start gap-3 bg-slate-900/40 rounded-xl p-4">
+                        <span class="status-badge-5xx px-3 py-1 rounded-lg font-mono font-bold text-sm whitespace-nowrap">500 Internal Server Error</span>
+                        <div>
+                            <p class="text-white font-medium text-sm">Allgemeiner Serverfehler — sofort beheben</p>
+                            <p class="text-gray-400 text-xs mt-1">Google kann die Seite nicht laden. Bei anhaltenden 500-Fehlern verliert die Seite ihre Position im Index. Prüfe Server-Logs sofort.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-3 bg-slate-900/40 rounded-xl p-4">
+                        <span class="status-badge-5xx px-3 py-1 rounded-lg font-mono font-bold text-sm whitespace-nowrap">503 Service Unavailable</span>
+                        <div>
+                            <p class="text-white font-medium text-sm">Server vorübergehend nicht verfügbar</p>
+                            <p class="text-gray-400 text-xs mt-1">Kurzfristig toleriert Google 503 (z.B. Wartung). Bei Wartung: Retry-After Header setzen. Dauerhafte 503-Fehler führen zur Deindexierung.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-3 bg-slate-900/40 rounded-xl p-4">
+                        <span class="status-badge-5xx px-3 py-1 rounded-lg font-mono font-bold text-sm whitespace-nowrap">504 Gateway Timeout</span>
+                        <div>
+                            <p class="text-white font-medium text-sm">Upstream-Server antwortet nicht</p>
+                            <p class="text-gray-400 text-xs mt-1">Meist ein Problem mit Reverse Proxy, Load Balancer oder Backend-Server. Google bricht den Crawl ab. Prüfe Server-Konfiguration und TTFB.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Related Links -->
+        <div class="mt-8 grid md:grid-cols-2 gap-4">
+            <a href="/tools/redirect-ketten-tester.html" class="bg-slate-800/50 hover:bg-slate-800 border border-white/10 rounded-xl p-5 transition-all group">
+                <p class="text-blue-400 text-xs font-semibold uppercase tracking-wide mb-1">Verwandtes Tool</p>
+                <h3 class="text-white font-semibold group-hover:text-blue-300 transition-colors">Redirect-Ketten-Tester</h3>
+                <p class="text-gray-400 text-xs mt-1">Prüfe ob deine Weiterleitungen direkt sind oder Ketten bilden</p>
+            </a>
+            <a href="/blog/url-struktur-seo-freundlich.html" class="bg-slate-800/50 hover:bg-slate-800 border border-white/10 rounded-xl p-5 transition-all group">
+                <p class="text-green-400 text-xs font-semibold uppercase tracking-wide mb-1">Verwandter Artikel</p>
+                <h3 class="text-white font-semibold group-hover:text-green-300 transition-colors">URL-Struktur für SEO</h3>
+                <p class="text-gray-400 text-xs mt-1">SEO-freundliche URLs erstellen — mit Checkliste</p>
+            </a>
+        </div>
+
+        <!-- Main Tool CTA -->
+        <div class="mt-8 bg-gradient-to-r from-orange-600/20 to-red-600/20 border border-orange-500/30 rounded-2xl p-8 text-center">
+            <h3 class="text-2xl font-bold text-white mb-3">Vollständige Website-Analyse</h3>
+            <p class="text-gray-300 mb-6">Shift07 prüft deine gesamte Website auf SEO-Probleme — inkl. Status-Codes, Meta-Tags, Ladezeit und mehr.</p>
+            <a href="https://shift07.ai" class="inline-block bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-400 hover:to-red-400 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all shadow-xl shadow-orange-900/40">
+                Kostenlos analysieren →
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/10 py-12 bg-slate-900/80">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <div class="flex items-center justify-center gap-2 mb-4">
+                <img src="/logo.png" alt="Shift07 Logo" class="h-6 w-6">
+                <span class="text-white font-bold">Shift07</span>
+            </div>
+            <p class="text-gray-400 text-sm mb-4">Kostenlose SEO-Tools für deine Website</p>
+            <div class="flex justify-center gap-6 text-sm text-gray-400">
+                <a href="/" class="hover:text-white transition-colors">Home</a>
+                <a href="/blog/" class="hover:text-white transition-colors">Blog</a>
+                <a href="/tools/" class="hover:text-white transition-colors">Tools</a>
+                <a href="/impressum.html" class="hover:text-white transition-colors">Impressum</a>
+                <a href="/datenschutz.html" class="hover:text-white transition-colors">Datenschutz</a>
+            </div>
+            <p class="text-gray-600 text-xs mt-6">© 2026 Thümmler AI GmbH. Alle Rechte vorbehalten.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // Enter-Taste
+        document.getElementById('urlInput').addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') checkUrl();
+        });
+
+        function setExample(url) {
+            document.getElementById('urlInput').value = url;
+        }
+
+        // Status-Code Datenbank
+        const STATUS_INFO = {
+            200: { label: 'OK', seo: 'optimal', color: '2xx', desc: 'Seite ist erreichbar und wird normal indexiert.', action: 'Keine Aktion erforderlich.', icon: '✅' },
+            201: { label: 'Created', seo: 'neutral', color: '2xx', desc: 'Ressource wurde erstellt.', action: 'Für APIs normal. Für HTML-Seiten ungewöhnlich.', icon: '✅' },
+            204: { label: 'No Content', seo: 'schlecht', color: '2xx', desc: 'Server antwortet ohne Inhalt.', action: 'Problematisch für indexierbare Seiten. Prüfe Server-Konfiguration.', icon: '⚠️' },
+            301: { label: 'Moved Permanently', seo: 'gut', color: '3xx', desc: 'Dauerhafte Weiterleitung. ~95% des PageRanks wird übertragen.', action: 'Ideal für URL-Änderungen. Prüfe ob Ziel-URL korrekt ist.', icon: '➡️' },
+            302: { label: 'Found (Temporary Redirect)', seo: 'bedingt', color: '3xx', desc: 'Temporäre Weiterleitung. PageRank-Übertragung unsicher.', action: 'Nur verwenden wenn wirklich temporär. Sonst 301 nutzen.', icon: '⚠️' },
+            303: { label: 'See Other', seo: 'neutral', color: '3xx', desc: 'Verweise auf andere Ressource.', action: 'Für POST→GET Redirects nach Formularen. SEO-neutral.', icon: '➡️' },
+            304: { label: 'Not Modified', seo: 'gut', color: '3xx', desc: 'Inhalt unverändert — Browser-Cache wird genutzt.', action: 'Zeigt gutes Caching. Positiv für Performance.', icon: '✅' },
+            307: { label: 'Temporary Redirect', seo: 'bedingt', color: '3xx', desc: 'Temporäre Weiterleitung (HTTP/1.1). Methode wird beibehalten.', action: 'Für POST-Weiterleitungen. Für normale SEO-Redirects lieber 301.', icon: '⚠️' },
+            308: { label: 'Permanent Redirect', seo: 'gut', color: '3xx', desc: 'Dauerhafte Weiterleitung (HTTP/1.1). Von Google wie 301 behandelt.', action: 'Gute Alternative zu 301 bei POST-Anfragen.', icon: '➡️' },
+            400: { label: 'Bad Request', seo: 'schlecht', color: '4xx', desc: 'Ungültige Anfrage.', action: 'Prüfe URL-Formatierung. Google kann diese URL nicht crawlen.', icon: '❌' },
+            401: { label: 'Unauthorized', seo: 'neutral', color: '4xx', desc: 'Authentifizierung erforderlich.', action: 'Google kann diese Seite nicht indexieren. Gewollt bei passwortgeschützten Seiten.', icon: '🔒' },
+            403: { label: 'Forbidden', seo: 'schlecht', color: '4xx', desc: 'Zugriff verweigert.', action: 'Seite nicht crawlbar. Prüfe robots.txt und Server-Berechtigungen.', icon: '⛔' },
+            404: { label: 'Not Found', seo: 'schlecht', color: '4xx', desc: 'Seite existiert nicht. Google entfernt sie aus dem Index.', action: 'Richte 301-Weiterleitung auf relevante Seite ein. Backlinks gehen verloren!', icon: '❌' },
+            405: { label: 'Method Not Allowed', seo: 'neutral', color: '4xx', desc: 'HTTP-Methode nicht erlaubt.', action: 'Server akzeptiert keine GET-Anfragen. Prüfe Server-Konfiguration.', icon: '❌' },
+            410: { label: 'Gone', seo: 'bedingt', color: '4xx', desc: 'Seite dauerhaft entfernt. Google deindexiert schneller als 404.', action: 'Verwende bei absichtlich gelöschten Seiten ohne Alternative.', icon: '🗑️' },
+            429: { label: 'Too Many Requests', seo: 'schlecht', color: '4xx', desc: 'Rate Limit. Google-Crawler wird verlangsamt.', action: 'Erhöhe Crawl-Rate-Limits für Googlebot in Server-Konfiguration.', icon: '⚠️' },
+            500: { label: 'Internal Server Error', seo: 'kritisch', color: '5xx', desc: 'Allgemeiner Serverfehler. Seite nicht ladbar.', action: 'Sofort beheben! Prüfe Server-Logs. Bei Dauerproblem: Deindexierung droht.', icon: '🚨' },
+            502: { label: 'Bad Gateway', seo: 'kritisch', color: '5xx', desc: 'Proxy/Load-Balancer erhält ungültige Antwort.', action: 'Prüfe Backend-Server und Proxy-Konfiguration. Sofort beheben.', icon: '🚨' },
+            503: { label: 'Service Unavailable', seo: 'schlecht', color: '5xx', desc: 'Server vorübergehend nicht verfügbar.', action: 'Kurzfristig OK (Wartung). Setze Retry-After Header. Dauerhaft: Ranking-Verlust.', icon: '⚠️' },
+            504: { label: 'Gateway Timeout', seo: 'kritisch', color: '5xx', desc: 'Upstream-Server antwortet zu langsam.', action: 'Prüfe TTFB, Load Balancer, Datenbankabfragen. Google bricht Crawl ab.', icon: '🚨' },
+        };
+
+        const SEO_COLORS = {
+            'optimal': 'text-green-400',
+            'gut': 'text-green-400',
+            'bedingt': 'text-yellow-400',
+            'neutral': 'text-gray-400',
+            'schlecht': 'text-red-400',
+            'kritisch': 'text-red-400 font-bold',
+        };
+
+        async function checkUrl() {
+            const url = document.getElementById('urlInput').value.trim();
+            if (!url) {
+                alert('Bitte gib eine URL ein.');
+                return;
+            }
+
+            const normalized = url.startsWith('http') ? url : 'https://' + url;
+
+            document.getElementById('loading').classList.remove('hidden');
+            document.getElementById('result').classList.add('hidden');
+            document.getElementById('batchResults').classList.add('hidden');
+            document.getElementById('loadingMsg').textContent = `Prüfe ${normalized}...`;
+
+            const info = await fetchStatus(normalized);
+
+            document.getElementById('loading').classList.add('hidden');
+            renderSingleResult(info);
+            document.getElementById('result').classList.remove('hidden');
+        }
+
+        async function fetchStatus(url) {
+            // Da Browser CORS blockiert, nutzen wir eine öffentliche Proxy-API
+            // und kombinieren das mit einer no-cors Fetch für grundlegende Checks
+            const startTime = Date.now();
+
+            try {
+                // Versuche direkten Fetch (funktioniert bei CORS-erlaubten Ressourcen)
+                const controller = new AbortController();
+                const timeout = setTimeout(() => controller.abort(), 8000);
+
+                const response = await fetch(url, {
+                    method: 'HEAD',
+                    signal: controller.signal,
+                    redirect: 'manual',
+                    mode: 'no-cors',
+                });
+                clearTimeout(timeout);
+
+                const elapsed = Date.now() - startTime;
+
+                // no-cors Fetch gibt immer opaque response zurück
+                // Status ist 0 für opaque, aber wir wissen dass Verbindung funktioniert
+                if (response.type === 'opaque') {
+                    return { url, status: 200, elapsed, note: 'Seite ist erreichbar (CORS-Einschränkung: exakter Status nicht lesbar)' };
+                }
+
+                return {
+                    url,
+                    status: response.status,
+                    location: response.headers.get('location'),
+                    elapsed
+                };
+            } catch (e) {
+                const elapsed = Date.now() - startTime;
+                if (e.name === 'AbortError') {
+                    return { url, status: 'timeout', elapsed };
+                }
+                // Verbindungsfehler
+                return { url, status: 'error', error: e.message, elapsed };
+            }
+        }
+
+        function renderSingleResult(info) {
+            const container = document.getElementById('result');
+            const status = info.status;
+            const statusData = STATUS_INFO[status];
+
+            let badgeClass, statusLabel, seoLabel;
+
+            if (status === 'timeout') {
+                badgeClass = 'status-badge-5xx';
+                statusLabel = 'TIMEOUT';
+                seoLabel = 'kritisch';
+            } else if (status === 'error') {
+                badgeClass = 'status-badge-unknown';
+                statusLabel = 'FEHLER';
+                seoLabel = 'unbekannt';
+            } else if (status >= 500) {
+                badgeClass = 'status-badge-5xx';
+                statusLabel = status;
+                seoLabel = statusData?.seo || 'kritisch';
+            } else if (status >= 400) {
+                badgeClass = 'status-badge-4xx';
+                statusLabel = status;
+                seoLabel = statusData?.seo || 'schlecht';
+            } else if (status >= 300) {
+                badgeClass = 'status-badge-3xx';
+                statusLabel = status;
+                seoLabel = statusData?.seo || 'bedingt';
+            } else if (status >= 200 || info.note) {
+                badgeClass = 'status-badge-2xx';
+                statusLabel = status === 200 ? '200' : status;
+                seoLabel = statusData?.seo || 'optimal';
+            } else {
+                badgeClass = 'status-badge-unknown';
+                statusLabel = status || '?';
+                seoLabel = 'unbekannt';
+            }
+
+            const seoColor = SEO_COLORS[seoLabel] || 'text-gray-400';
+
+            let html = `
+                <div class="bg-slate-900/60 border border-white/10 rounded-xl p-6">
+                    <div class="flex items-center gap-4 mb-4 flex-wrap">
+                        <span class="${badgeClass} px-4 py-2 rounded-xl font-mono font-black text-2xl">
+                            ${statusLabel}
+                        </span>
+                        ${statusData ? `<span class="text-white font-semibold">${statusData.label}</span>` : ''}
+                        <span class="text-gray-400 text-sm">${info.elapsed}ms</span>
+                    </div>
+
+                    <p class="text-gray-300 text-sm mb-1 truncate"><span class="text-gray-500">URL:</span> ${escapeHtml(info.url)}</p>
+            `;
+
+            if (info.note) {
+                html += `<p class="text-yellow-400 text-xs bg-yellow-500/10 border border-yellow-500/20 rounded-lg px-3 py-2 mb-4 mt-2">${info.note}</p>`;
+            }
+
+            if (status === 'timeout') {
+                html += `
+                    <div class="mt-4 p-4 bg-red-500/10 border border-red-500/20 rounded-xl">
+                        <p class="text-red-400 font-semibold">⏱️ Timeout</p>
+                        <p class="text-gray-400 text-sm mt-1">Die URL hat nicht innerhalb von 8 Sekunden geantwortet. Das ist ein schweres Performance-Problem.</p>
+                        <p class="text-gray-400 text-sm mt-1"><strong>SEO-Einfluss:</strong> Google bricht Crawls bei langen Antwortzeiten ab. Prüfe sofort TTFB und Server-Konfiguration.</p>
+                    </div>
+                `;
+            } else if (status === 'error') {
+                html += `
+                    <div class="mt-4 p-4 bg-slate-800/60 border border-white/10 rounded-xl">
+                        <p class="text-gray-400 font-semibold">Verbindungsfehler</p>
+                        <p class="text-gray-500 text-sm mt-1">Mögliche Ursachen: CORS-Einschränkung des Browsers, Domain existiert nicht, oder HTTPS-Fehler.</p>
+                        <p class="text-blue-400 text-sm mt-2">Hinweis: Manche URLs können aus Datenschutzgründen nicht direkt aus dem Browser geprüft werden. Nutze das <a href="/tools/redirect-ketten-tester.html" class="underline">Redirect-Ketten-Tool</a> für tiefere Analysen.</p>
+                    </div>
+                `;
+            } else if (statusData) {
+                html += `
+                    <div class="mt-4 grid md:grid-cols-2 gap-4">
+                        <div class="p-4 bg-slate-800/60 border border-white/10 rounded-xl">
+                            <p class="text-gray-400 text-xs font-semibold uppercase mb-2">Was bedeutet das?</p>
+                            <p class="text-gray-300 text-sm">${statusData.icon} ${statusData.desc}</p>
+                        </div>
+                        <div class="p-4 bg-slate-800/60 border border-white/10 rounded-xl">
+                            <p class="text-gray-400 text-xs font-semibold uppercase mb-2">SEO-Bewertung</p>
+                            <p class="${seoColor} font-bold text-sm mb-1">${seoLabel.toUpperCase()}</p>
+                            <p class="text-gray-300 text-sm">${statusData.action}</p>
+                        </div>
+                    </div>
+                `;
+
+                if (info.location) {
+                    html += `
+                        <div class="mt-3 p-3 bg-yellow-500/10 border border-yellow-500/20 rounded-xl">
+                            <p class="text-yellow-400 text-xs font-semibold mb-1">Weitergeleitet zu:</p>
+                            <p class="text-white text-sm font-mono break-all">${escapeHtml(info.location)}</p>
+                        </div>
+                    `;
+                }
+            }
+
+            html += `</div>`;
+            container.innerHTML = html;
+        }
+
+        async function checkBatch() {
+            const raw = document.getElementById('batchInput').value.trim();
+            if (!raw) {
+                alert('Bitte gib URLs ein (eine pro Zeile).');
+                return;
+            }
+
+            const urls = raw.split('\n').map(u => u.trim()).filter(u => u).slice(0, 20);
+            if (urls.length === 0) return;
+
+            document.getElementById('loading').classList.remove('hidden');
+            document.getElementById('batchResults').classList.add('hidden');
+            document.getElementById('result').classList.add('hidden');
+            document.getElementById('loadingMsg').textContent = `Prüfe ${urls.length} URLs...`;
+            document.getElementById('batchBtn').disabled = true;
+
+            const results = await Promise.all(urls.map(url => {
+                const normalized = url.startsWith('http') ? url : 'https://' + url;
+                return fetchStatus(normalized);
+            }));
+
+            document.getElementById('loading').classList.add('hidden');
+            document.getElementById('batchBtn').disabled = false;
+
+            const listEl = document.getElementById('batchList');
+            listEl.innerHTML = '';
+            document.getElementById('batchTitle').textContent = `Ergebnisse (${results.length} URLs)`;
+
+            results.forEach(info => {
+                const status = info.status;
+                let badgeClass, icon;
+
+                if (status === 'timeout' || status === 'error') {
+                    badgeClass = 'status-badge-unknown';
+                    icon = status === 'timeout' ? '⏱️' : '❌';
+                } else if (status >= 500) { badgeClass = 'status-badge-5xx'; icon = '🚨'; }
+                else if (status >= 400) { badgeClass = 'status-badge-4xx'; icon = '❌'; }
+                else if (status >= 300) { badgeClass = 'status-badge-3xx'; icon = '➡️'; }
+                else { badgeClass = 'status-badge-2xx'; icon = '✅'; }
+
+                const statusLabel = STATUS_INFO[status]?.label || (status === 'timeout' ? 'Timeout' : status === 'error' ? 'Fehler' : status);
+
+                const row = document.createElement('div');
+                row.className = 'flex items-center gap-3 bg-slate-900/40 rounded-xl p-3';
+                row.innerHTML = `
+                    <span class="${badgeClass} px-2 py-1 rounded-lg font-mono font-bold text-sm whitespace-nowrap min-w-[4rem] text-center">${icon} ${typeof status === 'number' ? status : '?'}</span>
+                    <div class="min-w-0 flex-1">
+                        <p class="text-white text-sm truncate">${escapeHtml(info.url)}</p>
+                        <p class="text-gray-500 text-xs">${statusLabel} · ${info.elapsed}ms</p>
+                    </div>
+                `;
+                listEl.appendChild(row);
+            });
+
+            document.getElementById('batchResults').classList.remove('hidden');
+        }
+
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.appendChild(document.createTextNode(text || ''));
+            return div.innerHTML;
+        }
+    </script>
+</body>
+</html>
