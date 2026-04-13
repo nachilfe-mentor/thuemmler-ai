@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Mon, 13 Apr 2026 01:55:20 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 13 Apr 2026 01:59:05 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Bildoptimierung für Websites: WebP, AVIF und Lazy Loading 2026</title>
+      <link>https://shift07.ai/blog/bildoptimierung-webp-avif-lazy-loading.html</link>
+      <guid>https://shift07.ai/blog/bildoptimierung-webp-avif-lazy-loading.html</guid>
+      <pubDate>Mon, 13 Apr 2026 01:58:35 +0000</pubDate>
+      <description>Bilder für SEO optimieren: WebP und AVIF statt JPEG, Lazy Loading richtig einsetzen, Bildgrößen reduzieren ohne Qualitätsverlust. Konkreter Leitfaden für bessere Ladezeiten und Core Web Vitals 2026.</description>
+      <category>Performance</category>
+    </item>
     <item>
       <title>JavaScript-Performance für SEO: Lazy Loading, Code Splitting, Defer</title>
       <link>https://shift07.ai/blog/javascript-performance-seo-lazy-loading-code-splitting.html</link>
@@ -158,14 +166,6 @@
       <pubDate>Fri, 10 Apr 2026 01:22:12 +0000</pubDate>
       <description>Off-Page SEO erklärt: Was Backlinks, externe Signale und Linkaufbau für dein Google-Ranking bedeuten. Der vollständige Leitfaden mit konkreten Strategien für 2026.</description>
       <category>Off-Page SEO</category>
-    </item>
-    <item>
-      <title>Inhalte für Featured Snippets optimieren: Listen, Tabellen und direkte Antworten</title>
-      <link>https://shift07.ai/blog/inhalte-featured-snippets-optimieren.html</link>
-      <guid>https://shift07.ai/blog/inhalte-featured-snippets-optimieren.html</guid>
-      <pubDate>Fri, 10 Apr 2026 01:14:10 +0000</pubDate>
-      <description>Wie du Inhalte strukturieren musst, damit Google sie als Featured Snippet auswählt: direkte Antworten, Listen, Tabellen und Paragraph-Snippets Schritt für Schritt erklärt.</description>
-      <category>Content SEO</category>
     </item>
   </channel>
 </rss>
