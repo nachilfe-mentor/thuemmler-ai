@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Mon, 13 Apr 2026 01:59:05 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 13 Apr 2026 03:43:00 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>URL-Struktur für SEO: SEO-freundliche URLs erstellen</title>
+      <link>https://shift07.ai/blog/url-struktur-seo-freundlich.html</link>
+      <guid>https://shift07.ai/blog/url-struktur-seo-freundlich.html</guid>
+      <pubDate>Mon, 13 Apr 2026 03:42:00 +0000</pubDate>
+      <description>Lerne, wie du SEO-freundliche URLs erstellst. Bindestriche, Kleinbuchstaben, Länge, Verzeichnisstruktur — alles mit Beispielen und Checkliste.</description>
+      <category>On-Page SEO</category>
+    </item>
     <item>
       <title>Bildoptimierung für Websites: WebP, AVIF und Lazy Loading 2026</title>
       <link>https://shift07.ai/blog/bildoptimierung-webp-avif-lazy-loading.html</link>
@@ -157,14 +165,6 @@
       <guid>https://shift07.ai/blog/dofollow-nofollow-links-seo.html</guid>
       <pubDate>Fri, 10 Apr 2026 02:56:31 +0000</pubDate>
       <description>Dofollow vs. Nofollow Links erklärt: Was ist der Unterschied, welche Link-Attribute gibt es (ugc, sponsored), und wie wirkst du dich auf dein SEO aus?</description>
-      <category>Off-Page SEO</category>
-    </item>
-    <item>
-      <title>Off-Page SEO: Der vollständige Leitfaden 2026</title>
-      <link>https://shift07.ai/blog/off-page-seo-leitfaden.html</link>
-      <guid>https://shift07.ai/blog/off-page-seo-leitfaden.html</guid>
-      <pubDate>Fri, 10 Apr 2026 01:22:12 +0000</pubDate>
-      <description>Off-Page SEO erklärt: Was Backlinks, externe Signale und Linkaufbau für dein Google-Ranking bedeuten. Der vollständige Leitfaden mit konkreten Strategien für 2026.</description>
       <category>Off-Page SEO</category>
     </item>
   </channel>
