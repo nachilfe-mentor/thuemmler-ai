@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Sun, 12 Apr 2026 04:31:29 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 13 Apr 2026 00:12:30 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Core Web Vitals verbessern: LCP, CLS, INP optimieren — Schritt für Schritt</title>
+      <link>https://shift07.ai/blog/core-web-vitals-verbessern-lcp-cls-inp.html</link>
+      <guid>https://shift07.ai/blog/core-web-vitals-verbessern-lcp-cls-inp.html</guid>
+      <pubDate>Mon, 13 Apr 2026 00:11:06 +0000</pubDate>
+      <description>Core Web Vitals verbessern: Schritt-für-Schritt-Anleitung für LCP, CLS und INP. Konkrete Maßnahmen, Tools und Benchmarks für bessere Google-Rankings 2026.</description>
+      <category>Performance-SEO</category>
+    </item>
     <item>
       <title>Ladezeit als Ranking-Faktor: Wie Page Speed dein Google-Ranking beeinflusst</title>
       <link>https://shift07.ai/blog/ladezeit-ranking-faktor-page-speed.html</link>
@@ -157,14 +165,6 @@
       <guid>https://shift07.ai/blog/content-audit-inhalte-aktualisieren.html</guid>
       <pubDate>Thu, 09 Apr 2026 04:04:25 +0000</pubDate>
       <description>Content-Audit Schritt für Schritt: Wie du alte Blogartikel analysierst, überarbeitest und aktualisierst — und so bestehende Rankings verbesserst statt immer neue Inhalte zu schreiben.</description>
-      <category>Content SEO</category>
-    </item>
-    <item>
-      <title>E-A-T: Expertise, Autorität und Vertrauen als Google-Qualitätssignale</title>
-      <link>https://shift07.ai/blog/eat-google-qualitaetssignale.html</link>
-      <guid>https://shift07.ai/blog/eat-google-qualitaetssignale.html</guid>
-      <pubDate>Thu, 09 Apr 2026 03:59:06 +0000</pubDate>
-      <description>E-A-T erklärt: Wie Google Expertise, Authoritativeness und Trustworthiness bewertet und warum diese Qualitätssignale dein Ranking entscheiden. Mit konkreten Maßnahmen.</description>
       <category>Content SEO</category>
     </item>
   </channel>
