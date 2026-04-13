@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Mon, 13 Apr 2026 03:46:44 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 13 Apr 2026 05:35:54 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Title-Tag optimieren: Die vollständige Anleitung 2026</title>
+      <link>https://shift07.ai/blog/title-tag-optimieren-seo.html</link>
+      <guid>https://shift07.ai/blog/title-tag-optimieren-seo.html</guid>
+      <pubDate>Mon, 13 Apr 2026 05:35:30 +0000</pubDate>
+      <description>Title-Tags richtig optimieren: Länge, Keyword-Platzierung, Formeln und häufige Fehler. Mit Checkliste und kostenlosen Tools für perfekte SEO-Titel.</description>
+      <category>OnPage-SEO</category>
+    </item>
     <item>
       <title>URL-Struktur für SEO: SEO-freundliche URLs erstellen</title>
       <link>https://shift07.ai/blog/url-struktur-seo-freundlich.html</link>
@@ -157,14 +165,6 @@
       <guid>https://shift07.ai/blog/linkjuice-pagerank-seo.html</guid>
       <pubDate>Fri, 10 Apr 2026 03:02:12 +0000</pubDate>
       <description>Was ist Linkjuice? Wie funktioniert PageRank? Dieser Leitfaden erklärt, wie Link-Stärke durch Verlinkungen übertragen wird und wie du das für dein SEO nutzt.</description>
-      <category>Off-Page SEO</category>
-    </item>
-    <item>
-      <title>Dofollow vs. Nofollow Links: Der vollständige SEO-Leitfaden 2026</title>
-      <link>https://shift07.ai/blog/dofollow-nofollow-links-seo.html</link>
-      <guid>https://shift07.ai/blog/dofollow-nofollow-links-seo.html</guid>
-      <pubDate>Fri, 10 Apr 2026 02:56:31 +0000</pubDate>
-      <description>Dofollow vs. Nofollow Links erklärt: Was ist der Unterschied, welche Link-Attribute gibt es (ugc, sponsored), und wie wirkst du dich auf dein SEO aus?</description>
       <category>Off-Page SEO</category>
     </item>
   </channel>
