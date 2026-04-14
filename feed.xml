@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Tue, 14 Apr 2026 03:04:23 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 14 Apr 2026 04:42:18 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Evergreen Content für SEO: Artikel, die jahrelang Traffic bringen</title>
+      <link>https://shift07.ai/blog/evergreen-content-seo-strategie.html</link>
+      <guid>https://shift07.ai/blog/evergreen-content-seo-strategie.html</guid>
+      <pubDate>Tue, 14 Apr 2026 04:41:46 +0000</pubDate>
+      <description>Evergreen Content bringt dauerhaft organischen Traffic. Lerne, welche Themen zeitlos sind, wie du sie schreibst und wie du sie aktuell hältst.</description>
+      <category>Content-Marketing</category>
+    </item>
     <item>
       <title>Content-Marketing für SEO: Mit Inhalten Backlinks und Traffic gewinnen</title>
       <link>https://shift07.ai/blog/content-marketing-seo-backlinks.html</link>
@@ -157,14 +165,6 @@
       <guid>https://shift07.ai/blog/indexnow-url-submission-standard.html</guid>
       <pubDate>Sat, 11 Apr 2026 02:07:27 +0000</pubDate>
       <description>IndexNow erklärt: Wie der offene Protokollstandard Suchmaschinen sofort über neue oder geänderte Inhalte informiert. Implementierung für WordPress, Nginx und selbst in 5 Minuten einrichten.</description>
-      <category>Technisches SEO</category>
-    </item>
-    <item>
-      <title>Log-Datei-Analyse für SEO: Crawler-Verhalten verstehen</title>
-      <link>https://shift07.ai/blog/log-datei-analyse-seo.html</link>
-      <guid>https://shift07.ai/blog/log-datei-analyse-seo.html</guid>
-      <pubDate>Sat, 11 Apr 2026 02:00:35 +0000</pubDate>
-      <description>Log-Datei-Analyse für SEO erklärt: Wie du Server-Logs auswertest, Googlebot-Aktivität verstehst und Crawl-Probleme aufdeckst. Schritt-für-Schritt Anleitung mit Tools und Praxistipps.</description>
       <category>Technisches SEO</category>
     </item>
   </channel>
