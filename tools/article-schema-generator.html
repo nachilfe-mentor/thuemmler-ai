@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article Schema Generator – JSON-LD für Blog-Artikel kostenlos erstellen | Shift07</title>
+    <meta name="description" content="Erstelle JSON-LD Article Schema Markup kostenlos für deine Blog-Artikel. Rich Snippets in Google mit strukturierten Daten für Autor, Datum und Bild.">
+    <meta name="author" content="Thümmler AI GmbH">
+    <link rel="icon" type="image/png" href="/logo.png">
+    <link rel="canonical" href="https://shift07.ai/tools/article-schema-generator.html">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Article Schema Generator – JSON-LD für Blog-Artikel kostenlos erstellen">
+    <meta property="og:description" content="Erstelle JSON-LD Article Schema Markup kostenlos für deine Blog-Artikel. Rich Snippets in Google mit strukturierten Daten für Autor, Datum und Bild.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://shift07.ai/tools/article-schema-generator.html">
+    <meta property="og:image" content="https://shift07.ai/tools/images/article-schema-generator.png">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="Shift07">
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Article Schema Generator",
+      "description": "Erstelle JSON-LD Article Schema Markup kostenlos für deine Blog-Artikel.",
+      "url": "https://shift07.ai/tools/article-schema-generator.html",
+      "applicationCategory": "SEOApplication",
+      "operatingSystem": "Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR"
+      }
+    }
+    </script>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K1S1RXBDS8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K1S1RXBDS8');
+    </script>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8475857002943858" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { 'inter': ['Inter', 'system-ui', '-apple-system', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: rgba(15, 23, 42, 0.5); }
+        ::-webkit-scrollbar-thumb { background: rgba(59, 130, 246, 0.5); border-radius: 4px; }
+        html { scroll-behavior: smooth; }
+        .input-field {
+            width: 100%;
+            background: rgba(30, 41, 59, 0.8);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 0.5rem;
+            padding: 0.625rem 0.875rem;
+            color: white;
+            font-size: 0.875rem;
+            transition: border-color 0.2s;
+        }
+        .input-field:focus { outline: none; border-color: #3b82f6; }
+        .input-field::placeholder { color: #64748b; }
+        .input-label { display: block; font-size: 0.8125rem; font-weight: 500; color: #94a3b8; margin-bottom: 0.375rem; }
+        .section-title { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #60a5fa; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid rgba(59,130,246,0.2); }
+        pre { white-space: pre-wrap; word-break: break-all; }
+    </style>
+</head>
+<body class="bg-slate-900 text-white min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-slate-900/80 backdrop-blur-xl border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <a href="/" class="flex items-center gap-2">
+                    <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                    <span class="text-xl font-bold text-white">Shift07</span>
+                </a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="/" class="text-gray-300 hover:text-white transition-colors">SEO-Tool</a>
+                    <a href="/blog/" class="text-gray-300 hover:text-white transition-colors">Blog</a>
+                    <a href="/tools/" class="text-white font-medium border-b-2 border-blue-500 pb-0.5">Tools</a>
+                    <a href="/app/#/login" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-5 py-2 rounded-lg font-medium transition-all">Anmelden</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-gray-300 hover:text-white">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900/95 border-b border-white/10">
+            <div class="px-4 py-3 space-y-2">
+                <a href="/" class="block py-2 text-gray-300 hover:text-white">SEO-Tool</a>
+                <a href="/blog/" class="block py-2 text-gray-300 hover:text-white">Blog</a>
+                <a href="/tools/" class="block py-2 text-white font-medium">Tools</a>
+                <a href="/app/#/login" class="block py-2 text-blue-400 hover:text-blue-300">Anmelden</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="pt-24 pb-8 px-4">
+        <div class="max-w-4xl mx-auto text-center">
+            <div class="inline-flex items-center gap-2 px-4 py-2 bg-violet-500/10 border border-violet-500/20 rounded-full text-violet-400 text-sm font-medium mb-6">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                Kostenloses SEO-Tool
+            </div>
+            <h1 class="text-3xl md:text-5xl font-extrabold text-white mb-4 leading-tight">Article Schema Generator</h1>
+            <p class="text-lg text-gray-400 max-w-2xl mx-auto">Erstelle JSON-LD Markup für deine Blog-Artikel — für Rich Snippets in Google mit Autor, Datum und Bild.</p>
+        </div>
+    </section>
+
+    <!-- Tool -->
+    <section class="pb-16 px-4">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+                <!-- Input Panel -->
+                <div class="bg-slate-800/50 border border-white/10 rounded-2xl p-6 space-y-6">
+                    <p class="section-title">Artikel-Daten eingeben</p>
+
+                    <!-- Artikel-Typ -->
+                    <div>
+                        <label class="input-label">Artikel-Typ</label>
+                        <select id="articleType" class="input-field">
+                            <option value="Article">Article (allgemeiner Artikel)</option>
+                            <option value="BlogPosting" selected>BlogPosting (Blog-Beitrag)</option>
+                            <option value="NewsArticle">NewsArticle (Nachrichtenartikel)</option>
+                            <option value="TechArticle">TechArticle (Technischer Artikel)</option>
+                            <option value="HowTo">HowTo (Anleitung)</option>
+                        </select>
+                    </div>
+
+                    <!-- Titel -->
+                    <div>
+                        <label class="input-label">Titel des Artikels <span class="text-red-400">*</span></label>
+                        <input type="text" id="headline" class="input-field" placeholder="z.B. Was ist SEO? Der vollständige Leitfaden 2026" value="">
+                        <p class="text-xs text-gray-500 mt-1.5">Empfohlen: max. 110 Zeichen</p>
+                    </div>
+
+                    <!-- Beschreibung -->
+                    <div>
+                        <label class="input-label">Meta-Description <span class="text-red-400">*</span></label>
+                        <textarea id="description" rows="2" class="input-field" placeholder="Kurze Zusammenfassung des Artikels (120–160 Zeichen)..."></textarea>
+                        <p id="descCount" class="text-xs text-gray-500 mt-1.5">0 Zeichen</p>
+                    </div>
+
+                    <!-- URL -->
+                    <div>
+                        <label class="input-label">Kanonische URL des Artikels <span class="text-red-400">*</span></label>
+                        <input type="url" id="articleUrl" class="input-field" placeholder="https://deine-website.de/blog/artikel-titel">
+                    </div>
+
+                    <!-- Bild -->
+                    <div>
+                        <label class="input-label">Header-Bild URL</label>
+                        <input type="url" id="imageUrl" class="input-field" placeholder="https://deine-website.de/blog/images/artikel.jpg">
+                        <p class="text-xs text-gray-500 mt-1.5">Empfohlen: 1200 × 630 px (16:9)</p>
+                    </div>
+
+                    <!-- Datumseingaben nebeneinander -->
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label class="input-label">Veröffentlichungsdatum <span class="text-red-400">*</span></label>
+                            <input type="date" id="datePublished" class="input-field">
+                        </div>
+                        <div>
+                            <label class="input-label">Zuletzt geändert</label>
+                            <input type="date" id="dateModified" class="input-field">
+                        </div>
+                    </div>
+
+                    <!-- Autor -->
+                    <div>
+                        <label class="input-label">Autor-Typ</label>
+                        <select id="authorType" class="input-field mb-3" onchange="toggleAuthorFields()">
+                            <option value="Person">Person (einzelner Autor)</option>
+                            <option value="Organization">Organization (Unternehmen/Team)</option>
+                        </select>
+                        <input type="text" id="authorName" class="input-field mb-2" placeholder="Vorname Nachname">
+                        <input type="url" id="authorUrl" class="input-field" placeholder="https://deine-website.de/ueber-uns (optional)">
+                    </div>
+
+                    <!-- Publisher -->
+                    <div>
+                        <label class="input-label">Publisher (Herausgeber)</label>
+                        <input type="text" id="publisherName" class="input-field mb-2" placeholder="Name der Website / des Unternehmens">
+                        <input type="url" id="publisherLogo" class="input-field" placeholder="https://deine-website.de/logo.png (empfohlen: 60px Höhe)">
+                    </div>
+
+                    <!-- Optionale Felder -->
+                    <div>
+                        <label class="input-label">Keywords (kommagetrennt, optional)</label>
+                        <input type="text" id="keywords" class="input-field" placeholder="z.B. SEO, Google, Ranking, Meta-Tags">
+                    </div>
+
+                    <div>
+                        <label class="input-label">Sprache (optional)</label>
+                        <select id="inLanguage" class="input-field">
+                            <option value="">— nicht angeben —</option>
+                            <option value="de" selected>Deutsch (de)</option>
+                            <option value="en">Englisch (en)</option>
+                            <option value="fr">Französisch (fr)</option>
+                            <option value="es">Spanisch (es)</option>
+                        </select>
+                    </div>
+
+                    <button onclick="generateSchema()" class="w-full bg-gradient-to-r from-violet-600 to-blue-600 hover:from-violet-500 hover:to-blue-500 text-white py-3 px-6 rounded-xl font-semibold transition-all text-sm">
+                        JSON-LD generieren
+                    </button>
+                </div>
+
+                <!-- Output Panel -->
+                <div class="space-y-6">
+
+                    <!-- Validierungs-Status -->
+                    <div id="validationBox" class="hidden bg-slate-800/50 border rounded-2xl p-4">
+                        <div id="validationContent"></div>
+                    </div>
+
+                    <!-- Schema Output -->
+                    <div class="bg-slate-800/50 border border-white/10 rounded-2xl p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <p class="section-title mb-0">Generierter JSON-LD Code</p>
+                            <div class="flex gap-2">
+                                <button onclick="copySchema()" id="copyBtn" class="text-xs px-3 py-1.5 bg-blue-600/20 hover:bg-blue-600/40 text-blue-400 border border-blue-500/30 rounded-lg transition-all font-medium">
+                                    Kopieren
+                                </button>
+                                <button onclick="resetForm()" class="text-xs px-3 py-1.5 bg-slate-700 hover:bg-slate-600 text-gray-400 border border-white/10 rounded-lg transition-all font-medium">
+                                    Reset
+                                </button>
+                            </div>
+                        </div>
+                        <div class="bg-slate-900/80 rounded-xl border border-white/5 p-4 min-h-[400px] max-h-[600px] overflow-y-auto">
+                            <pre id="schemaOutput" class="text-sm text-gray-300 font-mono leading-relaxed"><span class="text-gray-500 italic">Fülle das Formular aus und klicke auf „JSON-LD generieren".</span></pre>
+                        </div>
+                    </div>
+
+                    <!-- Einbindungs-Hinweis -->
+                    <div class="bg-violet-900/20 border border-violet-500/20 rounded-2xl p-5">
+                        <h3 class="text-sm font-semibold text-violet-300 mb-2">So bindest du das Schema ein</h3>
+                        <p class="text-xs text-gray-400 leading-relaxed mb-3">Füge den generierten Code im <code class="bg-violet-500/10 text-violet-300 px-1 py-0.5 rounded">&lt;head&gt;</code>-Bereich deiner Seite ein — direkt nach dem öffnenden <code class="bg-violet-500/10 text-violet-300 px-1 py-0.5 rounded">&lt;head&gt;</code>-Tag. Der Code ist bereits fertig als <code class="bg-violet-500/10 text-violet-300 px-1 py-0.5 rounded">&lt;script type="application/ld+json"&gt;</code> formatiert.</p>
+                        <p class="text-xs text-gray-400 leading-relaxed">Danach kannst du das Schema im <a href="https://search.google.com/test/rich-results" target="_blank" rel="noopener" class="text-violet-400 underline">Google Rich Results Test</a> überprüfen oder mit unserem <a href="/tools/json-ld-structured-data-validator.html" class="text-violet-400 underline">JSON-LD Validator</a> testen.</p>
+                    </div>
+
+                    <!-- Vorschau Google Rich Snippet -->
+                    <div id="previewBox" class="hidden bg-slate-800/50 border border-white/10 rounded-2xl p-6">
+                        <p class="section-title">SERP-Vorschau</p>
+                        <div class="bg-white rounded-xl p-4 space-y-1">
+                            <div class="flex items-center gap-2 text-xs text-gray-500 mb-1">
+                                <span id="prevPublisher" class="font-medium text-gray-700"></span>
+                                <span>·</span>
+                                <span id="prevDate" class="text-gray-500"></span>
+                            </div>
+                            <p id="prevTitle" class="text-lg text-blue-700 font-medium hover:underline cursor-pointer leading-tight"></p>
+                            <p id="prevDesc" class="text-sm text-gray-600 leading-relaxed"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Info-Karten -->
+            <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-slate-800/30 border border-white/10 rounded-xl p-5">
+                    <div class="w-10 h-10 bg-violet-500/20 rounded-lg flex items-center justify-center mb-3">
+                        <svg class="w-5 h-5 text-violet-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                    </div>
+                    <h3 class="font-semibold text-white mb-2 text-sm">Rich Snippets aktivieren</h3>
+                    <p class="text-xs text-gray-400 leading-relaxed">Article Schema ermöglicht Google, erweiterte Darstellungen in den Suchergebnissen zu zeigen — mit Autorname, Veröffentlichungsdatum und Bild. Das erhöht die Klickrate deutlich.</p>
+                </div>
+                <div class="bg-slate-800/30 border border-white/10 rounded-xl p-5">
+                    <div class="w-10 h-10 bg-blue-500/20 rounded-lg flex items-center justify-center mb-3">
+                        <svg class="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                    </div>
+                    <h3 class="font-semibold text-white mb-2 text-sm">E-E-A-T signalisieren</h3>
+                    <p class="text-xs text-gray-400 leading-relaxed">Googles E-E-A-T-Konzept (Experience, Expertise, Authoritativeness, Trustworthiness) wird durch Autorenangaben im Schema gestärkt. Bekannte Autoren mit eigener URL können das Ranking verbessern.</p>
+                </div>
+                <div class="bg-slate-800/30 border border-white/10 rounded-xl p-5">
+                    <div class="w-10 h-10 bg-green-500/20 rounded-lg flex items-center justify-center mb-3">
+                        <svg class="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+                    </div>
+                    <h3 class="font-semibold text-white mb-2 text-sm">dateModified pflegen</h3>
+                    <p class="text-xs text-gray-400 leading-relaxed">Das <code class="bg-green-500/10 text-green-300 px-1 rounded">dateModified</code>-Feld signalisiert Google, dass dein Artikel aktuell gehalten wird. Aktualisierte Inhalte ranken oft besser als veraltete — besonders bei Evergreen Content.</p>
+                </div>
+            </div>
+
+            <!-- FAQ -->
+            <div class="mt-12 bg-slate-800/30 border border-white/10 rounded-2xl p-8">
+                <h2 class="text-xl font-bold text-white mb-6">Häufige Fragen zum Article Schema</h2>
+                <div class="space-y-5">
+                    <div>
+                        <h3 class="font-semibold text-white text-sm mb-1">Was ist der Unterschied zwischen Article, BlogPosting und NewsArticle?</h3>
+                        <p class="text-sm text-gray-400 leading-relaxed">Alle drei sind Untertypen von <code class="bg-slate-700 text-blue-300 px-1 rounded">Article</code>. <code class="bg-slate-700 text-blue-300 px-1 rounded">BlogPosting</code> ist für Blog-Beiträge, <code class="bg-slate-700 text-blue-300 px-1 rounded">NewsArticle</code> für Nachrichtenartikel (aktiviert Google News Eligibility), <code class="bg-slate-700 text-blue-300 px-1 rounded">Article</code> ist der allgemeine Typ. Für normale Blog-Artikel empfehlen wir <code class="bg-slate-700 text-blue-300 px-1 rounded">BlogPosting</code>.</p>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-white text-sm mb-1">Muss ich das Schema manuell aktualisieren?</h3>
+                        <p class="text-sm text-gray-400 leading-relaxed">Ja — wenn du einen Artikel aktualisierst, solltest du auch <code class="bg-slate-700 text-blue-300 px-1 rounded">dateModified</code> im Schema anpassen. Das zeigt Google, dass der Artikel frisch ist, und kann das Ranking verbessern. Lies dazu unseren Artikel über <a href="/blog/content-audit-inhalte-aktualisieren.html" class="text-blue-400 hover:underline">Content-Audit und Inhalte aktualisieren</a>.</p>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-white text-sm mb-1">Wie überprüfe ich, ob mein Schema korrekt ist?</h3>
+                        <p class="text-sm text-gray-400 leading-relaxed">Nutze Googles <a href="https://search.google.com/test/rich-results" target="_blank" rel="noopener" class="text-blue-400 hover:underline">Rich Results Test</a> oder unseren <a href="/tools/json-ld-structured-data-validator.html" class="text-blue-400 hover:underline">JSON-LD Structured Data Validator</a>. Beide zeigen dir Fehler und Warnungen im Schema an.</p>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-white text-sm mb-1">Verbessert Article Schema direkt mein Ranking?</h3>
+                        <p class="text-sm text-gray-400 leading-relaxed">Article Schema ist kein direkter Ranking-Faktor, aber es ermöglicht Rich Snippets, die die Klickrate (CTR) erhöhen. Eine höhere CTR kann indirekt das Ranking verbessern. Zudem stärkt die Autorenangabe das E-E-A-T-Signal. Mehr dazu in unserem Artikel über <a href="/blog/strukturierte-daten-seo-schema-markup.html" class="text-blue-400 hover:underline">Strukturierte Daten und Schema Markup</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer CTA -->
+    <section class="py-16 px-4 bg-gradient-to-r from-blue-900/30 to-indigo-900/30 border-t border-b border-white/5">
+        <div class="max-w-3xl mx-auto text-center">
+            <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">Deine vollständige Website-SEO prüfen</h2>
+            <p class="text-gray-400 mb-8">Schema Markup ist ein Teil guter SEO. Finde alle technischen Probleme auf deiner Website.</p>
+            <a href="/" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-10 py-4 rounded-xl font-semibold transition-all inline-block text-lg">Kostenlose SEO-Analyse starten</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/10 bg-slate-900/50 py-12 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="flex items-center gap-2">
+                    <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                    <span class="text-lg font-bold text-white">Shift07</span>
+                </div>
+                <div class="flex items-center space-x-6 text-sm text-gray-400">
+                    <a href="/impressum.html" class="hover:text-white transition-colors">Impressum</a>
+                    <a href="/datenschutz.html" class="hover:text-white transition-colors">Datenschutz</a>
+                    <a href="/agb.html" class="hover:text-white transition-colors">AGB</a>
+                </div>
+                <p class="text-sm text-gray-500">&copy; 2026 Thümmler AI GmbH</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // Heutiges Datum als Standard setzen
+        const today = new Date().toISOString().split('T')[0];
+        document.getElementById('datePublished').value = today;
+        document.getElementById('dateModified').value = today;
+
+        // Zeichenzähler für Description
+        document.getElementById('description').addEventListener('input', function() {
+            const len = this.value.length;
+            const el = document.getElementById('descCount');
+            el.textContent = len + ' Zeichen';
+            if (len < 120) el.className = 'text-xs text-yellow-400 mt-1.5';
+            else if (len <= 160) el.className = 'text-xs text-green-400 mt-1.5';
+            else el.className = 'text-xs text-red-400 mt-1.5';
+        });
+
+        function generateSchema() {
+            const articleType = document.getElementById('articleType').value;
+            const headline = document.getElementById('headline').value.trim();
+            const description = document.getElementById('description').value.trim();
+            const articleUrl = document.getElementById('articleUrl').value.trim();
+            const imageUrl = document.getElementById('imageUrl').value.trim();
+            const datePublished = document.getElementById('datePublished').value;
+            const dateModified = document.getElementById('dateModified').value || datePublished;
+            const authorType = document.getElementById('authorType').value;
+            const authorName = document.getElementById('authorName').value.trim();
+            const authorUrl = document.getElementById('authorUrl').value.trim();
+            const publisherName = document.getElementById('publisherName').value.trim();
+            const publisherLogo = document.getElementById('publisherLogo').value.trim();
+            const keywords = document.getElementById('keywords').value.trim();
+            const inLanguage = document.getElementById('inLanguage').value;
+
+            // Validierung
+            const errors = [];
+            const warnings = [];
+
+            if (!headline) errors.push('Titel ist erforderlich.');
+            if (!description) errors.push('Meta-Description ist erforderlich.');
+            if (!articleUrl) errors.push('Artikel-URL ist erforderlich.');
+            if (!datePublished) errors.push('Veröffentlichungsdatum ist erforderlich.');
+
+            if (headline && headline.length > 110) warnings.push('Titel ist sehr lang (' + headline.length + ' Zeichen). Empfohlen: max. 110.');
+            if (description && description.length < 120) warnings.push('Description ist kurz (' + description.length + ' Zeichen). Empfohlen: 120–160.');
+            if (description && description.length > 160) warnings.push('Description ist zu lang (' + description.length + ' Zeichen). Google kürzt bei 155–160 Zeichen.');
+            if (!imageUrl) warnings.push('Kein Bild angegeben. Ein Header-Bild ist für Rich Snippets wichtig.');
+            if (!authorName) warnings.push('Kein Autor angegeben. Autorenangaben stärken das E-E-A-T-Signal.');
+            if (!publisherName) warnings.push('Kein Publisher angegeben. Empfohlen für Rich Results.');
+
+            // Validierungsbox anzeigen
+            const vBox = document.getElementById('validationBox');
+            const vContent = document.getElementById('validationContent');
+            vBox.classList.remove('hidden');
+
+            if (errors.length > 0) {
+                vBox.className = 'bg-red-900/20 border border-red-500/30 rounded-2xl p-4';
+                vContent.innerHTML = '<p class="text-sm font-semibold text-red-400 mb-2">Fehler — Schema nicht generiert:</p><ul class="text-xs text-red-300 list-disc pl-4 space-y-1">' +
+                    errors.map(e => '<li>' + e + '</li>').join('') + '</ul>';
+                return;
+            }
+
+            if (warnings.length > 0) {
+                vBox.className = 'bg-yellow-900/20 border border-yellow-500/30 rounded-2xl p-4';
+                vContent.innerHTML = '<p class="text-sm font-semibold text-yellow-400 mb-2">Hinweise:</p><ul class="text-xs text-yellow-300 list-disc pl-4 space-y-1">' +
+                    warnings.map(w => '<li>' + w + '</li>').join('') + '</ul>';
+            } else {
+                vBox.className = 'bg-green-900/20 border border-green-500/30 rounded-2xl p-4';
+                vContent.innerHTML = '<p class="text-sm font-semibold text-green-400">Schema sieht gut aus — alle Pflichtfelder ausgefüllt.</p>';
+            }
+
+            // Schema aufbauen
+            const schema = {
+                "@context": "https://schema.org",
+                "@type": articleType,
+                "headline": headline,
+                "description": description,
+                "url": articleUrl,
+                "datePublished": datePublished,
+                "dateModified": dateModified
+            };
+
+            if (imageUrl) {
+                schema["image"] = {
+                    "@type": "ImageObject",
+                    "url": imageUrl
+                };
+            }
+
+            if (authorName) {
+                schema["author"] = {
+                    "@type": authorType,
+                    "name": authorName
+                };
+                if (authorUrl) schema["author"]["url"] = authorUrl;
+            }
+
+            if (publisherName) {
+                schema["publisher"] = {
+                    "@type": "Organization",
+                    "name": publisherName
+                };
+                if (publisherLogo) {
+                    schema["publisher"]["logo"] = {
+                        "@type": "ImageObject",
+                        "url": publisherLogo
+                    };
+                }
+            }
+
+            if (articleUrl) {
+                schema["mainEntityOfPage"] = {
+                    "@type": "WebPage",
+                    "@id": articleUrl
+                };
+            }
+
+            if (keywords) {
+                schema["keywords"] = keywords;
+            }
+
+            if (inLanguage) {
+                schema["inLanguage"] = inLanguage;
+            }
+
+            // Als <script>-Tag ausgeben
+            const jsonStr = JSON.stringify(schema, null, 2);
+            const output = '<script type="application/ld+json">\n' + jsonStr + '\n<\/script>';
+
+            document.getElementById('schemaOutput').textContent = output;
+
+            // SERP-Vorschau
+            if (headline && publisherName) {
+                const prevBox = document.getElementById('previewBox');
+                prevBox.classList.remove('hidden');
+                document.getElementById('prevTitle').textContent = headline.length > 60 ? headline.substring(0, 57) + '...' : headline;
+                document.getElementById('prevDesc').textContent = description.length > 160 ? description.substring(0, 157) + '...' : description;
+                document.getElementById('prevPublisher').textContent = publisherName;
+                if (datePublished) {
+                    const d = new Date(datePublished);
+                    document.getElementById('prevDate').textContent = d.toLocaleDateString('de-DE', {day: 'numeric', month: 'long', year: 'numeric'});
+                }
+            }
+        }
+
+        function copySchema() {
+            const text = document.getElementById('schemaOutput').textContent;
+            if (text.includes('Fülle das Formular')) return;
+            navigator.clipboard.writeText(text).then(() => {
+                const btn = document.getElementById('copyBtn');
+                btn.textContent = 'Kopiert!';
+                btn.className = 'text-xs px-3 py-1.5 bg-green-600/20 text-green-400 border border-green-500/30 rounded-lg font-medium';
+                setTimeout(() => {
+                    btn.textContent = 'Kopieren';
+                    btn.className = 'text-xs px-3 py-1.5 bg-blue-600/20 hover:bg-blue-600/40 text-blue-400 border border-blue-500/30 rounded-lg transition-all font-medium';
+                }, 2000);
+            });
+        }
+
+        function resetForm() {
+            document.getElementById('headline').value = '';
+            document.getElementById('description').value = '';
+            document.getElementById('articleUrl').value = '';
+            document.getElementById('imageUrl').value = '';
+            document.getElementById('authorName').value = '';
+            document.getElementById('authorUrl').value = '';
+            document.getElementById('publisherName').value = '';
+            document.getElementById('publisherLogo').value = '';
+            document.getElementById('keywords').value = '';
+            document.getElementById('schemaOutput').innerHTML = '<span class="text-gray-500 italic">Fülle das Formular aus und klicke auf „JSON-LD generieren".</span>';
+            document.getElementById('validationBox').classList.add('hidden');
+            document.getElementById('previewBox').classList.add('hidden');
+            document.getElementById('descCount').textContent = '0 Zeichen';
+            document.getElementById('descCount').className = 'text-xs text-gray-500 mt-1.5';
+            const today = new Date().toISOString().split('T')[0];
+            document.getElementById('datePublished').value = today;
+            document.getElementById('dateModified').value = today;
+        }
+
+        function toggleAuthorFields() {
+            const type = document.getElementById('authorType').value;
+            const nameField = document.getElementById('authorName');
+            nameField.placeholder = type === 'Person' ? 'Vorname Nachname' : 'Unternehmensname / Team';
+        }
+    </script>
+</body>
+</html>
