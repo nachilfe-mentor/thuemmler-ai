@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Wed, 15 Apr 2026 02:31:51 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 15 Apr 2026 02:34:47 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Toxic Links erkennen und disavowen: So schützt du dein Backlink-Profil</title>
+      <link>https://shift07.ai/blog/toxic-links-disavow-seo.html</link>
+      <guid>https://shift07.ai/blog/toxic-links-disavow-seo.html</guid>
+      <pubDate>Wed, 15 Apr 2026 02:34:23 +0000</pubDate>
+      <description>Schädliche Backlinks erkennen, bewerten und mit dem Google Disavow Tool entfernen. Schritt-für-Schritt-Anleitung zur Bereinigung deines Backlink-Profils.</description>
+      <category>Off-Page SEO</category>
+    </item>
     <item>
       <title>Linkaufbau für lokale Unternehmen ohne Budget: 7 kostenlose Strategien</title>
       <link>https://shift07.ai/blog/lokaler-linkaufbau-ohne-budget.html</link>
@@ -157,14 +165,6 @@
       <guid>https://shift07.ai/blog/content-briefing-erstellen-seo-texte.html</guid>
       <pubDate>Sun, 12 Apr 2026 02:42:51 +0000</pubDate>
       <description>Content-Briefing erstellen für SEO-Texte: Schritt-für-Schritt-Anleitung mit Vorlage, Keyword-Analyse, Suchintention und Struktur-Planung — damit jeder Text rankt.</description>
-      <category>OnPage-SEO</category>
-    </item>
-    <item>
-      <title>Meta-Description optimieren: Der komplette Guide 2026</title>
-      <link>https://shift07.ai/blog/meta-description-optimieren-guide.html</link>
-      <guid>https://shift07.ai/blog/meta-description-optimieren-guide.html</guid>
-      <pubDate>Sun, 12 Apr 2026 01:08:27 +0000</pubDate>
-      <description>Meta-Description optimieren für bessere CTR: Zeichenanzahl, Keywords, emotionale Trigger und konkrete Vorlagen — der vollständige Leitfaden 2026.</description>
       <category>OnPage-SEO</category>
     </item>
   </channel>

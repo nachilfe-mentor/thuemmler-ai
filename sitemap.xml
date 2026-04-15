@@ -463,6 +463,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://shift07.ai/blog/toxic-links-disavow-seo.html</loc>
+    <lastmod>2026-04-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://shift07.ai/blog/ttfb-verbessern-server-antwortzeit.html</loc>
     <lastmod>2026-04-06</lastmod>
     <changefreq>monthly</changefreq>
