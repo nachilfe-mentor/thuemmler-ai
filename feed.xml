@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Tue, 14 Apr 2026 06:21:06 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 15 Apr 2026 00:49:21 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Wir haben 198 deutsche Unternehmens-Websites analysiert – das sind die häufigsten SEO-Fehler</title>
+      <link>https://shift07.ai/blog/seo-fehler-analyse-deutsche-unternehmen.html</link>
+      <guid>https://shift07.ai/blog/seo-fehler-analyse-deutsche-unternehmen.html</guid>
+      <pubDate>Wed, 15 Apr 2026 00:48:42 +0000</pubDate>
+      <description>Shift07 hat 198 Websites kleiner und mittlerer Unternehmen in Deutschland analysiert. Ergebnis: 3 von 4 Websites fehlen strukturierte Daten, jede zweite lädt zu langsam. Die vollständige Auswertung.</description>
+      <category>SEO-Analyse</category>
+    </item>
     <item>
       <title>Skyscraper-Technik: Wie du durch besseren Content Backlinks gewinnst</title>
       <link>https://shift07.ai/blog/skyscraper-technik-seo-backlinks.html</link>
@@ -158,14 +166,6 @@
       <pubDate>Sat, 11 Apr 2026 03:50:14 +0000</pubDate>
       <description>Keyword-Kannibalisierung erkennen und lösen: Wenn mehrere Seiten dasselbe Keyword targetieren, kämpfen sie gegeneinander. Diagnose, Ursachen und Lösungen im Überblick.</description>
       <category>OnPage-SEO</category>
-    </item>
-    <item>
-      <title>Technisches SEO Audit: Die vollständige Schritt-für-Schritt Anleitung 2026</title>
-      <link>https://shift07.ai/blog/technisches-seo-audit-anleitung.html</link>
-      <guid>https://shift07.ai/blog/technisches-seo-audit-anleitung.html</guid>
-      <pubDate>Sat, 11 Apr 2026 03:43:33 +0000</pubDate>
-      <description>Technisches SEO Audit vollständig durchführen: Crawling, HTTPS, Core Web Vitals, Structured Data, hreflang und mehr — mit Checkliste und kostenlosen Tools.</description>
-      <category>Tech-SEO</category>
     </item>
   </channel>
 </rss>
