@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K1S1RXBDS8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K1S1RXBDS8');
+    </script>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8475857002943858" crossorigin="anonymous"></script>
+    <title>Disavow-Datei-Generator – Google Disavow Tool kostenlos | Shift07</title>
+    <meta name="description" content="Erstelle eine Google-konforme disavow.txt aus deiner Domain-Liste. Mit Validierung, Kommentaren und direktem Download – kostenlos und 100% im Browser.">
+    <meta name="keywords" content="disavow datei generator, google disavow tool, disavow.txt erstellen, toxic links disavowen, schlechte backlinks entfernen">
+    <meta name="author" content="Thümmler AI GmbH">
+    <link rel="icon" type="image/png" href="/logo.png">
+    <link rel="canonical" href="https://shift07.ai/tools/disavow-datei-generator.html">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Disavow-Datei-Generator – Google Disavow Tool kostenlos">
+    <meta property="og:description" content="Erstelle eine Google-konforme disavow.txt aus deiner Domain-Liste. Mit Validierung, Kommentaren und direktem Download – kostenlos und 100% im Browser.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://shift07.ai/tools/disavow-datei-generator.html">
+    <meta property="og:image" content="https://shift07.ai/tools/images/disavow-datei-generator.png">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="Shift07">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Disavow-Datei-Generator – Google Disavow Tool kostenlos">
+    <meta name="twitter:description" content="Erstelle eine Google-konforme disavow.txt aus deiner Domain-Liste. Mit Validierung, Kommentaren und direktem Download.">
+    <meta name="twitter:image" content="https://shift07.ai/tools/images/disavow-datei-generator.png">
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Disavow-Datei-Generator",
+      "description": "Erstelle eine Google-konforme disavow.txt aus deiner Domain-Liste. Mit Validierung, Kommentaren und direktem Download – kostenlos.",
+      "url": "https://shift07.ai/tools/disavow-datei-generator.html",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR"
+      },
+      "provider": {
+        "@type": "Organization",
+        "name": "Thümmler AI GmbH",
+        "url": "https://shift07.ai"
+      }
+    }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: rgba(15, 23, 42, 0.5); }
+        ::-webkit-scrollbar-thumb { background: rgba(59, 130, 246, 0.5); border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: rgba(59, 130, 246, 0.7); }
+        html { scroll-behavior: smooth; }
+        .glass {
+            background: rgba(255, 255, 255, 0.06);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .code-block {
+            background: rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 0.75rem;
+            overflow-x: auto;
+        }
+        textarea, pre { font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace; }
+        .valid-line { color: #86efac; }
+        .invalid-line { color: #fca5a5; text-decoration: line-through; }
+        .comment-line { color: #94a3b8; }
+    </style>
+</head>
+<body class="antialiased">
+    <div class="min-h-screen bg-gradient-to-br from-slate-900 via-red-900/20 to-slate-900">
+        <!-- Navigation -->
+        <nav class="bg-black/20 backdrop-blur-md border-b border-white/10">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center h-16">
+                    <a href="/" class="flex items-center gap-2">
+                        <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                        <span class="text-xl font-bold text-white">Shift07</span>
+                    </a>
+                    <div class="hidden md:flex items-baseline space-x-4">
+                        <a href="/" class="text-white hover:text-blue-300 px-3 py-2 text-sm font-medium transition-colors">SEO-Tool</a>
+                        <a href="/blog/" class="text-white hover:text-blue-300 px-3 py-2 text-sm font-medium transition-colors">Blog</a>
+                        <a href="/tools/" class="text-blue-300 px-3 py-2 text-sm font-medium">Tools</a>
+                        <a href="/app/#/login" class="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:from-blue-600 hover:to-purple-700 transition-all">Anmelden</a>
+                    </div>
+                    <button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="md:hidden text-white">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                    </button>
+                </div>
+                <div id="mobile-menu" class="hidden md:hidden pb-4">
+                    <a href="/" class="block text-white hover:text-blue-300 px-3 py-2 text-sm font-medium">SEO-Tool</a>
+                    <a href="/blog/" class="block text-white hover:text-blue-300 px-3 py-2 text-sm font-medium">Blog</a>
+                    <a href="/tools/" class="block text-blue-300 px-3 py-2 text-sm font-medium">Tools</a>
+                    <a href="/app/#/login" class="block text-white hover:text-blue-300 px-3 py-2 text-sm font-medium">Anmelden</a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero -->
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-6 text-center">
+            <span class="inline-block text-xs font-semibold px-4 py-1.5 bg-red-500/20 text-red-300 rounded-full mb-4">Technisches SEO Tool</span>
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">
+                <span class="bg-gradient-to-r from-red-400 to-orange-400 bg-clip-text text-transparent">Disavow-Datei-Generator</span>
+            </h1>
+            <p class="text-xl text-blue-200/80 max-w-2xl mx-auto">Erstelle eine Google-konforme disavow.txt für das Disavow-Tool der Google Search Console — mit Validierung und direktem Download.</p>
+        </section>
+
+        <!-- Warning Banner -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-4">
+            <div class="bg-amber-500/10 border border-amber-500/30 rounded-xl px-5 py-4 flex gap-3 items-start">
+                <svg class="w-5 h-5 text-amber-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+                <p class="text-amber-200/80 text-sm"><strong class="text-amber-300">Hinweis:</strong> Das Disavow-Tool sollte nur bei nachgewiesenen manuellen Maßnahmen oder nachweislich toxischen Links eingesetzt werden. Falsch eingesetzte Disavow-Dateien können Rankings schaden.</p>
+            </div>
+        </div>
+
+        <!-- Main Tool -->
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+            <div class="grid lg:grid-cols-2 gap-8">
+
+                <!-- Input -->
+                <div class="glass rounded-xl p-6 md:p-8">
+                    <h2 class="text-xl font-semibold text-white mb-2">Schlechte Links eingeben</h2>
+                    <p class="text-blue-200/60 text-sm mb-5">Trage Domains oder URLs ein, die du disavowen möchtest — eine pro Zeile. Domains werden automatisch mit <code class="bg-white/10 px-1 rounded">domain:</code> Präfix versehen.</p>
+
+                    <!-- Mode Toggle -->
+                    <div class="flex gap-2 mb-4">
+                        <button id="modeDomain" onclick="setMode('domain')" class="flex-1 py-2 rounded-lg text-sm font-medium bg-red-500/20 text-red-300 border border-red-500/40">Domain-Modus</button>
+                        <button id="modeUrl" onclick="setMode('url')" class="flex-1 py-2 rounded-lg text-sm font-medium bg-white/5 text-white/50 border border-white/10">URL-Modus</button>
+                    </div>
+
+                    <div id="modeHint" class="text-xs text-blue-200/40 mb-3">Domain-Modus: Alle Links von einer Domain blocken (empfohlen für Spam-Domains)</div>
+
+                    <textarea id="disavowInput" rows="12" placeholder="beispiel-spam.de&#10;schlechte-links.com&#10;spammy-directory.net&#10;fake-pr-site.ru&#10;link-farm.de" class="w-full bg-slate-800/60 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-red-500/70 text-sm resize-none font-mono"></textarea>
+
+                    <!-- Optionaler Kommentar -->
+                    <label class="block text-blue-200/80 text-sm font-medium mt-5 mb-2">Kommentar / Begründung <span class="text-white/30 font-normal">(optional)</span></label>
+                    <input type="text" id="commentInput" placeholder="z.B. Manuelle Maßnahme April 2026 – toxische Backlinks aus Linkfarm" class="w-full bg-slate-800/60 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-red-500/70 text-sm">
+
+                    <div class="flex gap-2 mt-5">
+                        <button onclick="generateDisavow()" class="flex-1 bg-gradient-to-r from-red-500 to-orange-600 text-white py-3 rounded-xl text-sm font-semibold hover:from-red-600 hover:to-orange-700 transition-all">
+                            Disavow-Datei generieren
+                        </button>
+                        <button onclick="loadExample()" class="bg-white/5 hover:bg-white/10 text-white/70 px-4 rounded-xl text-sm font-medium transition-all border border-white/10">
+                            Beispiel
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Output -->
+                <div class="space-y-6">
+                    <div id="resultSection" class="glass rounded-xl p-6 md:p-8 hidden">
+                        <div class="flex items-center justify-between mb-4">
+                            <h2 class="text-xl font-semibold text-white">disavow.txt</h2>
+                            <div class="flex gap-2">
+                                <button onclick="copyToClipboard()" class="bg-white/10 hover:bg-white/20 text-white/70 px-3 py-2 rounded-lg text-sm font-medium transition-all flex items-center gap-1.5">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                                    Kopieren
+                                </button>
+                                <button onclick="downloadFile()" class="bg-gradient-to-r from-red-500 to-orange-600 text-white px-3 py-2 rounded-lg text-sm font-semibold hover:from-red-600 hover:to-orange-700 transition-all flex items-center gap-1.5">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                                    Download
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Stats -->
+                        <div id="statsRow" class="flex gap-4 mb-4 text-sm"></div>
+
+                        <!-- Preview -->
+                        <div class="code-block p-4 max-h-72 overflow-y-auto">
+                            <pre id="outputPre" class="text-sm leading-relaxed whitespace-pre-wrap"></pre>
+                        </div>
+
+                        <!-- Validation Errors -->
+                        <div id="errorsSection" class="hidden mt-4">
+                            <h3 class="text-sm font-semibold text-red-400 mb-2">Ignorierte Einträge (ungültig):</h3>
+                            <ul id="errorsList" class="text-xs text-red-300/70 space-y-0.5"></ul>
+                        </div>
+
+                        <!-- Upload Hint -->
+                        <div class="mt-5 p-4 bg-white/5 rounded-xl">
+                            <h3 class="text-white/80 text-sm font-semibold mb-2">So lädst du die Datei hoch:</h3>
+                            <ol class="text-xs text-blue-200/60 space-y-1.5 list-decimal list-inside">
+                                <li>Lade die Datei mit "Download" herunter</li>
+                                <li>Öffne die <a href="https://search.google.com/search-console/disavow-links" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:text-blue-300">Google Search Console → Disavow-Tool</a></li>
+                                <li>Wähle deine Property und lade die .txt-Datei hoch</li>
+                                <li>Google braucht mehrere Wochen, um die Änderungen zu verarbeiten</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <!-- Placeholder -->
+                    <div id="placeholderSection" class="glass rounded-xl p-8 text-center">
+                        <div class="w-16 h-16 bg-red-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"/></svg>
+                        </div>
+                        <p class="text-white/50 text-sm">Gib die Domains/URLs ein und klicke auf "Disavow-Datei generieren".</p>
+                    </div>
+
+                    <!-- Cross-sell -->
+                    <div class="glass rounded-xl p-6 border-red-500/20 border">
+                        <div class="flex items-start gap-4">
+                            <div class="bg-red-500/20 rounded-lg p-3 flex-shrink-0">
+                                <svg class="w-6 h-6 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                            </div>
+                            <div>
+                                <h3 class="text-white font-semibold mb-1">Welche Links wirklich toxisch sind</h3>
+                                <p class="text-blue-200/70 text-sm mb-3">Nutze unsere kostenlose SEO-Analyse, um kritische Probleme auf deiner Website zu finden — und entscheide dann, ob ein Disavow notwendig ist.</p>
+                                <a href="/" class="inline-flex items-center text-blue-400 hover:text-blue-300 text-sm font-medium transition-colors">
+                                    Kostenlose SEO-Analyse starten
+                                    <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Erklärung -->
+            <div class="glass rounded-xl p-6 md:p-8 mt-12">
+                <h2 class="text-2xl font-bold text-white mb-2">Was ist das Google Disavow Tool?</h2>
+                <p class="text-blue-200/60 mb-8">Wann du toxische Backlinks disavowen solltest — und wann besser nicht.</p>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+                    <div class="bg-white/5 rounded-xl p-5 border border-white/8">
+                        <div class="w-10 h-10 bg-red-500/20 rounded-lg flex items-center justify-center mb-3">
+                            <span class="text-lg">🚫</span>
+                        </div>
+                        <h3 class="text-white font-semibold mb-2">Was ist Disavow?</h3>
+                        <p class="text-blue-200/60 text-sm">Das Google Disavow Tool erlaubt es dir, Google mitzuteilen, welche Links du nicht für dein Ranking berücksichtigt haben möchtest. Hochgeladen als .txt-Datei in der Google Search Console.</p>
+                    </div>
+                    <div class="bg-white/5 rounded-xl p-5 border border-white/8">
+                        <div class="w-10 h-10 bg-amber-500/20 rounded-lg flex items-center justify-center mb-3">
+                            <span class="text-lg">⚠️</span>
+                        </div>
+                        <h3 class="text-white font-semibold mb-2">Wann sinnvoll?</h3>
+                        <p class="text-blue-200/60 text-sm">Nur bei: manuelle Maßnahme in GSC, nachweisliche Linkbuilding-Kampagnen die Spam-Links hinterlassen haben, oder wenn Wettbewerber negative SEO betreiben. Nicht bei normalen Profilen!</p>
+                    </div>
+                    <div class="bg-white/5 rounded-xl p-5 border border-white/8">
+                        <div class="w-10 h-10 bg-green-500/20 rounded-lg flex items-center justify-center mb-3">
+                            <span class="text-lg">✅</span>
+                        </div>
+                        <h3 class="text-white font-semibold mb-2">Dateiformat</h3>
+                        <p class="text-blue-200/60 text-sm">Die Datei muss eine .txt-Datei sein (UTF-8). Domains mit <code class="bg-white/10 px-1 rounded text-xs">domain:</code> Präfix blocken alle Links von dieser Domain. Einzelne URLs ohne Präfix. Kommentare beginnen mit <code class="bg-white/10 px-1 rounded text-xs">#</code>.</p>
+                    </div>
+                </div>
+
+                <div class="mt-5 grid md:grid-cols-2 gap-4">
+                    <div class="code-block p-4">
+                        <div class="text-xs text-blue-200/50 mb-2 font-semibold">Beispiel disavow.txt</div>
+                        <pre class="text-xs leading-relaxed">
+<span class="text-slate-400"># Disavow-Datei - Shift07 AG</span>
+<span class="text-slate-400"># Erstellt: April 2026</span>
+<span class="text-emerald-400">domain:spam-linkfarm.de</span>
+<span class="text-emerald-400">domain:casino-links.ru</span>
+<span class="text-emerald-400">domain:fake-directory.net</span>
+<span class="text-blue-400">https://schlechte-site.com/spam/</span>
+                        </pre>
+                    </div>
+                    <div class="bg-green-500/8 border border-green-500/20 rounded-xl p-4">
+                        <h4 class="text-green-400 font-semibold text-sm mb-3">Domain vs. URL — was ist besser?</h4>
+                        <div class="space-y-2 text-xs text-blue-200/60">
+                            <p><strong class="text-white">domain: spam.de</strong> — blockt ALLE Links von dieser Domain (empfohlen bei Spam-Domains)</p>
+                            <p><strong class="text-white">https://spam.de/page</strong> — blockt nur diesen einen Link (für seriöse Sites mit einzelnen schlechten Links)</p>
+                            <p class="text-amber-300/70">⚡ Im Zweifel: domain:-Präfix verwenden, weil es umfassender schützt.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-5 flex flex-wrap gap-3">
+                    <a href="/blog/toxic-links-disavow-seo.html" class="text-blue-400 hover:text-blue-300 text-sm font-medium">→ Toxic Links erkennen und disavowen (Anleitung)</a>
+                    <a href="/blog/linkaufbau-messen-tools-kpis.html" class="text-blue-400 hover:text-blue-300 text-sm font-medium">→ Linkaufbau messen: KPIs und Tools</a>
+                    <a href="/tools/anchor-text-diversitaet-checker.html" class="text-blue-400 hover:text-blue-300 text-sm font-medium">→ Anchor-Text-Diversitäts-Checker</a>
+                    <a href="/blog/backlink-profil-analysieren-bereinigen.html" class="text-blue-400 hover:text-blue-300 text-sm font-medium">→ Backlink-Profil analysieren und bereinigen</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-black/30 backdrop-blur-md border-t border-white/10">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <div class="text-white/60 mb-4 md:mb-0 text-sm">
+                        &copy; 2026 Thümmler AI GmbH. Alle Rechte vorbehalten.
+                    </div>
+                    <div class="flex space-x-6">
+                        <a href="/impressum.html" class="text-gray-300 hover:text-white transition-colors text-sm">Impressum</a>
+                        <a href="/datenschutz.html" class="text-gray-300 hover:text-white transition-colors text-sm">Datenschutz</a>
+                        <a href="/agb.html" class="text-gray-300 hover:text-white transition-colors text-sm">AGB</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+    // ======================================================
+    // Disavow-Datei-Generator — 100% client-side
+    // ======================================================
+
+    let currentMode = 'domain';
+    let generatedContent = '';
+
+    function setMode(mode) {
+        currentMode = mode;
+        const domBtn = document.getElementById('modeDomain');
+        const urlBtn = document.getElementById('modeUrl');
+        const hint = document.getElementById('modeHint');
+
+        if (mode === 'domain') {
+            domBtn.className = 'flex-1 py-2 rounded-lg text-sm font-medium bg-red-500/20 text-red-300 border border-red-500/40';
+            urlBtn.className = 'flex-1 py-2 rounded-lg text-sm font-medium bg-white/5 text-white/50 border border-white/10';
+            hint.textContent = 'Domain-Modus: Alle Links von einer Domain blocken (empfohlen für Spam-Domains)';
+        } else {
+            urlBtn.className = 'flex-1 py-2 rounded-lg text-sm font-medium bg-red-500/20 text-red-300 border border-red-500/40';
+            domBtn.className = 'flex-1 py-2 rounded-lg text-sm font-medium bg-white/5 text-white/50 border border-white/10';
+            hint.textContent = 'URL-Modus: Einzelne URLs blocken (für spezifische Links auf seriösen Seiten)';
+        }
+    }
+
+    function isValidDomain(d) {
+        return /^[a-zA-Z0-9äöüÄÖÜß][a-zA-Z0-9äöüÄÖÜß\-\.]{0,61}[a-zA-Z0-9äöüÄÖÜß]\.[a-zA-Z]{2,}$/.test(d);
+    }
+
+    function isValidUrl(u) {
+        try { new URL(u); return true; } catch { return false; }
+    }
+
+    function normalizeEntry(raw) {
+        let v = raw.trim();
+        // Strip protocol for domain mode
+        if (currentMode === 'domain') {
+            v = v.replace(/^https?:\/\//i, '').replace(/^www\./i, '').split('/')[0].split('?')[0];
+            return v;
+        }
+        // URL mode: ensure it has a protocol
+        if (!/^https?:\/\//i.test(v)) v = 'https://' + v;
+        return v;
+    }
+
+    function generateDisavow() {
+        const raw = document.getElementById('disavowInput').value;
+        const comment = document.getElementById('commentInput').value.trim();
+        const lines = raw.split('\n').map(l => l.trim()).filter(l => l.length > 0);
+
+        if (lines.length === 0) {
+            alert('Bitte mindestens eine Domain oder URL eingeben.');
+            return;
+        }
+
+        const valid = [];
+        const invalid = [];
+        const seen = new Set();
+
+        lines.forEach(line => {
+            const normalized = normalizeEntry(line);
+            if (!normalized) return;
+
+            if (currentMode === 'domain') {
+                if (isValidDomain(normalized)) {
+                    if (!seen.has(normalized)) {
+                        seen.add(normalized);
+                        valid.push('domain:' + normalized);
+                    }
+                } else {
+                    invalid.push(line);
+                }
+            } else {
+                if (isValidUrl(normalized)) {
+                    if (!seen.has(normalized)) {
+                        seen.add(normalized);
+                        valid.push(normalized);
+                    }
+                } else {
+                    invalid.push(line);
+                }
+            }
+        });
+
+        if (valid.length === 0) {
+            alert('Keine gültigen Einträge gefunden. Bitte prüfe deine Eingabe.');
+            return;
+        }
+
+        // Build file content
+        const today = new Date().toLocaleDateString('de-DE', { day: '2-digit', month: 'long', year: 'numeric' });
+        let output = `# Disavow-Datei\n`;
+        output += `# Erstellt mit Shift07 Disavow-Generator (shift07.ai)\n`;
+        output += `# Datum: ${today}\n`;
+        if (comment) output += `# Grund: ${comment}\n`;
+        output += `# Einträge: ${valid.length}\n`;
+        output += `#\n`;
+        output += `# WICHTIG: Nur hochladen wenn wirklich nötig!\n`;
+        output += `# Google Search Console → Disavow-Tool\n`;
+        output += `\n`;
+        output += valid.join('\n') + '\n';
+
+        generatedContent = output;
+
+        // Render
+        document.getElementById('placeholderSection').classList.add('hidden');
+        document.getElementById('resultSection').classList.remove('hidden');
+
+        // Stats
+        const stats = document.getElementById('statsRow');
+        stats.innerHTML = `
+            <div class="bg-green-500/10 border border-green-500/20 rounded-lg px-4 py-2 text-center">
+                <div class="text-green-400 font-bold text-xl">${valid.length}</div>
+                <div class="text-green-300/60 text-xs">Gültige Einträge</div>
+            </div>
+            ${invalid.length > 0 ? `<div class="bg-red-500/10 border border-red-500/20 rounded-lg px-4 py-2 text-center">
+                <div class="text-red-400 font-bold text-xl">${invalid.length}</div>
+                <div class="text-red-300/60 text-xs">Ungültig (ignoriert)</div>
+            </div>` : ''}
+            <div class="bg-white/5 border border-white/10 rounded-lg px-4 py-2 text-center">
+                <div class="text-white font-bold text-xl">${currentMode === 'domain' ? 'Domain' : 'URL'}</div>
+                <div class="text-white/40 text-xs">Modus</div>
+            </div>`;
+
+        // Preview with coloring
+        const pre = document.getElementById('outputPre');
+        pre.innerHTML = output.split('\n').map(line => {
+            if (line.startsWith('#')) return `<span class="comment-line">${escHtml(line)}</span>`;
+            if (line.startsWith('domain:') || (line.startsWith('http') && line.length > 10)) return `<span class="valid-line">${escHtml(line)}</span>`;
+            return `<span class="text-white/40">${escHtml(line)}</span>`;
+        }).join('\n');
+
+        // Errors
+        const errSec = document.getElementById('errorsSection');
+        if (invalid.length > 0) {
+            errSec.classList.remove('hidden');
+            document.getElementById('errorsList').innerHTML = invalid.map(e => `<li>• ${escHtml(e)}</li>`).join('');
+        } else {
+            errSec.classList.add('hidden');
+        }
+    }
+
+    function escHtml(str) {
+        return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+    }
+
+    function copyToClipboard() {
+        if (!generatedContent) return;
+        navigator.clipboard.writeText(generatedContent).then(() => {
+            const btn = event.currentTarget;
+            btn.textContent = '✓ Kopiert!';
+            setTimeout(() => { btn.innerHTML = '<svg class="w-4 h-4 inline mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>Kopieren'; }, 2000);
+        });
+    }
+
+    function downloadFile() {
+        if (!generatedContent) return;
+        const blob = new Blob([generatedContent], { type: 'text/plain;charset=utf-8;' });
+        const a = document.createElement('a');
+        a.href = URL.createObjectURL(blob);
+        a.download = 'disavow.txt';
+        a.click();
+    }
+
+    function loadExample() {
+        setMode('domain');
+        document.getElementById('commentInput').value = 'Manuelle Maßnahme April 2026 – toxische Backlinks aus Linkfarm-Netzwerk';
+        document.getElementById('disavowInput').value = [
+            'spam-linkfarm.de',
+            'casino-backlinks.ru',
+            'free-links-directory.net',
+            'blackhat-seo.cn',
+            'paid-links-shop.com',
+            'fake-pr.info',
+            'buy-backlinks-cheap.de',
+            'automated-links.xyz',
+            'link-exchange-forum.ru',
+            'seo-spam.biz'
+        ].join('\n');
+        generateDisavow();
+    }
+    </script>
+</body>
+</html>
