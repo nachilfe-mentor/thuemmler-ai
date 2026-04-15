@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Wed, 15 Apr 2026 02:34:47 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 15 Apr 2026 04:10:36 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Natürlichen Linkaufbau messen: Tools und KPIs für Off-Page SEO</title>
+      <link>https://shift07.ai/blog/linkaufbau-messen-tools-kpis.html</link>
+      <guid>https://shift07.ai/blog/linkaufbau-messen-tools-kpis.html</guid>
+      <pubDate>Wed, 15 Apr 2026 04:10:20 +0000</pubDate>
+      <description>Welche KPIs wirklich wichtig sind beim Linkaufbau – und mit welchen kostenlosen und bezahlten Tools du deinen Off-Page-SEO-Fortschritt zuverlässig misst.</description>
+      <category>Off-Page SEO</category>
+    </item>
     <item>
       <title>Toxic Links erkennen und disavowen: So schützt du dein Backlink-Profil</title>
       <link>https://shift07.ai/blog/toxic-links-disavow-seo.html</link>
@@ -157,14 +165,6 @@
       <guid>https://shift07.ai/blog/tf-idf-semantic-seo-thematische-relevanz.html</guid>
       <pubDate>Sun, 12 Apr 2026 02:49:41 +0000</pubDate>
       <description>TF-IDF und Semantic SEO erklärt: Wie du thematische Relevanz aufbaust, LSI-Keywords nutzt und durch Topical Authority langfristig bessere Rankings erreichst.</description>
-      <category>OnPage-SEO</category>
-    </item>
-    <item>
-      <title>Content-Briefing erstellen: So planst du SEO-Texte richtig</title>
-      <link>https://shift07.ai/blog/content-briefing-erstellen-seo-texte.html</link>
-      <guid>https://shift07.ai/blog/content-briefing-erstellen-seo-texte.html</guid>
-      <pubDate>Sun, 12 Apr 2026 02:42:51 +0000</pubDate>
-      <description>Content-Briefing erstellen für SEO-Texte: Schritt-für-Schritt-Anleitung mit Vorlage, Keyword-Analyse, Suchintention und Struktur-Planung — damit jeder Text rankt.</description>
       <category>OnPage-SEO</category>
     </item>
   </channel>
