@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Wed, 15 Apr 2026 00:49:21 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 15 Apr 2026 00:53:42 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Linkable Assets erstellen: So baust du Inhalte, die Backlinks anziehen</title>
+      <link>https://shift07.ai/blog/linkable-assets-backlinks-erstellen.html</link>
+      <guid>https://shift07.ai/blog/linkable-assets-backlinks-erstellen.html</guid>
+      <pubDate>Wed, 15 Apr 2026 00:53:12 +0000</pubDate>
+      <description>Linkable Assets sind Inhalte, die andere Websites freiwillig verlinken. Erfahre, welche 7 Asset-Typen am besten funktionieren und wie du sie Schritt für Schritt erstellst.</description>
+      <category>Content-Marketing</category>
+    </item>
     <item>
       <title>Wir haben 198 deutsche Unternehmens-Websites analysiert – das sind die häufigsten SEO-Fehler</title>
       <link>https://shift07.ai/blog/seo-fehler-analyse-deutsche-unternehmen.html</link>
@@ -157,14 +165,6 @@
       <guid>https://shift07.ai/blog/suchintention-verstehen-seo.html</guid>
       <pubDate>Sun, 12 Apr 2026 01:00:54 +0000</pubDate>
       <description>Suchintention verstehen und für SEO nutzen: Wie die 4 Intent-Typen (Informational, Navigational, Transactional, Commercial) dein Content-Ranking entscheiden.</description>
-      <category>OnPage-SEO</category>
-    </item>
-    <item>
-      <title>Keyword-Kannibalisierung erkennen und beheben: Wenn eigene Seiten konkurrieren</title>
-      <link>https://shift07.ai/blog/keyword-kannibalisierung-erkennen-beheben.html</link>
-      <guid>https://shift07.ai/blog/keyword-kannibalisierung-erkennen-beheben.html</guid>
-      <pubDate>Sat, 11 Apr 2026 03:50:14 +0000</pubDate>
-      <description>Keyword-Kannibalisierung erkennen und lösen: Wenn mehrere Seiten dasselbe Keyword targetieren, kämpfen sie gegeneinander. Diagnose, Ursachen und Lösungen im Überblick.</description>
       <category>OnPage-SEO</category>
     </item>
   </channel>
