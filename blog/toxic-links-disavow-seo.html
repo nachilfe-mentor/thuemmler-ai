@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toxic Links erkennen und disavowen: So schützt du dein Backlink-Profil | Shift07 Blog</title>
+    <meta name="description" content="Schädliche Backlinks erkennen, bewerten und mit dem Google Disavow Tool entfernen. Schritt-für-Schritt-Anleitung zur Bereinigung deines Backlink-Profils.">
+    <meta name="author" content="Thümmler AI GmbH">
+    <link rel="icon" type="image/png" href="/logo.png">
+    <link rel="canonical" href="https://shift07.ai/blog/toxic-links-disavow-seo.html">
+    <link rel="alternate" type="application/rss+xml" title="Shift07 Blog" href="https://shift07.ai/feed.xml">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Toxic Links erkennen und disavowen: So schützt du dein Backlink-Profil | Shift07 Blog">
+    <meta property="og:description" content="Schädliche Backlinks erkennen, bewerten und mit dem Google Disavow Tool entfernen. Schritt-für-Schritt-Anleitung.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://shift07.ai/blog/toxic-links-disavow-seo.html">
+    <meta property="og:image" content="https://shift07.ai/blog/images/toxic-links-disavow-seo.png">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="Shift07">
+    <meta property="article:published_time" content="2026-04-15T10:00:00+02:00">
+    <meta property="article:section" content="Off-Page SEO">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Toxic Links erkennen und disavowen: So schützt du dein Backlink-Profil">
+    <meta name="twitter:description" content="Schädliche Backlinks erkennen und mit dem Disavow Tool bereinigen. Schritt-für-Schritt-Anleitung.">
+    <meta name="twitter:image" content="https://shift07.ai/blog/images/toxic-links-disavow-seo.png">
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Toxic Links erkennen und disavowen: So schützt du dein Backlink-Profil",
+      "description": "Schädliche Backlinks erkennen, bewerten und mit dem Google Disavow Tool entfernen. Schritt-für-Schritt-Anleitung zur Bereinigung deines Backlink-Profils.",
+      "image": "https://shift07.ai/blog/images/toxic-links-disavow-seo.png",
+      "datePublished": "2026-04-15T10:00:00+02:00",
+      "dateModified": "2026-04-15T10:00:00+02:00",
+      "author": {
+        "@type": "Organization",
+        "name": "Shift07",
+        "url": "https://shift07.ai"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Shift07",
+        "url": "https://shift07.ai",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://shift07.ai/assets/logo.png"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://shift07.ai/blog/toxic-links-disavow-seo.html"
+      }
+    }
+    </script>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K1S1RXBDS8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K1S1RXBDS8');
+    </script>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8475857002943858" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: rgba(15, 23, 42, 0.5); }
+        ::-webkit-scrollbar-thumb { background: rgba(59, 130, 246, 0.5); border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: rgba(59, 130, 246, 0.7); }
+        html { scroll-behavior: smooth; }
+        .article-content h2 { font-size: 1.5rem; font-weight: 700; color: #fff; margin-top: 2.5rem; margin-bottom: 1rem; }
+        .article-content h3 { font-size: 1.25rem; font-weight: 600; color: #e2e8f0; margin-top: 2rem; margin-bottom: 0.75rem; }
+        .article-content p { color: #cbd5e1; line-height: 1.8; margin-bottom: 1.25rem; }
+        .article-content ul, .article-content ol { color: #cbd5e1; margin-bottom: 1.25rem; padding-left: 1.5rem; }
+        .article-content li { margin-bottom: 0.5rem; line-height: 1.7; }
+        .article-content ul li { list-style-type: disc; }
+        .article-content ol li { list-style-type: decimal; }
+        .article-content a { color: #60a5fa; text-decoration: underline; text-underline-offset: 2px; }
+        .article-content a:hover { color: #93bbfc; }
+        .article-content blockquote { border-left: 4px solid #3b82f6; padding-left: 1.25rem; margin: 1.5rem 0; color: #94a3b8; font-style: italic; }
+        .article-content code { background: rgba(59, 130, 246, 0.15); color: #93c5fd; padding: 0.15rem 0.4rem; border-radius: 0.25rem; font-size: 0.9em; }
+        .article-content pre { background: rgba(15, 23, 42, 0.8); border: 1px solid rgba(255,255,255,0.1); border-radius: 0.75rem; padding: 1.25rem; overflow-x: auto; margin-bottom: 1.5rem; }
+        .article-content pre code { background: none; padding: 0; color: #e2e8f0; }
+        .article-content strong { color: #f1f5f9; }
+        .warning-box { background: rgba(239, 68, 68, 0.08); border: 1px solid rgba(239, 68, 68, 0.25); border-radius: 0.75rem; padding: 1.25rem; margin: 1.5rem 0; }
+        .tip-box { background: rgba(34, 197, 94, 0.08); border: 1px solid rgba(34, 197, 94, 0.25); border-radius: 0.75rem; padding: 1.25rem; margin: 1.5rem 0; }
+        .info-box { background: rgba(59, 130, 246, 0.08); border: 1px solid rgba(59, 130, 246, 0.25); border-radius: 0.75rem; padding: 1.25rem; margin: 1.5rem 0; }
+    </style>
+</head>
+<body class="bg-slate-900 text-white min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-slate-900/80 backdrop-blur-xl border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <a href="/" class="flex items-center gap-2">
+                    <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                    <span class="text-xl font-bold text-white">Shift07</span>
+                </a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="/" class="text-gray-300 hover:text-white transition-colors">SEO-Tool</a>
+                    <a href="/blog/" class="text-white font-medium border-b-2 border-blue-500 pb-0.5">Blog</a>
+                    <a href="/tools/" class="text-gray-300 hover:text-white transition-colors">Tools</a>
+                    <a href="/app/#/login" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-5 py-2 rounded-lg font-medium transition-all">Anmelden</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-gray-300 hover:text-white">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900/95 border-b border-white/10">
+            <div class="px-4 py-3 space-y-2">
+                <a href="/" class="block py-2 text-gray-300 hover:text-white">SEO-Tool</a>
+                <a href="/blog/" class="block py-2 text-white font-medium">Blog</a>
+                <a href="/tools/" class="block py-2 text-gray-300 hover:text-white">Tools</a>
+                <a href="/app/#/login" class="block py-2 text-blue-400 hover:text-blue-300">Anmelden</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Image -->
+    <section class="pt-16 relative">
+        <div class="h-[400px] relative overflow-hidden">
+            <img src="/blog/images/toxic-links-disavow-seo.png" alt="Toxic Links erkennen und disavowen: Backlink-Profil bereinigen" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black/60"></div>
+            <div class="absolute inset-0 flex items-center justify-center">
+                <div class="text-center px-4 max-w-4xl">
+                    <span class="inline-block text-sm font-semibold px-4 py-1.5 bg-white/10 text-white/90 rounded-full mb-6">Off-Page SEO</span>
+                    <h1 class="text-3xl md:text-5xl font-extrabold text-white leading-tight">Toxic Links erkennen und disavowen: So schützt du dein Backlink-Profil</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Article Content -->
+    <section class="py-12 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col lg:flex-row gap-12">
+
+                <!-- Main Content -->
+                <article class="lg:w-2/3">
+                    <!-- Meta -->
+                    <div class="flex flex-wrap items-center gap-4 text-sm text-gray-400 mb-10 pb-6 border-b border-white/10">
+                        <div class="flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+                            Shift07 Team
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                            15. April 2026
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                            11 Min. Lesezeit
+                        </div>
+                        <span class="text-xs font-semibold px-3 py-1 bg-red-500/20 text-red-400 rounded-full">Off-Page SEO</span>
+                    </div>
+
+                    <!-- Article Body -->
+                    <div class="article-content">
+
+                        <p>Nicht jeder Backlink ist ein Geschenk. Links von Spam-Websites, dubiosen Linkfarmen oder nicht-themenrelevanten Seiten können dein Google-Ranking aktiv schädigen – insbesondere nach einem manuellen Penalty oder einem Algorithmus-Update. In diesem Artikel lernst du, wie du toxische Links identifizierst, bewertest und mit dem Google Disavow Tool bereinigst.</p>
+
+                        <p>Wer noch keine Grundlage zum Thema Backlinks hat, sollte zuerst unseren Artikel <a href="/blog/was-sind-backlinks-grundlagen-seo.html">Was sind Backlinks? Grundlagen und Bedeutung für SEO</a> lesen. Wer verstehen möchte, wie sein Backlink-Profil insgesamt aussieht, findet in unserem Guide zum <a href="/blog/backlink-profil-analysieren-bereinigen.html">Backlink-Profil analysieren und bereinigen</a> den passenden Einstieg.</p>
+
+                        <h2>Was sind Toxic Links?</h2>
+
+                        <p>Als "toxisch" bezeichnet man Backlinks, die deiner Website schaden könnten – entweder weil sie in Googles Augen einer Manipulation ähneln oder weil sie von Websites stammen, denen Google kein Vertrauen schenkt.</p>
+
+                        <p>Typische Merkmale toxischer Links:</p>
+                        <ul>
+                            <li><strong>Spam-Websites:</strong> Seiten ohne echten Inhalt, vollgestopft mit Keywords und Links</li>
+                            <li><strong>Private Blog Networks (PBNs):</strong> Netzwerke aus Websites, die ausschließlich zum Linkaufbau existieren</li>
+                            <li><strong>Linkfarmen:</strong> Seiten, die wahllos auf tausende Domains verlinken</li>
+                            <li><strong>Irrelevante ausländische Domains:</strong> Z.B. Links von russischen Casino-Seiten auf ein deutsches Handwerksunternehmen</li>
+                            <li><strong>Keyword-reiche Ankertexte in Masse:</strong> Hunderte Links mit genau demselben Keyword-Ankertext (übermäßige Optimierung)</li>
+                            <li><strong>Gehackte Websites:</strong> Links von Seiten, die ohne Wissen des Eigentümers mit Spam-Links infiziert wurden</li>
+                            <li><strong>Paid Links ohne nofollow:</strong> Links, die gekauft wurden, aber als natürlich getarnt sind</li>
+                        </ul>
+
+                        <div class="info-box">
+                            <strong class="text-blue-300">Wichtig:</strong> <span class="text-blue-200/80">Nicht alle schlechten Links sind gefährlich. Google ignoriert die meisten Spam-Links ohnehin (laut Google selbst). Das Disavow Tool ist nur dann sinnvoll, wenn du einen manuellen Penalty erhalten hast oder wenn dein Linkprofil nachweislich stark verschmutzt ist – z.B. durch eigene vergangene Linkaufbau-Kampagnen.</span>
+                        </div>
+
+                        <h2>Schritt 1: Backlinks exportieren</h2>
+
+                        <p>Der erste Schritt ist eine vollständige Übersicht aller Links auf deine Domain. Nutze dafür:</p>
+
+                        <h3>Google Search Console (kostenlos)</h3>
+                        <ol>
+                            <li>Öffne die <a href="https://search.google.com/search-console" target="_blank" rel="noopener">Google Search Console</a></li>
+                            <li>Navigiere zu "Links" (Seitenleiste)</li>
+                            <li>Klicke auf "Externe Links" → "Mehr"</li>
+                            <li>Klicke auf "Exportieren" → "CSV-Datei herunterladen"</li>
+                        </ol>
+                        <p>Du erhältst eine Liste aller Domains, von denen Google Links auf deine Seite bekannt sind. Das ist dein Ausgangsmaterial.</p>
+
+                        <h3>Kostenpflichtige Tools (für tiefere Analyse)</h3>
+                        <ul>
+                            <li><strong>Ahrefs</strong> – umfangreichste Backlink-Datenbank, zeigt Trust Flow und Spam Score</li>
+                            <li><strong>SEMrush</strong> – hat eine eigene "Toxicity Score" Funktion für Backlinks</li>
+                            <li><strong>Majestic</strong> – Citation Flow und Trust Flow als Qualitätsindikatoren</li>
+                        </ul>
+                        <p>Für die meisten kleinen Websites reicht die Google Search Console als Grundlage. Profis kombinieren mehrere Quellen.</p>
+
+                        <h2>Schritt 2: Toxische Links identifizieren</h2>
+
+                        <p>Gehe die exportierte Domain-Liste durch und bewerte jede verlinkende Domain nach folgenden Kriterien:</p>
+
+                        <h3>Rote Flaggen (fast immer toxisch)</h3>
+                        <ul>
+                            <li>Website ohne erkennbaren Inhalt (nur Links, keine Texte)</li>
+                            <li>Domain auf Indexierungs-Blacklists (z.B. <a href="https://www.stopforumspam.com" target="_blank" rel="noopener">StopForumSpam</a>)</li>
+                            <li>Hunderte von ausgehenden Links auf unterschiedlichste Domains</li>
+                            <li>TLD-Muster aus bekannten Spam-Regionen: <code>.xyz, .top, .info</code> in Verbindung mit keywords</li>
+                            <li>Seite vollständig auf einer anderen Sprache als deine Zielgruppe</li>
+                            <li>Domain wurde für offensichtliches Casino-, Poker- oder Pharma-Spam genutzt</li>
+                        </ul>
+
+                        <h3>Gelbe Flaggen (genauer prüfen)</h3>
+                        <ul>
+                            <li>Niedriger Domain Authority / Trust Flow (unter 5)</li>
+                            <li>Sehr hohe Anzahl ausgehender Links</li>
+                            <li>Keine erkennbare Verbindung zum Thema deiner Website</li>
+                            <li>Keyword-reicher Ankertext (z.B. "billige SEO Dienstleistungen kaufen")</li>
+                            <li>Keine HTTPS-Verschlüsselung</li>
+                            <li>Website ist nicht mehr erreichbar (404 oder Timeout)</li>
+                        </ul>
+
+                        <h3>Grüne Flaggen (behalten!)</h3>
+                        <ul>
+                            <li>Redaktioneller Kontext (Artikel über dich oder deine Dienstleistung)</li>
+                            <li>Thematische Relevanz zur eigenen Domain</li>
+                            <li>Bekannte, etablierte Website (Lokalzeitung, Branchenverband, Wikipedia)</li>
+                            <li>Natürlicher Ankertext (Firmenname, URL oder thematisch passend)</li>
+                        </ul>
+
+                        <p>Erstelle eine Tabelle mit den Spalten: Domain, Status (behalten / disavow), Begründung. Diese Tabelle ist deine Arbeitsgrundlage für den nächsten Schritt.</p>
+
+                        <h2>Schritt 3: Manuelles Entfernen versuchen (optional)</h2>
+
+                        <p>Bevor du das Disavow Tool verwendest, kannst du versuchen, Links direkt beim Webmaster entfernen zu lassen. Das ist zwar aufwändig, aber bei Links von Seiten, die noch aktiv gepflegt werden, manchmal erfolgreich.</p>
+
+                        <ol>
+                            <li>Finde den Webmaster der verlinkenden Seite (Impressum, WHOIS)</li>
+                            <li>Schreibe eine kurze, freundliche E-Mail mit der Bitte, den Link zu entfernen</li>
+                            <li>Dokumentiere den Versuch (Datum, E-Mail-Adresse) – Google fragt bei Penalty-Einsprüchen danach</li>
+                            <li>Wenn keine Antwort nach 2 Wochen: Disavow Tool verwenden</li>
+                        </ol>
+
+                        <div class="warning-box">
+                            <strong class="text-red-300">Praxishinweis:</strong> <span class="text-red-200/80">Viele Spam-Websites haben kein Impressum und sind über WHOIS nicht erreichbar. In diesen Fällen direkt zum Disavow Tool wechseln – manuelles Entfernen ist nicht möglich.</span>
+                        </div>
+
+                        <h2>Schritt 4: Disavow-Datei erstellen</h2>
+
+                        <p>Das Google Disavow Tool akzeptiert eine einfache Textdatei (<code>.txt</code>), in der du die Domains oder URLs angibst, die Google ignorieren soll.</p>
+
+                        <h3>Format der Disavow-Datei</h3>
+
+                        <pre><code># Kommentarzeile (beginnt mit #)
+# Entfernt am 15.04.2026 – vollständige Spam-Domains
+
+domain:spam-linkfarm-beispiel.xyz
+domain:casino-spam-deutschland.info
+domain:russische-linkfarm.ru
+
+# Einzelne URLs (wenn nur bestimmte Seiten einer Domain toxisch sind)
+https://teilweise-ok-domain.de/spam-seite-1
+https://teilweise-ok-domain.de/spam-seite-2</code></pre>
+
+                        <p><strong>Wichtige Regeln:</strong></p>
+                        <ul>
+                            <li>Verwende <code>domain:</code> vor dem Domainnamen, um die gesamte Domain zu disavowen (empfohlen für Spam-Domains)</li>
+                            <li>Einzelne URLs nur disavowen, wenn der Rest der Domain vertrauenswürdig ist</li>
+                            <li>Kommentare mit <code>#</code> am Anfang der Zeile helfen dir, die Datei nachvollziehbar zu halten</li>
+                            <li>Kodierung: UTF-8</li>
+                            <li>Maximale Dateigröße: 2 MB</li>
+                        </ul>
+
+                        <h2>Schritt 5: Datei bei Google einreichen</h2>
+
+                        <ol>
+                            <li>Öffne das <a href="https://search.google.com/search-console/disavow-links" target="_blank" rel="noopener">Google Disavow Tool</a> (du musst in der Search Console eingeloggt sein)</li>
+                            <li>Wähle die korrekte Property (Domain oder URL-Prefix)</li>
+                            <li>Klicke auf "Disavow-Datei hochladen"</li>
+                            <li>Lade deine <code>.txt</code>-Datei hoch</li>
+                            <li>Bestätige die Einreichung</li>
+                        </ol>
+
+                        <div class="tip-box">
+                            <strong class="text-green-300">Wartezeit:</strong> <span class="text-green-200/80">Google verarbeitet Disavow-Dateien beim nächsten Recrawl der betroffenen Seiten. Das kann mehrere Wochen dauern. Kein sofortiger Ranking-Effekt zu erwarten – Geduld ist notwendig.</span>
+                        </div>
+
+                        <h2>Häufige Fehler beim Disavowen</h2>
+
+                        <h3>1. Zu viele Links disavowen</h3>
+                        <p>Wer aus Vorsicht zu viele Links disavowt – auch gute –, schadet sich selbst. Jeder disavowte Link verliert seinen positiven Ranking-Effekt. Im Zweifel: lieber einen Link weniger disavowen als einen guten Link versehentlich entfernen.</p>
+
+                        <h3>2. Nur Einzel-URLs statt Domains</h3>
+                        <p>Wenn eine Domain ausschließlich für Spam-Links genutzt wird, disavowe die gesamte Domain (<code>domain:spam.xyz</code>) statt jeder einzelnen URL. Das ist effizienter und vollständiger.</p>
+
+                        <h3>3. Disavow bei gesunden Linkprofilen</h3>
+                        <p>Das Disavow Tool ist kein präventives Werkzeug. Wer ein natürlich gewachsenes Linkprofil hat, braucht es in den meisten Fällen nicht. Nicht jeder Link von einer schwachen Domain ist schädlich – Google filtert die meisten selbst heraus.</p>
+
+                        <h3>4. Disavow-Datei vergessen zu aktualisieren</h3>
+                        <p>Eine einmal hochgeladene Disavow-Datei ersetzt die vorherige vollständig. Wer neue Links hinzufügt, muss immer die komplette Datei hochladen – nicht nur die Ergänzungen.</p>
+
+                        <h2>Wann sollte ich das Disavow Tool NICHT nutzen?</h2>
+
+                        <p>Googles offizielle Position: Das Disavow Tool ist für die wenigsten Websites notwendig. John Mueller von Google hat mehrfach klargestellt, dass Google Spam-Links von sich aus gut filtert und sie oft einfach ignoriert.</p>
+
+                        <p>Das Tool ist sinnvoll, wenn:</p>
+                        <ul>
+                            <li>Du eine manuelle Maßnahme ("Manual Action") in der Search Console erhalten hast</li>
+                            <li>Du in der Vergangenheit aktiv Linkaufbau-Kampagnen mit künstlichen Links betrieben hast</li>
+                            <li>Du eine Website übernommen hast, die zuvor für Black-Hat SEO genutzt wurde</li>
+                            <li>Du auffällige Ranking-Einbrüche nach einem Link-Aufbau-Pattern hast</li>
+                        </ul>
+
+                        <h2>Regelmäßige Backlink-Pflege einrichten</h2>
+
+                        <p>Toxische Links entstehen oft ohne eigenes Zutun – durch Negative SEO (Konkurrenten linken absichtlich von Spam-Seiten auf dich) oder durch automatisierte Spam-Crawler. Eine monatliche Routine schützt dich:</p>
+
+                        <ol>
+                            <li><strong>Monatlich:</strong> Neue Backlinks in der Search Console prüfen (sortiert nach Datum)</li>
+                            <li><strong>Quartalsweise:</strong> Vollständigen Export und Analyse des Backlink-Profils</li>
+                            <li><strong>Bei Anomalien:</strong> Plötzliche Zunahme neuer Links aus unbekannten Domains sofort prüfen</li>
+                        </ol>
+
+                        <p>Nutze unsere <a href="/tools/backlink-anchor-text-analyzer/">Backlink-Anchor-Text-Analyse</a>, um zu prüfen, ob dein Ankertext-Profil natürlich wirkt – ein übermäßig keyword-reiches Profil ist ein häufiger Auslöser für algorithmische Penalties.</p>
+
+                        <h2>Fazit: Disavowen als letztes Mittel</h2>
+
+                        <p>Toxic Links sind real – aber das Disavow Tool ist kein Allheilmittel. Die erste Maßnahme sollte immer sein: das Linkprofil verstehen. Dann priorisieren: Welche Links sind wirklich schädlich, welche sind nur schwach? Wer vorschnell zu viele Links disavowt, verliert auch echte Ranking-Power.</p>
+
+                        <p>Für den Aufbau eines gesunden Backlink-Profils neben der Bereinigung empfehle ich unsere Artikel zum <a href="/blog/linkaufbau-strategien-backlinks.html">strategischen Linkaufbau</a> und zu <a href="/blog/linkable-assets-backlinks-erstellen.html">Linkable Assets</a>. Ein starkes, natürliches Profil ist der beste Schutz gegen die negativen Auswirkungen toxischer Links.</p>
+
+                    </div>
+
+                    <!-- Share / Back -->
+                    <div class="mt-12 pt-8 border-t border-white/10 flex items-center justify-between">
+                        <a href="/blog/" class="text-blue-400 hover:text-blue-300 flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+                            Zurück zum Blog
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Sidebar -->
+                <aside class="lg:w-1/3 space-y-8">
+                    <!-- CTA Box -->
+                    <div class="bg-gradient-to-br from-blue-600/20 to-indigo-600/20 border border-blue-500/30 rounded-2xl p-6 text-center">
+                        <h3 class="text-lg font-bold text-white mb-3">Kostenlose SEO-Analyse</h3>
+                        <p class="text-gray-400 text-sm mb-5">Überprüfe deine Website auf technische SEO-Probleme – inkl. Backlink-Signale.</p>
+                        <a href="/" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-6 py-3 rounded-lg font-medium transition-all inline-block w-full">Jetzt testen</a>
+                    </div>
+
+                    <!-- Related Articles -->
+                    <div class="bg-slate-800/50 border border-white/10 rounded-2xl p-6">
+                        <h3 class="text-lg font-bold text-white mb-4">Verwandte Artikel</h3>
+                        <div class="space-y-4">
+                            <a href="/blog/backlink-profil-analysieren-bereinigen.html" class="block group">
+                                <p class="text-sm text-gray-300 group-hover:text-blue-400 transition-colors font-medium">Backlink-Profil analysieren und bereinigen</p>
+                                <p class="text-xs text-gray-500 mt-1">Off-Page SEO</p>
+                            </a>
+                            <a href="/blog/was-sind-backlinks-grundlagen-seo.html" class="block group">
+                                <p class="text-sm text-gray-300 group-hover:text-blue-400 transition-colors font-medium">Was sind Backlinks? Grundlagen und Bedeutung</p>
+                                <p class="text-xs text-gray-500 mt-1">SEO Grundlagen</p>
+                            </a>
+                            <a href="/blog/dofollow-nofollow-links-seo.html" class="block group">
+                                <p class="text-sm text-gray-300 group-hover:text-blue-400 transition-colors font-medium">Dofollow vs. Nofollow Links: Der SEO-Leitfaden</p>
+                                <p class="text-xs text-gray-500 mt-1">Off-Page SEO</p>
+                            </a>
+                            <a href="/blog/linkaufbau-strategien-backlinks.html" class="block group">
+                                <p class="text-sm text-gray-300 group-hover:text-blue-400 transition-colors font-medium">Linkaufbau-Strategien: 8 Wege zu hochwertigen Backlinks</p>
+                                <p class="text-xs text-gray-500 mt-1">Off-Page SEO</p>
+                            </a>
+                            <a href="/blog/linkable-assets-backlinks-erstellen.html" class="block group">
+                                <p class="text-sm text-gray-300 group-hover:text-blue-400 transition-colors font-medium">Linkable Assets: Inhalte die Backlinks anziehen</p>
+                                <p class="text-xs text-gray-500 mt-1">Content-Marketing</p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Tool CTA -->
+                    <div class="bg-slate-800/50 border border-white/10 rounded-2xl p-6">
+                        <h3 class="text-lg font-bold text-white mb-3">Backlink-Analyse</h3>
+                        <p class="text-gray-400 text-sm mb-4">Analysiere die Ankertexte deiner Backlinks – erkenne unnatürliche Muster sofort.</p>
+                        <a href="/tools/backlink-anchor-text-analyzer/" class="text-blue-400 hover:text-blue-300 text-sm font-medium flex items-center gap-1">
+                            Zum Tool →
+                        </a>
+                    </div>
+                </aside>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer CTA -->
+    <section class="py-16 px-4 bg-gradient-to-r from-blue-900/30 to-indigo-900/30 border-t border-b border-white/5">
+        <div class="max-w-3xl mx-auto text-center">
+            <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">Teste deine Website jetzt kostenlos</h2>
+            <p class="text-gray-400 mb-8">Erhalte eine vollständige SEO-Analyse mit konkreten Verbesserungsvorschlägen.</p>
+            <form action="/" method="get" class="flex flex-col sm:flex-row gap-3 max-w-xl mx-auto">
+                <input type="url" placeholder="https://deine-website.de" class="flex-1 bg-slate-800 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-blue-500">
+                <a href="/" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-8 py-3 rounded-lg font-medium transition-all whitespace-nowrap">Analyse starten</a>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/10 bg-slate-900/50 py-12 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="flex items-center gap-2">
+                    <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                    <span class="text-lg font-bold text-white">Shift07</span>
+                </div>
+                <div class="flex items-center space-x-6 text-sm text-gray-400">
+                    <a href="/impressum.html" class="hover:text-white transition-colors">Impressum</a>
+                    <a href="/datenschutz.html" class="hover:text-white transition-colors">Datenschutz</a>
+                    <a href="/agb.html" class="hover:text-white transition-colors">AGB</a>
+                </div>
+                <p class="text-sm text-gray-500">&copy; 2026 Thümmler AI GmbH</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
