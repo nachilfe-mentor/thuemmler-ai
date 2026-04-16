@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LocalBusiness Schema Markup: Vollständige Anleitung 2026 | Shift07 Blog</title>
+    <meta name="description" content="LocalBusiness Schema Markup richtig einsetzen: Alle Properties, JSON-LD-Beispiele, Sub-Typen und häufige Fehler — die vollständige Anleitung für lokale Unternehmen.">
+    <meta name="author" content="Thümmler AI GmbH">
+    <link rel="icon" type="image/png" href="/logo.png">
+    <link rel="canonical" href="https://shift07.ai/blog/localbusiness-schema-markup-anleitung.html">
+    <link rel="alternate" type="application/rss+xml" title="Shift07 Blog" href="https://shift07.ai/feed.xml">
+    <!-- Open Graph -->
+    <meta property="og:title" content="LocalBusiness Schema Markup: Vollständige Anleitung 2026 | Shift07 Blog">
+    <meta property="og:description" content="LocalBusiness Schema Markup richtig einsetzen: Alle Properties, JSON-LD-Beispiele, Sub-Typen und häufige Fehler — die vollständige Anleitung für lokale Unternehmen.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://shift07.ai/blog/localbusiness-schema-markup-anleitung.html">
+    <meta property="og:image" content="https://shift07.ai/blog/images/localbusiness-schema-markup.png">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="Shift07">
+    <meta property="article:published_time" content="2026-04-16T08:00:00+02:00">
+    <meta property="article:section" content="Tech-SEO">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="LocalBusiness Schema Markup: Vollständige Anleitung 2026">
+    <meta name="twitter:description" content="LocalBusiness Schema Markup richtig einsetzen: Alle Properties, JSON-LD-Beispiele, Sub-Typen und häufige Fehler.">
+    <meta name="twitter:image" content="https://shift07.ai/blog/images/localbusiness-schema-markup.png">
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "LocalBusiness Schema Markup: Vollständige Anleitung 2026",
+      "description": "LocalBusiness Schema Markup richtig einsetzen: Alle Properties, JSON-LD-Beispiele, Sub-Typen und häufige Fehler — die vollständige Anleitung für lokale Unternehmen.",
+      "image": "https://shift07.ai/blog/images/localbusiness-schema-markup.png",
+      "datePublished": "2026-04-16T08:00:00+02:00",
+      "dateModified": "2026-04-16T08:00:00+02:00",
+      "author": {
+        "@type": "Organization",
+        "name": "Shift07",
+        "url": "https://shift07.ai"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Shift07",
+        "url": "https://shift07.ai",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://shift07.ai/assets/logo.png"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://shift07.ai/blog/localbusiness-schema-markup-anleitung.html"
+      }
+    }
+    </script>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K1S1RXBDS8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K1S1RXBDS8');
+    </script>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8475857002943858" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: rgba(15, 23, 42, 0.5); }
+        ::-webkit-scrollbar-thumb { background: rgba(59, 130, 246, 0.5); border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: rgba(59, 130, 246, 0.7); }
+        html { scroll-behavior: smooth; }
+        .article-content h2 { font-size: 1.5rem; font-weight: 700; color: #fff; margin-top: 2.5rem; margin-bottom: 1rem; }
+        .article-content h3 { font-size: 1.25rem; font-weight: 600; color: #e2e8f0; margin-top: 2rem; margin-bottom: 0.75rem; }
+        .article-content p { color: #cbd5e1; line-height: 1.8; margin-bottom: 1.25rem; }
+        .article-content ul, .article-content ol { color: #cbd5e1; margin-bottom: 1.25rem; padding-left: 1.5rem; }
+        .article-content li { margin-bottom: 0.5rem; line-height: 1.7; }
+        .article-content ul li { list-style-type: disc; }
+        .article-content ol li { list-style-type: decimal; }
+        .article-content a { color: #60a5fa; text-decoration: underline; text-underline-offset: 2px; }
+        .article-content a:hover { color: #93bbfc; }
+        .article-content blockquote { border-left: 4px solid #3b82f6; padding-left: 1.25rem; margin: 1.5rem 0; color: #94a3b8; font-style: italic; }
+        .article-content code { background: rgba(59, 130, 246, 0.15); color: #93c5fd; padding: 0.15rem 0.4rem; border-radius: 0.25rem; font-size: 0.9em; }
+        .article-content pre { background: rgba(15, 23, 42, 0.8); border: 1px solid rgba(255,255,255,0.1); border-radius: 0.75rem; padding: 1.25rem; overflow-x: auto; margin-bottom: 1.5rem; }
+        .article-content pre code { background: none; padding: 0; color: #e2e8f0; }
+        .article-content strong { color: #f1f5f9; }
+    </style>
+</head>
+<body class="bg-slate-900 text-white min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-slate-900/80 backdrop-blur-xl border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <a href="/" class="flex items-center gap-2">
+                    <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                    <span class="text-xl font-bold text-white">Shift07</span>
+                </a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="/" class="text-gray-300 hover:text-white transition-colors">SEO-Tool</a>
+                    <a href="/blog/" class="text-white font-medium border-b-2 border-blue-500 pb-0.5">Blog</a>
+                    <a href="/tools/" class="text-gray-300 hover:text-white transition-colors">Tools</a>
+                    <a href="/app/#/login" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-5 py-2 rounded-lg font-medium transition-all">Anmelden</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-gray-300 hover:text-white">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900/95 border-b border-white/10">
+            <div class="px-4 py-3 space-y-2">
+                <a href="/" class="block py-2 text-gray-300 hover:text-white">SEO-Tool</a>
+                <a href="/blog/" class="block py-2 text-white font-medium">Blog</a>
+                <a href="/tools/" class="block py-2 text-gray-300 hover:text-white">Tools</a>
+                <a href="/app/#/login" class="block py-2 text-blue-400 hover:text-blue-300">Anmelden</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Image -->
+    <section class="pt-16 relative">
+        <div class="h-[400px] bg-gradient-to-br from-blue-600 via-indigo-700 to-purple-800 relative overflow-hidden">
+            <img src="/blog/images/localbusiness-schema-markup.png" alt="LocalBusiness Schema Markup Anleitung für lokale Unternehmen" class="absolute inset-0 w-full h-full object-cover opacity-30">
+            <div class="absolute inset-0 bg-black/40"></div>
+            <div class="absolute inset-0 flex items-center justify-center">
+                <div class="text-center px-4 max-w-4xl">
+                    <span class="inline-block text-sm font-semibold px-4 py-1.5 bg-white/10 text-white/90 rounded-full mb-6">Tech-SEO</span>
+                    <h1 class="text-3xl md:text-5xl font-extrabold text-white leading-tight">LocalBusiness Schema Markup: Vollständige Anleitung 2026</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Article Content -->
+    <section class="py-12 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col lg:flex-row gap-12">
+
+                <!-- Main Content -->
+                <article class="lg:w-2/3">
+                    <!-- Meta -->
+                    <div class="flex flex-wrap items-center gap-4 text-sm text-gray-400 mb-10 pb-6 border-b border-white/10">
+                        <div class="flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+                            Shift07 Team
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                            16. April 2026
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                            12 Min. Lesezeit
+                        </div>
+                        <span class="text-xs font-semibold px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full">Tech-SEO</span>
+                    </div>
+
+                    <!-- Article Body -->
+                    <div class="article-content">
+
+                        <p>Wenn ein potenzieller Kunde in Google nach "Zahnarzt Berlin Mitte" sucht, entscheidet in Millisekunden, ob deine Praxis sichtbar wird oder nicht. <strong>LocalBusiness Schema Markup</strong> ist einer der mächtigsten Hebel, den du als lokales Unternehmen ziehen kannst — und gleichzeitig einer der am häufigsten vernachlässigten. In unserem <a href="/blog/strukturierte-daten-seo-schema-markup.html">Grundlagenartikel zu strukturierten Daten</a> haben wir erklärt, was Schema Markup ist. In diesem Artikel gehen wir tief in den LocalBusiness-Typ ein: alle Properties, JSON-LD-Beispiele für verschiedene Branchen und die häufigsten Fehler, die lokale Unternehmen machen.</p>
+
+                        <h2>Was ist LocalBusiness Schema?</h2>
+
+                        <p>LocalBusiness ist ein Schema.org-Typ, der Google und anderen Suchmaschinen strukturiert mitteilt: <em>"Hier ist ein lokales Unternehmen — mit Adresse, Telefonnummer, Öffnungszeiten und weiteren Informationen."</em> Es ist die digitale Visitenkarte, die du direkt in deinen HTML-Code einbettest.</p>
+
+                        <p>Der Typ <code>LocalBusiness</code> erbt von <code>Organization</code> und <code>Place</code> und kombiniert deren Properties. Das bedeutet: du kannst sowohl Unternehmens-Properties (Name, Logo, Kontakt) als auch Standort-Properties (Adresse, Koordinaten, Öffnungszeiten) nutzen.</p>
+
+                        <p>Google zeigt LocalBusiness-Daten in verschiedenen Kontexten an:</p>
+                        <ul>
+                            <li><strong>Knowledge Panel:</strong> Die Informationsbox rechts in den Suchergebnissen</li>
+                            <li><strong>Google Maps:</strong> Detailansicht eines Unternehmenseintrags</li>
+                            <li><strong>Rich Snippets:</strong> Sternbewertungen direkt in den organischen Suchergebnissen</li>
+                            <li><strong>Local Pack:</strong> Die drei Unternehmen, die Google oberhalb der organischen Ergebnisse zeigt</li>
+                        </ul>
+
+                        <h2>Warum LocalBusiness Schema für lokales SEO entscheidend ist</h2>
+
+                        <p>Lokales SEO funktioniert nach anderen Regeln als klassisches SEO. Google möchte dem Nutzer das nächstgelegene, relevanteste und vertrauenswürdigste Unternehmen zeigen. Schema Markup sendet direkte Signale an Google: <em>"Vertrau mir — ich liefere diese Daten strukturiert und verifiziert."</em></p>
+
+                        <p>Konkret hilft LocalBusiness Schema bei:</p>
+                        <ul>
+                            <li><strong>Bessere Rankings im Local Pack:</strong> Vollständige strukturierte Daten erhöhen die Relevanz-Bewertung</li>
+                            <li><strong>Höhere CTR durch Rich Snippets:</strong> Öffnungszeiten oder Bewertungen direkt in den SERPs steigern die Klickrate</li>
+                            <li><strong>Konsistente NAP-Daten:</strong> Name, Adresse, Telefon werden aus einer Quelle übernommen — kein Widerspruch zu anderen Einträgen</li>
+                            <li><strong>Voice Search Optimierung:</strong> Sprachassistenten wie Google Assistant greifen direkt auf strukturierte Daten zurück</li>
+                        </ul>
+
+                        <p>In unserer <a href="/blog/nap-konsistenz-lokales-seo.html">Analyse zur NAP-Konsistenz</a> zeigen wir, wie wichtig einheitliche Kontaktdaten über alle Kanäle hinweg sind. Schema Markup ist der Ausgangspunkt dieser Konsistenz.</p>
+
+                        <h2>Die wichtigsten LocalBusiness-Properties im Überblick</h2>
+
+                        <p>LocalBusiness kennt dutzende Properties — nicht alle sind gleich wichtig. Hier sind die Properties, die Google am stärksten gewichtet:</p>
+
+                        <h3>Pflicht-Properties (ohne diese fehlt Relevanz)</h3>
+                        <ul>
+                            <li><code>name</code> — Offizieller Unternehmensname (exakt wie im Impressum)</li>
+                            <li><code>address</code> — PostalAddress mit streetAddress, postalCode, addressLocality, addressCountry</li>
+                            <li><code>telephone</code> — Telefonnummer im internationalen Format (+49...)</li>
+                            <li><code>url</code> — Kanonische URL der Website</li>
+                        </ul>
+
+                        <h3>Empfohlene Properties (stark für Rankings)</h3>
+                        <ul>
+                            <li><code>openingHoursSpecification</code> — Öffnungszeiten als strukturiertes Array</li>
+                            <li><code>geo</code> — GPS-Koordinaten (GeoCoordinates)</li>
+                            <li><code>image</code> — Bild des Unternehmens oder Logos</li>
+                            <li><code>priceRange</code> — Preisklasse (€, €€, €€€)</li>
+                            <li><code>aggregateRating</code> — Durchschnittsbewertung mit Anzahl der Bewertungen</li>
+                            <li><code>sameAs</code> — Links zu Google Maps, Facebook, Yelp-Einträgen</li>
+                        </ul>
+
+                        <h3>Optionale Properties (für spezifische Branchen)</h3>
+                        <ul>
+                            <li><code>hasMap</code> — URL zur Google Maps-Seite</li>
+                            <li><code>servesCuisine</code> — Für Restaurants: Art der Küche</li>
+                            <li><code>menu</code> — Für Restaurants: Link zur Speisekarte</li>
+                            <li><code>currenciesAccepted</code> — Akzeptierte Währungen</li>
+                            <li><code>paymentAccepted</code> — Zahlungsmethoden (Cash, Credit Card, etc.)</li>
+                            <li><code>email</code> — Geschäftliche E-Mail-Adresse</li>
+                            <li><code>foundingDate</code> — Gründungsjahr (stärkt Vertrauen)</li>
+                        </ul>
+
+                        <h2>Vollständiges JSON-LD-Beispiel für ein Handwerksunternehmen</h2>
+
+                        <p>Hier ist ein vollständiges, valides JSON-LD-Beispiel für einen Elektrobetrieb in Berlin:</p>
+
+<pre><code>&lt;script type="application/ld+json"&gt;
+{
+  "@context": "https://schema.org",
+  "@type": "Electrician",
+  "name": "Müller Elektrotechnik GmbH",
+  "url": "https://mueller-elektro-berlin.de",
+  "telephone": "+49-30-12345678",
+  "email": "info@mueller-elektro-berlin.de",
+  "image": "https://mueller-elektro-berlin.de/images/logo.jpg",
+  "priceRange": "€€",
+  "foundingDate": "2005",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Hauptstraße 42",
+    "postalCode": "10115",
+    "addressLocality": "Berlin",
+    "addressRegion": "Berlin",
+    "addressCountry": "DE"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 52.5200,
+    "longitude": 13.4050
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "07:00",
+      "closes": "18:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "08:00",
+      "closes": "13:00"
+    }
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "reviewCount": "127",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "sameAs": [
+    "https://www.google.com/maps?cid=XXXXX",
+    "https://www.facebook.com/mueller-elektro",
+    "https://www.yelp.de/biz/mueller-elektrotechnik"
+  ]
+}
+&lt;/script&gt;</code></pre>
+
+                        <h2>Die wichtigsten LocalBusiness Sub-Typen</h2>
+
+                        <p>LocalBusiness ist ein Oberbegriff. Schema.org kennt über 100 spezialisierte Sub-Typen, die zusätzliche branchenspezifische Properties freischalten. Je spezifischer der Typ, desto präziser versteht Google dein Unternehmen.</p>
+
+                        <h3>Gesundheit & Medizin</h3>
+                        <ul>
+                            <li><code>Dentist</code> — Zahnarztpraxis</li>
+                            <li><code>Physician</code> — Arztpraxis (Allgemeinmedizin)</li>
+                            <li><code>MedicalClinic</code> — Klinik oder medizinisches Zentrum</li>
+                            <li><code>Physiotherapist</code> — Physiotherapiepraxis</li>
+                            <li><code>Optician</code> — Optiker</li>
+                        </ul>
+
+                        <h3>Handwerk & Service</h3>
+                        <ul>
+                            <li><code>Electrician</code> — Elektriker</li>
+                            <li><code>Plumber</code> — Klempner/Sanitär</li>
+                            <li><code>RoofingContractor</code> — Dachdecker</li>
+                            <li><code>HVACBusiness</code> — Heizung/Klima</li>
+                            <li><code>PaintingContractor</code> — Malerbetrieb</li>
+                        </ul>
+
+                        <h3>Gastronomie & Hotellerie</h3>
+                        <ul>
+                            <li><code>Restaurant</code> — Restaurant</li>
+                            <li><code>Bakery</code> — Bäckerei</li>
+                            <li><code>CafeOrCoffeeShop</code> — Café</li>
+                            <li><code>Hotel</code> — Hotel</li>
+                            <li><code>FastFoodRestaurant</code> — Fast-Food-Restaurant</li>
+                        </ul>
+
+                        <h3>Beauty & Wellness</h3>
+                        <ul>
+                            <li><code>HairSalon</code> — Friseursalon</li>
+                            <li><code>BeautySalon</code> — Schönheitssalon/Kosmetik</li>
+                            <li><code>NailSalon</code> — Nagelstudio</li>
+                            <li><code>HealthClub</code> — Fitnessstudio</li>
+                            <li><code>SportsActivityLocation</code> — Yoga-Studio, Personal Trainer</li>
+                        </ul>
+
+                        <h3>Finanzen & Beratung</h3>
+                        <ul>
+                            <li><code>AccountingService</code> — Steuerberater, Buchhalter</li>
+                            <li><code>FinancialService</code> — Finanzberater</li>
+                            <li><code>RealEstateAgent</code> — Immobilienmakler</li>
+                            <li><code>InsuranceAgency</code> — Versicherungsmakler</li>
+                        </ul>
+
+                        <p>Tipp: Du kannst auch mehrere Typen angeben, wenn dein Unternehmen in mehrere Kategorien fällt. Nutze dann ein Array: <code>"@type": ["LocalBusiness", "Restaurant", "CafeOrCoffeeShop"]</code>.</p>
+
+                        <h2>Öffnungszeiten korrekt angeben</h2>
+
+                        <p>Die <code>openingHoursSpecification</code> Property ist besonders wichtig für lokales SEO. Google zeigt Öffnungszeiten direkt im Knowledge Panel an — falsche Angaben kosten Vertrauen und Klicks.</p>
+
+<pre><code>"openingHoursSpecification": [
+  {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Friday"],
+    "opens": "09:00",
+    "closes": "18:00"
+  },
+  {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": "Thursday",
+    "opens": "09:00",
+    "closes": "20:00"
+  },
+  {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": "Saturday",
+    "opens": "10:00",
+    "closes": "14:00"
+  }
+]</code></pre>
+
+                        <p><strong>Wichtig:</strong> Nutze englische Wochentagsnamen (Monday, Tuesday, etc.) — nicht die deutschen. Zeitangaben im 24-Stunden-Format ohne Sekunden (HH:MM).</p>
+
+                        <p>Für Sonderöffnungszeiten (Feiertage, Urlaub) nutze <code>specialOpeningHoursSpecification</code> mit zusätzlichem <code>validFrom</code> und <code>validThrough</code> Datum.</p>
+
+                        <h2>GPS-Koordinaten: Warum sie so wichtig sind</h2>
+
+                        <p>Das <code>geo</code>-Property mit den genauen GPS-Koordinaten hilft Google, dein Unternehmen präzise im lokalen Suchumfeld zu positionieren. Ohne Koordinaten muss Google die Adresse selbst geocodieren — mit möglichen Ungenauigkeiten.</p>
+
+                        <p>Deine genauen Koordinaten findest du einfach: Gehe zu <em>Google Maps</em>, klicke auf deinen Standort, und die Koordinaten erscheinen unten im Browser. Alternativ: Rechtsklick auf Google Maps → "Was ist hier?" zeigt die Koordinaten.</p>
+
+<pre><code>"geo": {
+  "@type": "GeoCoordinates",
+  "latitude": 52.5200,
+  "longitude": 13.4050
+}</code></pre>
+
+                        <h2>aggregateRating: Sternbewertungen in den SERPs</h2>
+
+                        <p>Wenn dein Unternehmen Bewertungen hat, kannst du diese als <code>aggregateRating</code> in das Schema einbetten. Google kann dann gelbe Sterne direkt in den organischen Suchergebnissen anzeigen — das steigert die CTR erheblich.</p>
+
+                        <blockquote>
+                            Wichtig: Du darfst NUR echte, verifizierende Bewertungen angeben. Google bestraft gefälschte Bewertungs-Markups. Die Daten müssen mit den tatsächlichen Bewertungen auf deiner Website übereinstimmen.
+                        </blockquote>
+
+<pre><code>"aggregateRating": {
+  "@type": "AggregateRating",
+  "ratingValue": "4.7",
+  "reviewCount": "89",
+  "bestRating": "5",
+  "worstRating": "1"
+}</code></pre>
+
+                        <p>Wenn du keine eigene Bewertungsfunktion auf deiner Website hast, aber Google-Bewertungen nutzt, ist die korrekte Vorgehensweise, die <code>sameAs</code>-Property auf dein Google-Profil zu setzen — nicht die Google-Bewertungen in dein Schema zu kopieren.</p>
+
+                        <h2>Schritt-für-Schritt: So implementierst du LocalBusiness Schema</h2>
+
+                        <ol>
+                            <li><strong>Sub-Typ auswählen:</strong> Suche auf schema.org deinen genauen Unternehmenstyp (z.B. Dentist, HairSalon, Electrician)</li>
+                            <li><strong>JSON-LD erstellen:</strong> Nutze unseren <a href="/tools/schema-markup-generator.html">Schema-Markup-Generator</a> für eine schnelle Grundstruktur</li>
+                            <li><strong>Properties ausfüllen:</strong> Mindestens Name, Adresse, Telefon, URL, Öffnungszeiten, Bild</li>
+                            <li><strong>Im &lt;head&gt;-Bereich platzieren:</strong> Das JSON-LD gehört in den <code>&lt;head&gt;</code> oder vor das schließende <code>&lt;/body&gt;</code>-Tag</li>
+                            <li><strong>Validieren:</strong> Nutze den <a href="/tools/json-ld-structured-data-validator.html">JSON-LD Structured Data Validator</a> zur Überprüfung</li>
+                            <li><strong>Google Search Console prüfen:</strong> Nach einigen Tagen unter "Erweiterungen" schauen, ob Google die Daten verarbeitet</li>
+                        </ol>
+
+                        <h2>Häufige Fehler bei LocalBusiness Schema</h2>
+
+                        <p>In unserer Analyse von hunderten deutschen Unternehmens-Websites begegnen uns diese Fehler immer wieder:</p>
+
+                        <h3>Fehler 1: Falscher oder zu allgemeiner Typ</h3>
+                        <p>Viele Unternehmen nutzen <code>"@type": "LocalBusiness"</code> wenn es einen spezifischeren Typ gibt. Ein Zahnarzt sollte <code>Dentist</code> verwenden, ein Elektriker <code>Electrician</code>. Je spezifischer, desto besser versteht Google das Unternehmen.</p>
+
+                        <h3>Fehler 2: Inkonsistente NAP-Daten</h3>
+                        <p>Die Adresse im Schema stimmt nicht mit dem Impressum überein (z.B. unterschiedliche Schreibweise der Straße). Google vergleicht Daten aus verschiedenen Quellen — Inkonsistenz senkt das Vertrauen.</p>
+
+                        <h3>Fehler 3: Fehlende oder falsche Öffnungszeiten</h3>
+                        <p>Öffnungszeiten nicht aktualisiert nach Sommer/Winterzeit-Umstellung oder Urlaubszeiten. Falsche Öffnungszeiten im Schema sind schlimmer als gar keine — Kunden kommen vor geschlossener Tür an.</p>
+
+                        <h3>Fehler 4: Telefonnummer im falschen Format</h3>
+                        <p>Das korrekte Format ist das internationale: <code>+49-30-12345678</code>. Nicht: <code>030 / 12 34 56 78</code> oder <code>(030) 123456</code>. Google und Sprachassistenten benötigen das internationale Format.</p>
+
+                        <h3>Fehler 5: Schema nur auf der Startseite</h3>
+                        <p>Lokale Unternehmen mit mehreren Standorten sollten auf jeder Standortseite das entsprechende Schema einbinden — mit den jeweiligen Adress- und Kontaktdaten.</p>
+
+                        <h3>Fehler 6: Bewertungen ohne Grundlage</h3>
+                        <p>aggregateRating ohne echte, sichtbare Bewertungen auf der Website ist ein Verstoß gegen Googles Richtlinien. Das kann zu einer Abstrafung führen.</p>
+
+                        <h2>LocalBusiness Schema testen und validieren</h2>
+
+                        <p>Bevor du das Schema live schaltest, validiere es mit diesen Tools:</p>
+
+                        <ul>
+                            <li><strong>Google Rich Results Test:</strong> test.google.com — zeigt, ob Google das Schema korrekt interpretiert und ob Rich Snippets möglich sind</li>
+                            <li><strong>Schema.org Validator:</strong> validator.schema.org — prüft die Syntax gegen den offiziellen Schema.org-Standard</li>
+                            <li><strong>Shift07 JSON-LD Validator:</strong> Unser <a href="/tools/json-ld-structured-data-validator.html">JSON-LD Structured Data Validator</a> prüft die grundlegende Struktur direkt im Browser</li>
+                        </ul>
+
+                        <h2>LocalBusiness Schema und Google My Business</h2>
+
+                        <p>Ein häufiger Irrtum: "Ich habe Google My Business — brauche ich das Schema nicht mehr." Falsch. GMB und LocalBusiness Schema ergänzen sich:</p>
+
+                        <ul>
+                            <li><strong>Google My Business</strong> ist die externe Datenquelle (Google verwaltet den Eintrag)</li>
+                            <li><strong>Schema Markup</strong> ist die interne Datenquelle (du selbst deklarierst die Daten)</li>
+                        </ul>
+
+                        <p>Google nutzt beide Quellen und gleicht sie ab. Wenn beide konsistent sind, steigt das Vertrauen und damit das Ranking. Lies unsere <a href="/blog/google-my-business-optimieren.html">Google My Business Anleitung</a> für den vollständigen lokalen SEO-Aufbau.</p>
+
+                        <p>Wichtig: Verlinke im Schema unter <code>sameAs</code> auf dein Google-Profil, deine Facebook-Seite und andere Verzeichniseinträge. Das stärkt die Verbindung zwischen den Quellen.</p>
+
+                        <h2>Checkliste: LocalBusiness Schema vollständig implementieren</h2>
+
+                        <ul>
+                            <li>✅ Spezifischen Sub-Typ gewählt (Dentist, Electrician, etc.)</li>
+                            <li>✅ Name exakt wie im Impressum</li>
+                            <li>✅ Vollständige PostalAddress mit allen Feldern</li>
+                            <li>✅ Telefon im internationalen Format (+49...)</li>
+                            <li>✅ Kanonische URL der Website</li>
+                            <li>✅ Bild (Unternehmens- oder Logo-Bild)</li>
+                            <li>✅ Öffnungszeiten vollständig und korrekt</li>
+                            <li>✅ GPS-Koordinaten eingefügt</li>
+                            <li>✅ sameAs mit GMB, Facebook, Yelp-Profil</li>
+                            <li>✅ aggregateRating (nur wenn echte Bewertungen vorhanden)</li>
+                            <li>✅ Im Rich Results Test validiert</li>
+                            <li>✅ Google Search Console überwacht</li>
+                        </ul>
+
+                        <h2>Fazit</h2>
+
+                        <p>LocalBusiness Schema Markup ist keine optionale Spielerei — für lokale Unternehmen ist es ein essenzieller Teil der SEO-Strategie. Wenn dein Konkurrent Schema Markup nutzt und du nicht, hat er einen strukturellen Vorteil in den lokalen Suchergebnissen.</p>
+
+                        <p>Der Aufwand ist einmalig: Du erstellst das Schema, bindest es in deine Website ein, und Google nutzt es dauerhaft. Nutze unseren <a href="/tools/schema-markup-generator.html">Schema-Markup-Generator</a> um in wenigen Minuten einen vollständigen JSON-LD-Code für dein Unternehmen zu erstellen. Für tieferes Verständnis der Schema-Formate empfehle ich unseren Vergleich <a href="/blog/json-ld-microdata-rdfa-structured-data.html">JSON-LD vs. Microdata vs. RDFa</a>.</p>
+
+                    </div>
+
+                    <!-- Share / Back -->
+                    <div class="mt-12 pt-8 border-t border-white/10 flex items-center justify-between">
+                        <a href="/blog/" class="text-blue-400 hover:text-blue-300 flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+                            Zurück zum Blog
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Sidebar -->
+                <aside class="lg:w-1/3 space-y-8">
+                    <!-- CTA Box -->
+                    <div class="bg-gradient-to-br from-blue-600/20 to-indigo-600/20 border border-blue-500/30 rounded-2xl p-6 text-center">
+                        <h3 class="text-lg font-bold text-white mb-3">Schema Markup Generator</h3>
+                        <p class="text-gray-400 text-sm mb-5">LocalBusiness-Schema in 2 Minuten erstellen — kostenlos und ohne Anmeldung.</p>
+                        <a href="/tools/schema-markup-generator.html" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-6 py-3 rounded-lg font-medium transition-all inline-block w-full">Jetzt Schema erstellen</a>
+                    </div>
+
+                    <!-- Related Articles -->
+                    <div class="bg-slate-800/50 border border-white/10 rounded-2xl p-6">
+                        <h3 class="text-lg font-bold text-white mb-4">Verwandte Artikel</h3>
+                        <div class="space-y-4">
+                            <a href="/blog/strukturierte-daten-seo-schema-markup.html" class="block group">
+                                <p class="text-sm text-gray-300 group-hover:text-blue-400 transition-colors font-medium">Strukturierte Daten für SEO: Schema Markup einfach erklärt</p>
+                                <p class="text-xs text-gray-500 mt-1">Tech-SEO Grundlagen</p>
+                            </a>
+                            <a href="/blog/json-ld-microdata-rdfa-structured-data.html" class="block group">
+                                <p class="text-sm text-gray-300 group-hover:text-blue-400 transition-colors font-medium">JSON-LD vs. Microdata vs. RDFa: Formate im Vergleich</p>
+                                <p class="text-xs text-gray-500 mt-1">Structured Data Formate</p>
+                            </a>
+                            <a href="/blog/google-my-business-optimieren.html" class="block group">
+                                <p class="text-sm text-gray-300 group-hover:text-blue-400 transition-colors font-medium">Google My Business optimieren: Lokale Unternehmen 2026</p>
+                                <p class="text-xs text-gray-500 mt-1">Lokal-SEO</p>
+                            </a>
+                            <a href="/blog/lokales-seo-kleine-unternehmen.html" class="block group">
+                                <p class="text-sm text-gray-300 group-hover:text-blue-400 transition-colors font-medium">Lokales SEO für kleine Unternehmen: Kompletter Leitfaden</p>
+                                <p class="text-xs text-gray-500 mt-1">Lokal-SEO</p>
+                            </a>
+                        </div>
+                    </div>
+
+                </aside>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer CTA -->
+    <section class="py-16 px-4 bg-gradient-to-r from-blue-900/30 to-indigo-900/30 border-t border-b border-white/5">
+        <div class="max-w-3xl mx-auto text-center">
+            <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">Teste deine Website jetzt kostenlos</h2>
+            <p class="text-gray-400 mb-8">Erhalte eine vollständige SEO-Analyse mit konkreten Verbesserungsvorschlägen.</p>
+            <form action="/" method="get" class="flex flex-col sm:flex-row gap-3 max-w-xl mx-auto">
+                <input type="url" placeholder="https://deine-website.de" class="flex-1 bg-slate-800 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-blue-500">
+                <a href="/" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-8 py-3 rounded-lg font-medium transition-all whitespace-nowrap">Analyse starten</a>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/10 bg-slate-900/50 py-12 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="flex items-center gap-2">
+                    <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                    <span class="text-lg font-bold text-white">Shift07</span>
+                </div>
+                <div class="flex items-center space-x-6 text-sm text-gray-400">
+                    <a href="/impressum.html" class="hover:text-white transition-colors">Impressum</a>
+                    <a href="/datenschutz.html" class="hover:text-white transition-colors">Datenschutz</a>
+                    <a href="/agb.html" class="hover:text-white transition-colors">AGB</a>
+                </div>
+                <p class="text-sm text-gray-500">&copy; 2026 Thümmler AI GmbH</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
