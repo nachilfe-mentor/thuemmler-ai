@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Thu, 16 Apr 2026 04:14:53 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 16 Apr 2026 04:18:27 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Product Schema Markup: Produkte mit Rich Snippets in Google hervorheben</title>
+      <link>https://shift07.ai/blog/product-schema-markup-seo.html</link>
+      <guid>https://shift07.ai/blog/product-schema-markup-seo.html</guid>
+      <pubDate>Thu, 16 Apr 2026 04:18:07 +0000</pubDate>
+      <description>Product Schema Markup richtig einsetzen: Preis, Bewertungen und Verfügbarkeit als Rich Snippets in Google anzeigen. Vollständige JSON-LD-Anleitung für Online-Shops 2026.</description>
+      <category>Tech-SEO</category>
+    </item>
     <item>
       <title>Event Schema Markup: Veranstaltungen als Rich Snippets in Google</title>
       <link>https://shift07.ai/blog/event-schema-markup-seo.html</link>
@@ -158,14 +166,6 @@
       <pubDate>Mon, 13 Apr 2026 05:35:30 +0000</pubDate>
       <description>Title-Tags richtig optimieren: Länge, Keyword-Platzierung, Formeln und häufige Fehler. Mit Checkliste und kostenlosen Tools für perfekte SEO-Titel.</description>
       <category>OnPage-SEO</category>
-    </item>
-    <item>
-      <title>URL-Struktur für SEO: SEO-freundliche URLs erstellen</title>
-      <link>https://shift07.ai/blog/url-struktur-seo-freundlich.html</link>
-      <guid>https://shift07.ai/blog/url-struktur-seo-freundlich.html</guid>
-      <pubDate>Mon, 13 Apr 2026 03:42:00 +0000</pubDate>
-      <description>Lerne, wie du SEO-freundliche URLs erstellst. Bindestriche, Kleinbuchstaben, Länge, Verzeichnisstruktur — alles mit Beispielen und Checkliste.</description>
-      <category>On-Page SEO</category>
     </item>
   </channel>
 </rss>
