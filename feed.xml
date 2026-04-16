@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Thu, 16 Apr 2026 02:24:28 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 16 Apr 2026 02:27:32 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>FAQPage Schema Markup: FAQ Rich Snippets für Google aktivieren</title>
+      <link>https://shift07.ai/blog/faqpage-schema-markup-seo.html</link>
+      <guid>https://shift07.ai/blog/faqpage-schema-markup-seo.html</guid>
+      <pubDate>Thu, 16 Apr 2026 02:27:02 +0000</pubDate>
+      <description>FAQPage Schema Markup richtig implementieren: So aktivierst du FAQ Rich Snippets in den SERPs, mehr Platz in Google belegst und die CTR deutlich steigerst — mit vollständigen JSON-LD-Beispielen.</description>
+      <category>Tech-SEO</category>
+    </item>
     <item>
       <title>BreadcrumbList Schema Markup: Breadcrumb Rich Snippets für SEO</title>
       <link>https://shift07.ai/blog/breadcrumblist-schema-markup-seo.html</link>
@@ -157,14 +165,6 @@
       <guid>https://shift07.ai/blog/bildoptimierung-webp-avif-lazy-loading.html</guid>
       <pubDate>Mon, 13 Apr 2026 01:58:35 +0000</pubDate>
       <description>Bilder für SEO optimieren: WebP und AVIF statt JPEG, Lazy Loading richtig einsetzen, Bildgrößen reduzieren ohne Qualitätsverlust. Konkreter Leitfaden für bessere Ladezeiten und Core Web Vitals 2026.</description>
-      <category>Performance</category>
-    </item>
-    <item>
-      <title>JavaScript-Performance für SEO: Lazy Loading, Code Splitting, Defer</title>
-      <link>https://shift07.ai/blog/javascript-performance-seo-lazy-loading-code-splitting.html</link>
-      <guid>https://shift07.ai/blog/javascript-performance-seo-lazy-loading-code-splitting.html</guid>
-      <pubDate>Mon, 13 Apr 2026 01:50:59 +0000</pubDate>
-      <description>Wie JavaScript dein SEO-Ranking beeinflusst: Lazy Loading, Code Splitting und Defer richtig einsetzen. Schritt-für-Schritt-Anleitung mit Code-Beispielen für bessere Core Web Vitals 2026.</description>
       <category>Performance</category>
     </item>
   </channel>
