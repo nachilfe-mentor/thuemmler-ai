@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Thu, 16 Apr 2026 00:43:52 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 16 Apr 2026 00:47:10 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Article Schema Markup: Blog-Artikel für Rich Snippets optimieren</title>
+      <link>https://shift07.ai/blog/article-schema-markup-seo.html</link>
+      <guid>https://shift07.ai/blog/article-schema-markup-seo.html</guid>
+      <pubDate>Thu, 16 Apr 2026 00:46:39 +0000</pubDate>
+      <description>Article Schema Markup richtig implementieren: NewsArticle vs. BlogPosting vs. Article — Unterschiede, vollständiges JSON-LD-Beispiel und Google-Anforderungen erklärt.</description>
+      <category>Tech-SEO</category>
+    </item>
     <item>
       <title>LocalBusiness Schema Markup: Vollständige Anleitung 2026</title>
       <link>https://shift07.ai/blog/localbusiness-schema-markup-anleitung.html</link>
@@ -157,14 +165,6 @@
       <guid>https://shift07.ai/blog/core-web-vitals-verbessern-lcp-cls-inp.html</guid>
       <pubDate>Mon, 13 Apr 2026 00:11:06 +0000</pubDate>
       <description>Core Web Vitals verbessern: Schritt-für-Schritt-Anleitung für LCP, CLS und INP. Konkrete Maßnahmen, Tools und Benchmarks für bessere Google-Rankings 2026.</description>
-      <category>Performance-SEO</category>
-    </item>
-    <item>
-      <title>Ladezeit als Ranking-Faktor: Wie Page Speed dein Google-Ranking beeinflusst</title>
-      <link>https://shift07.ai/blog/ladezeit-ranking-faktor-page-speed.html</link>
-      <guid>https://shift07.ai/blog/ladezeit-ranking-faktor-page-speed.html</guid>
-      <pubDate>Sun, 12 Apr 2026 04:31:07 +0000</pubDate>
-      <description>Ladezeit als Google-Ranking-Faktor erklärt: Wie Page Speed Rankings beeinflusst, was Core Web Vitals damit zu tun haben und wie du deine Website messbar schneller machst.</description>
       <category>Performance-SEO</category>
     </item>
   </channel>
