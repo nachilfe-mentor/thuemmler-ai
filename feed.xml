@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Thu, 16 Apr 2026 02:27:32 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 16 Apr 2026 04:14:53 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Event Schema Markup: Veranstaltungen als Rich Snippets in Google</title>
+      <link>https://shift07.ai/blog/event-schema-markup-seo.html</link>
+      <guid>https://shift07.ai/blog/event-schema-markup-seo.html</guid>
+      <pubDate>Thu, 16 Apr 2026 04:14:28 +0000</pubDate>
+      <description>Lerne, wie du mit Event Schema Markup Veranstaltungen als Rich Snippets in Google anzeigst. Vollständige Anleitung mit JSON-LD-Beispielen für Konzerte, Kurse, Online-Events und mehr.</description>
+      <category>Tech-SEO</category>
+    </item>
     <item>
       <title>FAQPage Schema Markup: FAQ Rich Snippets für Google aktivieren</title>
       <link>https://shift07.ai/blog/faqpage-schema-markup-seo.html</link>
@@ -158,14 +166,6 @@
       <pubDate>Mon, 13 Apr 2026 03:42:00 +0000</pubDate>
       <description>Lerne, wie du SEO-freundliche URLs erstellst. Bindestriche, Kleinbuchstaben, Länge, Verzeichnisstruktur — alles mit Beispielen und Checkliste.</description>
       <category>On-Page SEO</category>
-    </item>
-    <item>
-      <title>Bildoptimierung für Websites: WebP, AVIF und Lazy Loading 2026</title>
-      <link>https://shift07.ai/blog/bildoptimierung-webp-avif-lazy-loading.html</link>
-      <guid>https://shift07.ai/blog/bildoptimierung-webp-avif-lazy-loading.html</guid>
-      <pubDate>Mon, 13 Apr 2026 01:58:35 +0000</pubDate>
-      <description>Bilder für SEO optimieren: WebP und AVIF statt JPEG, Lazy Loading richtig einsetzen, Bildgrößen reduzieren ohne Qualitätsverlust. Konkreter Leitfaden für bessere Ladezeiten und Core Web Vitals 2026.</description>
-      <category>Performance</category>
     </item>
   </channel>
 </rss>
