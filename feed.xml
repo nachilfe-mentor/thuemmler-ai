@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Fri, 17 Apr 2026 01:51:49 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 17 Apr 2026 03:26:22 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>HowTo Schema Markup: Schritt-für-Schritt-Anleitungen als Rich Snippets</title>
+      <link>https://shift07.ai/blog/howto-schema-markup-seo.html</link>
+      <guid>https://shift07.ai/blog/howto-schema-markup-seo.html</guid>
+      <pubDate>Fri, 17 Apr 2026 03:25:59 +0000</pubDate>
+      <description>HowTo Schema Markup erklärt: So implementierst du JSON-LD für Anleitungen, erreichst Rich Snippets in Google und steigerst deine Klickrate um bis zu 40%.</description>
+      <category>Schema Markup</category>
+    </item>
     <item>
       <title>VideoObject Schema Markup: Videos in Google Rich Results und Key Moments</title>
       <link>https://shift07.ai/blog/videoobject-schema-markup-seo.html</link>
@@ -160,14 +168,6 @@
       <pubDate>Tue, 14 Apr 2026 03:03:59 +0000</pubDate>
       <description>Content-Marketing ist die wirksamste SEO-Strategie 2026. Erfahre, wie du Inhalte erstellst, die natürliche Backlinks anziehen, organischen Traffic steigern und zahlende Kunden gewinnen.</description>
       <category>Content-Marketing</category>
-    </item>
-    <item>
-      <title>Duplicate Content erkennen und beheben: SEO-Schäden vermeiden</title>
-      <link>https://shift07.ai/blog/duplicate-content-erkennen-beheben.html</link>
-      <guid>https://shift07.ai/blog/duplicate-content-erkennen-beheben.html</guid>
-      <pubDate>Tue, 14 Apr 2026 02:56:50 +0000</pubDate>
-      <description>Duplicate Content schadet deinen Google-Rankings. Erfahre, wie du doppelte Inhalte erkennst, die Ursachen verstehst und mit Canonical-Tags, Redirects &amp; Co. dauerhaft behebst.</description>
-      <category>On-Page SEO</category>
     </item>
   </channel>
 </rss>
