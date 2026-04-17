@@ -5,8 +5,18 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Fri, 17 Apr 2026 01:49:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 17 Apr 2026 01:51:49 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>VideoObject Schema Markup: Videos in Google Rich Results und Key Moments</title>
+      <link>https://shift07.ai/blog/videoobject-schema-markup-seo.html</link>
+      <guid>https://shift07.ai/blog/videoobject-schema-markup-seo.html</guid>
+      <pubDate>Fri, 17 Apr 2026 01:51:29 +0000</pubDate>
+      <description>VideoObject Schema Markup für SEO: So werden deine Videos als Rich Results in Google angezeigt. Pflichtfelder, Key Moments, Clip-Segmente und häufige Fehler — vollständige Anleitung.</description>
+      <category>Structured Data</meta>
+    <!-- Twitter Card -->
+    <meta name=</category>
+    </item>
     <item>
       <title>Server-Log-Analyse für SEO: Crawl-Anomalien erkennen und Googlebot-Muster verstehen</title>
       <link>https://shift07.ai/blog/server-log-analyse-seo-fortgeschritten.html</link>
@@ -158,14 +168,6 @@
       <pubDate>Tue, 14 Apr 2026 02:56:50 +0000</pubDate>
       <description>Duplicate Content schadet deinen Google-Rankings. Erfahre, wie du doppelte Inhalte erkennst, die Ursachen verstehst und mit Canonical-Tags, Redirects &amp; Co. dauerhaft behebst.</description>
       <category>On-Page SEO</category>
-    </item>
-    <item>
-      <title>Seitenstruktur für SEO: Wie Content-Hierarchie das Ranking beeinflusst</title>
-      <link>https://shift07.ai/blog/seitenstruktur-seo-content-hierarchie.html</link>
-      <guid>https://shift07.ai/blog/seitenstruktur-seo-content-hierarchie.html</guid>
-      <pubDate>Tue, 14 Apr 2026 01:18:01 +0000</pubDate>
-      <description>Lerne, wie eine durchdachte Seitenstruktur und Content-Hierarchie dein Google-Ranking verbessern – Pillar Pages, Topic Cluster, Silos und interne Verlinkung praxisnah erklärt.</description>
-      <category>OnPage-SEO</category>
     </item>
   </channel>
 </rss>
