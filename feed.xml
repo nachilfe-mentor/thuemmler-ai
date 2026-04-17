@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Fri, 17 Apr 2026 03:28:48 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 17 Apr 2026 03:31:59 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>SoftwareApplication Schema Markup: Apps in Google Rich Results</title>
+      <link>https://shift07.ai/blog/softwareapplication-schema-markup-seo.html</link>
+      <guid>https://shift07.ai/blog/softwareapplication-schema-markup-seo.html</guid>
+      <pubDate>Fri, 17 Apr 2026 03:31:37 +0000</pubDate>
+      <description>SoftwareApplication Schema Markup für SEO: JSON-LD für Apps, Web-Tools und Software richtig implementieren, Bewertungen als Rich Snippets anzeigen und die Sichtbarkeit in Google steigern.</description>
+      <category>Schema Markup</category>
+    </item>
     <item>
       <title>HowTo Schema Markup: Schritt-für-Schritt-Anleitungen als Rich Snippets</title>
       <link>https://shift07.ai/blog/howto-schema-markup-seo.html</link>
@@ -159,14 +167,6 @@
       <guid>https://shift07.ai/blog/evergreen-content-seo-strategie.html</guid>
       <pubDate>Tue, 14 Apr 2026 04:41:46 +0000</pubDate>
       <description>Evergreen Content bringt dauerhaft organischen Traffic. Lerne, welche Themen zeitlos sind, wie du sie schreibst und wie du sie aktuell hältst.</description>
-      <category>Content-Marketing</category>
-    </item>
-    <item>
-      <title>Content-Marketing für SEO: Mit Inhalten Backlinks und Traffic gewinnen</title>
-      <link>https://shift07.ai/blog/content-marketing-seo-backlinks.html</link>
-      <guid>https://shift07.ai/blog/content-marketing-seo-backlinks.html</guid>
-      <pubDate>Tue, 14 Apr 2026 03:03:59 +0000</pubDate>
-      <description>Content-Marketing ist die wirksamste SEO-Strategie 2026. Erfahre, wie du Inhalte erstellst, die natürliche Backlinks anziehen, organischen Traffic steigern und zahlende Kunden gewinnen.</description>
       <category>Content-Marketing</category>
     </item>
   </channel>
