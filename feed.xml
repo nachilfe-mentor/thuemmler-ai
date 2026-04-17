@@ -5,8 +5,24 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Thu, 16 Apr 2026 05:57:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 17 Apr 2026 00:06:33 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>JavaScript SEO: Wie Google SPA-Websites crawlt und indexiert</title>
+      <link>https://shift07.ai/blog/javascript-seo-spa-indexierung.html</link>
+      <guid>https://shift07.ai/blog/javascript-seo-spa-indexierung.html</guid>
+      <pubDate>Fri, 17 Apr 2026 00:06:23 +0000</pubDate>
+      <description>JavaScript SEO erklärt: Wie Googlebot SPAs crawlt, was Two-Wave Indexing bedeutet und wie du mit SSR oder Static Generation sicherstellst, dass deine Inhalte indexiert werden.</description>
+      <category>Technisches SEO</category>
+    </item>
+    <item>
+      <title>Dynamic Rendering für JavaScript SEO: So liest Googlebot deine Website richtig</title>
+      <link>https://shift07.ai/blog/dynamic-rendering-javascript-seo.html</link>
+      <guid>https://shift07.ai/blog/dynamic-rendering-javascript-seo.html</guid>
+      <pubDate>Fri, 17 Apr 2026 00:05:54 +0000</pubDate>
+      <description>Dynamic Rendering erklärt: Warum JavaScript-Websites für Googlebot unsichtbar sein können, wie Dynamic Rendering funktioniert und wann du es wirklich brauchst.</description>
+      <category>Technisches SEO</category>
+    </item>
     <item>
       <title>Product Schema Markup: Produkte mit Rich Snippets in Google hervorheben</title>
       <link>https://shift07.ai/blog/product-schema-markup-seo.html</link>
@@ -149,22 +165,6 @@
       <guid>https://shift07.ai/blog/nutzerintention-optimieren-seo.html</guid>
       <pubDate>Tue, 14 Apr 2026 01:14:22 +0000</pubDate>
       <description>Lerne, wie du Nutzerintention richtig erkennst und Inhalte gezielt für informational, navigational, commercial und transactional Suchanfragen optimierst – mit konkreten Beispielen und Checkliste.</description>
-      <category>OnPage-SEO</category>
-    </item>
-    <item>
-      <title>Keyword-Recherche mit kostenlosen Tools: Google Suggest, Answer the Public &amp; mehr</title>
-      <link>https://shift07.ai/blog/keyword-recherche-kostenlose-tools.html</link>
-      <guid>https://shift07.ai/blog/keyword-recherche-kostenlose-tools.html</guid>
-      <pubDate>Mon, 13 Apr 2026 05:39:02 +0000</pubDate>
-      <description>Keyword-Recherche kostenlos durchführen: Google Suggest, Answer the Public, Ubersuggest und weitere Tools im Vergleich. Mit Schritt-für-Schritt-Anleitung.</description>
-      <category>OnPage-SEO</category>
-    </item>
-    <item>
-      <title>Title-Tag optimieren: Die vollständige Anleitung 2026</title>
-      <link>https://shift07.ai/blog/title-tag-optimieren-seo.html</link>
-      <guid>https://shift07.ai/blog/title-tag-optimieren-seo.html</guid>
-      <pubDate>Mon, 13 Apr 2026 05:35:30 +0000</pubDate>
-      <description>Title-Tags richtig optimieren: Länge, Keyword-Platzierung, Formeln und häufige Fehler. Mit Checkliste und kostenlosen Tools für perfekte SEO-Titel.</description>
       <category>OnPage-SEO</category>
     </item>
   </channel>
