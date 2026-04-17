@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Fri, 17 Apr 2026 00:08:48 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 17 Apr 2026 01:46:11 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Server-Log-Analyse für SEO: Crawl-Anomalien erkennen und Googlebot-Muster verstehen</title>
+      <link>https://shift07.ai/blog/server-log-analyse-seo-fortgeschritten.html</link>
+      <guid>https://shift07.ai/blog/server-log-analyse-seo-fortgeschritten.html</guid>
+      <pubDate>Fri, 17 Apr 2026 01:45:48 +0000</pubDate>
+      <description>Fortgeschrittene Server-Log-Analyse für SEO: Crawl-Anomalien erkennen, Googlebot-Muster auswerten, Regex-Filter einsetzen und Log-Daten mit GSC kombinieren. Praxisanleitung für SEO-Profis.</description>
+      <category>Technisches SEO</category>
+    </item>
     <item>
       <title>JavaScript SEO: Wie Google SPA-Websites crawlt und indexiert</title>
       <link>https://shift07.ai/blog/javascript-seo-spa-indexierung.html</link>
@@ -157,14 +165,6 @@
       <guid>https://shift07.ai/blog/seitenstruktur-seo-content-hierarchie.html</guid>
       <pubDate>Tue, 14 Apr 2026 01:18:01 +0000</pubDate>
       <description>Lerne, wie eine durchdachte Seitenstruktur und Content-Hierarchie dein Google-Ranking verbessern – Pillar Pages, Topic Cluster, Silos und interne Verlinkung praxisnah erklärt.</description>
-      <category>OnPage-SEO</category>
-    </item>
-    <item>
-      <title>Nutzerintention optimieren: Content auf jede Suchabsicht ausrichten</title>
-      <link>https://shift07.ai/blog/nutzerintention-optimieren-seo.html</link>
-      <guid>https://shift07.ai/blog/nutzerintention-optimieren-seo.html</guid>
-      <pubDate>Tue, 14 Apr 2026 01:14:22 +0000</pubDate>
-      <description>Lerne, wie du Nutzerintention richtig erkennst und Inhalte gezielt für informational, navigational, commercial und transactional Suchanfragen optimierst – mit konkreten Beispielen und Checkliste.</description>
       <category>OnPage-SEO</category>
     </item>
   </channel>
