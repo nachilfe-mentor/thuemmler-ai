@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Sat, 18 Apr 2026 00:52:45 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 18 Apr 2026 02:27:50 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Person Schema Markup: Autoren-Schema für Google und E-E-A-T</title>
+      <link>https://shift07.ai/blog/person-schema-markup-seo.html</link>
+      <guid>https://shift07.ai/blog/person-schema-markup-seo.html</guid>
+      <pubDate>Sat, 18 Apr 2026 02:27:06 +0000</pubDate>
+      <description>Person Schema Markup richtig einsetzen: JSON-LD für Autoren-Seiten, About-Pages und E-E-A-T. Alle Properties, vollständige Beispiele und Best Practices 2026.</description>
+      <category>Schema Markup</category>
+    </item>
     <item>
       <title>Recipe Schema Markup: Rezepte als Rich Snippets in Google</title>
       <link>https://shift07.ai/blog/recipe-schema-markup-seo.html</link>
@@ -160,14 +168,6 @@
       <pubDate>Wed, 15 Apr 2026 02:28:19 +0000</pubDate>
       <description>Lokaler Linkaufbau ohne Geld: 7 bewährte Strategien für KMU. Mehr Backlinks, bessere Google-Rankings – auch ohne teures SEO-Budget. Mit Schritt-für-Schritt-Anleitungen.</description>
       <category>Lokal-SEO</category>
-    </item>
-    <item>
-      <title>Linkable Assets erstellen: So baust du Inhalte, die Backlinks anziehen</title>
-      <link>https://shift07.ai/blog/linkable-assets-backlinks-erstellen.html</link>
-      <guid>https://shift07.ai/blog/linkable-assets-backlinks-erstellen.html</guid>
-      <pubDate>Wed, 15 Apr 2026 00:53:12 +0000</pubDate>
-      <description>Linkable Assets sind Inhalte, die andere Websites freiwillig verlinken. Erfahre, welche 7 Asset-Typen am besten funktionieren und wie du sie Schritt für Schritt erstellst.</description>
-      <category>Content-Marketing</category>
     </item>
   </channel>
 </rss>
