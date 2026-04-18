@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Sat, 18 Apr 2026 04:11:26 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 18 Apr 2026 04:14:33 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>FAQ Schema Markup vertieft: FAQPage JSON-LD vollständig implementieren 2026</title>
+      <link>https://shift07.ai/blog/faq-schema-markup-vertieft.html</link>
+      <guid>https://shift07.ai/blog/faq-schema-markup-vertieft.html</guid>
+      <pubDate>Sat, 18 Apr 2026 04:14:12 +0000</pubDate>
+      <description>FAQ Schema Markup vertieft: FAQPage mit verschachtelten Fragen, Validierungsregeln, Kombinationsstrategien und häufigen Fehlern. Vollständige Anleitung 2026.</description>
+      <category>Schema Markup</category>
+    </item>
     <item>
       <title>WebPage und WebSite Schema Markup: Vollständige Anleitung 2026</title>
       <link>https://shift07.ai/blog/webpage-website-schema-markup-seo.html</link>
@@ -160,14 +168,6 @@
       <pubDate>Wed, 15 Apr 2026 05:51:58 +0000</pubDate>
       <description>JSON-LD, Microdata oder RDFa? Wir vergleichen alle drei Structured-Data-Formate für SEO, erklären die Unterschiede und zeigen, welches Format Google bevorzugt.</description>
       <category>Tech-SEO</category>
-    </item>
-    <item>
-      <title>Natürlichen Linkaufbau messen: Tools und KPIs für Off-Page SEO</title>
-      <link>https://shift07.ai/blog/linkaufbau-messen-tools-kpis.html</link>
-      <guid>https://shift07.ai/blog/linkaufbau-messen-tools-kpis.html</guid>
-      <pubDate>Wed, 15 Apr 2026 04:10:20 +0000</pubDate>
-      <description>Welche KPIs wirklich wichtig sind beim Linkaufbau – und mit welchen kostenlosen und bezahlten Tools du deinen Off-Page-SEO-Fortschritt zuverlässig misst.</description>
-      <category>Off-Page SEO</category>
     </item>
   </channel>
 </rss>
