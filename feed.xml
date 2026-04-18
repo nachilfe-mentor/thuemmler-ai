@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Sat, 18 Apr 2026 02:31:01 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 18 Apr 2026 02:34:26 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Organization Schema Markup: Alle Properties für dein Unternehmen (Vertiefung)</title>
+      <link>https://shift07.ai/blog/organization-schema-markup-vertieft.html</link>
+      <guid>https://shift07.ai/blog/organization-schema-markup-vertieft.html</guid>
+      <pubDate>Sat, 18 Apr 2026 02:34:03 +0000</pubDate>
+      <description>Organization Schema Markup vollständig implementieren: Alle Properties von sameAs bis contactPoint erklärt. JSON-LD für Unternehmen, Vereine und Organisationen 2026.</description>
+      <category>Schema Markup</category>
+    </item>
     <item>
       <title>Person Schema Markup: Autoren-Schema für Google und E-E-A-T</title>
       <link>https://shift07.ai/blog/person-schema-markup-seo.html</link>
@@ -160,14 +168,6 @@
       <pubDate>Wed, 15 Apr 2026 02:34:23 +0000</pubDate>
       <description>Schädliche Backlinks erkennen, bewerten und mit dem Google Disavow Tool entfernen. Schritt-für-Schritt-Anleitung zur Bereinigung deines Backlink-Profils.</description>
       <category>Off-Page SEO</category>
-    </item>
-    <item>
-      <title>Linkaufbau für lokale Unternehmen ohne Budget: 7 kostenlose Strategien</title>
-      <link>https://shift07.ai/blog/lokaler-linkaufbau-ohne-budget.html</link>
-      <guid>https://shift07.ai/blog/lokaler-linkaufbau-ohne-budget.html</guid>
-      <pubDate>Wed, 15 Apr 2026 02:28:19 +0000</pubDate>
-      <description>Lokaler Linkaufbau ohne Geld: 7 bewährte Strategien für KMU. Mehr Backlinks, bessere Google-Rankings – auch ohne teures SEO-Budget. Mit Schritt-für-Schritt-Anleitungen.</description>
-      <category>Lokal-SEO</category>
     </item>
   </channel>
 </rss>
