@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Person Schema Markup: Autoren-Schema für Google und E-E-A-T | Shift07 Blog</title>
+    <meta name="description" content="Person Schema Markup richtig einsetzen: JSON-LD für Autoren-Seiten, About-Pages und E-E-A-T. Alle Properties, vollständige Beispiele und Best Practices 2026.">
+    <meta name="author" content="Thümmler AI GmbH">
+    <link rel="icon" type="image/png" href="/logo.png">
+    <link rel="canonical" href="https://shift07.ai/blog/person-schema-markup-seo.html">
+    <link rel="alternate" type="application/rss+xml" title="Shift07 Blog" href="https://shift07.ai/feed.xml">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Person Schema Markup: Autoren-Schema für Google und E-E-A-T | Shift07 Blog">
+    <meta property="og:description" content="Person Schema Markup richtig einsetzen: JSON-LD für Autoren-Seiten, About-Pages und E-E-A-T. Alle Properties, vollständige Beispiele und Best Practices 2026.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://shift07.ai/blog/person-schema-markup-seo.html">
+    <meta property="og:image" content="https://shift07.ai/blog/images/person-schema-markup-seo.png">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="Shift07">
+    <meta property="article:published_time" content="2026-04-18T10:00:00+02:00">
+    <meta property="article:section" content="Schema Markup">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Person Schema Markup: Autoren-Schema für Google und E-E-A-T">
+    <meta name="twitter:description" content="Person Schema Markup richtig einsetzen: JSON-LD für Autoren-Seiten, About-Pages und E-E-A-T. Alle Properties und vollständige Beispiele.">
+    <meta name="twitter:image" content="https://shift07.ai/blog/images/person-schema-markup-seo.png">
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Person Schema Markup: Autoren-Schema für Google und E-E-A-T",
+      "description": "Person Schema Markup richtig einsetzen: JSON-LD für Autoren-Seiten, About-Pages und E-E-A-T. Alle Properties, vollständige Beispiele und Best Practices 2026.",
+      "image": "https://shift07.ai/blog/images/person-schema-markup-seo.png",
+      "datePublished": "2026-04-18T10:00:00+02:00",
+      "dateModified": "2026-04-18T10:00:00+02:00",
+      "author": {
+        "@type": "Organization",
+        "name": "Shift07",
+        "url": "https://shift07.ai"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Shift07",
+        "url": "https://shift07.ai",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://shift07.ai/assets/logo.png"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://shift07.ai/blog/person-schema-markup-seo.html"
+      }
+    }
+    </script>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K1S1RXBDS8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K1S1RXBDS8');
+    </script>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8475857002943858" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: rgba(15, 23, 42, 0.5); }
+        ::-webkit-scrollbar-thumb { background: rgba(59, 130, 246, 0.5); border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: rgba(59, 130, 246, 0.7); }
+        html { scroll-behavior: smooth; }
+        .article-content h2 { font-size: 1.5rem; font-weight: 700; color: #fff; margin-top: 2.5rem; margin-bottom: 1rem; }
+        .article-content h3 { font-size: 1.25rem; font-weight: 600; color: #e2e8f0; margin-top: 2rem; margin-bottom: 0.75rem; }
+        .article-content p { color: #cbd5e1; line-height: 1.8; margin-bottom: 1.25rem; }
+        .article-content ul, .article-content ol { color: #cbd5e1; margin-bottom: 1.25rem; padding-left: 1.5rem; }
+        .article-content li { margin-bottom: 0.5rem; line-height: 1.7; }
+        .article-content ul li { list-style-type: disc; }
+        .article-content ol li { list-style-type: decimal; }
+        .article-content a { color: #60a5fa; text-decoration: underline; text-underline-offset: 2px; }
+        .article-content a:hover { color: #93bbfc; }
+        .article-content blockquote { border-left: 4px solid #3b82f6; padding-left: 1.25rem; margin: 1.5rem 0; color: #94a3b8; font-style: italic; }
+        .article-content code { background: rgba(59, 130, 246, 0.15); color: #93c5fd; padding: 0.15rem 0.4rem; border-radius: 0.25rem; font-size: 0.9em; }
+        .article-content pre { background: rgba(15, 23, 42, 0.8); border: 1px solid rgba(255,255,255,0.1); border-radius: 0.75rem; padding: 1.25rem; overflow-x: auto; margin-bottom: 1.5rem; }
+        .article-content pre code { background: none; padding: 0; color: #e2e8f0; }
+        .article-content strong { color: #f1f5f9; }
+    </style>
+</head>
+<body class="bg-slate-900 text-white min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-slate-900/80 backdrop-blur-xl border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <a href="/" class="flex items-center gap-2">
+                    <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                    <span class="text-xl font-bold text-white">Shift07</span>
+                </a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="/" class="text-gray-300 hover:text-white transition-colors">SEO-Tool</a>
+                    <a href="/blog/" class="text-white font-medium border-b-2 border-blue-500 pb-0.5">Blog</a>
+                    <a href="/tools/" class="text-gray-300 hover:text-white transition-colors">Tools</a>
+                    <a href="/app/#/login" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-5 py-2 rounded-lg font-medium transition-all">Anmelden</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-gray-300 hover:text-white">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900/95 border-b border-white/10">
+            <div class="px-4 py-3 space-y-2">
+                <a href="/" class="block py-2 text-gray-300 hover:text-white">SEO-Tool</a>
+                <a href="/blog/" class="block py-2 text-white font-medium">Blog</a>
+                <a href="/tools/" class="block py-2 text-gray-300 hover:text-white">Tools</a>
+                <a href="/app/#/login" class="block py-2 text-blue-400 hover:text-blue-300">Anmelden</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Image -->
+    <section class="pt-16 relative">
+        <div class="h-[400px] bg-gradient-to-br from-blue-600 via-indigo-700 to-purple-800 relative overflow-hidden">
+            <img src="/blog/images/person-schema-markup-seo.png" alt="Person Schema Markup für SEO und E-E-A-T" class="absolute inset-0 w-full h-full object-cover opacity-30">
+            <div class="absolute inset-0 bg-black/40"></div>
+            <div class="absolute inset-0 flex items-center justify-center">
+                <div class="text-center px-4 max-w-4xl">
+                    <span class="inline-block text-sm font-semibold px-4 py-1.5 bg-white/10 text-white/90 rounded-full mb-6">Schema Markup</span>
+                    <h1 class="text-3xl md:text-5xl font-extrabold text-white leading-tight">Person Schema Markup: Autoren-Schema für Google und E-E-A-T</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Article Content -->
+    <section class="py-12 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col lg:flex-row gap-12">
+
+                <!-- Main Content -->
+                <article class="lg:w-2/3">
+                    <!-- Meta -->
+                    <div class="flex flex-wrap items-center gap-4 text-sm text-gray-400 mb-10 pb-6 border-b border-white/10">
+                        <div class="flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+                            Shift07 Team
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                            18. April 2026
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                            10 Min. Lesezeit
+                        </div>
+                        <span class="text-xs font-semibold px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full">Schema Markup</span>
+                    </div>
+
+                    <!-- Article Body -->
+                    <div class="article-content">
+
+                        <p>Person Schema Markup ist eines der mächtigsten Werkzeuge im E-E-A-T-Arsenal eines Website-Betreibers. Während viele Webmaster sich auf technisches SEO konzentrieren, übersehen sie dabei, dass Google zunehmend wissen möchte, <strong>wer</strong> hinter den Inhalten steckt. Genau hier setzt <code>schema.org/Person</code> an: Du hilfst Google zu verstehen, welche echte Person Inhalte verfasst hat, welche Expertise sie besitzt, und wie sie mit anderen vertrauenswürdigen Quellen vernetzt ist.</p>
+
+                        <p>In diesem Artikel zeige ich dir, wie du Person Schema Markup korrekt implementierst, welche Properties die größte SEO-Wirkung haben, und wie du das Schema mit <a href="/blog/article-schema-markup-seo.html">Article Schema</a> und <a href="/blog/strukturierte-daten-seo-schema-markup.html">anderen strukturierten Daten</a> kombinierst.</p>
+
+                        <h2>Was ist Person Schema Markup?</h2>
+
+                        <p>Person Schema ist ein strukturiertes Datenformat aus dem Schema.org-Vokabular, das eine reale Person beschreibt. Es wird im JSON-LD-Format im <code>&lt;head&gt;</code> oder <code>&lt;body&gt;</code> einer Webseite eingebettet und liefert Google maschinenlesbare Informationen über:</p>
+
+                        <ul>
+                            <li>Den vollständigen Namen der Person</li>
+                            <li>Ihre berufliche Rolle und Arbeitgeber</li>
+                            <li>Fachgebiete und Qualifikationen</li>
+                            <li>Profilbild und Online-Präsenzen (LinkedIn, Twitter, Wikipedia)</li>
+                            <li>Kontaktinformationen und geografische Angaben</li>
+                        </ul>
+
+                        <p>Google nutzt diese Informationen, um das sogenannte <strong>Knowledge Panel</strong> zu befüllen — die Info-Box, die bei Google-Suchanfragen nach bekannten Personen rechts erscheint. Für weniger prominente Autoren hilft Person Schema dabei, die E-E-A-T-Signale (Experience, Expertise, Authoritativeness, Trustworthiness) zu stärken.</p>
+
+                        <h2>Warum Person Schema für E-E-A-T so wichtig ist</h2>
+
+                        <p>Seit dem Helpful Content Update und den kontinuierlichen Core Updates bewertet Google Inhalte zunehmend anhand des Autors. Die Fragen, die Googles Quality Rater stellen, lauten:</p>
+
+                        <ul>
+                            <li>Hat der Autor nachgewiesene Expertise im Thema?</li>
+                            <li>Ist die Person mit vertrauenswürdigen Quellen verbunden?</li>
+                            <li>Gibt es eine überprüfbare Online-Identität?</li>
+                            <li>Stimmen die Angaben auf der Website mit externen Quellen überein?</li>
+                        </ul>
+
+                        <p>Person Schema gibt Google strukturierte Antworten auf genau diese Fragen. Ein Mediziner, der auf seiner Praxiswebsite Person Schema mit Verlinkung auf sein ORCID-Profil und seine Klinikzugehörigkeit einbettet, signalisiert Google deutlich höhere Vertrauenswürdigkeit als eine anonyme "Unser Team"-Seite.</p>
+
+                        <blockquote>Tipp: Person Schema ist besonders wertvoll für Websites in YMYL-Bereichen (Your Money, Your Life): Gesundheit, Finanzen, Recht, Ernährung. Hier prüft Google Autorität besonders streng.</blockquote>
+
+                        <h2>Die wichtigsten Properties im Überblick</h2>
+
+                        <p>Schema.org/Person kennt über 60 Properties. Für SEO-Zwecke sind folgende besonders relevant:</p>
+
+                        <h3>Pflicht-Properties (immer angeben)</h3>
+
+                        <ul>
+                            <li><strong>@type</strong>: Immer <code>"Person"</code></li>
+                            <li><strong>name</strong>: Vollständiger Name (Vor- und Nachname)</li>
+                            <li><strong>url</strong>: URL der Autoren-Seite auf deiner Website</li>
+                        </ul>
+
+                        <h3>Hochwertige Optional-Properties</h3>
+
+                        <ul>
+                            <li><strong>image</strong>: Profilbild als ImageObject mit URL und Abmessungen</li>
+                            <li><strong>jobTitle</strong>: Berufsbezeichnung (z.B. "SEO-Experte", "Zahnarzt", "Rechtsanwalt")</li>
+                            <li><strong>worksFor</strong>: Referenz auf Organization-Schema des Arbeitgebers</li>
+                            <li><strong>sameAs</strong>: Array mit URLs zu verifizierten Profilen (LinkedIn, XING, Wikipedia, Twitter/X)</li>
+                            <li><strong>description</strong>: Kurze Bio mit Expertise-Aussagen</li>
+                            <li><strong>knowsAbout</strong>: Liste von Themengebieten (als Strings oder URLs)</li>
+                            <li><strong>alumniOf</strong>: Universität oder Ausbildungseinrichtung</li>
+                            <li><strong>hasCredential</strong>: Auszeichnungen, Zertifikate, Abschlüsse</li>
+                            <li><strong>email</strong>: Geschäftliche E-Mail (optional)</li>
+                            <li><strong>telephone</strong>: Telefonnummer im internationalen Format</li>
+                            <li><strong>address</strong>: PostalAddress-Objekt für Ortsangaben</li>
+                        </ul>
+
+                        <h2>Vollständiges Beispiel: Autor-Schema für einen Blog</h2>
+
+                        <p>Hier ist ein praxistaugliches Person Schema für einen SEO-Experten, der Blogartikel schreibt:</p>
+
+                        <pre><code>{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": "https://beispiel-blog.de/autoren/max-mustermann/",
+  "name": "Max Mustermann",
+  "url": "https://beispiel-blog.de/autoren/max-mustermann/",
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://beispiel-blog.de/images/max-mustermann.jpg",
+    "width": 400,
+    "height": 400
+  },
+  "jobTitle": "SEO-Stratege und Webentwickler",
+  "description": "Max Mustermann ist seit 2015 im Bereich Suchmaschinenoptimierung tätig und hat über 200 Websites für Google optimiert. Er ist Gründer von Beispiel Blog und schreibt regelmäßig über technisches SEO und Content-Strategie.",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Beispiel Blog GmbH",
+    "url": "https://beispiel-blog.de"
+  },
+  "sameAs": [
+    "https://www.linkedin.com/in/max-mustermann",
+    "https://twitter.com/maxmustermann",
+    "https://www.xing.com/profile/Max_Mustermann",
+    "https://de.wikipedia.org/wiki/Max_Mustermann"
+  ],
+  "knowsAbout": [
+    "Suchmaschinenoptimierung",
+    "Content Marketing",
+    "Technisches SEO",
+    "Schema Markup",
+    "Google Analytics"
+  ],
+  "alumniOf": {
+    "@type": "CollegeOrUniversity",
+    "name": "Humboldt-Universität zu Berlin"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Berlin",
+    "addressCountry": "DE"
+  },
+  "email": "max@beispiel-blog.de"
+}</code></pre>
+
+                        <h2>Person Schema mit Article Schema kombinieren</h2>
+
+                        <p>Die größte SEO-Wirkung erzielst du, wenn du Person Schema mit <a href="/blog/article-schema-markup-seo.html">Article Schema</a> verknüpfst. Dabei referenziert das Article-Objekt die Person über ihr <code>@id</code>:</p>
+
+                        <pre><code>{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Wie ich 50 % mehr organischen Traffic gewann",
+  "author": {
+    "@type": "Person",
+    "@id": "https://beispiel-blog.de/autoren/max-mustermann/",
+    "name": "Max Mustermann",
+    "url": "https://beispiel-blog.de/autoren/max-mustermann/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Beispiel Blog GmbH",
+    "url": "https://beispiel-blog.de"
+  },
+  "datePublished": "2026-04-18",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://beispiel-blog.de/blog/artikel-url/"
+  }
+}</code></pre>
+
+                        <p>Das <code>@id</code>-Attribut ist entscheidend: Es erzeugt eine semantische Verknüpfung zwischen dem Artikel und der Autoren-Entity. Google kann so erkennen, dass der gleiche Autor auf verschiedenen Seiten publiziert und baut ein konsistentes Bild seiner Expertise auf.</p>
+
+                        <h2>Person Schema für Arztpraxen und Fachleute</h2>
+
+                        <p>Besonders wertvoll ist Person Schema für Ärzte, Physiotherapeuten, Steuerberater und andere Fachleute, deren Website im YMYL-Bereich liegt. Hier ein Beispiel für eine Zahnarztpraxis:</p>
+
+                        <pre><code>{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": "https://zahnarzt-beispiel.de/team/dr-anna-schmidt/",
+  "name": "Dr. Anna Schmidt",
+  "honorificPrefix": "Dr.",
+  "jobTitle": "Zahnärztin",
+  "description": "Dr. Anna Schmidt ist seit 2012 als Zahnärztin tätig und hat sich auf ästhetische Zahnheilkunde und Implantologie spezialisiert. Sie hat ihr Studium an der Charité Berlin abgeschlossen.",
+  "worksFor": {
+    "@type": "MedicalOrganization",
+    "name": "Zahnarztpraxis Schmidt",
+    "url": "https://zahnarzt-beispiel.de"
+  },
+  "hasCredential": [
+    {
+      "@type": "EducationalOccupationalCredential",
+      "name": "Approbation als Zahnärztin",
+      "recognizedBy": {
+        "@type": "Organization",
+        "name": "Bundeszahnärztekammer"
+      }
+    }
+  ],
+  "alumniOf": {
+    "@type": "CollegeOrUniversity",
+    "name": "Charité – Universitätsmedizin Berlin"
+  },
+  "sameAs": [
+    "https://www.jameda.de/zahnarzt-beispiel",
+    "https://www.linkedin.com/in/dr-anna-schmidt"
+  ],
+  "url": "https://zahnarzt-beispiel.de/team/dr-anna-schmidt/"
+}</code></pre>
+
+                        <p>Die Verwendung von <code>honorificPrefix</code> (Titel wie "Dr." oder "Prof.") und <code>hasCredential</code> signalisiert Google die Qualifikation — wichtig für den "Expertise"-Aspekt von E-E-A-T.</p>
+
+                        <h2>sameAs: Der wichtigste E-E-A-T-Booster</h2>
+
+                        <p>Die <code>sameAs</code>-Property ist wahrscheinlich die mächtigste einzelne Property im Person Schema. Sie verknüpft deine Schema-Entity mit verifizierten, externen Profilen und schafft so ein semantisches Netz der Vertrauenswürdigkeit.</p>
+
+                        <p>Geeignete Quellen für <code>sameAs</code>:</p>
+
+                        <ul>
+                            <li><strong>LinkedIn</strong>: Berufsprofil (sehr empfohlen für B2B und Fachleute)</li>
+                            <li><strong>XING</strong>: Deutsches Pendant zu LinkedIn</li>
+                            <li><strong>Wikipedia</strong>: Nur wenn ein Artikel existiert — erzwingt keinen Eintrag</li>
+                            <li><strong>Wikidata</strong>: Maschinenlesbares Wissensgraph-Profil</li>
+                            <li><strong>Twitter/X</strong>: Für Autoren mit öffentlicher Präsenz</li>
+                            <li><strong>ORCID</strong>: Für Wissenschaftler und Forscher</li>
+                            <li><strong>Google Scholar</strong>: Für akademische Autoren</li>
+                            <li><strong>Jameda/Doctolib</strong>: Für Ärzte und Therapeuten</li>
+                        </ul>
+
+                        <p>Wichtig: Verlinke nur Profile, die du tatsächlich kontrollierst und die aktuell gepflegt sind. Veraltete oder inaktive Profile schwächen das Signal.</p>
+
+                        <h2>Wo Person Schema implementieren?</h2>
+
+                        <p>Person Schema gehört typischerweise auf drei Seitentypen:</p>
+
+                        <h3>1. Die Autoren-Seite</h3>
+                        <p>Jeder Blog-Autor sollte eine dedizierte Profilseite haben (<code>/autoren/name/</code> oder <code>/team/name/</code>). Hier platzierst du das vollständige Person Schema mit allen Properties. Diese Seite ist die "Heimat" der Person-Entity und über <code>@id</code> referenziert.</p>
+
+                        <h3>2. Einzelne Blog-Artikel</h3>
+                        <p>Im Article Schema jedes Beitrags verlinkst du auf die Person-Entity über <code>@id</code>. Du musst hier nicht alle Properties wiederholen — die Referenz reicht.</p>
+
+                        <h3>3. Die About-Seite</h3>
+                        <p>Für persönliche Websites oder One-Person-Businesses ist die About-Seite oft der natürliche Platz für vollständiges Person Schema.</p>
+
+                        <h2>Person Schema mit Organization Schema verknüpfen</h2>
+
+                        <p>Die Kombination aus Person und Organization erzeugt die stärksten E-E-A-T-Signale. Die Person arbeitet für die Organisation (<code>worksFor</code>), die Organisation hat Mitarbeiter (<code>employee</code>). Wenn du <a href="/tools/organization-schema-generator.html">Organization Schema</a> bereits implementiert hast, nutze die gleiche <code>@id</code> der Organisation im <code>worksFor</code>-Property der Person:</p>
+
+                        <pre><code>{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Maria Müller",
+  "worksFor": {
+    "@type": "Organization",
+    "@id": "https://meine-firma.de/#organization",
+    "name": "Musterfirma GmbH"
+  }
+}</code></pre>
+
+                        <p>Und im Organization Schema:</p>
+
+                        <pre><code>{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://meine-firma.de/#organization",
+  "name": "Musterfirma GmbH",
+  "employee": {
+    "@type": "Person",
+    "@id": "https://meine-firma.de/team/maria-mueller/",
+    "name": "Maria Müller"
+  }
+}</code></pre>
+
+                        <h2>Häufige Fehler beim Person Schema</h2>
+
+                        <p>Diese Fehler sehe ich am häufigsten beim Audit von Websites mit Person Schema:</p>
+
+                        <ul>
+                            <li><strong>Kein @id</strong>: Ohne <code>@id</code> kann Google die Entity nicht korrekt zuordnen. Immer eine eindeutige URL als ID verwenden.</li>
+                            <li><strong>sameAs auf gelöschte Profile</strong>: Prüfe regelmäßig, ob alle verlinkten Profile noch aktiv sind.</li>
+                            <li><strong>Widersprüchliche Angaben</strong>: Der Name im Schema muss exakt dem Namen auf der Seite und auf externen Profilen entsprechen.</li>
+                            <li><strong>Person Schema ohne dedizierte Autoren-Seite</strong>: Google braucht eine "Heimat" für die Entity. Eine Seite pro Autor ist Pflicht.</li>
+                            <li><strong>Fake-Expertise signalisieren</strong>: Behaupte nie Qualifikationen, die du nicht hast. Das wird durch externe Signale (oder deren Fehlen) widerlegt.</li>
+                        </ul>
+
+                        <h2>Validierung und Testing</h2>
+
+                        <p>Nach der Implementierung unbedingt validieren:</p>
+
+                        <ol>
+                            <li><strong>Google Rich Results Test</strong>: Prüft ob das Schema korrekt geparst wird</li>
+                            <li><strong>Schema Markup Validator</strong>: Auf schema.org/validator detaillierte Validierung</li>
+                            <li><strong>Google Search Console</strong>: Nach einigen Tagen unter "Verbesserungen" schauen ob Fehler gemeldet werden</li>
+                            <li>Nutze unseren <a href="/tools/json-ld-structured-data-validator.html">JSON-LD Structured Data Validator</a> für eine schnelle Erstprüfung</li>
+                        </ol>
+
+                        <h2>Checkliste: Person Schema korrekt implementieren</h2>
+
+                        <ul>
+                            <li>✅ Dedizierte Autoren-Seite erstellt</li>
+                            <li>✅ <code>@type: "Person"</code> gesetzt</li>
+                            <li>✅ <code>@id</code> als eindeutige URL definiert</li>
+                            <li>✅ <code>name</code> vollständig und konsistent</li>
+                            <li>✅ <code>url</code> auf die Autoren-Seite zeigt</li>
+                            <li>✅ <code>image</code> mit realen Profilfoto und Abmessungen</li>
+                            <li>✅ <code>jobTitle</code> korrekt befüllt</li>
+                            <li>✅ <code>worksFor</code> auf Organization verknüpft</li>
+                            <li>✅ <code>sameAs</code> mit mindestens 2-3 verifizierten Profilen</li>
+                            <li>✅ <code>description</code> mit Expertise-Aussagen</li>
+                            <li>✅ Article Schema auf Blog-Artikeln referenziert Person via <code>@id</code></li>
+                            <li>✅ Validierung durchgeführt (keine Fehler)</li>
+                        </ul>
+
+                        <h2>Fazit</h2>
+
+                        <p>Person Schema Markup ist kein optionaler Extra-Schritt — es ist ein fundamentaler Bestandteil einer modernen E-E-A-T-Strategie. Besonders für Websites in sensiblen Bereichen (Gesundheit, Finanzen, Recht) macht der Unterschied zwischen einer anonymen "Team"-Seite und einem vollständig ausgezeichneten Autoren-Schema den Unterschied bei der Bewertung durch Google-Quality-Rater.</p>
+
+                        <p>Die Implementierung ist mit JSON-LD technisch einfach — die eigentliche Arbeit besteht darin, <strong>echte</strong> Expertise-Signale aufzubauen: gepflegte LinkedIn-Profile, aktive Twitter/X-Präsenz, eventuell einen Wikipedia-Eintrag, und vor allem Inhalte, die die behauptete Expertise belegen.</p>
+
+                        <p>Wenn du dein gesamtes Schema-Markup-Setup überprüfen möchtest, starte eine <a href="/">kostenlose SEO-Analyse auf shift07.ai</a> — wir prüfen, welche strukturierten Daten deiner Website fehlen und wie du E-E-A-T-Signale konkret stärken kannst.</p>
+
+                        <p>Weiterführende Artikel: <a href="/blog/strukturierte-daten-seo-schema-markup.html">Strukturierte Daten für SEO</a>, <a href="/blog/eat-google-qualitaetssignale.html">E-A-T als Google-Qualitätssignal</a>, <a href="/blog/article-schema-markup-seo.html">Article Schema Markup</a>.</p>
+
+                    </div>
+
+                    <!-- Share / Back -->
+                    <div class="mt-12 pt-8 border-t border-white/10 flex items-center justify-between">
+                        <a href="/blog/" class="text-blue-400 hover:text-blue-300 flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+                            Zurück zum Blog
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Sidebar -->
+                <aside class="lg:w-1/3 space-y-8">
+                    <!-- CTA Box -->
+                    <div class="bg-gradient-to-br from-blue-600/20 to-indigo-600/20 border border-blue-500/30 rounded-2xl p-6 text-center">
+                        <h3 class="text-lg font-bold text-white mb-3">Kostenlose SEO-Analyse</h3>
+                        <p class="text-gray-400 text-sm mb-5">Finde heraus, ob deine Website Schema Markup korrekt implementiert hat.</p>
+                        <a href="/" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-6 py-3 rounded-lg font-medium transition-all inline-block w-full">Jetzt testen</a>
+                    </div>
+
+                    <!-- Tool CTA -->
+                    <div class="bg-slate-800/50 border border-white/10 rounded-2xl p-6 text-center">
+                        <h3 class="text-lg font-bold text-white mb-3">Organization Schema Generator</h3>
+                        <p class="text-gray-400 text-sm mb-5">Erstelle JSON-LD für dein Unternehmen — kostenlos und ohne Anmeldung.</p>
+                        <a href="/tools/organization-schema-generator.html" class="bg-slate-700 hover:bg-slate-600 text-white px-6 py-3 rounded-lg font-medium transition-all inline-block w-full">Tool öffnen</a>
+                    </div>
+
+                    <!-- Related Articles -->
+                    <div class="bg-slate-800/50 border border-white/10 rounded-2xl p-6">
+                        <h3 class="text-lg font-bold text-white mb-4">Weitere Artikel</h3>
+                        <div class="space-y-4">
+                            <a href="/blog/strukturierte-daten-seo-schema-markup.html" class="block group">
+                                <p class="text-sm text-gray-300 group-hover:text-blue-400 transition-colors font-medium">Strukturierte Daten für SEO: Schema Markup einfach erklärt</p>
+                                <p class="text-xs text-gray-500 mt-1">Schema Markup Grundlagen</p>
+                            </a>
+                            <a href="/blog/article-schema-markup-seo.html" class="block group">
+                                <p class="text-sm text-gray-300 group-hover:text-blue-400 transition-colors font-medium">Article Schema Markup: Blog-Artikel für Rich Snippets optimieren</p>
+                                <p class="text-xs text-gray-500 mt-1">Schema Markup</p>
+                            </a>
+                            <a href="/blog/eat-google-qualitaetssignale.html" class="block group">
+                                <p class="text-sm text-gray-300 group-hover:text-blue-400 transition-colors font-medium">E-A-T: Expertise, Autorität und Vertrauen als Google-Qualitätssignale</p>
+                                <p class="text-xs text-gray-500 mt-1">Google Ranking-Faktoren</p>
+                            </a>
+                            <a href="/blog/localbusiness-schema-markup-anleitung.html" class="block group">
+                                <p class="text-sm text-gray-300 group-hover:text-blue-400 transition-colors font-medium">LocalBusiness Schema Markup: Vollständige Anleitung 2026</p>
+                                <p class="text-xs text-gray-500 mt-1">Schema Markup</p>
+                            </a>
+                        </div>
+                    </div>
+
+                </aside>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer CTA -->
+    <section class="py-16 px-4 bg-gradient-to-r from-blue-900/30 to-indigo-900/30 border-t border-b border-white/5">
+        <div class="max-w-3xl mx-auto text-center">
+            <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">Teste deine Website jetzt kostenlos</h2>
+            <p class="text-gray-400 mb-8">Erhalte eine vollständige SEO-Analyse mit konkreten Verbesserungsvorschlägen.</p>
+            <form action="/" method="get" class="flex flex-col sm:flex-row gap-3 max-w-xl mx-auto">
+                <input type="url" placeholder="https://deine-website.de" class="flex-1 bg-slate-800 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-blue-500">
+                <a href="/" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-8 py-3 rounded-lg font-medium transition-all whitespace-nowrap">Analyse starten</a>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/10 bg-slate-900/50 py-12 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="flex items-center gap-2">
+                    <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                    <span class="text-lg font-bold text-white">Shift07</span>
+                </div>
+                <div class="flex items-center space-x-6 text-sm text-gray-400">
+                    <a href="/impressum.html" class="hover:text-white transition-colors">Impressum</a>
+                    <a href="/datenschutz.html" class="hover:text-white transition-colors">Datenschutz</a>
+                    <a href="/agb.html" class="hover:text-white transition-colors">AGB</a>
+                </div>
+                <p class="text-sm text-gray-500">&copy; 2026 Thümmler AI GmbH</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
