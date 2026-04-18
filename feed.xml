@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Sat, 18 Apr 2026 02:34:26 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 18 Apr 2026 04:08:53 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>WebPage und WebSite Schema Markup: Vollständige Anleitung 2026</title>
+      <link>https://shift07.ai/blog/webpage-website-schema-markup-seo.html</link>
+      <guid>https://shift07.ai/blog/webpage-website-schema-markup-seo.html</guid>
+      <pubDate>Sat, 18 Apr 2026 04:08:23 +0000</pubDate>
+      <description>WebPage und WebSite Schema Markup richtig einsetzen: Alle Properties, SiteSearch-Aktion, JSON-LD-Beispiele und häufige Fehler. Schritt-für-Schritt-Anleitung 2026.</description>
+      <category>Schema Markup</category>
+    </item>
     <item>
       <title>Organization Schema Markup: Alle Properties für dein Unternehmen (Vertiefung)</title>
       <link>https://shift07.ai/blog/organization-schema-markup-vertieft.html</link>
@@ -159,14 +167,6 @@
       <guid>https://shift07.ai/blog/linkaufbau-messen-tools-kpis.html</guid>
       <pubDate>Wed, 15 Apr 2026 04:10:20 +0000</pubDate>
       <description>Welche KPIs wirklich wichtig sind beim Linkaufbau – und mit welchen kostenlosen und bezahlten Tools du deinen Off-Page-SEO-Fortschritt zuverlässig misst.</description>
-      <category>Off-Page SEO</category>
-    </item>
-    <item>
-      <title>Toxic Links erkennen und disavowen: So schützt du dein Backlink-Profil</title>
-      <link>https://shift07.ai/blog/toxic-links-disavow-seo.html</link>
-      <guid>https://shift07.ai/blog/toxic-links-disavow-seo.html</guid>
-      <pubDate>Wed, 15 Apr 2026 02:34:23 +0000</pubDate>
-      <description>Schädliche Backlinks erkennen, bewerten und mit dem Google Disavow Tool entfernen. Schritt-für-Schritt-Anleitung zur Bereinigung deines Backlink-Profils.</description>
       <category>Off-Page SEO</category>
     </item>
   </channel>
