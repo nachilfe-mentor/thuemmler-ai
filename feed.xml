@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Sat, 18 Apr 2026 00:46:15 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 18 Apr 2026 00:49:52 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Recipe Schema Markup: Rezepte als Rich Snippets in Google</title>
+      <link>https://shift07.ai/blog/recipe-schema-markup-seo.html</link>
+      <guid>https://shift07.ai/blog/recipe-schema-markup-seo.html</guid>
+      <pubDate>Sat, 18 Apr 2026 00:49:31 +0000</pubDate>
+      <description>Recipe Schema Markup Schritt für Schritt implementieren: So erscheinen deine Rezepte mit Kochzeit, Nährwerten und Sternebewertungen als Rich Snippets in Google. JSON-LD Anleitung.</description>
+      <category>Schema Markup</category>
+    </item>
     <item>
       <title>BookReview Schema Markup: Buchrezensionen als Rich Snippets in Google</title>
       <link>https://shift07.ai/blog/bookreview-schema-markup-seo.html</link>
@@ -160,14 +168,6 @@
       <pubDate>Wed, 15 Apr 2026 00:53:12 +0000</pubDate>
       <description>Linkable Assets sind Inhalte, die andere Websites freiwillig verlinken. Erfahre, welche 7 Asset-Typen am besten funktionieren und wie du sie Schritt für Schritt erstellst.</description>
       <category>Content-Marketing</category>
-    </item>
-    <item>
-      <title>Wir haben 198 deutsche Unternehmens-Websites analysiert – das sind die häufigsten SEO-Fehler</title>
-      <link>https://shift07.ai/blog/seo-fehler-analyse-deutsche-unternehmen.html</link>
-      <guid>https://shift07.ai/blog/seo-fehler-analyse-deutsche-unternehmen.html</guid>
-      <pubDate>Wed, 15 Apr 2026 00:48:42 +0000</pubDate>
-      <description>Shift07 hat 198 Websites kleiner und mittlerer Unternehmen in Deutschland analysiert. Ergebnis: 3 von 4 Websites fehlen strukturierte Daten, jede zweite lädt zu langsam. Die vollständige Auswertung.</description>
-      <category>SEO-Analyse</category>
     </item>
   </channel>
 </rss>
