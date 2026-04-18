@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Fri, 17 Apr 2026 05:07:04 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 18 Apr 2026 00:46:15 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>BookReview Schema Markup: Buchrezensionen als Rich Snippets in Google</title>
+      <link>https://shift07.ai/blog/bookreview-schema-markup-seo.html</link>
+      <guid>https://shift07.ai/blog/bookreview-schema-markup-seo.html</guid>
+      <pubDate>Sat, 18 Apr 2026 00:45:51 +0000</pubDate>
+      <description>BookReview Schema Markup korrekt implementieren: So zeigt Google deine Buchrezensionen als Rich Snippets mit Sternebewertungen an. Vollständige Anleitung mit JSON-LD Beispielen.</description>
+      <category>Schema Markup</category>
+    </item>
     <item>
       <title>Course Schema Markup: Online-Kurse als Rich Snippets in Google</title>
       <link>https://shift07.ai/blog/course-schema-markup-seo.html</link>
@@ -160,14 +168,6 @@
       <pubDate>Wed, 15 Apr 2026 00:48:42 +0000</pubDate>
       <description>Shift07 hat 198 Websites kleiner und mittlerer Unternehmen in Deutschland analysiert. Ergebnis: 3 von 4 Websites fehlen strukturierte Daten, jede zweite lädt zu langsam. Die vollständige Auswertung.</description>
       <category>SEO-Analyse</category>
-    </item>
-    <item>
-      <title>Skyscraper-Technik: Wie du durch besseren Content Backlinks gewinnst</title>
-      <link>https://shift07.ai/blog/skyscraper-technik-seo-backlinks.html</link>
-      <guid>https://shift07.ai/blog/skyscraper-technik-seo-backlinks.html</guid>
-      <pubDate>Tue, 14 Apr 2026 06:20:40 +0000</pubDate>
-      <description>Die Skyscraper-Technik von Brian Dean erklärt: In 3 Schritten bestehende Top-Inhalte übertreffen, Backlinks gewinnen und Google-Rankings steigern. Mit konkreter Anleitung.</description>
-      <category>Content-Marketing</category>
     </item>
   </channel>
 </rss>
