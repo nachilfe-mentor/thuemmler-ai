@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K1S1RXBDS8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K1S1RXBDS8');
+    </script>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8475857002943858" crossorigin="anonymous"></script>
+    <title>BookReview Schema Generator – JSON-LD für Buchrezensionen kostenlos erstellen | Shift07</title>
+    <meta name="description" content="BookReview Schema Generator: Erstelle kostenloses JSON-LD für Buchrezensionen mit Sternebewertungen. Google Rich Snippets für Buchrezensions-Websites — schnell und ohne Anmeldung.">
+    <meta name="keywords" content="bookreview schema generator, buchrezension schema markup, json-ld buchbewertung, review rich snippets, structured data buchrezension">
+    <meta name="author" content="Thümmler AI GmbH">
+    <link rel="icon" type="image/png" href="/logo.png">
+    <link rel="canonical" href="https://shift07.ai/tools/bookreview-schema-generator.html">
+    <!-- Open Graph -->
+    <meta property="og:title" content="BookReview Schema Generator – JSON-LD für Buchrezensionen kostenlos erstellen">
+    <meta property="og:description" content="BookReview Schema Generator: Erstelle kostenloses JSON-LD für Buchrezensionen mit Sternebewertungen. Google Rich Snippets ohne Anmeldung.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://shift07.ai/tools/bookreview-schema-generator.html">
+    <meta property="og:image" content="https://shift07.ai/tools/images/bookreview-schema-generator.png">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="Shift07">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="BookReview Schema Generator – Buchrezensionen als Rich Snippets">
+    <meta name="twitter:description" content="JSON-LD für Buchrezensionen kostenlos generieren. Sternebewertungen in Google Rich Results.">
+    <meta name="twitter:image" content="https://shift07.ai/tools/images/bookreview-schema-generator.png">
+    <!-- Structured Data: Tool -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "BookReview Schema Generator",
+      "description": "Kostenloser Generator für BookReview Schema Markup (JSON-LD). Erstelle strukturierte Daten für Buchrezensionen mit Sternebewertungen für Google Rich Snippets.",
+      "url": "https://shift07.ai/tools/bookreview-schema-generator.html",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Shift07",
+        "url": "https://shift07.ai"
+      }
+    }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: { extend: { fontFamily: { 'inter': ['Inter', 'system-ui', '-apple-system', 'sans-serif'] } } }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: rgba(15,23,42,0.5); }
+        ::-webkit-scrollbar-thumb { background: rgba(59,130,246,0.5); border-radius: 4px; }
+        html { scroll-behavior: smooth; }
+        .input-field {
+            background: rgba(30,41,59,0.8);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 0.5rem;
+            padding: 0.625rem 0.875rem;
+            color: #f1f5f9;
+            width: 100%;
+            transition: border-color 0.2s;
+        }
+        .input-field:focus { outline: none; border-color: rgba(59,130,246,0.6); }
+        .input-field::placeholder { color: #64748b; }
+        select.input-field option { background: #1e293b; }
+        .star-btn { cursor: pointer; font-size: 1.75rem; transition: transform 0.1s; }
+        .star-btn:hover { transform: scale(1.2); }
+        #output-code {
+            background: rgba(15,23,42,0.9);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 0.75rem;
+            padding: 1.25rem;
+            color: #e2e8f0;
+            font-family: 'Courier New', monospace;
+            font-size: 0.8rem;
+            line-height: 1.6;
+            white-space: pre;
+            overflow-x: auto;
+            min-height: 200px;
+        }
+    </style>
+</head>
+<body class="bg-slate-900 text-white min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-slate-900/80 backdrop-blur-xl border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <a href="/" class="flex items-center gap-2">
+                    <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                    <span class="text-xl font-bold text-white">Shift07</span>
+                </a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="/" class="text-gray-300 hover:text-white transition-colors">SEO-Tool</a>
+                    <a href="/blog/" class="text-gray-300 hover:text-white transition-colors">Blog</a>
+                    <a href="/tools/" class="text-white font-medium border-b-2 border-blue-500 pb-0.5">Tools</a>
+                    <a href="/app/#/login" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-5 py-2 rounded-lg font-medium transition-all">Anmelden</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-gray-300 hover:text-white">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900/95 border-b border-white/10">
+            <div class="px-4 py-3 space-y-2">
+                <a href="/" class="block py-2 text-gray-300 hover:text-white">SEO-Tool</a>
+                <a href="/blog/" class="block py-2 text-gray-300 hover:text-white">Blog</a>
+                <a href="/tools/" class="block py-2 text-white font-medium">Tools</a>
+                <a href="/app/#/login" class="block py-2 text-blue-400 hover:text-blue-300">Anmelden</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="pt-24 pb-10 px-4">
+        <div class="max-w-4xl mx-auto text-center">
+            <div class="inline-flex items-center gap-2 px-4 py-2 bg-blue-500/10 border border-blue-500/20 rounded-full text-blue-400 text-sm font-medium mb-6">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+                Schema Markup Tool
+            </div>
+            <h1 class="text-3xl md:text-5xl font-extrabold text-white mb-4 leading-tight">BookReview Schema Generator</h1>
+            <p class="text-lg text-gray-400 max-w-2xl mx-auto">JSON-LD für Buchrezensionen mit Sternebewertungen kostenlos erstellen — für Google Rich Snippets und bessere Sichtbarkeit.</p>
+        </div>
+    </section>
+
+    <!-- Tool -->
+    <section class="pb-16 px-4">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex flex-col lg:flex-row gap-8">
+
+                <!-- Eingabe -->
+                <div class="lg:w-1/2 space-y-6">
+                    <div class="bg-slate-800/50 border border-white/10 rounded-2xl p-6">
+                        <h2 class="text-lg font-bold text-white mb-5 flex items-center gap-2">
+                            <svg class="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
+                            Buch-Informationen
+                        </h2>
+
+                        <div class="space-y-4">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-300 mb-1.5">Buchtitel <span class="text-red-400">*</span></label>
+                                <input type="text" id="book-name" class="input-field" placeholder="z.B. Der Herr der Ringe" oninput="generate()">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-300 mb-1.5">Autor des Buches <span class="text-red-400">*</span></label>
+                                <input type="text" id="book-author" class="input-field" placeholder="z.B. J.R.R. Tolkien" oninput="generate()">
+                            </div>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-300 mb-1.5">ISBN</label>
+                                    <input type="text" id="book-isbn" class="input-field" placeholder="z.B. 978-3-608-96410-5" oninput="generate()">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-300 mb-1.5">Erscheinungsjahr</label>
+                                    <input type="text" id="book-year" class="input-field" placeholder="z.B. 1954" oninput="generate()">
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-300 mb-1.5">Verlag</label>
+                                <input type="text" id="book-publisher" class="input-field" placeholder="z.B. Klett-Cotta" oninput="generate()">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-300 mb-1.5">Buchbild-URL</label>
+                                <input type="url" id="book-image" class="input-field" placeholder="https://beispiel.de/buch-cover.jpg" oninput="generate()">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-800/50 border border-white/10 rounded-2xl p-6">
+                        <h2 class="text-lg font-bold text-white mb-5 flex items-center gap-2">
+                            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            Rezension
+                        </h2>
+
+                        <div class="space-y-4">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-300 mb-2">Bewertung <span class="text-red-400">*</span></label>
+                                <div class="flex items-center gap-2 mb-2">
+                                    <div id="stars" class="flex gap-1">
+                                        <span class="star-btn" data-val="1" onclick="setRating(1)">☆</span>
+                                        <span class="star-btn" data-val="2" onclick="setRating(2)">☆</span>
+                                        <span class="star-btn" data-val="3" onclick="setRating(3)">☆</span>
+                                        <span class="star-btn" data-val="4" onclick="setRating(4)">☆</span>
+                                        <span class="star-btn" data-val="5" onclick="setRating(5)">☆</span>
+                                    </div>
+                                    <span id="rating-label" class="text-gray-400 text-sm">Noch keine Bewertung</span>
+                                </div>
+                                <div class="grid grid-cols-2 gap-3">
+                                    <div>
+                                        <label class="block text-xs text-gray-500 mb-1">Schlechteste Wertung</label>
+                                        <input type="number" id="worst-rating" class="input-field" value="1" min="1" max="5" oninput="generate()">
+                                    </div>
+                                    <div>
+                                        <label class="block text-xs text-gray-500 mb-1">Beste Wertung</label>
+                                        <input type="number" id="best-rating" class="input-field" value="5" min="1" max="10" oninput="generate()">
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-300 mb-1.5">Rezensionstext <span class="text-red-400">*</span></label>
+                                <textarea id="review-body" class="input-field" rows="4" placeholder="Deine Rezension des Buches..." oninput="generate()"></textarea>
+                            </div>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-300 mb-1.5">Name des Rezensenten</label>
+                                    <input type="text" id="reviewer-name" class="input-field" placeholder="z.B. Max Mustermann" oninput="generate()">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-300 mb-1.5">Datum der Rezension</label>
+                                    <input type="date" id="review-date" class="input-field" oninput="generate()">
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-300 mb-1.5">URL der Rezensionsseite</label>
+                                <input type="url" id="review-url" class="input-field" placeholder="https://deine-website.de/buchrezension/buchtitel" oninput="generate()">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Output -->
+                <div class="lg:w-1/2 space-y-6">
+                    <div class="bg-slate-800/50 border border-white/10 rounded-2xl p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <h2 class="text-lg font-bold text-white">Generiertes JSON-LD</h2>
+                            <button onclick="copyCode()" id="copy-btn" class="flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white text-sm font-medium rounded-lg transition-colors">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                                Kopieren
+                            </button>
+                        </div>
+                        <div id="output-code">// Felder ausfüllen — JSON-LD erscheint hier automatisch</div>
+                    </div>
+
+                    <!-- Validierungs-Status -->
+                    <div id="validation-box" class="hidden bg-slate-800/50 border border-white/10 rounded-2xl p-6">
+                        <h3 class="text-base font-bold text-white mb-3">Validierung</h3>
+                        <div id="validation-items" class="space-y-2"></div>
+                    </div>
+
+                    <!-- Info-Box -->
+                    <div class="bg-blue-500/10 border border-blue-500/20 rounded-2xl p-6">
+                        <h3 class="text-base font-bold text-white mb-3">So verwendest du dieses Tool</h3>
+                        <ol class="space-y-2 text-sm text-gray-300 list-decimal list-inside">
+                            <li>Buchtitel, Autor und Bewertung eingeben</li>
+                            <li>Den generierten Code kopieren</li>
+                            <li>Im <code class="bg-slate-700 px-1.5 py-0.5 rounded text-blue-300">&lt;head&gt;</code>-Bereich deiner Rezensions-Seite einfügen</li>
+                            <li>Mit dem Google Rich Results Test prüfen</li>
+                        </ol>
+                        <div class="mt-4 pt-4 border-t border-blue-500/20">
+                            <p class="text-xs text-gray-400">BookReview Schema kann Sternebewertungen in den Google-Suchergebnissen aktivieren — mehr Klicks durch auffällige Rich Snippets.</p>
+                        </div>
+                    </div>
+
+                    <!-- Weiterführende Links -->
+                    <div class="bg-slate-800/50 border border-white/10 rounded-2xl p-6">
+                        <h3 class="text-base font-bold text-white mb-4">Verwandte Tools und Artikel</h3>
+                        <div class="space-y-3">
+                            <a href="/tools/review-schema-generator.html" class="flex items-center gap-3 group">
+                                <div class="w-8 h-8 bg-yellow-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                                </div>
+                                <span class="text-sm text-gray-300 group-hover:text-blue-400 transition-colors">Review &amp; Bewertungs-Schema Generator</span>
+                            </a>
+                            <a href="/tools/article-schema-generator.html" class="flex items-center gap-3 group">
+                                <div class="w-8 h-8 bg-blue-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-4 h-4 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                                </div>
+                                <span class="text-sm text-gray-300 group-hover:text-blue-400 transition-colors">Article Schema Generator</span>
+                            </a>
+                            <a href="/tools/json-ld-structured-data-validator.html" class="flex items-center gap-3 group">
+                                <div class="w-8 h-8 bg-green-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                                </div>
+                                <span class="text-sm text-gray-300 group-hover:text-blue-400 transition-colors">JSON-LD Validator</span>
+                            </a>
+                            <a href="/blog/bookreview-schema-markup-seo.html" class="flex items-center gap-3 group">
+                                <div class="w-8 h-8 bg-purple-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-4 h-4 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+                                </div>
+                                <span class="text-sm text-gray-300 group-hover:text-blue-400 transition-colors">Anleitung: BookReview Schema Markup</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Erklärung -->
+    <section class="py-16 px-4 border-t border-white/5">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-2xl font-bold text-white mb-8 text-center">Warum BookReview Schema für SEO wichtig ist</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-slate-800/50 border border-white/10 rounded-2xl p-6">
+                    <div class="w-10 h-10 bg-yellow-500/20 rounded-xl flex items-center justify-center mb-4">
+                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    </div>
+                    <h3 class="text-base font-bold text-white mb-2">Sternebewertungen in Google</h3>
+                    <p class="text-sm text-gray-400">Buchrezensionen mit korrektem Schema können Sternebewertungen direkt in den Suchergebnissen anzeigen — erheblich mehr Aufmerksamkeit.</p>
+                </div>
+                <div class="bg-slate-800/50 border border-white/10 rounded-2xl p-6">
+                    <div class="w-10 h-10 bg-blue-500/20 rounded-xl flex items-center justify-center mb-4">
+                        <svg class="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
+                    </div>
+                    <h3 class="text-base font-bold text-white mb-2">Höhere Klickrate (CTR)</h3>
+                    <p class="text-sm text-gray-400">Rich Snippets mit Sternen erzielen durchschnittlich 20–30% höhere Klickraten als normale Suchergebnisse ohne visuelle Elemente.</p>
+                </div>
+                <div class="bg-slate-800/50 border border-white/10 rounded-2xl p-6">
+                    <div class="w-10 h-10 bg-green-500/20 rounded-xl flex items-center justify-center mb-4">
+                        <svg class="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                    </div>
+                    <h3 class="text-base font-bold text-white mb-2">E-E-A-T stärken</h3>
+                    <p class="text-sm text-gray-400">Korrekte strukturierte Daten signalisieren Google Vertrauenswürdigkeit und Expertise — wichtig für das Ranking in YMYL-Bereichen wie Buch-Empfehlungen.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer CTA -->
+    <section class="py-16 px-4 bg-gradient-to-r from-blue-900/30 to-indigo-900/30 border-t border-b border-white/5">
+        <div class="max-w-3xl mx-auto text-center">
+            <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">Vollständige SEO-Analyse deiner Website</h2>
+            <p class="text-gray-400 mb-8">Prüfe, welche strukturierten Daten deiner Website fehlen und wo das größte Verbesserungspotenzial liegt.</p>
+            <a href="/" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-8 py-3 rounded-lg font-medium transition-all inline-block">Kostenlose Analyse starten</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/10 bg-slate-900/50 py-12 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="flex items-center gap-2">
+                    <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                    <span class="text-lg font-bold text-white">Shift07</span>
+                </div>
+                <div class="flex items-center space-x-6 text-sm text-gray-400">
+                    <a href="/impressum.html" class="hover:text-white transition-colors">Impressum</a>
+                    <a href="/datenschutz.html" class="hover:text-white transition-colors">Datenschutz</a>
+                    <a href="/agb.html" class="hover:text-white transition-colors">AGB</a>
+                </div>
+                <p class="text-sm text-gray-500">&copy; 2026 Thümmler AI GmbH</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // Heutiges Datum vorausfüllen
+        document.getElementById('review-date').value = new Date().toISOString().split('T')[0];
+
+        let currentRating = 0;
+
+        function setRating(val) {
+            currentRating = val;
+            const stars = document.querySelectorAll('.star-btn');
+            const labels = ['', 'Sehr schlecht', 'Schlecht', 'Durchschnittlich', 'Gut', 'Sehr gut'];
+            stars.forEach((s, i) => {
+                s.textContent = i < val ? '★' : '☆';
+                s.style.color = i < val ? '#f59e0b' : '#64748b';
+            });
+            document.getElementById('rating-label').textContent = `${val}/5 — ${labels[val]}`;
+            generate();
+        }
+
+        function generate() {
+            const bookName = document.getElementById('book-name').value.trim();
+            const bookAuthor = document.getElementById('book-author').value.trim();
+            const isbn = document.getElementById('book-isbn').value.trim();
+            const bookYear = document.getElementById('book-year').value.trim();
+            const publisher = document.getElementById('book-publisher').value.trim();
+            const bookImage = document.getElementById('book-image').value.trim();
+            const reviewBody = document.getElementById('review-body').value.trim();
+            const reviewerName = document.getElementById('reviewer-name').value.trim();
+            const reviewDate = document.getElementById('review-date').value;
+            const reviewUrl = document.getElementById('review-url').value.trim();
+            const worstRating = document.getElementById('worst-rating').value;
+            const bestRating = document.getElementById('best-rating').value;
+
+            if (!bookName || !bookAuthor || !currentRating || !reviewBody) {
+                document.getElementById('output-code').textContent = '// Bitte Buchtitel, Autor, Bewertung und Rezensionstext ausfüllen';
+                updateValidation(bookName, bookAuthor, reviewBody);
+                return;
+            }
+
+            const schema = { "@context": "https://schema.org", "@type": "Review" };
+
+            if (reviewUrl) schema["url"] = reviewUrl;
+            if (reviewDate) schema["datePublished"] = reviewDate;
+
+            schema["reviewRating"] = {
+                "@type": "Rating",
+                "ratingValue": currentRating,
+                "worstRating": parseInt(worstRating),
+                "bestRating": parseInt(bestRating)
+            };
+
+            schema["reviewBody"] = reviewBody;
+
+            if (reviewerName) {
+                schema["author"] = { "@type": "Person", "name": reviewerName };
+            }
+
+            const book = { "@type": "Book" };
+            book["name"] = bookName;
+            book["author"] = { "@type": "Person", "name": bookAuthor };
+            if (isbn) book["isbn"] = isbn;
+            if (bookYear) book["datePublished"] = bookYear;
+            if (publisher) book["publisher"] = { "@type": "Organization", "name": publisher };
+            if (bookImage) book["image"] = bookImage;
+
+            schema["itemReviewed"] = book;
+
+            const jsonStr = JSON.stringify(schema, null, 2);
+            const output = `<script type="application/ld+json">\n${jsonStr}\n<\/script>`;
+            document.getElementById('output-code').textContent = output;
+            updateValidation(bookName, bookAuthor, reviewBody);
+        }
+
+        function updateValidation(bookName, bookAuthor, reviewBody) {
+            const box = document.getElementById('validation-box');
+            const items = document.getElementById('validation-items');
+            box.classList.remove('hidden');
+
+            const checks = [
+                { label: 'Buchtitel', ok: !!bookName },
+                { label: 'Buchautor', ok: !!bookAuthor },
+                { label: 'Bewertung (Sterne)', ok: currentRating > 0 },
+                { label: 'Rezensionstext', ok: !!reviewBody },
+                { label: 'Rezensent angegeben', ok: !!document.getElementById('reviewer-name').value.trim() },
+                { label: 'Datum der Rezension', ok: !!document.getElementById('review-date').value },
+                { label: 'URL der Rezensionsseite', ok: !!document.getElementById('review-url').value.trim() }
+            ];
+
+            items.innerHTML = checks.map(c => `
+                <div class="flex items-center gap-2">
+                    <span class="${c.ok ? 'text-green-400' : 'text-gray-500'}">${c.ok ? '✓' : '○'}</span>
+                    <span class="text-sm ${c.ok ? 'text-gray-300' : 'text-gray-500'}">${c.label}</span>
+                    ${c.ok ? '' : '<span class="text-xs text-gray-600 ml-auto">optional</span>'}
+                </div>
+            `).join('');
+
+            // Required fields special
+            items.innerHTML = checks.slice(0, 4).map(c => `
+                <div class="flex items-center gap-2">
+                    <span class="${c.ok ? 'text-green-400' : 'text-red-400'}">${c.ok ? '✓' : '✗'}</span>
+                    <span class="text-sm ${c.ok ? 'text-gray-300' : 'text-gray-400'}">${c.label} <span class="text-xs text-red-400">(Pflicht)</span></span>
+                </div>
+            `).join('') + checks.slice(4).map(c => `
+                <div class="flex items-center gap-2">
+                    <span class="${c.ok ? 'text-green-400' : 'text-gray-600'}">${c.ok ? '✓' : '○'}</span>
+                    <span class="text-sm ${c.ok ? 'text-gray-300' : 'text-gray-500'}">${c.label} <span class="text-xs text-gray-600">(empfohlen)</span></span>
+                </div>
+            `).join('');
+        }
+
+        function copyCode() {
+            const code = document.getElementById('output-code').textContent;
+            if (code.startsWith('//')) return;
+            navigator.clipboard.writeText(code).then(() => {
+                const btn = document.getElementById('copy-btn');
+                btn.textContent = '✓ Kopiert!';
+                btn.classList.remove('bg-blue-600', 'hover:bg-blue-500');
+                btn.classList.add('bg-green-600');
+                setTimeout(() => {
+                    btn.innerHTML = '<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg> Kopieren';
+                    btn.classList.add('bg-blue-600', 'hover:bg-blue-500');
+                    btn.classList.remove('bg-green-600');
+                }, 2000);
+            });
+        }
+    </script>
+</body>
+</html>
