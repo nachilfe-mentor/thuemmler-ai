@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Sun, 19 Apr 2026 03:06:38 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 19 Apr 2026 04:42:41 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>SEO-Fehler bei deutschen Steuerberatern: Auswertung von 58 Kanzlei-Websites</title>
+      <link>https://shift07.ai/blog/seo-fehler-steuerberater-kanzlei-analyse.html</link>
+      <guid>https://shift07.ai/blog/seo-fehler-steuerberater-kanzlei-analyse.html</guid>
+      <pubDate>Sun, 19 Apr 2026 04:41:58 +0000</pubDate>
+      <description>Shift07 hat 58 Steuerberater-Websites in Deutschland analysiert. Ergebnis: 50% fehlen strukturierte Daten, 42% sind JavaScript-überladen, 33% riskieren Duplicate Content. Die vollständige Auswertung.</description>
+      <category>SEO-Analyse</category>
+    </item>
     <item>
       <title>Event Schema Markup vertieft: MusicEvent, SportsEvent, FoodEvent und alle Sub-Typen</title>
       <link>https://shift07.ai/blog/event-schema-markup-vertieft.html</link>
@@ -159,14 +167,6 @@
       <guid>https://shift07.ai/blog/event-schema-markup-seo.html</guid>
       <pubDate>Thu, 16 Apr 2026 04:14:28 +0000</pubDate>
       <description>Lerne, wie du mit Event Schema Markup Veranstaltungen als Rich Snippets in Google anzeigst. Vollständige Anleitung mit JSON-LD-Beispielen für Konzerte, Kurse, Online-Events und mehr.</description>
-      <category>Tech-SEO</category>
-    </item>
-    <item>
-      <title>FAQPage Schema Markup: FAQ Rich Snippets für Google aktivieren</title>
-      <link>https://shift07.ai/blog/faqpage-schema-markup-seo.html</link>
-      <guid>https://shift07.ai/blog/faqpage-schema-markup-seo.html</guid>
-      <pubDate>Thu, 16 Apr 2026 02:27:02 +0000</pubDate>
-      <description>FAQPage Schema Markup richtig implementieren: So aktivierst du FAQ Rich Snippets in den SERPs, mehr Platz in Google belegst und die CTR deutlich steigerst — mit vollständigen JSON-LD-Beispielen.</description>
       <category>Tech-SEO</category>
     </item>
   </channel>
