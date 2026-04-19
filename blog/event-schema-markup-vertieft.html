@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Schema Markup vertieft: MusicEvent, SportsEvent, FoodEvent und alle Sub-Typen | Shift07 Blog</title>
+    <meta name="description" content="Event Schema vertieft: MusicEvent, SportsEvent, FoodEvent, TheaterEvent und alle Sub-Typen erklärt. Mit JSON-LD-Beispielen und Best Practices für Rich Results.">
+    <meta name="author" content="Thümmler AI GmbH">
+    <link rel="icon" type="image/png" href="/logo.png">
+    <link rel="canonical" href="https://shift07.ai/blog/event-schema-markup-vertieft.html">
+    <link rel="alternate" type="application/rss+xml" title="Shift07 Blog" href="https://shift07.ai/feed.xml">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Event Schema Markup vertieft: MusicEvent, SportsEvent, FoodEvent und alle Sub-Typen | Shift07 Blog">
+    <meta property="og:description" content="Event Schema vertieft: MusicEvent, SportsEvent, FoodEvent, TheaterEvent und alle Sub-Typen erklärt. Mit JSON-LD-Beispielen und Best Practices für Rich Results.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://shift07.ai/blog/event-schema-markup-vertieft.html">
+    <meta property="og:image" content="https://shift07.ai/blog/images/event-schema-markup-vertieft.png">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="Shift07">
+    <meta property="article:published_time" content="2026-04-19T14:00:00+02:00">
+    <meta property="article:section" content="Schema Markup">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Event Schema Markup vertieft: MusicEvent, SportsEvent, FoodEvent">
+    <meta name="twitter:description" content="Event Schema vertieft: MusicEvent, SportsEvent, FoodEvent, TheaterEvent und alle Sub-Typen erklärt. Mit JSON-LD-Beispielen.">
+    <meta name="twitter:image" content="https://shift07.ai/blog/images/event-schema-markup-vertieft.png">
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Event Schema Markup vertieft: MusicEvent, SportsEvent, FoodEvent und alle Sub-Typen",
+      "description": "Event Schema vertieft: MusicEvent, SportsEvent, FoodEvent, TheaterEvent und alle Sub-Typen erklärt. Mit JSON-LD-Beispielen und Best Practices für Rich Results.",
+      "image": "https://shift07.ai/blog/images/event-schema-markup-vertieft.png",
+      "datePublished": "2026-04-19T14:00:00+02:00",
+      "dateModified": "2026-04-19T14:00:00+02:00",
+      "author": {
+        "@type": "Organization",
+        "name": "Shift07",
+        "url": "https://shift07.ai"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Shift07",
+        "url": "https://shift07.ai",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://shift07.ai/assets/logo.png"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://shift07.ai/blog/event-schema-markup-vertieft.html"
+      }
+    }
+    </script>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K1S1RXBDS8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K1S1RXBDS8');
+    </script>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8475857002943858" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: rgba(15, 23, 42, 0.5); }
+        ::-webkit-scrollbar-thumb { background: rgba(59, 130, 246, 0.5); border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: rgba(59, 130, 246, 0.7); }
+        html { scroll-behavior: smooth; }
+        .article-content h2 { font-size: 1.5rem; font-weight: 700; color: #fff; margin-top: 2.5rem; margin-bottom: 1rem; }
+        .article-content h3 { font-size: 1.25rem; font-weight: 600; color: #e2e8f0; margin-top: 2rem; margin-bottom: 0.75rem; }
+        .article-content p { color: #cbd5e1; line-height: 1.8; margin-bottom: 1.25rem; }
+        .article-content ul, .article-content ol { color: #cbd5e1; margin-bottom: 1.25rem; padding-left: 1.5rem; }
+        .article-content li { margin-bottom: 0.5rem; line-height: 1.7; }
+        .article-content ul li { list-style-type: disc; }
+        .article-content ol li { list-style-type: decimal; }
+        .article-content a { color: #60a5fa; text-decoration: underline; text-underline-offset: 2px; }
+        .article-content a:hover { color: #93bbfc; }
+        .article-content blockquote { border-left: 4px solid #3b82f6; padding-left: 1.25rem; margin: 1.5rem 0; color: #94a3b8; font-style: italic; }
+        .article-content code { background: rgba(59, 130, 246, 0.15); color: #93c5fd; padding: 0.15rem 0.4rem; border-radius: 0.25rem; font-size: 0.9em; }
+        .article-content pre { background: rgba(15, 23, 42, 0.8); border: 1px solid rgba(255,255,255,0.1); border-radius: 0.75rem; padding: 1.25rem; overflow-x: auto; margin-bottom: 1.5rem; }
+        .article-content pre code { background: none; padding: 0; color: #e2e8f0; }
+        .article-content strong { color: #f1f5f9; }
+        .article-content table { width: 100%; border-collapse: collapse; margin-bottom: 1.5rem; }
+        .article-content th { background: rgba(59,130,246,0.15); color: #e2e8f0; padding: 0.75rem 1rem; text-align: left; font-weight: 600; border-bottom: 1px solid rgba(255,255,255,0.1); }
+        .article-content td { color: #cbd5e1; padding: 0.75rem 1rem; border-bottom: 1px solid rgba(255,255,255,0.05); }
+        .article-content tr:hover td { background: rgba(255,255,255,0.02); }
+    </style>
+</head>
+<body class="bg-slate-900 text-white min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-slate-900/80 backdrop-blur-xl border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <a href="/" class="flex items-center gap-2">
+                    <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                    <span class="text-xl font-bold text-white">Shift07</span>
+                </a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="/" class="text-gray-300 hover:text-white transition-colors">SEO-Tool</a>
+                    <a href="/blog/" class="text-white font-medium border-b-2 border-blue-500 pb-0.5">Blog</a>
+                    <a href="/tools/" class="text-gray-300 hover:text-white transition-colors">Tools</a>
+                    <a href="/app/#/login" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-5 py-2 rounded-lg font-medium transition-all">Anmelden</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-gray-300 hover:text-white">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900/95 border-b border-white/10">
+            <div class="px-4 py-3 space-y-2">
+                <a href="/" class="block py-2 text-gray-300 hover:text-white">SEO-Tool</a>
+                <a href="/blog/" class="block py-2 text-white font-medium">Blog</a>
+                <a href="/tools/" class="block py-2 text-gray-300 hover:text-white">Tools</a>
+                <a href="/app/#/login" class="block py-2 text-blue-400 hover:text-blue-300">Anmelden</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Image -->
+    <section class="pt-16 relative">
+        <div class="h-[400px] relative overflow-hidden">
+            <img src="/blog/images/event-schema-markup-vertieft.png"
+                 alt="Event Schema Markup vertieft MusicEvent SportsEvent FoodEvent Sub-Typen"
+                 class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black/50"></div>
+            <div class="absolute inset-0 flex items-center justify-center">
+                <div class="text-center px-4 max-w-4xl">
+                    <span class="inline-block text-sm font-semibold px-4 py-1.5 bg-white/10 text-white/90 rounded-full mb-6">Schema Markup</span>
+                    <h1 class="text-3xl md:text-5xl font-extrabold text-white leading-tight">Event Schema Markup vertieft: MusicEvent, SportsEvent, FoodEvent und alle Sub-Typen</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Article Content -->
+    <section class="py-12 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col lg:flex-row gap-12">
+
+                <!-- Main Content -->
+                <article class="lg:w-2/3">
+                    <!-- Meta -->
+                    <div class="flex flex-wrap items-center gap-4 text-sm text-gray-400 mb-10 pb-6 border-b border-white/10">
+                        <div class="flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+                            Shift07 Team
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                            19. April 2026
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                            12 Min. Lesezeit
+                        </div>
+                        <span class="text-xs font-semibold px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full">Schema Markup</span>
+                    </div>
+
+                    <!-- Article Body -->
+                    <div class="article-content">
+
+                        <p>Konzerte, Sportspiele, Festivals, Kochkurse — Veranstaltungen haben eine riesige Suchnachfrage. Wer <strong>Event Schema Markup</strong> korrekt implementiert, erscheint mit Rich Results direkt in der Google-Suche: mit Datum, Uhrzeit, Ort, Ticketpreis — und das noch vor dem eigentlichen Klick. Dieser Artikel geht tief in die Schema.org-Event-Hierarchie: MusicEvent, SportsEvent, FoodEvent, TheaterEvent und alle weiteren Sub-Typen mit konkreten JSON-LD-Beispielen.</p>
+
+                        <h2>Die Event-Hierarchie bei Schema.org</h2>
+
+                        <p>Das Schema.org-Datenmodell kennt einen Basis-Typ <strong>Event</strong> und eine Vielzahl von spezialisierten Sub-Typen. Alle Sub-Typen erben sämtliche Properties des übergeordneten Event-Typs und können zusätzliche eigene Properties haben.</p>
+
+                        <p>Hier eine Übersicht aller relevanten Event-Sub-Typen:</p>
+
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Schema-Typ</th>
+                                    <th>Einsatzbereich</th>
+                                    <th>Beispiele</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td><code>Event</code></td><td>Basis-Typ für alle Veranstaltungen</td><td>Stadtfeste, Messen, Konferenzen</td></tr>
+                                <tr><td><code>MusicEvent</code></td><td>Musikveranstaltungen</td><td>Konzerte, Festivals, DJ-Abende</td></tr>
+                                <tr><td><code>SportsEvent</code></td><td>Sportveranstaltungen</td><td>Fußballspiele, Marathons, Tennis-Turniere</td></tr>
+                                <tr><td><code>FoodEvent</code></td><td>Kulinarische Events</td><td>Kochkurse, Weinverkostungen, Food-Festivals</td></tr>
+                                <tr><td><code>TheaterEvent</code></td><td>Theater, Oper, Tanz</td><td>Theaterstücke, Ballett, Musicals</td></tr>
+                                <tr><td><code>EducationEvent</code></td><td>Bildungsveranstaltungen</td><td>Workshops, Webinare, Seminare</td></tr>
+                                <tr><td><code>BusinessEvent</code></td><td>Business-Events</td><td>Konferenzen, Messen, Networking</td></tr>
+                                <tr><td><code>SaleEvent</code></td><td>Verkaufsaktionen</td><td>Black Friday, Sale-Events, Outlet-Tage</td></tr>
+                                <tr><td><code>ScreeningEvent</code></td><td>Film-/Video-Vorführungen</td><td>Filmfestivals, Kinopremieren, Open-Air-Kinos</td></tr>
+                                <tr><td><code>ExhibitionEvent</code></td><td>Ausstellungen</td><td>Kunstausstellungen, Messen, Galerien</td></tr>
+                                <tr><td><code>Festival</code></td><td>Mehrtägige Festivals</td><td>Musikfestivals, Kulturfestivals</td></tr>
+                                <tr><td><code>ComedyEvent</code></td><td>Comedy-Veranstaltungen</td><td>Stand-up-Comedy, Kabarett</td></tr>
+                                <tr><td><code>DanceEvent</code></td><td>Tanzveranstaltungen</td><td>Tanzabende, Ballroom-Events</td></tr>
+                                <tr><td><code>LiteraryEvent</code></td><td>Literarische Events</td><td>Buchpräsentationen, Lesungen, Slam-Poetry</td></tr>
+                            </tbody>
+                        </table>
+
+                        <h2>Basis-Event-Schema: Die Pflicht-Properties</h2>
+
+                        <p>Bevor wir uns in die Sub-Typen vertiefen: Diese Properties braucht Google für Event Rich Results:</p>
+
+                        <ul>
+                            <li><strong>name</strong> — Pflicht: Name der Veranstaltung</li>
+                            <li><strong>startDate</strong> — Pflicht: Datum und Uhrzeit im ISO-8601-Format</li>
+                            <li><strong>location</strong> — Pflicht für Präsenz-Events: Veranstaltungsort</li>
+                            <li><strong>eventAttendanceMode</strong> — Pflicht: Präsenz, Online oder beides</li>
+                            <li><strong>eventStatus</strong> — Pflicht: geplant, abgesagt, verschoben etc.</li>
+                        </ul>
+
+                        <p>Ein minimales Event-Schema sieht so aus:</p>
+
+                        <pre><code>{
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": "Berliner Stadtfest 2026",
+  "startDate": "2026-06-20T12:00:00+02:00",
+  "endDate": "2026-06-22T22:00:00+02:00",
+  "eventStatus": "https://schema.org/EventScheduled",
+  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+  "location": {
+    "@type": "Place",
+    "name": "Berliner Stadtmitte",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Unter den Linden 1",
+      "addressLocality": "Berlin",
+      "postalCode": "10117",
+      "addressCountry": "DE"
+    }
+  }
+}</code></pre>
+
+                        <h2>MusicEvent: Konzerte und Musikfestivals</h2>
+
+                        <p><strong>MusicEvent</strong> ist der meistgenutzte Event-Sub-Typ. Er wird für Konzerte, DJ-Sets, Musikfestivals und Tourneen verwendet. Besonders wichtig für Ticket-Plattformen und Veranstaltungsseiten.</p>
+
+                        <p>Empfohlene zusätzliche Properties für MusicEvent:</p>
+                        <ul>
+                            <li><strong>performer</strong> — Musiker, Bands oder DJs (als <code>MusicGroup</code> oder <code>Person</code>)</li>
+                            <li><strong>inLanguage</strong> — Sprache der Veranstaltung</li>
+                            <li><strong>isAccessibleForFree</strong> — kostenlos oder kostenpflichtig</li>
+                        </ul>
+
+                        <pre><code>{
+  "@context": "https://schema.org",
+  "@type": "MusicEvent",
+  "name": "Rammstein Live in Berlin",
+  "startDate": "2026-07-15T20:00:00+02:00",
+  "endDate": "2026-07-15T23:00:00+02:00",
+  "eventStatus": "https://schema.org/EventScheduled",
+  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+  "location": {
+    "@type": "Place",
+    "name": "Olympiastadion Berlin",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Olympischer Platz 3",
+      "addressLocality": "Berlin",
+      "postalCode": "14053",
+      "addressCountry": "DE"
+    }
+  },
+  "performer": {
+    "@type": "MusicGroup",
+    "name": "Rammstein",
+    "url": "https://www.rammstein.de"
+  },
+  "offers": {
+    "@type": "Offer",
+    "url": "https://example.com/tickets/rammstein-berlin",
+    "price": "89.00",
+    "priceCurrency": "EUR",
+    "availability": "https://schema.org/InStock",
+    "validFrom": "2026-01-01T00:00:00+01:00"
+  },
+  "image": "https://example.com/images/rammstein-berlin-2026.jpg",
+  "description": "Rammstein auf ihrer Welttournee 2026 live im Olympiastadion Berlin — mit pyrotechnischer Bühnenshow."
+}</code></pre>
+
+                        <h2>SportsEvent: Sportveranstaltungen und Wettkämpfe</h2>
+
+                        <p><strong>SportsEvent</strong> eignet sich für alle Sportveranstaltungen: Bundesliga-Spiele, Marathons, Tennis-Turniere, Boxkämpfe. Wichtige zusätzliche Properties:</p>
+
+                        <ul>
+                            <li><strong>competitor</strong> — teilnehmende Sportler oder Teams (als <code>Person</code> oder <code>SportsTeam</code>)</li>
+                            <li><strong>sport</strong> — Sportart (als Text oder URL zu schema.org)</li>
+                            <li><strong>homeTeam</strong> / <strong>awayTeam</strong> — für Mannschaftssportarten</li>
+                        </ul>
+
+                        <pre><code>{
+  "@context": "https://schema.org",
+  "@type": "SportsEvent",
+  "name": "FC Bayern München vs. Borussia Dortmund",
+  "startDate": "2026-04-25T15:30:00+02:00",
+  "eventStatus": "https://schema.org/EventScheduled",
+  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+  "sport": "Fußball",
+  "homeTeam": {
+    "@type": "SportsTeam",
+    "name": "FC Bayern München",
+    "url": "https://fcbayern.com"
+  },
+  "awayTeam": {
+    "@type": "SportsTeam",
+    "name": "Borussia Dortmund",
+    "url": "https://bvb.de"
+  },
+  "location": {
+    "@type": "Place",
+    "name": "Allianz Arena",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Werner-Heisenberg-Allee 25",
+      "addressLocality": "München",
+      "postalCode": "80939",
+      "addressCountry": "DE"
+    }
+  },
+  "offers": {
+    "@type": "Offer",
+    "url": "https://fcbayern.com/tickets",
+    "price": "45.00",
+    "priceCurrency": "EUR",
+    "availability": "https://schema.org/SoldOut"
+  }
+}</code></pre>
+
+                        <h2>FoodEvent: Kochkurse, Weinverkostungen, Food-Festivals</h2>
+
+                        <p><strong>FoodEvent</strong> ist ideal für Kochkurse, Weinproben, Dinnerveranstaltungen und kulinarische Festivals. Gerade für Restaurants, die Events anbieten, ist dieser Sub-Typ hochrelevant.</p>
+
+                        <p>Spezifische Eigenschaften für FoodEvent:</p>
+                        <ul>
+                            <li><strong>organizer</strong> — Veranstalter (Restaurant, Winzer, Kochschule)</li>
+                            <li><strong>maximumAttendeeCapacity</strong> — maximale Teilnehmerzahl</li>
+                            <li><strong>remainingAttendeeCapacity</strong> — noch verfügbare Plätze</li>
+                        </ul>
+
+                        <pre><code>{
+  "@context": "https://schema.org",
+  "@type": "FoodEvent",
+  "name": "Toskanische Weinverkostung mit Abendessen",
+  "startDate": "2026-05-10T18:30:00+02:00",
+  "endDate": "2026-05-10T22:00:00+02:00",
+  "eventStatus": "https://schema.org/EventScheduled",
+  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+  "description": "Entdecke 6 toskanische Weine mit passendem Drei-Gänge-Menü — geführt von Weinexperte Giovanni Rossi.",
+  "maximumAttendeeCapacity": 20,
+  "remainingAttendeeCapacity": 7,
+  "organizer": {
+    "@type": "Organization",
+    "name": "Ristorante La Toscana",
+    "url": "https://latoscana-berlin.de"
+  },
+  "location": {
+    "@type": "Place",
+    "name": "Ristorante La Toscana",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Gendarmenmarkt 5",
+      "addressLocality": "Berlin",
+      "postalCode": "10117",
+      "addressCountry": "DE"
+    }
+  },
+  "offers": {
+    "@type": "Offer",
+    "url": "https://latoscana-berlin.de/weinabend-buchung",
+    "price": "79.00",
+    "priceCurrency": "EUR",
+    "availability": "https://schema.org/LimitedAvailability"
+  }
+}</code></pre>
+
+                        <h2>TheaterEvent: Theater, Oper, Musical, Ballett</h2>
+
+                        <p><strong>TheaterEvent</strong> deckt alle darstellenden Künste ab: Theater, Oper, Musical, Ballett, Tanz. Neben den Basis-Properties sind besonders Schauspieler-Angaben über <code>actor</code> und Regisseur-Angaben über <code>director</code> relevant.</p>
+
+                        <pre><code>{
+  "@context": "https://schema.org",
+  "@type": "TheaterEvent",
+  "name": "Der Revisor — Komödie von Gogol",
+  "startDate": "2026-05-20T19:30:00+02:00",
+  "endDate": "2026-05-20T22:00:00+02:00",
+  "eventStatus": "https://schema.org/EventScheduled",
+  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+  "inLanguage": "de",
+  "location": {
+    "@type": "PerformingArtsTheater",
+    "name": "Deutsches Theater Berlin",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Schumannstraße 13a",
+      "addressLocality": "Berlin",
+      "postalCode": "10117",
+      "addressCountry": "DE"
+    }
+  },
+  "performer": [
+    {
+      "@type": "Person",
+      "name": "Max Mustermann",
+      "jobTitle": "Schauspieler"
+    }
+  ],
+  "director": {
+    "@type": "Person",
+    "name": "Maria Musterfrau"
+  },
+  "offers": {
+    "@type": "Offer",
+    "url": "https://deutschestheater.de/karten",
+    "price": "35.00",
+    "priceCurrency": "EUR",
+    "availability": "https://schema.org/InStock"
+  }
+}</code></pre>
+
+                        <h2>EducationEvent und BusinessEvent</h2>
+
+                        <h3>EducationEvent: Workshops und Webinare</h3>
+
+                        <p><strong>EducationEvent</strong> eignet sich für Bildungsveranstaltungen aller Art. Besonders wichtig: Webinare als <strong>Online-Events</strong> mit <code>eventAttendanceMode: OnlineEventAttendanceMode</code> und <code>location: VirtualLocation</code>.</p>
+
+                        <pre><code>{
+  "@context": "https://schema.org",
+  "@type": "EducationEvent",
+  "name": "SEO für Einsteiger: Webinar 2026",
+  "startDate": "2026-05-05T10:00:00+02:00",
+  "endDate": "2026-05-05T12:00:00+02:00",
+  "eventStatus": "https://schema.org/EventScheduled",
+  "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+  "location": {
+    "@type": "VirtualLocation",
+    "url": "https://shift07.ai/webinar-seo-einsteiger"
+  },
+  "organizer": {
+    "@type": "Organization",
+    "name": "Shift07",
+    "url": "https://shift07.ai"
+  },
+  "offers": {
+    "@type": "Offer",
+    "url": "https://shift07.ai/webinar-anmeldung",
+    "price": "0",
+    "priceCurrency": "EUR",
+    "availability": "https://schema.org/InStock"
+  },
+  "isAccessibleForFree": true
+}</code></pre>
+
+                        <h3>BusinessEvent: Konferenzen und Networking</h3>
+
+                        <p><strong>BusinessEvent</strong> ist für Messen, Konferenzen, Networking-Events und Business-Treffen. Für hybride Events (Präsenz + Online) nutze <code>MixedEventAttendanceMode</code>:</p>
+
+                        <pre><code>{
+  "@context": "https://schema.org",
+  "@type": "BusinessEvent",
+  "name": "Shift07 SEO Summit 2026",
+  "startDate": "2026-09-15T09:00:00+02:00",
+  "endDate": "2026-09-16T18:00:00+02:00",
+  "eventStatus": "https://schema.org/EventScheduled",
+  "eventAttendanceMode": "https://schema.org/MixedEventAttendanceMode",
+  "location": [
+    {
+      "@type": "Place",
+      "name": "Berlin Congress Center",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Berlin",
+        "addressCountry": "DE"
+      }
+    },
+    {
+      "@type": "VirtualLocation",
+      "url": "https://shift07.ai/summit-live"
+    }
+  ],
+  "offers": [
+    {
+      "@type": "Offer",
+      "name": "Präsenz-Ticket",
+      "price": "299.00",
+      "priceCurrency": "EUR"
+    },
+    {
+      "@type": "Offer",
+      "name": "Online-Ticket",
+      "price": "99.00",
+      "priceCurrency": "EUR"
+    }
+  ]
+}</code></pre>
+
+                        <h2>eventStatus: Abgesagt, verschoben, verlegt</h2>
+
+                        <p>Das <code>eventStatus</code> Property ist entscheidend — besonders wenn Events sich ändern. Google zeigt den Status direkt in Rich Results an. Mögliche Werte:</p>
+
+                        <ul>
+                            <li><code>https://schema.org/EventScheduled</code> — geplant (Standard)</li>
+                            <li><code>https://schema.org/EventCancelled</code> — abgesagt</li>
+                            <li><code>https://schema.org/EventPostponed</code> — verschoben (neues Datum noch unbekannt)</li>
+                            <li><code>https://schema.org/EventRescheduled</code> — auf neues Datum verschoben (neues Datum bekannt, <code>previousStartDate</code> angeben)</li>
+                            <li><code>https://schema.org/EventMovedOnline</code> — von Präsenz auf Online verschoben</li>
+                        </ul>
+
+                        <h2>Ticket-Preise und Verfügbarkeit richtig auszeichnen</h2>
+
+                        <p>Das <code>offers</code> Property mit dem Typ <code>Offer</code> steuert, wie Google Preise und Verfügbarkeit anzeigt. Wichtige <code>availability</code>-Werte:</p>
+
+                        <ul>
+                            <li><code>https://schema.org/InStock</code> — verfügbar</li>
+                            <li><code>https://schema.org/SoldOut</code> — ausverkauft</li>
+                            <li><code>https://schema.org/LimitedAvailability</code> — begrenzte Verfügbarkeit</li>
+                            <li><code>https://schema.org/PreOrder</code> — Vorverkauf</li>
+                        </ul>
+
+                        <p>Bei kostenlosen Veranstaltungen: <code>"price": "0"</code> setzen und <code>"isAccessibleForFree": true</code> hinzufügen.</p>
+
+                        <h2>Wiederkehrende Events: EventSeries</h2>
+
+                        <p>Für regelmäßig stattfindende Events (z.B. wöchentliche Kurse) gibt es den <strong>EventSeries</strong>-Typ. Einzelne Termine sind dann Instances der Serie:</p>
+
+                        <pre><code>{
+  "@context": "https://schema.org",
+  "@type": "EventSeries",
+  "name": "Wöchentlicher Yoga-Kurs",
+  "url": "https://yogastudio-berlin.de/kurse/yoga-dienstag",
+  "startDate": "2026-01-07",
+  "endDate": "2026-12-17",
+  "description": "Jeden Dienstag Yoga für alle Level — Anfänger bis Fortgeschrittene."
+}</code></pre>
+
+                        <h2>Best Practices für Event Schema Markup</h2>
+
+                        <p>Damit Google deine Event Rich Results aktiviert, beachte diese Punkte:</p>
+
+                        <ul>
+                            <li><strong>Genauigkeit:</strong> Nutze immer <code>@type</code> so spezifisch wie möglich — MusicEvent statt Event für Konzerte.</li>
+                            <li><strong>ISO 8601 Datumsformat:</strong> <code>2026-06-20T20:00:00+02:00</code> (mit Zeitzone!) — niemals nur <code>2026-06-20</code>.</li>
+                            <li><strong>Bilder:</strong> Mindestens 1 Bild mit mindestens 720px Breite und Seitenverhältnis 1:1, 4:3 oder 16:9.</li>
+                            <li><strong>Ticket-URL:</strong> Immer eine direkte Booking-URL im <code>offers</code>-Objekt angeben.</li>
+                            <li><strong>Vollständigkeit:</strong> Je mehr Properties du ausfüllst, desto reichhaltiger werden deine Rich Results.</li>
+                            <li><strong>Konsistenz:</strong> Alle im Schema angegebenen Daten müssen auf der sichtbaren Seite sichtbar sein — keine versteckten Schema-Informationen.</li>
+                        </ul>
+
+                        <h2>Validation und Testen</h2>
+
+                        <p>Nach der Implementierung immer validieren. Nutze den <a href="/tools/json-ld-structured-data-validator.html">JSON-LD Structured Data Validator</a> für eine schnelle Prüfung, und danach Googles eigenes Rich Results Test Tool für die finale Bestätigung.</p>
+
+                        <p>Lies auch unseren Basis-Artikel zu <a href="/blog/event-schema-markup-seo.html">Event Schema Markup</a> für den Einstieg sowie unsere <a href="/blog/strukturierte-daten-seo-schema-markup.html">vollständige Einführung in Strukturierte Daten</a>. Den passenden Event Schema Generator findest du unter unseren <a href="/tools/event-schema-generator.html">kostenlosen SEO-Tools</a>.</p>
+
+                        <h2>Fazit: Event Sub-Typen maximieren deine Rich Results</h2>
+
+                        <p>Der Unterschied zwischen <code>Event</code> und <code>MusicEvent</code> mag klein erscheinen — für Google ist er bedeutsam. Spezifische Sub-Typen liefern mehr semantischen Kontext, ermöglichen präzisere Rich Results und helfen Google, deine Veranstaltung in den richtigen Suchkontexten zu zeigen.</p>
+
+                        <p>Investiere in sauberes Event Schema Markup: Es ist eine der direktesten Wege zu mehr Sichtbarkeit in der Google-Suche — mit Datum, Preis und Ticketlink direkt in den Suchergebnissen.</p>
+
+                    </div>
+
+                    <!-- Share / Back -->
+                    <div class="mt-12 pt-8 border-t border-white/10 flex items-center justify-between">
+                        <a href="/blog/" class="text-blue-400 hover:text-blue-300 flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+                            Zurück zum Blog
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Sidebar -->
+                <aside class="lg:w-1/3 space-y-8">
+                    <!-- CTA Box -->
+                    <div class="bg-gradient-to-br from-blue-600/20 to-indigo-600/20 border border-blue-500/30 rounded-2xl p-6 text-center">
+                        <h3 class="text-lg font-bold text-white mb-3">Kostenlose SEO-Analyse</h3>
+                        <p class="text-gray-400 text-sm mb-5">Finde heraus, welche Schema-Markup-Chancen auf deiner Website noch ungenutzt sind.</p>
+                        <a href="/" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-6 py-3 rounded-lg font-medium transition-all inline-block w-full">Jetzt testen</a>
+                    </div>
+
+                    <!-- Related Articles -->
+                    <div class="bg-slate-800/50 border border-white/10 rounded-2xl p-6">
+                        <h3 class="text-lg font-bold text-white mb-4">Verwandte Artikel</h3>
+                        <div class="space-y-4">
+                            <a href="/blog/event-schema-markup-seo.html" class="block group">
+                                <p class="text-sm text-gray-300 group-hover:text-blue-400 transition-colors font-medium">Event Schema Markup: Veranstaltungen als Rich Snippets in Google</p>
+                                <p class="text-xs text-gray-500 mt-1">Schema Markup Basis</p>
+                            </a>
+                            <a href="/blog/strukturierte-daten-seo-schema-markup.html" class="block group">
+                                <p class="text-sm text-gray-300 group-hover:text-blue-400 transition-colors font-medium">Strukturierte Daten für SEO: Schema Markup einfach erklärt</p>
+                                <p class="text-xs text-gray-500 mt-1">Schema Markup Grundlagen</p>
+                            </a>
+                            <a href="/blog/localbusiness-schema-markup-anleitung.html" class="block group">
+                                <p class="text-sm text-gray-300 group-hover:text-blue-400 transition-colors font-medium">LocalBusiness Schema Markup: Vollständige Anleitung 2026</p>
+                                <p class="text-xs text-gray-500 mt-1">Schema Markup</p>
+                            </a>
+                            <a href="/blog/speakable-property-schema-markup.html" class="block group">
+                                <p class="text-sm text-gray-300 group-hover:text-blue-400 transition-colors font-medium">speakable Property: Schema Markup für Sprachassistenten</p>
+                                <p class="text-xs text-gray-500 mt-1">Schema Markup</p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Tools -->
+                    <div class="bg-slate-800/50 border border-white/10 rounded-2xl p-6">
+                        <h3 class="text-lg font-bold text-white mb-4">Passende Tools</h3>
+                        <div class="space-y-4">
+                            <a href="/tools/event-schema-generator.html" class="block group">
+                                <p class="text-sm text-gray-300 group-hover:text-blue-400 transition-colors font-medium">Event Schema Generator</p>
+                                <p class="text-xs text-gray-500 mt-1">JSON-LD für Veranstaltungen erstellen</p>
+                            </a>
+                            <a href="/tools/json-ld-structured-data-validator.html" class="block group">
+                                <p class="text-sm text-gray-300 group-hover:text-blue-400 transition-colors font-medium">JSON-LD Structured Data Validator</p>
+                                <p class="text-xs text-gray-500 mt-1">Schema Markup prüfen</p>
+                            </a>
+                        </div>
+                    </div>
+                </aside>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer CTA -->
+    <section class="py-16 px-4 bg-gradient-to-r from-blue-900/30 to-indigo-900/30 border-t border-b border-white/5">
+        <div class="max-w-3xl mx-auto text-center">
+            <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">Teste deine Website jetzt kostenlos</h2>
+            <p class="text-gray-400 mb-8">Erhalte eine vollständige SEO-Analyse mit konkreten Verbesserungsvorschlägen.</p>
+            <form action="/" method="get" class="flex flex-col sm:flex-row gap-3 max-w-xl mx-auto">
+                <input type="url" placeholder="https://deine-website.de" class="flex-1 bg-slate-800 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-blue-500">
+                <a href="/" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-8 py-3 rounded-lg font-medium transition-all whitespace-nowrap">Analyse starten</a>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/10 bg-slate-900/50 py-12 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="flex items-center gap-2">
+                    <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                    <span class="text-lg font-bold text-white">Shift07</span>
+                </div>
+                <div class="flex items-center space-x-6 text-sm text-gray-400">
+                    <a href="/impressum.html" class="hover:text-white transition-colors">Impressum</a>
+                    <a href="/datenschutz.html" class="hover:text-white transition-colors">Datenschutz</a>
+                    <a href="/agb.html" class="hover:text-white transition-colors">AGB</a>
+                </div>
+                <p class="text-sm text-gray-500">&copy; 2026 Thümmler AI GmbH</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
