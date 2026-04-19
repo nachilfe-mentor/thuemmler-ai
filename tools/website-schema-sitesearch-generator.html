@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K1S1RXBDS8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K1S1RXBDS8');
+    </script>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8475857002943858" crossorigin="anonymous"></script>
+    <title>WebSite Schema & SiteSearch Generator – JSON-LD kostenlos erstellen | Shift07</title>
+    <meta name="description" content="Erstelle kostenlos das WebSite Schema Markup mit SiteSearch-Aktion (SearchAction) für die Sitelinks Searchbox in Google. JSON-LD direkt kopieren und einbinden.">
+    <meta name="keywords" content="website schema generator, sitesearch json-ld, searchaction schema, sitelinks searchbox, website markup generator">
+    <meta name="author" content="Thümmler AI GmbH">
+    <link rel="icon" type="image/png" href="/logo.png">
+    <link rel="canonical" href="https://shift07.ai/tools/website-schema-sitesearch-generator.html">
+    <!-- Open Graph -->
+    <meta property="og:title" content="WebSite Schema & SiteSearch Generator – JSON-LD kostenlos erstellen">
+    <meta property="og:description" content="Erstelle kostenlos das WebSite Schema Markup mit SiteSearch-Aktion für die Sitelinks Searchbox in Google. JSON-LD direkt kopieren.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://shift07.ai/tools/website-schema-sitesearch-generator.html">
+    <meta property="og:image" content="https://shift07.ai/tools/images/website-schema-sitesearch-generator.png">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="Shift07">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="WebSite Schema & SiteSearch Generator">
+    <meta name="twitter:description" content="WebSite JSON-LD mit SearchAction kostenlos generieren — für Sitelinks Searchbox in Google.">
+    <meta name="twitter:image" content="https://shift07.ai/tools/images/website-schema-sitesearch-generator.png">
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "WebSite Schema & SiteSearch Generator",
+      "description": "Erstelle kostenlos das WebSite Schema Markup mit SiteSearch-Aktion für die Sitelinks Searchbox in Google.",
+      "url": "https://shift07.ai/tools/website-schema-sitesearch-generator.html",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR"
+      },
+      "provider": {
+        "@type": "Organization",
+        "name": "Thümmler AI GmbH",
+        "url": "https://shift07.ai"
+      }
+    }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: { extend: { fontFamily: { 'inter': ['Inter', 'system-ui', '-apple-system', 'sans-serif'] } } }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: rgba(15,23,42,0.5); }
+        ::-webkit-scrollbar-thumb { background: rgba(59,130,246,0.5); border-radius: 4px; }
+        .output-box { font-family: 'Courier New', Courier, monospace; font-size: 0.85rem; }
+    </style>
+</head>
+<body class="bg-slate-900 text-white min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-slate-900/80 backdrop-blur-xl border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <a href="/" class="flex items-center gap-2">
+                    <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                    <span class="text-xl font-bold text-white">Shift07</span>
+                </a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="/" class="text-gray-300 hover:text-white transition-colors">SEO-Tool</a>
+                    <a href="/blog/" class="text-gray-300 hover:text-white transition-colors">Blog</a>
+                    <a href="/tools/" class="text-white font-medium border-b-2 border-blue-500 pb-0.5">Tools</a>
+                    <a href="/app/#/login" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-5 py-2 rounded-lg font-medium transition-all">Anmelden</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-gray-300 hover:text-white">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900/95 border-b border-white/10">
+            <div class="px-4 py-3 space-y-2">
+                <a href="/" class="block py-2 text-gray-300 hover:text-white">SEO-Tool</a>
+                <a href="/blog/" class="block py-2 text-gray-300 hover:text-white">Blog</a>
+                <a href="/tools/" class="block py-2 text-white font-medium">Tools</a>
+                <a href="/app/#/login" class="block py-2 text-blue-400 hover:text-blue-300">Anmelden</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="pt-24 pb-10 px-4">
+        <div class="max-w-4xl mx-auto text-center">
+            <span class="inline-block text-sm font-semibold px-4 py-1.5 bg-blue-500/20 text-blue-400 rounded-full mb-4">Schema Markup Generator</span>
+            <h1 class="text-3xl md:text-5xl font-extrabold text-white leading-tight mb-4">WebSite Schema &amp; SiteSearch Generator</h1>
+            <p class="text-lg text-gray-400 max-w-2xl mx-auto">Erstelle kostenlos das <strong class="text-white">WebSite JSON-LD</strong> mit optionaler <strong class="text-white">SearchAction</strong> für die Google Sitelinks Searchbox — einfach Felder ausfüllen, Code kopieren.</p>
+        </div>
+    </section>
+
+    <!-- Tool -->
+    <section class="pb-16 px-4">
+        <div class="max-w-4xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+                <!-- Input -->
+                <div class="space-y-6">
+                    <div class="bg-slate-800/60 border border-white/10 rounded-2xl p-6">
+                        <h2 class="text-lg font-bold text-white mb-5">Website-Daten</h2>
+
+                        <div class="space-y-4">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-300 mb-1">Website-URL <span class="text-red-400">*</span></label>
+                                <input type="url" id="websiteUrl" placeholder="https://deine-domain.de" class="w-full bg-slate-700/50 border border-white/10 rounded-lg px-4 py-2.5 text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 text-sm">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-300 mb-1">Website-Name <span class="text-red-400">*</span></label>
+                                <input type="text" id="websiteName" placeholder="Meine Website" class="w-full bg-slate-700/50 border border-white/10 rounded-lg px-4 py-2.5 text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 text-sm">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-300 mb-1">Alternative Namen (kommagetrennt)</label>
+                                <input type="text" id="alternateNames" placeholder="Mein Blog, meinewebsite.de" class="w-full bg-slate-700/50 border border-white/10 rounded-lg px-4 py-2.5 text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 text-sm">
+                                <p class="text-xs text-gray-500 mt-1">Wird als <code class="text-blue-400">alternateName</code> eingetragen — hilfreich für Google-Markenkennung.</p>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-300 mb-1">Beschreibung</label>
+                                <textarea id="websiteDesc" rows="2" placeholder="Kurze Beschreibung der Website..." class="w-full bg-slate-700/50 border border-white/10 rounded-lg px-4 py-2.5 text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 text-sm resize-none"></textarea>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-300 mb-1">Publisher / Betreiber (Name)</label>
+                                <input type="text" id="publisherName" placeholder="Mustermann GmbH" class="w-full bg-slate-700/50 border border-white/10 rounded-lg px-4 py-2.5 text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 text-sm">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-300 mb-1">Publisher-Logo URL</label>
+                                <input type="url" id="publisherLogo" placeholder="https://deine-domain.de/logo.png" class="w-full bg-slate-700/50 border border-white/10 rounded-lg px-4 py-2.5 text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 text-sm">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-300 mb-1">Sprache der Website</label>
+                                <select id="inLanguage" class="w-full bg-slate-700/50 border border-white/10 rounded-lg px-4 py-2.5 text-white focus:outline-none focus:border-blue-500 text-sm">
+                                    <option value="de">Deutsch (de)</option>
+                                    <option value="en">Englisch (en)</option>
+                                    <option value="fr">Französisch (fr)</option>
+                                    <option value="es">Spanisch (es)</option>
+                                    <option value="it">Italienisch (it)</option>
+                                    <option value="nl">Niederländisch (nl)</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SearchAction -->
+                    <div class="bg-slate-800/60 border border-white/10 rounded-2xl p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <h2 class="text-lg font-bold text-white">SiteSearch-Aktion (Searchbox)</h2>
+                            <label class="relative inline-flex items-center cursor-pointer">
+                                <input type="checkbox" id="enableSearch" class="sr-only peer" checked>
+                                <div class="w-11 h-6 bg-slate-600 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600"></div>
+                            </label>
+                        </div>
+                        <div id="searchOptions" class="space-y-4">
+                            <p class="text-xs text-gray-400">Aktiviert die Sitelinks Searchbox in Google: Nutzer können direkt aus den Suchergebnissen auf deiner Website suchen.</p>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-300 mb-1">Such-URL-Vorlage <span class="text-red-400">*</span></label>
+                                <input type="text" id="searchUrl" placeholder="https://deine-domain.de/?s={search_term_string}" class="w-full bg-slate-700/50 border border-white/10 rounded-lg px-4 py-2.5 text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 text-sm">
+                                <p class="text-xs text-gray-500 mt-1">Ersetze den Suchbegriff-Platzhalter durch <code class="text-blue-400">{search_term_string}</code>. Für WordPress oft <code class="text-blue-400">/?s=</code>.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button onclick="generateSchema()" class="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-6 py-3 rounded-xl font-semibold transition-all text-sm">
+                        JSON-LD generieren
+                    </button>
+                </div>
+
+                <!-- Output -->
+                <div class="space-y-6">
+                    <div class="bg-slate-800/60 border border-white/10 rounded-2xl p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <h2 class="text-lg font-bold text-white">Generiertes JSON-LD</h2>
+                            <button onclick="copyResult()" id="copyBtn" class="flex items-center gap-2 text-sm bg-slate-700 hover:bg-slate-600 text-white px-3 py-1.5 rounded-lg transition-all">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                                Kopieren
+                            </button>
+                        </div>
+                        <textarea id="result" readonly rows="22" class="output-box w-full bg-slate-900/80 border border-white/10 rounded-xl p-4 text-green-400 focus:outline-none resize-none" placeholder="Klicke auf 'JSON-LD generieren'..."></textarea>
+                    </div>
+
+                    <!-- Validation hint -->
+                    <div id="validationHint" class="hidden bg-green-900/20 border border-green-500/30 rounded-xl p-4">
+                        <p class="text-green-400 text-sm font-medium mb-1">✓ Schema generiert</p>
+                        <p class="text-green-300/70 text-xs">Binde den Code im <code>&lt;head&gt;</code>-Bereich deiner Website ein und teste ihn mit dem <a href="https://search.google.com/test/rich-results" target="_blank" rel="noopener" class="underline hover:text-green-200">Google Rich Results Test</a>.</p>
+                    </div>
+
+                    <!-- Embedding hint -->
+                    <div class="bg-slate-800/60 border border-white/10 rounded-2xl p-5">
+                        <h3 class="text-sm font-bold text-white mb-2">Einbinden</h3>
+                        <p class="text-xs text-gray-400 mb-3">Füge das generierte JSON-LD in den <code class="text-blue-400">&lt;head&gt;</code>-Bereich deiner Homepage ein:</p>
+                        <pre class="text-xs text-gray-300 bg-slate-900/60 rounded-lg p-3 overflow-x-auto"><code>&lt;script type="application/ld+json"&gt;
+  { ... dein generierter Code ... }
+&lt;/script&gt;</code></pre>
+                        <p class="text-xs text-gray-500 mt-3">Das WebSite-Markup sollte <strong>nur auf der Startseite</strong> eingebaut werden, nicht auf Unterseiten.</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Info Box -->
+            <div class="mt-8 bg-blue-900/20 border border-blue-500/20 rounded-2xl p-6">
+                <h2 class="text-base font-bold text-white mb-3">Was macht das WebSite Schema Markup?</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm text-gray-400">
+                    <div>
+                        <p class="text-blue-400 font-semibold mb-1">Markenkennung stärken</p>
+                        <p>Google erkennt deinen Website-Namen, alternative Bezeichnungen und den Betreiber — wichtig für den Knowledge Graph.</p>
+                    </div>
+                    <div>
+                        <p class="text-blue-400 font-semibold mb-1">Sitelinks Searchbox aktivieren</p>
+                        <p>Mit SearchAction kannst du Google deine interne Suche mitteilen. Nutzer suchen dann direkt aus Google auf deiner Website.</p>
+                    </div>
+                    <div>
+                        <p class="text-blue-400 font-semibold mb-1">E-E-A-T Signal senden</p>
+                        <p>Publisher-Name und Logo stärken das Vertrauenssignal — wichtig für YMYL-Seiten (Gesundheit, Finanzen, News).</p>
+                    </div>
+                </div>
+                <p class="text-xs text-gray-500 mt-4">Mehr Details: <a href="/blog/webpage-website-schema-markup-seo.html" class="text-blue-400 hover:text-blue-300 underline">WebPage und WebSite Schema Markup vollständig erklärt</a></p>
+            </div>
+
+            <!-- Related Tools -->
+            <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4">
+                <a href="/tools/organization-schema-generator.html" class="bg-slate-800/50 border border-white/10 rounded-xl p-4 hover:border-blue-500/50 transition-all">
+                    <p class="text-sm font-semibold text-white mb-1">Organization Schema Generator</p>
+                    <p class="text-xs text-gray-400">Unternehmensdaten als JSON-LD</p>
+                </a>
+                <a href="/tools/json-ld-structured-data-validator.html" class="bg-slate-800/50 border border-white/10 rounded-xl p-4 hover:border-blue-500/50 transition-all">
+                    <p class="text-sm font-semibold text-white mb-1">JSON-LD Validator</p>
+                    <p class="text-xs text-gray-400">Schema Markup kostenlos prüfen</p>
+                </a>
+                <a href="/tools/schema-markup-generator.html" class="bg-slate-800/50 border border-white/10 rounded-xl p-4 hover:border-blue-500/50 transition-all">
+                    <p class="text-sm font-semibold text-white mb-1">LocalBusiness Schema Generator</p>
+                    <p class="text-xs text-gray-400">Für lokale Unternehmen</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/10 bg-slate-900/50 py-12 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="flex items-center gap-2">
+                    <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                    <span class="text-lg font-bold text-white">Shift07</span>
+                </div>
+                <div class="flex items-center space-x-6 text-sm text-gray-400">
+                    <a href="/impressum.html" class="hover:text-white transition-colors">Impressum</a>
+                    <a href="/datenschutz.html" class="hover:text-white transition-colors">Datenschutz</a>
+                    <a href="/agb.html" class="hover:text-white transition-colors">AGB</a>
+                </div>
+                <p class="text-sm text-gray-500">&copy; 2026 Thümmler AI GmbH</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        document.getElementById('enableSearch').addEventListener('change', function() {
+            document.getElementById('searchOptions').style.opacity = this.checked ? '1' : '0.4';
+            document.getElementById('searchOptions').style.pointerEvents = this.checked ? 'auto' : 'none';
+        });
+
+        function generateSchema() {
+            const url = document.getElementById('websiteUrl').value.trim();
+            const name = document.getElementById('websiteName').value.trim();
+            const altNamesRaw = document.getElementById('alternateNames').value.trim();
+            const desc = document.getElementById('websiteDesc').value.trim();
+            const publisherName = document.getElementById('publisherName').value.trim();
+            const publisherLogo = document.getElementById('publisherLogo').value.trim();
+            const lang = document.getElementById('inLanguage').value;
+            const enableSearch = document.getElementById('enableSearch').checked;
+            const searchUrl = document.getElementById('searchUrl').value.trim();
+
+            if (!url || !name) {
+                alert('Bitte fülle mindestens URL und Name aus.');
+                return;
+            }
+
+            const schema = {
+                "@context": "https://schema.org",
+                "@type": "WebSite",
+                "url": url,
+                "name": name,
+                "inLanguage": lang
+            };
+
+            if (desc) schema.description = desc;
+
+            if (altNamesRaw) {
+                const alts = altNamesRaw.split(',').map(s => s.trim()).filter(Boolean);
+                if (alts.length === 1) {
+                    schema.alternateName = alts[0];
+                } else if (alts.length > 1) {
+                    schema.alternateName = alts;
+                }
+            }
+
+            if (publisherName) {
+                const pub = {
+                    "@type": "Organization",
+                    "name": publisherName,
+                    "url": url
+                };
+                if (publisherLogo) {
+                    pub.logo = {
+                        "@type": "ImageObject",
+                        "url": publisherLogo
+                    };
+                }
+                schema.publisher = pub;
+            }
+
+            if (enableSearch && searchUrl) {
+                schema.potentialAction = {
+                    "@type": "SearchAction",
+                    "target": {
+                        "@type": "EntryPoint",
+                        "urlTemplate": searchUrl
+                    },
+                    "query-input": "required name=search_term_string"
+                };
+            }
+
+            const json = JSON.stringify(schema, null, 2);
+            const output = `<script type="application/ld+json">\n${json}\n<\/script>`;
+            document.getElementById('result').value = output;
+            document.getElementById('validationHint').classList.remove('hidden');
+        }
+
+        function copyResult() {
+            const text = document.getElementById('result').value;
+            if (!text) return;
+            navigator.clipboard.writeText(text).then(() => {
+                const btn = document.getElementById('copyBtn');
+                btn.textContent = '✓ Kopiert!';
+                btn.classList.add('bg-green-700');
+                setTimeout(() => {
+                    btn.innerHTML = '<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg> Kopieren';
+                    btn.classList.remove('bg-green-700');
+                }, 2000);
+            });
+        }
+
+        // Auto-fill search URL when website URL changes
+        document.getElementById('websiteUrl').addEventListener('blur', function() {
+            const url = this.value.trim();
+            if (url && !document.getElementById('searchUrl').value) {
+                document.getElementById('searchUrl').value = url.replace(/\/$/, '') + '/?s={search_term_string}';
+            }
+        });
+
+        // Generate on page load with defaults
+        window.addEventListener('load', function() {
+            document.getElementById('websiteUrl').value = '';
+            document.getElementById('websiteName').value = '';
+        });
+    </script>
+</body>
+</html>
