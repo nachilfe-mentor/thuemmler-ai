@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Sun, 19 Apr 2026 03:03:18 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 19 Apr 2026 03:06:38 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Event Schema Markup vertieft: MusicEvent, SportsEvent, FoodEvent und alle Sub-Typen</title>
+      <link>https://shift07.ai/blog/event-schema-markup-vertieft.html</link>
+      <guid>https://shift07.ai/blog/event-schema-markup-vertieft.html</guid>
+      <pubDate>Sun, 19 Apr 2026 03:06:16 +0000</pubDate>
+      <description>Event Schema vertieft: MusicEvent, SportsEvent, FoodEvent, TheaterEvent und alle Sub-Typen erklärt. Mit JSON-LD-Beispielen und Best Practices für Rich Results.</description>
+      <category>Schema Markup</category>
+    </item>
     <item>
       <title>speakable Property: Schema Markup für Sprachassistenten (Google Assistant, Alexa)</title>
       <link>https://shift07.ai/blog/speakable-property-schema-markup.html</link>
@@ -159,14 +167,6 @@
       <guid>https://shift07.ai/blog/faqpage-schema-markup-seo.html</guid>
       <pubDate>Thu, 16 Apr 2026 02:27:02 +0000</pubDate>
       <description>FAQPage Schema Markup richtig implementieren: So aktivierst du FAQ Rich Snippets in den SERPs, mehr Platz in Google belegst und die CTR deutlich steigerst — mit vollständigen JSON-LD-Beispielen.</description>
-      <category>Tech-SEO</category>
-    </item>
-    <item>
-      <title>BreadcrumbList Schema Markup: Breadcrumb Rich Snippets für SEO</title>
-      <link>https://shift07.ai/blog/breadcrumblist-schema-markup-seo.html</link>
-      <guid>https://shift07.ai/blog/breadcrumblist-schema-markup-seo.html</guid>
-      <pubDate>Thu, 16 Apr 2026 02:23:58 +0000</pubDate>
-      <description>BreadcrumbList Schema Markup richtig einsetzen: So aktivierst du Breadcrumb Rich Snippets in Google, verbesserst die CTR und hilfst Google beim Verstehen deiner Seitenstruktur.</description>
       <category>Tech-SEO</category>
     </item>
   </channel>
