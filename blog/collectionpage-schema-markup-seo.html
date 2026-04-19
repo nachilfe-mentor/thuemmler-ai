@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CollectionPage Schema Markup: Kategorieseiten und Sammlungen für Google optimieren | Shift07 Blog</title>
+    <meta name="description" content="CollectionPage Schema Markup erklärt: Wie du Kategorieseiten, Archivseiten und Inhaltssammlungen mit JSON-LD für Google strukturierst und semantisch beschreibst.">
+    <meta name="author" content="Thümmler AI GmbH">
+    <link rel="icon" type="image/png" href="/logo.png">
+    <link rel="canonical" href="https://shift07.ai/blog/collectionpage-schema-markup-seo.html">
+    <link rel="alternate" type="application/rss+xml" title="Shift07 Blog" href="https://shift07.ai/feed.xml">
+    <!-- Open Graph -->
+    <meta property="og:title" content="CollectionPage Schema Markup: Kategorieseiten und Sammlungen für Google optimieren | Shift07 Blog">
+    <meta property="og:description" content="CollectionPage Schema Markup erklärt: Wie du Kategorieseiten, Archivseiten und Inhaltssammlungen mit JSON-LD für Google strukturierst und semantisch beschreibst.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://shift07.ai/blog/collectionpage-schema-markup-seo.html">
+    <meta property="og:image" content="https://shift07.ai/blog/images/collectionpage-schema-markup-seo.png">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="Shift07">
+    <meta property="article:published_time" content="2026-04-19T10:00:00+02:00">
+    <meta property="article:section" content="Schema Markup">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="CollectionPage Schema Markup: Kategorieseiten für Google optimieren">
+    <meta name="twitter:description" content="CollectionPage Schema Markup erklärt: Kategorieseiten, Archivseiten und Sammlungen mit JSON-LD strukturieren.">
+    <meta name="twitter:image" content="https://shift07.ai/blog/images/collectionpage-schema-markup-seo.png">
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "CollectionPage Schema Markup: Kategorieseiten und Sammlungen für Google optimieren",
+      "description": "CollectionPage Schema Markup erklärt: Wie du Kategorieseiten, Archivseiten und Inhaltssammlungen mit JSON-LD für Google strukturierst und semantisch beschreibst.",
+      "image": "https://shift07.ai/blog/images/collectionpage-schema-markup-seo.png",
+      "datePublished": "2026-04-19T10:00:00+02:00",
+      "dateModified": "2026-04-19T10:00:00+02:00",
+      "author": {
+        "@type": "Organization",
+        "name": "Shift07",
+        "url": "https://shift07.ai"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Shift07",
+        "url": "https://shift07.ai",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://shift07.ai/assets/logo.png"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://shift07.ai/blog/collectionpage-schema-markup-seo.html"
+      }
+    }
+    </script>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K1S1RXBDS8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K1S1RXBDS8');
+    </script>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8475857002943858" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: { extend: { fontFamily: { 'inter': ['Inter', 'system-ui', '-apple-system', 'sans-serif'] } } }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: rgba(15, 23, 42, 0.5); }
+        ::-webkit-scrollbar-thumb { background: rgba(59, 130, 246, 0.5); border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: rgba(59, 130, 246, 0.7); }
+        html { scroll-behavior: smooth; }
+        .article-content h2 { font-size: 1.5rem; font-weight: 700; color: #fff; margin-top: 2.5rem; margin-bottom: 1rem; }
+        .article-content h3 { font-size: 1.25rem; font-weight: 600; color: #e2e8f0; margin-top: 2rem; margin-bottom: 0.75rem; }
+        .article-content p { color: #cbd5e1; line-height: 1.8; margin-bottom: 1.25rem; }
+        .article-content ul, .article-content ol { color: #cbd5e1; margin-bottom: 1.25rem; padding-left: 1.5rem; }
+        .article-content li { margin-bottom: 0.5rem; line-height: 1.7; }
+        .article-content ul li { list-style-type: disc; }
+        .article-content ol li { list-style-type: decimal; }
+        .article-content a { color: #60a5fa; text-decoration: underline; text-underline-offset: 2px; }
+        .article-content a:hover { color: #93bbfc; }
+        .article-content blockquote { border-left: 4px solid #3b82f6; padding-left: 1.25rem; margin: 1.5rem 0; color: #94a3b8; font-style: italic; }
+        .article-content code { background: rgba(59, 130, 246, 0.15); color: #93c5fd; padding: 0.15rem 0.4rem; border-radius: 0.25rem; font-size: 0.9em; }
+        .article-content pre { background: rgba(15, 23, 42, 0.8); border: 1px solid rgba(255,255,255,0.1); border-radius: 0.75rem; padding: 1.25rem; overflow-x: auto; margin-bottom: 1.5rem; }
+        .article-content pre code { background: none; padding: 0; color: #e2e8f0; }
+        .article-content strong { color: #f1f5f9; }
+    </style>
+</head>
+<body class="bg-slate-900 text-white min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-slate-900/80 backdrop-blur-xl border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <a href="/" class="flex items-center gap-2">
+                    <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                    <span class="text-xl font-bold text-white">Shift07</span>
+                </a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="/" class="text-gray-300 hover:text-white transition-colors">SEO-Tool</a>
+                    <a href="/blog/" class="text-white font-medium border-b-2 border-blue-500 pb-0.5">Blog</a>
+                    <a href="/tools/" class="text-gray-300 hover:text-white transition-colors">Tools</a>
+                    <a href="/app/#/login" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-5 py-2 rounded-lg font-medium transition-all">Anmelden</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-gray-300 hover:text-white">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900/95 border-b border-white/10">
+            <div class="px-4 py-3 space-y-2">
+                <a href="/" class="block py-2 text-gray-300 hover:text-white">SEO-Tool</a>
+                <a href="/blog/" class="block py-2 text-white font-medium">Blog</a>
+                <a href="/tools/" class="block py-2 text-gray-300 hover:text-white">Tools</a>
+                <a href="/app/#/login" class="block py-2 text-blue-400 hover:text-blue-300">Anmelden</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="pt-16 relative">
+        <div class="h-[400px] bg-gradient-to-br from-indigo-600 via-purple-700 to-blue-800 relative overflow-hidden">
+            <div class="absolute inset-0 bg-black/40"></div>
+            <img src="/blog/images/collectionpage-schema-markup-seo.png" alt="CollectionPage Schema Markup für SEO" class="absolute inset-0 w-full h-full object-cover mix-blend-overlay opacity-40">
+            <div class="absolute inset-0 flex items-center justify-center">
+                <div class="text-center px-4 max-w-4xl">
+                    <span class="inline-block text-sm font-semibold px-4 py-1.5 bg-white/10 text-white/90 rounded-full mb-6">Schema Markup</span>
+                    <h1 class="text-3xl md:text-5xl font-extrabold text-white leading-tight">CollectionPage Schema Markup: Kategorieseiten und Sammlungen für Google optimieren</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Article Content -->
+    <section class="py-12 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col lg:flex-row gap-12">
+
+                <!-- Main Content -->
+                <article class="lg:w-2/3">
+                    <div class="flex flex-wrap items-center gap-4 text-sm text-gray-400 mb-10 pb-6 border-b border-white/10">
+                        <div class="flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+                            Shift07 Team
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                            19. April 2026
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                            11 Min. Lesezeit
+                        </div>
+                        <span class="text-xs font-semibold px-3 py-1 bg-indigo-500/20 text-indigo-400 rounded-full">Schema Markup</span>
+                    </div>
+
+                    <div class="article-content">
+
+                        <p>Jede gut strukturierte Website hat Seiten, die keine eigenen Inhalte präsentieren, sondern eine <strong>Sammlung anderer Seiten</strong> darstellen: Blog-Kategorieseiten, Archivseiten, Themensammlungen oder Produktkatalog-Übersichten. Für genau diese Seitentypen bietet Schema.org den Typ <strong>CollectionPage</strong> — ein spezialisierter Untertyp von WebPage, der Google semantisch mitteilt: "Diese Seite ist eine Sammlung, kein einzelner Inhalt."</p>
+
+                        <p>In diesem Artikel erkläre ich, was CollectionPage ist, wann du es einsetzen solltest, welche Properties es gibt und wie du es korrekt in JSON-LD implementierst. Außerdem grenzen wir CollectionPage von verwandten Typen wie <code>ItemList</code> und <code>SearchResultsPage</code> ab.</p>
+
+                        <h2>Was ist CollectionPage?</h2>
+
+                        <p><code>CollectionPage</code> ist in der Schema.org-Hierarchie ein Untertyp von <code>WebPage</code> → <code>CreativeWork</code> → <code>Thing</code>. Es beschreibt eine Webseite, die Inhalte <em>sammelt</em> und präsentiert — im Gegensatz zu einer <code>ArticlePage</code>, die einen einzelnen Inhalt darstellt.</p>
+
+                        <p>Schema.org definiert CollectionPage als:</p>
+
+                        <blockquote>"A page presenting information about or related to a collection of other webpages and/or internet entities."</blockquote>
+
+                        <p>Es gibt zwei direkte Untertypen, die in der Praxis häufig relevant sind:</p>
+
+                        <ul>
+                            <li><strong>AboutPage:</strong> Seiten, die Informationen über eine Organisation oder Person zusammenfassen ("Über uns")</li>
+                            <li><strong>ProfilePage:</strong> Profilseiten von Nutzern oder Autoren</li>
+                            <li><strong>MediaGallery:</strong> Für Bilder- oder Video-Galerien</li>
+                        </ul>
+
+                        <p>Für den SEO-Alltag interessiert uns vor allem der Basistypus <code>CollectionPage</code> selbst — für Kategorieseiten, Archivseiten und thematische Übersichtsseiten.</p>
+
+                        <h2>Wann sollte ich CollectionPage verwenden?</h2>
+
+                        <h3>Geeignete Seitentypen</h3>
+
+                        <ul>
+                            <li><strong>Blog-Kategorieseiten:</strong> Die Übersichtsseite aller Artikel zum Thema "SEO" oder "Performance"</li>
+                            <li><strong>Tag-Seiten:</strong> Alle Artikel mit dem Tag "#meta-tags"</li>
+                            <li><strong>Archivseiten:</strong> Alle Artikel aus dem Monat April 2026</li>
+                            <li><strong>Autoren-Archivseiten:</strong> Alle Artikel von Autorin "Lena Müller"</li>
+                            <li><strong>Thematische Sammlungen:</strong> Eine manuelle Zusammenstellung von Artikeln zu einem Thema</li>
+                            <li><strong>Produktkatalog-Kategorien:</strong> Alle Produkte der Kategorie "Notebooks"</li>
+                        </ul>
+
+                        <h3>Nicht geeignet für</h3>
+
+                        <ul>
+                            <li>Einzelne Artikel oder Blogposts → <code>Article</code> oder <code>BlogPosting</code></li>
+                            <li>Suchergebnis-Seiten (interne Suche) → <code>SearchResultsPage</code></li>
+                            <li>Hauptnavigation/Homepage → <code>WebSite</code></li>
+                            <li>Geordnete Listen mit Ranking-Charakter → <code>ItemList</code> (kann parallel verwendet werden)</li>
+                        </ul>
+
+                        <h2>CollectionPage vs. ItemList: Was ist der Unterschied?</h2>
+
+                        <p>Das ist eine häufige Frage, denn beide Typen beschreiben Seiten mit mehreren Einträgen. Der Unterschied liegt in der Semantik:</p>
+
+                        <ul>
+                            <li><strong>CollectionPage</strong> beschreibt den <em>Seitentyp</em>: Es ist eine Sammlungsseite. Es sagt nichts über die Reihenfolge oder Rangfolge aus.</li>
+                            <li><strong>ItemList</strong> beschreibt eine <em>geordnete oder ungeordnete Liste von Elementen</em> und ermöglicht Google, Carousels zu generieren. Es ist primär für Rich-Result-Zwecke gedacht.</li>
+                        </ul>
+
+                        <p>Die gute Nachricht: Beide Typen können und sollten auf derselben Seite kombiniert werden. <code>CollectionPage</code> markiert den Seitentyp, <code>ItemList</code> liefert die strukturierten Daten für Rich Results. Das nennt sich in Schema.org eine "Dual-Typing"-Strategie: Du nutzt mehrere <code>@type</code>-Werte oder zwei separate JSON-LD-Blöcke.</p>
+
+                        <h2>Die Grundstruktur von CollectionPage</h2>
+
+                        <pre><code>{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "SEO-Grundlagen – alle Artikel",
+  "description": "Übersicht aller Shift07-Artikel zum Thema SEO-Grundlagen: Keyword-Recherche, On-Page-Optimierung, technisches SEO und mehr.",
+  "url": "https://shift07.ai/blog/kategorie/seo-grundlagen/",
+  "inLanguage": "de",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Shift07",
+    "url": "https://shift07.ai"
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Start",
+        "item": "https://shift07.ai"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Blog",
+        "item": "https://shift07.ai/blog/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "SEO-Grundlagen",
+        "item": "https://shift07.ai/blog/kategorie/seo-grundlagen/"
+      }
+    ]
+  }
+}</code></pre>
+
+                        <h3>Wichtige Properties</h3>
+
+                        <ul>
+                            <li><strong>@type:</strong> <code>"CollectionPage"</code> (oder als Array: <code>["CollectionPage", "ItemList"]</code> für Dual-Typing)</li>
+                            <li><strong>name:</strong> Titel der Sammlungsseite</li>
+                            <li><strong>description:</strong> Beschreibung, was diese Sammlung enthält</li>
+                            <li><strong>url:</strong> Kanonische URL der Kategorie-/Archivseite</li>
+                            <li><strong>inLanguage:</strong> Sprache der Seite (ISO 639-1, z. B. "de")</li>
+                            <li><strong>isPartOf:</strong> Verweis auf die übergeordnete Website oder Sektion</li>
+                            <li><strong>breadcrumb:</strong> Navigation als BreadcrumbList eingebettet</li>
+                            <li><strong>about:</strong> Thema der Sammlung als Objekt (z. B. <code>{"@type": "Thing", "name": "Schema Markup"}</code>)</li>
+                            <li><strong>hasPart:</strong> Liste der enthaltenen Seiten (Array von WebPage-Objekten)</li>
+                            <li><strong>numberOfItems:</strong> Anzahl der Elemente in der Sammlung</li>
+                        </ul>
+
+                        <h2>Vollständiges Beispiel: Blog-Kategorie mit Dual-Typing</h2>
+
+                        <p>Hier das vollständige JSON-LD für eine Blog-Kategorieseite, die sowohl den Seitentyp (<code>CollectionPage</code>) als auch eine strukturierte Listenansicht (<code>ItemList</code>) kombiniert:</p>
+
+                        <pre><code>[
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Schema Markup – alle Artikel",
+    "description": "Vollständige Übersicht aller Artikel zum Thema Schema Markup und strukturierte Daten auf Shift07.",
+    "url": "https://shift07.ai/blog/",
+    "inLanguage": "de",
+    "about": {
+      "@type": "Thing",
+      "name": "Schema Markup",
+      "sameAs": "https://schema.org/"
+    },
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "Shift07",
+      "url": "https://shift07.ai"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Start",
+          "item": "https://shift07.ai"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://shift07.ai/blog/"
+        }
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Schema Markup Artikel",
+    "numberOfItems": 5,
+    "itemListOrder": "https://schema.org/ItemListOrderDescending",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "ItemList Schema Markup",
+        "url": "https://shift07.ai/blog/itemlist-schema-markup-seo.html"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "FAQ Schema Markup vertieft",
+        "url": "https://shift07.ai/blog/faq-schema-markup-vertieft.html"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "WebPage und WebSite Schema Markup",
+        "url": "https://shift07.ai/blog/webpage-website-schema-markup-seo.html"
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "name": "HowTo Schema Markup",
+        "url": "https://shift07.ai/blog/howto-schema-markup-seo.html"
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "name": "BreadcrumbList Schema Markup",
+        "url": "https://shift07.ai/blog/breadcrumblist-schema-markup-seo.html"
+      }
+    ]
+  }
+]</code></pre>
+
+                        <p>Das sind zwei separate JSON-LD-Blöcke auf derselben Seite — oder alternativ ein einziger Block mit einem Array als Wert für <code>@type</code>. Beide Ansätze sind von Google akzeptiert.</p>
+
+                        <h2>CollectionPage für E-Commerce: Produktkategorie</h2>
+
+                        <p>Shop-Betreiber können CollectionPage auf Produktkategorie-Übersichtsseiten einsetzen. Das Signal an Google: Diese Seite ist keine Produktseite, sondern eine kuratierte Sammlung von Produkten in einer bestimmten Kategorie.</p>
+
+                        <pre><code>{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "SEO-Software – Kostenlose Tools",
+  "description": "Alle kostenlosen SEO-Tools von Shift07 für technische Analyse, Keyword-Recherche und Schema Markup.",
+  "url": "https://shift07.ai/tools/",
+  "inLanguage": "de",
+  "numberOfItems": 55,
+  "about": {
+    "@type": "Thing",
+    "name": "SEO-Tools"
+  },
+  "hasPart": [
+    {
+      "@type": "WebPage",
+      "name": "SSL-Zertifikat-Checker",
+      "url": "https://shift07.ai/tools/ssl-zertifikat-checker.html"
+    },
+    {
+      "@type": "WebPage",
+      "name": "Title-Tag-Längen-Checker",
+      "url": "https://shift07.ai/tools/title-tag-laengen-checker.html"
+    },
+    {
+      "@type": "WebPage",
+      "name": "JSON-LD Validator",
+      "url": "https://shift07.ai/tools/json-ld-structured-data-validator.html"
+    }
+  ]
+}</code></pre>
+
+                        <p>Das <code>hasPart</code>-Property ist der semantische Hinweis, dass diese Seite andere Seiten "enthält" — sie ist der Container. Das ergänzt das <code>isPartOf</code>-Property der Unterseiten, die auf die Kategorieseite verweisen sollten.</p>
+
+                        <h2>CollectionPage und das Parent-Child-Prinzip</h2>
+
+                        <p>Das Schönste an CollectionPage im Schema.org-Kontext ist, wie es die hierarchische Struktur einer Website abbildet. Die bidirektionale Verlinkung zwischen Kategorieseite und Unterseiten ist semantisch bedeutsam:</p>
+
+                        <ul>
+                            <li><strong>Auf der Kategorieseite:</strong> <code>CollectionPage</code> mit <code>hasPart: [WebPage, WebPage, ...]</code></li>
+                            <li><strong>Auf jeder Unterseite:</strong> <code>Article</code> mit <code>isPartOf: CollectionPage-URL</code></li>
+                        </ul>
+
+                        <p>Das erzeugt ein vollständiges semantisches Netz: Google versteht, welche Artikel zur Kategorie gehören, ohne ausschließlich auf interne Links angewiesen zu sein. Für größere Websites — etwa mit tausenden Produktseiten — kann das die Crawl-Effizienz verbessern, weil Google den Kontext schneller versteht.</p>
+
+                        <h2>MediaGallery: Der Untertyp für Bild- und Videosammlungen</h2>
+
+                        <p><code>MediaGallery</code> ist ein direkter Untertyp von <code>CollectionPage</code> und für Seiten geeignet, die hauptsächlich visuelle Medien sammeln. Es gibt zwei weitere Untertypen:</p>
+
+                        <ul>
+                            <li><strong>ImageGallery:</strong> Für reine Bildersammlungen (Portfolio-Seiten, Fotografie-Websites)</li>
+                            <li><strong>VideoGallery:</strong> Für Video-Sammlungsseiten (Kanalseiten, Playlist-Übersichten)</li>
+                        </ul>
+
+                        <pre><code>{
+  "@context": "https://schema.org",
+  "@type": "ImageGallery",
+  "name": "Portfolio – Webdesign Projekte",
+  "description": "Übersicht aller realisierten Webdesign-Projekte von Müller Web.",
+  "url": "https://muellerwebdesign.de/portfolio/",
+  "numberOfItems": 24
+}</code></pre>
+
+                        <p>Fotografen, Videografen und Kreativagenturen profitieren hier besonders, da Google Bildergalerien mit diesem Markup besser kontextualisieren kann.</p>
+
+                        <h2>Häufige Fehler bei der Implementierung</h2>
+
+                        <h3>Fehler 1: CollectionPage auf Artikel-Seiten einsetzen</h3>
+
+                        <p>CollectionPage ist für Sammlungen — nicht für einzelne Inhalte. Einen Blog-Artikel mit <code>@type: "CollectionPage"</code> zu markieren ist semantisch falsch und verwirrend für Google. Verwende dort <code>Article</code>, <code>BlogPosting</code> oder <code>TechArticle</code>.</p>
+
+                        <h3>Fehler 2: Auf paginierten Seiten vergessen</h3>
+
+                        <p>Wenn deine Kategorie mehrere Seiten hat (Seite 1, 2, 3...), sollte jede paginierte Seite CollectionPage-Markup tragen — aber mit der jeweils kanonischen URL der Seite und dem <code>name</code>-Attribut angepasst (z. B. "SEO-Artikel – Seite 2"). Zusätzlich empfehlen sich <code>rel="prev"</code>/<code>rel="next"</code>-HTML-Attribute für die Paginierungsstruktur.</p>
+
+                        <h3>Fehler 3: hasPart zu groß machen</h3>
+
+                        <p>Bei Kategorien mit 200+ Artikeln macht es keinen Sinn, alle Artikel im <code>hasPart</code>-Array aufzulisten. Das bläht das JSON-LD unnötig auf. Liste lieber die 10–20 wichtigsten oder neuesten Artikel auf — oder verzichte ganz auf hasPart und nutze stattdessen ItemList für die Carousel-Funktion.</p>
+
+                        <h3>Fehler 4: Kein Breadcrumb auf Kategorieseiten</h3>
+
+                        <p>Kategorieseiten ohne <a href="/blog/breadcrumblist-schema-markup-seo.html">BreadcrumbList Schema Markup</a> verschenken einen wichtigen Rich-Result-Typen. Kombiniere CollectionPage immer mit einem eingebetteten Breadcrumb — das ist für Kategorieseiten besonders wertvoll, da Google den Navigationspfad direkt in den SERPs anzeigen kann.</p>
+
+                        <h2>CollectionPage und Crawl-Budget-Effizienz</h2>
+
+                        <p>Für größere Websites ist die semantische Hierarchie aus CollectionPage + isPartOf/hasPart nicht nur für Rich Results interessant, sondern auch für das <a href="/blog/crawl-budget-optimieren.html">Crawl-Budget</a>: Wenn Google die Struktur deiner Website über strukturierte Daten versteht, kann der Googlebot effizienter crawlen. Statt alle Links blind zu folgen, versteht er die Bedeutung der Seiten im Kontext — Kategorieseiten sind Hubs, Artikelseiten sind Blätter.</p>
+
+                        <p>Das ist besonders relevant für:</p>
+
+                        <ul>
+                            <li>Online-Shops mit tausenden Produktseiten</li>
+                            <li>Nachrichtenportale mit täglich hunderten neuen Artikeln</li>
+                            <li>Wissensdatenbanken mit tiefer Kategorienstruktur</li>
+                        </ul>
+
+                        <h2>Implementierungsreihenfolge: Welche Seiten zuerst?</h2>
+
+                        <p>Wenn du CollectionPage in eine bestehende Website integrierst, empfehle ich folgende Reihenfolge:</p>
+
+                        <ol>
+                            <li><strong>Hauptkategorieseiten zuerst:</strong> Die wichtigsten Kategorien haben das höchste Traffic-Potenzial und profitieren am stärksten von Breadcrumb Rich Results.</li>
+                            <li><strong>Tags und Autor-Archivseiten:</strong> Falls diese Seiten SEO-Relevanz haben (nicht noindex), lohnt sich CollectionPage auch dort.</li>
+                            <li><strong>Paginierte Seiten:</strong> Seite 2, 3 etc. der Kategorien — nur wenn sie nicht noindex sind.</li>
+                            <li><strong>Mediengalerien:</strong> Portfolio- und Galerie-Seiten mit ImageGallery oder VideoGallery.</li>
+                        </ol>
+
+                        <h2>Testing und Validierung</h2>
+
+                        <p>CollectionPage generiert keine eigenständigen Rich Results wie FAQ oder HowTo. Der Wert liegt in:</p>
+
+                        <ul>
+                            <li>Korrekter semantischer Klassifizierung für Googles KI</li>
+                            <li>Besseren Breadcrumb Rich Results (durch eingebettetes BreadcrumbList)</li>
+                            <li>Vorbereitung für Carousel Rich Results (durch Kombination mit ItemList)</li>
+                        </ul>
+
+                        <p>Teste dein Markup mit:</p>
+
+                        <ul>
+                            <li>Googles Rich Results Test (prüft Breadcrumbs als Rich Result)</li>
+                            <li>Schema.org Validator (prüft die korrekte Syntax)</li>
+                            <li>Unserer <a href="/tools/json-ld-structured-data-validator.html">kostenlosen JSON-LD-Validierung</a></li>
+                        </ul>
+
+                        <p>In der Google Search Console siehst du unter "Verbesserungen → Breadcrumbs", ob Google das Breadcrumb-Markup der Kategorieseiten korrekt interpretiert.</p>
+
+                        <h2>Fazit</h2>
+
+                        <p><code>CollectionPage</code> ist kein "Highlight-Markup" für sofortige Rich Results — es ist ein semantisches Fundament, das Google hilft, die Struktur deiner Website zu verstehen. In Kombination mit <a href="/blog/itemlist-schema-markup-seo.html">ItemList für Carousels</a> und <a href="/blog/breadcrumblist-schema-markup-seo.html">BreadcrumbList für Navigation</a> entsteht eine vollständige semantische Hierarchie, die sowohl die Sichtbarkeit als auch die Crawl-Effizienz verbessert.</p>
+
+                        <p>Besonders für Websites mit vielen Inhalten und komplexer Kategorienstruktur ist CollectionPage einer der wichtigsten, aber am häufigsten übersehenen Schema-Typen. Starte mit deinen meistbesuchten Kategorieseiten und arbeite dich durch die Hierarchie — der Aufwand ist gering, der semantische Gewinn ist langfristig erheblich. Nutze unsere <a href="/tools/json-ld-structured-data-validator.html">kostenlose JSON-LD-Prüfung</a>, um dein Markup sofort zu validieren.</p>
+
+                    </div>
+
+                    <div class="mt-12 pt-8 border-t border-white/10 flex items-center justify-between">
+                        <a href="/blog/" class="text-blue-400 hover:text-blue-300 flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+                            Zurück zum Blog
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Sidebar -->
+                <aside class="lg:w-1/3 space-y-8">
+                    <div class="bg-gradient-to-br from-blue-600/20 to-indigo-600/20 border border-blue-500/30 rounded-2xl p-6 text-center">
+                        <h3 class="text-lg font-bold text-white mb-3">Kostenlose SEO-Analyse</h3>
+                        <p class="text-gray-400 text-sm mb-5">Finde heraus, wie gut deine Website für Suchmaschinen optimiert ist.</p>
+                        <a href="/" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-6 py-3 rounded-lg font-medium transition-all inline-block w-full">Jetzt testen</a>
+                    </div>
+
+                    <div class="bg-slate-800/50 border border-white/10 rounded-2xl p-6">
+                        <h3 class="text-lg font-bold text-white mb-4">Schema Markup Artikel</h3>
+                        <div class="space-y-4">
+                            <a href="/blog/itemlist-schema-markup-seo.html" class="block group">
+                                <p class="text-sm text-gray-300 group-hover:text-blue-400 transition-colors font-medium">ItemList Schema Markup für Carousels</p>
+                            </a>
+                            <a href="/blog/breadcrumblist-schema-markup-seo.html" class="block group">
+                                <p class="text-sm text-gray-300 group-hover:text-blue-400 transition-colors font-medium">BreadcrumbList Schema Markup</p>
+                            </a>
+                            <a href="/blog/webpage-website-schema-markup-seo.html" class="block group">
+                                <p class="text-sm text-gray-300 group-hover:text-blue-400 transition-colors font-medium">WebPage und WebSite Schema Markup</p>
+                            </a>
+                            <a href="/blog/strukturierte-daten-seo-schema-markup.html" class="block group">
+                                <p class="text-sm text-gray-300 group-hover:text-blue-400 transition-colors font-medium">Strukturierte Daten für SEO: Übersicht</p>
+                            </a>
+                            <a href="/blog/crawl-budget-optimieren.html" class="block group">
+                                <p class="text-sm text-gray-300 group-hover:text-blue-400 transition-colors font-medium">Crawl-Budget optimieren</p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-800/50 border border-white/10 rounded-2xl p-6">
+                        <h3 class="text-lg font-bold text-white mb-4">SEO-Tools</h3>
+                        <div class="space-y-3">
+                            <a href="/tools/json-ld-structured-data-validator.html" class="block text-sm text-blue-400 hover:text-blue-300 transition-colors">→ JSON-LD Validator</a>
+                            <a href="/tools/website-schema-sitesearch-generator.html" class="block text-sm text-blue-400 hover:text-blue-300 transition-colors">→ WebSite Schema Generator</a>
+                            <a href="/tools/breadcrumb-schema-generator.html" class="block text-sm text-blue-400 hover:text-blue-300 transition-colors">→ Breadcrumb Schema Generator</a>
+                        </div>
+                    </div>
+                </aside>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer CTA -->
+    <section class="py-16 px-4 bg-gradient-to-r from-blue-900/30 to-indigo-900/30 border-t border-b border-white/5">
+        <div class="max-w-3xl mx-auto text-center">
+            <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">Teste deine Website jetzt kostenlos</h2>
+            <p class="text-gray-400 mb-8">Erhalte eine vollständige SEO-Analyse mit konkreten Verbesserungsvorschlägen.</p>
+            <a href="/" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-8 py-3 rounded-lg font-medium transition-all inline-block">Analyse starten</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/10 bg-slate-900/50 py-12 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="flex items-center gap-2">
+                    <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                    <span class="text-lg font-bold text-white">Shift07</span>
+                </div>
+                <div class="flex items-center space-x-6 text-sm text-gray-400">
+                    <a href="/impressum.html" class="hover:text-white transition-colors">Impressum</a>
+                    <a href="/datenschutz.html" class="hover:text-white transition-colors">Datenschutz</a>
+                    <a href="/agb.html" class="hover:text-white transition-colors">AGB</a>
+                </div>
+                <p class="text-sm text-gray-500">&copy; 2026 Thümmler AI GmbH</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
