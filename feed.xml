@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Sun, 19 Apr 2026 01:21:56 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 19 Apr 2026 01:25:16 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>CollectionPage Schema Markup: Kategorieseiten und Sammlungen für Google optimieren</title>
+      <link>https://shift07.ai/blog/collectionpage-schema-markup-seo.html</link>
+      <guid>https://shift07.ai/blog/collectionpage-schema-markup-seo.html</guid>
+      <pubDate>Sun, 19 Apr 2026 01:24:53 +0000</pubDate>
+      <description>CollectionPage Schema Markup erklärt: Wie du Kategorieseiten, Archivseiten und Inhaltssammlungen mit JSON-LD für Google strukturierst und semantisch beschreibst.</description>
+      <category>Schema Markup</category>
+    </item>
     <item>
       <title>ItemList Schema Markup: Listenformate und Sitelinks für Google optimieren</title>
       <link>https://shift07.ai/blog/itemlist-schema-markup-seo.html</link>
@@ -159,14 +167,6 @@
       <guid>https://shift07.ai/blog/article-schema-markup-seo.html</guid>
       <pubDate>Thu, 16 Apr 2026 00:46:39 +0000</pubDate>
       <description>Article Schema Markup richtig implementieren: NewsArticle vs. BlogPosting vs. Article — Unterschiede, vollständiges JSON-LD-Beispiel und Google-Anforderungen erklärt.</description>
-      <category>Tech-SEO</category>
-    </item>
-    <item>
-      <title>LocalBusiness Schema Markup: Vollständige Anleitung 2026</title>
-      <link>https://shift07.ai/blog/localbusiness-schema-markup-anleitung.html</link>
-      <guid>https://shift07.ai/blog/localbusiness-schema-markup-anleitung.html</guid>
-      <pubDate>Thu, 16 Apr 2026 00:43:24 +0000</pubDate>
-      <description>LocalBusiness Schema Markup richtig einsetzen: Alle Properties, JSON-LD-Beispiele, Sub-Typen und häufige Fehler — die vollständige Anleitung für lokale Unternehmen.</description>
       <category>Tech-SEO</category>
     </item>
   </channel>
