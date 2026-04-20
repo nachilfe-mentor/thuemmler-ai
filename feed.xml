@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Sun, 19 Apr 2026 04:48:07 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 20 Apr 2026 00:33:30 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>VideoObject Schema Markup vertieft: Key Moments, Clips, transcript und seekToAction</title>
+      <link>https://shift07.ai/blog/videoobject-schema-markup-vertieft.html</link>
+      <guid>https://shift07.ai/blog/videoobject-schema-markup-vertieft.html</guid>
+      <pubDate>Mon, 20 Apr 2026 00:33:04 +0000</pubDate>
+      <description>VideoObject Schema Markup für Fortgeschrittene: Key Moments mit hasPart und Clip, seekToAction, transcript Property und Video-Sitemap-Integration — mit vollständigen JSON-LD-Beispielen.</description>
+      <category>Structured Data</category>
+    </item>
     <item>
       <title>SpecialAnnouncement Schema Markup: Sonderankündigungen als Rich Results in Google</title>
       <link>https://shift07.ai/blog/specialannouncement-schema-markup-seo.html</link>
@@ -160,14 +168,6 @@
       <pubDate>Fri, 17 Apr 2026 00:05:54 +0000</pubDate>
       <description>Dynamic Rendering erklärt: Warum JavaScript-Websites für Googlebot unsichtbar sein können, wie Dynamic Rendering funktioniert und wann du es wirklich brauchst.</description>
       <category>Technisches SEO</category>
-    </item>
-    <item>
-      <title>Product Schema Markup: Produkte mit Rich Snippets in Google hervorheben</title>
-      <link>https://shift07.ai/blog/product-schema-markup-seo.html</link>
-      <guid>https://shift07.ai/blog/product-schema-markup-seo.html</guid>
-      <pubDate>Thu, 16 Apr 2026 04:18:07 +0000</pubDate>
-      <description>Product Schema Markup richtig einsetzen: Preis, Bewertungen und Verfügbarkeit als Rich Snippets in Google anzeigen. Vollständige JSON-LD-Anleitung für Online-Shops 2026.</description>
-      <category>Tech-SEO</category>
     </item>
   </channel>
 </rss>
