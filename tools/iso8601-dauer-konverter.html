@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K1S1RXBDS8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K1S1RXBDS8');
+    </script>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8475857002943858" crossorigin="anonymous"></script>
+    <title>ISO 8601 Dauer-Konverter – Video-Dauer für Schema Markup konvertieren | Shift07</title>
+    <meta name="description" content="Konvertiere Video-Laufzeiten (Minuten:Sekunden) in das ISO 8601-Format für VideoObject Schema Markup. Kostenlos, sofort, ohne Anmeldung.">
+    <meta name="keywords" content="ISO 8601 Dauer, VideoObject Schema, duration konvertieren, PT1M30S, Schema Markup, SEO">
+    <meta name="author" content="Thümmler AI GmbH">
+    <link rel="icon" type="image/png" href="/logo.png">
+    <link rel="canonical" href="https://shift07.ai/tools/iso8601-dauer-konverter.html">
+    <!-- Open Graph -->
+    <meta property="og:title" content="ISO 8601 Dauer-Konverter – Video-Dauer für Schema Markup konvertieren">
+    <meta property="og:description" content="Konvertiere Video-Laufzeiten in ISO 8601-Format für VideoObject Schema Markup. Kostenlos und sofort einsatzbereit.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://shift07.ai/tools/iso8601-dauer-konverter.html">
+    <meta property="og:image" content="https://shift07.ai/tools/images/iso8601-dauer-konverter.png">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="Shift07">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ISO 8601 Dauer-Konverter – Video-Dauer für Schema Markup">
+    <meta name="twitter:description" content="Konvertiere Video-Laufzeiten in ISO 8601-Format für VideoObject Schema Markup.">
+    <meta name="twitter:image" content="https://shift07.ai/tools/images/iso8601-dauer-konverter.png">
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "ISO 8601 Dauer-Konverter",
+      "description": "Konvertiere Video-Laufzeiten in das ISO 8601-Format für VideoObject Schema Markup. Kostenlos, sofort, ohne Anmeldung.",
+      "url": "https://shift07.ai/tools/iso8601-dauer-konverter.html",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR"
+      },
+      "provider": {
+        "@type": "Organization",
+        "name": "Thümmler AI GmbH",
+        "url": "https://shift07.ai"
+      }
+    }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { 'inter': ['Inter', 'system-ui', '-apple-system', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: rgba(15, 23, 42, 0.5); }
+        ::-webkit-scrollbar-thumb { background: rgba(59, 130, 246, 0.5); border-radius: 4px; }
+        html { scroll-behavior: smooth; }
+        .result-box { background: rgba(59, 130, 246, 0.1); border: 1px solid rgba(59, 130, 246, 0.3); }
+        .input-field { background: rgba(15, 23, 42, 0.8); border: 1px solid rgba(255,255,255,0.1); color: white; border-radius: 0.5rem; padding: 0.75rem 1rem; width: 100%; outline: none; transition: border-color 0.2s; }
+        .input-field:focus { border-color: rgba(59, 130, 246, 0.6); }
+        .input-field::placeholder { color: #6b7280; }
+        .copy-btn { transition: all 0.2s; }
+        .copy-btn:hover { transform: scale(1.02); }
+        .copy-btn.copied { background: linear-gradient(to right, #10b981, #059669) !important; }
+        input[type=number]::-webkit-inner-spin-button,
+        input[type=number]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
+        input[type=number] { -moz-appearance: textfield; }
+        .example-pill { cursor: pointer; transition: all 0.15s; }
+        .example-pill:hover { background: rgba(59, 130, 246, 0.3) !important; border-color: rgba(59, 130, 246, 0.6) !important; }
+    </style>
+</head>
+<body class="bg-slate-900 text-white min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-slate-900/80 backdrop-blur-xl border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <a href="/" class="flex items-center gap-2">
+                    <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                    <span class="text-xl font-bold text-white">Shift07</span>
+                </a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="/" class="text-gray-300 hover:text-white transition-colors">SEO-Tool</a>
+                    <a href="/blog/" class="text-gray-300 hover:text-white transition-colors">Blog</a>
+                    <a href="/tools/" class="text-white font-medium border-b-2 border-blue-500 pb-0.5">Tools</a>
+                    <a href="/app/#/login" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-5 py-2 rounded-lg font-medium transition-all">Anmelden</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-gray-300 hover:text-white">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900/95 border-b border-white/10">
+            <div class="px-4 py-3 space-y-2">
+                <a href="/" class="block py-2 text-gray-300 hover:text-white">SEO-Tool</a>
+                <a href="/blog/" class="block py-2 text-gray-300 hover:text-white">Blog</a>
+                <a href="/tools/" class="block py-2 text-white font-medium">Tools</a>
+                <a href="/app/#/login" class="block py-2 text-blue-400 hover:text-blue-300">Anmelden</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="pt-24 pb-10 px-4">
+        <div class="max-w-4xl mx-auto text-center">
+            <div class="inline-flex items-center gap-2 bg-blue-500/10 border border-blue-500/20 rounded-full px-4 py-1.5 text-sm text-blue-400 font-medium mb-6">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                Video SEO / Schema Markup
+            </div>
+            <h1 class="text-3xl md:text-5xl font-extrabold text-white mb-4 leading-tight">ISO 8601 Dauer-Konverter</h1>
+            <p class="text-lg text-gray-400 max-w-2xl mx-auto">Konvertiere Video-Laufzeiten in das ISO 8601-Format für <strong class="text-gray-300">VideoObject Schema Markup</strong>. Einfach Stunden, Minuten und Sekunden eingeben — fertig.</p>
+        </div>
+    </section>
+
+    <!-- Tool -->
+    <section class="pb-16 px-4">
+        <div class="max-w-4xl mx-auto">
+
+            <!-- Main Tool Card -->
+            <div class="bg-slate-800/60 border border-white/10 rounded-2xl p-6 md:p-8 mb-8">
+
+                <!-- Mode Tabs -->
+                <div class="flex rounded-xl bg-slate-900/60 p-1 mb-8 gap-1">
+                    <button onclick="setMode('to-iso')" id="tab-to-iso" class="flex-1 py-2.5 px-4 rounded-lg text-sm font-medium transition-all bg-blue-600 text-white">
+                        Zeit → ISO 8601
+                    </button>
+                    <button onclick="setMode('from-iso')" id="tab-from-iso" class="flex-1 py-2.5 px-4 rounded-lg text-sm font-medium transition-all text-gray-400 hover:text-white">
+                        ISO 8601 → Zeit
+                    </button>
+                    <button onclick="setMode('bulk')" id="tab-bulk" class="flex-1 py-2.5 px-4 rounded-lg text-sm font-medium transition-all text-gray-400 hover:text-white">
+                        Mehrere Videos
+                    </button>
+                </div>
+
+                <!-- Mode: Zeit → ISO 8601 -->
+                <div id="mode-to-iso">
+                    <h2 class="text-xl font-bold text-white mb-6">Video-Laufzeit eingeben</h2>
+
+                    <div class="grid grid-cols-3 gap-4 mb-6">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-400 mb-2">Stunden</label>
+                            <input type="number" id="hours" min="0" max="99" placeholder="0" class="input-field text-center text-2xl font-bold" oninput="convertToISO()">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-400 mb-2">Minuten</label>
+                            <input type="number" id="minutes" min="0" max="59" placeholder="0" class="input-field text-center text-2xl font-bold" oninput="convertToISO()">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-400 mb-2">Sekunden</label>
+                            <input type="number" id="seconds" min="0" max="59" placeholder="0" class="input-field text-center text-2xl font-bold" oninput="convertToISO()">
+                        </div>
+                    </div>
+
+                    <!-- Beispiele -->
+                    <div class="mb-6">
+                        <p class="text-xs text-gray-500 mb-2">Schnelleingabe:</p>
+                        <div class="flex flex-wrap gap-2">
+                            <button onclick="setTime(0,1,30)" class="example-pill text-xs px-3 py-1.5 bg-slate-700/50 border border-white/10 rounded-full text-gray-300">1:30</button>
+                            <button onclick="setTime(0,5,0)" class="example-pill text-xs px-3 py-1.5 bg-slate-700/50 border border-white/10 rounded-full text-gray-300">5:00</button>
+                            <button onclick="setTime(0,10,45)" class="example-pill text-xs px-3 py-1.5 bg-slate-700/50 border border-white/10 rounded-full text-gray-300">10:45</button>
+                            <button onclick="setTime(0,30,0)" class="example-pill text-xs px-3 py-1.5 bg-slate-700/50 border border-white/10 rounded-full text-gray-300">30:00</button>
+                            <button onclick="setTime(1,0,0)" class="example-pill text-xs px-3 py-1.5 bg-slate-700/50 border border-white/10 rounded-full text-gray-300">1:00:00</button>
+                            <button onclick="setTime(1,23,45)" class="example-pill text-xs px-3 py-1.5 bg-slate-700/50 border border-white/10 rounded-full text-gray-300">1:23:45</button>
+                        </div>
+                    </div>
+
+                    <!-- Ergebnis -->
+                    <div id="result-to-iso" class="result-box rounded-xl p-5 hidden">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-sm font-medium text-gray-400">ISO 8601 Dauer</span>
+                            <span id="human-readable" class="text-xs text-gray-500"></span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <code id="iso-output" class="flex-1 text-2xl font-bold text-blue-400 font-mono"></code>
+                            <button onclick="copyISO()" id="copy-iso-btn" class="copy-btn bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-4 py-2 rounded-lg text-sm font-medium flex items-center gap-2">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                                Kopieren
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- JSON-LD Preview -->
+                    <div id="jsonld-preview" class="mt-6 hidden">
+                        <div class="flex items-center justify-between mb-3">
+                            <h3 class="text-sm font-semibold text-gray-300">VideoObject Schema Markup (Vorschau)</h3>
+                            <button onclick="copyJSONLD()" id="copy-jsonld-btn" class="copy-btn text-xs bg-slate-700 hover:bg-slate-600 text-gray-300 px-3 py-1.5 rounded-lg flex items-center gap-1.5">
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                                Ganzes JSON kopieren
+                            </button>
+                        </div>
+                        <pre class="bg-slate-900/80 border border-white/10 rounded-xl p-4 overflow-x-auto text-sm"><code id="jsonld-output" class="text-gray-300"></code></pre>
+                    </div>
+                </div>
+
+                <!-- Mode: ISO 8601 → Zeit -->
+                <div id="mode-from-iso" class="hidden">
+                    <h2 class="text-xl font-bold text-white mb-6">ISO 8601-String auflösen</h2>
+
+                    <div class="mb-6">
+                        <label class="block text-sm font-medium text-gray-400 mb-2">ISO 8601 Dauer eingeben</label>
+                        <input type="text" id="iso-input" placeholder="z.B. PT1H23M45S oder PT5M30S" class="input-field text-lg font-mono" oninput="convertFromISO()">
+                        <p class="text-xs text-gray-500 mt-2">Beispiele: <code class="text-blue-400">PT30S</code> · <code class="text-blue-400">PT1M30S</code> · <code class="text-blue-400">PT10M</code> · <code class="text-blue-400">PT1H23M45S</code></p>
+                    </div>
+
+                    <div id="result-from-iso" class="result-box rounded-xl p-5 hidden">
+                        <div class="grid grid-cols-3 gap-4 text-center">
+                            <div>
+                                <div id="out-hours" class="text-3xl font-bold text-blue-400">0</div>
+                                <div class="text-xs text-gray-500 mt-1">Stunden</div>
+                            </div>
+                            <div>
+                                <div id="out-minutes" class="text-3xl font-bold text-blue-400">0</div>
+                                <div class="text-xs text-gray-500 mt-1">Minuten</div>
+                            </div>
+                            <div>
+                                <div id="out-seconds" class="text-3xl font-bold text-blue-400">0</div>
+                                <div class="text-xs text-gray-500 mt-1">Sekunden</div>
+                            </div>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-white/10 text-center">
+                            <span id="out-total" class="text-gray-300 text-sm"></span>
+                        </div>
+                    </div>
+
+                    <div id="result-from-iso-error" class="hidden bg-red-500/10 border border-red-500/30 rounded-xl p-4 text-red-400 text-sm">
+                        Ungültiges ISO 8601-Format. Erwartet: <code>PT[Stunden]H[Minuten]M[Sekunden]S</code>
+                    </div>
+                </div>
+
+                <!-- Mode: Bulk -->
+                <div id="mode-bulk" class="hidden">
+                    <h2 class="text-xl font-bold text-white mb-6">Mehrere Videos konvertieren</h2>
+
+                    <div class="mb-4">
+                        <label class="block text-sm font-medium text-gray-400 mb-2">Video-Dauern eingeben (eine pro Zeile, Format: H:MM:SS oder MM:SS)</label>
+                        <textarea id="bulk-input" rows="8" placeholder="1:30&#10;5:00&#10;10:45&#10;1:23:45&#10;0:30" class="input-field font-mono resize-none" oninput="convertBulk()"></textarea>
+                    </div>
+
+                    <div id="bulk-results" class="hidden">
+                        <div class="flex items-center justify-between mb-3">
+                            <h3 class="text-sm font-semibold text-gray-300">Konvertierte Werte</h3>
+                            <button onclick="copyBulk()" id="copy-bulk-btn" class="copy-btn text-xs bg-slate-700 hover:bg-slate-600 text-gray-300 px-3 py-1.5 rounded-lg flex items-center gap-1.5">
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                                Alle kopieren
+                            </button>
+                        </div>
+                        <div id="bulk-table" class="bg-slate-900/60 border border-white/10 rounded-xl overflow-hidden">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Info Box -->
+            <div class="bg-slate-800/40 border border-white/10 rounded-2xl p-6 mb-8">
+                <h2 class="text-lg font-bold text-white mb-4">Was ist ISO 8601 und warum ist es für SEO wichtig?</h2>
+                <p class="text-gray-400 text-sm leading-relaxed mb-4">Das ISO 8601-Format ist ein internationaler Standard für Datum- und Zeitangaben. Für Video-Dauern sieht es so aus: <code class="bg-slate-700 text-blue-400 px-1.5 py-0.5 rounded text-xs font-mono">PT1H23M45S</code> — das bedeutet 1 Stunde, 23 Minuten und 45 Sekunden. <code class="bg-slate-700 text-blue-400 px-1.5 py-0.5 rounded text-xs font-mono">PT</code> steht für "Period Time".</p>
+                <p class="text-gray-400 text-sm leading-relaxed mb-4">Google erwartet dieses Format im <code class="bg-slate-700 text-blue-400 px-1.5 py-0.5 rounded text-xs font-mono">duration</code>-Property des VideoObject Schema Markups. Wer stattdessen <code class="bg-slate-700 text-orange-400 px-1.5 py-0.5 rounded text-xs font-mono">1:23:45</code> oder <code class="bg-slate-700 text-orange-400 px-1.5 py-0.5 rounded text-xs font-mono">83 minutes</code> einträgt, erhält im <a href="https://search.google.com/test/rich-results" target="_blank" rel="noopener" class="text-blue-400 hover:text-blue-300 underline">Google Rich Results Test</a> einen Fehler.</p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-3 mt-4">
+                    <div class="bg-slate-700/30 rounded-lg p-3">
+                        <div class="text-blue-400 font-mono font-bold text-sm mb-1">PT30S</div>
+                        <div class="text-gray-500 text-xs">30 Sekunden</div>
+                    </div>
+                    <div class="bg-slate-700/30 rounded-lg p-3">
+                        <div class="text-blue-400 font-mono font-bold text-sm mb-1">PT5M30S</div>
+                        <div class="text-gray-500 text-xs">5 Minuten 30 Sekunden</div>
+                    </div>
+                    <div class="bg-slate-700/30 rounded-lg p-3">
+                        <div class="text-blue-400 font-mono font-bold text-sm mb-1">PT1H23M45S</div>
+                        <div class="text-gray-500 text-xs">1 Stunde 23 Minuten 45 Sek.</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Related Tools & Articles -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-slate-800/40 border border-white/10 rounded-2xl p-6">
+                    <h3 class="text-base font-bold text-white mb-4">Verwandte Tools</h3>
+                    <div class="space-y-3">
+                        <a href="/tools/videoobject-schema-generator.html" class="flex items-center gap-3 text-sm text-gray-300 hover:text-blue-400 transition-colors group">
+                            <svg class="w-4 h-4 text-blue-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.069A1 1 0 0121 8.845v6.31a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                            VideoObject Schema Generator
+                        </a>
+                        <a href="/tools/key-moments-clip-generator.html" class="flex items-center gap-3 text-sm text-gray-300 hover:text-blue-400 transition-colors group">
+                            <svg class="w-4 h-4 text-blue-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z"/></svg>
+                            Key Moments & Clip Generator
+                        </a>
+                        <a href="/tools/json-ld-structured-data-validator.html" class="flex items-center gap-3 text-sm text-gray-300 hover:text-blue-400 transition-colors group">
+                            <svg class="w-4 h-4 text-blue-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                            JSON-LD Structured Data Validator
+                        </a>
+                    </div>
+                </div>
+                <div class="bg-slate-800/40 border border-white/10 rounded-2xl p-6">
+                    <h3 class="text-base font-bold text-white mb-4">Verwandte Artikel</h3>
+                    <div class="space-y-3">
+                        <a href="/blog/videoobject-schema-markup-vertieft.html" class="flex items-center gap-3 text-sm text-gray-300 hover:text-blue-400 transition-colors">
+                            <svg class="w-4 h-4 text-blue-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+                            VideoObject Schema Markup vertieft: Key Moments & Clips
+                        </a>
+                        <a href="/blog/videoobject-schema-markup-seo.html" class="flex items-center gap-3 text-sm text-gray-300 hover:text-blue-400 transition-colors">
+                            <svg class="w-4 h-4 text-blue-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+                            VideoObject Schema Markup: Videos in Google Rich Results
+                        </a>
+                        <a href="/blog/strukturierte-daten-seo-schema-markup.html" class="flex items-center gap-3 text-sm text-gray-300 hover:text-blue-400 transition-colors">
+                            <svg class="w-4 h-4 text-blue-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+                            Strukturierte Daten für SEO: Schema Markup erklärt
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer CTA -->
+    <section class="py-16 px-4 bg-gradient-to-r from-blue-900/30 to-indigo-900/30 border-t border-b border-white/5">
+        <div class="max-w-3xl mx-auto text-center">
+            <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">Vollständige SEO-Analyse kostenlos</h2>
+            <p class="text-gray-400 mb-8">Prüfe deine gesamte Website auf SEO-Fehler — inkl. Schema Markup, Meta-Tags und Performance.</p>
+            <a href="/" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-8 py-3 rounded-lg font-medium transition-all inline-block">Jetzt testen</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/10 bg-slate-900/50 py-12 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="flex items-center gap-2">
+                    <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                    <span class="text-lg font-bold text-white">Shift07</span>
+                </div>
+                <div class="flex items-center space-x-6 text-sm text-gray-400">
+                    <a href="/impressum.html" class="hover:text-white transition-colors">Impressum</a>
+                    <a href="/datenschutz.html" class="hover:text-white transition-colors">Datenschutz</a>
+                    <a href="/agb.html" class="hover:text-white transition-colors">AGB</a>
+                </div>
+                <p class="text-sm text-gray-500">&copy; 2026 Thümmler AI GmbH</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        let currentMode = 'to-iso';
+
+        function setMode(mode) {
+            currentMode = mode;
+            ['to-iso', 'from-iso', 'bulk'].forEach(m => {
+                document.getElementById('mode-' + m).classList.toggle('hidden', m !== mode);
+                const tab = document.getElementById('tab-' + m);
+                if (m === mode) {
+                    tab.classList.add('bg-blue-600', 'text-white');
+                    tab.classList.remove('text-gray-400', 'hover:text-white');
+                } else {
+                    tab.classList.remove('bg-blue-600', 'text-white');
+                    tab.classList.add('text-gray-400', 'hover:text-white');
+                }
+            });
+        }
+
+        function toISO(h, m, s) {
+            let iso = 'PT';
+            if (h > 0) iso += h + 'H';
+            if (m > 0) iso += m + 'M';
+            if (s > 0 || (h === 0 && m === 0)) iso += s + 'S';
+            return iso;
+        }
+
+        function humanReadable(h, m, s) {
+            const parts = [];
+            if (h > 0) parts.push(h + ' Std.');
+            if (m > 0) parts.push(m + ' Min.');
+            if (s > 0) parts.push(s + ' Sek.');
+            if (parts.length === 0) parts.push('0 Sek.');
+            return parts.join(' ');
+        }
+
+        function setTime(h, m, s) {
+            document.getElementById('hours').value = h || '';
+            document.getElementById('minutes').value = m || '';
+            document.getElementById('seconds').value = s || '';
+            convertToISO();
+        }
+
+        function convertToISO() {
+            const h = parseInt(document.getElementById('hours').value) || 0;
+            const m = parseInt(document.getElementById('minutes').value) || 0;
+            const s = parseInt(document.getElementById('seconds').value) || 0;
+
+            if (h === 0 && m === 0 && s === 0) {
+                document.getElementById('result-to-iso').classList.add('hidden');
+                document.getElementById('jsonld-preview').classList.add('hidden');
+                return;
+            }
+
+            const iso = toISO(h, m, s);
+            document.getElementById('iso-output').textContent = iso;
+            document.getElementById('human-readable').textContent = humanReadable(h, m, s);
+            document.getElementById('result-to-iso').classList.remove('hidden');
+
+            const jsonld = {
+                "@context": "https://schema.org",
+                "@type": "VideoObject",
+                "name": "Titel des Videos",
+                "description": "Beschreibung des Videos",
+                "duration": iso,
+                "thumbnailUrl": "https://example.com/thumbnail.jpg",
+                "uploadDate": new Date().toISOString().split('T')[0],
+                "contentUrl": "https://example.com/video.mp4",
+                "embedUrl": "https://www.youtube.com/embed/VIDEO_ID"
+            };
+            document.getElementById('jsonld-output').textContent = JSON.stringify(jsonld, null, 2);
+            document.getElementById('jsonld-preview').classList.remove('hidden');
+        }
+
+        function convertFromISO() {
+            const input = document.getElementById('iso-input').value.trim().toUpperCase();
+            const result = document.getElementById('result-from-iso');
+            const error = document.getElementById('result-from-iso-error');
+
+            if (!input) {
+                result.classList.add('hidden');
+                error.classList.add('hidden');
+                return;
+            }
+
+            const match = input.match(/^PT(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?$/);
+            if (!match) {
+                result.classList.add('hidden');
+                error.classList.remove('hidden');
+                return;
+            }
+
+            error.classList.add('hidden');
+            const h = parseInt(match[1]) || 0;
+            const m = parseInt(match[2]) || 0;
+            const s = parseInt(match[3]) || 0;
+            const totalSec = h * 3600 + m * 60 + s;
+
+            document.getElementById('out-hours').textContent = h;
+            document.getElementById('out-minutes').textContent = m;
+            document.getElementById('out-seconds').textContent = s;
+            document.getElementById('out-total').textContent = `Gesamt: ${totalSec.toLocaleString('de-DE')} Sekunden (${humanReadable(h, m, s)})`;
+            result.classList.remove('hidden');
+        }
+
+        function convertBulk() {
+            const lines = document.getElementById('bulk-input').value.split('\n').filter(l => l.trim());
+            if (lines.length === 0) {
+                document.getElementById('bulk-results').classList.add('hidden');
+                return;
+            }
+
+            const rows = lines.map(line => {
+                const clean = line.trim();
+                let h = 0, m = 0, s = 0;
+                let valid = true;
+
+                const parts = clean.split(':').map(Number);
+                if (parts.some(isNaN)) { valid = false; }
+                else if (parts.length === 2) { m = parts[0]; s = parts[1]; }
+                else if (parts.length === 3) { h = parts[0]; m = parts[1]; s = parts[2]; }
+                else { valid = false; }
+
+                if (!valid) {
+                    return `<div class="flex items-center justify-between px-4 py-3 border-b border-white/5 last:border-0">
+                        <span class="text-gray-400 text-sm font-mono">${clean}</span>
+                        <span class="text-red-400 text-sm">Ungültig</span>
+                    </div>`;
+                }
+
+                const iso = toISO(h, m, s);
+                return `<div class="flex items-center justify-between px-4 py-3 border-b border-white/5 last:border-0">
+                    <span class="text-gray-400 text-sm font-mono">${clean}</span>
+                    <span class="text-blue-400 font-mono font-semibold text-sm">${iso}</span>
+                </div>`;
+            });
+
+            document.getElementById('bulk-table').innerHTML = rows.join('');
+            document.getElementById('bulk-results').classList.remove('hidden');
+        }
+
+        function copyISO() {
+            const text = document.getElementById('iso-output').textContent;
+            navigator.clipboard.writeText(text).then(() => {
+                const btn = document.getElementById('copy-iso-btn');
+                btn.classList.add('copied');
+                btn.innerHTML = '<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> Kopiert!';
+                setTimeout(() => {
+                    btn.classList.remove('copied');
+                    btn.innerHTML = '<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg> Kopieren';
+                }, 2000);
+            });
+        }
+
+        function copyJSONLD() {
+            const text = document.getElementById('jsonld-output').textContent;
+            navigator.clipboard.writeText(text).then(() => {
+                const btn = document.getElementById('copy-jsonld-btn');
+                btn.textContent = '✓ Kopiert!';
+                setTimeout(() => { btn.innerHTML = '<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg> Ganzes JSON kopieren'; }, 2000);
+            });
+        }
+
+        function copyBulk() {
+            const lines = document.getElementById('bulk-input').value.split('\n').filter(l => l.trim());
+            const results = lines.map(line => {
+                const parts = line.trim().split(':').map(Number);
+                if (parts.some(isNaN)) return line.trim() + ' → Ungültig';
+                let h = 0, m = 0, s = 0;
+                if (parts.length === 2) { m = parts[0]; s = parts[1]; }
+                else if (parts.length === 3) { h = parts[0]; m = parts[1]; s = parts[2]; }
+                return toISO(h, m, s);
+            }).join('\n');
+
+            navigator.clipboard.writeText(results).then(() => {
+                const btn = document.getElementById('copy-bulk-btn');
+                btn.textContent = '✓ Alle kopiert!';
+                setTimeout(() => { btn.innerHTML = '<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg> Alle kopieren'; }, 2000);
+            });
+        }
+    </script>
+</body>
+</html>
