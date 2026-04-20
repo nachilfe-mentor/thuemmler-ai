@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Mon, 20 Apr 2026 04:10:48 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 20 Apr 2026 05:47:39 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>BreadcrumbList Schema Markup vertieft: Dynamische Breadcrumbs, E-Commerce und Fehlerdiagnose</title>
+      <link>https://shift07.ai/blog/breadcrumblist-schema-markup-vertieft.html</link>
+      <guid>https://shift07.ai/blog/breadcrumblist-schema-markup-vertieft.html</guid>
+      <pubDate>Mon, 20 Apr 2026 05:47:14 +0000</pubDate>
+      <description>BreadcrumbList Schema Markup vertieft: Dynamische Breadcrumbs für SPAs, mehrsprachige Sites, E-Commerce-Szenarien und häufige GSC-Fehler beheben — die komplette Profi-Anleitung.</description>
+      <category>Schema Markup</category>
+    </item>
     <item>
       <title>AggregateRating Schema Markup vertieft: Bewertungssterne richtig implementieren 2026</title>
       <link>https://shift07.ai/blog/aggregaterating-schema-markup-vertieft.html</link>
@@ -158,16 +166,6 @@
       <pubDate>Fri, 17 Apr 2026 03:25:59 +0000</pubDate>
       <description>HowTo Schema Markup erklärt: So implementierst du JSON-LD für Anleitungen, erreichst Rich Snippets in Google und steigerst deine Klickrate um bis zu 40%.</description>
       <category>Schema Markup</category>
-    </item>
-    <item>
-      <title>VideoObject Schema Markup: Videos in Google Rich Results und Key Moments</title>
-      <link>https://shift07.ai/blog/videoobject-schema-markup-seo.html</link>
-      <guid>https://shift07.ai/blog/videoobject-schema-markup-seo.html</guid>
-      <pubDate>Fri, 17 Apr 2026 01:51:29 +0000</pubDate>
-      <description>VideoObject Schema Markup für SEO: So werden deine Videos als Rich Results in Google angezeigt. Pflichtfelder, Key Moments, Clip-Segmente und häufige Fehler — vollständige Anleitung.</description>
-      <category>Structured Data</meta>
-    <!-- Twitter Card -->
-    <meta name=</category>
     </item>
   </channel>
 </rss>
