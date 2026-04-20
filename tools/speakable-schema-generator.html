@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpeakableSpecification Generator – JSON-LD für Sprachassistenten kostenlos erstellen | Shift07</title>
+    <meta name="description" content="SpeakableSpecification JSON-LD kostenlos generieren: cssSelector oder XPath eingeben, fertigen Schema-Markup-Code für Google Assistant und Sprachsuche erhalten.">
+    <meta name="author" content="Thümmler AI GmbH">
+    <link rel="icon" type="image/png" href="/logo.png">
+    <link rel="canonical" href="https://shift07.ai/tools/speakable-schema-generator.html">
+    <link rel="alternate" type="application/rss+xml" title="Shift07 Blog" href="https://shift07.ai/feed.xml">
+    <!-- Open Graph -->
+    <meta property="og:title" content="SpeakableSpecification Generator – JSON-LD für Sprachassistenten kostenlos | Shift07">
+    <meta property="og:description" content="SpeakableSpecification JSON-LD kostenlos generieren: cssSelector oder XPath, fertiger Schema Markup Code für Google Assistant.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://shift07.ai/tools/speakable-schema-generator.html">
+    <meta property="og:image" content="https://shift07.ai/tools/images/speakable-schema-generator.png">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="Shift07">
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "SpeakableSpecification Generator",
+      "description": "SpeakableSpecification JSON-LD kostenlos generieren: cssSelector oder XPath eingeben, fertigen Schema-Markup-Code für Google Assistant und Sprachsuche erhalten.",
+      "url": "https://shift07.ai/tools/speakable-schema-generator.html",
+      "applicationCategory": "SEOApplication",
+      "operatingSystem": "Web Browser",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Shift07",
+        "url": "https://shift07.ai"
+      }
+    }
+    </script>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K1S1RXBDS8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K1S1RXBDS8');
+    </script>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8475857002943858" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { 'inter': ['Inter', 'system-ui', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', system-ui, sans-serif; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: rgba(15,23,42,0.5); }
+        ::-webkit-scrollbar-thumb { background: rgba(139,92,246,0.5); border-radius: 4px; }
+        pre { white-space: pre-wrap; word-break: break-all; }
+        .selector-row { display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem; }
+        .selector-row input { flex: 1; }
+        .tag-valid { color: #4ade80; }
+        .tag-warn { color: #facc15; }
+        .tag-error { color: #f87171; }
+    </style>
+</head>
+<body class="bg-slate-900 text-slate-100 min-h-screen">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-slate-900/95 backdrop-blur-sm border-b border-slate-800">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="/" class="flex items-center gap-2">
+                    <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                    <span class="text-xl font-bold text-white">Shift07</span>
+                </a>
+                <div class="hidden md:flex items-center gap-6">
+                    <a href="/blog/" class="text-slate-300 hover:text-white text-sm transition-colors">Blog</a>
+                    <a href="/tools/" class="text-slate-300 hover:text-white text-sm transition-colors">Tools</a>
+                    <a href="https://app.shift07.ai" class="bg-violet-600 hover:bg-violet-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors">Kostenlos analysieren</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="pt-24 pb-8 px-4">
+        <div class="max-w-5xl mx-auto text-center">
+            <div class="inline-flex items-center gap-2 bg-violet-500/10 border border-violet-500/30 text-violet-400 text-sm font-medium px-4 py-2 rounded-full mb-6">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"/></svg>
+                Kostenloses SEO-Tool
+            </div>
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
+                SpeakableSpecification<br><span class="text-violet-400">Generator</span>
+            </h1>
+            <p class="text-xl text-slate-300 max-w-2xl mx-auto mb-4">
+                Generiere <code class="bg-slate-800 px-2 py-0.5 rounded text-violet-300">SpeakableSpecification</code> JSON-LD für Sprachassistenten. Wähle zwischen cssSelector und XPath — der Code ist sofort einsatzbereit.
+            </p>
+            <img src="/tools/images/speakable-schema-generator.png" alt="SpeakableSpecification Generator JSON-LD Sprachassistenten kostenlos" class="w-full max-w-2xl mx-auto rounded-xl border border-slate-700 mt-6 mb-4 shadow-xl">
+        </div>
+    </section>
+
+    <!-- Tool -->
+    <section class="pb-16 px-4">
+        <div class="max-w-5xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+                <!-- Eingabe -->
+                <div class="space-y-6">
+                    <div class="bg-slate-800/50 border border-slate-700 rounded-2xl p-6">
+                        <h2 class="text-lg font-bold text-white mb-4">1. Artikel-Informationen</h2>
+
+                        <div class="space-y-4">
+                            <div>
+                                <label class="block text-sm font-medium text-slate-300 mb-1">Schema-Typ</label>
+                                <select id="schemaType" onchange="updateOutput()"
+                                    class="w-full bg-slate-700 border border-slate-600 text-white rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-violet-500">
+                                    <option value="Article">Article (Blog, Artikel)</option>
+                                    <option value="NewsArticle">NewsArticle (Nachricht)</option>
+                                    <option value="WebPage">WebPage (Landingpage)</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-medium text-slate-300 mb-1">Headline / Seitenname</label>
+                                <input type="text" id="headline" placeholder="Titel deines Artikels"
+                                    oninput="updateOutput()"
+                                    class="w-full bg-slate-700 border border-slate-600 text-white rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-violet-500 placeholder-slate-500">
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-medium text-slate-300 mb-1">Seiten-URL</label>
+                                <input type="url" id="pageUrl" placeholder="https://example.com/blog/artikel.html"
+                                    oninput="updateOutput()"
+                                    class="w-full bg-slate-700 border border-slate-600 text-white rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-violet-500 placeholder-slate-500">
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-medium text-slate-300 mb-1">Publisher (Unternehmensname)</label>
+                                <input type="text" id="publisher" placeholder="Mein Unternehmen GmbH"
+                                    oninput="updateOutput()"
+                                    class="w-full bg-slate-700 border border-slate-600 text-white rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-violet-500 placeholder-slate-500">
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-medium text-slate-300 mb-1">Publisher URL</label>
+                                <input type="url" id="publisherUrl" placeholder="https://example.com"
+                                    oninput="updateOutput()"
+                                    class="w-full bg-slate-700 border border-slate-600 text-white rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-violet-500 placeholder-slate-500">
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-medium text-slate-300 mb-1">Veröffentlichungsdatum</label>
+                                <input type="date" id="publishDate" oninput="updateOutput()"
+                                    class="w-full bg-slate-700 border border-slate-600 text-white rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-violet-500">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-800/50 border border-slate-700 rounded-2xl p-6">
+                        <h2 class="text-lg font-bold text-white mb-4">2. Selector-Typ wählen</h2>
+
+                        <div class="flex gap-3 mb-4">
+                            <button id="btnCss" onclick="setSelectorType('css')"
+                                class="flex-1 bg-violet-600 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors">
+                                cssSelector
+                            </button>
+                            <button id="btnXpath" onclick="setSelectorType('xpath')"
+                                class="flex-1 bg-slate-700 text-slate-300 px-4 py-2 rounded-lg text-sm font-medium transition-colors hover:bg-slate-600">
+                                XPath
+                            </button>
+                            <button id="btnBoth" onclick="setSelectorType('both')"
+                                class="flex-1 bg-slate-700 text-slate-300 px-4 py-2 rounded-lg text-sm font-medium transition-colors hover:bg-slate-600">
+                                Beide
+                            </button>
+                        </div>
+
+                        <p class="text-xs text-slate-400 mb-4" id="selectorHint">
+                            <strong>cssSelector:</strong> Ideal für Klassen und IDs. Beispiel: <code class="bg-slate-700 px-1 rounded">.article-summary</code> oder <code class="bg-slate-700 px-1 rounded">#fazit</code>
+                        </p>
+
+                        <!-- CSS Selektoren -->
+                        <div id="cssSelectorSection">
+                            <label class="block text-sm font-medium text-slate-300 mb-2">CSS-Selektoren (einer pro Zeile)</label>
+                            <div id="cssSelectors">
+                                <div class="selector-row">
+                                    <input type="text" placeholder=".article-summary" oninput="updateOutput()"
+                                        class="css-selector w-full bg-slate-700 border border-slate-600 text-white rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-violet-500 placeholder-slate-500">
+                                    <button onclick="removeSelectorRow(this)" class="text-slate-500 hover:text-red-400 text-lg leading-none transition-colors">×</button>
+                                </div>
+                                <div class="selector-row">
+                                    <input type="text" placeholder="h1" oninput="updateOutput()"
+                                        class="css-selector w-full bg-slate-700 border border-slate-600 text-white rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-violet-500 placeholder-slate-500">
+                                    <button onclick="removeSelectorRow(this)" class="text-slate-500 hover:text-red-400 text-lg leading-none transition-colors">×</button>
+                                </div>
+                            </div>
+                            <button onclick="addCssSelector()"
+                                class="mt-2 text-sm text-violet-400 hover:text-violet-300 transition-colors">
+                                + CSS-Selektor hinzufügen
+                            </button>
+                        </div>
+
+                        <!-- XPath Selektoren -->
+                        <div id="xpathSection" class="hidden">
+                            <label class="block text-sm font-medium text-slate-300 mb-2">XPath-Ausdrücke (einer pro Zeile)</label>
+                            <div id="xpathSelectors">
+                                <div class="selector-row">
+                                    <input type="text" placeholder="//div[@class='zusammenfassung']" oninput="updateOutput()"
+                                        class="xpath-selector w-full bg-slate-700 border border-slate-600 text-white rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-violet-500 placeholder-slate-500">
+                                    <button onclick="removeSelectorRow(this)" class="text-slate-500 hover:text-red-400 text-lg leading-none transition-colors">×</button>
+                                </div>
+                            </div>
+                            <button onclick="addXpathSelector()"
+                                class="mt-2 text-sm text-violet-400 hover:text-violet-300 transition-colors">
+                                + XPath-Ausdruck hinzufügen
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Vorgefertigte Beispiele -->
+                    <div class="bg-slate-800/50 border border-slate-700 rounded-2xl p-6">
+                        <h2 class="text-lg font-bold text-white mb-3">Beispiele laden</h2>
+                        <div class="grid grid-cols-2 gap-2">
+                            <button onclick="loadExample('news')"
+                                class="bg-slate-700 hover:bg-slate-600 text-slate-300 px-3 py-2 rounded-lg text-xs transition-colors text-left">
+                                📰 Nachrichtenartikel
+                            </button>
+                            <button onclick="loadExample('blog')"
+                                class="bg-slate-700 hover:bg-slate-600 text-slate-300 px-3 py-2 rounded-lg text-xs transition-colors text-left">
+                                📝 Blog-Artikel
+                            </button>
+                            <button onclick="loadExample('faq')"
+                                class="bg-slate-700 hover:bg-slate-600 text-slate-300 px-3 py-2 rounded-lg text-xs transition-colors text-left">
+                                ❓ FAQ-Seite
+                            </button>
+                            <button onclick="loadExample('xpath')"
+                                class="bg-slate-700 hover:bg-slate-600 text-slate-300 px-3 py-2 rounded-lg text-xs transition-colors text-left">
+                                🔍 XPath-Beispiel
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ausgabe -->
+                <div class="space-y-4">
+                    <!-- Status -->
+                    <div id="statusBox" class="bg-slate-800/50 border border-slate-700 rounded-2xl p-4 hidden">
+                        <div id="statusContent" class="text-sm space-y-1"></div>
+                    </div>
+
+                    <!-- JSON-LD Output -->
+                    <div class="bg-slate-800/50 border border-slate-700 rounded-2xl p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <h2 class="text-lg font-bold text-white">JSON-LD Code</h2>
+                            <div class="flex gap-2">
+                                <button onclick="copyCode()"
+                                    class="bg-violet-600 hover:bg-violet-700 text-white px-3 py-1.5 rounded-lg text-xs font-medium transition-colors">
+                                    Kopieren
+                                </button>
+                                <button onclick="resetForm()"
+                                    class="bg-slate-700 hover:bg-slate-600 text-slate-300 px-3 py-1.5 rounded-lg text-xs transition-colors">
+                                    Zurücksetzen
+                                </button>
+                            </div>
+                        </div>
+                        <pre id="jsonOutput" class="text-xs text-violet-300 leading-relaxed bg-slate-900/80 rounded-xl p-4 overflow-auto max-h-[500px] font-mono border border-slate-700"></pre>
+                        <p id="copyFeedback" class="text-green-400 text-xs mt-2 hidden">✓ In die Zwischenablage kopiert!</p>
+                    </div>
+
+                    <!-- HTML Einbindung -->
+                    <div class="bg-slate-800/50 border border-slate-700 rounded-2xl p-6">
+                        <h3 class="font-semibold text-white mb-2 text-sm">HTML-Einbindung</h3>
+                        <pre class="text-xs text-slate-300 bg-slate-900/80 rounded-xl p-4 font-mono border border-slate-700">&lt;script type="application/ld+json"&gt;
+{ ... Ihr generierter Code ... }
+&lt;/script&gt;</pre>
+                        <p class="text-xs text-slate-400 mt-2">In den <code>&lt;head&gt;</code>-Bereich der Seite einfügen, <strong>nicht</strong> in den Body.</p>
+                    </div>
+
+                    <!-- Tipps -->
+                    <div class="bg-violet-900/20 border border-violet-700/30 rounded-2xl p-5">
+                        <h3 class="font-semibold text-violet-300 mb-3 text-sm">Best Practices</h3>
+                        <ul class="text-xs text-slate-300 space-y-1.5">
+                            <li>✓ Max. 2–3 kurze Abschnitte pro Seite markieren</li>
+                            <li>✓ Nur für sich verständliche Sätze (keine Tabellen, kein Code)</li>
+                            <li>✓ Insgesamt max. 300 Wörter als speakable markieren</li>
+                            <li>✓ cssSelector in Browser-Konsole mit <code>querySelectorAll()</code> testen</li>
+                            <li>⚠ Aktuell primär für Google News-Publisher relevant</li>
+                            <li>⚠ Kein visueller Rich Result in Google SERPs (kein Ranking-Effekt)</li>
+                        </ul>
+                    </div>
+
+                    <!-- CTA -->
+                    <div class="bg-blue-900/20 border border-blue-700/30 rounded-xl p-4">
+                        <p class="text-sm text-slate-300 mb-2">Alle fehlenden Schema-Markups deiner Website auf einen Blick:</p>
+                        <a href="https://app.shift07.ai" class="inline-block bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium px-4 py-2 rounded-lg transition-colors">
+                            Kostenlose SEO-Analyse →
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Erklärung -->
+            <div class="mt-12 prose prose-invert max-w-none">
+                <h2 class="text-2xl font-bold text-white mb-4">Was ist SpeakableSpecification?</h2>
+                <p class="text-slate-300 leading-relaxed mb-4">
+                    <code class="bg-slate-800 px-2 py-0.5 rounded text-violet-300">SpeakableSpecification</code> ist ein Schema.org-Typ, der definiert, welche Teile einer Webseite für die Wiedergabe durch Sprachassistenten geeignet sind. Er wird über die <code class="bg-slate-800 px-2 py-0.5 rounded text-violet-300">speakable</code> Property eines <code class="bg-slate-800 px-2 py-0.5 rounded text-violet-300">Article</code>- oder <code class="bg-slate-800 px-2 py-0.5 rounded text-violet-300">WebPage</code>-Schemas angegeben.
+                </p>
+                <p class="text-slate-300 leading-relaxed mb-4">
+                    Google kann diese Markierungen nutzen, um beim Google Assistant prägnante, vorlese-würdige Antworten zu liefern. Die Technologie wurde primär für Nachrichtenverlage entwickelt. Mehr zur Vertiefung: <a href="/blog/speakablespecification-schema-markup-vertieft.html" class="text-violet-400 hover:text-violet-300">SpeakableSpecification vertieft — cssSelector, XPath und Sprachassistenten</a> und <a href="/blog/speakable-property-schema-markup.html" class="text-violet-400 hover:text-violet-300">speakable Property Grundlagen</a>.
+                </p>
+
+                <h2 class="text-2xl font-bold text-white mb-4 mt-8">cssSelector vs. XPath</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                    <div class="bg-slate-800/50 border border-slate-700 rounded-xl p-4">
+                        <h3 class="font-bold text-violet-400 mb-2">cssSelector</h3>
+                        <ul class="text-sm text-slate-300 space-y-1">
+                            <li>• Bekannte CSS-Syntax</li>
+                            <li>• Einfach zu schreiben und testen</li>
+                            <li>• Ideal für Klassen und IDs</li>
+                            <li>• Google-empfohlen für die meisten Fälle</li>
+                        </ul>
+                        <code class="block mt-2 text-xs bg-slate-900 p-2 rounded text-violet-300">".article-summary, h1, #fazit"</code>
+                    </div>
+                    <div class="bg-slate-800/50 border border-slate-700 rounded-xl p-4">
+                        <h3 class="font-bold text-violet-400 mb-2">XPath</h3>
+                        <ul class="text-sm text-slate-300 space-y-1">
+                            <li>• Mächtiger (relative Selektion)</li>
+                            <li>• Kann Textknoten selektieren</li>
+                            <li>• Ideal für generierte HTML-Strukturen</li>
+                            <li>• Steilere Lernkurve</li>
+                        </ul>
+                        <code class="block mt-2 text-xs bg-slate-900 p-2 rounded text-violet-300">"//section[@id='fazit']/p[1]"</code>
+                    </div>
+                </div>
+
+                <p class="text-slate-300 leading-relaxed">
+                    Validiere deinen generierten Code mit dem <a href="/tools/json-ld-structured-data-validator.html" class="text-violet-400 hover:text-violet-300">JSON-LD Structured Data Validator</a> und prüfe alle strukturierten Daten deiner Website mit der <a href="https://app.shift07.ai" class="text-violet-400 hover:text-violet-300">kostenlosen Shift07 SEO-Analyse</a>.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 border-t border-slate-800 py-12 px-4 mt-8">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div>
+                <div class="flex items-center gap-2 mb-4">
+                    <img src="/logo.png" alt="Shift07" class="h-8 w-8">
+                    <span class="font-bold text-white text-lg">Shift07</span>
+                </div>
+                <p class="text-slate-400 text-sm">KI-gestützte SEO-Analyse für mehr Google-Sichtbarkeit.</p>
+            </div>
+            <div>
+                <h4 class="font-semibold text-white mb-3">Produkt</h4>
+                <ul class="space-y-2 text-sm text-slate-400">
+                    <li><a href="/#features" class="hover:text-white transition-colors">Features</a></li>
+                    <li><a href="/#pricing" class="hover:text-white transition-colors">Preise</a></li>
+                    <li><a href="https://app.shift07.ai" class="hover:text-white transition-colors">App starten</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-semibold text-white mb-3">Ressourcen</h4>
+                <ul class="space-y-2 text-sm text-slate-400">
+                    <li><a href="/blog/" class="hover:text-white transition-colors">Blog</a></li>
+                    <li><a href="/tools/" class="hover:text-white transition-colors">Kostenlose Tools</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-semibold text-white mb-3">Rechtliches</h4>
+                <ul class="space-y-2 text-sm text-slate-400">
+                    <li><a href="/impressum.html" class="hover:text-white transition-colors">Impressum</a></li>
+                    <li><a href="/datenschutz.html" class="hover:text-white transition-colors">Datenschutz</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="max-w-6xl mx-auto mt-8 pt-8 border-t border-slate-800 text-center text-slate-500 text-sm">
+            <p>© 2026 Thümmler AI GmbH · Leonardo-da-Vinci-Straße 15, 14467 Potsdam</p>
+        </div>
+    </footer>
+
+    <script>
+        let selectorType = 'css';
+
+        // Setze heutiges Datum als Default
+        document.getElementById('publishDate').value = new Date().toISOString().split('T')[0];
+
+        function setSelectorType(type) {
+            selectorType = type;
+            const btnCss = document.getElementById('btnCss');
+            const btnXpath = document.getElementById('btnXpath');
+            const btnBoth = document.getElementById('btnBoth');
+            const cssSection = document.getElementById('cssSelectorSection');
+            const xpathSection = document.getElementById('xpathSection');
+            const hint = document.getElementById('selectorHint');
+
+            [btnCss, btnXpath, btnBoth].forEach(b => {
+                b.className = 'flex-1 bg-slate-700 text-slate-300 px-4 py-2 rounded-lg text-sm font-medium transition-colors hover:bg-slate-600';
+            });
+
+            const activeBtn = type === 'css' ? btnCss : type === 'xpath' ? btnXpath : btnBoth;
+            activeBtn.className = 'flex-1 bg-violet-600 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors';
+
+            cssSection.classList.toggle('hidden', type === 'xpath');
+            xpathSection.classList.toggle('hidden', type === 'css');
+
+            if (type === 'css') {
+                hint.innerHTML = '<strong>cssSelector:</strong> Ideal für Klassen und IDs. Beispiel: <code class="bg-slate-700 px-1 rounded">.article-summary</code> oder <code class="bg-slate-700 px-1 rounded">#fazit</code>';
+            } else if (type === 'xpath') {
+                hint.innerHTML = '<strong>XPath:</strong> Mächtiger Ausdruck für komplexe Selektionen. Beispiel: <code class="bg-slate-700 px-1 rounded">//div[@id=\'zusammenfassung\']</code>';
+            } else {
+                hint.innerHTML = '<strong>Beide:</strong> cssSelector für einfache Selektionen, XPath für komplexe Bedingungen kombinieren.';
+            }
+            updateOutput();
+        }
+
+        function addCssSelector() {
+            const container = document.getElementById('cssSelectors');
+            const row = document.createElement('div');
+            row.className = 'selector-row';
+            row.innerHTML = `<input type="text" placeholder=".key-finding" oninput="updateOutput()"
+                class="css-selector w-full bg-slate-700 border border-slate-600 text-white rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-violet-500 placeholder-slate-500">
+                <button onclick="removeSelectorRow(this)" class="text-slate-500 hover:text-red-400 text-lg leading-none transition-colors">×</button>`;
+            container.appendChild(row);
+        }
+
+        function addXpathSelector() {
+            const container = document.getElementById('xpathSelectors');
+            const row = document.createElement('div');
+            row.className = 'selector-row';
+            row.innerHTML = `<input type="text" placeholder="//section[@id='ergebnis']/p[1]" oninput="updateOutput()"
+                class="xpath-selector w-full bg-slate-700 border border-slate-600 text-white rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-violet-500 placeholder-slate-500">
+                <button onclick="removeSelectorRow(this)" class="text-slate-500 hover:text-red-400 text-lg leading-none transition-colors">×</button>`;
+            container.appendChild(row);
+        }
+
+        function removeSelectorRow(btn) {
+            btn.parentElement.remove();
+            updateOutput();
+        }
+
+        function getCssSelectors() {
+            return Array.from(document.querySelectorAll('.css-selector'))
+                .map(i => i.value.trim()).filter(v => v.length > 0);
+        }
+
+        function getXpathSelectors() {
+            return Array.from(document.querySelectorAll('.xpath-selector'))
+                .map(i => i.value.trim()).filter(v => v.length > 0);
+        }
+
+        function buildSpeakableObj() {
+            const css = (selectorType === 'css' || selectorType === 'both') ? getCssSelectors() : [];
+            const xpath = (selectorType === 'xpath' || selectorType === 'both') ? getXpathSelectors() : [];
+            const obj = { "@type": "SpeakableSpecification" };
+            if (css.length === 1) obj.cssSelector = css[0];
+            else if (css.length > 1) obj.cssSelector = css;
+            if (xpath.length === 1) obj.xpath = xpath[0];
+            else if (xpath.length > 1) obj.xpath = xpath;
+            return obj;
+        }
+
+        function updateOutput() {
+            const schemaType = document.getElementById('schemaType').value;
+            const headline = document.getElementById('headline').value.trim() || 'Ihr Artikel-Titel';
+            const pageUrl = document.getElementById('pageUrl').value.trim() || 'https://example.com/artikel';
+            const publisher = document.getElementById('publisher').value.trim() || 'Mein Unternehmen';
+            const publisherUrl = document.getElementById('publisherUrl').value.trim() || 'https://example.com';
+            const publishDate = document.getElementById('publishDate').value;
+            const dateISO = publishDate ? publishDate + 'T09:00:00+02:00' : new Date().toISOString().split('T')[0] + 'T09:00:00+02:00';
+
+            const speakable = buildSpeakableObj();
+            const hasSpeakable = Object.keys(speakable).length > 1;
+
+            const fieldName = schemaType === 'WebPage' ? 'name' : 'headline';
+
+            const schema = {
+                "@context": "https://schema.org",
+                "@type": schemaType,
+                [fieldName]: headline,
+                ...(schemaType !== 'WebPage' ? {
+                    datePublished: dateISO,
+                    dateModified: dateISO,
+                    author: {
+                        "@type": "Organization",
+                        name: publisher,
+                        url: publisherUrl
+                    }
+                } : {}),
+                publisher: {
+                    "@type": "Organization",
+                    name: publisher,
+                    url: publisherUrl,
+                    logo: {
+                        "@type": "ImageObject",
+                        url: publisherUrl + "/logo.png"
+                    }
+                },
+                ...(hasSpeakable ? { speakable } : {}),
+                mainEntityOfPage: {
+                    "@type": "WebPage",
+                    "@id": pageUrl
+                }
+            };
+
+            document.getElementById('jsonOutput').textContent = JSON.stringify(schema, null, 2);
+
+            // Status
+            const statusBox = document.getElementById('statusBox');
+            const statusContent = document.getElementById('statusContent');
+            const msgs = [];
+
+            if (!hasSpeakable) msgs.push('<span class="tag-warn">⚠ Keine Selektoren angegeben — speakable Property fehlt</span>');
+            else msgs.push('<span class="tag-valid">✓ SpeakableSpecification enthalten</span>');
+
+            if (schemaType === 'NewsArticle') msgs.push('<span class="tag-valid">✓ NewsArticle — optimaler Typ für speakable</span>');
+            if (!document.getElementById('pageUrl').value.trim()) msgs.push('<span class="tag-warn">⚠ URL fehlt — mainEntityOfPage unvollständig</span>');
+
+            const css = getCssSelectors();
+            const xpath = getXpathSelectors();
+            if (css.length + xpath.length > 5) msgs.push('<span class="tag-warn">⚠ Viele Selektoren — Google empfiehlt max. 2–3</span>');
+
+            statusContent.innerHTML = msgs.join('<br>');
+            statusBox.classList.toggle('hidden', msgs.length === 0);
+        }
+
+        function copyCode() {
+            const text = document.getElementById('jsonOutput').textContent;
+            const full = `<script type="application/ld+json">\n${text}\n<\/script>`;
+            navigator.clipboard.writeText(full).then(() => {
+                const fb = document.getElementById('copyFeedback');
+                fb.classList.remove('hidden');
+                setTimeout(() => fb.classList.add('hidden'), 2500);
+            });
+        }
+
+        function resetForm() {
+            document.getElementById('headline').value = '';
+            document.getElementById('pageUrl').value = '';
+            document.getElementById('publisher').value = '';
+            document.getElementById('publisherUrl').value = '';
+            document.getElementById('publishDate').value = new Date().toISOString().split('T')[0];
+            document.querySelectorAll('.css-selector, .xpath-selector').forEach(i => i.value = '');
+            updateOutput();
+        }
+
+        function loadExample(type) {
+            const examples = {
+                news: {
+                    schemaType: 'NewsArticle',
+                    headline: 'Deutsche KMU verschenken 40 % ihres Suchpotenzials',
+                    pageUrl: 'https://beispiel.de/news/kmu-seo-analyse.html',
+                    publisher: 'Beispiel Verlag',
+                    publisherUrl: 'https://beispiel.de',
+                    cssSelectors: ['.article-summary', '.key-finding'],
+                    xpathSelectors: [],
+                    type: 'css'
+                },
+                blog: {
+                    schemaType: 'Article',
+                    headline: 'Schema Markup für Anfänger: Die vollständige Anleitung',
+                    pageUrl: 'https://meinblog.de/blog/schema-markup-anleitung.html',
+                    publisher: 'Mein Blog',
+                    publisherUrl: 'https://meinblog.de',
+                    cssSelectors: ['.intro-summary', 'h1'],
+                    xpathSelectors: [],
+                    type: 'css'
+                },
+                faq: {
+                    schemaType: 'WebPage',
+                    headline: 'FAQ: Häufige Fragen zu SEO',
+                    pageUrl: 'https://example.com/faq.html',
+                    publisher: 'Example GmbH',
+                    publisherUrl: 'https://example.com',
+                    cssSelectors: ['.faq-answer:first-of-type', '.page-description'],
+                    xpathSelectors: [],
+                    type: 'css'
+                },
+                xpath: {
+                    schemaType: 'NewsArticle',
+                    headline: 'Marktbericht Q2 2026',
+                    pageUrl: 'https://nachrichten.de/markt/q2-2026.html',
+                    publisher: 'Nachrichten GmbH',
+                    publisherUrl: 'https://nachrichten.de',
+                    cssSelectors: [],
+                    xpathSelectors: [
+                        "/html/body//article//p[@class='lead']",
+                        "//section[@id='fazit']/p[1]"
+                    ],
+                    type: 'xpath'
+                }
+            };
+
+            const ex = examples[type];
+            document.getElementById('schemaType').value = ex.schemaType;
+            document.getElementById('headline').value = ex.headline;
+            document.getElementById('pageUrl').value = ex.pageUrl;
+            document.getElementById('publisher').value = ex.publisher;
+            document.getElementById('publisherUrl').value = ex.publisherUrl;
+
+            // CSS-Selektoren setzen
+            const cssContainer = document.getElementById('cssSelectors');
+            cssContainer.innerHTML = '';
+            (ex.cssSelectors.length ? ex.cssSelectors : ['']).forEach(sel => {
+                const row = document.createElement('div');
+                row.className = 'selector-row';
+                row.innerHTML = `<input type="text" value="${sel}" oninput="updateOutput()"
+                    class="css-selector w-full bg-slate-700 border border-slate-600 text-white rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-violet-500 placeholder-slate-500">
+                    <button onclick="removeSelectorRow(this)" class="text-slate-500 hover:text-red-400 text-lg leading-none transition-colors">×</button>`;
+                cssContainer.appendChild(row);
+            });
+
+            // XPath-Selektoren setzen
+            const xpContainer = document.getElementById('xpathSelectors');
+            xpContainer.innerHTML = '';
+            (ex.xpathSelectors.length ? ex.xpathSelectors : ['']).forEach(sel => {
+                const row = document.createElement('div');
+                row.className = 'selector-row';
+                row.innerHTML = `<input type="text" value="${sel}" oninput="updateOutput()"
+                    class="xpath-selector w-full bg-slate-700 border border-slate-600 text-white rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-violet-500 placeholder-slate-500">
+                    <button onclick="removeSelectorRow(this)" class="text-slate-500 hover:text-red-400 text-lg leading-none transition-colors">×</button>`;
+                xpContainer.appendChild(row);
+            });
+
+            setSelectorType(ex.type);
+        }
+
+        // Initial
+        updateOutput();
+    </script>
+</body>
+</html>
