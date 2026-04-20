@@ -14,7 +14,7 @@
   </url>
   <url>
     <loc>https://shift07.ai/tools/</loc>
-    <lastmod>2026-04-19</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -813,6 +813,12 @@
   <url>
     <loc>https://shift07.ai/tools/json-ld-structured-data-validator.html</loc>
     <lastmod>2026-04-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://shift07.ai/tools/key-moments-clip-generator.html</loc>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
