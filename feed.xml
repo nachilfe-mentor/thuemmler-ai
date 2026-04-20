@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Mon, 20 Apr 2026 04:07:54 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 20 Apr 2026 04:10:48 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>AggregateRating Schema Markup vertieft: Bewertungssterne richtig implementieren 2026</title>
+      <link>https://shift07.ai/blog/aggregaterating-schema-markup-vertieft.html</link>
+      <guid>https://shift07.ai/blog/aggregaterating-schema-markup-vertieft.html</guid>
+      <pubDate>Mon, 20 Apr 2026 04:10:26 +0000</pubDate>
+      <description>AggregateRating Schema Markup vollständig erklärt: ratingValue, reviewCount, bestRating — alle Properties, erlaubte Typen und häufige Fehler. Mit vollständigen JSON-LD-Beispielen.</description>
+      <category>Schema Markup</category>
+    </item>
     <item>
       <title>SEO-Fehler bei deutschen Zahnärzten: Auswertung von 47 Praxis-Websites</title>
       <link>https://shift07.ai/blog/seo-fehler-zahnaerzte-deutsche-praxen.html</link>
@@ -160,14 +168,6 @@
       <category>Structured Data</meta>
     <!-- Twitter Card -->
     <meta name=</category>
-    </item>
-    <item>
-      <title>Server-Log-Analyse für SEO: Crawl-Anomalien erkennen und Googlebot-Muster verstehen</title>
-      <link>https://shift07.ai/blog/server-log-analyse-seo-fortgeschritten.html</link>
-      <guid>https://shift07.ai/blog/server-log-analyse-seo-fortgeschritten.html</guid>
-      <pubDate>Fri, 17 Apr 2026 01:45:48 +0000</pubDate>
-      <description>Fortgeschrittene Server-Log-Analyse für SEO: Crawl-Anomalien erkennen, Googlebot-Muster auswerten, Regex-Filter einsetzen und Log-Daten mit GSC kombinieren. Praxisanleitung für SEO-Profis.</description>
-      <category>Technisches SEO</category>
     </item>
   </channel>
 </rss>
