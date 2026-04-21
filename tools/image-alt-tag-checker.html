@@ -96,6 +96,7 @@
                     <a href="/" class="text-gray-300 hover:text-white transition-colors">SEO-Tool</a>
                     <a href="/blog/" class="text-gray-300 hover:text-white transition-colors">Blog</a>
                     <a href="/tools/" class="text-white font-medium border-b-2 border-blue-500 pb-0.5">Tools</a>
+                    <a href="/ueber-uns.html" class="text-white hover:text-blue-300 transition-colors">Über uns</a>
                     <a href="/app/#/login" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-5 py-2 rounded-lg font-medium transition-all">Anmelden</a>
                 </div>
                 <button id="mobile-menu-btn" class="md:hidden text-gray-300 hover:text-white">
@@ -108,6 +109,7 @@
                 <a href="/" class="block py-2 text-gray-300 hover:text-white">SEO-Tool</a>
                 <a href="/blog/" class="block py-2 text-gray-300 hover:text-white">Blog</a>
                 <a href="/tools/" class="block py-2 text-white font-medium">Tools</a>
+                <a href="/ueber-uns.html" class="block py-2 text-white hover:text-blue-300">Über uns</a>
                 <a href="/app/#/login" class="block py-2 text-blue-400 hover:text-blue-300">Anmelden</a>
             </div>
         </div>
@@ -124,7 +126,7 @@
                 Image Alt Tag Checker
             </h1>
             <p class="text-xl text-gray-300 max-w-2xl mx-auto mb-4">
-                Füge deinen HTML-Quellcode ein und prüfe sofort alle Bilder auf fehlende, leere oder zu kurze Alt-Texte. Keine Installation, keine Anmeldung — vollständig lokal im Browser.
+                Füge deinen HTML-Quellcode ein und prüfe sofort alle Bilder auf fehlende, leere oder zu kurze Alt-Texte. Keine Installation, keine Anmeldung - vollständig lokal im Browser.
             </p>
             <p class="text-gray-400 text-sm">Alt-Texte verbessern SEO, Barrierefreiheit und Google Bilder-Rankings.</p>
         </div>
@@ -287,7 +289,7 @@
                         <h4 class="font-semibold text-green-400 mb-3">✓ So machst du es richtig</h4>
                         <ul class="space-y-2 text-gray-300 text-sm">
                             <li>· Beschreibe das Bild konkret und aussagekräftig</li>
-                            <li>· Verwende das Haupt-Keyword natürlich — kein Keyword-Stuffing</li>
+                            <li>· Verwende das Haupt-Keyword natürlich - kein Keyword-Stuffing</li>
                             <li>· Halte den Alt-Text zwischen 50-125 Zeichen</li>
                             <li>· Bei dekorativen Bildern: <code class="text-blue-400">alt=""</code> (leer, aber vorhanden)</li>
                             <li>· Bei verlinkten Bildern: beschreibe das Ziel des Links</li>
@@ -371,7 +373,7 @@
   <!-- Bild ohne Alt-Attribut (Fehler!) -->
   <img src="images/icon-arrow.png" width="24" height="24">
 
-  <!-- Bild mit leerem Alt-Text (dekorativ — korrekt!) -->
+  <!-- Bild mit leerem Alt-Text (dekorativ - korrekt!) -->
   <img src="images/divider-line.svg" alt="" role="presentation">
 
   <!-- Bild mit zu kurzem Alt-Text -->
@@ -412,8 +414,8 @@
                     badge = 'Fehlt';
                     recommendation = 'Alt-Attribut komplett fehlt. Beschreibenden Alt-Text hinzufügen (50–125 Zeichen).';
                 } else if (altText === '') {
-                    // Empty alt — could be intentional (decorative) or a mistake
-                    // We classify as "decorative" — valid for decorative images
+                    // Empty alt - could be intentional (decorative) or a mistake
+                    // We classify as "decorative" - valid for decorative images
                     status = 'decorative';
                     badge = 'Dekorativ';
                     recommendation = 'Leerer Alt-Text signalisiert ein dekoratives Bild. Korrekt, wenn das Bild keine Information trägt. Falls informativ: Alt-Text ergänzen.';
@@ -448,7 +450,7 @@
                     if (maxRepeat >= 3) {
                         status = 'warning';
                         badge = 'Keyword-Stuffing';
-                        recommendation = 'Ein Wort kommt sehr oft vor — mögliches Keyword-Stuffing. Alt-Text natürlicher formulieren.';
+                        recommendation = 'Ein Wort kommt sehr oft vor - mögliches Keyword-Stuffing. Alt-Text natürlicher formulieren.';
                     }
                 }
 
@@ -483,7 +485,7 @@
 
             tbody.innerHTML = filtered.map(r => {
                 const srcDisplay = r.src.length > 45 ? '...' + r.src.slice(-42) : r.src;
-                const altDisplay = r.altText === null ? '<em class="text-red-400">— fehlt —</em>' :
+                const altDisplay = r.altText === null ? '<em class="text-red-400">- fehlt -</em>' :
                     r.altText === '' ? '<em class="text-gray-500">(leer)</em>' :
                     r.altText.length > 50 ? escapeHtml(r.altText.slice(0, 50)) + '<span class="text-gray-500">…</span>' :
                     escapeHtml(r.altText);
@@ -496,7 +498,7 @@
                     <td class="px-5 py-4 text-gray-500">${r.idx}</td>
                     <td class="px-5 py-4 text-gray-300 font-mono text-xs truncate-path" title="${escapeHtml(r.src)}">${escapeHtml(srcDisplay)}</td>
                     <td class="px-5 py-4 text-gray-300 text-xs max-w-xs">${altDisplay}</td>
-                    <td class="px-5 py-4 text-gray-400 text-xs">${r.altText === null ? '—' : r.altLen + ' Zeichen'}</td>
+                    <td class="px-5 py-4 text-gray-400 text-xs">${r.altText === null ? '-' : r.altLen + ' Zeichen'}</td>
                     <td class="px-5 py-4"><span class="px-2.5 py-1 rounded-full text-xs font-semibold ${badgeClass}">${r.badge}</span></td>
                     <td class="px-5 py-4 text-gray-400 text-xs max-w-sm">${escapeHtml(r.recommendation)}</td>
                 </tr>`;

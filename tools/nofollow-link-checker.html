@@ -148,6 +148,7 @@
     <nav>
         <a href="/blog/">Blog</a>
         <a href="/tools/">Tools</a>
+        <a href="/ueber-uns.html">Über uns</a>
         <a href="/#pricing">Preise</a>
     </nav>
 </header>
@@ -242,7 +243,7 @@
     <!-- Info Section -->
     <div class="info-section">
         <h2>Was ist der Nofollow-Link-Checker?</h2>
-        <p>Dieses Tool analysiert alle Links (<code>&lt;a&gt;</code>-Tags) in einem HTML-Code und zeigt dir, welche Links den Status <strong>dofollow</strong>, <strong>nofollow</strong>, <strong>ugc</strong> oder <strong>sponsored</strong> haben. So erkennst du auf einen Blick, welche Links auf deiner Seite PageRank übertragen — und welche nicht.</p>
+        <p>Dieses Tool analysiert alle Links (<code>&lt;a&gt;</code>-Tags) in einem HTML-Code und zeigt dir, welche Links den Status <strong>dofollow</strong>, <strong>nofollow</strong>, <strong>ugc</strong> oder <strong>sponsored</strong> haben. So erkennst du auf einen Blick, welche Links auf deiner Seite PageRank übertragen - und welche nicht.</p>
         <p><strong>So nutzt du das Tool:</strong></p>
         <ul>
             <li>Öffne die gewünschte Seite im Browser</li>
@@ -251,10 +252,10 @@
             <li>Auf „Links analysieren" klicken</li>
         </ul>
         <div class="legend" style="margin-top:1rem;">
-            <div class="legend-item"><span class="badge badge-dofollow">✅ Dofollow</span> — Kein rel-Attribut, überträgt PageRank</div>
-            <div class="legend-item"><span class="badge badge-nofollow">🚫 Nofollow</span> — rel="nofollow", überträgt keinen PageRank</div>
-            <div class="legend-item"><span class="badge badge-ugc">💬 UGC</span> — User Generated Content (Kommentare, Foren)</div>
-            <div class="legend-item"><span class="badge badge-sponsored">💰 Sponsored</span> — Bezahlter oder Affiliate-Link</div>
+            <div class="legend-item"><span class="badge badge-dofollow">✅ Dofollow</span> - Kein rel-Attribut, überträgt PageRank</div>
+            <div class="legend-item"><span class="badge badge-nofollow">🚫 Nofollow</span> - rel="nofollow", überträgt keinen PageRank</div>
+            <div class="legend-item"><span class="badge badge-ugc">💬 UGC</span> - User Generated Content (Kommentare, Foren)</div>
+            <div class="legend-item"><span class="badge badge-sponsored">💰 Sponsored</span> - Bezahlter oder Affiliate-Link</div>
         </div>
     </div>
 
@@ -279,8 +280,9 @@
         <a href="/">Shift07</a>
         <a href="/blog/">Blog</a>
         <a href="/tools/">Tools</a>
+        <a href="/ueber-uns.html">Über uns</a>
         <a href="/impressum.html">Impressum</a>
-        <a href="/datenschutz.html">Datenschutz</a>
+        <a href="/datenschutz.html">Datenschutz</a> · <a href="/ueber-uns.html">Über uns</a>
     </p>
     <p style="margin-top:0.5rem">© 2026 Thümmler AI GmbH · Leonardo-da-Vinci-Straße 15 · 14467 Potsdam</p>
 </footer>
@@ -347,7 +349,7 @@ function analyzeLinks() {
     anchors.forEach((a, idx) => {
         const href = a.getAttribute('href') || '';
         const rel = (a.getAttribute('rel') || '').toLowerCase().trim();
-        const text = (a.textContent || '').trim().substring(0, 80) || '—';
+        const text = (a.textContent || '').trim().substring(0, 80) || '-';
 
         // Skip mailto: / tel: / javascript:
         if (href.startsWith('mailto:') || href.startsWith('tel:') || href.startsWith('javascript:') || href === '#') return;

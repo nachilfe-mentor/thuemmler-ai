@@ -113,6 +113,7 @@
                         <a href="/" class="text-white hover:text-blue-300 px-3 py-2 text-sm font-medium transition-colors">SEO-Tool</a>
                         <a href="/blog/" class="text-white hover:text-blue-300 px-3 py-2 text-sm font-medium transition-colors">Blog</a>
                         <a href="/tools/" class="text-blue-300 px-3 py-2 text-sm font-medium">Tools</a>
+                        <a href="/ueber-uns.html" class="text-white hover:text-blue-300 px-3 py-2 text-sm font-medium transition-colors">Über uns</a>
                         <a href="/app/#/login" class="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:from-blue-600 hover:to-purple-700 transition-all">Anmelden</a>
                     </div>
                     <button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="md:hidden text-white">
@@ -123,6 +124,7 @@
                     <a href="/" class="block text-white hover:text-blue-300 px-3 py-2 text-sm font-medium">SEO-Tool</a>
                     <a href="/blog/" class="block text-white hover:text-blue-300 px-3 py-2 text-sm font-medium">Blog</a>
                     <a href="/tools/" class="block text-blue-300 px-3 py-2 text-sm font-medium">Tools</a>
+                    <a href="/ueber-uns.html" class="block text-white hover:text-blue-300 px-3 py-2 text-sm font-medium">Über uns</a>
                     <a href="/app/#/login" class="block text-white hover:text-blue-300 px-3 py-2 text-sm font-medium">Anmelden</a>
                 </div>
             </div>
@@ -133,7 +135,7 @@
             <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">
                 <span class="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Sitemap-Validator</span>
             </h1>
-            <p class="text-xl text-blue-200/80 max-w-2xl mx-auto">Prüfe deine sitemap.xml auf Fehler, Duplikate und Best Practices — kostenlos und sofort im Browser.</p>
+            <p class="text-xl text-blue-200/80 max-w-2xl mx-auto">Prüfe deine sitemap.xml auf Fehler, Duplikate und Best Practices - kostenlos und sofort im Browser.</p>
         </section>
 
         <!-- Main Tool -->
@@ -253,7 +255,7 @@
                     </div>
                     <div>
                         <h3 class="text-white font-semibold mb-1">Vollständige SEO-Analyse mit Shift07</h3>
-                        <p class="text-blue-200/70 text-sm mb-3">Die Sitemap ist nur ein Faktor. Shift07 prüft alle 8 SEO-Rankingfaktoren deiner Website automatisch — Meta-Tags, Ladezeit, SSL, strukturierte Daten und mehr.</p>
+                        <p class="text-blue-200/70 text-sm mb-3">Die Sitemap ist nur ein Faktor. Shift07 prüft alle 8 SEO-Rankingfaktoren deiner Website automatisch - Meta-Tags, Ladezeit, SSL, strukturierte Daten und mehr.</p>
                         <a href="/" class="inline-flex items-center text-blue-400 hover:text-blue-300 text-sm font-medium transition-colors">
                             Jetzt kostenlos mit Shift07 analysieren
                             <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
@@ -344,6 +346,7 @@
                         <a href="/impressum.html" class="text-gray-300 hover:text-white transition-colors text-sm">Impressum</a>
                         <a href="/datenschutz.html" class="text-gray-300 hover:text-white transition-colors text-sm">Datenschutz</a>
                         <a href="/agb.html" class="text-gray-300 hover:text-white transition-colors text-sm">AGB</a>
+                        <a href="/ueber-uns.html" class="text-gray-300 hover:text-white transition-colors text-sm">Über uns</a>
                     </div>
                 </div>
             </div>
@@ -549,7 +552,7 @@
             } else if (urls.length > 40000) {
                 issues.push({ type: 'warning', title: `Viele URLs: ${urls.length.toLocaleString('de-DE')} (nähere dich dem 50.000er Limit)`, desc: 'Erwäge die Aufteilung auf mehrere Sitemap-Dateien um mehr Kontrolle zu haben.' });
             } else {
-                issues.push({ type: 'ok', title: `${urls.length.toLocaleString('de-DE')} URLs — innerhalb des Limits`, desc: 'Google-Limit: max. 50.000 URLs pro Sitemap-Datei.' });
+                issues.push({ type: 'ok', title: `${urls.length.toLocaleString('de-DE')} URLs - innerhalb des Limits`, desc: 'Google-Limit: max. 50.000 URLs pro Sitemap-Datei.' });
             }
 
             // Dateigröße schätzen (uncomprimiert)

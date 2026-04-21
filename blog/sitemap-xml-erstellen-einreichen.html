@@ -176,20 +176,20 @@
                     <!-- Article Body -->
                     <div class="article-content">
 
-                        <p>Eine <strong>sitemap.xml</strong> ist eine der einfachsten und wirkungsvollsten Maßnahmen im technischen SEO — und wird von überraschend vielen Websites noch immer vernachlässigt. Dabei ist das Prinzip simpel: Du erklärst Google in einer strukturierten XML-Datei, welche Seiten deine Website hat, wie wichtig sie sind und wann sie zuletzt geändert wurden. Google nutzt diese Information, um deine Seiten schneller zu crawlen und zu indexieren.</p>
+                        <p>Eine <strong>sitemap.xml</strong> ist eine der einfachsten und wirkungsvollsten Maßnahmen im technischen SEO - und wird von überraschend vielen Websites noch immer vernachlässigt. Dabei ist das Prinzip simpel: Du erklärst Google in einer strukturierten XML-Datei, welche Seiten deine Website hat, wie wichtig sie sind und wann sie zuletzt geändert wurden. Google nutzt diese Information, um deine Seiten schneller zu crawlen und zu indexieren.</p>
 
                         <p>In diesem Artikel lernst du, wie du eine sitemap.xml erstellst, was die einzelnen XML-Elemente bedeuten, wie du die Datei bei Google einreichst und welche Fehler du unbedingt vermeiden solltest.</p>
 
                         <h2>Was ist eine Sitemap.xml und warum brauchst du sie?</h2>
 
-                        <p>Eine sitemap.xml ist eine XML-Datei, die alle wichtigen URLs deiner Website auflistet. Sie funktioniert wie ein Inhaltsverzeichnis: Du zeigst Suchmaschinen-Crawlern exakt, wo deine Inhalte zu finden sind — ohne dass sie deine Website vollständig durchsuchen müssen.</p>
+                        <p>Eine sitemap.xml ist eine XML-Datei, die alle wichtigen URLs deiner Website auflistet. Sie funktioniert wie ein Inhaltsverzeichnis: Du zeigst Suchmaschinen-Crawlern exakt, wo deine Inhalte zu finden sind - ohne dass sie deine Website vollständig durchsuchen müssen.</p>
 
                         <p>Das ist besonders wichtig für:</p>
                         <ul>
-                            <li><strong>Neue Websites</strong> mit wenigen externen Backlinks — Google findet neue Seiten viel schneller über eine Sitemap als über organisches Crawling</li>
-                            <li><strong>Große Websites</strong> mit vielen Seiten — Suchmaschinen crawlen nicht jede Seite regelmäßig; eine Sitemap hilft, Prioritäten zu setzen</li>
-                            <li><strong>Seiten ohne gute interne Verlinkung</strong> — Seiten, die nirgendwo verlinkt sind, werden ohne Sitemap oft übersehen</li>
-                            <li><strong>Websites mit häufigem Inhaltswechsel</strong> — du kannst Google mitteilen, wie oft sich Inhalte ändern</li>
+                            <li><strong>Neue Websites</strong> mit wenigen externen Backlinks - Google findet neue Seiten viel schneller über eine Sitemap als über organisches Crawling</li>
+                            <li><strong>Große Websites</strong> mit vielen Seiten - Suchmaschinen crawlen nicht jede Seite regelmäßig; eine Sitemap hilft, Prioritäten zu setzen</li>
+                            <li><strong>Seiten ohne gute interne Verlinkung</strong> - Seiten, die nirgendwo verlinkt sind, werden ohne Sitemap oft übersehen</li>
+                            <li><strong>Websites mit häufigem Inhaltswechsel</strong> - du kannst Google mitteilen, wie oft sich Inhalte ändern</li>
                         </ul>
 
                         <p>Wichtig zu verstehen: Eine Sitemap ist keine Garantie, dass Google alle aufgelisteten URLs indexiert. Google entscheidet selbst, welche Seiten es für wertvoll hält. Aber eine Sitemap stellt sicher, dass der Crawler zumindest von allen Seiten weiß.</p>
@@ -216,24 +216,24 @@
 
                         <p>Die XML-Elemente im Überblick:</p>
                         <ul>
-                            <li><code>&lt;urlset&gt;</code> — Das Wurzelelement, das alle URLs umschließt. Das Namespace-Attribut ist Pflicht.</li>
-                            <li><code>&lt;url&gt;</code> — Enthält alle Informationen zu einer einzelnen Seite.</li>
-                            <li><code>&lt;loc&gt;</code> — Die vollständige URL der Seite, inklusive Protokoll (<code>https://</code>). <strong>Pflichtfeld.</strong></li>
-                            <li><code>&lt;lastmod&gt;</code> — Datum der letzten Änderung im Format YYYY-MM-DD. Google nutzt diesen Wert, um zu entscheiden, ob eine Seite erneut gecrawlt werden soll. <em>Optional, aber empfohlen.</em></li>
-                            <li><code>&lt;changefreq&gt;</code> — Wie oft sich die Seite ändert: <code>always</code>, <code>hourly</code>, <code>daily</code>, <code>weekly</code>, <code>monthly</code>, <code>yearly</code>, <code>never</code>. Google wertet diesen Hinweis nur grob aus. <em>Optional.</em></li>
-                            <li><code>&lt;priority&gt;</code> — Relative Priorität der Seite innerhalb deiner Website, von 0.0 bis 1.0. Standardwert ist 0.5. Die Homepage bekommt typischerweise 1.0. <em>Optional.</em></li>
+                            <li><code>&lt;urlset&gt;</code> - Das Wurzelelement, das alle URLs umschließt. Das Namespace-Attribut ist Pflicht.</li>
+                            <li><code>&lt;url&gt;</code> - Enthält alle Informationen zu einer einzelnen Seite.</li>
+                            <li><code>&lt;loc&gt;</code> - Die vollständige URL der Seite, inklusive Protokoll (<code>https://</code>). <strong>Pflichtfeld.</strong></li>
+                            <li><code>&lt;lastmod&gt;</code> - Datum der letzten Änderung im Format YYYY-MM-DD. Google nutzt diesen Wert, um zu entscheiden, ob eine Seite erneut gecrawlt werden soll. <em>Optional, aber empfohlen.</em></li>
+                            <li><code>&lt;changefreq&gt;</code> - Wie oft sich die Seite ändert: <code>always</code>, <code>hourly</code>, <code>daily</code>, <code>weekly</code>, <code>monthly</code>, <code>yearly</code>, <code>never</code>. Google wertet diesen Hinweis nur grob aus. <em>Optional.</em></li>
+                            <li><code>&lt;priority&gt;</code> - Relative Priorität der Seite innerhalb deiner Website, von 0.0 bis 1.0. Standardwert ist 0.5. Die Homepage bekommt typischerweise 1.0. <em>Optional.</em></li>
                         </ul>
 
                         <div class="tip-box">
                             <p class="text-green-300 font-semibold mb-1">Tipp: Nur kanonische URLs eintragen</p>
-                            <p class="text-green-200/80 text-sm">Trage in die Sitemap nur URLs ein, die du auch als kanonische Version definiert hast. Wenn du <a href="/blog/canonical-tags-seo.html">Canonical-Tags</a> verwendest, sollten sitemap.xml und <code>rel="canonical"</code> immer auf dieselbe URL zeigen — andernfalls sendet du widersprüchliche Signale an Google.</p>
+                            <p class="text-green-200/80 text-sm">Trage in die Sitemap nur URLs ein, die du auch als kanonische Version definiert hast. Wenn du <a href="/blog/canonical-tags-seo.html">Canonical-Tags</a> verwendest, sollten sitemap.xml und <code>rel="canonical"</code> immer auf dieselbe URL zeigen - andernfalls sendet du widersprüchliche Signale an Google.</p>
                         </div>
 
                         <h2>Sitemap erstellen: So geht's Schritt für Schritt</h2>
 
                         <h3>Option 1: Manuell erstellen (für kleine Websites)</h3>
 
-                        <p>Wenn deine Website weniger als 20–30 Seiten hat, kannst du die sitemap.xml einfach manuell erstellen. Öffne einen Texteditor, füge das obige Grundgerüst ein und trage alle wichtigen URLs deiner Website ein. Speichere die Datei als <code>sitemap.xml</code> und lade sie ins Stammverzeichnis deiner Website hoch — also unter <code>https://deine-website.de/sitemap.xml</code>.</p>
+                        <p>Wenn deine Website weniger als 20–30 Seiten hat, kannst du die sitemap.xml einfach manuell erstellen. Öffne einen Texteditor, füge das obige Grundgerüst ein und trage alle wichtigen URLs deiner Website ein. Speichere die Datei als <code>sitemap.xml</code> und lade sie ins Stammverzeichnis deiner Website hoch - also unter <code>https://deine-website.de/sitemap.xml</code>.</p>
 
                         <h3>Option 2: Plugin oder CMS-Funktion (für WordPress & Co.)</h3>
 
@@ -256,7 +256,7 @@
                         <ul>
                             <li><strong>Bild-Sitemap:</strong> Hilft Google, Bilder zu entdecken und zu indexieren. Besonders relevant für Fotografen, Onlineshops und Portfolios</li>
                             <li><strong>Video-Sitemap:</strong> Für Websites mit eigenem Video-Content (nicht YouTube-Einbettungen)</li>
-                            <li><strong>News-Sitemap:</strong> Speziell für Google News zugelassene Nachrichtenportale — ermöglicht schnellere Indexierung aktueller Artikel</li>
+                            <li><strong>News-Sitemap:</strong> Speziell für Google News zugelassene Nachrichtenportale - ermöglicht schnellere Indexierung aktueller Artikel</li>
                         </ul>
 
                         <p>Für die meisten kleinen und mittleren Unternehmen reicht die Standard-URL-Sitemap vollkommen aus.</p>
@@ -304,7 +304,7 @@
 
                         <ul>
                             <li><strong>Bei neuen Seiten:</strong> Füge die URL sofort zur Sitemap hinzu und aktualisiere das <code>lastmod</code>-Datum der Sitemap-Index-Datei</li>
-                            <li><strong>Bei geänderten Inhalten:</strong> Aktualisiere das <code>lastmod</code>-Datum der entsprechenden URL — Google prüft das und entscheidet, ob ein erneutes Crawlen nötig ist</li>
+                            <li><strong>Bei geänderten Inhalten:</strong> Aktualisiere das <code>lastmod</code>-Datum der entsprechenden URL - Google prüft das und entscheidet, ob ein erneutes Crawlen nötig ist</li>
                             <li><strong>Bei gelöschten Seiten:</strong> Entferne die URL aus der Sitemap. Eine 404-Seite in der Sitemap zu behalten, verschwendet Crawl-Budget</li>
                             <li><strong>CMS-Nutzer:</strong> Stelle sicher, dass die automatische Sitemap-Aktualisierung aktiviert ist</li>
                         </ul>
@@ -312,7 +312,7 @@
                         <h2>Häufige Fehler und wie du sie vermeidest</h2>
 
                         <h3>1. Gesperrte URLs in der Sitemap</h3>
-                        <p>Ein häufiger und schwerwiegender Fehler: URLs, die in der <a href="/blog/robots-txt-konfigurieren.html">robots.txt</a> gesperrt sind, tauchen trotzdem in der Sitemap auf. Das ist widersprüchlich — Google zeigt diesen Konflikt in der Search Console als Warnung an. Prüfe regelmäßig, dass alle Sitemap-URLs crawlbar sind.</p>
+                        <p>Ein häufiger und schwerwiegender Fehler: URLs, die in der <a href="/blog/robots-txt-konfigurieren.html">robots.txt</a> gesperrt sind, tauchen trotzdem in der Sitemap auf. Das ist widersprüchlich - Google zeigt diesen Konflikt in der Search Console als Warnung an. Prüfe regelmäßig, dass alle Sitemap-URLs crawlbar sind.</p>
 
                         <h3>2. Nicht-kanonische URLs eintragen</h3>
                         <p>Wenn du eine Seite unter mehreren URLs erreichbar hast (z.B. mit und ohne Trailing Slash, mit und ohne <code>www</code>), trage nur die <a href="/blog/canonical-tags-seo.html">kanonische Version</a> in die Sitemap ein. Die kanonische URL muss außerdem mit dem <code>rel="canonical"</code>-Tag im HTML übereinstimmen.</p>
@@ -324,7 +324,7 @@
                         <p>Wenn alle URLs mit <code>&lt;priority&gt;1.0&lt;/priority&gt;</code> gelistet sind, verliert die Prioritätsangabe ihren Wert. Nutze die Abstufungen sinnvoll: 1.0 für die Homepage, 0.8 für wichtige Kategorieseiten, 0.6 für Unterseiten, 0.4 für Archivseiten.</p>
 
                         <h3>5. Sitemap nicht im Stammverzeichnis</h3>
-                        <p>Die sitemap.xml gehört ins Stammverzeichnis deiner Domain: <code>https://deine-website.de/sitemap.xml</code>. Eine Sitemap unter einem Unterverzeichnis (<code>/blog/sitemap.xml</code>) funktioniert zwar technisch, aber Google kann damit nur URLs crawlen, die mit <code>/blog/</code> beginnen — nicht die gesamte Website.</p>
+                        <p>Die sitemap.xml gehört ins Stammverzeichnis deiner Domain: <code>https://deine-website.de/sitemap.xml</code>. Eine Sitemap unter einem Unterverzeichnis (<code>/blog/sitemap.xml</code>) funktioniert zwar technisch, aber Google kann damit nur URLs crawlen, die mit <code>/blog/</code> beginnen - nicht die gesamte Website.</p>
 
                         <h2>Meta-Tags, robots.txt und Sitemap: Das Zusammenspiel verstehen</h2>
 
@@ -348,11 +348,11 @@
 
                         <p>Eine korrekt konfigurierte sitemap.xml ist keine optionale Maßnahme, sondern Grundausstattung für jede professionelle Website. Sie hilft Google, neue Inhalte schneller zu entdecken, gibt dir Kontrolle über die Crawling-Priorität und ist die direkte Brücke zur Google Search Console.</p>
 
-                        <p>Das Erstellen dauert je nach Website-Größe zwischen fünf Minuten (CMS-Plugin) und einer Stunde (manuell). Der Aufwand lohnt sich — besonders für neue Websites, die noch wenig organischen Traffic haben und auf schnelle Indexierung angewiesen sind.</p>
+                        <p>Das Erstellen dauert je nach Website-Größe zwischen fünf Minuten (CMS-Plugin) und einer Stunde (manuell). Der Aufwand lohnt sich - besonders für neue Websites, die noch wenig organischen Traffic haben und auf schnelle Indexierung angewiesen sind.</p>
 
-                        <p>Du möchtest wissen, ob deine Website richtig für Google konfiguriert ist? <a href="/">Teste sie kostenlos mit unserem SEO-Analyse-Tool</a> — du bekommst in Sekunden eine vollständige Übersicht aller technischen SEO-Probleme, einschließlich fehlender oder fehlerhafter Sitemaps.</p>
+                        <p>Du möchtest wissen, ob deine Website richtig für Google konfiguriert ist? <a href="/">Teste sie kostenlos mit unserem SEO-Analyse-Tool</a> - du bekommst in Sekunden eine vollständige Übersicht aller technischen SEO-Probleme, einschließlich fehlender oder fehlerhafter Sitemaps.</p>
 
-                        <p>Hast du deine Sitemap erstellt, solltest du sie auch auf Fehler prüfen. Unser <a href="/blog/sitemap-validator-tool.html">Sitemap-Validator</a> analysiert deine sitemap.xml auf XML-Fehler, Duplikate, ungültige URLs und Formatprobleme — direkt im Browser.</p>
+                        <p>Hast du deine Sitemap erstellt, solltest du sie auch auf Fehler prüfen. Unser <a href="/blog/sitemap-validator-tool.html">Sitemap-Validator</a> analysiert deine sitemap.xml auf XML-Fehler, Duplikate, ungültige URLs und Formatprobleme - direkt im Browser.</p>
 
                     </div>
 
@@ -370,7 +370,7 @@
                     <!-- CTA Box -->
                     <div class="bg-gradient-to-br from-blue-600/20 to-indigo-600/20 border border-blue-500/30 rounded-2xl p-6 text-center">
                         <h3 class="text-lg font-bold text-white mb-3">Kostenlose SEO-Analyse</h3>
-                        <p class="text-gray-400 text-sm mb-5">Prüfe deine Website auf technische SEO-Fehler — inkl. Sitemap, robots.txt und Meta-Tags.</p>
+                        <p class="text-gray-400 text-sm mb-5">Prüfe deine Website auf technische SEO-Fehler - inkl. Sitemap, robots.txt und Meta-Tags.</p>
                         <a href="/" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-6 py-3 rounded-lg font-medium transition-all inline-block w-full">Jetzt analysieren</a>
                     </div>
 
@@ -410,7 +410,7 @@
     <section class="py-16 px-4 bg-gradient-to-r from-blue-900/30 to-indigo-900/30 border-t border-b border-white/5">
         <div class="max-w-3xl mx-auto text-center">
             <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">Teste deine Website jetzt kostenlos</h2>
-            <p class="text-gray-400 mb-8">Erhalte eine vollständige SEO-Analyse mit konkreten Verbesserungsvorschlägen — auch für Sitemap und technische Fehler.</p>
+            <p class="text-gray-400 mb-8">Erhalte eine vollständige SEO-Analyse mit konkreten Verbesserungsvorschlägen - auch für Sitemap und technische Fehler.</p>
             <form action="/" method="get" class="flex flex-col sm:flex-row gap-3 max-w-xl mx-auto">
                 <input type="url" placeholder="https://deine-website.de" class="flex-1 bg-slate-800 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-blue-500">
                 <a href="/" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-8 py-3 rounded-lg font-medium transition-all whitespace-nowrap">Analyse starten</a>

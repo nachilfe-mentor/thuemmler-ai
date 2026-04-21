@@ -116,6 +116,7 @@
                     <a href="/" class="text-gray-300 hover:text-white transition-colors">SEO-Tool</a>
                     <a href="/blog/" class="text-white font-medium border-b-2 border-blue-500 pb-0.5">Blog</a>
                     <a href="/tools/" class="text-gray-300 hover:text-white transition-colors">Tools</a>
+                    <a href="/ueber-uns.html" class="text-white hover:text-blue-300 transition-colors">Über uns</a>
                     <a href="/app/#/login" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-5 py-2 rounded-lg font-medium transition-all">Anmelden</a>
                 </div>
                 <button id="mobile-menu-btn" class="md:hidden text-gray-300 hover:text-white">
@@ -128,6 +129,7 @@
                 <a href="/" class="block py-2 text-gray-300 hover:text-white">SEO-Tool</a>
                 <a href="/blog/" class="block py-2 text-white font-medium">Blog</a>
                 <a href="/tools/" class="block py-2 text-gray-300 hover:text-white">Tools</a>
+                <a href="/ueber-uns.html" class="block py-2 text-white hover:text-blue-300">Über uns</a>
                 <a href="/app/#/login" class="block py-2 text-blue-400 hover:text-blue-300">Anmelden</a>
             </div>
         </div>
@@ -165,27 +167,27 @@
             <!-- Article Body -->
             <div class="article-content">
 
-                <p>Wenn du in Google nach etwas suchst und unterhalb des Seitentitels kleine Navigationspfade wie <em>„Startseite → Kategorie → Artikel"</em> siehst, dann sind das Breadcrumb Rich Snippets — und sie entstehen durch <strong>BreadcrumbList Schema Markup</strong>. In diesem Leitfaden lernst du, wie du dieses strukturierte Datenelement korrekt implementierst, welche Fehler häufig gemacht werden und warum Breadcrumbs weit mehr als nur eine UX-Spielerei sind.</p>
+                <p>Wenn du in Google nach etwas suchst und unterhalb des Seitentitels kleine Navigationspfade wie <em>„Startseite → Kategorie → Artikel"</em> siehst, dann sind das Breadcrumb Rich Snippets - und sie entstehen durch <strong>BreadcrumbList Schema Markup</strong>. In diesem Leitfaden lernst du, wie du dieses strukturierte Datenelement korrekt implementierst, welche Fehler häufig gemacht werden und warum Breadcrumbs weit mehr als nur eine UX-Spielerei sind.</p>
 
                 <h2>Was ist BreadcrumbList Schema Markup?</h2>
 
-                <p>BreadcrumbList ist ein Schema.org-Datentyp, der die hierarchische Navigationsstruktur einer Seite beschreibt. Du gibst Google damit maschinenlesbar an, wo sich eine Seite in der Seitenstruktur befindet — von der Startseite bis zur aktuellen Seite.</p>
+                <p>BreadcrumbList ist ein Schema.org-Datentyp, der die hierarchische Navigationsstruktur einer Seite beschreibt. Du gibst Google damit maschinenlesbar an, wo sich eine Seite in der Seitenstruktur befindet - von der Startseite bis zur aktuellen Seite.</p>
 
                 <p>Google kann diese Informationen dann direkt in den Suchergebnissen anzeigen. Statt der normalen URL erscheint ein Navigationspfad:</p>
 
                 <pre><code>shift07.ai › Blog › Tech-SEO › BreadcrumbList Schema</code></pre>
 
-                <p>Das hat mehrere Vorteile: Die URL wird lesbarer, Nutzer sehen sofort wo sie landen werden, und die CTR (Click-Through-Rate) steigt nachweislich — weil Nutzer dem Ergebnis besser vertrauen.</p>
+                <p>Das hat mehrere Vorteile: Die URL wird lesbarer, Nutzer sehen sofort wo sie landen werden, und die CTR (Click-Through-Rate) steigt nachweislich - weil Nutzer dem Ergebnis besser vertrauen.</p>
 
                 <h2>Warum Breadcrumb Schema für SEO wichtig ist</h2>
 
                 <p>Breadcrumb Schema ist aus drei Gründen SEO-relevant:</p>
 
                 <h3>1. Verbesserte CTR durch Rich Snippets</h3>
-                <p>Breadcrumbs in den SERPs (Search Engine Result Pages) machen ein Snippet visuell attraktiver. Studien zeigen, dass Rich Snippets die CTR um 10–20 % steigern können. Nutzer wissen auf einen Blick, auf welcher Ebene deiner Website sie landen werden — das schafft Vertrauen.</p>
+                <p>Breadcrumbs in den SERPs (Search Engine Result Pages) machen ein Snippet visuell attraktiver. Studien zeigen, dass Rich Snippets die CTR um 10–20 % steigern können. Nutzer wissen auf einen Blick, auf welcher Ebene deiner Website sie landen werden - das schafft Vertrauen.</p>
 
                 <h3>2. Bessere Seitenstruktur-Kommunikation</h3>
-                <p>Googlebot nutzt Breadcrumb-Informationen, um deine Seitenarchitektur zu verstehen. Wenn du konsistente BreadcrumbList-Markierungen auf allen Seiten hast, kann Google die Zusammenhänge zwischen Seiten schneller erfassen — das hilft beim <a href="/blog/crawl-budget-optimieren.html">Crawl-Budget</a> und bei der korrekten Einordnung deiner Inhalte.</p>
+                <p>Googlebot nutzt Breadcrumb-Informationen, um deine Seitenarchitektur zu verstehen. Wenn du konsistente BreadcrumbList-Markierungen auf allen Seiten hast, kann Google die Zusammenhänge zwischen Seiten schneller erfassen - das hilft beim <a href="/blog/crawl-budget-optimieren.html">Crawl-Budget</a> und bei der korrekten Einordnung deiner Inhalte.</p>
 
                 <h3>3. Unterstützung der internen Verlinkungsstrategie</h3>
                 <p>Breadcrumbs stärken deine <a href="/blog/interne-verlinkung-seo-strategie.html">interne Verlinkung</a>. Jeder Breadcrumb-Pfad ist ein interner Link, der Linkjuice von der Hauptkategorie zur Unterseite weitergibt. Korrekte Schema-Markup macht diese Beziehungen für Google explizit.</p>
@@ -229,7 +231,7 @@
                 <p>Wichtige Details zu beachten:</p>
                 <ul>
                     <li><strong>position</strong>: Nummerierung beginnt bei 1 (nicht 0)</li>
-                    <li><strong>item</strong>: Die URL des jeweiligen Navigationspunkts — beim letzten Eintrag optional (aktuelle Seite)</li>
+                    <li><strong>item</strong>: Die URL des jeweiligen Navigationspunkts - beim letzten Eintrag optional (aktuelle Seite)</li>
                     <li><strong>name</strong>: Der sichtbare Name des Navigationspunkts</li>
                     <li>Die letzte Ebene (<em>aktuelle Seite</em>) benötigt kein <code>item</code>-Attribut, da kein Link notwendig ist</li>
                 </ul>
@@ -349,7 +351,7 @@
 }
 &lt;/script&gt;</code></pre>
 
-                <p>Alternativ kannst du BreadcrumbList als verschachteltes <code>breadcrumb</code>-Property im Article-Schema einbinden — beide Varianten werden von Google akzeptiert.</p>
+                <p>Alternativ kannst du BreadcrumbList als verschachteltes <code>breadcrumb</code>-Property im Article-Schema einbinden - beide Varianten werden von Google akzeptiert.</p>
 
                 <h2>Häufige Fehler bei BreadcrumbList Schema</h2>
 
@@ -431,15 +433,15 @@ export default function BlogPost({ post }) {
 
                 <p>Google stellt zwei Tools zur Verfügung:</p>
                 <ul>
-                    <li><strong>Google Rich Results Test</strong> — prüft, ob das Schema korrekt implementiert ist und ob eine Rich-Snippet-Darstellung berechtigt ist</li>
-                    <li><strong>Google Search Console → Verbesserungen → Breadcrumbs</strong> — zeigt alle indizierten Seiten mit Breadcrumb-Schema und eventuelle Fehler</li>
+                    <li><strong>Google Rich Results Test</strong> - prüft, ob das Schema korrekt implementiert ist und ob eine Rich-Snippet-Darstellung berechtigt ist</li>
+                    <li><strong>Google Search Console → Verbesserungen → Breadcrumbs</strong> - zeigt alle indizierten Seiten mit Breadcrumb-Schema und eventuelle Fehler</li>
                 </ul>
 
                 <p>Alternativ kannst du unseren <a href="/tools/json-ld-structured-data-validator.html">JSON-LD Structured Data Validator</a> nutzen, um dein Schema direkt zu prüfen.</p>
 
                 <h2>Wann erscheinen Breadcrumbs in den SERPs?</h2>
 
-                <p>Google garantiert keine Anzeige von Breadcrumbs — auch mit korrektem Schema. Folgende Faktoren erhöhen die Wahrscheinlichkeit:</p>
+                <p>Google garantiert keine Anzeige von Breadcrumbs - auch mit korrektem Schema. Folgende Faktoren erhöhen die Wahrscheinlichkeit:</p>
                 <ul>
                     <li>Das Schema ist fehlerfrei (kein Warnung in der Search Console)</li>
                     <li>Die Seite ist auf Google indexiert und wird gecrawlt</li>
@@ -454,7 +456,7 @@ export default function BlogPost({ post }) {
 
                 <p>BreadcrumbList-Schema ist einer von mehreren Bausteinen einer guten <a href="/blog/seitenstruktur-seo-content-hierarchie.html">Seitenstruktur für SEO</a>. Zusammen mit klaren URL-Strukturen, funktionierenden Kategorieseiten und einer durchdachten <a href="/blog/interne-verlinkung-seo-strategie.html">internen Verlinkungsstrategie</a> signalisierst du Google, dass deine Website gut organisiert und nutzerfreundlich ist.</p>
 
-                <p>Besonders für größere Websites mit vielen Kategorieebenen — wie Online-Shops oder große Content-Portale — ist BreadcrumbList unverzichtbar. Es reduziert die Ambiguität für Googlebot und erhöht die Chance, dass alle Seiten korrekt gecrawlt und eingeordnet werden.</p>
+                <p>Besonders für größere Websites mit vielen Kategorieebenen - wie Online-Shops oder große Content-Portale - ist BreadcrumbList unverzichtbar. Es reduziert die Ambiguität für Googlebot und erhöht die Chance, dass alle Seiten korrekt gecrawlt und eingeordnet werden.</p>
 
                 <h2>Checkliste: BreadcrumbList Schema korrekt implementieren</h2>
 
@@ -473,7 +475,7 @@ export default function BlogPost({ post }) {
 
                 <h2>Fazit</h2>
 
-                <p>BreadcrumbList Schema Markup ist eine der einfachsten Maßnahmen im <a href="/blog/strukturierte-daten-seo-schema-markup.html">Bereich strukturierte Daten</a>, die du sofort umsetzen kannst. Die Implementierung dauert bei statischen Websites weniger als 30 Minuten — und der Nutzen ist klar: bessere CTR, klarere Seitenstruktur für Google und ein professionelleres Erscheinungsbild in den Suchergebnissen.</p>
+                <p>BreadcrumbList Schema Markup ist eine der einfachsten Maßnahmen im <a href="/blog/strukturierte-daten-seo-schema-markup.html">Bereich strukturierte Daten</a>, die du sofort umsetzen kannst. Die Implementierung dauert bei statischen Websites weniger als 30 Minuten - und der Nutzen ist klar: bessere CTR, klarere Seitenstruktur für Google und ein professionelleres Erscheinungsbild in den Suchergebnissen.</p>
 
                 <p>Kombiniere BreadcrumbList mit <a href="/blog/localbusiness-schema-markup-anleitung.html">LocalBusiness Schema</a>, <a href="/blog/article-schema-markup-seo.html">Article Schema</a> und weiteren Structured-Data-Typen, um dein gesamtes Rich-Snippet-Potenzial auszuschöpfen. Mit unserer kostenlosen <a href="/">SEO-Analyse auf shift07.ai</a> kannst du prüfen, welche strukturierten Daten auf deiner Website noch fehlen.</p>
 
@@ -493,7 +495,7 @@ export default function BlogPost({ post }) {
             <!-- CTA -->
             <div class="mt-12 p-8 bg-gradient-to-r from-blue-600/20 to-indigo-600/20 border border-blue-500/30 rounded-2xl text-center">
                 <h3 class="text-2xl font-bold text-white mb-3">Fehlt BreadcrumbList Schema auf deiner Website?</h3>
-                <p class="text-gray-300 mb-6">Unsere kostenlose SEO-Analyse prüft strukturierte Daten, Meta-Tags, Performance und mehr — in unter 30 Sekunden.</p>
+                <p class="text-gray-300 mb-6">Unsere kostenlose SEO-Analyse prüft strukturierte Daten, Meta-Tags, Performance und mehr - in unter 30 Sekunden.</p>
                 <a href="/" class="inline-block bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-semibold px-8 py-3 rounded-xl transition-all">
                     Kostenlose SEO-Analyse starten →
                 </a>
@@ -524,7 +526,7 @@ export default function BlogPost({ post }) {
     <!-- Footer -->
     <footer class="mt-20 border-t border-white/10 py-12 px-4">
         <div class="max-w-7xl mx-auto text-center text-gray-400 text-sm">
-            <p>© 2026 Shift07 — Thümmler AI GmbH, Leonardo-da-Vinci-Straße 15, 14467 Potsdam</p>
+            <p>© 2026 Shift07 - Thümmler AI GmbH, Leonardo-da-Vinci-Straße 15, 14467 Potsdam</p>
             <div class="flex justify-center gap-6 mt-4">
                 <a href="/impressum.html" class="hover:text-white transition-colors">Impressum</a>
                 <a href="/datenschutz.html" class="hover:text-white transition-colors">Datenschutz</a>

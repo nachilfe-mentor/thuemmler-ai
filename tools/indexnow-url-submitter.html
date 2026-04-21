@@ -118,7 +118,7 @@
             <div class="w-14 h-14 bg-indigo-600/20 border border-indigo-500/30 rounded-2xl flex items-center justify-center flex-shrink-0 text-2xl">⚡</div>
             <div>
                 <h1 class="text-3xl md:text-4xl font-extrabold mb-2">IndexNow URL Submitter</h1>
-                <p class="text-gray-400 text-lg">URLs direkt an Bing, Yandex und andere Suchmaschinen einreichen — sofortige Indexierung ohne Wartezeit.</p>
+                <p class="text-gray-400 text-lg">URLs direkt an Bing, Yandex und andere Suchmaschinen einreichen - sofortige Indexierung ohne Wartezeit.</p>
             </div>
         </div>
         <div class="flex flex-wrap gap-3">
@@ -140,7 +140,7 @@
             <span class="text-blue-400">ℹ️</span> Was ist IndexNow?
         </h2>
         <p class="text-gray-400 text-sm leading-relaxed mb-3">
-            <strong class="text-white">IndexNow</strong> ist ein offenes Protokoll, das es Website-Betreibern erlaubt, neue und geänderte URLs direkt an Suchmaschinen zu melden — anstatt auf den nächsten Crawl zu warten. Entwickelt von Microsoft (Bing) und Yandex, unterstützt es inzwischen mehrere Suchmaschinen gleichzeitig.
+            <strong class="text-white">IndexNow</strong> ist ein offenes Protokoll, das es Website-Betreibern erlaubt, neue und geänderte URLs direkt an Suchmaschinen zu melden - anstatt auf den nächsten Crawl zu warten. Entwickelt von Microsoft (Bing) und Yandex, unterstützt es inzwischen mehrere Suchmaschinen gleichzeitig.
         </p>
         <p class="text-gray-400 text-sm leading-relaxed">
             Statt Tage oder Wochen auf eine Neuindexierung zu warten, kann Google und Bing innerhalb von Stunden informiert werden. Du brauchst nur einen API-Schlüssel (eine Textdatei auf deiner Domain) und die URLs, die du einreichen möchtest.
@@ -162,7 +162,7 @@
         </div>
         <div id="step1-body" class="p-5 border-t border-white/10">
             <p class="text-gray-400 text-sm mb-4">
-                Für IndexNow brauchst du einen <strong class="text-white">API-Schlüssel</strong> — eine einfache Textdatei, die bestätigt, dass du der Eigentümer der Domain bist. Generiere ihn hier:
+                Für IndexNow brauchst du einen <strong class="text-white">API-Schlüssel</strong> - eine einfache Textdatei, die bestätigt, dass du der Eigentümer der Domain bist. Generiere ihn hier:
             </p>
             <div class="flex gap-3 mb-5">
                 <button onclick="generateKey()" class="bg-indigo-600 hover:bg-indigo-500 px-5 py-2.5 rounded-lg font-semibold text-sm transition-colors flex items-center gap-2">
@@ -295,7 +295,7 @@
                         <div class="text-xs text-gray-500 mt-1">URLs</div>
                     </div>
                     <div class="bg-slate-800 rounded-lg p-3 text-center">
-                        <div class="text-lg font-bold text-white truncate" id="summary-host">—</div>
+                        <div class="text-lg font-bold text-white truncate" id="summary-host">-</div>
                         <div class="text-xs text-gray-500 mt-1">Domain</div>
                     </div>
                     <div class="bg-slate-800 rounded-lg p-3 text-center">
@@ -455,7 +455,7 @@
     <!-- CTA -->
     <div class="bg-gradient-to-r from-indigo-900/50 to-violet-900/50 border border-indigo-500/30 rounded-2xl p-6 text-center mb-8">
         <h3 class="font-bold text-xl text-white mb-2">Mehr SEO-Tools für deine Website</h3>
-        <p class="text-gray-400 text-sm mb-4">Entdecke alle kostenlosen Tools von Shift07 — von der Sitemap-Validierung bis zum Title-Tag-Checker.</p>
+        <p class="text-gray-400 text-sm mb-4">Entdecke alle kostenlosen Tools von Shift07 - von der Sitemap-Validierung bis zum Title-Tag-Checker.</p>
         <a href="/tools/" class="inline-block bg-indigo-600 hover:bg-indigo-500 px-6 py-2.5 rounded-xl font-semibold text-sm transition-colors">Alle SEO-Tools →</a>
     </div>
 
@@ -481,7 +481,8 @@
 </main>
 
 <footer class="border-t border-white/10 bg-slate-900/50 py-8 text-center text-sm text-gray-600">
-    <p>&copy; 2026 Shift07 · <a href="https://shift07.ai" class="hover:text-gray-400 transition-colors">shift07.ai</a> · <a href="/impressum.html" class="hover:text-gray-400 transition-colors">Impressum</a> · <a href="/datenschutz.html" class="hover:text-gray-400 transition-colors">Datenschutz</a></p>
+    <p>&copy; 2026 Shift07 · <a href="https://shift07.ai" class="hover:text-gray-400 transition-colors">shift07.ai</a> · <a href="/impressum.html" class="hover:text-gray-400 transition-colors">Impressum</a> · <a href="/datenschutz.html" class="hover:text-gray-400 transition-colors">Datenschutz</a>
+                    <a href="/ueber-uns.html" class="text-slate-400 hover:text-white transition-colors text-sm">Über uns</a></p>
 </footer>
 
 <script>
@@ -551,7 +552,7 @@ async function verifyKey() {
         const response = await fetch(keyUrl, { mode: 'no-cors' });
         document.getElementById('verify-result').innerHTML = '<span class="text-green-400">✓ Datei scheint erreichbar</span>';
     } catch (e) {
-        document.getElementById('verify-result').innerHTML = '<span class="text-amber-400">⚠ Prüfung im Browser eingeschränkt — lade die Datei manuell hoch</span>';
+        document.getElementById('verify-result').innerHTML = '<span class="text-amber-400">⚠ Prüfung im Browser eingeschränkt - lade die Datei manuell hoch</span>';
     } finally {
         btn.disabled = false;
         document.getElementById('verify-icon').textContent = '🔍';
@@ -641,7 +642,7 @@ function updateSubmitSummary() {
     const batches = Math.ceil(count / 10000) || 1;
 
     document.getElementById('summary-url-count').textContent = count;
-    document.getElementById('summary-host').textContent = host || '—';
+    document.getElementById('summary-host').textContent = host || '-';
     document.getElementById('summary-batches').textContent = batches;
     document.getElementById('submit-summary').classList.toggle('hidden', count === 0);
 }

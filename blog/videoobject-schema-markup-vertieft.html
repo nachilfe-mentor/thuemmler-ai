@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VideoObject Schema Markup vertieft: Key Moments, Clips, transcript und seekToAction | Shift07 Blog</title>
-    <meta name="description" content="VideoObject Schema Markup für Fortgeschrittene: Key Moments mit hasPart und Clip, seekToAction, transcript Property und Video-Sitemap-Integration — mit vollständigen JSON-LD-Beispielen.">
+    <meta name="description" content="VideoObject Schema Markup für Fortgeschrittene: Key Moments mit hasPart und Clip, seekToAction, transcript Property und Video-Sitemap-Integration - mit vollständigen JSON-LD-Beispielen.">
     <meta name="author" content="Thümmler AI GmbH">
     <link rel="icon" type="image/png" href="/logo.png">
     <link rel="canonical" href="https://shift07.ai/blog/videoobject-schema-markup-vertieft.html">
     <link rel="alternate" type="application/rss+xml" title="Shift07 Blog" href="https://shift07.ai/feed.xml">
     <!-- Open Graph -->
     <meta property="og:title" content="VideoObject Schema Markup vertieft: Key Moments, Clips, transcript und seekToAction | Shift07 Blog">
-    <meta property="og:description" content="VideoObject Schema für Fortgeschrittene: Key Moments, seekToAction, transcript Property und Video-Sitemap-Integration — vollständige JSON-LD-Beispiele.">
+    <meta property="og:description" content="VideoObject Schema für Fortgeschrittene: Key Moments, seekToAction, transcript Property und Video-Sitemap-Integration - vollständige JSON-LD-Beispiele.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://shift07.ai/blog/videoobject-schema-markup-vertieft.html">
     <meta property="og:image" content="https://shift07.ai/blog/images/videoobject-schema-vertieft.png">
@@ -22,7 +22,7 @@
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="VideoObject Schema Markup vertieft: Key Moments, Clips, transcript">
-    <meta name="twitter:description" content="VideoObject Schema für Fortgeschrittene: Key Moments, seekToAction, transcript Property und Video-Sitemap — JSON-LD-Beispiele.">
+    <meta name="twitter:description" content="VideoObject Schema für Fortgeschrittene: Key Moments, seekToAction, transcript Property und Video-Sitemap - JSON-LD-Beispiele.">
     <meta name="twitter:image" content="https://shift07.ai/blog/images/videoobject-schema-vertieft.png">
     <!-- Structured Data -->
     <script type="application/ld+json">
@@ -30,7 +30,7 @@
       "@context": "https://schema.org",
       "@type": "Article",
       "headline": "VideoObject Schema Markup vertieft: Key Moments, Clips, transcript und seekToAction",
-      "description": "VideoObject Schema Markup für Fortgeschrittene: Key Moments mit hasPart und Clip, seekToAction, transcript Property und Video-Sitemap-Integration — mit vollständigen JSON-LD-Beispielen.",
+      "description": "VideoObject Schema Markup für Fortgeschrittene: Key Moments mit hasPart und Clip, seekToAction, transcript Property und Video-Sitemap-Integration - mit vollständigen JSON-LD-Beispielen.",
       "image": "https://shift07.ai/blog/images/videoobject-schema-vertieft.png",
       "datePublished": "2026-04-20T08:00:00+02:00",
       "dateModified": "2026-04-20T08:00:00+02:00",
@@ -120,6 +120,7 @@
                     <a href="/" class="text-gray-300 hover:text-white transition-colors">SEO-Tool</a>
                     <a href="/blog/" class="text-white font-medium border-b-2 border-blue-500 pb-0.5">Blog</a>
                     <a href="/tools/" class="text-gray-300 hover:text-white transition-colors">Tools</a>
+                    <a href="/ueber-uns.html" class="text-white hover:text-blue-300 transition-colors">Über uns</a>
                     <a href="/app/#/login" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-5 py-2 rounded-lg font-medium transition-all">Anmelden</a>
                 </div>
                 <button id="mobile-menu-btn" class="md:hidden text-gray-300 hover:text-white">
@@ -132,6 +133,7 @@
                 <a href="/" class="block py-2 text-gray-300 hover:text-white">SEO-Tool</a>
                 <a href="/blog/" class="block py-2 text-white font-medium">Blog</a>
                 <a href="/tools/" class="block py-2 text-gray-300 hover:text-white">Tools</a>
+                <a href="/ueber-uns.html" class="block py-2 text-white hover:text-blue-300">Über uns</a>
                 <a href="/app/#/login" class="block py-2 text-blue-400 hover:text-blue-300">Anmelden</a>
             </div>
         </div>
@@ -162,7 +164,7 @@
         <div class="article-content">
 
             <p>
-                Wer sein VideoObject Schema Markup bereits implementiert hat, kennt die Basics: <code>name</code>, <code>description</code>, <code>thumbnailUrl</code>, <code>uploadDate</code> und <code>duration</code>. Aber Google bietet deutlich mehr Möglichkeiten, Videos in den Suchergebnissen hervorzuheben — und die meisten Webmaster nutzen nur einen Bruchteil davon. Dieser Artikel zeigt, wie du mit <strong>Key Moments (hasPart + Clip)</strong>, <strong>seekToAction</strong>, der <strong>transcript</strong>-Property und der <strong>Video-Sitemap-Integration</strong> das Maximum aus deinem VideoObject-Markup herausholst.
+                Wer sein VideoObject Schema Markup bereits implementiert hat, kennt die Basics: <code>name</code>, <code>description</code>, <code>thumbnailUrl</code>, <code>uploadDate</code> und <code>duration</code>. Aber Google bietet deutlich mehr Möglichkeiten, Videos in den Suchergebnissen hervorzuheben - und die meisten Webmaster nutzen nur einen Bruchteil davon. Dieser Artikel zeigt, wie du mit <strong>Key Moments (hasPart + Clip)</strong>, <strong>seekToAction</strong>, der <strong>transcript</strong>-Property und der <strong>Video-Sitemap-Integration</strong> das Maximum aus deinem VideoObject-Markup herausholst.
             </p>
             <p>
                 Wenn du die Grundlagen von VideoObject noch nicht kennst, empfehle ich zunächst unseren <a href="/blog/videoobject-schema-markup-seo.html">Einsteiger-Artikel zu VideoObject Schema Markup</a>. Dieser Artikel setzt darauf auf und behandelt ausschließlich fortgeschrittene Properties.
@@ -225,7 +227,7 @@
   "@context": "https://schema.org",
   "@type": "VideoObject",
   "name": "SEO für Anfänger: Vollständige Anleitung 2026",
-  "description": "In diesem Video lernst du alles über SEO — von der Keyword-Recherche bis zur technischen Optimierung.",
+  "description": "In diesem Video lernst du alles über SEO - von der Keyword-Recherche bis zur technischen Optimierung.",
   "thumbnailUrl": "https://example.com/thumbnails/seo-anfaenger.jpg",
   "uploadDate": "2026-04-01T10:00:00+02:00",
   "duration": "PT42M30S",
@@ -305,7 +307,7 @@
 }</code></pre>
 
             <p>
-                Der Platzhalter <code>{seek_to_second_number}</code> ist standardisiert — so heißt er immer. Die URL muss auf eine Seite zeigen, auf der dein Video-Player die Zeitangabe aus dem URL-Parameter liest und das Video an dieser Stelle startet. Für eingebettete YouTube-Videos funktioniert das out-of-the-box.
+                Der Platzhalter <code>{seek_to_second_number}</code> ist standardisiert - so heißt er immer. Die URL muss auf eine Seite zeigen, auf der dein Video-Player die Zeitangabe aus dem URL-Parameter liest und das Video an dieser Stelle startet. Für eingebettete YouTube-Videos funktioniert das out-of-the-box.
             </p>
 
             <h3>seekToAction und Key Moments kombinieren</h3>
@@ -360,7 +362,7 @@
 
             <h2>3. transcript: Das unterschätzte SEO-Signal für Videos</h2>
             <p>
-                Die <code>transcript</code>-Property ist eine der am meisten ignorierten Möglichkeiten im VideoObject-Markup — dabei ist sie für SEO besonders wertvoll. Wenn du das vollständige Transkript deines Videos als Text hinterlegst, kann Google diesen Text für die Indexierung nutzen und dein Video für viel mehr Suchanfragen ranken lassen.
+                Die <code>transcript</code>-Property ist eine der am meisten ignorierten Möglichkeiten im VideoObject-Markup - dabei ist sie für SEO besonders wertvoll. Wenn du das vollständige Transkript deines Videos als Text hinterlegst, kann Google diesen Text für die Indexierung nutzen und dein Video für viel mehr Suchanfragen ranken lassen.
             </p>
             <p>
                 Google kann zwar mittlerweile Audio aus Videos eigenständig transkribieren, aber ein explizites Transkript ist präziser, wird schneller verarbeitet und ermöglicht es dir, das Transkript suchmaschinenfreundlich zu formulieren.
@@ -376,11 +378,11 @@
   "uploadDate": "2026-04-10T09:00:00+02:00",
   "duration": "PT12M45S",
   "contentUrl": "https://example.com/videos/closures.mp4",
-  "transcript": "Willkommen in diesem Video zu JavaScript Closures. Ein Closure entsteht immer dann, wenn eine innere Funktion Zugriff auf Variablen der äußeren Funktion hat — auch nachdem die äußere Funktion bereits zurückgekehrt ist. Das klingt erst kompliziert, wird aber mit einem Beispiel sofort klar. Stell dir vor, du hast eine Funktion makeCounter..."
+  "transcript": "Willkommen in diesem Video zu JavaScript Closures. Ein Closure entsteht immer dann, wenn eine innere Funktion Zugriff auf Variablen der äußeren Funktion hat - auch nachdem die äußere Funktion bereits zurückgekehrt ist. Das klingt erst kompliziert, wird aber mit einem Beispiel sofort klar. Stell dir vor, du hast eine Funktion makeCounter..."
 }</code></pre>
 
             <p>
-                Das Transkript kann beliebig lang sein. Es ist sinnvoll, es so zu strukturieren, dass wichtige Keywords natürlich vorkommen. Verwende den genauen gesprochenen Text — ergänzt um Zeitstempel-Hinweise, falls gewünscht.
+                Das Transkript kann beliebig lang sein. Es ist sinnvoll, es so zu strukturieren, dass wichtige Keywords natürlich vorkommen. Verwende den genauen gesprochenen Text - ergänzt um Zeitstempel-Hinweise, falls gewünscht.
             </p>
 
             <h3>Transkript als sichtbarer Text auf der Seite</h3>
@@ -394,10 +396,10 @@
                 <li>Natürliche interne Verlinkungsmöglichkeiten im Text</li>
             </ul>
             <p>
-                Das JSON-LD-Transkript und das sichtbare Transkript schließen sich nicht aus — nutze beides. Im <code>transcript</code>-Feld von JSON-LD zeigst du Google explizit an: "Hier ist der Sprachinhalt des Videos."
+                Das JSON-LD-Transkript und das sichtbare Transkript schließen sich nicht aus - nutze beides. Im <code>transcript</code>-Feld von JSON-LD zeigst du Google explizit an: "Hier ist der Sprachinhalt des Videos."
             </p>
 
-            <h2>4. contentUrl vs. embedUrl — was ist der Unterschied?</h2>
+            <h2>4. contentUrl vs. embedUrl - was ist der Unterschied?</h2>
             <p>
                 Viele Entwickler verwechseln diese beiden Properties oder lassen eine davon weg. Dabei erfüllen sie völlig unterschiedliche Funktionen:
             </p>
@@ -425,7 +427,7 @@
             </table>
 
             <p>
-                Für Google ist <code>contentUrl</code> die bevorzugte Property — sie erlaubt Google, das Video direkt zu crawlen und zu indexieren. Wenn du deine Videos auf YouTube hostest, hast du keine <code>contentUrl</code> (die MP4-Datei ist nicht direkt zugänglich), aber dafür eine <code>embedUrl</code>.
+                Für Google ist <code>contentUrl</code> die bevorzugte Property - sie erlaubt Google, das Video direkt zu crawlen und zu indexieren. Wenn du deine Videos auf YouTube hostest, hast du keine <code>contentUrl</code> (die MP4-Datei ist nicht direkt zugänglich), aber dafür eine <code>embedUrl</code>.
             </p>
 
             <h3>Empfehlung je nach Hosting-Situation</h3>
@@ -458,12 +460,12 @@
             </table>
 
             <p>
-                Fehler hier sind häufig und führen zu Validierungsfehlern im Rich Results Test. Achte besonders darauf: Es gibt kein "Komma" oder "Punkt" im Format — nur die Buchstaben H, M, S nach den jeweiligen Zahlen.
+                Fehler hier sind häufig und führen zu Validierungsfehlern im Rich Results Test. Achte besonders darauf: Es gibt kein "Komma" oder "Punkt" im Format - nur die Buchstaben H, M, S nach den jeweiligen Zahlen.
             </p>
 
             <h2>6. thumbnailUrl: Was Google verlangt</h2>
             <p>
-                Google stellt spezifische Anforderungen an das Thumbnail. Wer diese nicht erfüllt, verliert die Chance auf Video Rich Results — auch wenn alle anderen Properties korrekt sind:
+                Google stellt spezifische Anforderungen an das Thumbnail. Wer diese nicht erfüllt, verliert die Chance auf Video Rich Results - auch wenn alle anderen Properties korrekt sind:
             </p>
 
             <ul>
@@ -471,11 +473,11 @@
                 <li><strong>Minimalgröße:</strong> Mindestens 1200 Pixel breit</li>
                 <li><strong>Format:</strong> JPG, PNG oder WebP</li>
                 <li><strong>Zugänglichkeit:</strong> Das Bild muss für Googlebot crawlbar sein (nicht hinter Login)</li>
-                <li><strong>Inhalt:</strong> Das Bild muss das Video repräsentieren — kein leeres oder irreführendes Bild</li>
+                <li><strong>Inhalt:</strong> Das Bild muss das Video repräsentieren - kein leeres oder irreführendes Bild</li>
             </ul>
 
             <p>
-                Für YouTube-Videos: Das beste Thumbnail-Format ist <code>https://i.ytimg.com/vi/VIDEO_ID/maxresdefault.jpg</code> (HD). Prüfe vorher, ob dieses Bild für dein Video existiert — manche Videos haben nur <code>hqdefault.jpg</code> (480×360).
+                Für YouTube-Videos: Das beste Thumbnail-Format ist <code>https://i.ytimg.com/vi/VIDEO_ID/maxresdefault.jpg</code> (HD). Prüfe vorher, ob dieses Bild für dein Video existiert - manche Videos haben nur <code>hqdefault.jpg</code> (480×360).
             </p>
 
             <h2>7. publisher und author richtig angeben</h2>
@@ -520,7 +522,7 @@
   &lt;video:video&gt;
     &lt;video:thumbnail_loc&gt;https://example.com/thumbs/seo.jpg&lt;/video:thumbnail_loc&gt;
     &lt;video:title&gt;SEO Tutorial für Einsteiger&lt;/video:title&gt;
-    &lt;video:description&gt;Vollständige SEO-Anleitung von Grund auf — von Keyword-Recherche bis Linkaufbau.&lt;/video:description&gt;
+    &lt;video:description&gt;Vollständige SEO-Anleitung von Grund auf - von Keyword-Recherche bis Linkaufbau.&lt;/video:description&gt;
     &lt;video:content_loc&gt;https://example.com/videos/seo.mp4&lt;/video:content_loc&gt;
     &lt;video:duration&gt;2550&lt;/video:duration&gt;
     &lt;video:publication_date&gt;2026-04-01T09:00:00+02:00&lt;/video:publication_date&gt;
@@ -534,7 +536,7 @@
 
             <h3>Wann brauche ich eine Video-Sitemap?</h3>
             <p>
-                Wenn du viele Videos auf deiner Website hast (mehr als 10–20), ist eine Video-Sitemap empfehlenswert. Für einzelne Videos auf wenigen Seiten reicht Schema Markup allein — Google findet und verarbeitet es zuverlässig, sofern Googlebot die Seite crawlen kann.
+                Wenn du viele Videos auf deiner Website hast (mehr als 10–20), ist eine Video-Sitemap empfehlenswert. Für einzelne Videos auf wenigen Seiten reicht Schema Markup allein - Google findet und verarbeitet es zuverlässig, sofern Googlebot die Seite crawlen kann.
             </p>
 
             <h2>9. Häufige Fehler und wie du sie vermeidest</h2>
@@ -563,7 +565,7 @@
 
             <h3>Fehler 5: description zu kurz oder deckungsgleich mit name</h3>
             <p>
-                Die <code>description</code> muss den Videoinhalt wirklich beschreiben — nicht einfach den Titel wiederholen. Google nutzt description auch für die Snippet-Generierung. Mindestens 2–3 Sätze, die erklären, was der Nutzer im Video lernt.
+                Die <code>description</code> muss den Videoinhalt wirklich beschreiben - nicht einfach den Titel wiederholen. Google nutzt description auch für die Snippet-Generierung. Mindestens 2–3 Sätze, die erklären, was der Nutzer im Video lernt.
             </p>
 
             <h2>10. Vollständiges VideoObject mit allen fortgeschrittenen Properties</h2>
@@ -658,11 +660,11 @@
                 Nach der Implementierung solltest du dein Markup immer validieren. Dafür gibt es zwei Haupttools:
             </p>
             <ul>
-                <li><strong>Google Rich Results Test:</strong> <code>search.google.com/test/rich-results</code> — zeigt direkt an, ob dein Video für Video Rich Results in Frage kommt und welche Properties erkannt werden.</li>
-                <li><strong>Schema.org Validator:</strong> <code>validator.schema.org</code> — validiert das JSON-LD gegen die Schema.org-Spezifikation (unabhängig von Google).</li>
+                <li><strong>Google Rich Results Test:</strong> <code>search.google.com/test/rich-results</code> - zeigt direkt an, ob dein Video für Video Rich Results in Frage kommt und welche Properties erkannt werden.</li>
+                <li><strong>Schema.org Validator:</strong> <code>validator.schema.org</code> - validiert das JSON-LD gegen die Schema.org-Spezifikation (unabhängig von Google).</li>
             </ul>
             <p>
-                Unser eigener <a href="/tools/json-ld-structured-data-validator.html">JSON-LD Structured Data Validator</a> prüft ebenfalls die Syntax deines Markups und zeigt Fehler übersichtlich an — direkt im Browser, ohne Installation.
+                Unser eigener <a href="/tools/json-ld-structured-data-validator.html">JSON-LD Structured Data Validator</a> prüft ebenfalls die Syntax deines Markups und zeigt Fehler übersichtlich an - direkt im Browser, ohne Installation.
             </p>
 
             <h2>Fazit</h2>
@@ -670,7 +672,7 @@
                 VideoObject Schema Markup ist weit mehr als <code>name</code> + <code>duration</code> + <code>thumbnailUrl</code>. Mit <strong>Key Moments (hasPart + Clip)</strong> machst du dein Video interaktiv in der Suche, <strong>seekToAction</strong> erlaubt direktes Springen, und <strong>transcript</strong> erschließt den gesprochenen Inhalt für die Indexierung.
             </p>
             <p>
-                Die größten Fehler sind fast immer einfach zu vermeiden: Thumbnail-Größe prüfen, duration im richtigen Format angeben, und sicherstellen, dass Googlebot die Seite tatsächlich crawlen kann. Letzteres prüfst du am schnellsten mit unserer <a href="/">kostenlosen SEO-Analyse auf shift07.ai</a> — in Sekunden siehst du, ob deine Seite Indexierungsprobleme hat.
+                Die größten Fehler sind fast immer einfach zu vermeiden: Thumbnail-Größe prüfen, duration im richtigen Format angeben, und sicherstellen, dass Googlebot die Seite tatsächlich crawlen kann. Letzteres prüfst du am schnellsten mit unserer <a href="/">kostenlosen SEO-Analyse auf shift07.ai</a> - in Sekunden siehst du, ob deine Seite Indexierungsprobleme hat.
             </p>
             <p>
                 Wer tiefer in strukturierte Daten für spezifische Inhaltstypen einsteigen möchte, findet auf shift07.ai weitere Artikel: <a href="/blog/howto-schema-markup-seo.html">HowTo Schema Markup</a> für Anleitungen, <a href="/blog/faq-schema-markup-vertieft.html">FAQPage Schema vertieft</a> oder <a href="/blog/speakable-property-schema-markup.html">speakable Property für Sprachassistenten</a>.
@@ -681,7 +683,7 @@
         <!-- CTA Box -->
         <div class="mt-12 bg-gradient-to-r from-blue-600/20 to-indigo-600/20 border border-blue-500/30 rounded-2xl p-8 text-center">
             <h3 class="text-2xl font-bold text-white mb-3">Hat deine Website SEO-Probleme?</h3>
-            <p class="text-gray-300 mb-6">Prüfe deine Website kostenlos — in Sekunden siehst du alle technischen SEO-Fehler, fehlende Schema-Markups und Verbesserungspotenziale.</p>
+            <p class="text-gray-300 mb-6">Prüfe deine Website kostenlos - in Sekunden siehst du alle technischen SEO-Fehler, fehlende Schema-Markups und Verbesserungspotenziale.</p>
             <a href="/" class="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-semibold px-8 py-3 rounded-xl transition-all transform hover:scale-105">
                 Kostenlose SEO-Analyse starten →
             </a>
@@ -691,7 +693,7 @@
         <div class="mt-8 flex items-center gap-4 bg-slate-800/50 rounded-xl p-6 border border-white/10">
             <div class="w-16 h-16 rounded-full bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center text-2xl font-bold flex-shrink-0">L</div>
             <div>
-                <p class="font-semibold text-white">Laurenz Thümmler</p>
+                <p class="font-semibold text-white">Thümmler AI GmbH</p>
                 <p class="text-gray-400 text-sm">Co-Founder Shift07 · SEO & Structured Data</p>
             </div>
         </div>

@@ -125,6 +125,7 @@
                     <a href="/" class="text-gray-300 hover:text-white transition-colors">SEO-Tool</a>
                     <a href="/blog/" class="text-white font-medium border-b-2 border-blue-500 pb-0.5">Blog</a>
                     <a href="/tools/" class="text-gray-300 hover:text-white transition-colors">Tools</a>
+                    <a href="/ueber-uns.html" class="text-white hover:text-blue-300 transition-colors">Über uns</a>
                     <a href="/app/#/login" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-5 py-2 rounded-lg font-medium transition-all">Anmelden</a>
                 </div>
                 <button id="mobile-menu-btn" class="md:hidden text-gray-300 hover:text-white">
@@ -137,6 +138,7 @@
                 <a href="/" class="block py-2 text-gray-300 hover:text-white">SEO-Tool</a>
                 <a href="/blog/" class="block py-2 text-white font-medium">Blog</a>
                 <a href="/tools/" class="block py-2 text-gray-300 hover:text-white">Tools</a>
+                <a href="/ueber-uns.html" class="block py-2 text-white hover:text-blue-300">Über uns</a>
                 <a href="/app/#/login" class="block py-2 text-blue-400 hover:text-blue-300">Anmelden</a>
             </div>
         </div>
@@ -183,9 +185,9 @@
                     <!-- Article Body -->
                     <div class="article-content">
 
-                        <p>Structured Data — auf Deutsch <strong>strukturierte Daten</strong> — ist eine der mächtigsten, aber am häufigsten falsch genutzten SEO-Techniken. Wer seine Website mit Schema.org-Markup ausstattet, kann in Google <strong>Rich Snippets</strong> erscheinen: Sternebewertungen, FAQs direkt in den Suchergebnissen, Rezept-Informationen, Veranstaltungsdetails und vieles mehr. Der Klick-Boost durch Rich Snippets kann bis zu 30 % betragen — ein erheblicher Vorteil gegenüber normalen Suchergebnissen.</p>
+                        <p>Structured Data - auf Deutsch <strong>strukturierte Daten</strong> - ist eine der mächtigsten, aber am häufigsten falsch genutzten SEO-Techniken. Wer seine Website mit Schema.org-Markup ausstattet, kann in Google <strong>Rich Snippets</strong> erscheinen: Sternebewertungen, FAQs direkt in den Suchergebnissen, Rezept-Informationen, Veranstaltungsdetails und vieles mehr. Der Klick-Boost durch Rich Snippets kann bis zu 30 % betragen - ein erheblicher Vorteil gegenüber normalen Suchergebnissen.</p>
 
-                        <p>Das Problem: Es gibt drei verschiedene Wege, Structured Data zu implementieren — <strong>JSON-LD</strong>, <strong>Microdata</strong> und <strong>RDFa</strong>. Welches Format soll man wählen? Welches bevorzugt Google? Und welches ist am einfachsten zu pflegen? Dieser Artikel beantwortet alle drei Fragen mit konkreten Codebeispielen, einer direkten Vergleichstabelle und einer klaren Empfehlung.</p>
+                        <p>Das Problem: Es gibt drei verschiedene Wege, Structured Data zu implementieren - <strong>JSON-LD</strong>, <strong>Microdata</strong> und <strong>RDFa</strong>. Welches Format soll man wählen? Welches bevorzugt Google? Und welches ist am einfachsten zu pflegen? Dieser Artikel beantwortet alle drei Fragen mit konkreten Codebeispielen, einer direkten Vergleichstabelle und einer klaren Empfehlung.</p>
 
                         <div class="info-box">
                             <p class="!mb-0"><strong style="color:#93c5fd;">Kurze Antwort für Eilige:</strong> Google empfiehlt <strong>JSON-LD</strong> als bevorzugtes Format. Es ist am einfachsten zu implementieren, zu pflegen und von HTML zu trennen. Wenn du neu mit Structured Data anfängst, nutze immer JSON-LD. Die ausführliche Begründung findest du weiter unten.</p>
@@ -195,13 +197,13 @@
 
                         <p>Suchmaschinen "lesen" Webseiten, können aber nicht immer verstehen, was der Inhalt bedeutet. Der Text "50 €" könnte ein Preis sein, eine Bewertung, eine Jahreszeit oder eine beliebige Zahl. <strong>Structured Data</strong> fügt dem HTML-Code maschinenlesbare Metadaten hinzu, die Suchmaschinen sagen: "Dieser Wert ist ein Preis", "Diese Zahl ist eine Bewertung von 1 bis 5", "Dieser Text ist der Name eines Unternehmens".</p>
 
-                        <p>Das gemeinsame Vokabular dafür liefert <strong>Schema.org</strong> — ein Gemeinschaftsprojekt von Google, Bing, Yahoo und Yandex. Schema.org definiert hunderte von Typen (Article, LocalBusiness, Product, Event, Recipe, FAQPage, usw.) mit jeweils spezifischen Eigenschaften.</p>
+                        <p>Das gemeinsame Vokabular dafür liefert <strong>Schema.org</strong> - ein Gemeinschaftsprojekt von Google, Bing, Yahoo und Yandex. Schema.org definiert hunderte von Typen (Article, LocalBusiness, Product, Event, Recipe, FAQPage, usw.) mit jeweils spezifischen Eigenschaften.</p>
 
-                        <p>Die Frage ist nur: Wie bindest du dieses Schema.org-Vokabular in deine Website ein? Genau hier kommen JSON-LD, Microdata und RDFa ins Spiel — drei verschiedene technische Implementierungsformate für dasselbe Konzept. Lies dazu auch unseren Grundlagen-Artikel über <a href="/blog/strukturierte-daten-seo-schema-markup.html">Strukturierte Daten für SEO: Schema Markup einfach erklärt</a>.</p>
+                        <p>Die Frage ist nur: Wie bindest du dieses Schema.org-Vokabular in deine Website ein? Genau hier kommen JSON-LD, Microdata und RDFa ins Spiel - drei verschiedene technische Implementierungsformate für dasselbe Konzept. Lies dazu auch unseren Grundlagen-Artikel über <a href="/blog/strukturierte-daten-seo-schema-markup.html">Strukturierte Daten für SEO: Schema Markup einfach erklärt</a>.</p>
 
-                        <h2>Format 1: JSON-LD — der Goldstandard</h2>
+                        <h2>Format 1: JSON-LD - der Goldstandard</h2>
 
-                        <p><strong>JSON-LD</strong> steht für "JavaScript Object Notation for Linked Data". Es ist ein eigenständiges <code>&lt;script&gt;</code>-Block im HTML, der strukturierte Daten als JSON-Objekt enthält — vollständig getrennt vom sichtbaren Seiteninhalt.</p>
+                        <p><strong>JSON-LD</strong> steht für "JavaScript Object Notation for Linked Data". Es ist ein eigenständiges <code>&lt;script&gt;</code>-Block im HTML, der strukturierte Daten als JSON-Objekt enthält - vollständig getrennt vom sichtbaren Seiteninhalt.</p>
 
                         <h3>Wie sieht JSON-LD aus?</h3>
 
@@ -227,17 +229,17 @@
 }
 &lt;/script&gt;</code></pre>
 
-                        <p>Der entscheidende Vorteil: Dieser <code>&lt;script&gt;</code>-Block kann im <code>&lt;head&gt;</code> oder am Ende des <code>&lt;body&gt;</code> stehen — er beeinflusst die sichtbare Darstellung der Seite kein bisschen. Du kannst ihn jederzeit hinzufügen, entfernen oder ändern, ohne das Layout anzufassen.</p>
+                        <p>Der entscheidende Vorteil: Dieser <code>&lt;script&gt;</code>-Block kann im <code>&lt;head&gt;</code> oder am Ende des <code>&lt;body&gt;</code> stehen - er beeinflusst die sichtbare Darstellung der Seite kein bisschen. Du kannst ihn jederzeit hinzufügen, entfernen oder ändern, ohne das Layout anzufassen.</p>
 
                         <h3>Vorteile von JSON-LD</h3>
 
                         <ul>
-                            <li><strong>Von Google empfohlen</strong> — Google nennt JSON-LD explizit als bevorzugtes Format in seiner offiziellen Dokumentation</li>
-                            <li><strong>Vollständig vom HTML getrennt</strong> — kein Eingriff in das bestehende Markup nötig</li>
-                            <li><strong>Leicht zu pflegen</strong> — Änderungen an einem zentralen Ort, kein Durchsuchen des gesamten HTML</li>
-                            <li><strong>Dynamisch generierbar</strong> — Content-Management-Systeme wie WordPress können JSON-LD automatisch aus Datenbankfeldern generieren</li>
-                            <li><strong>Kopierbar und wiederverwendbar</strong> — Blöcke lassen sich von Seite zu Seite übertragen und anpassen</li>
-                            <li><strong>Verschachtelung möglich</strong> — komplexe Datenstrukturen wie <code>AggregateRating</code> innerhalb von <code>LocalBusiness</code> sind einfach umzusetzen</li>
+                            <li><strong>Von Google empfohlen</strong> - Google nennt JSON-LD explizit als bevorzugtes Format in seiner offiziellen Dokumentation</li>
+                            <li><strong>Vollständig vom HTML getrennt</strong> - kein Eingriff in das bestehende Markup nötig</li>
+                            <li><strong>Leicht zu pflegen</strong> - Änderungen an einem zentralen Ort, kein Durchsuchen des gesamten HTML</li>
+                            <li><strong>Dynamisch generierbar</strong> - Content-Management-Systeme wie WordPress können JSON-LD automatisch aus Datenbankfeldern generieren</li>
+                            <li><strong>Kopierbar und wiederverwendbar</strong> - Blöcke lassen sich von Seite zu Seite übertragen und anpassen</li>
+                            <li><strong>Verschachtelung möglich</strong> - komplexe Datenstrukturen wie <code>AggregateRating</code> innerhalb von <code>LocalBusiness</code> sind einfach umzusetzen</li>
                         </ul>
 
                         <h3>Nachteile von JSON-LD</h3>
@@ -247,9 +249,9 @@
                             <li>Setzt JavaScript-Kenntnisse voraus (aber nur grundlegende)</li>
                         </ul>
 
-                        <h2>Format 2: Microdata — tief im HTML verwurzelt</h2>
+                        <h2>Format 2: Microdata - tief im HTML verwurzelt</h2>
 
-                        <p><strong>Microdata</strong> ist ein HTML5-Standard, der Schema.org-Informationen direkt als HTML-Attribute in den sichtbaren Seiteninhalt einbettet. Die strukturierten Daten "kleben" am Content — jedes Datenelement ist mit dem entsprechenden sichtbaren Element im HTML verbunden.</p>
+                        <p><strong>Microdata</strong> ist ein HTML5-Standard, der Schema.org-Informationen direkt als HTML-Attribute in den sichtbaren Seiteninhalt einbettet. Die strukturierten Daten "kleben" am Content - jedes Datenelement ist mit dem entsprechenden sichtbaren Element im HTML verbunden.</p>
 
                         <h3>Wie sieht Microdata aus?</h3>
 
@@ -272,22 +274,22 @@
                         <h3>Vorteile von Microdata</h3>
 
                         <ul>
-                            <li><strong>Daten und Inhalt sind synchron</strong> — wenn du den sichtbaren Preis änderst, ändert sich automatisch der strukturierte Datenwert</li>
-                            <li><strong>Kein separates Datenblock-Management</strong> — es gibt kein zweites Dokument, das aktuell gehalten werden muss</li>
-                            <li><strong>Breit unterstützt</strong> — alle großen Suchmaschinen verstehen Microdata</li>
+                            <li><strong>Daten und Inhalt sind synchron</strong> - wenn du den sichtbaren Preis änderst, ändert sich automatisch der strukturierte Datenwert</li>
+                            <li><strong>Kein separates Datenblock-Management</strong> - es gibt kein zweites Dokument, das aktuell gehalten werden muss</li>
+                            <li><strong>Breit unterstützt</strong> - alle großen Suchmaschinen verstehen Microdata</li>
                         </ul>
 
                         <h3>Nachteile von Microdata</h3>
 
                         <ul>
-                            <li><strong>HTML wird massiv aufgebläht</strong> — ein einfaches Produktlisting kann dreimal so groß werden</li>
-                            <li><strong>Schwer nachträglich einzubauen</strong> — das bestehende HTML muss umstrukturiert werden</li>
-                            <li><strong>Schlechte Lesbarkeit</strong> — Entwickler und Content-Autoren verlieren schnell den Überblick</li>
-                            <li><strong>Wartungsintensiv</strong> — bei Template-Änderungen müssen alle Attribute geprüft werden</li>
-                            <li><strong>Kompliziert für verschachtelte Typen</strong> — mehrfach verschachtelte <code>itemscope</code>-Blöcke werden unübersichtlich</li>
+                            <li><strong>HTML wird massiv aufgebläht</strong> - ein einfaches Produktlisting kann dreimal so groß werden</li>
+                            <li><strong>Schwer nachträglich einzubauen</strong> - das bestehende HTML muss umstrukturiert werden</li>
+                            <li><strong>Schlechte Lesbarkeit</strong> - Entwickler und Content-Autoren verlieren schnell den Überblick</li>
+                            <li><strong>Wartungsintensiv</strong> - bei Template-Änderungen müssen alle Attribute geprüft werden</li>
+                            <li><strong>Kompliziert für verschachtelte Typen</strong> - mehrfach verschachtelte <code>itemscope</code>-Blöcke werden unübersichtlich</li>
                         </ul>
 
-                        <h2>Format 3: RDFa — der Vollständige, aber Komplexe</h2>
+                        <h2>Format 3: RDFa - der Vollständige, aber Komplexe</h2>
 
                         <p><strong>RDFa</strong> (Resource Description Framework in Attributes) kommt aus dem Semantic-Web-Umfeld und ist das älteste der drei Formate. Wie Microdata bettet es strukturierte Daten als HTML-Attribute ein, nutzt aber eine abweichende Syntax, die auf dem RDF-Standard basiert.</p>
 
@@ -308,17 +310,17 @@
                         <h3>Vorteile von RDFa</h3>
 
                         <ul>
-                            <li><strong>Mächtiger als Microdata</strong> — unterstützt mehr Semantic-Web-Konzepte und externe Ontologien</li>
-                            <li><strong>Gut für komplexe, verknüpfte Daten</strong> — etwa akademische oder wissenschaftliche Websites</li>
-                            <li><strong>Weit verbreitet im öffentlichen Sektor</strong> — viele Regierungs- und Institutionswebsites nutzen RDFa</li>
+                            <li><strong>Mächtiger als Microdata</strong> - unterstützt mehr Semantic-Web-Konzepte und externe Ontologien</li>
+                            <li><strong>Gut für komplexe, verknüpfte Daten</strong> - etwa akademische oder wissenschaftliche Websites</li>
+                            <li><strong>Weit verbreitet im öffentlichen Sektor</strong> - viele Regierungs- und Institutionswebsites nutzen RDFa</li>
                         </ul>
 
                         <h3>Nachteile von RDFa</h3>
 
                         <ul>
-                            <li><strong>Steilste Lernkurve</strong> der drei Formate — RDF-Konzepte sind für Webentwickler ungewohnt</li>
-                            <li><strong>Dieselben HTML-Nachteile wie Microdata</strong> — aufgeblähtes, schwer lesbares HTML</li>
-                            <li><strong>Für normales SEO überdimensioniert</strong> — die Zusatzfunktionen von RDFa braucht die Mehrheit der Websites nie</li>
+                            <li><strong>Steilste Lernkurve</strong> der drei Formate - RDF-Konzepte sind für Webentwickler ungewohnt</li>
+                            <li><strong>Dieselben HTML-Nachteile wie Microdata</strong> - aufgeblähtes, schwer lesbares HTML</li>
+                            <li><strong>Für normales SEO überdimensioniert</strong> - die Zusatzfunktionen von RDFa braucht die Mehrheit der Websites nie</li>
                         </ul>
 
                         <h2>Direkter Vergleich: JSON-LD vs. Microdata vs. RDFa</h2>
@@ -396,29 +398,29 @@
 
                         <p>Google nutzt auf seinen eigenen Produktseiten, in der Google Search Console-Dokumentation und in den offiziellen Developer-Guides konsequent <strong>JSON-LD</strong>. In der Google-Dokumentation steht wörtlich: <em>"Google empfiehlt die Verwendung von JSON-LD für strukturierte Daten."</em></p>
 
-                        <p>Das bedeutet nicht, dass Microdata oder RDFa nicht funktionieren — alle drei Formate werden korrekt ausgelesen und verarbeitet. Aber wenn Googles eigene Ingenieure JSON-LD für die internen Beispiele wählen und es offiziell empfehlen, ist das ein klares Signal.</p>
+                        <p>Das bedeutet nicht, dass Microdata oder RDFa nicht funktionieren - alle drei Formate werden korrekt ausgelesen und verarbeitet. Aber wenn Googles eigene Ingenieure JSON-LD für die internen Beispiele wählen und es offiziell empfehlen, ist das ein klares Signal.</p>
 
-                        <p>Ein praktischer Grund: <strong>JavaScript-gerenderte Inhalte</strong>. Google rendert JavaScript-Seiten mittlerweile zuverlässig, aber nicht sofort — es kann Stunden oder Tage dauern. JSON-LD im <code>&lt;head&gt;</code> wird beim ersten Crawl verarbeitet, noch bevor JavaScript ausgeführt wird. Das ist besonders für Single-Page-Applications (SPAs) relevant, bei denen Microdata und RDFa möglicherweise erst nach dem JavaScript-Rendering vorhanden sind.</p>
+                        <p>Ein praktischer Grund: <strong>JavaScript-gerenderte Inhalte</strong>. Google rendert JavaScript-Seiten mittlerweile zuverlässig, aber nicht sofort - es kann Stunden oder Tage dauern. JSON-LD im <code>&lt;head&gt;</code> wird beim ersten Crawl verarbeitet, noch bevor JavaScript ausgeführt wird. Das ist besonders für Single-Page-Applications (SPAs) relevant, bei denen Microdata und RDFa möglicherweise erst nach dem JavaScript-Rendering vorhanden sind.</p>
 
                         <h2>Wann sollte ich trotzdem Microdata oder RDFa verwenden?</h2>
 
                         <p>Es gibt Szenarien, in denen Microdata oder RDFa Sinn ergibt:</p>
 
-                        <h3>Microdata — sinnvoll wenn:</h3>
+                        <h3>Microdata - sinnvoll wenn:</h3>
                         <ul>
                             <li>Du ein Legacy-System pflegst, das bereits vollständig mit Microdata ausgestattet ist (dann lohnt sich eine Migration erst bei größerer Überarbeitung)</li>
                             <li>Du ein CMS nutzt, das Microdata nativ generiert (z.B. ältere Drupal-Versionen)</li>
                             <li>Die Synchronität zwischen sichtbarem Preis/Bewertung und strukturierten Daten kritisch ist und du keinen automatischen Update-Mechanismus hast</li>
                         </ul>
 
-                        <h3>RDFa — sinnvoll wenn:</h3>
+                        <h3>RDFa - sinnvoll wenn:</h3>
                         <ul>
                             <li>Du eine institutionelle oder wissenschaftliche Website betreibst, die Teil eines größeren Linked-Data-Ökosystems ist</li>
                             <li>Du bereits mit dem Semantic-Web-Standard arbeitest und RDF-Kenntnisse vorhanden sind</li>
                             <li>Dein CMS (z.B. bestimmte Drupal-Versionen) RDFa als Standard ausgeben kann</li>
                         </ul>
 
-                        <p>Für <strong>99 % der normalen Websites</strong> — vom Handwerksbetrieb bis zum großen Online-Shop — ist JSON-LD die richtige Wahl.</p>
+                        <p>Für <strong>99 % der normalen Websites</strong> - vom Handwerksbetrieb bis zum großen Online-Shop - ist JSON-LD die richtige Wahl.</p>
 
                         <h2>JSON-LD richtig einsetzen: Praktische Tipps</h2>
 
@@ -442,16 +444,16 @@
                         <p>Nicht jeder Schema-Typ führt zu Rich Snippets in Google. Google unterstützt nur eine begrenzte Anzahl von Typen für Enhanced Results. Die wichtigsten für deutsche Websites sind:</p>
 
                         <ul>
-                            <li><code>LocalBusiness</code> — für lokale Unternehmen (Öffnungszeiten, Adresse, Bewertungen)</li>
-                            <li><code>Article</code> / <code>NewsArticle</code> / <code>BlogPosting</code> — für Redaktionsinhalte</li>
-                            <li><code>Product</code> — für E-Commerce-Produkte (Preis, Verfügbarkeit, Bewertungen)</li>
-                            <li><code>FAQPage</code> — für FAQ-Seiten (erscheinen direkt in den Suchergebnissen)</li>
-                            <li><code>Recipe</code> — für Rezepte</li>
-                            <li><code>Event</code> — für Veranstaltungen</li>
-                            <li><code>BreadcrumbList</code> — für Breadcrumb-Navigation</li>
+                            <li><code>LocalBusiness</code> - für lokale Unternehmen (Öffnungszeiten, Adresse, Bewertungen)</li>
+                            <li><code>Article</code> / <code>NewsArticle</code> / <code>BlogPosting</code> - für Redaktionsinhalte</li>
+                            <li><code>Product</code> - für E-Commerce-Produkte (Preis, Verfügbarkeit, Bewertungen)</li>
+                            <li><code>FAQPage</code> - für FAQ-Seiten (erscheinen direkt in den Suchergebnissen)</li>
+                            <li><code>Recipe</code> - für Rezepte</li>
+                            <li><code>Event</code> - für Veranstaltungen</li>
+                            <li><code>BreadcrumbList</code> - für Breadcrumb-Navigation</li>
                         </ul>
 
-                        <p>Unser <a href="/tools/faq-schema-generator.html">FAQ Schema Generator</a> und der <a href="/tools/schema-markup-generator.html">LocalBusiness Schema-Markup-Generator</a> helfen dir, korrekte JSON-LD-Blöcke für diese häufigen Typen zu erstellen — ohne Programmierkenntnisse.</p>
+                        <p>Unser <a href="/tools/faq-schema-generator.html">FAQ Schema Generator</a> und der <a href="/tools/schema-markup-generator.html">LocalBusiness Schema-Markup-Generator</a> helfen dir, korrekte JSON-LD-Blöcke für diese häufigen Typen zu erstellen - ohne Programmierkenntnisse.</p>
 
                         <h2>Migration von Microdata/RDFa zu JSON-LD</h2>
 
@@ -460,7 +462,7 @@
                         <ol>
                             <li><strong>Inventarisierung:</strong> Liste alle Seiten auf, die aktuell Microdata oder RDFa enthalten</li>
                             <li><strong>JSON-LD-Blöcke erstellen:</strong> Schreibe das Äquivalent als JSON-LD (alle Schema.org-Typen und -Eigenschaften sind identisch)</li>
-                            <li><strong>Parallelbetrieb:</strong> Du kannst übergangsweise beide Formate gleichzeitig betreiben — Google ignoriert Duplikate nicht, aber bestraft sie auch nicht</li>
+                            <li><strong>Parallelbetrieb:</strong> Du kannst übergangsweise beide Formate gleichzeitig betreiben - Google ignoriert Duplikate nicht, aber bestraft sie auch nicht</li>
                             <li><strong>Schrittweise Migration:</strong> Entferne Microdata/RDFa-Attribute aus dem HTML, sobald das JSON-LD validiert ist</li>
                             <li><strong>Google Search Console prüfen:</strong> Beobachte die "Verbesserungen"-Berichte in der GSC nach der Migration</li>
                         </ol>
@@ -502,7 +504,7 @@
 
                         <p>Microdata kann sinnvoll sein, wenn du mit einem Legacy-System arbeitest, das es bereits nutzt und eine Migration nicht rechtfertigt. RDFa ist für spezialisierte Anwendungsfälle im Semantic-Web-Bereich reserviert, für normale Unternehmenswebsites aber überdimensioniert.</p>
 
-                        <p>Die gute Nachricht: Selbst wenn du heute noch keine Structured Data einsetzt, kannst du morgen damit anfangen. Ein einziger korrekt implementierter JSON-LD-Block für <code>LocalBusiness</code> oder <code>FAQPage</code> kann die Klickrate in den Suchergebnissen spürbar verbessern. Nutze unsere <a href="/tools/schema-markup-generator.html">Schema-Markup-Generator</a>-Tools, um in Minuten loszulegen — ohne eine Zeile Code schreiben zu müssen.</p>
+                        <p>Die gute Nachricht: Selbst wenn du heute noch keine Structured Data einsetzt, kannst du morgen damit anfangen. Ein einziger korrekt implementierter JSON-LD-Block für <code>LocalBusiness</code> oder <code>FAQPage</code> kann die Klickrate in den Suchergebnissen spürbar verbessern. Nutze unsere <a href="/tools/schema-markup-generator.html">Schema-Markup-Generator</a>-Tools, um in Minuten loszulegen - ohne eine Zeile Code schreiben zu müssen.</p>
 
                         <p>Im nächsten Artikel dieser Cluster-Serie gehen wir tiefer in die einzelnen Schema-Typen: <a href="/blog/strukturierte-daten-seo-schema-markup.html">Strukturierte Daten für SEO: Schema Markup einfach erklärt</a> gibt dir den Überblick, welcher Typ für welche Art von Website am meisten bringt.</p>
 
@@ -593,6 +595,7 @@
                     <a href="/impressum.html" class="hover:text-white transition-colors">Impressum</a>
                     <a href="/datenschutz.html" class="hover:text-white transition-colors">Datenschutz</a>
                     <a href="/agb.html" class="hover:text-white transition-colors">AGB</a>
+                    <a href="/ueber-uns.html" class="hover:text-white transition-colors">Über uns</a>
                 </div>
                 <p class="text-sm text-gray-500">&copy; 2026 Thümmler AI GmbH</p>
             </div>

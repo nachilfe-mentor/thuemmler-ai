@@ -11,7 +11,7 @@
     <link rel="alternate" type="application/rss+xml" title="Shift07 Blog" href="https://shift07.ai/feed.xml">
     <!-- Open Graph -->
     <meta property="og:title" content="Key Moments & Clip Schema Generator – hasPart JSON-LD kostenlos">
-    <meta property="og:description" content="Erstelle hasPart + Clip JSON-LD für VideoObject Schema Markup — Key Moments für Google Video Rich Results einfach generieren.">
+    <meta property="og:description" content="Erstelle hasPart + Clip JSON-LD für VideoObject Schema Markup - Key Moments für Google Video Rich Results einfach generieren.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://shift07.ai/tools/key-moments-clip-generator.html">
     <meta property="og:image" content="https://shift07.ai/tools/images/videoobject-schema-generator-tool.png">
@@ -82,6 +82,7 @@
                     <a href="/" class="text-gray-300 hover:text-white transition-colors">SEO-Tool</a>
                     <a href="/blog/" class="text-gray-300 hover:text-white transition-colors">Blog</a>
                     <a href="/tools/" class="text-white font-medium border-b-2 border-blue-500 pb-0.5">Tools</a>
+                    <a href="/ueber-uns.html" class="text-white hover:text-blue-300 transition-colors">Über uns</a>
                     <a href="/app/#/login" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-5 py-2 rounded-lg font-medium transition-all">Anmelden</a>
                 </div>
                 <button id="mobile-menu-btn" class="md:hidden text-gray-300 hover:text-white">
@@ -94,6 +95,7 @@
                 <a href="/" class="block py-2 text-gray-300">SEO-Tool</a>
                 <a href="/blog/" class="block py-2 text-gray-300">Blog</a>
                 <a href="/tools/" class="block py-2 text-white font-medium">Tools</a>
+                <a href="/ueber-uns.html" class="block py-2 text-white hover:text-blue-300">Über uns</a>
                 <a href="/app/#/login" class="block py-2 text-blue-400">Anmelden</a>
             </div>
         </div>
@@ -108,7 +110,7 @@
             </div>
             <h1 class="text-3xl sm:text-4xl font-bold mb-4">Key Moments & Clip Schema Generator</h1>
             <p class="text-gray-400 text-lg max-w-2xl mx-auto">
-                Erstelle <code class="bg-slate-800 px-2 py-0.5 rounded text-purple-300 text-base">hasPart</code> + <code class="bg-slate-800 px-2 py-0.5 rounded text-purple-300 text-base">Clip</code> JSON-LD für dein VideoObject Schema Markup — Key Moments für Google Video Rich Results generieren.
+                Erstelle <code class="bg-slate-800 px-2 py-0.5 rounded text-purple-300 text-base">hasPart</code> + <code class="bg-slate-800 px-2 py-0.5 rounded text-purple-300 text-base">Clip</code> JSON-LD für dein VideoObject Schema Markup - Key Moments für Google Video Rich Results generieren.
             </p>
         </div>
     </section>
@@ -246,7 +248,7 @@
                 <div class="flex-1 min-w-[150px]">
                     <label class="block text-xs font-medium text-gray-400 mb-1.5">ISO 8601 Ergebnis</label>
                     <div id="durationResult" class="bg-slate-900/70 border border-white/10 rounded-lg px-3 py-2 text-purple-300 text-sm font-mono min-h-[38px] flex items-center">
-                        —
+                        -
                     </div>
                 </div>
             </div>
@@ -356,7 +358,7 @@
             if (secs !== null && secs >= 0) {
                 result.textContent = secondsToISO(secs);
             } else {
-                result.textContent = '—';
+                result.textContent = '-';
             }
         }
 
@@ -462,11 +464,11 @@
                     <div class="text-gray-400 text-sm">Clips / Key Moments</div>
                 </div>
                 <div class="bg-slate-800/50 border border-white/10 rounded-xl p-4 text-center">
-                    <div class="text-3xl font-bold text-green-400 mb-1">${durationRaw ? secondsToISO(timeToSeconds(durationRaw)) : '—'}</div>
+                    <div class="text-3xl font-bold text-green-400 mb-1">${durationRaw ? secondsToISO(timeToSeconds(durationRaw)) : '-'}</div>
                     <div class="text-gray-400 text-sm">Gesamtdauer (ISO 8601)</div>
                 </div>
                 <div class="bg-slate-800/50 border border-white/10 rounded-xl p-4 text-center">
-                    <div class="text-3xl font-bold text-purple-400 mb-1">${avgClipDur > 0 ? avgClipDur + 's' : '—'}</div>
+                    <div class="text-3xl font-bold text-purple-400 mb-1">${avgClipDur > 0 ? avgClipDur + 's' : '-'}</div>
                     <div class="text-gray-400 text-sm">Ø Clip-Dauer</div>
                 </div>
             `;

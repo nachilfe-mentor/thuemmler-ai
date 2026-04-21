@@ -118,6 +118,7 @@
                     <a href="/" class="text-gray-300 hover:text-white transition-colors">SEO-Tool</a>
                     <a href="/blog/" class="text-white font-medium border-b-2 border-blue-500 pb-0.5">Blog</a>
                     <a href="/tools/" class="text-gray-300 hover:text-white transition-colors">Tools</a>
+                    <a href="/ueber-uns.html" class="text-white hover:text-blue-300 transition-colors">Über uns</a>
                     <a href="/app/#/login" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-5 py-2 rounded-lg font-medium transition-all">Anmelden</a>
                 </div>
                 <button id="mobile-menu-btn" class="md:hidden text-gray-300 hover:text-white">
@@ -130,6 +131,7 @@
                 <a href="/" class="block py-2 text-gray-300 hover:text-white">SEO-Tool</a>
                 <a href="/blog/" class="block py-2 text-white font-medium">Blog</a>
                 <a href="/tools/" class="block py-2 text-gray-300 hover:text-white">Tools</a>
+                <a href="/ueber-uns.html" class="block py-2 text-white hover:text-blue-300">Über uns</a>
                 <a href="/app/#/login" class="block py-2 text-blue-400 hover:text-blue-300">Anmelden</a>
             </div>
         </div>
@@ -176,9 +178,9 @@
                     <!-- Article Body -->
                     <div class="article-content">
 
-                        <p>Wenn eine Seite langsam lädt, liegt das Problem oft nicht bei den Bildern oder JavaScript — sondern beim Server selbst. Der <strong>TTFB (Time to First Byte)</strong> misst, wie lange es dauert, bis dein Browser das erste Datenbyte vom Server empfängt. Und genau dieser Wert ist einer der am häufigsten unterschätzten Faktoren bei der Website-Optimierung.</p>
+                        <p>Wenn eine Seite langsam lädt, liegt das Problem oft nicht bei den Bildern oder JavaScript - sondern beim Server selbst. Der <strong>TTFB (Time to First Byte)</strong> misst, wie lange es dauert, bis dein Browser das erste Datenbyte vom Server empfängt. Und genau dieser Wert ist einer der am häufigsten unterschätzten Faktoren bei der Website-Optimierung.</p>
 
-                        <p>Google listet TTFB explizit als Ursache für schlechte <a href="/blog/core-web-vitals-erklaert.html">Core Web Vitals</a> — vor allem für einen hohen LCP (Largest Contentful Paint). Wer seinen LCP verbessern will, muss zuerst den TTFB in den Griff bekommen. In diesem Artikel zeige ich dir, was TTFB genau ist, wie du ihn misst und mit welchen Maßnahmen du ihn drastisch reduzierst.</p>
+                        <p>Google listet TTFB explizit als Ursache für schlechte <a href="/blog/core-web-vitals-erklaert.html">Core Web Vitals</a> - vor allem für einen hohen LCP (Largest Contentful Paint). Wer seinen LCP verbessern will, muss zuerst den TTFB in den Griff bekommen. In diesem Artikel zeige ich dir, was TTFB genau ist, wie du ihn misst und mit welchen Maßnahmen du ihn drastisch reduzierst.</p>
 
                         <h2>Was ist TTFB?</h2>
 
@@ -190,7 +192,7 @@
                             <li><strong>Server-Verarbeitungszeit:</strong> Der Server empfängt die Anfrage, verarbeitet sie (PHP, Datenbankabfrage etc.) und sendet die erste Antwort</li>
                         </ol>
 
-                        <p>Von diesen drei Phasen ist die <strong>Server-Verarbeitungszeit</strong> diejenige, die du am meisten beeinflussen kannst. DNS-Lookup und TCP-Verbindung sind schnell — aber ein träger Server kann die TTFB auf mehrere Sekunden treiben.</p>
+                        <p>Von diesen drei Phasen ist die <strong>Server-Verarbeitungszeit</strong> diejenige, die du am meisten beeinflussen kannst. DNS-Lookup und TCP-Verbindung sind schnell - aber ein träger Server kann die TTFB auf mehrere Sekunden treiben.</p>
 
                         <h2>Was ist ein guter TTFB-Wert?</h2>
 
@@ -202,7 +204,7 @@
                             <div class="ttfb-scale-item" style="background: rgba(239,68,68,0.2); color: #fca5a5;">Schlecht: &gt; 1.800 ms</div>
                         </div>
 
-                        <p>Das klingt nach viel Spielraum — aber wirklich schnelle Websites liegen unter <strong>200 ms</strong>. Ein TTFB von 1.500 ms bedeutet: Bevor auch nur ein einziges Bild geladen wird, hat der Nutzer bereits anderthalb Sekunden gewartet. Für viele Besucher — besonders auf dem Smartphone — ist das der Moment, an dem sie abspringen.</p>
+                        <p>Das klingt nach viel Spielraum - aber wirklich schnelle Websites liegen unter <strong>200 ms</strong>. Ein TTFB von 1.500 ms bedeutet: Bevor auch nur ein einziges Bild geladen wird, hat der Nutzer bereits anderthalb Sekunden gewartet. Für viele Besucher - besonders auf dem Smartphone - ist das der Moment, an dem sie abspringen.</p>
 
                         <p>Wichtig: TTFB ist der <em>erste</em> Schritt beim Laden. Alles danach (HTML parsen, CSS laden, JavaScript ausführen, Bilder rendern) kommt <em>on top</em>. Ein schlechter TTFB schiebt das komplette Rendering nach hinten.</p>
 
@@ -214,18 +216,18 @@
                             <li><strong>Queued / Stalled:</strong> Warten im Browser-Queue</li>
                             <li><strong>DNS Lookup:</strong> Namensauflösung</li>
                             <li><strong>Initial connection / SSL:</strong> TCP + TLS</li>
-                            <li><strong>Waiting (TTFB):</strong> Das ist der eigentliche TTFB — Server-Verarbeitungszeit</li>
+                            <li><strong>Waiting (TTFB):</strong> Das ist der eigentliche TTFB - Server-Verarbeitungszeit</li>
                             <li><strong>Content Download:</strong> Übertragung der HTML-Datei</li>
                         </ul>
 
                         <h3>2. PageSpeed Insights</h3>
-                        <p>Unter <a href="https://pagespeed.web.dev" rel="noopener noreferrer">pagespeed.web.dev</a> zeigt Google unter "Lab Data" den TTFB an. Außerdem bekommst du Hinweise, falls der TTFB in den "Field Data" (echte Nutzer) schlecht ist — das ist der Wert, der ins Ranking einfließt.</p>
+                        <p>Unter <a href="https://pagespeed.web.dev" rel="noopener noreferrer">pagespeed.web.dev</a> zeigt Google unter "Lab Data" den TTFB an. Außerdem bekommst du Hinweise, falls der TTFB in den "Field Data" (echte Nutzer) schlecht ist - das ist der Wert, der ins Ranking einfließt.</p>
 
                         <h3>3. GTmetrix und WebPageTest</h3>
-                        <p>GTmetrix gibt den TTFB direkt in der Zusammenfassung aus und zeigt ihn im Wasserfall-Diagramm. WebPageTest (webpagetest.org) ist besonders nützlich, um TTFB von verschiedenen Standorten aus zu testen — so erkennst du, ob ein CDN helfen würde.</p>
+                        <p>GTmetrix gibt den TTFB direkt in der Zusammenfassung aus und zeigt ihn im Wasserfall-Diagramm. WebPageTest (webpagetest.org) ist besonders nützlich, um TTFB von verschiedenen Standorten aus zu testen - so erkennst du, ob ein CDN helfen würde.</p>
 
                         <h3>4. Unsere kostenlose SEO-Analyse</h3>
-                        <p>Die <a href="/">kostenlose SEO-Analyse auf shift07.ai</a> prüft neben klassischen SEO-Faktoren auch Performance-Probleme — darunter langsame Server-Antwortzeiten und fehlende Performance-Optimierungen.</p>
+                        <p>Die <a href="/">kostenlose SEO-Analyse auf shift07.ai</a> prüft neben klassischen SEO-Faktoren auch Performance-Probleme - darunter langsame Server-Antwortzeiten und fehlende Performance-Optimierungen.</p>
 
                         <h2>Die 7 häufigsten Ursachen für hohen TTFB</h2>
 
@@ -233,19 +235,19 @@
                         <p>Auf einem Shared-Hosting-Server teilen sich hunderte von Websites dieselbe CPU und denselben RAM. Wenn ein Nachbar-Server plötzlich viel Traffic bekommt, leidet deine Website. Das ist der Hauptgrund für einen hohen TTFB bei kleinen Websites.</p>
 
                         <h3>2. Kein Server-seitiges Caching</h3>
-                        <p>Dynamische Websites (WordPress, Joomla, Typo3) bauen jede Seite bei jedem Aufruf neu zusammen: PHP startet, fragt die Datenbank ab, generiert HTML, schickt es zurück. Ohne Caching passiert das bei jedem einzelnen Besucher — und das kostet Zeit.</p>
+                        <p>Dynamische Websites (WordPress, Joomla, Typo3) bauen jede Seite bei jedem Aufruf neu zusammen: PHP startet, fragt die Datenbank ab, generiert HTML, schickt es zurück. Ohne Caching passiert das bei jedem einzelnen Besucher - und das kostet Zeit.</p>
 
                         <h3>3. Langsame Datenbankabfragen</h3>
-                        <p>Eine WordPress-Seite mit vielen Plugins kann bei einem einzelnen Seitenaufruf 50–100 Datenbankabfragen auslösen. Jede Query kostet Millisekunden — die sich schnell zu Sekunden summieren.</p>
+                        <p>Eine WordPress-Seite mit vielen Plugins kann bei einem einzelnen Seitenaufruf 50–100 Datenbankabfragen auslösen. Jede Query kostet Millisekunden - die sich schnell zu Sekunden summieren.</p>
 
                         <h3>4. Kein CDN (Content Delivery Network)</h3>
                         <p>Wenn dein Server in Frankfurt steht und ein Besucher aus München kommt, ist das kein Problem. Aber wenn jemand aus Wien oder Zürich auf deine Website zugreift, kostet allein die physische Distanz bereits 20–40 ms extra. Ohne CDN antwortet immer derselbe Server, egal wo der Besucher sitzt.</p>
 
                         <h3>5. Nicht optimierte PHP-Konfiguration</h3>
-                        <p>PHP-Skripte werden bei jedem Aufruf neu kompiliert, wenn kein OPcache aktiv ist. OPcache speichert den kompilierten Bytecode und spart bei jedem Aufruf die Kompilierungszeit — oft 20–50 ms pro Request.</p>
+                        <p>PHP-Skripte werden bei jedem Aufruf neu kompiliert, wenn kein OPcache aktiv ist. OPcache speichert den kompilierten Bytecode und spart bei jedem Aufruf die Kompilierungszeit - oft 20–50 ms pro Request.</p>
 
                         <h3>6. HTTP/1.1 statt HTTP/2 oder HTTP/3</h3>
-                        <p>HTTP/1.1 kann pro Verbindung nur eine Anfrage gleichzeitig verarbeiten. HTTP/2 führt Multiplexing ein — mehrere Anfragen laufen parallel über eine einzige Verbindung. HTTP/3 nutzt QUIC statt TCP und reduziert die Verbindungsaufbauzeit weiter. Viele ältere Hosting-Pakete nutzen noch HTTP/1.1.</p>
+                        <p>HTTP/1.1 kann pro Verbindung nur eine Anfrage gleichzeitig verarbeiten. HTTP/2 führt Multiplexing ein - mehrere Anfragen laufen parallel über eine einzige Verbindung. HTTP/3 nutzt QUIC statt TCP und reduziert die Verbindungsaufbauzeit weiter. Viele ältere Hosting-Pakete nutzen noch HTTP/1.1.</p>
 
                         <h3>7. Kein aktiviertes Gzip/Brotli</h3>
                         <p>Wenn der Server HTML, CSS und JavaScript unkomprimiert sendet, ist das Transfer-Volumen deutlich größer. Gzip reduziert HTML typischerweise auf 20–30% der ursprünglichen Größe, Brotli sogar noch mehr. Das senkt zwar nicht direkt die Server-Verarbeitungszeit, aber die Zeit bis zum vollständigen Empfang.</p>
@@ -284,7 +286,7 @@ opcache.save_comments=1</code></pre>
                         <p>Prüfe in deinem Hosting-Control-Panel (cPanel, Plesk) ob OPcache aktiviert ist. Viele Provider bieten es als einfachen Toggle an. Mit aktiviertem OPcache sinkt die PHP-Ausführungszeit oft um 30–50%.</p>
 
                         <h3>Maßnahme 3: CDN einsetzen</h3>
-                        <p>Ein CDN (Content Delivery Network) stellt deine Website von Servern aus, die geografisch nah beim Besucher liegen. Cloudflare bietet einen kostenlosen Plan, der als Reverse Proxy fungiert: Anfragen gehen zuerst zum Cloudflare-Rechenzentrum, das gecachte Inhalte direkt ausliefert — ohne deinen Origin-Server überhaupt zu kontaktieren.</p>
+                        <p>Ein CDN (Content Delivery Network) stellt deine Website von Servern aus, die geografisch nah beim Besucher liegen. Cloudflare bietet einen kostenlosen Plan, der als Reverse Proxy fungiert: Anfragen gehen zuerst zum Cloudflare-Rechenzentrum, das gecachte Inhalte direkt ausliefert - ohne deinen Origin-Server überhaupt zu kontaktieren.</p>
 
                         <p>So richtest du Cloudflare ein:</p>
                         <ol>
@@ -295,7 +297,7 @@ opcache.save_comments=1</code></pre>
                             <li>Caching → Configuration → Browser Cache TTL auf 4 Stunden setzen</li>
                         </ol>
 
-                        <p>Das Ergebnis: Besucher aus Österreich, der Schweiz oder anderen europäischen Ländern werden vom nächstgelegenen Cloudflare-Rechenzentrum bedient. Der TTFB für diese Besucher sinkt drastisch — oft von 300 ms auf unter 50 ms.</p>
+                        <p>Das Ergebnis: Besucher aus Österreich, der Schweiz oder anderen europäischen Ländern werden vom nächstgelegenen Cloudflare-Rechenzentrum bedient. Der TTFB für diese Besucher sinkt drastisch - oft von 300 ms auf unter 50 ms.</p>
 
                         <h3>Maßnahme 4: Hosting upgraden</h3>
                         <p>Shared Hosting hat systembedingte Limits. Wenn du mit Caching und Optimierungen schon alles ausgereizt hast, ist ein Wechsel auf VPS- oder Cloud-Hosting der nächste Schritt. Anbieter wie Hetzner (Deutschland, DSGVO-konform) bieten VPS-Server ab 4–5 € pro Monat mit garantierten CPU-Ressourcen.</p>
@@ -308,9 +310,9 @@ opcache.save_comments=1</code></pre>
                         <p>Häufige Ursachen für langsame Queries:</p>
                         <ul>
                             <li><strong>Fehlende Datenbank-Indizes:</strong> Abfragen ohne Index scannen die gesamte Tabelle</li>
-                            <li><strong>Zu viele WordPress-Plugins:</strong> Jedes Plugin kann zusätzliche Queries auslösen — weniger Plugins, schnellere Seite</li>
+                            <li><strong>Zu viele WordPress-Plugins:</strong> Jedes Plugin kann zusätzliche Queries auslösen - weniger Plugins, schnellere Seite</li>
                             <li><strong>Autoloaded Options:</strong> WordPress lädt beim Start alle "autoloaded" Optionen aus der Datenbank. Mehr als 1 MB autoloaded data ist ein Problem</li>
-                            <li><strong>Post Revisions:</strong> WordPress speichert standardmäßig unbegrenzt viele Revisionen — das bläht die Datenbank auf</li>
+                            <li><strong>Post Revisions:</strong> WordPress speichert standardmäßig unbegrenzt viele Revisionen - das bläht die Datenbank auf</li>
                         </ul>
 
                         <pre><code>// wp-config.php: Revisionen begrenzen
@@ -322,7 +324,7 @@ FROM wp_options WHERE autoload = 'yes'
 ORDER BY size DESC LIMIT 20;</code></pre>
 
                         <h3>Maßnahme 6: HTTP/2 oder HTTP/3 aktivieren</h3>
-                        <p>Prüfe zunächst, ob deine Website bereits HTTP/2 nutzt. Gib deine URL unter <a href="https://tools.keycdn.com/http2-test" rel="noopener noreferrer">tools.keycdn.com/http2-test</a> ein. HTTP/2 wird von allen modernen Hosting-Anbietern unterstützt — oft reicht ein einfaches Aktivieren im Control-Panel.</p>
+                        <p>Prüfe zunächst, ob deine Website bereits HTTP/2 nutzt. Gib deine URL unter <a href="https://tools.keycdn.com/http2-test" rel="noopener noreferrer">tools.keycdn.com/http2-test</a> ein. HTTP/2 wird von allen modernen Hosting-Anbietern unterstützt - oft reicht ein einfaches Aktivieren im Control-Panel.</p>
 
                         <p><strong>Nginx:</strong> HTTP/2 ist standardmäßig aktiviert wenn SSL konfiguriert ist:</p>
                         <pre><code>server {
@@ -375,11 +377,11 @@ gzip_disable "MSIE [1-6]\.";
 
                         <h2>TTFB im Zusammenhang mit anderen Performance-Metriken</h2>
 
-                        <p>TTFB ist der Startpunkt — aber nicht das Ende der Optimierungsreise. Wenn der TTFB unter Kontrolle ist, schaue dir als nächstes an:</p>
+                        <p>TTFB ist der Startpunkt - aber nicht das Ende der Optimierungsreise. Wenn der TTFB unter Kontrolle ist, schaue dir als nächstes an:</p>
 
                         <ul>
-                            <li><strong>Render-Blocking-Ressourcen:</strong> CSS und JavaScript, die das Rendering blockieren — unser Artikel <a href="/blog/render-blocking-ressourcen-entfernen.html">Render-Blocking-Ressourcen entfernen</a> erklärt alle Techniken</li>
-                            <li><strong>Bildoptimierung:</strong> Große Bilder sind oft der zweitgrößte Faktor nach TTFB — lies unseren Artikel über <a href="/blog/bilder-web-optimieren.html">Bilder für das Web optimieren</a></li>
+                            <li><strong>Render-Blocking-Ressourcen:</strong> CSS und JavaScript, die das Rendering blockieren - unser Artikel <a href="/blog/render-blocking-ressourcen-entfernen.html">Render-Blocking-Ressourcen entfernen</a> erklärt alle Techniken</li>
+                            <li><strong>Bildoptimierung:</strong> Große Bilder sind oft der zweitgrößte Faktor nach TTFB - lies unseren Artikel über <a href="/blog/bilder-web-optimieren.html">Bilder für das Web optimieren</a></li>
                             <li><strong>Browser Caching:</strong> Wie du Caching für wiederkehrende Besucher optimierst, erklärt unser Artikel <a href="/blog/caching-website-einrichten.html">Caching richtig einrichten</a></li>
                         </ul>
 
@@ -400,9 +402,9 @@ gzip_disable "MSIE [1-6]\.";
 
                         <h2>Fazit</h2>
 
-                        <p>Ein hoher TTFB ist oft das am leichtesten zu behebende Performance-Problem — wenn man weiß, wo man suchen muss. Server-Caching hat das größte Potenzial: Aus einer dynamischen WordPress-Seite mit 800 ms TTFB kann mit Page Caching eine in 30 ms antwortende Seite werden. Cloudflare als CDN obendrauf, und du erreichst Werte, die selbst für Webentwickler beeindruckend sind.</p>
+                        <p>Ein hoher TTFB ist oft das am leichtesten zu behebende Performance-Problem - wenn man weiß, wo man suchen muss. Server-Caching hat das größte Potenzial: Aus einer dynamischen WordPress-Seite mit 800 ms TTFB kann mit Page Caching eine in 30 ms antwortende Seite werden. Cloudflare als CDN obendrauf, und du erreichst Werte, die selbst für Webentwickler beeindruckend sind.</p>
 
-                        <p>Prüfe jetzt mit der <a href="/">kostenlosen SEO-Analyse auf shift07.ai</a>, ob deine Website Performance-Probleme hat — und welche Maßnahmen den größten Hebel bringen. Und mit dem kompletten Performance-SEO-Paket aus <a href="/blog/core-web-vitals-erklaert.html">Core Web Vitals</a>, <a href="/blog/bilder-web-optimieren.html">Bildoptimierung</a>, <a href="/blog/caching-website-einrichten.html">Caching</a>, <a href="/blog/render-blocking-ressourcen-entfernen.html">Render-Blocking</a> und einem optimierten TTFB hast du alles in der Hand, um in den Rankings nach oben zu klettern.</p>
+                        <p>Prüfe jetzt mit der <a href="/">kostenlosen SEO-Analyse auf shift07.ai</a>, ob deine Website Performance-Probleme hat - und welche Maßnahmen den größten Hebel bringen. Und mit dem kompletten Performance-SEO-Paket aus <a href="/blog/core-web-vitals-erklaert.html">Core Web Vitals</a>, <a href="/blog/bilder-web-optimieren.html">Bildoptimierung</a>, <a href="/blog/caching-website-einrichten.html">Caching</a>, <a href="/blog/render-blocking-ressourcen-entfernen.html">Render-Blocking</a> und einem optimierten TTFB hast du alles in der Hand, um in den Rankings nach oben zu klettern.</p>
 
                     </div>
 
@@ -420,7 +422,7 @@ gzip_disable "MSIE [1-6]\.";
                     <!-- CTA Box -->
                     <div class="bg-gradient-to-br from-blue-600/20 to-indigo-600/20 border border-blue-500/30 rounded-2xl p-6 text-center">
                         <h3 class="text-lg font-bold text-white mb-3">Kostenlose SEO-Analyse</h3>
-                        <p class="text-gray-400 text-sm mb-5">Finde heraus, wie gut deine Website für Suchmaschinen optimiert ist — inklusive Performance-Check.</p>
+                        <p class="text-gray-400 text-sm mb-5">Finde heraus, wie gut deine Website für Suchmaschinen optimiert ist - inklusive Performance-Check.</p>
                         <a href="/" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-6 py-3 rounded-lg font-medium transition-all inline-block w-full">Jetzt testen</a>
                     </div>
 
@@ -461,7 +463,7 @@ gzip_disable "MSIE [1-6]\.";
     <section class="py-16 px-4 bg-gradient-to-r from-blue-900/30 to-indigo-900/30 border-t border-b border-white/5">
         <div class="max-w-3xl mx-auto text-center">
             <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">Teste deine Website jetzt kostenlos</h2>
-            <p class="text-gray-400 mb-8">Erhalte eine vollständige SEO-Analyse mit konkreten Verbesserungsvorschlägen — inklusive Performance-Prüfung.</p>
+            <p class="text-gray-400 mb-8">Erhalte eine vollständige SEO-Analyse mit konkreten Verbesserungsvorschlägen - inklusive Performance-Prüfung.</p>
             <form action="/" method="get" class="flex flex-col sm:flex-row gap-3 max-w-xl mx-auto">
                 <input type="url" placeholder="https://deine-website.de" class="flex-1 bg-slate-800 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-blue-500">
                 <a href="/" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-8 py-3 rounded-lg font-medium transition-all whitespace-nowrap">Analyse starten</a>
@@ -481,6 +483,7 @@ gzip_disable "MSIE [1-6]\.";
                     <a href="/impressum.html" class="hover:text-white transition-colors">Impressum</a>
                     <a href="/datenschutz.html" class="hover:text-white transition-colors">Datenschutz</a>
                     <a href="/agb.html" class="hover:text-white transition-colors">AGB</a>
+                    <a href="/ueber-uns.html" class="hover:text-white transition-colors">Über uns</a>
                 </div>
                 <p class="text-sm text-gray-500">&copy; 2026 Thümmler AI GmbH</p>
             </div>

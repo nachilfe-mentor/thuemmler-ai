@@ -116,6 +116,7 @@
                     <a href="/" class="text-gray-300 hover:text-white transition-colors">SEO-Tool</a>
                     <a href="/blog/" class="text-white font-medium border-b-2 border-blue-500 pb-0.5">Blog</a>
                     <a href="/tools/" class="text-gray-300 hover:text-white transition-colors">Tools</a>
+                    <a href="/ueber-uns.html" class="text-white hover:text-blue-300 transition-colors">Über uns</a>
                     <a href="/app/#/login" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-5 py-2 rounded-lg font-medium transition-all">Anmelden</a>
                 </div>
                 <button id="mobile-menu-btn" class="md:hidden text-gray-300 hover:text-white">
@@ -128,6 +129,7 @@
                 <a href="/" class="block py-2 text-gray-300 hover:text-white">SEO-Tool</a>
                 <a href="/blog/" class="block py-2 text-white font-medium">Blog</a>
                 <a href="/tools/" class="block py-2 text-gray-300 hover:text-white">Tools</a>
+                <a href="/ueber-uns.html" class="block py-2 text-white hover:text-blue-300">Über uns</a>
                 <a href="/app/#/login" class="block py-2 text-blue-400 hover:text-blue-300">Anmelden</a>
             </div>
         </div>
@@ -176,7 +178,7 @@
 
                         <img src="/blog/images/bookreview-schema-markup-seo.png" alt="BookReview Schema Markup für SEO – Buchrezensionen als Rich Snippets in Google" class="w-full rounded-xl mb-8 object-cover" style="max-height:400px;">
 
-                        <p>Wer Buchrezensionen veröffentlicht, hat eine besondere Chance in den Google-Suchergebnissen: Mit <strong>BookReview Schema Markup</strong> können deine Rezensionen mit gelben Sternebewertungen, Bewertungsanzahl und weiteren Details direkt in den SERPs erscheinen. Das erhöht die Klickrate erheblich — Nutzer sehen schon vor dem Klick, dass es sich um eine seriöse, bewertete Rezension handelt.</p>
+                        <p>Wer Buchrezensionen veröffentlicht, hat eine besondere Chance in den Google-Suchergebnissen: Mit <strong>BookReview Schema Markup</strong> können deine Rezensionen mit gelben Sternebewertungen, Bewertungsanzahl und weiteren Details direkt in den SERPs erscheinen. Das erhöht die Klickrate erheblich - Nutzer sehen schon vor dem Klick, dass es sich um eine seriöse, bewertete Rezension handelt.</p>
 
                         <p>In diesem Leitfaden zeigen wir dir, wie du BookReview Schema Markup korrekt nach Schema.org-Standard implementierst, welche Eigenschaften Pflicht sind und wie du häufige Fehler vermeidest. Am Ende hast du ein vollständiges JSON-LD Snippet, das du sofort einsetzen kannst.</p>
 
@@ -184,22 +186,22 @@
 
                         <p><code>BookReview</code> ist ein Subtyp von <code>Review</code> in der Schema.org-Ontologie und speziell für Rezensionen von Büchern gedacht. Es kombiniert die Eigenschaften eines <code>Review</code> mit einem Verweis auf das rezensierte Buch (das <code>Book</code>-Objekt). Google nutzt diese strukturierten Daten, um <strong>Rich Snippets</strong> mit Sternebewertungen in den Suchergebnissen anzuzeigen.</p>
 
-                        <p>Der entscheidende Unterschied zu einem allgemeinen <code>Review</code>: Die Eigenschaft <code>itemReviewed</code> referenziert ein Objekt des Typs <code>Book</code>, das seinerseits Eigenschaften wie Autor, ISBN, Erscheinungsdatum und Genre enthält. Damit signalisierst du Google exakt, um welches Werk es sich handelt — was die Relevanz und Qualität deines Snippets deutlich steigert.</p>
+                        <p>Der entscheidende Unterschied zu einem allgemeinen <code>Review</code>: Die Eigenschaft <code>itemReviewed</code> referenziert ein Objekt des Typs <code>Book</code>, das seinerseits Eigenschaften wie Autor, ISBN, Erscheinungsdatum und Genre enthält. Damit signalisierst du Google exakt, um welches Werk es sich handelt - was die Relevanz und Qualität deines Snippets deutlich steigert.</p>
 
                         <blockquote>BookReview Schema verbindet zwei mächtige Entitäten: die Rezension selbst und das Buch-Objekt. Google versteht dadurch den gesamten Kontext deiner Seite auf Anhieb.</blockquote>
 
-                        <p>Im Vergleich zum <a href="/blog/product-schema-markup-seo.html">Product Schema Markup</a>, bei dem Produkte bewertet werden, hat BookReview den Vorteil, dass Bücher von Google besonders gut als eigenständige Entitäten erkannt werden — dank ISBN, Autor und bekannten Werken im Knowledge Graph.</p>
+                        <p>Im Vergleich zum <a href="/blog/product-schema-markup-seo.html">Product Schema Markup</a>, bei dem Produkte bewertet werden, hat BookReview den Vorteil, dass Bücher von Google besonders gut als eigenständige Entitäten erkannt werden - dank ISBN, Autor und bekannten Werken im Knowledge Graph.</p>
 
                         <h2>Voraussetzungen für BookReview Rich Snippets</h2>
 
                         <p>Bevor Google dein BookReview Schema als Rich Snippet anzeigt, müssen folgende Bedingungen erfüllt sein:</p>
 
                         <ul>
-                            <li><strong>Die Seite enthält eine echte Rezension</strong> — kein Produktkatalog-Eintrag, sondern eine inhaltliche Bewertung mit Text</li>
+                            <li><strong>Die Seite enthält eine echte Rezension</strong> - kein Produktkatalog-Eintrag, sondern eine inhaltliche Bewertung mit Text</li>
                             <li><strong>Eine numerische Bewertung ist vorhanden</strong> (z. B. 4/5 Sterne oder 8/10 Punkte)</li>
-                            <li><strong>Das Markup ist korrekt implementiert</strong> — keine Syntaxfehler im JSON-LD</li>
+                            <li><strong>Das Markup ist korrekt implementiert</strong> - keine Syntaxfehler im JSON-LD</li>
                             <li><strong>Die Bewertung stammt von einer identifizierbaren Person oder Organisation</strong> (<code>author</code>-Eigenschaft)</li>
-                            <li><strong>Die Inhalte auf der Seite stimmen mit dem Markup überein</strong> — Google gleicht beides ab</li>
+                            <li><strong>Die Inhalte auf der Seite stimmen mit dem Markup überein</strong> - Google gleicht beides ab</li>
                         </ul>
 
                         <p>Wichtig: Google zeigt Sternebewertungen aus Rezensionen <strong>nicht</strong> an, wenn die Bewertungen durch Nutzer aggregiert sind (dafür gibt es <code>AggregateRating</code>). BookReview eignet sich für <strong>redaktionelle Einzelrezensionen</strong>, zum Beispiel auf einem Buchblog, in einem Online-Magazin oder auf einer Bücher-Empfehlungsseite.</p>
@@ -233,7 +235,7 @@
                             <li><code>@type</code>: <code>"Book"</code></li>
                             <li><code>name</code>: Titel des Buches (Pflicht)</li>
                             <li><code>author</code>: Autor des Buches (Person oder Organisation)</li>
-                            <li><code>isbn</code>: ISBN-13 (dringend empfohlen — Google kann das Buch damit eindeutig identifizieren)</li>
+                            <li><code>isbn</code>: ISBN-13 (dringend empfohlen - Google kann das Buch damit eindeutig identifizieren)</li>
                             <li><code>publisher</code>: Verlag des Buches</li>
                             <li><code>datePublished</code>: Erscheinungsjahr des Buches</li>
                             <li><code>numberOfPages</code>: Seitenzahl</li>
@@ -261,7 +263,7 @@
   },
   "author": {
     "@type": "Person",
-    "name": "Laurenz Thümmler",
+    "name": "Thümmler AI GmbH",
     "url": "https://shift07.ai"
   },
   "publisher": {
@@ -299,10 +301,10 @@
 
                         <ul>
                             <li><code>itemReviewed.inLanguage</code>: Sprache des Buches (z. B. <code>"en"</code>)</li>
-                            <li>Die Rezension selbst ist auf der deutschen Seite — die Sprache der Webseite wird durch das <code>lang</code>-Attribut im HTML-Tag angegeben (<code>&lt;html lang="de"&gt;</code>)</li>
+                            <li>Die Rezension selbst ist auf der deutschen Seite - die Sprache der Webseite wird durch das <code>lang</code>-Attribut im HTML-Tag angegeben (<code>&lt;html lang="de"&gt;</code>)</li>
                         </ul>
 
-                        <p>Das ermöglicht Google zu verstehen: Hier ist eine deutsche Rezension eines englischsprachigen Buches — eine sehr häufige Konstellation auf Buchblogs.</p>
+                        <p>Das ermöglicht Google zu verstehen: Hier ist eine deutsche Rezension eines englischsprachigen Buches - eine sehr häufige Konstellation auf Buchblogs.</p>
 
                         <h2>BookReview mit AggregateRating kombinieren</h2>
 
@@ -339,7 +341,7 @@
   "@type": "Article",
   "headline": "Rezension: Atomic Habits von James Clear",
   "datePublished": "2026-04-18",
-  "author": { "@type": "Person", "name": "Laurenz Thümmler" }
+  "author": { "@type": "Person", "name": "Thümmler AI GmbH" }
 }
 &lt;/script&gt;
 
@@ -349,7 +351,7 @@
   "@context": "https://schema.org",
   "@type": "BookReview",
   "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-  "author": { "@type": "Person", "name": "Laurenz Thümmler" },
+  "author": { "@type": "Person", "name": "Thümmler AI GmbH" },
   "itemReviewed": {
     "@type": "Book",
     "name": "Atomic Habits",
@@ -389,20 +391,20 @@
                             <li><strong>Unser JSON-LD Validator:</strong> Nutze unseren kostenlosen <a href="/tools/json-ld-structured-data-validator.html">JSON-LD Structured Data Validator</a>, um dein Markup schnell auf Fehler zu überprüfen.</li>
                         </ol>
 
-                        <p>Nach dem Live-Gang dauert es in der Regel 1–4 Wochen, bis Google die Rich Snippets in den SERPs anzeigt — vorausgesetzt, die Seite wird gecrawlt und indexiert.</p>
+                        <p>Nach dem Live-Gang dauert es in der Regel 1–4 Wochen, bis Google die Rich Snippets in den SERPs anzeigt - vorausgesetzt, die Seite wird gecrawlt und indexiert.</p>
 
                         <h2>BookReview vs. Review: Was ist der Unterschied?</h2>
 
-                        <p>Technisch ist <code>BookReview</code> ein direkter Subtyp von <code>Review</code> — es erbt alle Eigenschaften. Der einzige semantische Unterschied: Bei <code>BookReview</code> ist impliziert, dass <code>itemReviewed</code> ein Buch ist. Du könntest auch <code>Review</code> mit einem <code>Book</code>-Objekt als <code>itemReviewed</code> nutzen und würdest dasselbe Ergebnis erzielen.</p>
+                        <p>Technisch ist <code>BookReview</code> ein direkter Subtyp von <code>Review</code> - es erbt alle Eigenschaften. Der einzige semantische Unterschied: Bei <code>BookReview</code> ist impliziert, dass <code>itemReviewed</code> ein Buch ist. Du könntest auch <code>Review</code> mit einem <code>Book</code>-Objekt als <code>itemReviewed</code> nutzen und würdest dasselbe Ergebnis erzielen.</p>
 
-                        <p>Dennoch empfehlen wir <code>BookReview</code> zu verwenden, wenn du Bücher rezensierst — aus zwei Gründen:</p>
+                        <p>Dennoch empfehlen wir <code>BookReview</code> zu verwenden, wenn du Bücher rezensierst - aus zwei Gründen:</p>
 
                         <ul>
-                            <li><strong>Semantische Klarheit:</strong> Der Typ kommuniziert sofort, worum es geht — ohne dass Google <code>itemReviewed</code> analysieren muss</li>
+                            <li><strong>Semantische Klarheit:</strong> Der Typ kommuniziert sofort, worum es geht - ohne dass Google <code>itemReviewed</code> analysieren muss</li>
                             <li><strong>Zukunftssicherheit:</strong> Spezifischere Typen werden von Suchmaschinen oft bevorzugt behandelt, wenn neue Features eingeführt werden</li>
                         </ul>
 
-                        <p>Für andere Rezensionstypen — Filmkritiken, Produktbewertungen, Restaurantkritiken — gibt es ebenfalls spezialisierte Review-Subtypen. Mehr über die verschiedenen Schema-Typen erfährst du in unserem Artikel über <a href="/blog/strukturierte-daten-seo-schema-markup.html">strukturierte Daten für SEO</a>.</p>
+                        <p>Für andere Rezensionstypen - Filmkritiken, Produktbewertungen, Restaurantkritiken - gibt es ebenfalls spezialisierte Review-Subtypen. Mehr über die verschiedenen Schema-Typen erfährst du in unserem Artikel über <a href="/blog/strukturierte-daten-seo-schema-markup.html">strukturierte Daten für SEO</a>.</p>
 
                         <h2>Praxistipps für Buchblog-Betreiber</h2>
 
@@ -412,13 +414,13 @@
                         <p>Lege ein JSON-LD-Template an, das du für jede neue Rezension nur mit den buchspezifischen Daten befüllst (Name, Autor, ISBN, Rating). Das spart Zeit und reduziert Fehler.</p>
 
                         <h3>ISBN immer recherchieren</h3>
-                        <p>Die ISBN ist das mächtigste Feld im Book-Objekt — sie verbindet dein Markup mit Googles Knowledge Graph und den Buchmetadaten in Worldcat, Open Library und anderen Quellen. Nutze ISBN-13, wenn verfügbar.</p>
+                        <p>Die ISBN ist das mächtigste Feld im Book-Objekt - sie verbindet dein Markup mit Googles Knowledge Graph und den Buchmetadaten in Worldcat, Open Library und anderen Quellen. Nutze ISBN-13, wenn verfügbar.</p>
 
                         <h3>Buchcover einbinden</h3>
                         <p>Das <code>image</code>-Feld im Book-Objekt verweist auf das Buchcover. Hoste das Cover auf deinem eigenen Server (nicht von Amazon-Thumbnails) und optimiere es für Web-Performance. Buchcover verbessern die visuelle Präsenz in Rich Snippets erheblich.</p>
 
                         <h3>Rezensionen aktuell halten</h3>
-                        <p>Aktualisiere das <code>datePublished</code>-Feld, wenn du eine Rezension überarbeitest. Google bevorzugt frische Inhalte — gerade bei Büchern, die Neuauflagen erfahren haben.</p>
+                        <p>Aktualisiere das <code>datePublished</code>-Feld, wenn du eine Rezension überarbeitest. Google bevorzugt frische Inhalte - gerade bei Büchern, die Neuauflagen erfahren haben.</p>
 
                         <h2>Checkliste: BookReview Schema korrekt implementieren</h2>
 
@@ -441,7 +443,7 @@
 
                         <p>Der Implementierungsaufwand ist überschaubar: Ein einmaliges Template, das du für jede Rezension befüllst, reicht völlig aus. Kombiniert mit einer soliden <a href="/blog/json-ld-microdata-rdfa-structured-data.html">JSON-LD Implementierungsstrategie</a> und regelmäßiger Validierung mit unserem <a href="/tools/json-ld-structured-data-validator.html">JSON-LD Validator</a> hast du alle Voraussetzungen, um von den Book Rich Snippets in Google zu profitieren.</p>
 
-                        <p>Im nächsten Artikel unserer Schema-Markup-Serie zeigen wir, wie du <strong>Recipe Schema Markup</strong> implementierst — ideal für Food-Blogs und Rezept-Websites.</p>
+                        <p>Im nächsten Artikel unserer Schema-Markup-Serie zeigen wir, wie du <strong>Recipe Schema Markup</strong> implementierst - ideal für Food-Blogs und Rezept-Websites.</p>
 
                     </div>
 
@@ -527,6 +529,7 @@
                     <a href="/impressum.html" class="hover:text-white transition-colors">Impressum</a>
                     <a href="/datenschutz.html" class="hover:text-white transition-colors">Datenschutz</a>
                     <a href="/agb.html" class="hover:text-white transition-colors">AGB</a>
+                    <a href="/ueber-uns.html" class="hover:text-white transition-colors">Über uns</a>
                 </div>
                 <p class="text-sm text-gray-500">&copy; 2026 Thümmler AI GmbH</p>
             </div>

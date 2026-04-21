@@ -121,6 +121,7 @@
                     <a href="/" class="text-gray-300 hover:text-white transition-colors">SEO-Tool</a>
                     <a href="/blog/" class="text-white font-medium border-b-2 border-blue-500 pb-0.5">Blog</a>
                     <a href="/tools/" class="text-gray-300 hover:text-white transition-colors">Tools</a>
+                    <a href="/ueber-uns.html" class="text-white hover:text-blue-300 transition-colors">Über uns</a>
                     <a href="/app/#/login" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-5 py-2 rounded-lg font-medium transition-all">Anmelden</a>
                 </div>
                 <button id="mobile-menu-btn" class="md:hidden text-gray-300 hover:text-white">
@@ -133,6 +134,7 @@
                 <a href="/" class="block py-2 text-gray-300 hover:text-white">SEO-Tool</a>
                 <a href="/blog/" class="block py-2 text-white font-medium">Blog</a>
                 <a href="/tools/" class="block py-2 text-gray-300 hover:text-white">Tools</a>
+                <a href="/ueber-uns.html" class="block py-2 text-white hover:text-blue-300">Über uns</a>
                 <a href="/app/#/login" class="block py-2 text-blue-400 hover:text-blue-300">Anmelden</a>
             </div>
         </div>
@@ -183,13 +185,13 @@
 
                         <p>Wenn deine Website langsam lädt, verlierst du Besucher. Studien zeigen: <strong>53% der Nutzer verlassen eine Seite, wenn sie länger als 3 Sekunden zum Laden braucht</strong>. Und seit Google <a href="/blog/core-web-vitals-erklaert.html">Core Web Vitals</a> als Rankingfaktor eingeführt hat, kostet eine langsame Website nicht nur Besucher, sondern auch Suchmaschinen-Positionen.</p>
 
-                        <p>Eine der wirkungsvollsten Maßnahmen für mehr Speed ist <strong>Caching</strong> — und gleichzeitig eine der am häufigsten unterschätzten. Richtig eingerichtet kann Caching die Ladezeit deiner Website um 50–80% reduzieren, ohne dass du dein Hosting wechseln oder teures Code-Refactoring betreiben musst.</p>
+                        <p>Eine der wirkungsvollsten Maßnahmen für mehr Speed ist <strong>Caching</strong> - und gleichzeitig eine der am häufigsten unterschätzten. Richtig eingerichtet kann Caching die Ladezeit deiner Website um 50–80% reduzieren, ohne dass du dein Hosting wechseln oder teures Code-Refactoring betreiben musst.</p>
 
-                        <p>In diesem Artikel erkläre ich dir, welche Arten von Caching es gibt, wie sie funktionieren, und wie du sie konkret auf deiner Website einrichtest — egal ob du WordPress, eine statische Website oder einen eigenen Server nutzt.</p>
+                        <p>In diesem Artikel erkläre ich dir, welche Arten von Caching es gibt, wie sie funktionieren, und wie du sie konkret auf deiner Website einrichtest - egal ob du WordPress, eine statische Website oder einen eigenen Server nutzt.</p>
 
                         <h2>Was ist Caching und warum ist es so wichtig?</h2>
 
-                        <p>Caching bedeutet vereinfacht: Ergebnisse, die aufwändig zu berechnen oder herunterzuladen sind, werden zwischengespeichert — damit sie beim nächsten Abruf sofort verfügbar sind, ohne den Prozess zu wiederholen.</p>
+                        <p>Caching bedeutet vereinfacht: Ergebnisse, die aufwändig zu berechnen oder herunterzuladen sind, werden zwischengespeichert - damit sie beim nächsten Abruf sofort verfügbar sind, ohne den Prozess zu wiederholen.</p>
 
                         <p>Stell dir vor, du rufst eine WordPress-Seite auf. Ohne Cache muss der Server bei jedem Aufruf:</p>
                         <ol>
@@ -199,16 +201,16 @@
                             <li>CSS, JavaScript und Bilder an den Browser senden</li>
                         </ol>
 
-                        <p>Mit Cache wird das fertig generierte HTML direkt ausgeliefert — der Server überspringt PHP und Datenbank. Das ist dramatisch schneller.</p>
+                        <p>Mit Cache wird das fertig generierte HTML direkt ausgeliefert - der Server überspringt PHP und Datenbank. Das ist dramatisch schneller.</p>
 
-                        <p>Für SEO ist Caching aus zwei Gründen wichtig: Erstens verbessert es direkt den LCP (Largest Contentful Paint) und TTFB (Time to First Byte) — beides Core Web Vitals. Zweitens ermöglicht ein schnelles Caching dem Google-Bot, mehr Seiten deiner Website in einem Crawl-Durchgang zu indexieren (besseres <a href="/blog/crawl-budget-optimieren.html">Crawl-Budget</a>).</p>
+                        <p>Für SEO ist Caching aus zwei Gründen wichtig: Erstens verbessert es direkt den LCP (Largest Contentful Paint) und TTFB (Time to First Byte) - beides Core Web Vitals. Zweitens ermöglicht ein schnelles Caching dem Google-Bot, mehr Seiten deiner Website in einem Crawl-Durchgang zu indexieren (besseres <a href="/blog/crawl-budget-optimieren.html">Crawl-Budget</a>).</p>
 
                         <h2>Die 4 wichtigsten Cache-Typen im Überblick</h2>
 
                         <div class="cache-type">
                             <h3 style="margin-top: 0; color: #f97316;">1. Browser-Cache</h3>
                             <p><strong>Was wird gecacht:</strong> Statische Ressourcen wie CSS, JavaScript, Bilder und Fonts direkt im Browser des Besuchers.</p>
-                            <p><strong>Wie es funktioniert:</strong> Der Server sendet HTTP-Header, die dem Browser sagen, wie lange eine Ressource lokal gespeichert werden soll. Beim zweiten Besuch lädt der Browser die Datei aus seinem eigenen Cache — null Netzwerklatenz.</p>
+                            <p><strong>Wie es funktioniert:</strong> Der Server sendet HTTP-Header, die dem Browser sagen, wie lange eine Ressource lokal gespeichert werden soll. Beim zweiten Besuch lädt der Browser die Datei aus seinem eigenen Cache - null Netzwerklatenz.</p>
                             <p><strong>Kontrolliert durch:</strong> HTTP-Header <code>Cache-Control</code>, <code>Expires</code>, <code>ETag</code>, <code>Last-Modified</code></p>
                             <p><strong>Typische Dauer:</strong> Bilder: 1 Jahr | CSS/JS: 1 Woche bis 1 Jahr | HTML: 0 (immer aktuell) | Fonts: 1 Jahr</p>
                         </div>
@@ -239,15 +241,15 @@
                         <p>Browser-Caching wird über HTTP-Header gesteuert. Der wichtigste ist <code>Cache-Control</code>. Hier sind die relevantesten Direktiven:</p>
 
                         <ul>
-                            <li><code>max-age=31536000</code> — Ressource 1 Jahr cachen (ideal für versionierte Assets)</li>
-                            <li><code>max-age=604800</code> — 1 Woche cachen</li>
-                            <li><code>no-cache</code> — Ressource nicht cachen (aber trotzdem validieren bei Revalidierung)</li>
-                            <li><code>no-store</code> — Gar nicht cachen (für sensible Daten)</li>
-                            <li><code>immutable</code> — Ressource verändert sich nie, nie revalidieren (ideal für versionierte Bundles)</li>
-                            <li><code>stale-while-revalidate=86400</code> — Veralteten Cache sofort ausliefern, im Hintergrund aktualisieren</li>
+                            <li><code>max-age=31536000</code> - Ressource 1 Jahr cachen (ideal für versionierte Assets)</li>
+                            <li><code>max-age=604800</code> - 1 Woche cachen</li>
+                            <li><code>no-cache</code> - Ressource nicht cachen (aber trotzdem validieren bei Revalidierung)</li>
+                            <li><code>no-store</code> - Gar nicht cachen (für sensible Daten)</li>
+                            <li><code>immutable</code> - Ressource verändert sich nie, nie revalidieren (ideal für versionierte Bundles)</li>
+                            <li><code>stale-while-revalidate=86400</code> - Veralteten Cache sofort ausliefern, im Hintergrund aktualisieren</li>
                         </ul>
 
-                        <h3>Apache (.htaccess) — Caching einrichten</h3>
+                        <h3>Apache (.htaccess) - Caching einrichten</h3>
 
                         <pre><code># Browser-Caching in Apache
 &lt;IfModule mod_expires.c&gt;
@@ -275,7 +277,7 @@
   ExpiresByType application/font-woff2 "access plus 1 year"
 &lt;/IfModule&gt;</code></pre>
 
-                        <h3>Nginx — Caching konfigurieren</h3>
+                        <h3>Nginx - Caching konfigurieren</h3>
 
                         <pre><code># Browser-Caching in Nginx
 location ~* \.(css|js)$ {
@@ -310,7 +312,7 @@ location ~* \.(woff|woff2|ttf|otf|eot)$ {
                         </ol>
 
                         <h3>Option 2: LiteSpeed Cache (beste Performance)</h3>
-                        <p>Falls dein Hosting LiteSpeed-Server nutzt (z.B. Strato, Hetzner mit LiteSpeed), ist LiteSpeed Cache das leistungsstärkste Plugin. Es nutzt den Server-Cache direkt auf HTTP-Ebene — schneller als PHP-basierte Lösungen.</p>
+                        <p>Falls dein Hosting LiteSpeed-Server nutzt (z.B. Strato, Hetzner mit LiteSpeed), ist LiteSpeed Cache das leistungsstärkste Plugin. Es nutzt den Server-Cache direkt auf HTTP-Ebene - schneller als PHP-basierte Lösungen.</p>
                         <ol>
                             <li>Plugin installieren, "Cache aktivieren"</li>
                             <li>Page Optimize: CSS/JS minifizieren und kombinieren aktivieren</li>
@@ -318,14 +320,14 @@ location ~* \.(woff|woff2|ttf|otf|eot)$ {
                         </ol>
 
                         <h3>Option 3: W3 Total Cache (fortgeschritten)</h3>
-                        <p>Das komplexeste Plugin mit den meisten Optionen. Nur empfehlenswert, wenn du weißt was du tust — Fehlkonfigurationen können zu Darstellungsproblemen führen. Gut für Websites mit Redis/Memcached-Zugang.</p>
+                        <p>Das komplexeste Plugin mit den meisten Optionen. Nur empfehlenswert, wenn du weißt was du tust - Fehlkonfigurationen können zu Darstellungsproblemen führen. Gut für Websites mit Redis/Memcached-Zugang.</p>
 
                         <div class="warning-box">
                             <p style="color: #fbbf24; font-weight: 600; margin-bottom: 0.5rem;">⚠️ Wichtig: Nie zwei Caching-Plugins gleichzeitig!</p>
                             <p style="color: #94a3b8; margin: 0;">WP Super Cache + W3 Total Cache zusammen aktivieren führt zu Konflikten und Fehlern. Entscheide dich für eines.</p>
                         </div>
 
-                        <h2>Cloudflare kostenlos nutzen — CDN + Cache in einem</h2>
+                        <h2>Cloudflare kostenlos nutzen - CDN + Cache in einem</h2>
 
                         <p>Cloudflare ist eines der besten kostenlosen Tools zur Website-Beschleunigung überhaupt. Der kostenlose Plan bietet:</p>
                         <ul>
@@ -345,7 +347,7 @@ location ~* \.(woff|woff2|ttf|otf|eot)$ {
                             <li>Cloudflare scannt deine DNS-Einträge automatisch</li>
                             <li>Nameserver bei deinem Domain-Registrar auf die Cloudflare-Nameserver umstellen</li>
                             <li>Warten (24–48 Stunden DNS-Propagation)</li>
-                            <li>Fertig — Cloudflare ist aktiv</li>
+                            <li>Fertig - Cloudflare ist aktiv</li>
                         </ol>
 
                         <p><strong>Caching-Level einstellen:</strong> In Cloudflare → Caching → Konfiguration → "Standard" oder "Aggressive" wählen. Bei statischen Websites: "Alles cachen" über eine Page Rule.</p>
@@ -360,7 +362,7 @@ location ~* \.(woff|woff2|ttf|otf|eot)$ {
                             <li>Auf eine CSS- oder Bild-Datei klicken</li>
                             <li>Reiter "Headers" → Response Headers prüfen</li>
                         </ol>
-                        <p>Du solltest <code>Cache-Control: max-age=...</code> und/oder <code>Expires: ...</code> sehen. Wenn du nach dem zweiten Laden "(from disk cache)" oder "(from memory cache)" in der Size-Spalte siehst — Cache funktioniert.</p>
+                        <p>Du solltest <code>Cache-Control: max-age=...</code> und/oder <code>Expires: ...</code> sehen. Wenn du nach dem zweiten Laden "(from disk cache)" oder "(from memory cache)" in der Size-Spalte siehst - Cache funktioniert.</p>
 
                         <h2>Cache-Invalidierung: Wenn sich Inhalte ändern</h2>
 
@@ -375,7 +377,7 @@ location ~* \.(woff|woff2|ttf|otf|eot)$ {
 
                         <h2>Was sollte man NICHT cachen?</h2>
 
-                        <p>Nicht alles darf gecacht werden — vor allem nicht:</p>
+                        <p>Nicht alles darf gecacht werden - vor allem nicht:</p>
                         <ul>
                             <li>Eingeloggte Benutzer-Seiten (jeder Nutzer sieht personalisierten Inhalt)</li>
                             <li>Warenkorb und Checkout-Seiten (E-Commerce)</li>
@@ -389,12 +391,12 @@ location ~* \.(woff|woff2|ttf|otf|eot)$ {
 
                         <p>Richtig eingerichtetes Caching wirkt direkt auf drei <a href="/blog/core-web-vitals-erklaert.html">Core Web Vitals</a>:</p>
                         <ul>
-                            <li><strong>TTFB (Time to First Byte)</strong> — Server-Cache reduziert ihn drastisch, von oft 500–2000ms auf unter 100ms</li>
-                            <li><strong>LCP (Largest Contentful Paint)</strong> — Schnelleres TTFB + gecachte Bilder verbessern LCP direkt</li>
-                            <li><strong>CLS (Cumulative Layout Shift)</strong> — Indirekt: wenn Fonts und CSS schneller laden, gibt es weniger Layout-Verschiebungen</li>
+                            <li><strong>TTFB (Time to First Byte)</strong> - Server-Cache reduziert ihn drastisch, von oft 500–2000ms auf unter 100ms</li>
+                            <li><strong>LCP (Largest Contentful Paint)</strong> - Schnelleres TTFB + gecachte Bilder verbessern LCP direkt</li>
+                            <li><strong>CLS (Cumulative Layout Shift)</strong> - Indirekt: wenn Fonts und CSS schneller laden, gibt es weniger Layout-Verschiebungen</li>
                         </ul>
 
-                        <p>Kombiniere Caching mit <a href="/blog/bilder-web-optimieren.html">optimierten Bildern</a> und gut verwalteten <a href="/blog/website-geschwindigkeit-verbessern.html">Ladezeiten</a> — das sind die drei stärksten Performance-Hebel für eine typische Website.</p>
+                        <p>Kombiniere Caching mit <a href="/blog/bilder-web-optimieren.html">optimierten Bildern</a> und gut verwalteten <a href="/blog/website-geschwindigkeit-verbessern.html">Ladezeiten</a> - das sind die drei stärksten Performance-Hebel für eine typische Website.</p>
 
                         <h2>Checkliste: Caching auf deiner Website</h2>
 
@@ -409,7 +411,7 @@ location ~* \.(woff|woff2|ttf|otf|eot)$ {
                             <p style="color: #f1f5f9; font-weight: 600; margin: 1rem 0;">Server-Cache (WordPress)</p>
                             <ul class="checklist">
                                 <li>Caching-Plugin installiert und aktiviert (WP Super Cache / LiteSpeed Cache)</li>
-                                <li>Nur eines — nie zwei Caching-Plugins gleichzeitig</li>
+                                <li>Nur eines - nie zwei Caching-Plugins gleichzeitig</li>
                                 <li>Admin-Bereich und Checkout vom Cache ausgenommen</li>
                                 <li>Cache-Invalidierung beim Veröffentlichen funktioniert</li>
                             </ul>
@@ -424,11 +426,11 @@ location ~* \.(woff|woff2|ttf|otf|eot)$ {
 
                         <h2>Fazit: Caching ist die schnellste Rendite im Performance-SEO</h2>
 
-                        <p>Von allen Performance-Maßnahmen hat <strong>Caching das beste Aufwand-Nutzen-Verhältnis</strong>. Einmal richtig eingerichtet, arbeitet es dauerhaft im Hintergrund und macht deine Website schneller — für jeden Besucher, bei jedem Seitenaufruf.</p>
+                        <p>Von allen Performance-Maßnahmen hat <strong>Caching das beste Aufwand-Nutzen-Verhältnis</strong>. Einmal richtig eingerichtet, arbeitet es dauerhaft im Hintergrund und macht deine Website schneller - für jeden Besucher, bei jedem Seitenaufruf.</p>
 
                         <p>Der einfachste Einstieg: Browser-Cache über <code>.htaccess</code> aktivieren + Cloudflare kostenlos einrichten. Das dauert weniger als eine Stunde und kann die Ladezeit deiner Website halbieren.</p>
 
-                        <p>Im nächsten Artikel dieser Performance-Reihe zeigen wir, wie du <a href="/blog/render-blocking-ressourcen-entfernen.html">Render-Blocking-Ressourcen entfernst</a> — also CSS und JavaScript, das den Browser daran hindert, die Seite anzuzeigen, bis es vollständig geladen ist. Zusammen mit Caching ist das der zweite große Performance-Hebel für bessere <a href="/blog/core-web-vitals-erklaert.html">Core Web Vitals</a>.</p>
+                        <p>Im nächsten Artikel dieser Performance-Reihe zeigen wir, wie du <a href="/blog/render-blocking-ressourcen-entfernen.html">Render-Blocking-Ressourcen entfernst</a> - also CSS und JavaScript, das den Browser daran hindert, die Seite anzuzeigen, bis es vollständig geladen ist. Zusammen mit Caching ist das der zweite große Performance-Hebel für bessere <a href="/blog/core-web-vitals-erklaert.html">Core Web Vitals</a>.</p>
 
                     </div>
 
@@ -502,6 +504,7 @@ location ~* \.(woff|woff2|ttf|otf|eot)$ {
                     <a href="/impressum.html" class="hover:text-white transition-colors">Impressum</a>
                     <a href="/datenschutz.html" class="hover:text-white transition-colors">Datenschutz</a>
                     <a href="/agb.html" class="hover:text-white transition-colors">AGB</a>
+                    <a href="/ueber-uns.html" class="hover:text-white transition-colors">Über uns</a>
                 </div>
                 <p class="text-sm text-gray-500">&copy; 2026 Thümmler AI GmbH</p>
             </div>

@@ -119,6 +119,7 @@
                     <a href="/" class="text-gray-300 hover:text-white transition-colors">SEO-Tool</a>
                     <a href="/blog/" class="text-white font-medium border-b-2 border-blue-500 pb-0.5">Blog</a>
                     <a href="/tools/" class="text-gray-300 hover:text-white transition-colors">Tools</a>
+                    <a href="/ueber-uns.html" class="text-white hover:text-blue-300 transition-colors">Über uns</a>
                     <a href="/app/#/login" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-5 py-2 rounded-lg font-medium transition-all">Anmelden</a>
                 </div>
                 <button id="mobile-menu-btn" class="md:hidden text-gray-300 hover:text-white">
@@ -131,6 +132,7 @@
                 <a href="/" class="block py-2 text-gray-300 hover:text-white">SEO-Tool</a>
                 <a href="/blog/" class="block py-2 text-white font-medium">Blog</a>
                 <a href="/tools/" class="block py-2 text-gray-300 hover:text-white">Tools</a>
+                <a href="/ueber-uns.html" class="block py-2 text-white hover:text-blue-300">Über uns</a>
                 <a href="/app/#/login" class="block py-2 text-blue-400 hover:text-blue-300">Anmelden</a>
             </div>
         </div>
@@ -179,20 +181,20 @@
 
                         <img src="/blog/images/javascript-performance-seo.png" alt="JavaScript-Performance für SEO: Lazy Loading, Code Splitting und Defer richtig einsetzen" class="w-full rounded-xl mb-8">
 
-                        <p>JavaScript ist aus modernen Websites nicht mehr wegzudenken — aber es ist auch einer der häufigsten Gründe, warum Websites bei Google schlechter ranken als sie sollten. Zu viel JavaScript, falsch geladen oder schlecht optimiert, blockiert das Rendering, verschlechtert die <a href="/blog/core-web-vitals-verbessern-lcp-cls-inp.html">Core Web Vitals</a> und bremst Google beim Crawlen deiner Seiten aus.</p>
+                        <p>JavaScript ist aus modernen Websites nicht mehr wegzudenken - aber es ist auch einer der häufigsten Gründe, warum Websites bei Google schlechter ranken als sie sollten. Zu viel JavaScript, falsch geladen oder schlecht optimiert, blockiert das Rendering, verschlechtert die <a href="/blog/core-web-vitals-verbessern-lcp-cls-inp.html">Core Web Vitals</a> und bremst Google beim Crawlen deiner Seiten aus.</p>
 
                         <p>In diesem Artikel zeige ich dir konkret, wie du JavaScript so optimierst, dass dein SEO-Ranking davon profitiert. Du lernst den Unterschied zwischen <code>defer</code> und <code>async</code>, wie du Lazy Loading richtig einsetzt und was Code Splitting für deine Ladezeit bedeutet.</p>
 
                         <h2>Warum JavaScript ein SEO-Problem sein kann</h2>
 
-                        <p>Google crawlt und indexiert Websites mit dem Googlebot. Dieser Crawler versteht zwar JavaScript — aber nicht sofort. Es gibt zwei Phasen beim Google-Crawling:</p>
+                        <p>Google crawlt und indexiert Websites mit dem Googlebot. Dieser Crawler versteht zwar JavaScript - aber nicht sofort. Es gibt zwei Phasen beim Google-Crawling:</p>
 
                         <ol>
                             <li><strong>Erste Indexierung:</strong> Googlebot lädt die HTML-Datei und indexiert sofort sichtbare Inhalte</li>
-                            <li><strong>Zweite Indexierung (Rendering):</strong> Googlebot rendert JavaScript — aber mit einer Verzögerung von Stunden bis Tagen</li>
+                            <li><strong>Zweite Indexierung (Rendering):</strong> Googlebot rendert JavaScript - aber mit einer Verzögerung von Stunden bis Tagen</li>
                         </ol>
 
-                        <p>Wenn dein wichtiger Content erst durch JavaScript geladen wird, kann es sein, dass Google ihn erst Tage später sieht. Noch problematischer: Wenn JavaScript das initiale Rendering blockiert, werden deine <a href="/blog/ladezeit-ranking-faktor-page-speed.html">Ladezeiten schlechter</a> — und damit auch dein Ranking.</p>
+                        <p>Wenn dein wichtiger Content erst durch JavaScript geladen wird, kann es sein, dass Google ihn erst Tage später sieht. Noch problematischer: Wenn JavaScript das initiale Rendering blockiert, werden deine <a href="/blog/ladezeit-ranking-faktor-page-speed.html">Ladezeiten schlechter</a> - und damit auch dein Ranking.</p>
 
                         <div class="metric-card">
                             <h3 style="margin-top:0; color:#60a5fa;">Die drei JavaScript-Probleme, die SEO am meisten schaden</h3>
@@ -207,7 +209,7 @@
 
                         <p>Wenn du ein <code>&lt;script&gt;</code>-Tag ohne Attribute verwendest, blockiert der Browser das gesamte HTML-Parsing, bis das Script geladen und ausgeführt ist. Das ist das klassische Render-Blocking-Problem. Mehr dazu erkläre ich im Artikel über <a href="/blog/render-blocking-ressourcen-entfernen.html">Render-Blocking-Ressourcen</a>.</p>
 
-                        <h3>async — Parallel laden, sofort ausführen</h3>
+                        <h3>async - Parallel laden, sofort ausführen</h3>
 
                         <p>Das <code>async</code>-Attribut lädt das Script parallel zum HTML-Parsing herunter. Sobald der Download abgeschlossen ist, pausiert der Browser das HTML-Parsing und führt das Script aus.</p>
 
@@ -216,7 +218,7 @@
 
                         <p><strong>Wann verwenden?</strong> Für unabhängige Scripts wie Analytics (Google Analytics, Matomo) oder Tracking-Pixel, die keine Abhängigkeiten zum DOM haben. Die Ausführungsreihenfolge ist nicht garantiert.</p>
 
-                        <h3>defer — Parallel laden, nach dem Parsing ausführen</h3>
+                        <h3>defer - Parallel laden, nach dem Parsing ausführen</h3>
 
                         <p>Mit <code>defer</code> wird das Script parallel geladen, aber erst ausgeführt, nachdem das gesamte HTML geparst wurde. Die Ausführungsreihenfolge bleibt dabei erhalten.</p>
 
@@ -268,7 +270,7 @@
 
                         <h2>Lazy Loading: Nur laden, was sichtbar ist</h2>
 
-                        <p>Lazy Loading ist eine Technik, bei der Ressourcen erst dann geladen werden, wenn sie tatsächlich im Viewport des Nutzers sichtbar sind. Das reduziert die initiale Ladezeit erheblich — besonders auf langen Seiten mit vielen Bildern oder Komponenten.</p>
+                        <p>Lazy Loading ist eine Technik, bei der Ressourcen erst dann geladen werden, wenn sie tatsächlich im Viewport des Nutzers sichtbar sind. Das reduziert die initiale Ladezeit erheblich - besonders auf langen Seiten mit vielen Bildern oder Komponenten.</p>
 
                         <h3>Lazy Loading für Bilder (nativ im Browser)</h3>
 
@@ -280,11 +282,11 @@
 &lt;!-- Mit Lazy Loading: Bild wird erst geladen wenn es in den Viewport kommt --&gt;
 &lt;img src="grosses-foto.jpg" alt="Beispiel" loading="lazy" width="800" height="600"&gt;</code></pre>
 
-                        <p><strong>Wichtig für SEO:</strong> Gib immer <code>width</code> und <code>height</code> an. Ohne diese Attribute reserviert der Browser keinen Platz für das Bild — sobald es lädt, verschiebt sich der Layout (CLS steigt). Das schadet dem Ranking. Mehr zu Bildoptimierung generell findest du im nächsten Artikel dieser Reihe.</p>
+                        <p><strong>Wichtig für SEO:</strong> Gib immer <code>width</code> und <code>height</code> an. Ohne diese Attribute reserviert der Browser keinen Platz für das Bild - sobald es lädt, verschiebt sich der Layout (CLS steigt). Das schadet dem Ranking. Mehr zu Bildoptimierung generell findest du im nächsten Artikel dieser Reihe.</p>
 
                         <h3>Lazy Loading für Iframes</h3>
 
-                        <p>Das gleiche <code>loading="lazy"</code>-Attribut funktioniert auch für <code>&lt;iframe&gt;</code>-Elemente — ideal für eingebettete YouTube-Videos, Google Maps oder andere externe Inhalte:</p>
+                        <p>Das gleiche <code>loading="lazy"</code>-Attribut funktioniert auch für <code>&lt;iframe&gt;</code>-Elemente - ideal für eingebettete YouTube-Videos, Google Maps oder andere externe Inhalte:</p>
 
 <pre><code>&lt;!-- YouTube-Video nur laden wenn sichtbar --&gt;
 &lt;iframe
@@ -297,13 +299,13 @@
 
                         <h3>Lazy Loading für JavaScript-Komponenten (Intersection Observer)</h3>
 
-                        <p>Für komplexere Anwendungsfälle — zum Beispiel wenn du eine Karte, einen Chat-Widget oder einen aufwändigen Slider erst laden willst wenn er sichtbar ist — nutze den <code>IntersectionObserver</code>:</p>
+                        <p>Für komplexere Anwendungsfälle - zum Beispiel wenn du eine Karte, einen Chat-Widget oder einen aufwändigen Slider erst laden willst wenn er sichtbar ist - nutze den <code>IntersectionObserver</code>:</p>
 
 <pre><code>// Beobachte ein Element und lade Code erst wenn es sichtbar wird
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      // Element ist im Viewport — jetzt laden
+      // Element ist im Viewport - jetzt laden
       import('./heavy-component.js').then(module => {
         module.init(entry.target);
       });
@@ -318,17 +320,17 @@ if (widget) observer.observe(widget);</code></pre>
 
                         <h2>Code Splitting: Nur laden was gebraucht wird</h2>
 
-                        <p>Moderne JavaScript-Frameworks (React, Vue, Angular) bundeln oft den gesamten Anwendungscode in eine große Datei. Ein Bundle von 500 KB+ ist keine Seltenheit. Das Problem: Der Browser muss diese gesamte Datei herunterladen, parsen und ausführen — auch wenn der Nutzer nur die Startseite besucht.</p>
+                        <p>Moderne JavaScript-Frameworks (React, Vue, Angular) bundeln oft den gesamten Anwendungscode in eine große Datei. Ein Bundle von 500 KB+ ist keine Seltenheit. Das Problem: Der Browser muss diese gesamte Datei herunterladen, parsen und ausführen - auch wenn der Nutzer nur die Startseite besucht.</p>
 
                         <p>Code Splitting teilt dieses Bundle in kleinere Teile auf, die bei Bedarf geladen werden.</p>
 
                         <h3>Dynamische Imports (JavaScript-Standard)</h3>
 
-<pre><code>// Ohne Code Splitting — alles wird sofort geladen
+<pre><code>// Ohne Code Splitting - alles wird sofort geladen
 import { HeavyChart } from './charts';
 import { AdvancedMap } from './map';
 
-// Mit dynamischen Imports — nur laden wenn benötigt
+// Mit dynamischen Imports - nur laden wenn benötigt
 async function showChart() {
   const { HeavyChart } = await import('./charts');
   new HeavyChart('#container');
@@ -381,7 +383,7 @@ const result = get(obj, 'path.to.value');
 // Noch besser: Nutze ES6-Module für automatisches Tree Shaking
 import { debounce } from 'lodash-es'; // Bundler entfernt den Rest</code></pre>
 
-                        <p>Bundler wie Webpack, Rollup oder Vite unterstützen Tree Shaking automatisch — aber nur bei ES-Module-Syntax (<code>import/export</code>), nicht bei CommonJS (<code>require</code>).</p>
+                        <p>Bundler wie Webpack, Rollup oder Vite unterstützen Tree Shaking automatisch - aber nur bei ES-Module-Syntax (<code>import/export</code>), nicht bei CommonJS (<code>require</code>).</p>
 
                         <h2>Preload, Prefetch und Preconnect: Ressourcen vorausschauend laden</h2>
 
@@ -445,7 +447,7 @@ async function processLargeArrayChunked(arr) {
                                 </div>
                                 <div>
                                     <p style="margin:0; color: #f1f5f9; font-weight: 600;">Bilder mit loading="lazy" versehen</p>
-                                    <p style="margin:0; color: #94a3b8; font-size: 0.875rem;">Alle Bilder außerhalb des initialen Viewports — mit width/height-Attributen</p>
+                                    <p style="margin:0; color: #94a3b8; font-size: 0.875rem;">Alle Bilder außerhalb des initialen Viewports - mit width/height-Attributen</p>
                                 </div>
                             </div>
                             <div class="checklist-item">
@@ -463,7 +465,7 @@ async function processLargeArrayChunked(arr) {
                                 </div>
                                 <div>
                                     <p style="margin:0; color: #f1f5f9; font-weight: 600;">Kritische Inhalte im HTML-Quellcode</p>
-                                    <p style="margin:0; color: #94a3b8; font-size: 0.875rem;">H1, Meta-Tags, Haupttexte müssen im HTML stehen — nicht erst durch JS eingefügt werden</p>
+                                    <p style="margin:0; color: #94a3b8; font-size: 0.875rem;">H1, Meta-Tags, Haupttexte müssen im HTML stehen - nicht erst durch JS eingefügt werden</p>
                                 </div>
                             </div>
                             <div class="checklist-item">
@@ -472,7 +474,7 @@ async function processLargeArrayChunked(arr) {
                                 </div>
                                 <div>
                                     <p style="margin:0; color: #f1f5f9; font-weight: 600;">Lange Tasks aufteilen (für INP)</p>
-                                    <p style="margin:0; color: #94a3b8; font-size: 0.875rem;">Aufgaben über 50 ms in Chunks aufteilen — Ziel: INP unter 200 ms</p>
+                                    <p style="margin:0; color: #94a3b8; font-size: 0.875rem;">Aufgaben über 50 ms in Chunks aufteilen - Ziel: INP unter 200 ms</p>
                                 </div>
                             </div>
                             <div class="checklist-item" style="border-bottom: none;">
@@ -500,16 +502,16 @@ async function processLargeArrayChunked(arr) {
 
                         <h2>Fazit: JavaScript ist Fluch und Segen für SEO</h2>
 
-                        <p>JavaScript ist unvermeidlich — aber schlecht geladenes JavaScript kostet dich Rankings. Die gute Nachricht: Die wichtigsten Optimierungen sind einfach umzusetzen.</p>
+                        <p>JavaScript ist unvermeidlich - aber schlecht geladenes JavaScript kostet dich Rankings. Die gute Nachricht: Die wichtigsten Optimierungen sind einfach umzusetzen.</p>
 
                         <p>Starte mit den drei wichtigsten Maßnahmen:</p>
                         <ol>
-                            <li><strong>Alle Scripts auf defer umstellen</strong> — das ist die schnellste und einfachste Verbesserung</li>
-                            <li><strong>loading="lazy" auf alle Bilder unten auf der Seite</strong> — mit width/height-Attributen</li>
-                            <li><strong>Kritische Inhalte ins HTML verlagern</strong> — H1, Meta-Description und Haupttext müssen im Quellcode stehen</li>
+                            <li><strong>Alle Scripts auf defer umstellen</strong> - das ist die schnellste und einfachste Verbesserung</li>
+                            <li><strong>loading="lazy" auf alle Bilder unten auf der Seite</strong> - mit width/height-Attributen</li>
+                            <li><strong>Kritische Inhalte ins HTML verlagern</strong> - H1, Meta-Description und Haupttext müssen im Quellcode stehen</li>
                         </ol>
 
-                        <p>Diese drei Schritte allein können deinen <a href="/blog/ladezeit-ranking-faktor-page-speed.html">Page Speed Score</a> erheblich verbessern und helfen Google, deine Seiten schneller zu indexieren. Im nächsten Artikel des Performance-Clusters schauen wir uns die Bildoptimierung genauer an — WebP, AVIF und fortgeschrittenes Lazy Loading für noch bessere Ladezeiten.</p>
+                        <p>Diese drei Schritte allein können deinen <a href="/blog/ladezeit-ranking-faktor-page-speed.html">Page Speed Score</a> erheblich verbessern und helfen Google, deine Seiten schneller zu indexieren. Im nächsten Artikel des Performance-Clusters schauen wir uns die Bildoptimierung genauer an - WebP, AVIF und fortgeschrittenes Lazy Loading für noch bessere Ladezeiten.</p>
 
                     </div>
 
@@ -590,6 +592,7 @@ async function processLargeArrayChunked(arr) {
                     <a href="/impressum.html" class="hover:text-white transition-colors">Impressum</a>
                     <a href="/datenschutz.html" class="hover:text-white transition-colors">Datenschutz</a>
                     <a href="/agb.html" class="hover:text-white transition-colors">AGB</a>
+                    <a href="/ueber-uns.html" class="hover:text-white transition-colors">Über uns</a>
                 </div>
                 <p class="text-sm text-gray-500">&copy; 2026 Thümmler AI GmbH</p>
             </div>

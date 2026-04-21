@@ -116,6 +116,7 @@
                     <a href="/" class="text-gray-300 hover:text-white transition-colors">SEO-Tool</a>
                     <a href="/blog/" class="text-white font-medium border-b-2 border-blue-500 pb-0.5">Blog</a>
                     <a href="/tools/" class="text-gray-300 hover:text-white transition-colors">Tools</a>
+                    <a href="/ueber-uns.html" class="text-white hover:text-blue-300 transition-colors">Über uns</a>
                     <a href="/app/#/login" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-5 py-2 rounded-lg font-medium transition-all">Anmelden</a>
                 </div>
                 <button id="mobile-menu-btn" class="md:hidden text-gray-300 hover:text-white">
@@ -128,6 +129,7 @@
                 <a href="/" class="block py-2 text-gray-300 hover:text-white">SEO-Tool</a>
                 <a href="/blog/" class="block py-2 text-white font-medium">Blog</a>
                 <a href="/tools/" class="block py-2 text-gray-300 hover:text-white">Tools</a>
+                <a href="/ueber-uns.html" class="block py-2 text-white hover:text-blue-300">Über uns</a>
                 <a href="/app/#/login" class="block py-2 text-blue-400 hover:text-blue-300">Anmelden</a>
             </div>
         </div>
@@ -184,7 +186,7 @@
                              alt="Server-Log-Analyse für SEO: Crawl-Anomalien erkennen und Googlebot-Muster verstehen"
                              class="w-full rounded-2xl my-8">
 
-                        <h2>1. Das Apache/Nginx Combined Log Format verstehen — im Detail</h2>
+                        <h2>1. Das Apache/Nginx Combined Log Format verstehen - im Detail</h2>
 
                         <p>Bevor wir in die Mustererkennung einsteigen, muss das Format vollständig klar sein. Das Combined Log Format sieht so aus:</p>
 
@@ -192,17 +194,17 @@
 
                         <p>Die Felder im Überblick:</p>
                         <ul>
-                            <li><strong>IP-Adresse</strong> — bei Googlebot variiert diese, da Google viele IP-Ranges nutzt</li>
-                            <li><strong>Ident/Auth</strong> — fast immer <code>-</code>, ignorieren</li>
-                            <li><strong>Timestamp</strong> — für zeitliche Analyse entscheidend</li>
-                            <li><strong>Request</strong> — Methode, URL-Pfad, HTTP-Version</li>
-                            <li><strong>Status-Code</strong> — 200, 301, 404, 500 etc.</li>
-                            <li><strong>Bytes</strong> — Antwortgröße in Bytes</li>
-                            <li><strong>Referrer</strong> — woher der Crawler kam</li>
-                            <li><strong>User-Agent</strong> — entscheidend zur Bot-Identifikation</li>
+                            <li><strong>IP-Adresse</strong> - bei Googlebot variiert diese, da Google viele IP-Ranges nutzt</li>
+                            <li><strong>Ident/Auth</strong> - fast immer <code>-</code>, ignorieren</li>
+                            <li><strong>Timestamp</strong> - für zeitliche Analyse entscheidend</li>
+                            <li><strong>Request</strong> - Methode, URL-Pfad, HTTP-Version</li>
+                            <li><strong>Status-Code</strong> - 200, 301, 404, 500 etc.</li>
+                            <li><strong>Bytes</strong> - Antwortgröße in Bytes</li>
+                            <li><strong>Referrer</strong> - woher der Crawler kam</li>
+                            <li><strong>User-Agent</strong> - entscheidend zur Bot-Identifikation</li>
                         </ul>
 
-                        <p>Für die fortgeschrittene Analyse interessieren uns vor allem: <strong>Timestamp, URL, Status-Code und User-Agent</strong>. Die IP-Adresse ist bei Googlebot weniger relevant — Google nutzt offiziell dokumentierte IP-Ranges, aber verlässlicher ist der User-Agent-String.</p>
+                        <p>Für die fortgeschrittene Analyse interessieren uns vor allem: <strong>Timestamp, URL, Status-Code und User-Agent</strong>. Die IP-Adresse ist bei Googlebot weniger relevant - Google nutzt offiziell dokumentierte IP-Ranges, aber verlässlicher ist der User-Agent-String.</p>
 
                         <h3>Googlebot-User-Agents sicher identifizieren</h3>
 
@@ -229,7 +231,7 @@ Googlebot-Video/1.0
 # Google Smartphone (für Rendering)
 Mozilla/5.0 (Linux; Android 6.0.1; Nexus 5X ...) Googlebot/2.1</code></pre>
 
-                        <p><strong>Wichtig:</strong> Filtere niemals nur nach <code>Googlebot</code>. Du verpasst sonst AdsBot-Traffic (kann auf schlecht konfigurierte Seiten hinweisen) und den Unterschied zwischen Desktop- und Mobile-Googlebot — gerade bei Mobile-First-Indexing-Problemen ist dieser Unterschied entscheidend.</p>
+                        <p><strong>Wichtig:</strong> Filtere niemals nur nach <code>Googlebot</code>. Du verpasst sonst AdsBot-Traffic (kann auf schlecht konfigurierte Seiten hinweisen) und den Unterschied zwischen Desktop- und Mobile-Googlebot - gerade bei Mobile-First-Indexing-Problemen ist dieser Unterschied entscheidend.</p>
 
                         <h2>2. Regex-Filterung für präzise Log-Auswertung</h2>
 
@@ -265,7 +267,7 @@ grep "Googlebot" access.log | awk '{print $7}' | sort | uniq -c | sort -rn | hea
 # Alle gecrawlten URLs mit Parametern (oft problematisch)
 grep "Googlebot" access.log | awk '{print $7}' | grep "?" | sort | uniq -c | sort -rn | head -30</code></pre>
 
-                        <p>Parametrisierte URLs in deinen Logs sind ein kritisches Signal. Sie zeigen, ob Googlebot Facetten-Navigation, Session-IDs oder Tracking-Parameter crawlt — was wertvolles Crawl-Budget verschwendet. Lies dazu unseren Artikel über <a href="/blog/facettennavigation-seo-filter-urls.html">Facettennavigation und SEO-freundliche Filter-URLs</a>.</p>
+                        <p>Parametrisierte URLs in deinen Logs sind ein kritisches Signal. Sie zeigen, ob Googlebot Facetten-Navigation, Session-IDs oder Tracking-Parameter crawlt - was wertvolles Crawl-Budget verschwendet. Lies dazu unseren Artikel über <a href="/blog/facettennavigation-seo-filter-urls.html">Facettennavigation und SEO-freundliche Filter-URLs</a>.</p>
 
                         <h2>3. Crawl-Anomalien erkennen: Muster, die auf Probleme hinweisen</h2>
 
@@ -312,7 +314,7 @@ echo "404-Rate: $(echo "scale=2; $FOURS * 100 / $TOTAL" | bc)%"
 grep "Googlebot" access.log | awk '$9 == "404" {print $7}' | \
   sort | uniq -c | sort -rn | head -20</code></pre>
 
-                        <p>Behebe häufige 404s mit gezielten 301-Weiterleitungen. Wenn eine Seite permanent gelöscht ist und keine sinnvolle Zielseite existiert, ist ein 410 (Gone) besser als 404 — Google de-indexiert 410-Seiten schneller.</p>
+                        <p>Behebe häufige 404s mit gezielten 301-Weiterleitungen. Wenn eine Seite permanent gelöscht ist und keine sinnvolle Zielseite existiert, ist ein 410 (Gone) besser als 404 - Google de-indexiert 410-Seiten schneller.</p>
 
                         <h3>Anomalie 4: Redirect-Ketten bei Googlebot</h3>
 
@@ -360,14 +362,14 @@ grep "Googlebot" access.log | awk '{print $7}' | sed 's/\?.*//' | \
 
                         <h2>5. Log-Daten mit der Google Search Console kombinieren</h2>
 
-                        <p>Einzeln ist die Log-Analyse mächtig. In Kombination mit GSC-Daten wird sie unschlagbar. Das Prinzip: Die GSC zeigt, was Google indexiert — die Logs zeigen, was Google crawlt. Die Differenz ist dein Problem.</p>
+                        <p>Einzeln ist die Log-Analyse mächtig. In Kombination mit GSC-Daten wird sie unschlagbar. Das Prinzip: Die GSC zeigt, was Google indexiert - die Logs zeigen, was Google crawlt. Die Differenz ist dein Problem.</p>
 
                         <h3>Das dreistufige Analyse-Framework</h3>
 
                         <ol>
-                            <li><strong>Gecrawlt aber nicht indexiert</strong> — Googlebot besucht die Seite, aber sie erscheint nicht im Index. Ursachen: noindex-Tag, Canonical auf andere Seite, dünn er Content, Duplicate Content</li>
-                            <li><strong>Indexiert aber selten gecrawlt</strong> — Seite ist im Index, aber Googlebot kommt selten vorbei. Das bedeutet: geringe Priorität für Google. Lösung: interne Links stärken, Seite in Sitemap aufnehmen, Content verbessern</li>
-                            <li><strong>Weder gecrawlt noch indexiert</strong> — Seite ist für Google unsichtbar. Prüfe: robots.txt-Sperre, Orphan Pages (keine internen Links), sehr langsame Antwortzeit</li>
+                            <li><strong>Gecrawlt aber nicht indexiert</strong> - Googlebot besucht die Seite, aber sie erscheint nicht im Index. Ursachen: noindex-Tag, Canonical auf andere Seite, dünn er Content, Duplicate Content</li>
+                            <li><strong>Indexiert aber selten gecrawlt</strong> - Seite ist im Index, aber Googlebot kommt selten vorbei. Das bedeutet: geringe Priorität für Google. Lösung: interne Links stärken, Seite in Sitemap aufnehmen, Content verbessern</li>
+                            <li><strong>Weder gecrawlt noch indexiert</strong> - Seite ist für Google unsichtbar. Prüfe: robots.txt-Sperre, Orphan Pages (keine internen Links), sehr langsame Antwortzeit</li>
                         </ol>
 
                         <p>Um diesen Abgleich durchzuführen, exportiere aus der GSC die gecrawlten URLs (Coverage-Bericht) und vergleiche sie mit deiner Log-Extraktion:</p>
@@ -414,11 +416,11 @@ while read ip; do
   fi
 done < googlebot_ips.txt</code></pre>
 
-                        <p>Gefundene Fake-Googlebots kannst du in deiner <code>.htaccess</code> oder Nginx-Config sperren. Schau dir dazu unseren <a href="/blog/robots-txt-konfigurieren.html">robots.txt-Guide</a> an — dort erklären wir auch, wie du gezieltes Crawler-Blocking konfigurierst.</p>
+                        <p>Gefundene Fake-Googlebots kannst du in deiner <code>.htaccess</code> oder Nginx-Config sperren. Schau dir dazu unseren <a href="/blog/robots-txt-konfigurieren.html">robots.txt-Guide</a> an - dort erklären wir auch, wie du gezieltes Crawler-Blocking konfigurierst.</p>
 
                         <h2>7. Performance-Analyse: Antwortzeiten für Googlebot messen</h2>
 
-                        <p>Wenn dein Server langsam auf Googlebot-Anfragen antwortet, drosselt Google die Crawl-Rate automatisch. Das nennt sich <strong>Crawl-Rate-Throttling</strong>. In Nginx-Logs ist die Antwortzeit standardmäßig nicht enthalten — du musst das Log-Format anpassen.</p>
+                        <p>Wenn dein Server langsam auf Googlebot-Anfragen antwortet, drosselt Google die Crawl-Rate automatisch. Das nennt sich <strong>Crawl-Rate-Throttling</strong>. In Nginx-Logs ist die Antwortzeit standardmäßig nicht enthalten - du musst das Log-Format anpassen.</p>
 
                         <h3>Nginx erweitern für Antwortzeit-Logging</h3>
 
@@ -485,18 +487,18 @@ grep "Googlebot" $LOG | awk '$9 == "404" {print $7}' | sort | uniq -c | sort -rn
 
                         <h3>Kostenlose Tools</h3>
                         <ul>
-                            <li><strong>GoAccess</strong> — Open-Source, läuft im Terminal, erzeugt HTML-Reports in Echtzeit. Ideal für Linux-Server.</li>
-                            <li><strong>AWStats</strong> — Klassisches Log-Analyse-Tool, HTML-Berichte, konfigurierbares Bot-Filtering</li>
-                            <li><strong>Log Parser Lizard</strong> — Windows-Tool für visuelle Log-Analyse</li>
-                            <li>Unser eigener <a href="/tools/log-file-analyzer.html">Log-File-Analyzer</a> — browser-basiert, kein Upload nötig, direkt in der Browserkonsole</li>
+                            <li><strong>GoAccess</strong> - Open-Source, läuft im Terminal, erzeugt HTML-Reports in Echtzeit. Ideal für Linux-Server.</li>
+                            <li><strong>AWStats</strong> - Klassisches Log-Analyse-Tool, HTML-Berichte, konfigurierbares Bot-Filtering</li>
+                            <li><strong>Log Parser Lizard</strong> - Windows-Tool für visuelle Log-Analyse</li>
+                            <li>Unser eigener <a href="/tools/log-file-analyzer.html">Log-File-Analyzer</a> - browser-basiert, kein Upload nötig, direkt in der Browserkonsole</li>
                         </ul>
 
                         <h3>Professionelle Tools</h3>
                         <ul>
-                            <li><strong>Screaming Frog Log File Analyser</strong> — Desktop-App, direkte GSC-Integration, visuelle Darstellung</li>
-                            <li><strong>Botify</strong> — Enterprise-Lösung, KI-gestützte Anomalie-Erkennung, teuer aber mächtig</li>
-                            <li><strong>JetOctopus</strong> — Cloud-basiert, kombiniert Crawling und Log-Analyse</li>
-                            <li><strong>Splunk / ELK Stack</strong> — Wenn dein DevOps-Team bereits Log-Infrastruktur hat</li>
+                            <li><strong>Screaming Frog Log File Analyser</strong> - Desktop-App, direkte GSC-Integration, visuelle Darstellung</li>
+                            <li><strong>Botify</strong> - Enterprise-Lösung, KI-gestützte Anomalie-Erkennung, teuer aber mächtig</li>
+                            <li><strong>JetOctopus</strong> - Cloud-basiert, kombiniert Crawling und Log-Analyse</li>
+                            <li><strong>Splunk / ELK Stack</strong> - Wenn dein DevOps-Team bereits Log-Infrastruktur hat</li>
                         </ul>
 
                         <h2>10. Praxis-Checkliste: Wöchentliche Log-Analyse</h2>
@@ -504,21 +506,21 @@ grep "Googlebot" $LOG | awk '$9 == "404" {print $7}' | sort | uniq -c | sort -rn
                         <p>Diese Checkliste hilft dir, die wichtigsten Checks regelmäßig durchzuführen:</p>
 
                         <ul>
-                            <li>☐ <strong>Crawl-Volumen</strong> — Hat sich die Zahl der Googlebot-Anfragen gegenüber der Vorwoche verändert? (>20% Abweichung untersuchen)</li>
-                            <li>☐ <strong>404-Rate</strong> — Über 5%? Welche URLs werden häufig mit 404 beantwortet?</li>
-                            <li>☐ <strong>Redirect-Ketten</strong> — Gibt es URLs die zweifach oder dreifach weiterleiten?</li>
-                            <li>☐ <strong>5xx-Fehler</strong> — Jeder 5xx-Fehler für Googlebot ist kritisch. Sofort beheben.</li>
-                            <li>☐ <strong>Parametrisierte URLs</strong> — Werden URLs mit Tracking-Parametern gecrawlt?</li>
-                            <li>☐ <strong>Desktop vs. Mobile Googlebot</strong> — Crawlt der Mobile-Bot dieselben Seiten wie der Desktop-Bot?</li>
-                            <li>☐ <strong>Neue URL-Muster</strong> — Tauchen plötzlich unbekannte URL-Muster auf?</li>
-                            <li>☐ <strong>Antwortzeiten</strong> — Gibt es Seiten die für Googlebot besonders langsam laden?</li>
-                            <li>☐ <strong>Fake-Googlebots</strong> — Reverse-DNS-Check für auffällige IPs</li>
-                            <li>☐ <strong>Crawl-Budget-Effizienz</strong> — Anteil 200er Antworten am Gesamtcrawl über 70%?</li>
+                            <li>☐ <strong>Crawl-Volumen</strong> - Hat sich die Zahl der Googlebot-Anfragen gegenüber der Vorwoche verändert? (>20% Abweichung untersuchen)</li>
+                            <li>☐ <strong>404-Rate</strong> - Über 5%? Welche URLs werden häufig mit 404 beantwortet?</li>
+                            <li>☐ <strong>Redirect-Ketten</strong> - Gibt es URLs die zweifach oder dreifach weiterleiten?</li>
+                            <li>☐ <strong>5xx-Fehler</strong> - Jeder 5xx-Fehler für Googlebot ist kritisch. Sofort beheben.</li>
+                            <li>☐ <strong>Parametrisierte URLs</strong> - Werden URLs mit Tracking-Parametern gecrawlt?</li>
+                            <li>☐ <strong>Desktop vs. Mobile Googlebot</strong> - Crawlt der Mobile-Bot dieselben Seiten wie der Desktop-Bot?</li>
+                            <li>☐ <strong>Neue URL-Muster</strong> - Tauchen plötzlich unbekannte URL-Muster auf?</li>
+                            <li>☐ <strong>Antwortzeiten</strong> - Gibt es Seiten die für Googlebot besonders langsam laden?</li>
+                            <li>☐ <strong>Fake-Googlebots</strong> - Reverse-DNS-Check für auffällige IPs</li>
+                            <li>☐ <strong>Crawl-Budget-Effizienz</strong> - Anteil 200er Antworten am Gesamtcrawl über 70%?</li>
                         </ul>
 
                         <h2>Fazit: Log-Analyse als kontinuierlicher Prozess</h2>
 
-                        <p>Die fortgeschrittene Server-Log-Analyse ist kein einmaliges Projekt — sie ist ein kontinuierlicher Monitoring-Prozess. Die wichtigsten Erkenntnisse kommen nicht aus einer einzelnen Analyse, sondern aus dem <strong>Vergleich über Zeit</strong>: Crawl-Rate-Veränderungen, Anomalie-Spitzen nach Deployments, Correlationen zwischen Antwortzeiten und Indexierungsgeschwindigkeit.</p>
+                        <p>Die fortgeschrittene Server-Log-Analyse ist kein einmaliges Projekt - sie ist ein kontinuierlicher Monitoring-Prozess. Die wichtigsten Erkenntnisse kommen nicht aus einer einzelnen Analyse, sondern aus dem <strong>Vergleich über Zeit</strong>: Crawl-Rate-Veränderungen, Anomalie-Spitzen nach Deployments, Correlationen zwischen Antwortzeiten und Indexierungsgeschwindigkeit.</p>
 
                         <p>Automatisiere deine wöchentlichen Report-Scripts, speichere die Ergebnisse, und vergleiche sie regelmäßig mit deinen GSC-Daten. Erst wenn du verstehst, <em>wie</em> Googlebot deine Website durchläuft, kannst du gezielt eingreifen.</p>
 
@@ -618,7 +620,7 @@ grep "Googlebot" $LOG | awk '$9 == "404" {print $7}' | sort | uniq -c | sort -rn
                         <img src="/logo.png" alt="Shift07" class="h-8 w-8">
                         <span class="text-xl font-bold">Shift07</span>
                     </div>
-                    <p class="text-gray-400 text-sm leading-relaxed">Kostenlose SEO-Analyse für deine Website. Finde technische Fehler, verbesserungswürdige Meta-Tags und mehr — in Sekunden.</p>
+                    <p class="text-gray-400 text-sm leading-relaxed">Kostenlose SEO-Analyse für deine Website. Finde technische Fehler, verbesserungswürdige Meta-Tags und mehr - in Sekunden.</p>
                 </div>
                 <div>
                     <h4 class="font-semibold text-white mb-4">Navigation</h4>

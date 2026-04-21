@@ -116,6 +116,7 @@
                     <a href="/" class="text-gray-300 hover:text-white transition-colors">SEO-Tool</a>
                     <a href="/blog/" class="text-white font-medium border-b-2 border-blue-500 pb-0.5">Blog</a>
                     <a href="/tools/" class="text-gray-300 hover:text-white transition-colors">Tools</a>
+                    <a href="/ueber-uns.html" class="text-white hover:text-blue-300 transition-colors">Über uns</a>
                     <a href="/app/#/login" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-5 py-2 rounded-lg font-medium transition-all">Anmelden</a>
                 </div>
                 <button id="mobile-menu-btn" class="md:hidden text-gray-300 hover:text-white">
@@ -128,6 +129,7 @@
                 <a href="/" class="block py-2 text-gray-300 hover:text-white">SEO-Tool</a>
                 <a href="/blog/" class="block py-2 text-white font-medium">Blog</a>
                 <a href="/tools/" class="block py-2 text-gray-300 hover:text-white">Tools</a>
+                <a href="/ueber-uns.html" class="block py-2 text-white hover:text-blue-300">Über uns</a>
                 <a href="/app/#/login" class="block py-2 text-blue-400 hover:text-blue-300">Anmelden</a>
             </div>
         </div>
@@ -174,14 +176,14 @@
                     <!-- Article Body -->
                     <div class="article-content">
 
-                        <p>Wenn jemand bei Google „Wie mache ich..." eingibt, möchte er eine klare Anleitung — und genau das belohnt Google mit einem besonderen Suchergebnis: dem <strong>HowTo Rich Snippet</strong>. Deine Schritte erscheinen direkt in den Suchergebnissen, sichtbar ohne Klick. Mit <strong>HowTo Schema Markup</strong> signalisierst du Google, dass deine Seite exakt das bietet. In diesem Artikel erfährst du alles, was du für die Implementierung benötigst.</p>
+                        <p>Wenn jemand bei Google „Wie mache ich..." eingibt, möchte er eine klare Anleitung - und genau das belohnt Google mit einem besonderen Suchergebnis: dem <strong>HowTo Rich Snippet</strong>. Deine Schritte erscheinen direkt in den Suchergebnissen, sichtbar ohne Klick. Mit <strong>HowTo Schema Markup</strong> signalisierst du Google, dass deine Seite exakt das bietet. In diesem Artikel erfährst du alles, was du für die Implementierung benötigst.</p>
 
                         <img src="/blog/images/howto-schema-markup-seo.png" alt="HowTo Schema Markup für SEO – Anleitungen als Rich Snippets in Google" class="w-full rounded-xl mb-8 mt-4">
 
                         <h2>Was ist HowTo Schema Markup?</h2>
-                        <p><strong>HowTo Schema</strong> ist ein strukturiertes Datenformat aus dem Schema.org-Vokabular, das eine Schritt-für-Schritt-Anleitung maschinenlesbar beschreibt. Google nutzt diese Daten, um sogenannte <em>How-to Rich Results</em> anzuzeigen — erweiterte Suchergebnisse, die einzelne Schritte, Bilder, die benötigte Zeit und Materialien direkt in der SERP sichtbar machen.</p>
+                        <p><strong>HowTo Schema</strong> ist ein strukturiertes Datenformat aus dem Schema.org-Vokabular, das eine Schritt-für-Schritt-Anleitung maschinenlesbar beschreibt. Google nutzt diese Daten, um sogenannte <em>How-to Rich Results</em> anzuzeigen - erweiterte Suchergebnisse, die einzelne Schritte, Bilder, die benötigte Zeit und Materialien direkt in der SERP sichtbar machen.</p>
 
-                        <p>Das Ergebnis: <strong>deutlich höhere Klickraten (CTR)</strong>. Studien zeigen, dass Rich Snippets die organische CTR um 20 bis 40 Prozent steigern können — weil der Nutzer mehr sieht und genauer weiß, ob dein Inhalt seinen Bedarf deckt.</p>
+                        <p>Das Ergebnis: <strong>deutlich höhere Klickraten (CTR)</strong>. Studien zeigen, dass Rich Snippets die organische CTR um 20 bis 40 Prozent steigern können - weil der Nutzer mehr sieht und genauer weiß, ob dein Inhalt seinen Bedarf deckt.</p>
 
                         <h2>Wann eignet sich HowTo Schema?</h2>
                         <p>HowTo Schema passt auf Seiten, die eine <strong>klare Aufgabe in geordneten Schritten erklären</strong>. Typische Einsatzgebiete:</p>
@@ -194,34 +196,34 @@
                             <li>Gesundheitsthemen (z. B. „Wie verbinde ich eine Wunde richtig")</li>
                         </ul>
 
-                        <p>Wichtig: Das Schema darf <strong>nur auf Seiten eingesetzt werden, die wirklich eine vollständige Anleitung enthalten</strong>. Werbung, Produkt-Landingpages oder reine Übersichtsartikel sind kein geeigneter Kontext — Google wertet dies als Spam.</p>
+                        <p>Wichtig: Das Schema darf <strong>nur auf Seiten eingesetzt werden, die wirklich eine vollständige Anleitung enthalten</strong>. Werbung, Produkt-Landingpages oder reine Übersichtsartikel sind kein geeigneter Kontext - Google wertet dies als Spam.</p>
 
                         <h2>Die HowTo-Datenstruktur im Überblick</h2>
                         <p>Das HowTo-Schema besteht aus einem Haupt-Objekt mit optionalen und Pflichtfeldern. Die wichtigsten Felder:</p>
 
                         <h3>Pflichtfelder</h3>
                         <ul>
-                            <li><code>@type: "HowTo"</code> — Typ des Schemas</li>
-                            <li><code>name</code> — Der Titel der Anleitung</li>
-                            <li><code>step</code> — Array mit HowToStep-Objekten (mindestens 2 Schritte)</li>
+                            <li><code>@type: "HowTo"</code> - Typ des Schemas</li>
+                            <li><code>name</code> - Der Titel der Anleitung</li>
+                            <li><code>step</code> - Array mit HowToStep-Objekten (mindestens 2 Schritte)</li>
                         </ul>
 
                         <h3>Empfohlene optionale Felder</h3>
                         <ul>
-                            <li><code>description</code> — Kurzbeschreibung der Anleitung</li>
-                            <li><code>image</code> — Bild der fertigen Anleitung (ImageObject)</li>
-                            <li><code>totalTime</code> — Gesamtdauer im ISO-8601-Format (z. B. <code>PT30M</code> = 30 Minuten)</li>
-                            <li><code>estimatedCost</code> — Geschätzte Kosten (MonetaryAmount)</li>
-                            <li><code>supply</code> — Benötigte Materialien (HowToSupply)</li>
-                            <li><code>tool</code> — Benötigte Werkzeuge (HowToTool)</li>
+                            <li><code>description</code> - Kurzbeschreibung der Anleitung</li>
+                            <li><code>image</code> - Bild der fertigen Anleitung (ImageObject)</li>
+                            <li><code>totalTime</code> - Gesamtdauer im ISO-8601-Format (z. B. <code>PT30M</code> = 30 Minuten)</li>
+                            <li><code>estimatedCost</code> - Geschätzte Kosten (MonetaryAmount)</li>
+                            <li><code>supply</code> - Benötigte Materialien (HowToSupply)</li>
+                            <li><code>tool</code> - Benötigte Werkzeuge (HowToTool)</li>
                         </ul>
 
                         <h3>Felder für jeden Schritt (HowToStep)</h3>
                         <ul>
-                            <li><code>name</code> — Kurzname des Schritts (wird in der SERP angezeigt)</li>
-                            <li><code>text</code> — Ausführliche Beschreibung des Schritts</li>
-                            <li><code>image</code> — Optionales Schritt-Bild (ImageObject)</li>
-                            <li><code>url</code> — Optionaler Link zu einer Anker-URL auf der Seite</li>
+                            <li><code>name</code> - Kurzname des Schritts (wird in der SERP angezeigt)</li>
+                            <li><code>text</code> - Ausführliche Beschreibung des Schritts</li>
+                            <li><code>image</code> - Optionales Schritt-Bild (ImageObject)</li>
+                            <li><code>url</code> - Optionaler Link zu einer Anker-URL auf der Seite</li>
                         </ul>
 
                         <h2>Vollständiges JSON-LD-Beispiel</h2>
@@ -303,11 +305,11 @@
                         <h2>ISO-8601-Zeitformate korrekt verwenden</h2>
                         <p>Das Feld <code>totalTime</code> erwartet eine Dauer im ISO-8601-Format. Die wichtigsten Varianten:</p>
                         <ul>
-                            <li><code>PT5M</code> — 5 Minuten</li>
-                            <li><code>PT30M</code> — 30 Minuten</li>
-                            <li><code>PT1H30M</code> — 1 Stunde und 30 Minuten</li>
-                            <li><code>P2D</code> — 2 Tage</li>
-                            <li><code>P1DT4H</code> — 1 Tag und 4 Stunden</li>
+                            <li><code>PT5M</code> - 5 Minuten</li>
+                            <li><code>PT30M</code> - 30 Minuten</li>
+                            <li><code>PT1H30M</code> - 1 Stunde und 30 Minuten</li>
+                            <li><code>P2D</code> - 2 Tage</li>
+                            <li><code>P1DT4H</code> - 1 Tag und 4 Stunden</li>
                         </ul>
                         <p>Fehlerhafte Zeitangaben (z. B. „30 Minuten" als String statt ISO-8601) führen dazu, dass Google das Feld ignoriert oder das gesamte Schema als fehlerhaft markiert.</p>
 
@@ -362,16 +364,16 @@
                         <p>Nur das ISO-8601-Format ist gültig. „30 Min." oder „0,5 Stunden" werden ignoriert.</p>
 
                         <h2>Mobile Rich Snippets vs. Desktop</h2>
-                        <p>HowTo Rich Snippets werden auf <strong>Mobilgeräten deutlich prominenter</strong> dargestellt als auf dem Desktop. Google zeigt auf Smartphones die einzelnen Schritte in aufklappbaren Akkordeons direkt unter dem Suchergebnis. Auf Desktop erscheinen sie kompakter — aber trotzdem als visuell herausgehobenenes Ergebnis.</p>
+                        <p>HowTo Rich Snippets werden auf <strong>Mobilgeräten deutlich prominenter</strong> dargestellt als auf dem Desktop. Google zeigt auf Smartphones die einzelnen Schritte in aufklappbaren Akkordeons direkt unter dem Suchergebnis. Auf Desktop erscheinen sie kompakter - aber trotzdem als visuell herausgehobenenes Ergebnis.</p>
 
                         <p>Das macht HowTo Schema besonders wertvoll für mobile-first Strategien: Da über 60 % aller Google-Suchanfragen auf Mobilgeräten stattfinden, ist der Sichtbarkeitsgewinn durch HowTo Rich Snippets erheblich.</p>
 
                         <h2>Schema testen: So prüfst du deine Implementierung</h2>
                         <p>Bevor du das Schema live schaltest, solltest du es validieren:</p>
                         <ol>
-                            <li><strong>Google Rich Results Test</strong> — Prüft, ob dein Schema für Rich Results qualifiziert ist. Gibt Fehler und Warnungen aus.</li>
-                            <li><strong>Schema.org Validator</strong> — Überprüft die technische Korrektheit des JSON-LD gegen das Schema.org-Vokabular.</li>
-                            <li><strong><a href="/tools/json-ld-structured-data-validator">JSON-LD Structured Data Validator auf shift07.ai</a></strong> — Validiert dein JSON-LD direkt im Browser, ohne externe Tools.</li>
+                            <li><strong>Google Rich Results Test</strong> - Prüft, ob dein Schema für Rich Results qualifiziert ist. Gibt Fehler und Warnungen aus.</li>
+                            <li><strong>Schema.org Validator</strong> - Überprüft die technische Korrektheit des JSON-LD gegen das Schema.org-Vokabular.</li>
+                            <li><strong><a href="/tools/json-ld-structured-data-validator">JSON-LD Structured Data Validator auf shift07.ai</a></strong> - Validiert dein JSON-LD direkt im Browser, ohne externe Tools.</li>
                         </ol>
                         <p>Typische Warnungen (keine harten Fehler) sind fehlende Bilder oder das Fehlen optionaler Felder wie <code>estimatedCost</code>. Diese beeinflussen die Qualifikation in der Regel nicht negativ.</p>
 
@@ -380,7 +382,7 @@
                         <ul>
                             <li><strong>Rank Math oder Yoast SEO</strong>: Beide Plugins bieten UI-Felder für HowTo Schema ohne Code-Kenntnisse.</li>
                             <li><strong>Manuell im Beitragseditor</strong>: Über den Custom-HTML-Block kannst du das JSON-LD direkt im Beitrag platzieren.</li>
-                            <li><strong>Child-Theme functions.php</strong>: Mit <code>wp_head</code>-Hook kannst du Schema dynamisch ausgeben — für Entwickler empfohlen.</li>
+                            <li><strong>Child-Theme functions.php</strong>: Mit <code>wp_head</code>-Hook kannst du Schema dynamisch ausgeben - für Entwickler empfohlen.</li>
                         </ul>
                         <p>Für andere CMS (Joomla, Shopify, Typo3): Das JSON-LD wird in das Haupt-Template-File eingebunden, idealerweise im <code>&lt;head&gt;</code>-Bereich.</p>
 
@@ -399,22 +401,22 @@
                         <h2>Wie lange dauert es, bis Rich Snippets erscheinen?</h2>
                         <p>Nach der Implementierung und Validierung durch Google dauert es in der Regel <strong>2 bis 6 Wochen</strong>, bis Rich Snippets in den Suchergebnissen sichtbar werden. Google muss die Seite zunächst neu crawlen und das Schema verarbeiten. Den Fortschritt kannst du in der <strong>Google Search Console</strong> unter „Suchergebnisse" → „Rich Results" verfolgen.</p>
 
-                        <p>Wichtig: Nicht jede Seite mit korrektem HowTo-Schema erhält automatisch ein Rich Snippet. Google wählt aus, welche Ergebnisse als Rich Result erscheinen — basierend auf Relevanz, Qualität und Wettbewerb. Hochwertige Anleitungen mit Bildern und vollständigen Feldern haben deutlich bessere Chancen.</p>
+                        <p>Wichtig: Nicht jede Seite mit korrektem HowTo-Schema erhält automatisch ein Rich Snippet. Google wählt aus, welche Ergebnisse als Rich Result erscheinen - basierend auf Relevanz, Qualität und Wettbewerb. Hochwertige Anleitungen mit Bildern und vollständigen Feldern haben deutlich bessere Chancen.</p>
 
                         <h2>HowTo Schema und unser kostenloses Generator-Tool</h2>
-                        <p>Wenn du HowTo Schema Markup erstellen möchtest, ohne den JSON-LD-Code manuell zu schreiben, nutze unseren kostenlosen <a href="/tools/howto-schema-generator">HowTo Schema Generator</a>. Du gibst Titel, Beschreibung, Zeit und deine Schritte ein — das Tool generiert direkt das fertige JSON-LD zum Kopieren.</p>
+                        <p>Wenn du HowTo Schema Markup erstellen möchtest, ohne den JSON-LD-Code manuell zu schreiben, nutze unseren kostenlosen <a href="/tools/howto-schema-generator">HowTo Schema Generator</a>. Du gibst Titel, Beschreibung, Zeit und deine Schritte ein - das Tool generiert direkt das fertige JSON-LD zum Kopieren.</p>
 
                         <p>Weitere hilfreiche Tools für strukturierte Daten:</p>
                         <ul>
-                            <li><a href="/tools/faq-schema-generator">FAQ Schema Generator</a> — für Frage-Antwort-Inhalte</li>
-                            <li><a href="/tools/article-schema-generator">Article Schema Generator</a> — für Blog-Artikel</li>
-                            <li><a href="/tools/json-ld-structured-data-validator">JSON-LD Validator</a> — Schema direkt im Browser testen</li>
+                            <li><a href="/tools/faq-schema-generator">FAQ Schema Generator</a> - für Frage-Antwort-Inhalte</li>
+                            <li><a href="/tools/article-schema-generator">Article Schema Generator</a> - für Blog-Artikel</li>
+                            <li><a href="/tools/json-ld-structured-data-validator">JSON-LD Validator</a> - Schema direkt im Browser testen</li>
                         </ul>
 
                         <h2>Fazit: HowTo Schema lohnt sich für jede Anleitungsseite</h2>
-                        <p>HowTo Schema Markup ist eines der <strong>wirkungsvollsten strukturierten Datenformate</strong>, die du heute einsetzen kannst — besonders für Mobile-Traffic. Wenn du Anleitungen veröffentlichst, sind Rich Snippets kein Nice-to-have, sondern ein entscheidender Wettbewerbsvorteil: Du erscheinst größer, vertrauenswürdiger und informationsreicher als Konkurrenten ohne Markup.</p>
+                        <p>HowTo Schema Markup ist eines der <strong>wirkungsvollsten strukturierten Datenformate</strong>, die du heute einsetzen kannst - besonders für Mobile-Traffic. Wenn du Anleitungen veröffentlichst, sind Rich Snippets kein Nice-to-have, sondern ein entscheidender Wettbewerbsvorteil: Du erscheinst größer, vertrauenswürdiger und informationsreicher als Konkurrenten ohne Markup.</p>
 
-                        <p>Die Implementierung ist technisch unkompliziert — ein JSON-LD-Block im <code>&lt;head&gt;</code> reicht aus. Nutze den <a href="/tools/howto-schema-generator">HowTo Schema Generator</a>, um das JSON-LD in wenigen Minuten zu erstellen, und validiere es anschließend mit dem <a href="/tools/json-ld-structured-data-validator">JSON-LD Validator</a>.</p>
+                        <p>Die Implementierung ist technisch unkompliziert - ein JSON-LD-Block im <code>&lt;head&gt;</code> reicht aus. Nutze den <a href="/tools/howto-schema-generator">HowTo Schema Generator</a>, um das JSON-LD in wenigen Minuten zu erstellen, und validiere es anschließend mit dem <a href="/tools/json-ld-structured-data-validator">JSON-LD Validator</a>.</p>
 
                         <p>Mehr zum Thema strukturierte Daten findest du in unserem <a href="/blog/strukturierte-daten-seo-schema-markup.html">Einsteigerleitfaden zu Structured Data</a> sowie in den Artikeln zu <a href="/blog/faqpage-schema-markup-seo.html">FAQPage Schema</a> und <a href="/blog/videoobject-schema-markup-seo.html">VideoObject Schema</a>.</p>
 
@@ -441,7 +443,7 @@
                     <!-- HowTo Tool CTA -->
                     <div class="bg-gradient-to-br from-green-600/20 to-emerald-600/20 border border-green-500/30 rounded-2xl p-6 text-center">
                         <h3 class="text-lg font-bold text-white mb-3">HowTo Schema Generator</h3>
-                        <p class="text-gray-400 text-sm mb-5">JSON-LD für deine Anleitungen kostenlos erstellen — ohne Code-Kenntnisse.</p>
+                        <p class="text-gray-400 text-sm mb-5">JSON-LD für deine Anleitungen kostenlos erstellen - ohne Code-Kenntnisse.</p>
                         <a href="/tools/howto-schema-generator" class="bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-500 hover:to-emerald-500 text-white px-6 py-3 rounded-lg font-medium transition-all inline-block w-full">Schema erstellen</a>
                     </div>
 
@@ -497,6 +499,7 @@
                     <a href="/impressum.html" class="hover:text-white transition-colors">Impressum</a>
                     <a href="/datenschutz.html" class="hover:text-white transition-colors">Datenschutz</a>
                     <a href="/agb.html" class="hover:text-white transition-colors">AGB</a>
+                    <a href="/ueber-uns.html" class="hover:text-white transition-colors">Über uns</a>
                 </div>
                 <p class="text-sm text-gray-500">&copy; 2026 Thümmler AI GmbH</p>
             </div>

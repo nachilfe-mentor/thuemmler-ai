@@ -110,6 +110,7 @@
                     <a href="/" class="text-gray-300 hover:text-white transition-colors">SEO-Tool</a>
                     <a href="/blog/" class="text-white font-medium border-b-2 border-blue-500 pb-0.5">Blog</a>
                     <a href="/tools/" class="text-gray-300 hover:text-white transition-colors">Tools</a>
+                    <a href="/ueber-uns.html" class="text-white hover:text-blue-300 transition-colors">Über uns</a>
                     <a href="/app/#/login" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-5 py-2 rounded-lg font-medium transition-all">Anmelden</a>
                 </div>
                 <button id="mobile-menu-btn" class="md:hidden text-gray-300 hover:text-white">
@@ -122,6 +123,7 @@
                 <a href="/" class="block py-2 text-gray-300 hover:text-white">SEO-Tool</a>
                 <a href="/blog/" class="block py-2 text-white font-medium">Blog</a>
                 <a href="/tools/" class="block py-2 text-gray-300 hover:text-white">Tools</a>
+                <a href="/ueber-uns.html" class="block py-2 text-white hover:text-blue-300">Über uns</a>
                 <a href="/app/#/login" class="block py-2 text-blue-400 hover:text-blue-300">Anmelden</a>
             </div>
         </div>
@@ -166,13 +168,13 @@
 
                     <div class="article-content">
 
-                        <p>Jede gut strukturierte Website hat Seiten, die keine eigenen Inhalte präsentieren, sondern eine <strong>Sammlung anderer Seiten</strong> darstellen: Blog-Kategorieseiten, Archivseiten, Themensammlungen oder Produktkatalog-Übersichten. Für genau diese Seitentypen bietet Schema.org den Typ <strong>CollectionPage</strong> — ein spezialisierter Untertyp von WebPage, der Google semantisch mitteilt: "Diese Seite ist eine Sammlung, kein einzelner Inhalt."</p>
+                        <p>Jede gut strukturierte Website hat Seiten, die keine eigenen Inhalte präsentieren, sondern eine <strong>Sammlung anderer Seiten</strong> darstellen: Blog-Kategorieseiten, Archivseiten, Themensammlungen oder Produktkatalog-Übersichten. Für genau diese Seitentypen bietet Schema.org den Typ <strong>CollectionPage</strong> - ein spezialisierter Untertyp von WebPage, der Google semantisch mitteilt: "Diese Seite ist eine Sammlung, kein einzelner Inhalt."</p>
 
                         <p>In diesem Artikel erkläre ich, was CollectionPage ist, wann du es einsetzen solltest, welche Properties es gibt und wie du es korrekt in JSON-LD implementierst. Außerdem grenzen wir CollectionPage von verwandten Typen wie <code>ItemList</code> und <code>SearchResultsPage</code> ab.</p>
 
                         <h2>Was ist CollectionPage?</h2>
 
-                        <p><code>CollectionPage</code> ist in der Schema.org-Hierarchie ein Untertyp von <code>WebPage</code> → <code>CreativeWork</code> → <code>Thing</code>. Es beschreibt eine Webseite, die Inhalte <em>sammelt</em> und präsentiert — im Gegensatz zu einer <code>ArticlePage</code>, die einen einzelnen Inhalt darstellt.</p>
+                        <p><code>CollectionPage</code> ist in der Schema.org-Hierarchie ein Untertyp von <code>WebPage</code> → <code>CreativeWork</code> → <code>Thing</code>. Es beschreibt eine Webseite, die Inhalte <em>sammelt</em> und präsentiert - im Gegensatz zu einer <code>ArticlePage</code>, die einen einzelnen Inhalt darstellt.</p>
 
                         <p>Schema.org definiert CollectionPage als:</p>
 
@@ -186,7 +188,7 @@
                             <li><strong>MediaGallery:</strong> Für Bilder- oder Video-Galerien</li>
                         </ul>
 
-                        <p>Für den SEO-Alltag interessiert uns vor allem der Basistypus <code>CollectionPage</code> selbst — für Kategorieseiten, Archivseiten und thematische Übersichtsseiten.</p>
+                        <p>Für den SEO-Alltag interessiert uns vor allem der Basistypus <code>CollectionPage</code> selbst - für Kategorieseiten, Archivseiten und thematische Übersichtsseiten.</p>
 
                         <h2>Wann sollte ich CollectionPage verwenden?</h2>
 
@@ -356,7 +358,7 @@
   }
 ]</code></pre>
 
-                        <p>Das sind zwei separate JSON-LD-Blöcke auf derselben Seite — oder alternativ ein einziger Block mit einem Array als Wert für <code>@type</code>. Beide Ansätze sind von Google akzeptiert.</p>
+                        <p>Das sind zwei separate JSON-LD-Blöcke auf derselben Seite - oder alternativ ein einziger Block mit einem Array als Wert für <code>@type</code>. Beide Ansätze sind von Google akzeptiert.</p>
 
                         <h2>CollectionPage für E-Commerce: Produktkategorie</h2>
 
@@ -393,7 +395,7 @@
   ]
 }</code></pre>
 
-                        <p>Das <code>hasPart</code>-Property ist der semantische Hinweis, dass diese Seite andere Seiten "enthält" — sie ist der Container. Das ergänzt das <code>isPartOf</code>-Property der Unterseiten, die auf die Kategorieseite verweisen sollten.</p>
+                        <p>Das <code>hasPart</code>-Property ist der semantische Hinweis, dass diese Seite andere Seiten "enthält" - sie ist der Container. Das ergänzt das <code>isPartOf</code>-Property der Unterseiten, die auf die Kategorieseite verweisen sollten.</p>
 
                         <h2>CollectionPage und das Parent-Child-Prinzip</h2>
 
@@ -404,7 +406,7 @@
                             <li><strong>Auf jeder Unterseite:</strong> <code>Article</code> mit <code>isPartOf: CollectionPage-URL</code></li>
                         </ul>
 
-                        <p>Das erzeugt ein vollständiges semantisches Netz: Google versteht, welche Artikel zur Kategorie gehören, ohne ausschließlich auf interne Links angewiesen zu sein. Für größere Websites — etwa mit tausenden Produktseiten — kann das die Crawl-Effizienz verbessern, weil Google den Kontext schneller versteht.</p>
+                        <p>Das erzeugt ein vollständiges semantisches Netz: Google versteht, welche Artikel zur Kategorie gehören, ohne ausschließlich auf interne Links angewiesen zu sein. Für größere Websites - etwa mit tausenden Produktseiten - kann das die Crawl-Effizienz verbessern, weil Google den Kontext schneller versteht.</p>
 
                         <h2>MediaGallery: Der Untertyp für Bild- und Videosammlungen</h2>
 
@@ -430,23 +432,23 @@
 
                         <h3>Fehler 1: CollectionPage auf Artikel-Seiten einsetzen</h3>
 
-                        <p>CollectionPage ist für Sammlungen — nicht für einzelne Inhalte. Einen Blog-Artikel mit <code>@type: "CollectionPage"</code> zu markieren ist semantisch falsch und verwirrend für Google. Verwende dort <code>Article</code>, <code>BlogPosting</code> oder <code>TechArticle</code>.</p>
+                        <p>CollectionPage ist für Sammlungen - nicht für einzelne Inhalte. Einen Blog-Artikel mit <code>@type: "CollectionPage"</code> zu markieren ist semantisch falsch und verwirrend für Google. Verwende dort <code>Article</code>, <code>BlogPosting</code> oder <code>TechArticle</code>.</p>
 
                         <h3>Fehler 2: Auf paginierten Seiten vergessen</h3>
 
-                        <p>Wenn deine Kategorie mehrere Seiten hat (Seite 1, 2, 3...), sollte jede paginierte Seite CollectionPage-Markup tragen — aber mit der jeweils kanonischen URL der Seite und dem <code>name</code>-Attribut angepasst (z. B. "SEO-Artikel – Seite 2"). Zusätzlich empfehlen sich <code>rel="prev"</code>/<code>rel="next"</code>-HTML-Attribute für die Paginierungsstruktur.</p>
+                        <p>Wenn deine Kategorie mehrere Seiten hat (Seite 1, 2, 3...), sollte jede paginierte Seite CollectionPage-Markup tragen - aber mit der jeweils kanonischen URL der Seite und dem <code>name</code>-Attribut angepasst (z. B. "SEO-Artikel – Seite 2"). Zusätzlich empfehlen sich <code>rel="prev"</code>/<code>rel="next"</code>-HTML-Attribute für die Paginierungsstruktur.</p>
 
                         <h3>Fehler 3: hasPart zu groß machen</h3>
 
-                        <p>Bei Kategorien mit 200+ Artikeln macht es keinen Sinn, alle Artikel im <code>hasPart</code>-Array aufzulisten. Das bläht das JSON-LD unnötig auf. Liste lieber die 10–20 wichtigsten oder neuesten Artikel auf — oder verzichte ganz auf hasPart und nutze stattdessen ItemList für die Carousel-Funktion.</p>
+                        <p>Bei Kategorien mit 200+ Artikeln macht es keinen Sinn, alle Artikel im <code>hasPart</code>-Array aufzulisten. Das bläht das JSON-LD unnötig auf. Liste lieber die 10–20 wichtigsten oder neuesten Artikel auf - oder verzichte ganz auf hasPart und nutze stattdessen ItemList für die Carousel-Funktion.</p>
 
                         <h3>Fehler 4: Kein Breadcrumb auf Kategorieseiten</h3>
 
-                        <p>Kategorieseiten ohne <a href="/blog/breadcrumblist-schema-markup-seo.html">BreadcrumbList Schema Markup</a> verschenken einen wichtigen Rich-Result-Typen. Kombiniere CollectionPage immer mit einem eingebetteten Breadcrumb — das ist für Kategorieseiten besonders wertvoll, da Google den Navigationspfad direkt in den SERPs anzeigen kann.</p>
+                        <p>Kategorieseiten ohne <a href="/blog/breadcrumblist-schema-markup-seo.html">BreadcrumbList Schema Markup</a> verschenken einen wichtigen Rich-Result-Typen. Kombiniere CollectionPage immer mit einem eingebetteten Breadcrumb - das ist für Kategorieseiten besonders wertvoll, da Google den Navigationspfad direkt in den SERPs anzeigen kann.</p>
 
                         <h2>CollectionPage und Crawl-Budget-Effizienz</h2>
 
-                        <p>Für größere Websites ist die semantische Hierarchie aus CollectionPage + isPartOf/hasPart nicht nur für Rich Results interessant, sondern auch für das <a href="/blog/crawl-budget-optimieren.html">Crawl-Budget</a>: Wenn Google die Struktur deiner Website über strukturierte Daten versteht, kann der Googlebot effizienter crawlen. Statt alle Links blind zu folgen, versteht er die Bedeutung der Seiten im Kontext — Kategorieseiten sind Hubs, Artikelseiten sind Blätter.</p>
+                        <p>Für größere Websites ist die semantische Hierarchie aus CollectionPage + isPartOf/hasPart nicht nur für Rich Results interessant, sondern auch für das <a href="/blog/crawl-budget-optimieren.html">Crawl-Budget</a>: Wenn Google die Struktur deiner Website über strukturierte Daten versteht, kann der Googlebot effizienter crawlen. Statt alle Links blind zu folgen, versteht er die Bedeutung der Seiten im Kontext - Kategorieseiten sind Hubs, Artikelseiten sind Blätter.</p>
 
                         <p>Das ist besonders relevant für:</p>
 
@@ -463,7 +465,7 @@
                         <ol>
                             <li><strong>Hauptkategorieseiten zuerst:</strong> Die wichtigsten Kategorien haben das höchste Traffic-Potenzial und profitieren am stärksten von Breadcrumb Rich Results.</li>
                             <li><strong>Tags und Autor-Archivseiten:</strong> Falls diese Seiten SEO-Relevanz haben (nicht noindex), lohnt sich CollectionPage auch dort.</li>
-                            <li><strong>Paginierte Seiten:</strong> Seite 2, 3 etc. der Kategorien — nur wenn sie nicht noindex sind.</li>
+                            <li><strong>Paginierte Seiten:</strong> Seite 2, 3 etc. der Kategorien - nur wenn sie nicht noindex sind.</li>
                             <li><strong>Mediengalerien:</strong> Portfolio- und Galerie-Seiten mit ImageGallery oder VideoGallery.</li>
                         </ol>
 
@@ -489,9 +491,9 @@
 
                         <h2>Fazit</h2>
 
-                        <p><code>CollectionPage</code> ist kein "Highlight-Markup" für sofortige Rich Results — es ist ein semantisches Fundament, das Google hilft, die Struktur deiner Website zu verstehen. In Kombination mit <a href="/blog/itemlist-schema-markup-seo.html">ItemList für Carousels</a> und <a href="/blog/breadcrumblist-schema-markup-seo.html">BreadcrumbList für Navigation</a> entsteht eine vollständige semantische Hierarchie, die sowohl die Sichtbarkeit als auch die Crawl-Effizienz verbessert.</p>
+                        <p><code>CollectionPage</code> ist kein "Highlight-Markup" für sofortige Rich Results - es ist ein semantisches Fundament, das Google hilft, die Struktur deiner Website zu verstehen. In Kombination mit <a href="/blog/itemlist-schema-markup-seo.html">ItemList für Carousels</a> und <a href="/blog/breadcrumblist-schema-markup-seo.html">BreadcrumbList für Navigation</a> entsteht eine vollständige semantische Hierarchie, die sowohl die Sichtbarkeit als auch die Crawl-Effizienz verbessert.</p>
 
-                        <p>Besonders für Websites mit vielen Inhalten und komplexer Kategorienstruktur ist CollectionPage einer der wichtigsten, aber am häufigsten übersehenen Schema-Typen. Starte mit deinen meistbesuchten Kategorieseiten und arbeite dich durch die Hierarchie — der Aufwand ist gering, der semantische Gewinn ist langfristig erheblich. Nutze unsere <a href="/tools/json-ld-structured-data-validator.html">kostenlose JSON-LD-Prüfung</a>, um dein Markup sofort zu validieren.</p>
+                        <p>Besonders für Websites mit vielen Inhalten und komplexer Kategorienstruktur ist CollectionPage einer der wichtigsten, aber am häufigsten übersehenen Schema-Typen. Starte mit deinen meistbesuchten Kategorieseiten und arbeite dich durch die Hierarchie - der Aufwand ist gering, der semantische Gewinn ist langfristig erheblich. Nutze unsere <a href="/tools/json-ld-structured-data-validator.html">kostenlose JSON-LD-Prüfung</a>, um dein Markup sofort zu validieren.</p>
 
                     </div>
 
@@ -567,6 +569,7 @@
                     <a href="/impressum.html" class="hover:text-white transition-colors">Impressum</a>
                     <a href="/datenschutz.html" class="hover:text-white transition-colors">Datenschutz</a>
                     <a href="/agb.html" class="hover:text-white transition-colors">AGB</a>
+                    <a href="/ueber-uns.html" class="hover:text-white transition-colors">Über uns</a>
                 </div>
                 <p class="text-sm text-gray-500">&copy; 2026 Thümmler AI GmbH</p>
             </div>

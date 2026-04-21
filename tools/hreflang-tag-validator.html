@@ -90,6 +90,7 @@
                     <a href="/" class="text-gray-300 hover:text-white transition-colors">SEO-Tool</a>
                     <a href="/blog/" class="text-gray-300 hover:text-white transition-colors">Blog</a>
                     <a href="/tools/" class="text-white font-medium border-b-2 border-blue-500 pb-0.5">Tools</a>
+                    <a href="/ueber-uns.html" class="text-white hover:text-blue-300 transition-colors">Über uns</a>
                     <a href="/app/#/login" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-5 py-2 rounded-lg font-medium transition-all">Anmelden</a>
                 </div>
                 <button id="mobile-menu-btn" class="md:hidden text-gray-300 hover:text-white">
@@ -102,6 +103,7 @@
                 <a href="/" class="block py-2 text-gray-300 hover:text-white">SEO-Tool</a>
                 <a href="/blog/" class="block py-2 text-gray-300 hover:text-white">Blog</a>
                 <a href="/tools/" class="block py-2 text-white font-medium">Tools</a>
+                <a href="/ueber-uns.html" class="block py-2 text-white hover:text-blue-300">Über uns</a>
                 <a href="/app/#/login" class="block py-2 text-blue-400 hover:text-blue-300">Anmelden</a>
             </div>
         </div>
@@ -195,7 +197,7 @@
                         <li class="flex items-start gap-2"><span class="text-blue-400 mt-0.5">→</span> <code class="bg-slate-700 px-1 rounded">x-default</code> definiert die Fallback-Seite für alle Nutzer ohne passende Sprachversion</li>
                         <li class="flex items-start gap-2"><span class="text-blue-400 mt-0.5">→</span> Verwende ISO 639-1 Sprachcodes (z.B. <code class="bg-slate-700 px-1 rounded">de</code>, <code class="bg-slate-700 px-1 rounded">en</code>) und optional ISO 3166-1 Regionscodes (z.B. <code class="bg-slate-700 px-1 rounded">de-AT</code>)</li>
                         <li class="flex items-start gap-2"><span class="text-blue-400 mt-0.5">→</span> Hreflang-Tags können im <code class="bg-slate-700 px-1 rounded">&lt;head&gt;</code>, im HTTP-Header oder in der Sitemap implementiert werden</li>
-                        <li class="flex items-start gap-2"><span class="text-blue-400 mt-0.5">→</span> Google ignoriert Hreflang nicht, wenn Fehler vorliegen — es werden dann einfach keine Sprachsignale übermittelt</li>
+                        <li class="flex items-start gap-2"><span class="text-blue-400 mt-0.5">→</span> Google ignoriert Hreflang nicht, wenn Fehler vorliegen - es werden dann einfach keine Sprachsignale übermittelt</li>
                     </ul>
                 </div>
             </div>
@@ -246,7 +248,7 @@
     <section class="py-16 px-4 bg-gradient-to-r from-blue-900/30 to-indigo-900/30 border-t border-b border-white/5">
         <div class="max-w-3xl mx-auto text-center">
             <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">Vollständige SEO-Analyse deiner Website</h2>
-            <p class="text-gray-400 mb-8">Prüfe alle SEO-Faktoren auf einmal — technisches SEO, Meta-Tags, Ladezeit und mehr.</p>
+            <p class="text-gray-400 mb-8">Prüfe alle SEO-Faktoren auf einmal - technisches SEO, Meta-Tags, Ladezeit und mehr.</p>
             <a href="/" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-10 py-4 rounded-xl font-semibold transition-all inline-block">Kostenlose SEO-Analyse starten</a>
         </div>
     </section>
@@ -263,6 +265,7 @@
                     <a href="/impressum.html" class="hover:text-white transition-colors">Impressum</a>
                     <a href="/datenschutz.html" class="hover:text-white transition-colors">Datenschutz</a>
                     <a href="/agb.html" class="hover:text-white transition-colors">AGB</a>
+                    <a href="/ueber-uns.html" class="hover:text-white transition-colors">Über uns</a>
                 </div>
                 <p class="text-sm text-gray-500">&copy; 2026 Thümmler AI GmbH</p>
             </div>
@@ -429,9 +432,9 @@
                 issues.push({
                     type: 'warning',
                     title: 'x-default fehlt',
-                    desc: 'Kein x-default Hreflang-Tag gefunden. Google empfiehlt x-default für alle mehrsprachigen Websites — es definiert die Standardseite für Nutzer, deren Sprache nicht abgedeckt ist. Füge hinzu: <link rel="alternate" hreflang="x-default" href="https://deine-default-url.de/">'
+                    desc: 'Kein x-default Hreflang-Tag gefunden. Google empfiehlt x-default für alle mehrsprachigen Websites - es definiert die Standardseite für Nutzer, deren Sprache nicht abgedeckt ist. Füge hinzu: <link rel="alternate" hreflang="x-default" href="https://deine-default-url.de/">'
                 });
-                checks.push({ ok: false, label: 'x-default vorhanden', detail: 'Fehlt — empfohlen von Google' });
+                checks.push({ ok: false, label: 'x-default vorhanden', detail: 'Fehlt - empfohlen von Google' });
             } else {
                 checks.push({ ok: true, label: 'x-default vorhanden', detail: 'Korrekt implementiert' });
             }

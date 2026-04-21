@@ -116,6 +116,7 @@
                     <a href="/" class="text-gray-300 hover:text-white transition-colors">SEO-Tool</a>
                     <a href="/blog/" class="text-white font-medium border-b-2 border-blue-500 pb-0.5">Blog</a>
                     <a href="/tools/" class="text-gray-300 hover:text-white transition-colors">Tools</a>
+                    <a href="/ueber-uns.html" class="text-white hover:text-blue-300 transition-colors">Über uns</a>
                     <a href="/app/#/login" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-5 py-2 rounded-lg font-medium transition-all">Anmelden</a>
                 </div>
                 <button id="mobile-menu-btn" class="md:hidden text-gray-300 hover:text-white">
@@ -128,6 +129,7 @@
                 <a href="/" class="block py-2 text-gray-300 hover:text-white">SEO-Tool</a>
                 <a href="/blog/" class="block py-2 text-white font-medium">Blog</a>
                 <a href="/tools/" class="block py-2 text-gray-300 hover:text-white">Tools</a>
+                <a href="/ueber-uns.html" class="block py-2 text-white hover:text-blue-300">Über uns</a>
                 <a href="/app/#/login" class="block py-2 text-blue-400 hover:text-blue-300">Anmelden</a>
             </div>
         </div>
@@ -136,7 +138,7 @@
     <!-- Hero Image -->
     <section class="pt-16 relative">
         <div class="h-[400px] bg-gradient-to-br from-purple-600 via-blue-700 to-indigo-800 relative overflow-hidden">
-            <img src="/blog/images/faq-schema-markup-vertieft.png" alt="FAQ Schema Markup vertieft — FAQPage JSON-LD vollständig" class="absolute inset-0 w-full h-full object-cover opacity-30">
+            <img src="/blog/images/faq-schema-markup-vertieft.png" alt="FAQ Schema Markup vertieft - FAQPage JSON-LD vollständig" class="absolute inset-0 w-full h-full object-cover opacity-30">
             <div class="absolute inset-0 bg-black/40"></div>
             <div class="absolute inset-0 flex items-center justify-center">
                 <div class="text-center px-4 max-w-4xl">
@@ -174,18 +176,18 @@
                     <!-- Article Body -->
                     <div class="article-content">
 
-                        <p>FAQ Schema Markup ist eine der wenigen Schema-Implementierungen, die garantiert sichtbare Auswirkungen in den Google-Suchergebnissen erzeugen können — durch direkt unterhalb des Suchergebnisses angezeigte Frage-Antwort-Paare. Unser <a href="/blog/faqpage-schema-markup-seo.html">Einführungsartikel zu FAQPage Schema</a> hat die Grundlagen erklärt. In diesem Artikel gehen wir tiefer: Wir behandeln fortgeschrittene Implementierungsstrategien, selten diskutierte Validierungsregeln, Kombinationsstrategien mit anderen Schema-Typen und systematische Fehlerquellen, die viele Entwickler übersehen.</p>
+                        <p>FAQ Schema Markup ist eine der wenigen Schema-Implementierungen, die garantiert sichtbare Auswirkungen in den Google-Suchergebnissen erzeugen können - durch direkt unterhalb des Suchergebnisses angezeigte Frage-Antwort-Paare. Unser <a href="/blog/faqpage-schema-markup-seo.html">Einführungsartikel zu FAQPage Schema</a> hat die Grundlagen erklärt. In diesem Artikel gehen wir tiefer: Wir behandeln fortgeschrittene Implementierungsstrategien, selten diskutierte Validierungsregeln, Kombinationsstrategien mit anderen Schema-Typen und systematische Fehlerquellen, die viele Entwickler übersehen.</p>
 
                         <h2>FAQPage: Die offizielle Definition und ihre Implikationen</h2>
 
-                        <p>Schema.org definiert <code>FAQPage</code> als Untertyp von <code>WebPage</code> — und das hat weitreichende Konsequenzen. Eine FAQPage ist nicht einfach eine Seite mit einigen Fragen und Antworten. Es ist eine Seite, die <strong>ausschließlich oder primär</strong> aus Frage-Antwort-Paaren besteht, bei denen <strong>jede Frage genau eine Antwort hat</strong>.</p>
+                        <p>Schema.org definiert <code>FAQPage</code> als Untertyp von <code>WebPage</code> - und das hat weitreichende Konsequenzen. Eine FAQPage ist nicht einfach eine Seite mit einigen Fragen und Antworten. Es ist eine Seite, die <strong>ausschließlich oder primär</strong> aus Frage-Antwort-Paaren besteht, bei denen <strong>jede Frage genau eine Antwort hat</strong>.</p>
 
                         <p>Das unterscheidet FAQPage von anderen ähnlichen Typen:</p>
 
                         <ul>
-                            <li><strong>FAQPage</strong> — Statische FAQ, eine Antwort pro Frage, vom Websitebetreiber verfasst</li>
-                            <li><strong>QAPage</strong> — Community-Fragen mit mehreren möglichen Antworten, verschiedene Autoren (wie Stack Overflow)</li>
-                            <li><strong>HowToStep</strong> — Anleitungsschritte, keine Frage-Antwort-Struktur</li>
+                            <li><strong>FAQPage</strong> - Statische FAQ, eine Antwort pro Frage, vom Websitebetreiber verfasst</li>
+                            <li><strong>QAPage</strong> - Community-Fragen mit mehreren möglichen Antworten, verschiedene Autoren (wie Stack Overflow)</li>
+                            <li><strong>HowToStep</strong> - Anleitungsschritte, keine Frage-Antwort-Struktur</li>
                         </ul>
 
                         <p>Wenn du <code>FAQPage</code> für Community-Inhalte verwendest, bei denen Nutzer Antworten abstimmen können, verletzt das die Google-Richtlinien. Nutze für solche Fälle <code>QAPage</code>.</p>
@@ -203,7 +205,7 @@
       "name": "Was ist FAQ Schema Markup?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "&lt;p&gt;FAQ Schema Markup ist ein strukturiertes Datenformat nach Schema.org-Standard. Es teilt Google mit, dass eine Seite Frage-Antwort-Paare enthält. Google kann diese Paare direkt in den Suchergebnissen als Rich Snippets anzeigen — als aufklappbare Akkordeon-Liste unterhalb des normalen Suchergebnisses.&lt;/p&gt;"
+        "text": "&lt;p&gt;FAQ Schema Markup ist ein strukturiertes Datenformat nach Schema.org-Standard. Es teilt Google mit, dass eine Seite Frage-Antwort-Paare enthält. Google kann diese Paare direkt in den Suchergebnissen als Rich Snippets anzeigen - als aufklappbare Akkordeon-Liste unterhalb des normalen Suchergebnisses.&lt;/p&gt;"
       }
     },
     {
@@ -222,12 +224,12 @@
                         <p>Eine wenig bekannte, aber sehr nützliche Eigenschaft von FAQPage: Du kannst im <code>text</code>-Feld der Antwort eingeschränktes HTML verwenden. Google unterstützt folgende Tags:</p>
 
                         <ul>
-                            <li><code>&lt;p&gt;</code> — Absätze (sehr empfohlen für Lesbarkeit)</li>
-                            <li><code>&lt;strong&gt;</code>, <code>&lt;b&gt;</code> — Fettschrift</li>
-                            <li><code>&lt;em&gt;</code>, <code>&lt;i&gt;</code> — Kursivschrift</li>
-                            <li><code>&lt;ul&gt;</code>, <code>&lt;ol&gt;</code>, <code>&lt;li&gt;</code> — Listen</li>
-                            <li><code>&lt;a href="..."&gt;</code> — Links (intern und extern)</li>
-                            <li><code>&lt;br&gt;</code> — Zeilenumbruch</li>
+                            <li><code>&lt;p&gt;</code> - Absätze (sehr empfohlen für Lesbarkeit)</li>
+                            <li><code>&lt;strong&gt;</code>, <code>&lt;b&gt;</code> - Fettschrift</li>
+                            <li><code>&lt;em&gt;</code>, <code>&lt;i&gt;</code> - Kursivschrift</li>
+                            <li><code>&lt;ul&gt;</code>, <code>&lt;ol&gt;</code>, <code>&lt;li&gt;</code> - Listen</li>
+                            <li><code>&lt;a href="..."&gt;</code> - Links (intern und extern)</li>
+                            <li><code>&lt;br&gt;</code> - Zeilenumbruch</li>
                         </ul>
 
                         <p><strong>Nicht erlaubt</strong> sind: <code>&lt;h1&gt;</code>-<code>&lt;h6&gt;</code>, <code>&lt;div&gt;</code>, <code>&lt;span&gt;</code>, Bilder, iframes, JavaScript oder CSS. HTML-Sonderzeichen müssen kodiert werden: <code>&amp;lt;</code> statt <code>&lt;</code>, <code>&amp;gt;</code> statt <code>&gt;</code>, <code>&amp;amp;</code> statt <code>&amp;</code>.</p>
@@ -264,7 +266,7 @@
   }
 ]</code></pre>
 
-                        <p>Diese Kombination signalisiert Google: Es gibt einen informativen Artikel (Article) mit ergänzenden FAQ-Snippets (FAQPage). Das kann zu zwei verschiedenen Rich-Snippet-Darstellungen führen — der reguläre Ergebniseintrag und zusätzlich die aufklappbaren Fragen.</p>
+                        <p>Diese Kombination signalisiert Google: Es gibt einen informativen Artikel (Article) mit ergänzenden FAQ-Snippets (FAQPage). Das kann zu zwei verschiedenen Rich-Snippet-Darstellungen führen - der reguläre Ergebniseintrag und zusätzlich die aufklappbaren Fragen.</p>
 
                         <h2>FAQPage und HowTo: Die ideale Kombination für Anleitungsseiten</h2>
 
@@ -302,20 +304,20 @@
 
                         <h3>Regel 1: Fragen müssen auf der Seite sichtbar sein</h3>
 
-                        <p>Google erfordert, dass die im Schema ausgewiesenen Fragen und Antworten tatsächlich auf der Seite sichtbar sind — nicht nur im Schema-Markup. Wenn ein Nutzer die Seite öffnet, muss er die Fragen und Antworten lesen können (auch wenn sie in einem Akkordeon versteckt sind, aber aufgeklappt werden können).</p>
+                        <p>Google erfordert, dass die im Schema ausgewiesenen Fragen und Antworten tatsächlich auf der Seite sichtbar sind - nicht nur im Schema-Markup. Wenn ein Nutzer die Seite öffnet, muss er die Fragen und Antworten lesen können (auch wenn sie in einem Akkordeon versteckt sind, aber aufgeklappt werden können).</p>
 
                         <p><strong>Verboten:</strong> Fragen im Schema, die nicht im HTML-Content der Seite erscheinen.</p>
 
                         <h3>Regel 2: Keine Werbebotschaften in Antworten</h3>
 
-                        <p>Google lässt FAQ Rich Results nicht erscheinen, wenn die Antworten hauptsächlich Werbebotschaften, Preisangaben oder Call-to-Action-Texte ohne inhaltlichen Mehrwert enthalten. Die Antwort muss eine echte Frage beantworten — nicht ein Produkt verkaufen.</p>
+                        <p>Google lässt FAQ Rich Results nicht erscheinen, wenn die Antworten hauptsächlich Werbebotschaften, Preisangaben oder Call-to-Action-Texte ohne inhaltlichen Mehrwert enthalten. Die Antwort muss eine echte Frage beantworten - nicht ein Produkt verkaufen.</p>
 
                         <p><strong>Verboten:</strong> "Kaufen Sie jetzt unser Premium-Paket für nur 49 Euro!"</p>
                         <p><strong>Erlaubt:</strong> "Die Preise variieren je nach Anbieter. Typischerweise kosten solche Dienstleistungen zwischen 50 und 200 Euro monatlich."</p>
 
                         <h3>Regel 3: Maximale Antwortlänge beachten</h3>
 
-                        <p>Für Rich Results empfiehlt Google Antworten von <strong>maximal 300 Zeichen</strong> in der primären Darstellung. Längere Antworten werden in den Suchergebnissen abgeschnitten. Im Markup kann die Antwort länger sein — aber die ersten 300 Zeichen sollten die wichtigste Information enthalten.</p>
+                        <p>Für Rich Results empfiehlt Google Antworten von <strong>maximal 300 Zeichen</strong> in der primären Darstellung. Längere Antworten werden in den Suchergebnissen abgeschnitten. Im Markup kann die Antwort länger sein - aber die ersten 300 Zeichen sollten die wichtigste Information enthalten.</p>
 
                         <h3>Regel 4: Identische Fragen auf mehreren Seiten</h3>
 
@@ -336,7 +338,7 @@
   }
 }</code></pre>
 
-                        <p>Die enthaltenen Links werden von Google verfolgt und können den Linkjuice zu den verlinkten Seiten leiten — ein oft übersehener SEO-Vorteil von FAQ Schema.</p>
+                        <p>Die enthaltenen Links werden von Google verfolgt und können den Linkjuice zu den verlinkten Seiten leiten - ein oft übersehener SEO-Vorteil von FAQ Schema.</p>
 
                         <h2>FAQ Schema für lokale Unternehmen</h2>
 
@@ -402,7 +404,7 @@
 
                         <h2>Diagnose: Warum Google die FAQ Rich Results nicht anzeigt</h2>
 
-                        <p>FAQ Rich Results erscheinen nicht automatisch — auch bei korrektem Markup. Hier sind die häufigsten Gründe, warum Google sie unterdrückt:</p>
+                        <p>FAQ Rich Results erscheinen nicht automatisch - auch bei korrektem Markup. Hier sind die häufigsten Gründe, warum Google sie unterdrückt:</p>
 
                         <ul>
                             <li><strong>Seite rankt nicht gut genug:</strong> Google zeigt Rich Results bevorzugt für Seiten, die in der Top 10 ranken. Neue oder schlecht rankende Seiten erhalten seltener Rich Results.</li>
@@ -412,13 +414,13 @@
                             <li><strong>Zu viele Seiten mit identischen FAQ:</strong> Duplicate-FAQ-Problem (s. o.).</li>
                         </ul>
 
-                        <p>Validiere dein Markup mit dem <a href="/tools/json-ld-structured-data-validator.html">JSON-LD Structured Data Validator</a> und dem Google Rich Results Test. Der Google-Test zeigt auch, ob Rich Results für deine Seite in Frage kommen — oder warum nicht.</p>
+                        <p>Validiere dein Markup mit dem <a href="/tools/json-ld-structured-data-validator.html">JSON-LD Structured Data Validator</a> und dem Google Rich Results Test. Der Google-Test zeigt auch, ob Rich Results für deine Seite in Frage kommen - oder warum nicht.</p>
 
                         <h2>FAQ Schema und Featured Snippets: Der Unterschied</h2>
 
                         <p>Ein wichtiges Missverständnis: FAQ Rich Results und <a href="/blog/featured-snippets-position-0.html">Featured Snippets</a> sind zwei völlig unterschiedliche SERP-Features. Featured Snippets erscheinen über den regulären Ergebnissen (Position 0) und basieren auf inhaltlicher Relevanz, nicht auf Schema Markup. FAQ Rich Results erscheinen unter deinem regulären Ergebnis und basieren auf dem FAQPage-Schema.</p>
 
-                        <p>Theoretisch kann eine Seite beides gleichzeitig erhalten — Featured Snippet für eine Hauptfrage und FAQ Rich Results für ergänzende Fragen. Das maximiert die SERP-Fläche erheblich.</p>
+                        <p>Theoretisch kann eine Seite beides gleichzeitig erhalten - Featured Snippet für eine Hauptfrage und FAQ Rich Results für ergänzende Fragen. Das maximiert die SERP-Fläche erheblich.</p>
 
                         <h2>Checkliste: FAQPage Schema vollständig und korrekt</h2>
 
@@ -438,9 +440,9 @@
 
                         <h2>Fazit: FAQPage Schema strategisch einsetzen</h2>
 
-                        <p>FAQPage Schema ist eines der wenigen Markup-Typen, die direkt messbare SERP-Sichtbarkeit erzeugen können. Richtig eingesetzt — mit echten, suchanfragenrelevanten Fragen, korrektem HTML-Encoding und strategischer Kombination mit anderen Schema-Typen — kann es die Klickrate erheblich steigern.</p>
+                        <p>FAQPage Schema ist eines der wenigen Markup-Typen, die direkt messbare SERP-Sichtbarkeit erzeugen können. Richtig eingesetzt - mit echten, suchanfragenrelevanten Fragen, korrektem HTML-Encoding und strategischer Kombination mit anderen Schema-Typen - kann es die Klickrate erheblich steigern.</p>
 
-                        <p>Die häufigsten Fehler (Werbebotschaften in Antworten, Fragen nicht im HTML, Duplicate-FAQ) lassen sich leicht vermeiden, wenn du die Google-Richtlinien konsequent befolgst. Nutze unseren <a href="/tools/faq-schema-generator.html">FAQ Schema Generator</a>, um valides JSON-LD ohne Syntaxfehler zu erstellen — und unsere <a href="/">kostenlose SEO-Analyse</a>, um zu prüfen, ob deine Website alle Markup-Typen korrekt implementiert hat.</p>
+                        <p>Die häufigsten Fehler (Werbebotschaften in Antworten, Fragen nicht im HTML, Duplicate-FAQ) lassen sich leicht vermeiden, wenn du die Google-Richtlinien konsequent befolgst. Nutze unseren <a href="/tools/faq-schema-generator.html">FAQ Schema Generator</a>, um valides JSON-LD ohne Syntaxfehler zu erstellen - und unsere <a href="/">kostenlose SEO-Analyse</a>, um zu prüfen, ob deine Website alle Markup-Typen korrekt implementiert hat.</p>
 
                     </div>
 
@@ -465,7 +467,7 @@
                     <!-- Tool CTA -->
                     <div class="bg-slate-800/50 border border-white/10 rounded-2xl p-6">
                         <h3 class="text-lg font-bold text-white mb-3">FAQ Schema Generator</h3>
-                        <p class="text-gray-400 text-sm mb-4">Erstelle valides FAQPage JSON-LD in Sekunden — kostenlos.</p>
+                        <p class="text-gray-400 text-sm mb-4">Erstelle valides FAQPage JSON-LD in Sekunden - kostenlos.</p>
                         <a href="/tools/faq-schema-generator.html" class="text-blue-400 hover:text-blue-300 text-sm font-medium flex items-center gap-1">
                             FAQ Schema Generator →
                         </a>
@@ -523,6 +525,7 @@
                     <a href="/impressum.html" class="hover:text-white transition-colors">Impressum</a>
                     <a href="/datenschutz.html" class="hover:text-white transition-colors">Datenschutz</a>
                     <a href="/agb.html" class="hover:text-white transition-colors">AGB</a>
+                    <a href="/ueber-uns.html" class="hover:text-white transition-colors">Über uns</a>
                 </div>
                 <p class="text-sm text-gray-500">&copy; 2026 Thümmler AI GmbH</p>
             </div>

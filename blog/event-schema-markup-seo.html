@@ -116,6 +116,7 @@
                     <a href="/" class="text-gray-300 hover:text-white transition-colors">SEO-Tool</a>
                     <a href="/blog/" class="text-white font-medium border-b-2 border-blue-500 pb-0.5">Blog</a>
                     <a href="/tools/" class="text-gray-300 hover:text-white transition-colors">Tools</a>
+                    <a href="/ueber-uns.html" class="text-white hover:text-blue-300 transition-colors">Über uns</a>
                     <a href="/app/#/login" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-5 py-2 rounded-lg font-medium transition-all">Anmelden</a>
                 </div>
                 <button id="mobile-menu-btn" class="md:hidden text-gray-300 hover:text-white">
@@ -128,6 +129,7 @@
                 <a href="/" class="block py-2 text-gray-300 hover:text-white">SEO-Tool</a>
                 <a href="/blog/" class="block py-2 text-white font-medium">Blog</a>
                 <a href="/tools/" class="block py-2 text-gray-300 hover:text-white">Tools</a>
+                <a href="/ueber-uns.html" class="block py-2 text-white hover:text-blue-300">Über uns</a>
                 <a href="/app/#/login" class="block py-2 text-blue-400 hover:text-blue-300">Anmelden</a>
             </div>
         </div>
@@ -174,34 +176,34 @@
                     <!-- Article Body -->
                     <div class="article-content">
 
-                        <p>Wer Veranstaltungen auf seiner Website bewirbt — sei es ein Konzert, ein Workshop, ein Webinar oder ein lokales Stadtfest — hat mit <strong>Event Schema Markup</strong> einen mächtigen SEO-Hebel in der Hand. Google kann diese strukturierten Daten auswerten und die Veranstaltung direkt in den Suchergebnissen als <strong>Rich Snippet mit Datum, Ort und Ticket-Informationen</strong> anzeigen. Das erhöht die Sichtbarkeit erheblich und bringt qualifizierten Traffic auf deine Seite.</p>
+                        <p>Wer Veranstaltungen auf seiner Website bewirbt - sei es ein Konzert, ein Workshop, ein Webinar oder ein lokales Stadtfest - hat mit <strong>Event Schema Markup</strong> einen mächtigen SEO-Hebel in der Hand. Google kann diese strukturierten Daten auswerten und die Veranstaltung direkt in den Suchergebnissen als <strong>Rich Snippet mit Datum, Ort und Ticket-Informationen</strong> anzeigen. Das erhöht die Sichtbarkeit erheblich und bringt qualifizierten Traffic auf deine Seite.</p>
 
                         <p>In diesem Artikel zeigen wir dir alles, was du über Event Schema Markup wissen musst: Welche Felder Google unterstützt, wie du gültige JSON-LD-Codes für verschiedene Veranstaltungstypen schreibst, und welche Fehler du unbedingt vermeiden solltest.</p>
 
                         <h2>Was ist Event Schema Markup?</h2>
 
-                        <p>Event Schema Markup ist eine Form von <a href="/blog/strukturierte-daten-seo-schema-markup.html">strukturierten Daten</a>, die auf dem Schema.org-Vokabular basiert. Mit dem <code>Event</code>-Typ teilst du Google mit, dass eine bestimmte Seite eine Veranstaltung beschreibt — komplett mit Zeitpunkt, Ort, Veranstalter und weiteren Details.</p>
+                        <p>Event Schema Markup ist eine Form von <a href="/blog/strukturierte-daten-seo-schema-markup.html">strukturierten Daten</a>, die auf dem Schema.org-Vokabular basiert. Mit dem <code>Event</code>-Typ teilst du Google mit, dass eine bestimmte Seite eine Veranstaltung beschreibt - komplett mit Zeitpunkt, Ort, Veranstalter und weiteren Details.</p>
 
-                        <p>Google verwendet diese Informationen, um <strong>Event Rich Snippets</strong> zu generieren, die in den normalen Suchergebnissen erscheinen. Zusätzlich werden Events in der Google-Ereignissuche angezeigt — einem eigenen Bereich in Google Search, der bei veranstaltungsbezogenen Suchanfragen erscheint. Dort konkurrierst du nicht mit allen anderen Suchergebnissen, sondern direkt mit anderen Veranstaltungen — ein enormer Vorteil.</p>
+                        <p>Google verwendet diese Informationen, um <strong>Event Rich Snippets</strong> zu generieren, die in den normalen Suchergebnissen erscheinen. Zusätzlich werden Events in der Google-Ereignissuche angezeigt - einem eigenen Bereich in Google Search, der bei veranstaltungsbezogenen Suchanfragen erscheint. Dort konkurrierst du nicht mit allen anderen Suchergebnissen, sondern direkt mit anderen Veranstaltungen - ein enormer Vorteil.</p>
 
                         <h2>Welche Event-Typen unterstützt Google?</h2>
 
                         <p>Schema.org definiert viele Untertypen von <code>Event</code>. Google erkennt und wertet folgende Typen als Rich Snippets aus:</p>
 
                         <ul>
-                            <li><strong>Event</strong> — der generische Typ, funktioniert für fast alles</li>
-                            <li><strong>MusicEvent</strong> — Konzerte, Musikfestivals, Live-Auftritte</li>
-                            <li><strong>SportsEvent</strong> — Sportveranstaltungen und Turniere</li>
-                            <li><strong>TheaterEvent</strong> — Theater, Oper, Musicals</li>
-                            <li><strong>EducationEvent</strong> — Workshops, Seminare, Konferenzen</li>
-                            <li><strong>ExhibitionEvent</strong> — Ausstellungen, Messen</li>
-                            <li><strong>SaleEvent</strong> — Sonderverkäufe, Rabattaktionen</li>
-                            <li><strong>FoodEvent</strong> — Weinproben, Kochkurse, Galadinner</li>
-                            <li><strong>ChildrensEvent</strong> — Kinderveranstaltungen</li>
-                            <li><strong>ComedyEvent</strong> — Comedy-Shows, Kabarett</li>
-                            <li><strong>DanceEvent</strong> — Tanzveranstaltungen, Bälle</li>
-                            <li><strong>LiteraryEvent</strong> — Lesungen, Buchvorstellungen</li>
-                            <li><strong>VisualArtsEvent</strong> — Kunstausstellungen, Vernissagen</li>
+                            <li><strong>Event</strong> - der generische Typ, funktioniert für fast alles</li>
+                            <li><strong>MusicEvent</strong> - Konzerte, Musikfestivals, Live-Auftritte</li>
+                            <li><strong>SportsEvent</strong> - Sportveranstaltungen und Turniere</li>
+                            <li><strong>TheaterEvent</strong> - Theater, Oper, Musicals</li>
+                            <li><strong>EducationEvent</strong> - Workshops, Seminare, Konferenzen</li>
+                            <li><strong>ExhibitionEvent</strong> - Ausstellungen, Messen</li>
+                            <li><strong>SaleEvent</strong> - Sonderverkäufe, Rabattaktionen</li>
+                            <li><strong>FoodEvent</strong> - Weinproben, Kochkurse, Galadinner</li>
+                            <li><strong>ChildrensEvent</strong> - Kinderveranstaltungen</li>
+                            <li><strong>ComedyEvent</strong> - Comedy-Shows, Kabarett</li>
+                            <li><strong>DanceEvent</strong> - Tanzveranstaltungen, Bälle</li>
+                            <li><strong>LiteraryEvent</strong> - Lesungen, Buchvorstellungen</li>
+                            <li><strong>VisualArtsEvent</strong> - Kunstausstellungen, Vernissagen</li>
                         </ul>
 
                         <p>Wenn kein Untertyp passt, verwende einfach <code>Event</code>. Google verarbeitet das genauso zuverlässig.</p>
@@ -213,23 +215,23 @@
                         <h3>Pflichtfelder</h3>
 
                         <ul>
-                            <li><strong>name</strong> — Der vollständige Name der Veranstaltung</li>
-                            <li><strong>startDate</strong> — Startdatum und -uhrzeit im ISO-8601-Format (<code>2026-06-15T19:30:00+02:00</code>)</li>
-                            <li><strong>location</strong> — Der Veranstaltungsort (Objekt mit name, address)</li>
+                            <li><strong>name</strong> - Der vollständige Name der Veranstaltung</li>
+                            <li><strong>startDate</strong> - Startdatum und -uhrzeit im ISO-8601-Format (<code>2026-06-15T19:30:00+02:00</code>)</li>
+                            <li><strong>location</strong> - Der Veranstaltungsort (Objekt mit name, address)</li>
                         </ul>
 
                         <h3>Empfohlene Felder</h3>
 
                         <ul>
-                            <li><strong>endDate</strong> — Enddatum und -uhrzeit</li>
-                            <li><strong>description</strong> — Beschreibung der Veranstaltung</li>
-                            <li><strong>image</strong> — URL eines Vorschaubildes (min. 720px breit, Verhältnis 16:9)</li>
-                            <li><strong>url</strong> — URL der Veranstaltungsseite</li>
-                            <li><strong>organizer</strong> — Veranstalter (Person oder Organisation)</li>
-                            <li><strong>offers</strong> — Ticket-Informationen (Preis, Verfügbarkeit)</li>
-                            <li><strong>performer</strong> — Auftretende Künstler oder Redner</li>
-                            <li><strong>eventStatus</strong> — Status der Veranstaltung (geplant, abgesagt, verschoben)</li>
-                            <li><strong>eventAttendanceMode</strong> — Online, Offline oder gemischt</li>
+                            <li><strong>endDate</strong> - Enddatum und -uhrzeit</li>
+                            <li><strong>description</strong> - Beschreibung der Veranstaltung</li>
+                            <li><strong>image</strong> - URL eines Vorschaubildes (min. 720px breit, Verhältnis 16:9)</li>
+                            <li><strong>url</strong> - URL der Veranstaltungsseite</li>
+                            <li><strong>organizer</strong> - Veranstalter (Person oder Organisation)</li>
+                            <li><strong>offers</strong> - Ticket-Informationen (Preis, Verfügbarkeit)</li>
+                            <li><strong>performer</strong> - Auftretende Künstler oder Redner</li>
+                            <li><strong>eventStatus</strong> - Status der Veranstaltung (geplant, abgesagt, verschoben)</li>
+                            <li><strong>eventAttendanceMode</strong> - Online, Offline oder gemischt</li>
                         </ul>
 
                         <h2>Vollständiges Beispiel: Präsenz-Veranstaltung (Konzert)</h2>
@@ -240,7 +242,7 @@
 {
   "@context": "https://schema.org",
   "@type": "MusicEvent",
-  "name": "Sommerfestival 2026 — Live unter freiem Himmel",
+  "name": "Sommerfestival 2026 - Live unter freiem Himmel",
   "description": "Das größte Open-Air-Festival der Region mit nationalen und internationalen Künstlern. 3 Bühnen, 12 Stunden Musik.",
   "image": "https://example.de/images/sommerfestival-2026.jpg",
   "url": "https://example.de/events/sommerfestival-2026",
@@ -294,7 +296,7 @@
 {
   "@context": "https://schema.org",
   "@type": "EducationEvent",
-  "name": "SEO-Grundlagen Webinar — Sichtbarkeit aufbauen 2026",
+  "name": "SEO-Grundlagen Webinar - Sichtbarkeit aufbauen 2026",
   "description": "In diesem 90-minütigen Webinar lernst du die wichtigsten SEO-Grundlagen und wie du deine Website bei Google sichtbarer machst.",
   "image": "https://example.de/images/seo-webinar.jpg",
   "url": "https://example.de/webinar/seo-grundlagen",
@@ -322,7 +324,7 @@
 }
 &lt;/script&gt;</code></pre>
 
-                        <p>Für Hybrid-Events — also Veranstaltungen, die sowohl vor Ort als auch online stattfinden — nutze <code>MixedEventAttendanceMode</code> und gib beide Locations als Array an:</p>
+                        <p>Für Hybrid-Events - also Veranstaltungen, die sowohl vor Ort als auch online stattfinden - nutze <code>MixedEventAttendanceMode</code> und gib beide Locations als Array an:</p>
 
                         <pre><code>"eventAttendanceMode": "https://schema.org/MixedEventAttendanceMode",
 "location": [
@@ -339,21 +341,21 @@
 
                         <h2>EventStatus: Geplant, Verschoben oder Abgesagt</h2>
 
-                        <p>Das Feld <code>eventStatus</code> ist besonders wichtig, wenn sich Veranstaltungen kurzfristig ändern. Google zeigt den Status im Rich Snippet an — "Abgesagt" oder "Verschoben" sind klare Signale für Nutzer und vermeiden Beschwerden. Die möglichen Werte:</p>
+                        <p>Das Feld <code>eventStatus</code> ist besonders wichtig, wenn sich Veranstaltungen kurzfristig ändern. Google zeigt den Status im Rich Snippet an - "Abgesagt" oder "Verschoben" sind klare Signale für Nutzer und vermeiden Beschwerden. Die möglichen Werte:</p>
 
                         <ul>
-                            <li><code>https://schema.org/EventScheduled</code> — Die Veranstaltung findet wie geplant statt</li>
-                            <li><code>https://schema.org/EventCancelled</code> — Die Veranstaltung ist abgesagt</li>
-                            <li><code>https://schema.org/EventPostponed</code> — Die Veranstaltung ist verschoben (kein neues Datum bekannt)</li>
-                            <li><code>https://schema.org/EventRescheduled</code> — Die Veranstaltung wurde auf ein neues Datum verlegt</li>
-                            <li><code>https://schema.org/EventMovedOnline</code> — Die Veranstaltung findet jetzt online statt</li>
+                            <li><code>https://schema.org/EventScheduled</code> - Die Veranstaltung findet wie geplant statt</li>
+                            <li><code>https://schema.org/EventCancelled</code> - Die Veranstaltung ist abgesagt</li>
+                            <li><code>https://schema.org/EventPostponed</code> - Die Veranstaltung ist verschoben (kein neues Datum bekannt)</li>
+                            <li><code>https://schema.org/EventRescheduled</code> - Die Veranstaltung wurde auf ein neues Datum verlegt</li>
+                            <li><code>https://schema.org/EventMovedOnline</code> - Die Veranstaltung findet jetzt online statt</li>
                         </ul>
 
                         <p>Bei <code>EventRescheduled</code> solltest du zusätzlich das Feld <code>previousStartDate</code> mit dem ursprünglichen Datum befüllen, damit Google den Wechsel korrekt verarbeiten kann.</p>
 
                         <h2>Ticket-Informationen mit offers</h2>
 
-                        <p>Das <code>offers</code>-Feld ist eines der wertvollsten in Event Schema — Google zeigt Ticketpreise direkt in den Suchergebnissen an, was die Klickrate massiv erhöht. Du kannst sowohl ein einzelnes Angebot als auch mehrere Preiskategorien (Array) angeben:</p>
+                        <p>Das <code>offers</code>-Feld ist eines der wertvollsten in Event Schema - Google zeigt Ticketpreise direkt in den Suchergebnissen an, was die Klickrate massiv erhöht. Du kannst sowohl ein einzelnes Angebot als auch mehrere Preiskategorien (Array) angeben:</p>
 
                         <pre><code>"offers": [
   {
@@ -379,10 +381,10 @@
                         <p>Wichtige Availability-Werte für das <code>availability</code>-Feld:</p>
 
                         <ul>
-                            <li><code>https://schema.org/InStock</code> — Tickets verfügbar</li>
-                            <li><code>https://schema.org/LimitedAvailability</code> — Wenige Tickets verbleibend</li>
-                            <li><code>https://schema.org/SoldOut</code> — Ausverkauft</li>
-                            <li><code>https://schema.org/PreOrder</code> — Vorverkauf</li>
+                            <li><code>https://schema.org/InStock</code> - Tickets verfügbar</li>
+                            <li><code>https://schema.org/LimitedAvailability</code> - Wenige Tickets verbleibend</li>
+                            <li><code>https://schema.org/SoldOut</code> - Ausverkauft</li>
+                            <li><code>https://schema.org/PreOrder</code> - Vorverkauf</li>
                         </ul>
 
                         <h2>Mehrere Events auf einer Seite</h2>
@@ -394,14 +396,14 @@
   {
     "@context": "https://schema.org",
     "@type": "Event",
-    "name": "Stadtfest Berlin — Eröffnungsabend",
+    "name": "Stadtfest Berlin - Eröffnungsabend",
     "startDate": "2026-07-01T18:00:00+02:00",
     "location": { "@type": "Place", "name": "Alexanderplatz Berlin", "address": { ... } }
   },
   {
     "@context": "https://schema.org",
     "@type": "Event",
-    "name": "Stadtfest Berlin — Hauptprogramm",
+    "name": "Stadtfest Berlin - Hauptprogramm",
     "startDate": "2026-07-02T10:00:00+02:00",
     "location": { "@type": "Place", "name": "Alexanderplatz Berlin", "address": { ... } }
   }
@@ -413,17 +415,17 @@
                         <p>In unserer <a href="/blog/seo-fehler-analyse-deutsche-unternehmen.html">Analyse von 198 deutschen Unternehmens-Websites</a> zeigen sich immer wieder die gleichen Fehler beim Einsatz von strukturierten Daten. Beim Event Schema sind es vor allem:</p>
 
                         <ul>
-                            <li><strong>Falsches Datumsformat</strong> — Nur ISO-8601 ist gültig. "15.06.2026" funktioniert nicht. Richtig: <code>2026-06-15T19:30:00+02:00</code></li>
-                            <li><strong>Vergangenheitsdaten</strong> — Google indexiert keine Events, die bereits stattgefunden haben. Halte die Daten immer aktuell.</li>
-                            <li><strong>Fehlende Location</strong> — Ein Event ohne <code>location</code> gilt als unvollständig und erscheint nicht als Rich Snippet.</li>
-                            <li><strong>Inkonsistente Inhalte</strong> — Der Inhalt im Schema muss mit dem sichtbaren Seiteninhalt übereinstimmen. Ein Event das im Schema "kostenlos" ist, aber auf der Seite als kostenpflichtig beworben wird, verstößt gegen Googles Richtlinien.</li>
-                            <li><strong>Veraltete eventStatus-Werte</strong> — Wenn eine Veranstaltung abgesagt wurde, muss das Schema sofort aktualisiert werden. Vergisst du das, können verärgerte Nutzer deine Website besuchen und finden, dass das Event längst vorbei oder gecancelt ist.</li>
-                            <li><strong>Kein Bild angegeben</strong> — Ohne <code>image</code> zeigt Google möglicherweise keinen visuellen Rich Snippet.</li>
+                            <li><strong>Falsches Datumsformat</strong> - Nur ISO-8601 ist gültig. "15.06.2026" funktioniert nicht. Richtig: <code>2026-06-15T19:30:00+02:00</code></li>
+                            <li><strong>Vergangenheitsdaten</strong> - Google indexiert keine Events, die bereits stattgefunden haben. Halte die Daten immer aktuell.</li>
+                            <li><strong>Fehlende Location</strong> - Ein Event ohne <code>location</code> gilt als unvollständig und erscheint nicht als Rich Snippet.</li>
+                            <li><strong>Inkonsistente Inhalte</strong> - Der Inhalt im Schema muss mit dem sichtbaren Seiteninhalt übereinstimmen. Ein Event das im Schema "kostenlos" ist, aber auf der Seite als kostenpflichtig beworben wird, verstößt gegen Googles Richtlinien.</li>
+                            <li><strong>Veraltete eventStatus-Werte</strong> - Wenn eine Veranstaltung abgesagt wurde, muss das Schema sofort aktualisiert werden. Vergisst du das, können verärgerte Nutzer deine Website besuchen und finden, dass das Event längst vorbei oder gecancelt ist.</li>
+                            <li><strong>Kein Bild angegeben</strong> - Ohne <code>image</code> zeigt Google möglicherweise keinen visuellen Rich Snippet.</li>
                         </ul>
 
                         <h2>Beispiel: Workshop mit mehreren Terminen</h2>
 
-                        <p>Viele Anbieter — Yoga-Studios, Bildungseinrichtungen, Coaches — bieten Kurse mit Wiederholungsterminen an. Hier gibt es zwei Ansätze:</p>
+                        <p>Viele Anbieter - Yoga-Studios, Bildungseinrichtungen, Coaches - bieten Kurse mit Wiederholungsterminen an. Hier gibt es zwei Ansätze:</p>
 
                         <h3>Ansatz 1: Eigene Seite pro Termin</h3>
 
@@ -436,7 +438,7 @@
                         <pre><code>{
   "@context": "https://schema.org",
   "@type": "EducationEvent",
-  "name": "Yoga für Anfänger — 8-Wochen-Kurs",
+  "name": "Yoga für Anfänger - 8-Wochen-Kurs",
   "description": "Unser Anfängerkurs startet jeden Monat neu. Nächste Termine: Mai, Juni und Juli 2026.",
   "startDate": "2026-05-04T09:00:00+02:00",
   "endDate": "2026-05-04T10:30:00+02:00",
@@ -479,8 +481,8 @@
                         <p>Bevor du das Event Schema live schaltest, solltest du es unbedingt validieren. Zwei kostenlose Tools helfen dabei:</p>
 
                         <ul>
-                            <li><strong>Google Rich Results Test</strong> — Zeigt dir, ob dein Schema korrekt ist und ob ein Rich Snippet generiert wird. Tipp: Nutze unseren <a href="/tools/json-ld-structured-data-validator.html">JSON-LD Structured Data Validator</a> für eine schnelle Prüfung direkt im Browser.</li>
-                            <li><strong>Schema Markup Validator (validator.schema.org)</strong> — Prüft, ob das Schema dem Schema.org-Standard entspricht, unabhängig von Googles Anforderungen.</li>
+                            <li><strong>Google Rich Results Test</strong> - Zeigt dir, ob dein Schema korrekt ist und ob ein Rich Snippet generiert wird. Tipp: Nutze unseren <a href="/tools/json-ld-structured-data-validator.html">JSON-LD Structured Data Validator</a> für eine schnelle Prüfung direkt im Browser.</li>
+                            <li><strong>Schema Markup Validator (validator.schema.org)</strong> - Prüft, ob das Schema dem Schema.org-Standard entspricht, unabhängig von Googles Anforderungen.</li>
                         </ul>
 
                         <p>Achte auf folgende Punkte in der Validierung:</p>
@@ -510,9 +512,9 @@
                             <li>✅ Validierung mit Google Rich Results Test bestanden</li>
                         </ul>
 
-                        <p>Wenn du alle diese Punkte beachtest, steht deinen Veranstaltungs-Rich-Snippets in Google nichts mehr im Wege. Die Klickrate auf Seiten mit Event-Rich-Snippets liegt erfahrungsgemäß deutlich über dem Durchschnitt — weil Nutzer sofort sehen, wann und wo die Veranstaltung stattfindet, ohne erst die Seite öffnen zu müssen.</p>
+                        <p>Wenn du alle diese Punkte beachtest, steht deinen Veranstaltungs-Rich-Snippets in Google nichts mehr im Wege. Die Klickrate auf Seiten mit Event-Rich-Snippets liegt erfahrungsgemäß deutlich über dem Durchschnitt - weil Nutzer sofort sehen, wann und wo die Veranstaltung stattfindet, ohne erst die Seite öffnen zu müssen.</p>
 
-                        <p>Nutze außerdem unsere weiteren Artikel zur Schema-Markup-Serie: <a href="/blog/strukturierte-daten-seo-schema-markup.html">Strukturierte Daten für SEO</a>, <a href="/blog/faqpage-schema-markup-seo.html">FAQPage Schema</a> oder <a href="/blog/breadcrumblist-schema-markup-seo.html">BreadcrumbList Schema</a> — und erstelle dein Event-Schema mit unserem kostenlosen <a href="/tools/faq-schema-generator.html">Schema Generator</a>.</p>
+                        <p>Nutze außerdem unsere weiteren Artikel zur Schema-Markup-Serie: <a href="/blog/strukturierte-daten-seo-schema-markup.html">Strukturierte Daten für SEO</a>, <a href="/blog/faqpage-schema-markup-seo.html">FAQPage Schema</a> oder <a href="/blog/breadcrumblist-schema-markup-seo.html">BreadcrumbList Schema</a> - und erstelle dein Event-Schema mit unserem kostenlosen <a href="/tools/faq-schema-generator.html">Schema Generator</a>.</p>
 
                     </div>
 
@@ -598,6 +600,7 @@
                     <a href="/impressum.html" class="hover:text-white transition-colors">Impressum</a>
                     <a href="/datenschutz.html" class="hover:text-white transition-colors">Datenschutz</a>
                     <a href="/agb.html" class="hover:text-white transition-colors">AGB</a>
+                    <a href="/ueber-uns.html" class="hover:text-white transition-colors">Über uns</a>
                 </div>
                 <p class="text-sm text-gray-500">&copy; 2026 Thümmler AI GmbH</p>
             </div>

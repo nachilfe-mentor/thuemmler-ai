@@ -22,7 +22,7 @@
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="robots.txt richtig konfigurieren: Anleitung">
-    <meta name="twitter:description" content="Wie du die robots.txt Datei deiner Website richtig konfigurierst — mit Beispielen, Direktiven und häufigen Fehlern.">
+    <meta name="twitter:description" content="Wie du die robots.txt Datei deiner Website richtig konfigurierst - mit Beispielen, Direktiven und häufigen Fehlern.">
     <meta name="twitter:image" content="https://shift07.ai/blog/images/robots-txt-konfigurieren.png">
     <!-- Structured Data -->
     <script type="application/ld+json">
@@ -32,7 +32,7 @@
       "headline": "robots.txt richtig konfigurieren: Die vollständige Anleitung",
       "description": "Lerne, wie du deine robots.txt Datei richtig konfigurierst, welche Direktiven du kennst musst und welche Fehler du unbedingt vermeiden solltest.",
       "image": "https://shift07.ai/blog/images/robots-txt-konfigurieren.png",
-      "author": { "@type": "Person", "name": "Laurenz Thümmler" },
+      "author": { "@type": "Person", "name": "Thümmler AI GmbH" },
       "publisher": { "@type": "Organization", "name": "Thümmler AI GmbH", "url": "https://shift07.ai" },
       "datePublished": "2026-04-04T09:00:00+02:00",
       "dateModified": "2026-04-04T09:00:00+02:00",
@@ -101,6 +101,7 @@
                     <a href="/" class="text-white hover:text-blue-300 px-3 py-2 text-sm font-medium transition-colors">SEO-Tool</a>
                     <a href="/blog/" class="text-blue-300 px-3 py-2 text-sm font-medium">Blog</a>
                     <a href="/tools/" class="text-white hover:text-blue-300 px-3 py-2 text-sm font-medium transition-colors">Tools</a>
+                    <a href="/ueber-uns.html" class="text-white hover:text-blue-300 px-3 py-2 text-sm font-medium transition-colors">Über uns</a>
                     <a href="/app/#/login" class="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:from-blue-600 hover:to-purple-700 transition-all">Anmelden</a>
                 </div>
                 <button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="md:hidden text-white">
@@ -111,7 +112,8 @@
                 <a href="/" class="block text-white hover:text-blue-300 px-3 py-2 text-sm font-medium">SEO-Tool</a>
                 <a href="/blog/" class="block text-blue-300 px-3 py-2 text-sm font-medium">Blog</a>
                 <a href="/tools/" class="block text-white hover:text-blue-300 px-3 py-2 text-sm font-medium">Tools</a>
-                <a href="/app/#/login" class="block text-white hover:text-blue-300 px-3 py-2 text-sm font-medium">Anmelden</a>
+                <a href="/ueber-uns.html" class="block text-white hover:text-blue-300 px-3 py-2 text-sm font-medium">Über uns</a>
+                <2 class="block text-white hover:text-blue-300 px-3 py-2 text-sm font-medium">Anmelden</a>
             </div>
         </div>
     </nav>
@@ -154,13 +156,13 @@
 
             <h2>Was ist die robots.txt und wozu dient sie?</h2>
             <p>
-                Die <strong>robots.txt</strong> ist eine einfache Textdatei, die im Wurzelverzeichnis deiner Website liegt — also unter <code style="background: rgba(255,255,255,0.1); padding: 2px 6px; border-radius: 4px; color: #86efac;">https://deine-website.de/robots.txt</code>. Sie gibt Suchmaschinen-Crawlern Anweisungen, welche Teile deiner Website gecrawlt werden dürfen und welche nicht.
+                Die <strong>robots.txt</strong> ist eine einfache Textdatei, die im Wurzelverzeichnis deiner Website liegt - also unter <code style="background: rgba(255,255,255,0.1); padding: 2px 6px; border-radius: 4px; color: #86efac;">https://deine-website.de/robots.txt</code>. Sie gibt Suchmaschinen-Crawlern Anweisungen, welche Teile deiner Website gecrawlt werden dürfen und welche nicht.
             </p>
             <p>
-                Das sogenannte <strong>Robots Exclusion Protocol</strong> (REP) legt fest, wie diese Datei aufgebaut sein muss. Googles Crawler (Googlebot), Bings Crawler (Bingbot) und alle anderen seriösen Bots lesen diese Datei, bevor sie deine Website crawlen, und halten sich — in der Regel — an die darin enthaltenen Anweisungen.
+                Das sogenannte <strong>Robots Exclusion Protocol</strong> (REP) legt fest, wie diese Datei aufgebaut sein muss. Googles Crawler (Googlebot), Bings Crawler (Bingbot) und alle anderen seriösen Bots lesen diese Datei, bevor sie deine Website crawlen, und halten sich - in der Regel - an die darin enthaltenen Anweisungen.
             </p>
             <p>
-                Wichtig: Die robots.txt ist <strong>kein Sicherheitsmechanismus</strong>. Sie verhindert nur das Crawlen, nicht das Indexieren. Wenn andere Websites auf eine gesperrte URL verlinken, kann Google sie trotzdem in den Suchergebnissen anzeigen — ohne Inhalt, aber als URL. Für echte Vertraulichkeit brauchst du serverseitige Zugangsbeschränkungen.
+                Wichtig: Die robots.txt ist <strong>kein Sicherheitsmechanismus</strong>. Sie verhindert nur das Crawlen, nicht das Indexieren. Wenn andere Websites auf eine gesperrte URL verlinken, kann Google sie trotzdem in den Suchergebnissen anzeigen - ohne Inhalt, aber als URL. Für echte Vertraulichkeit brauchst du serverseitige Zugangsbeschränkungen.
             </p>
 
             <h2>Die Grundstruktur einer robots.txt</h2>
@@ -187,18 +189,18 @@
                 <li><strong>Disallow:</strong> Verbietet das Crawlen des angegebenen Pfades. Ein leeres Disallow (<code style="background: rgba(255,255,255,0.1); padding: 2px 6px; border-radius: 4px; color: #86efac;">Disallow:</code>) erlaubt alles.</li>
                 <li><strong>Allow:</strong> Erlaubt das Crawlen, auch wenn ein übergeordneter Pfad gesperrt ist. Hat Vorrang vor Disallow bei spezifischeren Pfaden.</li>
                 <li><strong>Sitemap:</strong> Gibt den Speicherort deiner Sitemap.xml an. Nicht alle Crawler folgen dieser Direktive, aber Google und Bing tun es.</li>
-                <li><strong>Crawl-delay:</strong> Empfiehlt dem Crawler eine Pause (in Sekunden) zwischen Anfragen. Googlebot ignoriert diese Direktive — für Google nutzt du die Search Console.</li>
+                <li><strong>Crawl-delay:</strong> Empfiehlt dem Crawler eine Pause (in Sekunden) zwischen Anfragen. Googlebot ignoriert diese Direktive - für Google nutzt du die Search Console.</li>
             </ul>
 
             <div class="tip-box">
                 <p class="text-green-300 font-semibold mb-1">💡 Tipp: Sitemap-Direktive immer hinzufügen</p>
-                <p class="text-green-200/80 text-sm">Füge am Ende jeder robots.txt eine <code style="background: rgba(0,0,0,0.3); padding: 1px 5px; border-radius: 3px; color: #86efac;">Sitemap:</code>-Zeile ein. Das hilft Suchmaschinen, deine Sitemap schneller zu finden — auch wenn sie in der Search Console bereits hinterlegt ist. Wie du eine <a href="/blog/sitemap-xml-erstellen-einreichen.html" style="color: #86efac;">sitemap.xml erstellst und bei Google einreichst</a>, erklären wir in unserem Schritt-für-Schritt-Guide.</p>
+                <p class="text-green-200/80 text-sm">Füge am Ende jeder robots.txt eine <code style="background: rgba(0,0,0,0.3); padding: 1px 5px; border-radius: 3px; color: #86efac;">Sitemap:</code>-Zeile ein. Das hilft Suchmaschinen, deine Sitemap schneller zu finden - auch wenn sie in der Search Console bereits hinterlegt ist. Wie du eine <a href="/blog/sitemap-xml-erstellen-einreichen.html" style="color: #86efac;">sitemap.xml erstellst und bei Google einreichst</a>, erklären wir in unserem Schritt-für-Schritt-Guide.</p>
             </div>
 
             <h2>Häufige Anwendungsfälle mit Beispielen</h2>
 
             <h3>1. Adminbereiche sperren</h3>
-            <p>Backend-Bereiche wie das WordPress-Admin-Panel sollte kein Crawler indexieren — sie bieten keinen SEO-Wert und können Sicherheitsrisiken offenlegen:</p>
+            <p>Backend-Bereiche wie das WordPress-Admin-Panel sollte kein Crawler indexieren - sie bieten keinen SEO-Wert und können Sicherheitsrisiken offenlegen:</p>
             <div class="code-block">
                 <pre><span class="directive">User-agent:</span> <span class="value">*</span>
 <span class="directive">Disallow:</span> <span class="value">/wp-admin/</span>
@@ -254,7 +256,7 @@
 
             <div class="warning-box">
                 <p class="text-yellow-300 font-semibold mb-2">⚠️ Fehler 3: CSS und JS blockieren</p>
-                <p class="text-yellow-200/80 text-sm">Ältere robots.txt-Konfigurationen blockierten oft <code style="background: rgba(0,0,0,0.3); padding: 1px 5px; border-radius: 3px; color: #fcd34d;">/wp-content/</code> oder Ressourcen-Ordner. Das verhindert, dass Google CSS und JavaScript lädt — und kann das Rendering und damit das Ranking verschlechtern. CSS- und JS-Ordner immer freigeben.</p>
+                <p class="text-yellow-200/80 text-sm">Ältere robots.txt-Konfigurationen blockierten oft <code style="background: rgba(0,0,0,0.3); padding: 1px 5px; border-radius: 3px; color: #fcd34d;">/wp-content/</code> oder Ressourcen-Ordner. Das verhindert, dass Google CSS und JavaScript lädt - und kann das Rendering und damit das Ranking verschlechtern. CSS- und JS-Ordner immer freigeben.</p>
             </div>
 
             <div class="warning-box">
@@ -306,7 +308,7 @@
 
             <div class="tip-box">
                 <p class="text-green-300 font-semibold mb-1">💡 Tipp: robots.txt regelmäßig prüfen</p>
-                <p class="text-green-200/80 text-sm">Bei CMS-Updates oder Plugin-Installationen kann die robots.txt unbeabsichtigt verändert werden. Prüfe sie mindestens einmal pro Monat — oder nutze <a href="/" class="text-green-400 underline">die automatische SEO-Analyse von Shift07</a>, die Probleme in der robots.txt automatisch erkennt.</p>
+                <p class="text-green-200/80 text-sm">Bei CMS-Updates oder Plugin-Installationen kann die robots.txt unbeabsichtigt verändert werden. Prüfe sie mindestens einmal pro Monat - oder nutze <a href="/" class="text-green-400 underline">die automatische SEO-Analyse von Shift07</a>, die Probleme in der robots.txt automatisch erkennt.</p>
             </div>
 
             <h2>robots.txt vs. noindex: Was wann verwenden?</h2>
@@ -318,20 +320,20 @@
             </ul>
 
             <p>
-                Für eine vollständige Kontrolle über die Indexierung empfiehlt sich der Einsatz von <a href="/blog/canonical-tags-seo.html">Canonical-Tags</a> in Kombination mit dem noindex-Meta-Tag — ohne den Crawling-Zugang zu sperren.
+                Für eine vollständige Kontrolle über die Indexierung empfiehlt sich der Einsatz von <a href="/blog/canonical-tags-seo.html">Canonical-Tags</a> in Kombination mit dem noindex-Meta-Tag - ohne den Crawling-Zugang zu sperren.
             </p>
 
             <h2>Zusammenfassung: Die 5 Regeln für eine gute robots.txt</h2>
             <ol>
-                <li><strong>Sitemap-Direktive immer hinzufügen</strong> — Hilft Crawlern, deine wichtigen Seiten schneller zu finden.</li>
-                <li><strong>Nur nicht-indexierungswürdige Pfade sperren</strong> — Admin-Bereiche, API-Endpunkte, Duplikate.</li>
-                <li><strong>CSS und JavaScript nie sperren</strong> — Google braucht diese Ressourcen für korrektes Rendering.</li>
-                <li><strong>Nie robots.txt + noindex kombinieren</strong> — Eines von beidem, nie beides zusammen.</li>
-                <li><strong>Regelmäßig testen</strong> — Nach CMS-Updates oder Plugin-Änderungen sofort prüfen.</li>
+                <li><strong>Sitemap-Direktive immer hinzufügen</strong> - Hilft Crawlern, deine wichtigen Seiten schneller zu finden.</li>
+                <li><strong>Nur nicht-indexierungswürdige Pfade sperren</strong> - Admin-Bereiche, API-Endpunkte, Duplikate.</li>
+                <li><strong>CSS und JavaScript nie sperren</strong> - Google braucht diese Ressourcen für korrektes Rendering.</li>
+                <li><strong>Nie robots.txt + noindex kombinieren</strong> - Eines von beidem, nie beides zusammen.</li>
+                <li><strong>Regelmäßig testen</strong> - Nach CMS-Updates oder Plugin-Änderungen sofort prüfen.</li>
             </ol>
 
             <p>
-                Willst du prüfen, ob deine Website weitere technische SEO-Probleme hat? Mit der <a href="/">kostenlosen Shift07 SEO-Analyse</a> siehst du in Sekunden alle wichtigen Schwachstellen — von der robots.txt über Meta-Tags bis hin zu <a href="/blog/strukturierte-daten-seo-schema-markup.html">strukturierten Daten</a>.
+                Willst du prüfen, ob deine Website weitere technische SEO-Probleme hat? Mit der <a href="/">kostenlosen Shift07 SEO-Analyse</a> siehst du in Sekunden alle wichtigen Schwachstellen - von der robots.txt über Meta-Tags bis hin zu <a href="/blog/strukturierte-daten-seo-schema-markup.html">strukturierten Daten</a>.
             </p>
 
         </div><!-- end prose-content -->
@@ -386,8 +388,8 @@
                 <span class="text-white font-bold text-lg">L</span>
             </div>
             <div>
-                <p class="text-white font-semibold">Laurenz Thümmler</p>
-                <p class="text-blue-200/60 text-sm">Co-Founder von Shift07 · SEO & KI-Enthusiast</p>
+                <p class="text-white font-semibold"><a href="/ueber-uns.html" class="hover:text-blue-300 transition-colors">Thümmler AI GmbH</a></p>
+                <p class="text-blue-200/60 text-sm">Redaktion Shift07 · KI-gestützte SEO-Analyse</p>
             </div>
         </div>
 
@@ -402,6 +404,7 @@
                     <a href="/impressum.html" class="text-gray-300 hover:text-white transition-colors text-sm">Impressum</a>
                     <a href="/datenschutz.html" class="text-gray-300 hover:text-white transition-colors text-sm">Datenschutz</a>
                     <a href="/agb.html" class="text-gray-300 hover:text-white transition-colors text-sm">AGB</a>
+                    <a href="/ueber-uns.html" class="text-gray-300 hover:text-white transition-colors text-sm">Über uns</a>
                 </div>
             </div>
         </div>

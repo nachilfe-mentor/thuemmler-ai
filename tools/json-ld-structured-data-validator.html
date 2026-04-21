@@ -115,6 +115,7 @@
                         <a href="/" class="text-white hover:text-blue-300 px-3 py-2 text-sm font-medium transition-colors">SEO-Tool</a>
                         <a href="/blog/" class="text-white hover:text-blue-300 px-3 py-2 text-sm font-medium transition-colors">Blog</a>
                         <a href="/tools/" class="text-blue-300 px-3 py-2 text-sm font-medium">Tools</a>
+                        <a href="/ueber-uns.html" class="text-white hover:text-blue-300 px-3 py-2 text-sm font-medium transition-colors">Über uns</a>
                         <a href="/app/#/login" class="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:from-blue-600 hover:to-purple-700 transition-all">Anmelden</a>
                     </div>
                     <button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="md:hidden text-white">
@@ -125,6 +126,7 @@
                     <a href="/" class="block text-white hover:text-blue-300 px-3 py-2 text-sm font-medium">SEO-Tool</a>
                     <a href="/blog/" class="block text-white hover:text-blue-300 px-3 py-2 text-sm font-medium">Blog</a>
                     <a href="/tools/" class="block text-blue-300 px-3 py-2 text-sm font-medium">Tools</a>
+                    <a href="/ueber-uns.html" class="block text-white hover:text-blue-300 px-3 py-2 text-sm font-medium">Über uns</a>
                     <a href="/app/#/login" class="block text-white hover:text-blue-300 px-3 py-2 text-sm font-medium">Anmelden</a>
                 </div>
             </div>
@@ -337,6 +339,7 @@
                         <a href="/impressum.html" class="text-gray-300 hover:text-white transition-colors text-sm">Impressum</a>
                         <a href="/datenschutz.html" class="text-gray-300 hover:text-white transition-colors text-sm">Datenschutz</a>
                         <a href="/agb.html" class="text-gray-300 hover:text-white transition-colors text-sm">AGB</a>
+                        <a href="/ueber-uns.html" class="text-gray-300 hover:text-white transition-colors text-sm">Über uns</a>
                     </div>
                 </div>
             </div>
@@ -347,55 +350,55 @@
     // Schema type definitions
     const schemaTypes = {
         'Article': {
-            description: 'Blog-Artikel, News-Artikel — ermöglicht Artikel-Karussell in Google',
+            description: 'Blog-Artikel, News-Artikel - ermöglicht Artikel-Karussell in Google',
             required: ['headline', 'author', 'datePublished', 'image'],
             recommended: ['description', 'dateModified', 'publisher', 'url', 'mainEntityOfPage'],
             richResult: 'Artikel mit Datum in den Google-Suchergebnissen'
         },
         'NewsArticle': {
-            description: 'News-Artikel — für Google News und Top Stories',
+            description: 'News-Artikel - für Google News und Top Stories',
             required: ['headline', 'author', 'datePublished', 'image'],
             recommended: ['description', 'dateModified', 'publisher', 'articleBody'],
             richResult: 'Top-Stories-Karussell in Google'
         },
         'LocalBusiness': {
-            description: 'Lokales Unternehmen — für Google Maps und Knowledge Panel',
+            description: 'Lokales Unternehmen - für Google Maps und Knowledge Panel',
             required: ['name', 'address'],
             recommended: ['telephone', 'url', 'openingHours', 'image', 'geo', 'priceRange', 'aggregateRating'],
             richResult: 'Unternehmens-Info-Panel in Google'
         },
         'Product': {
-            description: 'Produkt in einem Online-Shop — ermöglicht Preis und Bewertung in SERP',
+            description: 'Produkt in einem Online-Shop - ermöglicht Preis und Bewertung in SERP',
             required: ['name'],
             recommended: ['image', 'description', 'brand', 'offers', 'aggregateRating', 'sku'],
             richResult: 'Produkt mit Preis und Bewertung in SERP'
         },
         'FAQPage': {
-            description: 'FAQ-Seite — ermöglicht FAQ-Accordion direkt in Google',
+            description: 'FAQ-Seite - ermöglicht FAQ-Accordion direkt in Google',
             required: ['mainEntity'],
             recommended: [],
             richResult: 'Aufklappbare FAQ-Fragen direkt in Google-SERP'
         },
         'BreadcrumbList': {
-            description: 'Breadcrumb-Navigation — zeigt den Navigationspfad in SERP',
+            description: 'Breadcrumb-Navigation - zeigt den Navigationspfad in SERP',
             required: ['itemListElement'],
             recommended: [],
             richResult: 'Brotkrumen-Pfad in Google-SERP'
         },
         'Event': {
-            description: 'Veranstaltung — zeigt Datum und Ort in Google-Suchergebnissen',
+            description: 'Veranstaltung - zeigt Datum und Ort in Google-Suchergebnissen',
             required: ['name', 'startDate', 'location'],
             recommended: ['endDate', 'description', 'image', 'url', 'organizer', 'offers'],
             richResult: 'Event-Karte mit Datum und Ort in SERP'
         },
         'Recipe': {
-            description: 'Rezept — mit Kochzeit, Zutaten und Bewertung in SERP',
+            description: 'Rezept - mit Kochzeit, Zutaten und Bewertung in SERP',
             required: ['name', 'image', 'author'],
             recommended: ['description', 'totalTime', 'recipeYield', 'recipeIngredient', 'recipeInstructions', 'aggregateRating'],
             richResult: 'Rezept-Karussell mit Bild und Bewertung'
         },
         'WebSite': {
-            description: 'Website — kann Sitelinks-Suchbox in Google aktivieren',
+            description: 'Website - kann Sitelinks-Suchbox in Google aktivieren',
             required: ['name', 'url'],
             recommended: ['potentialAction', 'description'],
             richResult: 'Sitelinks-Suchbox in SERP'
@@ -559,10 +562,10 @@
         if (data['@context']) {
             const ctx = data['@context'];
             if (ctx === 'https://schema.org' || ctx === 'http://schema.org') {
-                results.push({ type: 'pass', title: '@context korrekt', text: `"${ctx}" — Google empfiehlt https://schema.org` });
+                results.push({ type: 'pass', title: '@context korrekt', text: `"${ctx}" - Google empfiehlt https://schema.org` });
                 passCount++;
             } else {
-                results.push({ type: 'warn', title: '@context ungewöhnlich', text: `"${ctx}" — empfohlen ist "https://schema.org"` });
+                results.push({ type: 'warn', title: '@context ungewöhnlich', text: `"${ctx}" - empfohlen ist "https://schema.org"` });
                 warnCount++;
             }
         } else {
@@ -647,7 +650,7 @@
                     }
                     if (data['headline'] && typeof data['headline'] === 'string') {
                         if (data['headline'].length > 110) {
-                            results.push({ type: 'warn', title: 'Headline zu lang', text: `${data['headline'].length} Zeichen — max. 110 Zeichen empfohlen für Google Discover.` });
+                            results.push({ type: 'warn', title: 'Headline zu lang', text: `${data['headline'].length} Zeichen - max. 110 Zeichen empfohlen für Google Discover.` });
                             warnCount++;
                         }
                     }
@@ -666,7 +669,7 @@
                 }
 
             } else {
-                results.push({ type: 'info', title: `@type "${type}" — unbekannter Typ`, text: 'Dieser Typ ist nicht in unserer Datenbank. Bekannte Typen: Article, LocalBusiness, Product, FAQPage, Event, Recipe…' });
+                results.push({ type: 'info', title: `@type "${type}" - unbekannter Typ`, text: 'Dieser Typ ist nicht in unserer Datenbank. Bekannte Typen: Article, LocalBusiness, Product, FAQPage, Event, Recipe…' });
                 document.getElementById('typeInfo').classList.add('hidden');
             }
         } else {

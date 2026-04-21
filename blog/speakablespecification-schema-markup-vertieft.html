@@ -157,22 +157,22 @@
         <div class="max-w-4xl mx-auto">
             <div class="article-content">
 
-                <p>Die <code>speakable</code> Property von Schema.org ist eine der spezialisiertesten Markup-Eigenschaften überhaupt: Sie teilt Googles Sprachassistenten mit, welche Teile deiner Seite laut vorgelesen werden sollen. Während der <a href="/blog/speakable-property-schema-markup.html">Einführungsartikel zur speakable Property</a> die Grundlagen erklärt, geht diese Vertiefung auf die technischen Details ein — insbesondere auf den Unterschied zwischen <code>cssSelector</code> und XPath, auf Googles aktuelle Unterstützung und auf Best Practices für die Praxis.</p>
+                <p>Die <code>speakable</code> Property von Schema.org ist eine der spezialisiertesten Markup-Eigenschaften überhaupt: Sie teilt Googles Sprachassistenten mit, welche Teile deiner Seite laut vorgelesen werden sollen. Während der <a href="/blog/speakable-property-schema-markup.html">Einführungsartikel zur speakable Property</a> die Grundlagen erklärt, geht diese Vertiefung auf die technischen Details ein - insbesondere auf den Unterschied zwischen <code>cssSelector</code> und XPath, auf Googles aktuelle Unterstützung und auf Best Practices für die Praxis.</p>
 
                 <h2>Was ist SpeakableSpecification genau?</h2>
 
-                <p><code>SpeakableSpecification</code> ist ein Schema.org-Typ, der über die <code>speakable</code> Property eines <code>Article</code>-Schemas angegeben wird. Er benennt Abschnitte einer Webseite, die sich besonders gut für die Wiedergabe durch Text-to-Speech eignen — zum Beispiel die Zusammenfassung, den Hauptfakt oder die wichtigste Schlussfolgerung eines Artikels.</p>
+                <p><code>SpeakableSpecification</code> ist ein Schema.org-Typ, der über die <code>speakable</code> Property eines <code>Article</code>-Schemas angegeben wird. Er benennt Abschnitte einer Webseite, die sich besonders gut für die Wiedergabe durch Text-to-Speech eignen - zum Beispiel die Zusammenfassung, den Hauptfakt oder die wichtigste Schlussfolgerung eines Artikels.</p>
 
                 <p>Die Spezifikation bietet zwei Selector-Mechanismen:</p>
 
                 <ul>
-                    <li><strong>cssSelector</strong> — Selektiert HTML-Elemente per CSS-Selektor (einfacher, weitverbreitet)</li>
-                    <li><strong>xpath</strong> — Selektiert Elemente per XPath-Ausdruck (mächtiger, aber komplexer)</li>
+                    <li><strong>cssSelector</strong> - Selektiert HTML-Elemente per CSS-Selektor (einfacher, weitverbreitet)</li>
+                    <li><strong>xpath</strong> - Selektiert Elemente per XPath-Ausdruck (mächtiger, aber komplexer)</li>
                 </ul>
 
                 <p>Du kannst beide Varianten in einem Markup gleichzeitig verwenden oder dich auf eine konzentrieren.</p>
 
-                <h2>cssSelector vs. XPath — der technische Vergleich</h2>
+                <h2>cssSelector vs. XPath - der technische Vergleich</h2>
 
                 <h3>cssSelector</h3>
 
@@ -225,7 +225,7 @@
   }
 }</code></pre>
 
-                <p>Der erste Ausdruck selektiert den ersten Absatz des ersten Abschnitts im Artikel. Der zweite wählt ein Element mit der ID „zusammenfassung". Der dritte ist der mächtigste: Er sucht ein H2-Element, das das Wort „Fazit" enthält, und selektiert dann den unmittelbar folgenden Absatz — etwas, das mit CSS-Selektoren nicht möglich wäre.</p>
+                <p>Der erste Ausdruck selektiert den ersten Absatz des ersten Abschnitts im Artikel. Der zweite wählt ein Element mit der ID „zusammenfassung". Der dritte ist der mächtigste: Er sucht ein H2-Element, das das Wort „Fazit" enthält, und selektiert dann den unmittelbar folgenden Absatz - etwas, das mit CSS-Selektoren nicht möglich wäre.</p>
 
                 <p><strong>Vorteile von XPath:</strong></p>
                 <ul>
@@ -309,11 +309,11 @@
                     <li>Langen Fließtext ohne klaren Kernsatz</li>
                 </ul>
 
-                <p>Ein häufiger Fehler: Webmaster markieren die gesamte <code>&lt;article&gt;</code>-Sektion als speakable. Das Ergebnis ist, dass Google potentiell 3.000 Wörter als „vorlese-würdig" betrachtet — was für einen Sprachassistenten unbrauchbar ist. Weniger ist hier definitiv mehr.</p>
+                <p>Ein häufiger Fehler: Webmaster markieren die gesamte <code>&lt;article&gt;</code>-Sektion als speakable. Das Ergebnis ist, dass Google potentiell 3.000 Wörter als „vorlese-würdig" betrachtet - was für einen Sprachassistenten unbrauchbar ist. Weniger ist hier definitiv mehr.</p>
 
                 <h2>Googles aktuelle Unterstützung (Stand 2026)</h2>
 
-                <p>Hier die nüchterne Wahrheit: Google hat die aktive Verwendung von <code>speakable</code> in der Google-Suche und im Google Assistant im Jahr 2023 signifikant eingeschränkt. Die Funktion war ursprünglich für Nachrichtenpublisher gedacht — Seiten, die im Google News-Index sind — und sollte es dem Google Assistant ermöglichen, aktuelle Nachrichten vorzulesen.</p>
+                <p>Hier die nüchterne Wahrheit: Google hat die aktive Verwendung von <code>speakable</code> in der Google-Suche und im Google Assistant im Jahr 2023 signifikant eingeschränkt. Die Funktion war ursprünglich für Nachrichtenpublisher gedacht - Seiten, die im Google News-Index sind - und sollte es dem Google Assistant ermöglichen, aktuelle Nachrichten vorzulesen.</p>
 
                 <p><strong>Aktueller Status nach Plattform:</strong></p>
 
@@ -465,7 +465,7 @@
                 <p>Da Google aktuell kein visuelles Rich Result für speakable erzeugt, ist das Testing etwas schwieriger als bei anderen Schema-Typen. Diese Methoden helfen:</p>
 
                 <h3>1. Rich Results Test von Google</h3>
-                <p>Rufe <code>https://search.google.com/test/rich-results</code> auf und gib deine URL ein. Der Test erkennt <code>SpeakableSpecification</code> und zeigt Fehler in der Implementierung an — zum Beispiel wenn der CSS-Selektor auf kein Element der Seite zutrifft.</p>
+                <p>Rufe <code>https://search.google.com/test/rich-results</code> auf und gib deine URL ein. Der Test erkennt <code>SpeakableSpecification</code> und zeigt Fehler in der Implementierung an - zum Beispiel wenn der CSS-Selektor auf kein Element der Seite zutrifft.</p>
 
                 <h3>2. Schema.org-Validator</h3>
                 <p>Unter <code>https://validator.schema.org</code> kannst du deinen JSON-LD-Code direkt einfügen und auf Validierungsfehler prüfen. Der Validator zeigt Warnungen und Fehler nach Schema.org-Spezifikation.</p>
@@ -487,7 +487,7 @@ document.querySelectorAll('.article-summary, .key-finding, h1')</code></pre>
                 <pre><code>{
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "name": "SEO-Analyse Tool — shift07.ai",
+  "name": "SEO-Analyse Tool - shift07.ai",
   "url": "https://shift07.ai",
   "speakable": {
     "@type": "SpeakableSpecification",
@@ -516,24 +516,24 @@ document.querySelectorAll('.article-summary, .key-finding, h1')</code></pre>
                 <p>Angesichts der eingeschränkten aktuellen Unterstützung empfehle ich folgende Strategie:</p>
 
                 <ol>
-                    <li><strong>News-Publisher:</strong> Sofort implementieren — das ist euer primärer Use Case, und Google unterstützt es aktiv für Google News-akkreditierte Sites.</li>
-                    <li><strong>Blogs und Informationsseiten:</strong> Implementieren als Zukunftsinvestition — es kostet wenig Aufwand und schadet nicht. Verwende cssSelector mit bestehenden semantischen Klassen.</li>
-                    <li><strong>Unternehmenswebsites:</strong> Niedrige Priorität — konzentriere dich zunächst auf <a href="/blog/strukturierte-daten-seo-schema-markup.html">andere strukturierte Daten mit sofortigem Rich-Result-Effekt</a>, wie FAQPage, HowTo oder LocalBusiness.</li>
-                    <li><strong>E-Commerce:</strong> Kein nennenswerter Nutzen aktuell — Product und Review Schema bringen mehr messbaren Traffic.</li>
+                    <li><strong>News-Publisher:</strong> Sofort implementieren - das ist euer primärer Use Case, und Google unterstützt es aktiv für Google News-akkreditierte Sites.</li>
+                    <li><strong>Blogs und Informationsseiten:</strong> Implementieren als Zukunftsinvestition - es kostet wenig Aufwand und schadet nicht. Verwende cssSelector mit bestehenden semantischen Klassen.</li>
+                    <li><strong>Unternehmenswebsites:</strong> Niedrige Priorität - konzentriere dich zunächst auf <a href="/blog/strukturierte-daten-seo-schema-markup.html">andere strukturierte Daten mit sofortigem Rich-Result-Effekt</a>, wie FAQPage, HowTo oder LocalBusiness.</li>
+                    <li><strong>E-Commerce:</strong> Kein nennenswerter Nutzen aktuell - Product und Review Schema bringen mehr messbaren Traffic.</li>
                 </ol>
 
                 <h2>Fazit</h2>
 
-                <p><code>SpeakableSpecification</code> ist eine faszinierende Schema.org-Property mit klarem Zweck: Sie gibt Sprachassistenten Orientierung, welche Textstellen vorgelesen werden sollen. Technisch bietet sie mit <code>cssSelector</code> und <code>xpath</code> zwei Wege, Inhalte zu selektieren — wobei cssSelector für die meisten Anwendungsfälle ausreicht und einfacher zu warten ist.</p>
+                <p><code>SpeakableSpecification</code> ist eine faszinierende Schema.org-Property mit klarem Zweck: Sie gibt Sprachassistenten Orientierung, welche Textstellen vorgelesen werden sollen. Technisch bietet sie mit <code>cssSelector</code> und <code>xpath</code> zwei Wege, Inhalte zu selektieren - wobei cssSelector für die meisten Anwendungsfälle ausreicht und einfacher zu warten ist.</p>
 
-                <p>Die Einschränkung ist real: 2026 profitieren primär Google News-Publisher von dieser Property. Für alle anderen ist die Implementierung ein Zukunftsinvestment — mit dem Nebeneffekt, dass sie dich zwingt, die Kernaussagen deiner Artikel klar zu definieren. Das ist eine Qualitätsdisziplin, die sich immer lohnt.</p>
+                <p>Die Einschränkung ist real: 2026 profitieren primär Google News-Publisher von dieser Property. Für alle anderen ist die Implementierung ein Zukunftsinvestment - mit dem Nebeneffekt, dass sie dich zwingt, die Kernaussagen deiner Artikel klar zu definieren. Das ist eine Qualitätsdisziplin, die sich immer lohnt.</p>
 
                 <p>Validiere deine SpeakableSpecification immer mit dem <a href="/tools/json-ld-structured-data-validator.html">JSON-LD Validator</a> und teste deine CSS-Selektoren in der Browserkonsole, bevor du das Markup live schaltest.</p>
 
                 <!-- CTA -->
                 <div class="mt-12 p-6 bg-blue-900/30 border border-blue-700/50 rounded-xl">
                     <h3 class="text-xl font-bold text-white mb-2">Strukturierte Daten deiner Website prüfen</h3>
-                    <p class="text-slate-300 mb-4">shift07.ai analysiert deine Website auf fehlende Schema.org-Properties und zeigt konkrete Verbesserungen — kostenlos.</p>
+                    <p class="text-slate-300 mb-4">shift07.ai analysiert deine Website auf fehlende Schema.org-Properties und zeigt konkrete Verbesserungen - kostenlos.</p>
                     <a href="https://app.shift07.ai" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors">Kostenlose SEO-Analyse starten →</a>
                 </div>
             </div>
@@ -569,7 +569,8 @@ document.querySelectorAll('.article-summary, .key-finding, h1')</code></pre>
                 <h4 class="font-semibold text-white mb-3">Rechtliches</h4>
                 <ul class="space-y-2 text-sm text-slate-400">
                     <li><a href="/impressum.html" class="hover:text-white transition-colors">Impressum</a></li>
-                    <li><a href="/datenschutz.html" class="hover:text-white transition-colors">Datenschutz</a></li>
+                    <li><a href="/datenschutz.html" class="hover:text-white transition-colors">Datenschutz</a>
+                    <a href="/ueber-uns.html" class="text-slate-400 hover:text-white transition-colors text-sm">Über uns</a></li>
                 </ul>
             </div>
         </div>

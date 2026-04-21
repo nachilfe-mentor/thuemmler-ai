@@ -120,6 +120,7 @@
                     <a href="/" class="text-gray-300 hover:text-white transition-colors">SEO-Tool</a>
                     <a href="/blog/" class="text-white font-medium border-b-2 border-blue-500 pb-0.5">Blog</a>
                     <a href="/tools/" class="text-gray-300 hover:text-white transition-colors">Tools</a>
+                    <a href="/ueber-uns.html" class="text-white hover:text-blue-300 transition-colors">Über uns</a>
                     <a href="/app/#/login" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-5 py-2 rounded-lg font-medium transition-all">Anmelden</a>
                 </div>
                 <button id="mobile-menu-btn" class="md:hidden text-gray-300 hover:text-white">
@@ -132,6 +133,7 @@
                 <a href="/" class="block py-2 text-gray-300 hover:text-white">SEO-Tool</a>
                 <a href="/blog/" class="block py-2 text-white font-medium">Blog</a>
                 <a href="/tools/" class="block py-2 text-gray-300 hover:text-white">Tools</a>
+                <a href="/ueber-uns.html" class="block py-2 text-white hover:text-blue-300">Über uns</a>
                 <a href="/app/#/login" class="block py-2 text-blue-400 hover:text-blue-300">Anmelden</a>
             </div>
         </div>
@@ -180,7 +182,7 @@
 
                         <img src="/blog/images/hreflang-tags-mehrsprachige-seo.png" alt="Hreflang-Tags für mehrsprachige SEO optimieren" class="w-full rounded-2xl mb-8 border border-white/10">
 
-                        <p>Du betreibst eine Website in mehreren Sprachen oder für verschiedene Länder — und fragst dich, warum Google manchmal die falsche Sprachversion in den Suchergebnissen anzeigt? Der Grund ist meistens ein fehlender oder fehlerhafter <strong>Hreflang-Tag</strong>. Dieses kleine Stück HTML-Code entscheidet darüber, welche Version deiner Website Nutzer aus welchem Land sehen.</p>
+                        <p>Du betreibst eine Website in mehreren Sprachen oder für verschiedene Länder - und fragst dich, warum Google manchmal die falsche Sprachversion in den Suchergebnissen anzeigt? Der Grund ist meistens ein fehlender oder fehlerhafter <strong>Hreflang-Tag</strong>. Dieses kleine Stück HTML-Code entscheidet darüber, welche Version deiner Website Nutzer aus welchem Land sehen.</p>
 
                         <p>In diesem Artikel erklärst du dir, wie Hreflang-Tags funktionieren, wie du sie korrekt implementierst und welche Fehler du unbedingt vermeiden musst. Dazu zeige ich dir die häufigsten Fallen, die selbst erfahrene SEOs immer wieder treffen.</p>
 
@@ -188,9 +190,9 @@
 
                         <p>Hreflang ist ein HTML-Attribut, das Google (und Yandex) mitteilt, für welche Sprache und welche Region eine bestimmte Seite erstellt wurde. Es wurde 2011 von Google eingeführt, um das Problem der <strong>mehrsprachigen und länderspezifischen Inhalte</strong> zu lösen.</p>
 
-                        <p>Ohne Hreflang hat Google keine verlässliche Möglichkeit zu wissen, welche Version einer Seite es einem Nutzer aus Deutschland, Österreich oder der Schweiz zeigen soll — auch wenn alle drei dieselbe Sprache sprechen. Mit Hreflang sagst du Google exakt: "Diese Seite ist auf Deutsch für Nutzer in Deutschland."</p>
+                        <p>Ohne Hreflang hat Google keine verlässliche Möglichkeit zu wissen, welche Version einer Seite es einem Nutzer aus Deutschland, Österreich oder der Schweiz zeigen soll - auch wenn alle drei dieselbe Sprache sprechen. Mit Hreflang sagst du Google exakt: "Diese Seite ist auf Deutsch für Nutzer in Deutschland."</p>
 
-                        <blockquote>Hreflang ist kein Ranking-Faktor — es ist ein Signal für die <strong>Sprach- und Regionszuweisung</strong>. Es verhindert, dass die falsche Version deiner Seite in den Suchergebnissen erscheint.</blockquote>
+                        <blockquote>Hreflang ist kein Ranking-Faktor - es ist ein Signal für die <strong>Sprach- und Regionszuweisung</strong>. Es verhindert, dass die falsche Version deiner Seite in den Suchergebnissen erscheint.</blockquote>
 
                         <p>Wichtig: Hreflang wird von Google und Yandex unterstützt, aber <strong>nicht von Bing</strong>. Bing nutzt stattdessen das <code>content-language</code> HTTP-Header-Attribut.</p>
 
@@ -246,7 +248,7 @@
 &lt;link rel="alternate" hreflang="en" href="https://example.com/product/"&gt;
 &lt;link rel="alternate" hreflang="x-default" href="https://example.com/product/"&gt;</code></pre>
 
-                        <p>Jede Seite verweist auf <strong>alle ihre Sprachvarianten</strong> — inklusive sich selbst. Das ist die Grundregel der Hreflang-Implementierung.</p>
+                        <p>Jede Seite verweist auf <strong>alle ihre Sprachvarianten</strong> - inklusive sich selbst. Das ist die Grundregel der Hreflang-Implementierung.</p>
 
                         <h3>Sprachcodes und Ländercodes</h3>
 
@@ -349,13 +351,13 @@
 
                         <p>Die wichtigste Regel bei Hreflang ist die <strong>Gegenseitigkeit</strong> (Reciprocity): Wenn Seite A auf Seite B verweist, muss Seite B auch auf Seite A zurückverweisen.</p>
 
-                        <p>Konkret: Wenn deine deutsche Seite eine Hreflang-Referenz auf die englische Version hat, muss die englische Seite genau dieselbe Referenz zurück auf die deutsche Seite haben — und außerdem auf sich selbst.</p>
+                        <p>Konkret: Wenn deine deutsche Seite eine Hreflang-Referenz auf die englische Version hat, muss die englische Seite genau dieselbe Referenz zurück auf die deutsche Seite haben - und außerdem auf sich selbst.</p>
 
                         <pre><code>&lt;!-- Deutsche Seite: /de/produkt/ --&gt;
 &lt;link rel="alternate" hreflang="de" href="https://example.de/de/produkt/"&gt;
 &lt;link rel="alternate" hreflang="en" href="https://example.de/en/product/"&gt;
 
-&lt;!-- Englische Seite: /en/product/ — MUSS DIESELBEN TAGS HABEN! --&gt;
+&lt;!-- Englische Seite: /en/product/ - MUSS DIESELBEN TAGS HABEN! --&gt;
 &lt;link rel="alternate" hreflang="de" href="https://example.de/de/produkt/"&gt;
 &lt;link rel="alternate" hreflang="en" href="https://example.de/en/product/"&gt;</code></pre>
 
@@ -381,14 +383,14 @@
                         <p>Wenn zwei verschiedene Seiten dasselbe Hreflang-Paar haben (z.B. beide claimen <code>hreflang="de-DE"</code>), entsteht ein Konflikt. Google muss dann raten, welche die richtige ist.</p>
 
                         <h3>6. Canonical und Hreflang im Widerspruch</h3>
-                        <p>Wenn eine Seite einen <a href="/blog/canonical-tags-seo.html">Canonical-Tag</a> hat, der auf eine andere URL zeigt, sollte das Hreflang-Tag auf die kanonische URL zeigen — nicht auf die aktuelle. Widersprüche führen zur Verwirrung des Crawlers.</p>
+                        <p>Wenn eine Seite einen <a href="/blog/canonical-tags-seo.html">Canonical-Tag</a> hat, der auf eine andere URL zeigt, sollte das Hreflang-Tag auf die kanonische URL zeigen - nicht auf die aktuelle. Widersprüche führen zur Verwirrung des Crawlers.</p>
 
                         <h3>7. Noindex-Seiten mit Hreflang</h3>
                         <p>Eine Seite, die per <a href="/blog/robots-txt-konfigurieren.html">robots.txt oder noindex</a> blockiert ist, sollte keine Hreflang-Referenzen verwenden. Google kann diese Seiten nicht crawlen und die Tags werden ignoriert.</p>
 
                         <h2>Hreflang testen und debuggen</h2>
 
-                        <p>Bevor du Hreflang live schaltest, solltest du deine Implementierung auf Fehler prüfen. Nutze dazu unseren kostenlosen <a href="/tools/hreflang-tag-validator.html">Hreflang-Tag-Validator</a> — er prüft Syntax, Sprachcodes und die Gegenseitigkeitsregel in Sekundenschnelle.</p>
+                        <p>Bevor du Hreflang live schaltest, solltest du deine Implementierung auf Fehler prüfen. Nutze dazu unseren kostenlosen <a href="/tools/hreflang-tag-validator.html">Hreflang-Tag-Validator</a> - er prüft Syntax, Sprachcodes und die Gegenseitigkeitsregel in Sekundenschnelle.</p>
 
                         <p>Zusätzlich hilft die <strong>Google Search Console</strong>: Unter "Internationale Ausrichtung" → "Sprache" siehst du alle erkannten Hreflang-Fehler direkt in deiner Property.</p>
 
@@ -406,9 +408,9 @@
 
                         <h2>Hreflang und die Indexierung</h2>
 
-                        <p>Hreflang beeinflusst, wie Google Seiten <strong>zuordnet</strong> — nicht ob sie indexiert werden. Das <a href="/blog/indexierung-pruefen-google.html">Indexierungsverhalten</a> wird durch andere Faktoren gesteuert: robots.txt, noindex-Tags und die Qualität des Inhalts.</p>
+                        <p>Hreflang beeinflusst, wie Google Seiten <strong>zuordnet</strong> - nicht ob sie indexiert werden. Das <a href="/blog/indexierung-pruefen-google.html">Indexierungsverhalten</a> wird durch andere Faktoren gesteuert: robots.txt, noindex-Tags und die Qualität des Inhalts.</p>
 
-                        <p>Google kann trotz korrekter Hreflang-Tags entscheiden, nicht alle Sprachversionen zu indexieren — z.B. wenn der Inhalt zu ähnlich ist und als Duplicate Content gewertet wird. In diesem Fall hilft ein starker Canonical-Tag kombiniert mit echten Inhaltsunterschieden zwischen den Versionen.</p>
+                        <p>Google kann trotz korrekter Hreflang-Tags entscheiden, nicht alle Sprachversionen zu indexieren - z.B. wenn der Inhalt zu ähnlich ist und als Duplicate Content gewertet wird. In diesem Fall hilft ein starker Canonical-Tag kombiniert mit echten Inhaltsunterschieden zwischen den Versionen.</p>
 
                         <h2>Praktisches Beispiel: Deutsch-österreichische Website</h2>
 
@@ -428,7 +430,7 @@
 
                         <h2>Fazit: Hreflang richtig einsetzen lohnt sich</h2>
 
-                        <p>Hreflang-Tags sind komplex und fehleranfällig — aber für mehrsprachige Websites sind sie unverzichtbar. Ein korrekt implementierter Hreflang verhindert, dass Google die falsche Sprachversion rankt, reduziert Duplicate-Content-Probleme und verbessert die User Experience für internationale Besucher.</p>
+                        <p>Hreflang-Tags sind komplex und fehleranfällig - aber für mehrsprachige Websites sind sie unverzichtbar. Ein korrekt implementierter Hreflang verhindert, dass Google die falsche Sprachversion rankt, reduziert Duplicate-Content-Probleme und verbessert die User Experience für internationale Besucher.</p>
 
                         <p>Die wichtigsten Punkte zusammengefasst:</p>
 
@@ -441,7 +443,7 @@
                             <li>Keine Widersprüche mit Canonical-Tags erzeugen</li>
                         </ul>
 
-                        <p>Wenn du eine mehrsprachige Website betreibst und noch keine Hreflang-Tags gesetzt hast, ist das die erste Maßnahme, die du angehen solltest. Die Implementierung dauert — je nach CMS — weniger als eine Stunde und hat direkte Auswirkungen auf die Sichtbarkeit in den jeweiligen Ländern.</p>
+                        <p>Wenn du eine mehrsprachige Website betreibst und noch keine Hreflang-Tags gesetzt hast, ist das die erste Maßnahme, die du angehen solltest. Die Implementierung dauert - je nach CMS - weniger als eine Stunde und hat direkte Auswirkungen auf die Sichtbarkeit in den jeweiligen Ländern.</p>
 
                         <p>Mehr über technische SEO-Grundlagen findest du in unserem Artikel zu <a href="/blog/meta-tags-richtig-einsetzen.html">Meta-Tags richtig einsetzen</a> sowie in der umfassenden Anleitung zu <a href="/blog/strukturierte-daten-seo-schema-markup.html">Strukturierten Daten und Schema Markup</a>.</p>
 
@@ -525,6 +527,7 @@
                     <a href="/impressum.html" class="hover:text-white transition-colors">Impressum</a>
                     <a href="/datenschutz.html" class="hover:text-white transition-colors">Datenschutz</a>
                     <a href="/agb.html" class="hover:text-white transition-colors">AGB</a>
+                    <a href="/ueber-uns.html" class="hover:text-white transition-colors">Über uns</a>
                 </div>
                 <p class="text-sm text-gray-500">&copy; 2026 Thümmler AI GmbH</p>
             </div>

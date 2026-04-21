@@ -104,7 +104,7 @@
                 SpeakableSpecification<br><span class="text-violet-400">Generator</span>
             </h1>
             <p class="text-xl text-slate-300 max-w-2xl mx-auto mb-4">
-                Generiere <code class="bg-slate-800 px-2 py-0.5 rounded text-violet-300">SpeakableSpecification</code> JSON-LD für Sprachassistenten. Wähle zwischen cssSelector und XPath — der Code ist sofort einsatzbereit.
+                Generiere <code class="bg-slate-800 px-2 py-0.5 rounded text-violet-300">SpeakableSpecification</code> JSON-LD für Sprachassistenten. Wähle zwischen cssSelector und XPath - der Code ist sofort einsatzbereit.
             </p>
             <img src="/tools/images/speakable-schema-generator.png" alt="SpeakableSpecification Generator JSON-LD Sprachassistenten kostenlos" class="w-full max-w-2xl mx-auto rounded-xl border border-slate-700 mt-6 mb-4 shadow-xl">
         </div>
@@ -316,7 +316,7 @@
                     <code class="bg-slate-800 px-2 py-0.5 rounded text-violet-300">SpeakableSpecification</code> ist ein Schema.org-Typ, der definiert, welche Teile einer Webseite für die Wiedergabe durch Sprachassistenten geeignet sind. Er wird über die <code class="bg-slate-800 px-2 py-0.5 rounded text-violet-300">speakable</code> Property eines <code class="bg-slate-800 px-2 py-0.5 rounded text-violet-300">Article</code>- oder <code class="bg-slate-800 px-2 py-0.5 rounded text-violet-300">WebPage</code>-Schemas angegeben.
                 </p>
                 <p class="text-slate-300 leading-relaxed mb-4">
-                    Google kann diese Markierungen nutzen, um beim Google Assistant prägnante, vorlese-würdige Antworten zu liefern. Die Technologie wurde primär für Nachrichtenverlage entwickelt. Mehr zur Vertiefung: <a href="/blog/speakablespecification-schema-markup-vertieft.html" class="text-violet-400 hover:text-violet-300">SpeakableSpecification vertieft — cssSelector, XPath und Sprachassistenten</a> und <a href="/blog/speakable-property-schema-markup.html" class="text-violet-400 hover:text-violet-300">speakable Property Grundlagen</a>.
+                    Google kann diese Markierungen nutzen, um beim Google Assistant prägnante, vorlese-würdige Antworten zu liefern. Die Technologie wurde primär für Nachrichtenverlage entwickelt. Mehr zur Vertiefung: <a href="/blog/speakablespecification-schema-markup-vertieft.html" class="text-violet-400 hover:text-violet-300">SpeakableSpecification vertieft - cssSelector, XPath und Sprachassistenten</a> und <a href="/blog/speakable-property-schema-markup.html" class="text-violet-400 hover:text-violet-300">speakable Property Grundlagen</a>.
                 </p>
 
                 <h2 class="text-2xl font-bold text-white mb-4 mt-8">cssSelector vs. XPath</h2>
@@ -379,7 +379,8 @@
                 <h4 class="font-semibold text-white mb-3">Rechtliches</h4>
                 <ul class="space-y-2 text-sm text-slate-400">
                     <li><a href="/impressum.html" class="hover:text-white transition-colors">Impressum</a></li>
-                    <li><a href="/datenschutz.html" class="hover:text-white transition-colors">Datenschutz</a></li>
+                    <li><a href="/datenschutz.html" class="hover:text-white transition-colors">Datenschutz</a>
+                    <a href="/ueber-uns.html" class="text-slate-400 hover:text-white transition-colors text-sm">Über uns</a></li>
                 </ul>
             </div>
         </div>
@@ -519,15 +520,15 @@
             const statusContent = document.getElementById('statusContent');
             const msgs = [];
 
-            if (!hasSpeakable) msgs.push('<span class="tag-warn">⚠ Keine Selektoren angegeben — speakable Property fehlt</span>');
+            if (!hasSpeakable) msgs.push('<span class="tag-warn">⚠ Keine Selektoren angegeben - speakable Property fehlt</span>');
             else msgs.push('<span class="tag-valid">✓ SpeakableSpecification enthalten</span>');
 
-            if (schemaType === 'NewsArticle') msgs.push('<span class="tag-valid">✓ NewsArticle — optimaler Typ für speakable</span>');
-            if (!document.getElementById('pageUrl').value.trim()) msgs.push('<span class="tag-warn">⚠ URL fehlt — mainEntityOfPage unvollständig</span>');
+            if (schemaType === 'NewsArticle') msgs.push('<span class="tag-valid">✓ NewsArticle - optimaler Typ für speakable</span>');
+            if (!document.getElementById('pageUrl').value.trim()) msgs.push('<span class="tag-warn">⚠ URL fehlt - mainEntityOfPage unvollständig</span>');
 
             const css = getCssSelectors();
             const xpath = getXpathSelectors();
-            if (css.length + xpath.length > 5) msgs.push('<span class="tag-warn">⚠ Viele Selektoren — Google empfiehlt max. 2–3</span>');
+            if (css.length + xpath.length > 5) msgs.push('<span class="tag-warn">⚠ Viele Selektoren - Google empfiehlt max. 2–3</span>');
 
             statusContent.innerHTML = msgs.join('<br>');
             statusBox.classList.toggle('hidden', msgs.length === 0);

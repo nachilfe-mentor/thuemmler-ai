@@ -117,6 +117,7 @@
                     <a href="/" class="text-gray-300 hover:text-white transition-colors">SEO-Tool</a>
                     <a href="/blog/" class="text-white font-medium border-b-2 border-blue-500 pb-0.5">Blog</a>
                     <a href="/tools/" class="text-gray-300 hover:text-white transition-colors">Tools</a>
+                    <a href="/ueber-uns.html" class="text-white hover:text-blue-300 transition-colors">Über uns</a>
                     <a href="/app/#/login" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-5 py-2 rounded-lg font-medium transition-all">Anmelden</a>
                 </div>
                 <button id="mobile-menu-btn" class="md:hidden text-gray-300 hover:text-white">
@@ -129,6 +130,7 @@
                 <a href="/" class="block py-2 text-gray-300 hover:text-white">SEO-Tool</a>
                 <a href="/blog/" class="block py-2 text-white font-medium">Blog</a>
                 <a href="/tools/" class="block py-2 text-gray-300 hover:text-white">Tools</a>
+                <a href="/ueber-uns.html" class="block py-2 text-white hover:text-blue-300">Über uns</a>
                 <a href="/app/#/login" class="block py-2 text-blue-400 hover:text-blue-300">Anmelden</a>
             </div>
         </div>
@@ -177,7 +179,7 @@
 
                         <img src="/blog/images/javascript-seo-spa-indexierung.png" alt="JavaScript SEO - Wie Google SPA-Websites crawlt und indexiert" class="w-full rounded-2xl mb-8 border border-white/10">
 
-                        <p>React, Vue, Angular — moderne JavaScript-Frameworks haben die Web-Entwicklung revolutioniert. Single Page Applications (SPAs) sind reaktionsschnell, bieten native App-Feeling und begeistern Nutzer. Doch für Googles Crawler stellen sie eine besondere Herausforderung dar: Was passiert, wenn der Inhalt einer Seite erst nach JavaScript-Ausführung sichtbar wird?</p>
+                        <p>React, Vue, Angular - moderne JavaScript-Frameworks haben die Web-Entwicklung revolutioniert. Single Page Applications (SPAs) sind reaktionsschnell, bieten native App-Feeling und begeistern Nutzer. Doch für Googles Crawler stellen sie eine besondere Herausforderung dar: Was passiert, wenn der Inhalt einer Seite erst nach JavaScript-Ausführung sichtbar wird?</p>
 
                         <p>In diesem Artikel erkläre ich, wie Googlebot JavaScript-basierte Websites crawlt, was <strong>Two-Wave Indexing</strong> bedeutet und welche Maßnahmen du ergreifen solltest, damit deine SPA korrekt indexiert wird.</p>
 
@@ -196,21 +198,21 @@
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
 
-                        <p>Das ist das fundamentale Problem: Der rohe HTML-Quelltext enthält <strong>keinen Inhalt</strong>. Alles — Produkttexte, Preise, Navigation, Meta-Tags — wird erst durch JavaScript erzeugt.</p>
+                        <p>Das ist das fundamentale Problem: Der rohe HTML-Quelltext enthält <strong>keinen Inhalt</strong>. Alles - Produkttexte, Preise, Navigation, Meta-Tags - wird erst durch JavaScript erzeugt.</p>
 
                         <p>Nutze unseren <a href="/tools/javascript-seo-checker.html">JavaScript-SEO-Checker</a>, um zu prüfen ob deine Website von diesem Problem betroffen ist.</p>
 
                         <h2>Wie Googlebot JavaScript verarbeitet</h2>
 
-                        <p>Googlebot kann JavaScript ausführen — aber anders als dein Browser. Google verwendet ein sogenanntes <strong>Headless-Chrome-System</strong>, das JavaScript rendert, aber mit deutlichen Einschränkungen:</p>
+                        <p>Googlebot kann JavaScript ausführen - aber anders als dein Browser. Google verwendet ein sogenanntes <strong>Headless-Chrome-System</strong>, das JavaScript rendert, aber mit deutlichen Einschränkungen:</p>
 
                         <h3>Two-Wave Indexing: Die zwei Phasen</h3>
 
                         <p>Google indexiert JavaScript-Seiten in zwei Phasen:</p>
 
                         <ol>
-                            <li><strong>Wave 1 — HTML-Crawl:</strong> Googlebot lädt die rohe HTML-Datei und extrahiert alle direkt verfügbaren Inhalte. URLs werden für das Rendering in eine Warteschlange eingereiht.</li>
-                            <li><strong>Wave 2 — JavaScript-Rendering:</strong> Seiten aus der Warteschlange werden mit Headless Chrome gerendert. Dieser Schritt kann Stunden bis Tage später stattfinden.</li>
+                            <li><strong>Wave 1 - HTML-Crawl:</strong> Googlebot lädt die rohe HTML-Datei und extrahiert alle direkt verfügbaren Inhalte. URLs werden für das Rendering in eine Warteschlange eingereiht.</li>
+                            <li><strong>Wave 2 - JavaScript-Rendering:</strong> Seiten aus der Warteschlange werden mit Headless Chrome gerendert. Dieser Schritt kann Stunden bis Tage später stattfinden.</li>
                         </ol>
 
                         <p>Das bedeutet: Inhalte, die nur per JavaScript vorhanden sind, können <strong>Tage verzögert indexiert</strong> werden. Bei einem neuen Blog-Artikel, der sofort sichtbar sein soll, ist das problematisch.</p>
@@ -222,8 +224,8 @@
                         <ul>
                             <li><strong>Ältere Browser-API:</strong> Der Renderer basiert auf einer älteren Chrome-Version und unterstützt nicht alle modernen APIs</li>
                             <li><strong>Keine externe Authentifizierung:</strong> Inhalte hinter Login oder Paywall werden nicht gecrawlt</li>
-                            <li><strong>Zeitlimit:</strong> Das Rendering stoppt nach einer bestimmten Zeit — tiefe JavaScript-Bäume werden möglicherweise nicht vollständig gerendert</li>
-                            <li><strong>Crawl-Budget:</strong> JS-Rendering verbraucht mehr Ressourcen — bei großen Websites werden nicht alle Seiten gerendert</li>
+                            <li><strong>Zeitlimit:</strong> Das Rendering stoppt nach einer bestimmten Zeit - tiefe JavaScript-Bäume werden möglicherweise nicht vollständig gerendert</li>
+                            <li><strong>Crawl-Budget:</strong> JS-Rendering verbraucht mehr Ressourcen - bei großen Websites werden nicht alle Seiten gerendert</li>
                             <li><strong>Lazy Loading:</strong> Inhalte die erst beim Scrollen sichtbar werden, könnten nicht gecrawlt werden</li>
                         </ul>
 
@@ -232,10 +234,10 @@
                         <p>Es gibt mehrere Signale, dass deine SPA SEO-Probleme hat:</p>
 
                         <h3>1. Quelltext vs. gerenderte Seite vergleichen</h3>
-                        <p>Öffne deine Website → Rechtsklick → "Seitenquelltext anzeigen". Wenn du dort keine Texte, Links oder Meta-Tags siehst, die im Browser sichtbar sind — hast du ein JavaScript-SEO-Problem.</p>
+                        <p>Öffne deine Website → Rechtsklick → "Seitenquelltext anzeigen". Wenn du dort keine Texte, Links oder Meta-Tags siehst, die im Browser sichtbar sind - hast du ein JavaScript-SEO-Problem.</p>
 
                         <h3>2. Google Search Console</h3>
-                        <p>Unter "URL-Prüfung" kannst du sehen, wie Google deine Seite rendert. Klicke auf "Gerenderte Seite testen" — wenn das Rendering deutlich weniger Inhalt zeigt als dein Browser, liegt ein Problem vor.</p>
+                        <p>Unter "URL-Prüfung" kannst du sehen, wie Google deine Seite rendert. Klicke auf "Gerenderte Seite testen" - wenn das Rendering deutlich weniger Inhalt zeigt als dein Browser, liegt ein Problem vor.</p>
 
                         <h3>3. Indexierungsprobleme</h3>
                         <p>Wenn neue Inhalte nicht oder sehr spät in Google erscheinen, obwohl du sie in der Sitemap eingetragen hast, könnte Two-Wave Indexing die Ursache sein. Prüfe die <a href="/blog/indexierung-pruefen-google.html">Indexierung deiner Seiten</a> regelmäßig.</p>
@@ -247,14 +249,14 @@
 
                         <h3>1. Server-Side Rendering (SSR)</h3>
 
-                        <p>Beim Server-Side Rendering wird das JavaScript auf dem Server ausgeführt und fertig gerendertes HTML an den Browser (und Googlebot) ausgeliefert. Googlebot sieht sofort alle Inhalte — kein Two-Wave Indexing.</p>
+                        <p>Beim Server-Side Rendering wird das JavaScript auf dem Server ausgeführt und fertig gerendertes HTML an den Browser (und Googlebot) ausgeliefert. Googlebot sieht sofort alle Inhalte - kein Two-Wave Indexing.</p>
 
                         <p><strong>Frameworks für SSR:</strong></p>
                         <ul>
-                            <li><strong>Next.js</strong> (React) — mit <code>getServerSideProps</code> oder <code>getStaticProps</code></li>
-                            <li><strong>Nuxt.js</strong> (Vue) — universelles Rendering per Standard</li>
-                            <li><strong>SvelteKit</strong> (Svelte) — SSR per Standard</li>
-                            <li><strong>Angular Universal</strong> (Angular) — SSR-Erweiterung</li>
+                            <li><strong>Next.js</strong> (React) - mit <code>getServerSideProps</code> oder <code>getStaticProps</code></li>
+                            <li><strong>Nuxt.js</strong> (Vue) - universelles Rendering per Standard</li>
+                            <li><strong>SvelteKit</strong> (Svelte) - SSR per Standard</li>
+                            <li><strong>Angular Universal</strong> (Angular) - SSR-Erweiterung</li>
                         </ul>
 
                         <pre><code>// Next.js Beispiel: SSR mit getServerSideProps
@@ -281,7 +283,7 @@ export default function Produkte({ produkte }) {
 
                         <h3>2. Static Site Generation (SSG)</h3>
 
-                        <p>Bei Static Generation werden Seiten zum Build-Zeitpunkt als statisches HTML erzeugt. Das Ergebnis sind reine HTML-Dateien, die direkt ausgeliefert werden — kein Server-Rendering zur Laufzeit.</p>
+                        <p>Bei Static Generation werden Seiten zum Build-Zeitpunkt als statisches HTML erzeugt. Das Ergebnis sind reine HTML-Dateien, die direkt ausgeliefert werden - kein Server-Rendering zur Laufzeit.</p>
 
                         <pre><code>// Next.js Beispiel: SSG mit getStaticProps
 export async function getStaticProps() {
@@ -401,7 +403,7 @@ export default function Produkt({ produkt }) {
                             <li>Meta-Tags serverseitig rendern (react-helmet, Next.js Head)</li>
                             <li>JSON-LD Structured Data im serverseitig gerenderten HTML einbinden</li>
                             <li><a href="/blog/canonical-tags-seo.html">Canonical-Tags</a> korrekt setzen (speziell bei URL-Parametern in SPAs)</li>
-                            <li>Lazy Loading für nicht-kritische Bilder und Inhalte — aber nicht für SEO-relevante Hauptinhalte</li>
+                            <li>Lazy Loading für nicht-kritische Bilder und Inhalte - aber nicht für SEO-relevante Hauptinhalte</li>
                             <li>Sitemap aktuell halten mit allen URLs</li>
                             <li>Google Search Console URL-Prüfung: "Live-Test" für kritische Seiten durchführen</li>
                             <li>Crawl-Budget beachten: unnötige URLs mit robots.txt blockieren</li>
@@ -409,9 +411,9 @@ export default function Produkt({ produkt }) {
 
                         <h2>Fazit: JavaScript und SEO müssen kein Widerspruch sein</h2>
 
-                        <p>JavaScript-Frameworks sind leistungsfähig und ermöglichen hervorragende User Experiences. Mit der richtigen Strategie — Server-Side Rendering oder Static Site Generation — können SPA-Websites genauso gut ranken wie traditionelle HTML-Seiten.</p>
+                        <p>JavaScript-Frameworks sind leistungsfähig und ermöglichen hervorragende User Experiences. Mit der richtigen Strategie - Server-Side Rendering oder Static Site Generation - können SPA-Websites genauso gut ranken wie traditionelle HTML-Seiten.</p>
 
-                        <p>Der entscheidende Grundsatz: <strong>Alle kritischen SEO-Inhalte müssen im initialen HTML vorhanden sein</strong> — nicht erst nach JavaScript-Ausführung. Dazu gehören Title, Meta-Description, H1, Body-Text, strukturierte Daten und interne Links.</p>
+                        <p>Der entscheidende Grundsatz: <strong>Alle kritischen SEO-Inhalte müssen im initialen HTML vorhanden sein</strong> - nicht erst nach JavaScript-Ausführung. Dazu gehören Title, Meta-Description, H1, Body-Text, strukturierte Daten und interne Links.</p>
 
                         <p>Prüfe jetzt mit unserem <a href="/tools/javascript-seo-checker.html">JavaScript-SEO-Checker</a>, ob deine Website diesen Standard erfüllt. Füge den Quelltext ein und sieh sofort, welche SEO-Elemente fehlen.</p>
 
@@ -497,6 +499,7 @@ export default function Produkt({ produkt }) {
                     <a href="/impressum.html" class="hover:text-white transition-colors">Impressum</a>
                     <a href="/datenschutz.html" class="hover:text-white transition-colors">Datenschutz</a>
                     <a href="/agb.html" class="hover:text-white transition-colors">AGB</a>
+                    <a href="/ueber-uns.html" class="hover:text-white transition-colors">Über uns</a>
                 </div>
                 <p class="text-sm text-gray-500">&copy; 2026 Thümmler AI GmbH</p>
             </div>

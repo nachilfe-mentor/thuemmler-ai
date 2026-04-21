@@ -14,14 +14,14 @@
     <!-- Google AdSense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8475857002943858" crossorigin="anonymous"></script>
     <title>VideoObject Schema Generator – JSON-LD für Videos kostenlos erstellen | Shift07</title>
-    <meta name="description" content="VideoObject Schema Generator: Erstelle kostenlos JSON-LD Structured Data für Videos. Rich Results in Google mit Video-Thumbnails und Vorschaudaten — in Sekunden fertig.">
+    <meta name="description" content="VideoObject Schema Generator: Erstelle kostenlos JSON-LD Structured Data für Videos. Rich Results in Google mit Video-Thumbnails und Vorschaudaten - in Sekunden fertig.">
     <meta name="keywords" content="videoobject schema generator, video json-ld generator, video structured data, video rich snippets, schema markup video, videoobject markup">
     <meta name="author" content="Thümmler AI GmbH">
     <link rel="icon" type="image/png" href="/logo.png">
     <link rel="canonical" href="https://shift07.ai/tools/videoobject-schema-generator.html">
     <!-- Open Graph -->
     <meta property="og:title" content="VideoObject Schema Generator – JSON-LD für Videos kostenlos erstellen">
-    <meta property="og:description" content="Erstelle kostenlos JSON-LD Structured Data für Videos. Video Rich Results in Google aktivieren — einfach Felder ausfüllen, JSON-LD kopieren.">
+    <meta property="og:description" content="Erstelle kostenlos JSON-LD Structured Data für Videos. Video Rich Results in Google aktivieren - einfach Felder ausfüllen, JSON-LD kopieren.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://shift07.ai/tools/videoobject-schema-generator.html">
     <meta property="og:image" content="https://shift07.ai/tools/images/videoobject-schema-generator.png">
@@ -105,6 +105,7 @@
                     <a href="/" class="text-gray-300 hover:text-white transition-colors">SEO-Tool</a>
                     <a href="/blog/" class="text-gray-300 hover:text-white transition-colors">Blog</a>
                     <a href="/tools/" class="text-white font-medium border-b-2 border-blue-500 pb-0.5">Tools</a>
+                    <a href="/ueber-uns.html" class="text-white hover:text-blue-300 transition-colors">Über uns</a>
                     <a href="/app/#/login" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-5 py-2 rounded-lg font-medium transition-all">Anmelden</a>
                 </div>
                 <button id="mobile-menu-btn" class="md:hidden text-gray-300 hover:text-white">
@@ -117,6 +118,7 @@
                 <a href="/" class="block py-2 text-gray-300 hover:text-white">SEO-Tool</a>
                 <a href="/blog/" class="block py-2 text-gray-300 hover:text-white">Blog</a>
                 <a href="/tools/" class="block py-2 text-white font-medium">Tools</a>
+                <a href="/ueber-uns.html" class="block py-2 text-white hover:text-blue-300">Über uns</a>
                 <a href="/app/#/login" class="block py-2 text-blue-400 hover:text-blue-300">Anmelden</a>
             </div>
         </div>
@@ -130,7 +132,7 @@
                 Structured Data Tool
             </div>
             <h1 class="text-3xl md:text-5xl font-extrabold text-white mb-5 leading-tight">VideoObject Schema Generator</h1>
-            <p class="text-gray-400 text-lg max-w-2xl mx-auto">Erstelle JSON-LD Structured Data für Videos — damit Google dein Video als Rich Result mit Thumbnail, Titel und Vorschau anzeigt.</p>
+            <p class="text-gray-400 text-lg max-w-2xl mx-auto">Erstelle JSON-LD Structured Data für Videos - damit Google dein Video als Rich Result mit Thumbnail, Titel und Vorschau anzeigt.</p>
         </div>
     </section>
 
@@ -149,7 +151,7 @@
                     <div class="space-y-4">
                         <div>
                             <label class="label-text">Video-Titel <span class="badge-req">Pflicht</span></label>
-                            <input id="name" type="text" class="input-field" placeholder="z.B. SEO für Anfänger — vollständige Anleitung 2026" oninput="generate()">
+                            <input id="name" type="text" class="input-field" placeholder="z.B. SEO für Anfänger - vollständige Anleitung 2026" oninput="generate()">
                         </div>
                         <div>
                             <label class="label-text">Beschreibung <span class="badge-req">Pflicht</span></label>
@@ -228,7 +230,7 @@
                         <div>
                             <label class="label-text">Video-Sprache <span class="badge-opt">Optional</span></label>
                             <select id="inLanguage" class="input-field" onchange="generate()">
-                                <option value="">— Sprache wählen —</option>
+                                <option value="">- Sprache wählen -</option>
                                 <option value="de">Deutsch (de)</option>
                                 <option value="en">Englisch (en)</option>
                                 <option value="fr">Französisch (fr)</option>
@@ -242,7 +244,7 @@
                         <div>
                             <label class="label-text">Ist Live-Stream? <span class="badge-opt">Optional</span></label>
                             <select id="isLive" class="input-field" onchange="generate()">
-                                <option value="">— Wählen —</option>
+                                <option value="">- Wählen -</option>
                                 <option value="true">Ja (Live-Stream)</option>
                                 <option value="false">Nein (aufgezeichnet)</option>
                             </select>
@@ -268,7 +270,7 @@
                             <span id="copy-label">Kopieren</span>
                         </button>
                     </div>
-                    <pre id="output">// Fülle das Formular aus — JSON-LD wird live generiert.</pre>
+                    <pre id="output">// Fülle das Formular aus - JSON-LD wird live generiert.</pre>
                 </div>
 
                 <!-- Einbinden-Anleitung -->
@@ -316,7 +318,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
                 <div class="bg-slate-800/50 border border-white/10 rounded-xl p-6">
                     <h3 class="text-lg font-bold text-white mb-3">Was ist VideoObject?</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed">VideoObject ist ein Schema.org-Typ, der Google detaillierte Informationen über ein Video mitteilt. Mit korrekt eingebundenem VideoObject-Markup kann Google dein Video als <strong class="text-white">Rich Result</strong> darstellen — mit Thumbnail, Titel, Dauer und Beschreibung direkt in den Suchergebnissen.</p>
+                    <p class="text-gray-400 text-sm leading-relaxed">VideoObject ist ein Schema.org-Typ, der Google detaillierte Informationen über ein Video mitteilt. Mit korrekt eingebundenem VideoObject-Markup kann Google dein Video als <strong class="text-white">Rich Result</strong> darstellen - mit Thumbnail, Titel, Dauer und Beschreibung direkt in den Suchergebnissen.</p>
                 </div>
                 <div class="bg-slate-800/50 border border-white/10 rounded-xl p-6">
                     <h3 class="text-lg font-bold text-white mb-3">Vorteile für SEO</h3>
@@ -353,7 +355,7 @@
             </div>
 
             <div class="bg-blue-500/10 border border-blue-500/20 rounded-xl p-5 text-sm text-blue-300">
-                <p><strong class="text-white">Tipp:</strong> Für <strong>Key Moments</strong> (Clip-Segmente) füge Clips mit Start- und Endzeit hinzu. Google zeigt diese dann als Sprungmarken direkt im Suchergebnis an — besonders wertvoll für Tutorials und lange Videos.</p>
+                <p><strong class="text-white">Tipp:</strong> Für <strong>Key Moments</strong> (Clip-Segmente) füge Clips mit Start- und Endzeit hinzu. Google zeigt diese dann als Sprungmarken direkt im Suchergebnis an - besonders wertvoll für Tutorials und lange Videos.</p>
             </div>
         </div>
     </section>
@@ -367,7 +369,7 @@
                         <img src="/logo.png" alt="Shift07" class="h-8 w-8">
                         <span class="text-xl font-bold">Shift07</span>
                     </div>
-                    <p class="text-gray-400 text-sm leading-relaxed">Kostenlose SEO-Analyse für deine Website. Finde technische Fehler, verbesserungswürdige Meta-Tags und mehr — in Sekunden.</p>
+                    <p class="text-gray-400 text-sm leading-relaxed">Kostenlose SEO-Analyse für deine Website. Finde technische Fehler, verbesserungswürdige Meta-Tags und mehr - in Sekunden.</p>
                 </div>
                 <div>
                     <h4 class="font-semibold text-white mb-4">Navigation</h4>

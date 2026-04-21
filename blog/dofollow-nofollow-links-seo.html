@@ -123,6 +123,7 @@
     <nav>
         <a href="/blog/">Blog</a>
         <a href="/tools/">Tools</a>
+        <a href="/ueber-uns.html">Über uns</a>
         <a href="/#pricing">Preise</a>
     </nav>
 </header>
@@ -149,7 +150,7 @@
 
     <p>Wenn du dich mit <a href="/blog/off-page-seo-leitfaden.html">Off-Page SEO</a> beschäftigst, wirst du früher oder später auf den Begriff „Nofollow" stoßen. Viele Website-Betreiber sind unsicher: Schadet ein Nofollow-Link? Zählt er gar nichts? Und was ist eigentlich der Unterschied zu einem Dofollow-Link?</p>
 
-    <p>In diesem Leitfaden bekommst du eine vollständige Antwort — inklusive der neueren Link-Attribute <code>rel="ugc"</code> und <code>rel="sponsored"</code>, die Google 2019 eingeführt hat und die du kennen musst.</p>
+    <p>In diesem Leitfaden bekommst du eine vollständige Antwort - inklusive der neueren Link-Attribute <code>rel="ugc"</code> und <code>rel="sponsored"</code>, die Google 2019 eingeführt hat und die du kennen musst.</p>
 
     <h2>Was ist ein Dofollow-Link?</h2>
 
@@ -157,7 +158,7 @@
 
     <pre>&lt;a href="https://beispiel.de"&gt;Beispiel&lt;/a&gt;</pre>
 
-    <p>Der Begriff „Dofollow" ist eigentlich kein offizielles HTML-Attribut — er ist das Gegenteil von Nofollow und hat sich in der SEO-Community als Begriff etabliert. Dofollow-Links sagen Suchmaschinen: <strong>„Folge diesem Link und übertrage Linkstärke (PageRank) auf die verlinkte Seite."</strong></p>
+    <p>Der Begriff „Dofollow" ist eigentlich kein offizielles HTML-Attribut - er ist das Gegenteil von Nofollow und hat sich in der SEO-Community als Begriff etabliert. Dofollow-Links sagen Suchmaschinen: <strong>„Folge diesem Link und übertrage Linkstärke (PageRank) auf die verlinkte Seite."</strong></p>
 
     <p>Für dein SEO bedeutet das: Dofollow-Backlinks von hochwertigen, thematisch relevanten Websites stärken dein Ranking direkt. Sie sind das, was du beim <a href="/blog/linkaufbau-strategien-backlinks.html">Linkaufbau</a> anstrebst.</p>
 
@@ -170,7 +171,7 @@
     <p>Dieses Attribut wurde 2005 von Google eingeführt, um Spam in Blog-Kommentaren zu bekämpfen. Die ursprüngliche Idee: Blogger sollten unbekannte Links im Kommentarbereich als „nicht vertrauenswürdig" markieren können, ohne dafür bestraft zu werden.</p>
 
     <div class="highlight-box">
-        <strong>Offizielle Google-Erklärung:</strong> Nofollow-Links werden in der Regel nicht gecrawlt und übertragen keinen PageRank. Google behandelt sie als <em>Hinweis</em> (hint), nicht als harte Regel — d.h. Google kann diese Links trotzdem berücksichtigen, muss aber nicht.
+        <strong>Offizielle Google-Erklärung:</strong> Nofollow-Links werden in der Regel nicht gecrawlt und übertragen keinen PageRank. Google behandelt sie als <em>Hinweis</em> (hint), nicht als harte Regel - d.h. Google kann diese Links trotzdem berücksichtigen, muss aber nicht.
     </div>
 
     <div class="comparison-grid">
@@ -212,7 +213,7 @@
         <tbody>
             <tr>
                 <td><strong>dofollow</strong> (Standard)</td>
-                <td><code>—</code></td>
+                <td><code>-</code></td>
                 <td>Normaler Link, PageRank wird übertragen</td>
                 <td>Redaktionelle, vertrauenswürdige Links</td>
             </tr>
@@ -237,27 +238,27 @@
         </tbody>
     </table>
 
-    <h3>rel="ugc" — User Generated Content</h3>
+    <h3>rel="ugc" - User Generated Content</h3>
 
-    <p>Das ugc-Attribut steht für „User Generated Content" und soll Links kennzeichnen, die von Nutzern erstellt wurden — zum Beispiel in Blog-Kommentaren oder Forenbeiträgen. Wenn du ein Forum oder einen Blog mit Kommentarfunktion betreibst, solltest du diese Links entsprechend kennzeichnen:</p>
+    <p>Das ugc-Attribut steht für „User Generated Content" und soll Links kennzeichnen, die von Nutzern erstellt wurden - zum Beispiel in Blog-Kommentaren oder Forenbeiträgen. Wenn du ein Forum oder einen Blog mit Kommentarfunktion betreibst, solltest du diese Links entsprechend kennzeichnen:</p>
 
     <pre>&lt;a href="https://beispiel.de" rel="ugc nofollow"&gt;Kommentar-Link&lt;/a&gt;</pre>
 
     <p>Viele CMS (WordPress, Discourse etc.) setzen dieses Attribut automatisch. Du kannst ugc auch kombinieren: <code>rel="ugc nofollow"</code>.</p>
 
-    <h3>rel="sponsored" — Bezahlte Links</h3>
+    <h3>rel="sponsored" - Bezahlte Links</h3>
 
-    <p>Bezahlte Links — egal ob Werbung, Affiliate-Deals oder gesponserte Artikel — müssen laut Google-Richtlinien mit <code>rel="sponsored"</code> oder <code>rel="nofollow"</code> gekennzeichnet sein. Wer bezahlte Links ohne diese Kennzeichnung setzt, riskiert eine manuelle Abstrafung durch Google:</p>
+    <p>Bezahlte Links - egal ob Werbung, Affiliate-Deals oder gesponserte Artikel - müssen laut Google-Richtlinien mit <code>rel="sponsored"</code> oder <code>rel="nofollow"</code> gekennzeichnet sein. Wer bezahlte Links ohne diese Kennzeichnung setzt, riskiert eine manuelle Abstrafung durch Google:</p>
 
     <pre>&lt;a href="https://partner.de" rel="sponsored"&gt;Unser Partner&lt;/a&gt;</pre>
 
     <div class="warning-box">
-        <strong>⚠️ Wichtig:</strong> Bezahlte Dofollow-Links verstoßen gegen Googles Richtlinien und können zu einer manuellen Abstrafung führen. Affiliate-Links, gesponserte Beiträge und Werbung müssen immer mit rel="sponsored" oder rel="nofollow" gekennzeichnet werden — sonst kann Google deine Seite als Linkkäufer identifizieren und abstrafen.
+        <strong>⚠️ Wichtig:</strong> Bezahlte Dofollow-Links verstoßen gegen Googles Richtlinien und können zu einer manuellen Abstrafung führen. Affiliate-Links, gesponserte Beiträge und Werbung müssen immer mit rel="sponsored" oder rel="nofollow" gekennzeichnet werden - sonst kann Google deine Seite als Linkkäufer identifizieren und abstrafen.
     </div>
 
     <h2>Sind Nofollow-Links wertlos für SEO?</h2>
 
-    <p>Das ist eine der meistgestellten Fragen im SEO-Bereich — und die Antwort ist differenzierter als ein einfaches Ja oder Nein.</p>
+    <p>Das ist eine der meistgestellten Fragen im SEO-Bereich - und die Antwort ist differenzierter als ein einfaches Ja oder Nein.</p>
 
     <h3>Was Nofollow-Links NICHT tun (normalerweise)</h3>
 
@@ -271,10 +272,10 @@
 
     <ul>
         <li><strong>Traffic:</strong> Ein Nofollow-Link von einer großen Nachrichtenseite, einem Forum oder einer Social-Media-Plattform kann tausende Besucher auf deine Website bringen</li>
-        <li><strong>Markenbekanntheit:</strong> Erwähnungen — mit oder ohne Dofollow — stärken deine Sichtbarkeit und Markenbekanntheit</li>
+        <li><strong>Markenbekanntheit:</strong> Erwähnungen - mit oder ohne Dofollow - stärken deine Sichtbarkeit und Markenbekanntheit</li>
         <li><strong>Natürliches Linkprofil:</strong> Ein Backlink-Profil, das aus 100% Dofollow-Links besteht, sieht für Google unnatürlich aus. Eine gesunde Mischung mit Nofollow-Links ist ein Zeichen natürlichen Linkaufbaus</li>
         <li><strong>Indirekter Ranking-Einfluss:</strong> Mehr Traffic → mehr Nutzer → mehr natürliche Verlinkungen durch Dritte → indirekte SEO-Wirkung</li>
-        <li><strong>Google behandelt Nofollow als Hinweis:</strong> Seit 2019 bezeichnet Google Nofollow als „hint" — Google kann diese Links also trotzdem berücksichtigen, wenn es das für sinnvoll hält</li>
+        <li><strong>Google behandelt Nofollow als Hinweis:</strong> Seit 2019 bezeichnet Google Nofollow als „hint" - Google kann diese Links also trotzdem berücksichtigen, wenn es das für sinnvoll hält</li>
     </ul>
 
     <div class="tip-box">
@@ -383,7 +384,7 @@
     <h2>Häufige Fragen zu Dofollow und Nofollow</h2>
 
     <h3>Kann ich einen Nofollow-Link in einen Dofollow-Link umwandeln?</h3>
-    <p>Nein — nicht bei fremden Websites. Du kannst nur die Links kontrollieren, die von deiner eigenen Website ausgehen. Bei Backlinks von anderen Websites hast du keinen Einfluss auf das rel-Attribut. Was du tun kannst: den Websitebetreiber freundlich bitten, das nofollow-Attribut zu entfernen — insbesondere wenn der Link redaktionell verdient ist.</p>
+    <p>Nein - nicht bei fremden Websites. Du kannst nur die Links kontrollieren, die von deiner eigenen Website ausgehen. Bei Backlinks von anderen Websites hast du keinen Einfluss auf das rel-Attribut. Was du tun kannst: den Websitebetreiber freundlich bitten, das nofollow-Attribut zu entfernen - insbesondere wenn der Link redaktionell verdient ist.</p>
 
     <h3>Schadet ein Nofollow-Link meiner Website?</h3>
     <p>Nein. Nofollow-Links schaden dir nicht. Sie helfen dir weniger direkt als Dofollow-Links, aber sie sind kein negatives Signal.</p>
@@ -394,10 +395,10 @@
     <h3>Zählen Links von sozialen Medien für SEO?</h3>
     <p>Soziale Medien wie Facebook, Instagram und Twitter setzen fast alle Links als nofollow. Sie übertragen also keinen direkten PageRank. Trotzdem sind sie wichtig für: Traffic, Markenbekanntheit und indirekte SEO-Effekte (mehr Nutzer → mehr natürliche Backlinks).</p>
 
-    <h3>Was ist mit „sponsored" — muss ich das wirklich setzen?</h3>
+    <h3>Was ist mit „sponsored" - muss ich das wirklich setzen?</h3>
     <p>Ja, wenn du Geld für Links erhältst. Googles Webmaster-Richtlinien sind hier eindeutig: Bezahlte Links ohne Kennzeichnung verstoßen gegen die Richtlinien und können zu Ranking-Verlusten führen.</p>
 
-    <h2>Fazit: Dofollow ist besser — aber Nofollow ist nicht wertlos</h2>
+    <h2>Fazit: Dofollow ist besser - aber Nofollow ist nicht wertlos</h2>
 
     <p>Die wichtigsten Punkte zusammengefasst:</p>
 
@@ -414,7 +415,7 @@
 
     <div class="cta">
         <h3>Deine Website kostenlos analysieren</h3>
-        <p>Shift07 prüft automatisch deine On-Page SEO, technische Fehler und gibt dir konkrete Handlungsempfehlungen — in Sekunden.</p>
+        <p>Shift07 prüft automatisch deine On-Page SEO, technische Fehler und gibt dir konkrete Handlungsempfehlungen - in Sekunden.</p>
         <a href="https://shift07.ai/#analyse">Jetzt kostenlos analysieren</a>
     </div>
 
@@ -433,8 +434,9 @@
         <a href="/">Shift07</a>
         <a href="/blog/">Blog</a>
         <a href="/tools/">Tools</a>
+        <a href="/ueber-uns.html">Über uns</a>
         <a href="/impressum.html">Impressum</a>
-        <a href="/datenschutz.html">Datenschutz</a>
+        <a href="/datenschutz.html">Datenschutz</a> · <a href="/ueber-uns.html">Über uns</a>
     </p>
     <p style="margin-top:0.75rem">© 2026 Thümmler AI GmbH · Leonardo-da-Vinci-Straße 15 · 14467 Potsdam</p>
 </footer>

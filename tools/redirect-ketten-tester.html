@@ -143,6 +143,7 @@
     <nav>
         <a href="/blog/">Blog</a>
         <a href="/tools/">Tools</a>
+        <a href="/ueber-uns.html">Über uns</a>
         <a href="/#pricing">Preise</a>
     </nav>
 </header>
@@ -269,8 +270,9 @@ Content-Type: text/html; charset=utf-8"></textarea>
 </div>
 
 <footer>
-    <p>&copy; 2026 Thümmler AI GmbH · <a href="/impressum.html">Impressum</a> · <a href="/datenschutz.html">Datenschutz</a></p>
-    <p style="margin-top:0.5rem"><a href="/blog/">Blog</a> · <a href="/tools/">Tools</a> · <a href="https://shift07.ai">shift07.ai</a></p>
+    <p>&copy; 2026 Thümmler AI GmbH · <a href="/impressum.html">Impressum</a> · <a href="/datenschutz.html">Datenschutz</a> · <a href="/ueber-uns.html">Über uns</a></p>
+    <p style="margin-top:0.5rem"><a href="/blog/">Blog</a> · <a href="/tools/">Tools</a>
+        <a href="/ueber-uns.html">Über uns</a> · <a href="https://shift07.ai">shift07.ai</a></p>
 </footer>
 
 <script>
@@ -380,7 +382,7 @@ function analyzeHops(hops) {
     } else if (redirectCount > 1) {
         issues.push({ type: 'warning', icon: '⚠', title: `Redirect-Kette: ${redirectCount} Weiterleitungen`, text: 'Mehrere Redirects hintereinander verlangsamen das Crawlen und verringern den übertragenen Linkjuice. Direkt auf das Ziel weiterleiten (1 Hop).' });
     } else if (redirectCount === 1) {
-        issues.push({ type: 'success', icon: '✓', title: 'Sauberer einzelner Redirect', text: 'Nur eine Weiterleitung — ideal für SEO. Linkjuice wird optimal übertragen.' });
+        issues.push({ type: 'success', icon: '✓', title: 'Sauberer einzelner Redirect', text: 'Nur eine Weiterleitung - ideal für SEO. Linkjuice wird optimal übertragen.' });
     }
 
     // Check 302/307 when permanent intended
@@ -392,12 +394,12 @@ function analyzeHops(hops) {
     // Final status
     if (finalStatus === 200) {
         if (redirectCount === 0) {
-            issues.push({ type: 'info', icon: 'ℹ', title: 'Kein Redirect — direkte 200-Antwort', text: 'Die URL gibt direkt HTTP 200 zurück. Kein Redirect-Problem erkannt.' });
+            issues.push({ type: 'info', icon: 'ℹ', title: 'Kein Redirect - direkte 200-Antwort', text: 'Die URL gibt direkt HTTP 200 zurück. Kein Redirect-Problem erkannt.' });
         } else {
             issues.push({ type: 'success', icon: '✓', title: 'Ziel-URL liefert HTTP 200', text: 'Die finale URL antwortet korrekt mit 200 OK.' });
         }
     } else if (finalStatus === 404) {
-        issues.push({ type: 'error', icon: '✕', title: 'Ziel-URL gibt 404 zurück!', text: 'Die finale Ziel-URL existiert nicht. Der Redirect führt in eine Sackgasse — Besucher und Linkjuice gehen verloren. Sofort korrigieren.' });
+        issues.push({ type: 'error', icon: '✕', title: 'Ziel-URL gibt 404 zurück!', text: 'Die finale Ziel-URL existiert nicht. Der Redirect führt in eine Sackgasse - Besucher und Linkjuice gehen verloren. Sofort korrigieren.' });
     } else if (finalStatus >= 500) {
         issues.push({ type: 'error', icon: '✕', title: `Server-Fehler ${finalStatus} an der Ziel-URL`, text: 'Die Ziel-URL antwortet mit einem Server-Fehler. Das blockiert Google beim Crawlen.' });
     } else if (finalStatus >= 400) {

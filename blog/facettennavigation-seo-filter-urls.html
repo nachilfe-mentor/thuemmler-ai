@@ -120,6 +120,7 @@
                     <a href="/" class="text-gray-300 hover:text-white transition-colors">SEO-Tool</a>
                     <a href="/blog/" class="text-white font-medium border-b-2 border-blue-500 pb-0.5">Blog</a>
                     <a href="/tools/" class="text-gray-300 hover:text-white transition-colors">Tools</a>
+                    <a href="/ueber-uns.html" class="text-white hover:text-blue-300 transition-colors">Über uns</a>
                     <a href="/app/#/login" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-5 py-2 rounded-lg font-medium transition-all">Anmelden</a>
                 </div>
                 <button id="mobile-menu-btn" class="md:hidden text-gray-300 hover:text-white">
@@ -132,6 +133,7 @@
                 <a href="/" class="block py-2 text-gray-300 hover:text-white">SEO-Tool</a>
                 <a href="/blog/" class="block py-2 text-white font-medium">Blog</a>
                 <a href="/tools/" class="block py-2 text-gray-300 hover:text-white">Tools</a>
+                <a href="/ueber-uns.html" class="block py-2 text-white hover:text-blue-300">Über uns</a>
                 <a href="/app/#/login" class="block py-2 text-blue-400 hover:text-blue-300">Anmelden</a>
             </div>
         </div>
@@ -178,9 +180,9 @@
                     <!-- Article Body -->
                     <div class="article-content">
 
-                        <p>Facettennavigation (auch Filternavigation genannt) ist eine der mächtigsten Funktionen in Online-Shops — und gleichzeitig einer der häufigsten SEO-Killer. Wenn ein Nutzer auf einer Kategorieseite nach Farbe, Größe, Preis und Marke filtert, entstehen schnell hunderte oder tausende von URLs. Jede Filterkombination ist potenziell eine eigene URL. Das überfordert Googles Crawler, verschwendet Crawl-Budget und erzeugt massenhaft Duplicate Content.</p>
+                        <p>Facettennavigation (auch Filternavigation genannt) ist eine der mächtigsten Funktionen in Online-Shops - und gleichzeitig einer der häufigsten SEO-Killer. Wenn ein Nutzer auf einer Kategorieseite nach Farbe, Größe, Preis und Marke filtert, entstehen schnell hunderte oder tausende von URLs. Jede Filterkombination ist potenziell eine eigene URL. Das überfordert Googles Crawler, verschwendet Crawl-Budget und erzeugt massenhaft Duplicate Content.</p>
 
-                        <p>Dieser Artikel ist der Abschluss unserer <a href="/blog/ecommerce-seo-leitfaden.html">E-Commerce SEO Serie</a> und erklärt, wie du Facettennavigation SEO-konform umsetzt — welche Filter-URLs Google indexieren soll, welche nicht, und welche Techniken dir dabei helfen.</p>
+                        <p>Dieser Artikel ist der Abschluss unserer <a href="/blog/ecommerce-seo-leitfaden.html">E-Commerce SEO Serie</a> und erklärt, wie du Facettennavigation SEO-konform umsetzt - welche Filter-URLs Google indexieren soll, welche nicht, und welche Techniken dir dabei helfen.</p>
 
                         <h2>Das Problem: Explosives URL-Wachstum durch Filter</h2>
 
@@ -193,7 +195,7 @@
                             <li>Material: 6 Optionen</li>
                         </ul>
 
-                        <p>Wenn jede Filterauswahl eine eigene URL erzeugt und Kombinationen möglich sind, entstehen theoretisch <strong>12 × 8 × 20 × 5 × 6 = 57.600 URLs</strong> — nur für eine Kategorieseite. Bei einem mittelgroßen Shop mit 50 Kategorien sind das bereits 2,88 Millionen potenzielle URLs. Googles Crawler kann und soll diese nicht alle besuchen.</p>
+                        <p>Wenn jede Filterauswahl eine eigene URL erzeugt und Kombinationen möglich sind, entstehen theoretisch <strong>12 × 8 × 20 × 5 × 6 = 57.600 URLs</strong> - nur für eine Kategorieseite. Bei einem mittelgroßen Shop mit 50 Kategorien sind das bereits 2,88 Millionen potenzielle URLs. Googles Crawler kann und soll diese nicht alle besuchen.</p>
 
                         <p>Die Folgen unkontrollierter Facettennavigation:</p>
                         <ul>
@@ -209,7 +211,7 @@
 
                         <h3>Strategie 1: Vollständige Blockierung (alle Filter = kein SEO-Wert)</h3>
 
-                        <p>Die einfachste Strategie: Alle Filterseiten werden von Google nicht indexiert. Das ist sinnvoll, wenn deine Filterseiten keinen eigenständigen SEO-Wert haben — also keine separate Suchnachfrage bedienen.</p>
+                        <p>Die einfachste Strategie: Alle Filterseiten werden von Google nicht indexiert. Das ist sinnvoll, wenn deine Filterseiten keinen eigenständigen SEO-Wert haben - also keine separate Suchnachfrage bedienen.</p>
 
                         <p><strong>Implementierung über robots.txt:</strong></p>
                         <pre><code>User-agent: *
@@ -218,11 +220,11 @@ Disallow: /produkt-kategorie/*?*size=
 Disallow: /produkt-kategorie/*?*orderby=
 Disallow: /produkt-kategorie/*?*min_price=</code></pre>
 
-                        <p>Oder noch sauberer — alle URL-Parameter blockieren:</p>
+                        <p>Oder noch sauberer - alle URL-Parameter blockieren:</p>
                         <pre><code>User-agent: *
 Disallow: /*?*</code></pre>
 
-                        <p><strong>Achtung:</strong> Diese Methode verhindert, dass Googles Crawler die Filterseiten überhaupt besucht. Sie signalisiert aber nicht, dass die Seiten nicht indexiert werden sollen — falls jemand einen Link auf eine gefilterte URL setzt, könnte sie trotzdem in den Index gelangen. Kombiniere robots.txt daher immer mit noindex-Tags.</p>
+                        <p><strong>Achtung:</strong> Diese Methode verhindert, dass Googles Crawler die Filterseiten überhaupt besucht. Sie signalisiert aber nicht, dass die Seiten nicht indexiert werden sollen - falls jemand einen Link auf eine gefilterte URL setzt, könnte sie trotzdem in den Index gelangen. Kombiniere robots.txt daher immer mit noindex-Tags.</p>
 
                         <p>Unser <a href="/tools/robots-txt-generator.html">robots.txt Generator</a> hilft dir beim korrekten Aufbau deiner robots.txt-Datei.</p>
 
@@ -246,9 +248,9 @@ Disallow: /*?*</code></pre>
 
                         <h3>Strategie 3: Selektive Indexierung (wertvoll vs. wertlos)</h3>
 
-                        <p>Die fortschrittlichste — und effektivste — Strategie. Du analysierst, welche Filterkombinationen echte Suchanfragen bedienen, und erlaubst nur diese in Googles Index.</p>
+                        <p>Die fortschrittlichste - und effektivste - Strategie. Du analysierst, welche Filterkombinationen echte Suchanfragen bedienen, und erlaubst nur diese in Googles Index.</p>
 
-                        <p>Beispiel aus der Praxis: Wenn Menschen nach "Herren T-Shirt Schwarz" googeln, hat die URL <code>/herren-t-shirts/?color=schwarz</code> tatsächlich SEO-Wert — sie entspricht einer konkreten Suchanfrage. Diese Seite sollte indexiert werden. Dagegen hat <code>/herren-t-shirts/?color=schwarz&size=m&sort=preis_aufsteigend</code> vermutlich keine eigene Suchnachfrage und kann noindex bleiben.</p>
+                        <p>Beispiel aus der Praxis: Wenn Menschen nach "Herren T-Shirt Schwarz" googeln, hat die URL <code>/herren-t-shirts/?color=schwarz</code> tatsächlich SEO-Wert - sie entspricht einer konkreten Suchanfrage. Diese Seite sollte indexiert werden. Dagegen hat <code>/herren-t-shirts/?color=schwarz&size=m&sort=preis_aufsteigend</code> vermutlich keine eigene Suchnachfrage und kann noindex bleiben.</p>
 
                         <p>Die Entscheidungsregel:</p>
                         <ul>
@@ -325,7 +327,7 @@ Disallow: /*?*</code></pre>
                             <li>Bessere interne Verlinkung auf wichtige Filterseiten</li>
                         </ul>
 
-                        <p>In WooCommerce mit dem Plugin <strong>WooCommerce Product Filter</strong> oder der eigenen Attributen-Taxonomie kannst du saubere URLs für ausgewählte Filter einrichten. Nur die SEO-wertvollen Filter bekommen saubere URLs — alle anderen bleiben als Parameter (und werden blockiert).</p>
+                        <p>In WooCommerce mit dem Plugin <strong>WooCommerce Product Filter</strong> oder der eigenen Attributen-Taxonomie kannst du saubere URLs für ausgewählte Filter einrichten. Nur die SEO-wertvollen Filter bekommen saubere URLs - alle anderen bleiben als Parameter (und werden blockiert).</p>
 
                         <h2>noindex vs. robots.txt: Was ist der Unterschied?</h2>
 
@@ -371,7 +373,7 @@ Disallow: /*?*</code></pre>
 
                         <h3>JavaScript-basierte Filter</h3>
 
-                        <p>Wenn deine Filter komplett JavaScript-basiert sind und keine URL-Änderung erzeugen (AJAX-Filter), hat Google kein Crawl-Budget-Problem — weil es keine neuen URLs gibt. Allerdings kann Google dann auch keine Filterseiten indexieren, selbst wenn du es wolltest. Für SEO-wertvolle Filter brauchst du URL-basierte Implementierung.</p>
+                        <p>Wenn deine Filter komplett JavaScript-basiert sind und keine URL-Änderung erzeugen (AJAX-Filter), hat Google kein Crawl-Budget-Problem - weil es keine neuen URLs gibt. Allerdings kann Google dann auch keine Filterseiten indexieren, selbst wenn du es wolltest. Für SEO-wertvolle Filter brauchst du URL-basierte Implementierung.</p>
 
                         <h2>WooCommerce: Konkrete Einstellungen für Facettennavigation</h2>
 
@@ -410,7 +412,7 @@ Disallow: /*?*</code></pre>
 
                         <h2>Fazit: Kontrolle ist alles</h2>
 
-                        <p>Facettennavigation SEO ist keine Frage von "alles erlauben" oder "alles blockieren" — es ist eine Frage der Kontrolle. Du entscheidest, welche Filterseiten Suchanfragen bedienen und indexiert werden sollen. Alle anderen blockierst du konsequent.</p>
+                        <p>Facettennavigation SEO ist keine Frage von "alles erlauben" oder "alles blockieren" - es ist eine Frage der Kontrolle. Du entscheidest, welche Filterseiten Suchanfragen bedienen und indexiert werden sollen. Alle anderen blockierst du konsequent.</p>
 
                         <p>Die Hauptregel: <strong>Lass Google nur das crawlen, was echten SEO-Wert hat.</strong> Alles andere frisst Crawl-Budget und erzeugt Duplicate Content, ohne Rankings zu erzeugen.</p>
 
@@ -512,6 +514,7 @@ Disallow: /*?*</code></pre>
                     <a href="/impressum.html" class="hover:text-white transition-colors">Impressum</a>
                     <a href="/datenschutz.html" class="hover:text-white transition-colors">Datenschutz</a>
                     <a href="/agb.html" class="hover:text-white transition-colors">AGB</a>
+                    <a href="/ueber-uns.html" class="hover:text-white transition-colors">Über uns</a>
                 </div>
                 <p class="text-sm text-gray-500">&copy; 2026 Thümmler AI GmbH</p>
             </div>

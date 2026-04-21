@@ -84,6 +84,7 @@
                 <a href="/" class="text-gray-400 hover:text-white font-medium transition-colors">Home</a>
                 <a href="/blog" class="text-gray-400 hover:text-white font-medium transition-colors">Blog</a>
                 <a href="/tools" class="text-gray-400 hover:text-white font-medium transition-colors">Tools</a>
+                <a href="/ueber-uns.html" class="text-gray-400 hover:text-white font-medium transition-colors">Über uns</a>
                 <a href="/#pricing" class="bg-blue-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-blue-700 transition-colors">Kostenlos starten</a>
             </div>
         </div>
@@ -116,7 +117,7 @@
         <h2 class="font-bold text-blue-300 mb-2">So funktioniert's:</h2>
         <ol class="text-blue-200 text-sm space-y-1 list-decimal list-inside">
             <li>Gib für jede Sprachversion die URL und den Sprachcode ein (z.B. <code class="bg-blue-900/40 px-1 rounded">de</code>, <code class="bg-blue-900/40 px-1 rounded">en</code>, <code class="bg-blue-900/40 px-1 rounded">de-AT</code>)</li>
-            <li>Füge beliebig viele Zeilen hinzu — für jede Sprachversion eine</li>
+            <li>Füge beliebig viele Zeilen hinzu - für jede Sprachversion eine</li>
             <li>Kopiere den generierten Code in den <code class="bg-blue-900/40 px-1 rounded">&lt;head&gt;</code> aller Sprachversionen</li>
             <li>Optional: Aktiviere "x-default" für die Fallback-Seite (empfohlen)</li>
         </ol>
@@ -324,12 +325,12 @@
         <div class="bg-gray-900 border border-white/10 rounded-2xl p-5">
             <h3 class="font-bold text-white mb-3">Häufige Hreflang-Fehler</h3>
             <ul class="space-y-2 text-sm text-gray-400">
-                <li>❌ <strong class="text-red-400">Einseitige Verlinkung</strong> — Seite A verlinkt auf B, aber B nicht auf A</li>
-                <li>❌ <strong class="text-red-400">Fehlende Selbstverlinkung</strong> — Jede Seite muss sich auch selbst referenzieren</li>
-                <li>❌ <strong class="text-red-400">Falsche Sprachcodes</strong> — "german" statt "de", "english" statt "en"</li>
-                <li>❌ <strong class="text-red-400">Relative URLs</strong> — Alle URLs müssen absolut sein (mit https://)</li>
-                <li>❌ <strong class="text-red-400">Fehlendes x-default</strong> — Ohne Fallback kein Schutz vor Länder-Konflikten</li>
-                <li>❌ <strong class="text-red-400">Nur auf einer Seite</strong> — Code muss auf allen Sprachversionen identisch sein</li>
+                <li>❌ <strong class="text-red-400">Einseitige Verlinkung</strong> - Seite A verlinkt auf B, aber B nicht auf A</li>
+                <li>❌ <strong class="text-red-400">Fehlende Selbstverlinkung</strong> - Jede Seite muss sich auch selbst referenzieren</li>
+                <li>❌ <strong class="text-red-400">Falsche Sprachcodes</strong> - "german" statt "de", "english" statt "en"</li>
+                <li>❌ <strong class="text-red-400">Relative URLs</strong> - Alle URLs müssen absolut sein (mit https://)</li>
+                <li>❌ <strong class="text-red-400">Fehlendes x-default</strong> - Ohne Fallback kein Schutz vor Länder-Konflikten</li>
+                <li>❌ <strong class="text-red-400">Nur auf einer Seite</strong> - Code muss auf allen Sprachversionen identisch sein</li>
             </ul>
         </div>
         <div class="bg-gray-900 border border-white/10 rounded-2xl p-5">
@@ -402,13 +403,15 @@
                 <h4 class="text-white font-semibold mb-4">Unternehmen</h4>
                 <ul class="space-y-2 text-sm text-gray-500">
                     <li><a href="/impressum.html" class="hover:text-white transition-colors">Impressum</a></li>
-                    <li><a href="/datenschutz.html" class="hover:text-white transition-colors">Datenschutz</a></li>
+                    <li><a href="/datenschutz.html" class="hover:text-white transition-colors">Datenschutz</a>
+                    <a href="/ueber-uns.html" class="text-slate-400 hover:text-white transition-colors text-sm">Über uns</a></li>
                     <li><a href="mailto:team@shift07.ai" class="hover:text-white transition-colors">Kontakt</a></li>
                 </ul>
             </div>
         </div>
         <div class="border-t border-white/10 pt-8 text-sm text-gray-600 text-center">
-            <p>© 2026 Thümmler AI GmbH · Leonardo-da-Vinci-Straße 15, 14467 Potsdam · <a href="/impressum.html" class="hover:text-gray-400">Impressum</a> · <a href="/datenschutz.html" class="hover:text-gray-400">Datenschutz</a></p>
+            <p>© 2026 Thümmler AI GmbH · Leonardo-da-Vinci-Straße 15, 14467 Potsdam · <a href="/impressum.html" class="hover:text-gray-400">Impressum</a> · <a href="/datenschutz.html" class="hover:text-gray-400">Datenschutz</a>
+                    <a href="/ueber-uns.html" class="text-slate-400 hover:text-white transition-colors text-sm">Über uns</a></p>
         </div>
     </div>
 </footer>
@@ -572,14 +575,14 @@ function generateHreflang() {
 
     // Warnungen
     if (pairs.length === 1) {
-        warningMessages.push({ type: 'warning', text: 'Nur 1 Sprachversion eingetragen — hreflang macht erst ab 2 Versionen Sinn' });
+        warningMessages.push({ type: 'warning', text: 'Nur 1 Sprachversion eingetragen - hreflang macht erst ab 2 Versionen Sinn' });
     }
 
     // Duplikate prüfen
     const langs = pairs.map(p => p.lang);
     const dupLangs = langs.filter((l, i) => langs.indexOf(l) !== i);
     if (dupLangs.length > 0) {
-        warningMessages.push({ type: 'error', text: `Doppelter Sprachcode: "${[...new Set(dupLangs)].join('", "')}" — jeder Sprachcode darf nur einmal vorkommen` });
+        warningMessages.push({ type: 'error', text: `Doppelter Sprachcode: "${[...new Set(dupLangs)].join('", "')}" - jeder Sprachcode darf nur einmal vorkommen` });
     }
 
     // Ausgabe

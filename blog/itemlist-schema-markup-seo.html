@@ -116,6 +116,7 @@
                     <a href="/" class="text-gray-300 hover:text-white transition-colors">SEO-Tool</a>
                     <a href="/blog/" class="text-white font-medium border-b-2 border-blue-500 pb-0.5">Blog</a>
                     <a href="/tools/" class="text-gray-300 hover:text-white transition-colors">Tools</a>
+                    <a href="/ueber-uns.html" class="text-white hover:text-blue-300 transition-colors">Über uns</a>
                     <a href="/app/#/login" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-5 py-2 rounded-lg font-medium transition-all">Anmelden</a>
                 </div>
                 <button id="mobile-menu-btn" class="md:hidden text-gray-300 hover:text-white">
@@ -128,6 +129,7 @@
                 <a href="/" class="block py-2 text-gray-300 hover:text-white">SEO-Tool</a>
                 <a href="/blog/" class="block py-2 text-white font-medium">Blog</a>
                 <a href="/tools/" class="block py-2 text-gray-300 hover:text-white">Tools</a>
+                <a href="/ueber-uns.html" class="block py-2 text-white hover:text-blue-300">Über uns</a>
                 <a href="/app/#/login" class="block py-2 text-blue-400 hover:text-blue-300">Anmelden</a>
             </div>
         </div>
@@ -172,7 +174,7 @@
 
                     <div class="article-content">
 
-                        <p>Hast du schon einmal eine Google-Suchergebnisseite mit einer Carousel-Darstellung gesehen, bei der mehrere Einträge aus einer Website nebeneinander angezeigt werden? Oder eine Liste von Unterseiten direkt unter dem Hauptergebnis? Beides ist oft das Ergebnis von <strong>ItemList Schema Markup</strong> — einem JSON-LD-Format, das Google ermöglicht, deine Listen als strukturierte Daten zu verstehen und visuell hervorzuheben.</p>
+                        <p>Hast du schon einmal eine Google-Suchergebnisseite mit einer Carousel-Darstellung gesehen, bei der mehrere Einträge aus einer Website nebeneinander angezeigt werden? Oder eine Liste von Unterseiten direkt unter dem Hauptergebnis? Beides ist oft das Ergebnis von <strong>ItemList Schema Markup</strong> - einem JSON-LD-Format, das Google ermöglicht, deine Listen als strukturierte Daten zu verstehen und visuell hervorzuheben.</p>
 
                         <p>In diesem Artikel lernst du, was ItemList genau ist, für welche Inhaltstypen es sich eignet, wie du es korrekt implementierst und welche konkreten SEO-Vorteile du davon erwarten kannst. Dazu gibt es vollständige JSON-LD-Codebeispiele, die du direkt übernehmen kannst.</p>
 
@@ -205,11 +207,11 @@
                             <li>Eine Kurs-Übersichtsseite mit allen verfügbaren Kursen</li>
                         </ul>
 
-                        <p>Hier markierst du die Liste mit <code>ItemList</code>, und jedes Listenelement verweist per URL auf die Detailseite des jeweiligen Eintrags. Google kann dann — wenn auch die Detailseiten entsprechend mit <code>Article</code>, <code>Recipe</code>, <code>Course</code> etc. ausgezeichnet sind — ein Carousel aus allen Elementen bauen.</p>
+                        <p>Hier markierst du die Liste mit <code>ItemList</code>, und jedes Listenelement verweist per URL auf die Detailseite des jeweiligen Eintrags. Google kann dann - wenn auch die Detailseiten entsprechend mit <code>Article</code>, <code>Recipe</code>, <code>Course</code> etc. ausgezeichnet sind - ein Carousel aus allen Elementen bauen.</p>
 
                         <h3>2. Auf einer einzelnen, in sich geschlossenen Seite (All-in-One Page)</h3>
 
-                        <p>Hier befinden sich alle Listenelemente auf derselben Seite — etwa ein "Top 5 SEO-Tools"-Artikel, bei dem jedes Tool auf der gleichen Seite beschrieben wird. In diesem Fall enthalten die <code>ListItem</code>-Objekte keine separaten URLs, sondern Anker-Links (<code>#abschnitt</code>) oder der gesamte Inhalt liegt inline vor.</p>
+                        <p>Hier befinden sich alle Listenelemente auf derselben Seite - etwa ein "Top 5 SEO-Tools"-Artikel, bei dem jedes Tool auf der gleichen Seite beschrieben wird. In diesem Fall enthalten die <code>ListItem</code>-Objekte keine separaten URLs, sondern Anker-Links (<code>#abschnitt</code>) oder der gesamte Inhalt liegt inline vor.</p>
 
                         <p>Google kann solche Seiten als "Self Contained Carousel" darstellen, bei dem die Einzelelemente direkt in den SERPs verlinkbar sind.</p>
 
@@ -243,17 +245,17 @@
                         <h3>Wichtige Properties im Überblick</h3>
 
                         <ul>
-                            <li><strong>name:</strong> Titel der Liste — erscheint ggf. als Carousel-Überschrift</li>
+                            <li><strong>name:</strong> Titel der Liste - erscheint ggf. als Carousel-Überschrift</li>
                             <li><strong>description:</strong> Kurzbeschreibung der Liste (optional, aber empfohlen)</li>
                             <li><strong>numberOfItems:</strong> Gesamtanzahl der Listenelemente</li>
-                            <li><strong>itemListOrder:</strong> Reihenfolge — <code>ItemListOrderAscending</code>, <code>ItemListOrderDescending</code> oder <code>Unordered</code></li>
+                            <li><strong>itemListOrder:</strong> Reihenfolge - <code>ItemListOrderAscending</code>, <code>ItemListOrderDescending</code> oder <code>Unordered</code></li>
                             <li><strong>itemListElement:</strong> Array aus <code>ListItem</code>-Objekten</li>
                         </ul>
 
                         <h3>ListItem-Properties</h3>
 
                         <ul>
-                            <li><strong>position:</strong> Numerische Position (1, 2, 3, …) — Pflichtfeld für Carousel</li>
+                            <li><strong>position:</strong> Numerische Position (1, 2, 3, …) - Pflichtfeld für Carousel</li>
                             <li><strong>name:</strong> Bezeichnung des Elements</li>
                             <li><strong>url:</strong> URL der Detailseite oder Anker-Link auf derselben Seite</li>
                             <li><strong>item:</strong> Alternativ ein eingebettetes Schema-Objekt (z. B. ein <code>Article</code> oder <code>Recipe</code>)</li>
@@ -325,7 +327,7 @@
   ]
 }</code></pre>
 
-                        <p>Damit dieses Carousel in Google erscheint, müssen die verlinkten Seiten selbst ebenfalls mit dem jeweils passenden Schema-Typ (<code>Article</code>, <code>Recipe</code>, etc.) ausgezeichnet sein. Das <code>ItemList</code> allein reicht nicht — es fungiert als Dach, das Google sagt: "Hier ist eine kuratierte Auswahl, und die Einzelseiten enthalten die Details."</p>
+                        <p>Damit dieses Carousel in Google erscheint, müssen die verlinkten Seiten selbst ebenfalls mit dem jeweils passenden Schema-Typ (<code>Article</code>, <code>Recipe</code>, etc.) ausgezeichnet sein. Das <code>ItemList</code> allein reicht nicht - es fungiert als Dach, das Google sagt: "Hier ist eine kuratierte Auswahl, und die Einzelseiten enthalten die Details."</p>
 
                         <h2>Anwendungsfall 2: Top-10-Artikel (All-in-One)</h2>
 
@@ -426,7 +428,7 @@
 
                         <ul>
                             <li><strong>ItemListOrderDescending:</strong> Das wichtigste, beliebteste oder am besten bewertete Element steht an erster Stelle (Position 1 = Platz 1). Ideal für Ranglisten, "Bestes X"-Artikel.</li>
-                            <li><strong>ItemListOrderAscending:</strong> Aufsteigend — weniger häufig, aber z. B. bei Schritt-für-Schritt-Anleitungen mit Nummerierung sinnvoll.</li>
+                            <li><strong>ItemListOrderAscending:</strong> Aufsteigend - weniger häufig, aber z. B. bei Schritt-für-Schritt-Anleitungen mit Nummerierung sinnvoll.</li>
                             <li><strong>Unordered:</strong> Die Reihenfolge hat keine semantische Bedeutung. Gut für kategorische Listen, bei denen kein Element wichtiger als das andere ist.</li>
                         </ul>
 
@@ -435,8 +437,8 @@
                         <p><code>ItemList</code> ist besonders mächtig, wenn es mit anderen Schema-Typen kombiniert wird. Google verwendet diese Kombination für verschiedene Carousel-Typen:</p>
 
                         <ul>
-                            <li><strong>ItemList + Article:</strong> Blog-Karussell — mehrere Artikel aus einer Kategorie</li>
-                            <li><strong>ItemList + Recipe:</strong> Rezept-Karussell — in Kochseiten sehr verbreitet</li>
+                            <li><strong>ItemList + Article:</strong> Blog-Karussell - mehrere Artikel aus einer Kategorie</li>
+                            <li><strong>ItemList + Recipe:</strong> Rezept-Karussell - in Kochseiten sehr verbreitet</li>
                             <li><strong>ItemList + Course:</strong> Kurs-Übersicht mit Preisen und Bewertungen</li>
                             <li><strong>ItemList + Movie:</strong> Film-Listen für Rezensions-Websites</li>
                             <li><strong>ItemList + Event:</strong> Veranstaltungskalender mit mehreren Events</li>
@@ -473,7 +475,7 @@
 
                         <ol>
                             <li><strong>Rich Results Test von Google:</strong> Direkt bei Google prüfen, ob dein Markup als Carousel anerkannt wird. Gibt Warnungen und Fehler aus.</li>
-                            <li><strong>Schema.org Validator:</strong> Allgemeiner Syntax-Check — prüft, ob JSON-LD korrekt ist, ohne Google-spezifische Regeln zu berücksichtigen.</li>
+                            <li><strong>Schema.org Validator:</strong> Allgemeiner Syntax-Check - prüft, ob JSON-LD korrekt ist, ohne Google-spezifische Regeln zu berücksichtigen.</li>
                             <li><strong>Shift07 JSON-LD Validator:</strong> Unsere <a href="/tools/json-ld-structured-data-validator.html">kostenlose JSON-LD-Prüfung</a> zeigt Fehler im Markup direkt im Browser.</li>
                         </ol>
 
@@ -481,7 +483,7 @@
 
                         <h2>ItemList und <code>BreadcrumbList</code>: Die häufige Verwechslung</h2>
 
-                        <p>Viele Entwickler verwechseln <code>ItemList</code> mit <code>BreadcrumbList</code>. Der Unterschied ist fundamental: <strong>BreadcrumbList</strong> beschreibt den Navigationspfad zu einer Seite (Home → Kategorie → Seite), während <strong>ItemList</strong> eine thematische Liste von Inhalten oder Produkten darstellt. Für Breadcrumb-Navigation verwende ausschließlich <a href="/blog/breadcrumblist-schema-markup-seo.html">BreadcrumbList Schema Markup</a> — das führt zu eigenen Rich Results in Form von Breadcrumb-Pfaden in den SERPs.</p>
+                        <p>Viele Entwickler verwechseln <code>ItemList</code> mit <code>BreadcrumbList</code>. Der Unterschied ist fundamental: <strong>BreadcrumbList</strong> beschreibt den Navigationspfad zu einer Seite (Home → Kategorie → Seite), während <strong>ItemList</strong> eine thematische Liste von Inhalten oder Produkten darstellt. Für Breadcrumb-Navigation verwende ausschließlich <a href="/blog/breadcrumblist-schema-markup-seo.html">BreadcrumbList Schema Markup</a> - das führt zu eigenen Rich Results in Form von Breadcrumb-Pfaden in den SERPs.</p>
 
                         <h2>Praktische Implementierungsschritte</h2>
 
@@ -496,7 +498,7 @@
 
                         <h2>Wie schnell erscheinen ItemList-Carousels?</h2>
 
-                        <p>Nach der Implementierung und dem nächsten Google-Crawl können Carousels in 1–4 Wochen erscheinen — sofern alle Voraussetzungen erfüllt sind. Faktoren, die die Wahrscheinlichkeit erhöhen:</p>
+                        <p>Nach der Implementierung und dem nächsten Google-Crawl können Carousels in 1–4 Wochen erscheinen - sofern alle Voraussetzungen erfüllt sind. Faktoren, die die Wahrscheinlichkeit erhöhen:</p>
 
                         <ul>
                             <li>Hohe Domain Authority (mehr Backlinks = schnelleres Vertrauen)</li>
@@ -511,7 +513,7 @@
 
                         <p><code>ItemList</code> Schema Markup ist eine der vielseitigsten Schema.org-Typen: Es ermöglicht Google-Carousels, verbessert die Darstellung von Kategorieseiten und stärkt die interne Linkstruktur durch semantische Hierarchie. Der Schlüssel zum Erfolg liegt in der <strong>Kombination</strong>: ItemList auf der Übersichtsseite, passendes Typ-Markup (Article, Recipe, Product) auf jeder Detailseite.</p>
 
-                        <p>Als nächsten Schritt in unserem Schema-Markup-Cluster empfehlen wir den Artikel über <a href="/blog/faq-schema-markup-vertieft.html">FAQ Schema Markup vollständig implementieren</a> — FAQPage ist eine der einfachsten Wege, Rich Results zu aktivieren und gleichzeitig deine Klickrate zu verbessern. Nutze außerdem unsere <a href="/tools/json-ld-structured-data-validator.html">kostenlose JSON-LD-Validierung</a>, um dein neues Markup sofort zu prüfen.</p>
+                        <p>Als nächsten Schritt in unserem Schema-Markup-Cluster empfehlen wir den Artikel über <a href="/blog/faq-schema-markup-vertieft.html">FAQ Schema Markup vollständig implementieren</a> - FAQPage ist eine der einfachsten Wege, Rich Results zu aktivieren und gleichzeitig deine Klickrate zu verbessern. Nutze außerdem unsere <a href="/tools/json-ld-structured-data-validator.html">kostenlose JSON-LD-Validierung</a>, um dein neues Markup sofort zu prüfen.</p>
 
                     </div>
 
@@ -587,6 +589,7 @@
                     <a href="/impressum.html" class="hover:text-white transition-colors">Impressum</a>
                     <a href="/datenschutz.html" class="hover:text-white transition-colors">Datenschutz</a>
                     <a href="/agb.html" class="hover:text-white transition-colors">AGB</a>
+                    <a href="/ueber-uns.html" class="hover:text-white transition-colors">Über uns</a>
                 </div>
                 <p class="text-sm text-gray-500">&copy; 2026 Thümmler AI GmbH</p>
             </div>
