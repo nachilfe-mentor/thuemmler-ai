@@ -5,167 +5,169 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Mon, 20 Apr 2026 05:51:09 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 21 Apr 2026 00:46:12 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
-      <title>OpeningHoursSpecification Schema Markup: Öffnungszeiten für Google richtig einbinden</title>
-      <link>https://shift07.ai/blog/openinghours-schema-markup-seo.html</link>
-      <guid>https://shift07.ai/blog/openinghours-schema-markup-seo.html</guid>
-      <pubDate>Mon, 20 Apr 2026 05:50:43 +0000</pubDate>
-      <description>OpeningHoursSpecification Schema Markup: So zeigt Google deine Öffnungszeiten direkt in den Suchergebnissen an — mit JSON-LD-Beispielen für Zahnärzte, Restaurants, Handwerker und Shops.</description>
-      <category>Lokal-SEO</category>
-    </item>
-    <item>
-      <title>BreadcrumbList Schema Markup vertieft: Dynamische Breadcrumbs, E-Commerce und Fehlerdiagnose</title>
-      <link>https://shift07.ai/blog/breadcrumblist-schema-markup-vertieft.html</link>
-      <guid>https://shift07.ai/blog/breadcrumblist-schema-markup-vertieft.html</guid>
-      <pubDate>Mon, 20 Apr 2026 05:47:14 +0000</pubDate>
-      <description>BreadcrumbList Schema Markup vertieft: Dynamische Breadcrumbs für SPAs, mehrsprachige Sites, E-Commerce-Szenarien und häufige GSC-Fehler beheben — die komplette Profi-Anleitung.</description>
+      <title>ContactPoint Schema Markup: Kontaktdaten für Google strukturiert bereitstellen</title>
+      <link>https://shift07.ai/blog/contactpoint-schema-markup-seo.html</link>
+      <guid>https://shift07.ai/blog/contactpoint-schema-markup-seo.html</guid>
+      <pubDate>Tue, 21 Apr 2026 00:45:46 +0000</pubDate>
+      <description>ContactPoint Schema Markup erklärt: So bindest du Telefonnummern, E-Mail-Adressen und Kontaktformulare als strukturierte Daten ein und verbesserst deine Sichtbarkeit in Google.</description>
       <category>Schema Markup</category>
     </item>
     <item>
-      <title>AggregateRating Schema Markup vertieft: Bewertungssterne richtig implementieren 2026</title>
-      <link>https://shift07.ai/blog/aggregaterating-schema-markup-vertieft.html</link>
-      <guid>https://shift07.ai/blog/aggregaterating-schema-markup-vertieft.html</guid>
-      <pubDate>Mon, 20 Apr 2026 04:10:26 +0000</pubDate>
-      <description>AggregateRating Schema Markup vollständig erklärt: ratingValue, reviewCount, bestRating — alle Properties, erlaubte Typen und häufige Fehler. Mit vollständigen JSON-LD-Beispielen.</description>
+      <title>Article Schema Markup: Blog-Artikel für Rich Snippets optimieren</title>
+      <link>https://shift07.ai/blog/article-schema-markup-seo.html</link>
+      <guid>https://shift07.ai/blog/article-schema-markup-seo.html</guid>
+      <pubDate>Mon, 20 Apr 2026 10:04:37 +0000</pubDate>
+      <description>Article Schema Markup richtig implementieren: NewsArticle vs. BlogPosting vs. Article - Unterschiede, vollständiges JSON-LD-Beispiel und Google-Anforderungen erklärt.</description>
+      <category>Tech-SEO</category>
+    </item>
+    <item>
+      <title>BookReview Schema Markup: Buchrezensionen als Rich Snippets in Google</title>
+      <link>https://shift07.ai/blog/bookreview-schema-markup-seo.html</link>
+      <guid>https://shift07.ai/blog/bookreview-schema-markup-seo.html</guid>
+      <pubDate>Mon, 20 Apr 2026 10:04:37 +0000</pubDate>
+      <description>BookReview Schema Markup korrekt implementieren: So zeigt Google deine Buchrezensionen als Rich Snippets mit Sternebewertungen an. Vollständige Anleitung mit JSON-LD Beispielen.</description>
       <category>Schema Markup</category>
     </item>
     <item>
-      <title>SEO-Fehler bei deutschen Zahnärzten: Auswertung von 47 Praxis-Websites</title>
-      <link>https://shift07.ai/blog/seo-fehler-zahnaerzte-deutsche-praxen.html</link>
-      <guid>https://shift07.ai/blog/seo-fehler-zahnaerzte-deutsche-praxen.html</guid>
-      <pubDate>Mon, 20 Apr 2026 04:04:40 +0000</pubDate>
-      <description>Wir haben 47 Zahnarzt-Websites in Deutschland analysiert und die häufigsten SEO-Fehler ausgewertet. Ergebnis: 59% laden zu viele Scripts, 41% haben kein Schema Markup. Das sind die konkreten Befunde.</description>
-      <category>Datenanalyse</category>
+      <title>BreadcrumbList Schema Markup: Breadcrumb Rich Snippets für SEO</title>
+      <link>https://shift07.ai/blog/breadcrumblist-schema-markup-seo.html</link>
+      <guid>https://shift07.ai/blog/breadcrumblist-schema-markup-seo.html</guid>
+      <pubDate>Mon, 20 Apr 2026 10:04:37 +0000</pubDate>
+      <description>BreadcrumbList Schema Markup richtig einsetzen: So aktivierst du Breadcrumb Rich Snippets in Google, verbesserst die CTR und hilfst Google beim Verstehen deiner Seitenstruktur.</description>
+      <category>Tech-SEO</category>
     </item>
     <item>
-      <title>SpeakableSpecification Schema Markup vertieft: cssSelector, XPath und Sprachassistenten</title>
-      <link>https://shift07.ai/blog/speakablespecification-schema-markup-vertieft.html</link>
-      <guid>https://shift07.ai/blog/speakablespecification-schema-markup-vertieft.html</guid>
-      <pubDate>Mon, 20 Apr 2026 02:25:10 +0000</pubDate>
-      <description>SpeakableSpecification Schema Markup im Detail: cssSelector vs. XPath, welche Inhalte Google vorliest, Einschränkungen 2026 und vollständige JSON-LD-Beispiele für Sprachassistenten.</description>
-      <category>Structured Data</category>
-    </item>
-    <item>
-      <title>VideoObject Schema Markup vertieft: Key Moments, Clips, transcript und seekToAction</title>
-      <link>https://shift07.ai/blog/videoobject-schema-markup-vertieft.html</link>
-      <guid>https://shift07.ai/blog/videoobject-schema-markup-vertieft.html</guid>
-      <pubDate>Mon, 20 Apr 2026 00:33:04 +0000</pubDate>
-      <description>VideoObject Schema Markup für Fortgeschrittene: Key Moments mit hasPart und Clip, seekToAction, transcript Property und Video-Sitemap-Integration — mit vollständigen JSON-LD-Beispielen.</description>
-      <category>Structured Data</category>
-    </item>
-    <item>
-      <title>SpecialAnnouncement Schema Markup: Sonderankündigungen als Rich Results in Google</title>
-      <link>https://shift07.ai/blog/specialannouncement-schema-markup-seo.html</link>
-      <guid>https://shift07.ai/blog/specialannouncement-schema-markup-seo.html</guid>
-      <pubDate>Sun, 19 Apr 2026 04:47:47 +0000</pubDate>
-      <description>SpecialAnnouncement Schema Markup erklärt: Wie du Notfall-Ankündigungen, geänderte Öffnungszeiten und behördliche Meldungen als JSON-LD strukturierst und als Rich Results in Google darstellst.</description>
+      <title>Course Schema Markup: Online-Kurse als Rich Snippets in Google</title>
+      <link>https://shift07.ai/blog/course-schema-markup-seo.html</link>
+      <guid>https://shift07.ai/blog/course-schema-markup-seo.html</guid>
+      <pubDate>Mon, 20 Apr 2026 10:04:37 +0000</pubDate>
+      <description>Course Schema Markup richtig einsetzen: So werden deine Online-Kurse und Weiterbildungsangebote in Google als Rich Snippets angezeigt. Mit JSON-LD-Beispielen und Schritt-für-Schritt-Anleitung.</description>
       <category>Schema Markup</category>
     </item>
     <item>
-      <title>SEO-Fehler bei deutschen Steuerberatern: Auswertung von 58 Kanzlei-Websites</title>
-      <link>https://shift07.ai/blog/seo-fehler-steuerberater-kanzlei-analyse.html</link>
-      <guid>https://shift07.ai/blog/seo-fehler-steuerberater-kanzlei-analyse.html</guid>
-      <pubDate>Sun, 19 Apr 2026 04:41:58 +0000</pubDate>
-      <description>Shift07 hat 58 Steuerberater-Websites in Deutschland analysiert. Ergebnis: 50% fehlen strukturierte Daten, 42% sind JavaScript-überladen, 33% riskieren Duplicate Content. Die vollständige Auswertung.</description>
-      <category>SEO-Analyse</category>
+      <title>Dynamic Rendering für JavaScript SEO: So liest Googlebot deine Website richtig</title>
+      <link>https://shift07.ai/blog/dynamic-rendering-javascript-seo.html</link>
+      <guid>https://shift07.ai/blog/dynamic-rendering-javascript-seo.html</guid>
+      <pubDate>Mon, 20 Apr 2026 10:04:37 +0000</pubDate>
+      <description>Dynamic Rendering erklärt: Warum JavaScript-Websites für Googlebot unsichtbar sein können, wie Dynamic Rendering funktioniert und wann du es wirklich brauchst.</description>
+      <category>Technisches SEO</category>
     </item>
     <item>
-      <title>Event Schema Markup vertieft: MusicEvent, SportsEvent, FoodEvent und alle Sub-Typen</title>
-      <link>https://shift07.ai/blog/event-schema-markup-vertieft.html</link>
-      <guid>https://shift07.ai/blog/event-schema-markup-vertieft.html</guid>
-      <pubDate>Sun, 19 Apr 2026 03:06:16 +0000</pubDate>
-      <description>Event Schema vertieft: MusicEvent, SportsEvent, FoodEvent, TheaterEvent und alle Sub-Typen erklärt. Mit JSON-LD-Beispielen und Best Practices für Rich Results.</description>
+      <title>FAQPage Schema Markup: FAQ Rich Snippets für Google aktivieren</title>
+      <link>https://shift07.ai/blog/faqpage-schema-markup-seo.html</link>
+      <guid>https://shift07.ai/blog/faqpage-schema-markup-seo.html</guid>
+      <pubDate>Mon, 20 Apr 2026 10:04:37 +0000</pubDate>
+      <description>FAQPage Schema Markup richtig implementieren: So aktivierst du FAQ Rich Snippets in den SERPs, mehr Platz in Google belegst und die CTR deutlich steigerst - mit vollständigen JSON-LD-Beispielen.</description>
+      <category>Tech-SEO</category>
+    </item>
+    <item>
+      <title>Product Schema Markup: Produkte mit Rich Snippets in Google hervorheben</title>
+      <link>https://shift07.ai/blog/product-schema-markup-seo.html</link>
+      <guid>https://shift07.ai/blog/product-schema-markup-seo.html</guid>
+      <pubDate>Mon, 20 Apr 2026 10:04:37 +0000</pubDate>
+      <description>Product Schema Markup richtig einsetzen: Preis, Bewertungen und Verfügbarkeit als Rich Snippets in Google anzeigen. Vollständige JSON-LD-Anleitung für Online-Shops 2026.</description>
+      <category>Tech-SEO</category>
+    </item>
+    <item>
+      <title>Server-Log-Analyse für SEO: Crawl-Anomalien erkennen und Googlebot-Muster verstehen</title>
+      <link>https://shift07.ai/blog/server-log-analyse-seo-fortgeschritten.html</link>
+      <guid>https://shift07.ai/blog/server-log-analyse-seo-fortgeschritten.html</guid>
+      <pubDate>Mon, 20 Apr 2026 10:04:37 +0000</pubDate>
+      <description>Fortgeschrittene Server-Log-Analyse für SEO: Crawl-Anomalien erkennen, Googlebot-Muster auswerten, Regex-Filter einsetzen und Log-Daten mit GSC kombinieren. Praxisanleitung für SEO-Profis.</description>
+      <category>Technisches SEO</category>
+    </item>
+    <item>
+      <title>SoftwareApplication Schema Markup: Apps in Google Rich Results</title>
+      <link>https://shift07.ai/blog/softwareapplication-schema-markup-seo.html</link>
+      <guid>https://shift07.ai/blog/softwareapplication-schema-markup-seo.html</guid>
+      <pubDate>Mon, 20 Apr 2026 10:04:37 +0000</pubDate>
+      <description>SoftwareApplication Schema Markup für SEO: JSON-LD für Apps, Web-Tools und Software richtig implementieren, Bewertungen als Rich Snippets anzeigen und die Sichtbarkeit in Google steigern.</description>
       <category>Schema Markup</category>
     </item>
     <item>
       <title>speakable Property: Schema Markup für Sprachassistenten (Google Assistant, Alexa)</title>
       <link>https://shift07.ai/blog/speakable-property-schema-markup.html</link>
       <guid>https://shift07.ai/blog/speakable-property-schema-markup.html</guid>
-      <pubDate>Sun, 19 Apr 2026 02:59:56 +0000</pubDate>
+      <pubDate>Mon, 20 Apr 2026 10:04:37 +0000</pubDate>
       <description>Das speakable Property von Schema.org markiert Inhalte für Sprachassistenten. Lerne, wie du Google Assistant, Alexa und Co. mit JSON-LD-Markup optimierst.</description>
+      <category>Schema Markup</category>
+    </item>
+    <item>
+      <title>VideoObject Schema Markup: Videos in Google Rich Results und Key Moments</title>
+      <link>https://shift07.ai/blog/videoobject-schema-markup-seo.html</link>
+      <guid>https://shift07.ai/blog/videoobject-schema-markup-seo.html</guid>
+      <pubDate>Mon, 20 Apr 2026 10:04:37 +0000</pubDate>
+      <description>VideoObject Schema Markup für SEO: So werden deine Videos als Rich Results in Google angezeigt. Pflichtfelder, Key Moments, Clip-Segmente und häufige Fehler - vollständige Anleitung.</description>
+      <category>Structured Data</meta>
+    <!-- Twitter Card -->
+    <meta name=</category>
+    </item>
+    <item>
+      <title>BreadcrumbList Schema Markup vertieft: Dynamische Breadcrumbs, E-Commerce und Fehlerdiagnose</title>
+      <link>https://shift07.ai/blog/breadcrumblist-schema-markup-vertieft.html</link>
+      <guid>https://shift07.ai/blog/breadcrumblist-schema-markup-vertieft.html</guid>
+      <pubDate>Mon, 20 Apr 2026 10:04:37 +0000</pubDate>
+      <description>BreadcrumbList Schema Markup vertieft: Dynamische Breadcrumbs für SPAs, mehrsprachige Sites, E-Commerce-Szenarien und häufige GSC-Fehler beheben - die komplette Profi-Anleitung.</description>
       <category>Schema Markup</category>
     </item>
     <item>
       <title>CollectionPage Schema Markup: Kategorieseiten und Sammlungen für Google optimieren</title>
       <link>https://shift07.ai/blog/collectionpage-schema-markup-seo.html</link>
       <guid>https://shift07.ai/blog/collectionpage-schema-markup-seo.html</guid>
-      <pubDate>Sun, 19 Apr 2026 01:24:53 +0000</pubDate>
+      <pubDate>Mon, 20 Apr 2026 10:04:37 +0000</pubDate>
       <description>CollectionPage Schema Markup erklärt: Wie du Kategorieseiten, Archivseiten und Inhaltssammlungen mit JSON-LD für Google strukturierst und semantisch beschreibst.</description>
       <category>Schema Markup</category>
+    </item>
+    <item>
+      <title>Evergreen Content für SEO: Artikel, die jahrelang Traffic bringen</title>
+      <link>https://shift07.ai/blog/evergreen-content-seo-strategie.html</link>
+      <guid>https://shift07.ai/blog/evergreen-content-seo-strategie.html</guid>
+      <pubDate>Mon, 20 Apr 2026 10:04:37 +0000</pubDate>
+      <description>Evergreen Content bringt dauerhaft organischen Traffic. Lerne, welche Themen zeitlos sind, wie du sie schreibst und wie du sie aktuell hältst.</description>
+      <category>Content-Marketing</category>
     </item>
     <item>
       <title>ItemList Schema Markup: Listenformate und Sitelinks für Google optimieren</title>
       <link>https://shift07.ai/blog/itemlist-schema-markup-seo.html</link>
       <guid>https://shift07.ai/blog/itemlist-schema-markup-seo.html</guid>
-      <pubDate>Sun, 19 Apr 2026 01:19:00 +0000</pubDate>
+      <pubDate>Mon, 20 Apr 2026 10:04:37 +0000</pubDate>
       <description>ItemList Schema Markup erklärt: Wie du Listenformate, Top-10-Artikel, Rezeptsammlungen und Sitelinks mit JSON-LD für Google Rich Results optimierst.</description>
       <category>Schema Markup</category>
     </item>
     <item>
-      <title>FAQ Schema Markup vertieft: FAQPage JSON-LD vollständig implementieren 2026</title>
-      <link>https://shift07.ai/blog/faq-schema-markup-vertieft.html</link>
-      <guid>https://shift07.ai/blog/faq-schema-markup-vertieft.html</guid>
-      <pubDate>Sat, 18 Apr 2026 04:14:12 +0000</pubDate>
-      <description>FAQ Schema Markup vertieft: FAQPage mit verschachtelten Fragen, Validierungsregeln, Kombinationsstrategien und häufigen Fehlern. Vollständige Anleitung 2026.</description>
-      <category>Schema Markup</category>
+      <title>JSON-LD vs. Microdata vs. RDFa: Structured Data Formate für SEO im Vergleich</title>
+      <link>https://shift07.ai/blog/json-ld-microdata-rdfa-structured-data.html</link>
+      <guid>https://shift07.ai/blog/json-ld-microdata-rdfa-structured-data.html</guid>
+      <pubDate>Mon, 20 Apr 2026 10:04:37 +0000</pubDate>
+      <description>JSON-LD, Microdata oder RDFa? Wir vergleichen alle drei Structured-Data-Formate für SEO, erklären die Unterschiede und zeigen, welches Format Google bevorzugt.</description>
+      <category>Tech-SEO</category>
     </item>
     <item>
-      <title>WebPage und WebSite Schema Markup: Vollständige Anleitung 2026</title>
-      <link>https://shift07.ai/blog/webpage-website-schema-markup-seo.html</link>
-      <guid>https://shift07.ai/blog/webpage-website-schema-markup-seo.html</guid>
-      <pubDate>Sat, 18 Apr 2026 04:08:23 +0000</pubDate>
-      <description>WebPage und WebSite Schema Markup richtig einsetzen: Alle Properties, SiteSearch-Aktion, JSON-LD-Beispiele und häufige Fehler. Schritt-für-Schritt-Anleitung 2026.</description>
-      <category>Schema Markup</category>
+      <title>Linkable Assets erstellen: So baust du Inhalte, die Backlinks anziehen</title>
+      <link>https://shift07.ai/blog/linkable-assets-backlinks-erstellen.html</link>
+      <guid>https://shift07.ai/blog/linkable-assets-backlinks-erstellen.html</guid>
+      <pubDate>Mon, 20 Apr 2026 10:04:37 +0000</pubDate>
+      <description>Linkable Assets sind Inhalte, die andere Websites freiwillig verlinken. Erfahre, welche 7 Asset-Typen am besten funktionieren und wie du sie Schritt für Schritt erstellst.</description>
+      <category>Content-Marketing</category>
     </item>
     <item>
-      <title>Organization Schema Markup: Alle Properties für dein Unternehmen (Vertiefung)</title>
-      <link>https://shift07.ai/blog/organization-schema-markup-vertieft.html</link>
-      <guid>https://shift07.ai/blog/organization-schema-markup-vertieft.html</guid>
-      <pubDate>Sat, 18 Apr 2026 02:34:03 +0000</pubDate>
-      <description>Organization Schema Markup vollständig implementieren: Alle Properties von sameAs bis contactPoint erklärt. JSON-LD für Unternehmen, Vereine und Organisationen 2026.</description>
-      <category>Schema Markup</category>
+      <title>LocalBusiness Schema Markup: Vollständige Anleitung 2026</title>
+      <link>https://shift07.ai/blog/localbusiness-schema-markup-anleitung.html</link>
+      <guid>https://shift07.ai/blog/localbusiness-schema-markup-anleitung.html</guid>
+      <pubDate>Mon, 20 Apr 2026 10:04:37 +0000</pubDate>
+      <description>LocalBusiness Schema Markup richtig einsetzen: Alle Properties, JSON-LD-Beispiele, Sub-Typen und häufige Fehler - die vollständige Anleitung für lokale Unternehmen.</description>
+      <category>Tech-SEO</category>
     </item>
     <item>
-      <title>Person Schema Markup: Autoren-Schema für Google und E-E-A-T</title>
-      <link>https://shift07.ai/blog/person-schema-markup-seo.html</link>
-      <guid>https://shift07.ai/blog/person-schema-markup-seo.html</guid>
-      <pubDate>Sat, 18 Apr 2026 02:27:06 +0000</pubDate>
-      <description>Person Schema Markup richtig einsetzen: JSON-LD für Autoren-Seiten, About-Pages und E-E-A-T. Alle Properties, vollständige Beispiele und Best Practices 2026.</description>
-      <category>Schema Markup</category>
-    </item>
-    <item>
-      <title>Recipe Schema Markup: Rezepte als Rich Snippets in Google</title>
-      <link>https://shift07.ai/blog/recipe-schema-markup-seo.html</link>
-      <guid>https://shift07.ai/blog/recipe-schema-markup-seo.html</guid>
-      <pubDate>Sat, 18 Apr 2026 00:49:31 +0000</pubDate>
-      <description>Recipe Schema Markup Schritt für Schritt implementieren: So erscheinen deine Rezepte mit Kochzeit, Nährwerten und Sternebewertungen als Rich Snippets in Google. JSON-LD Anleitung.</description>
-      <category>Schema Markup</category>
-    </item>
-    <item>
-      <title>BookReview Schema Markup: Buchrezensionen als Rich Snippets in Google</title>
-      <link>https://shift07.ai/blog/bookreview-schema-markup-seo.html</link>
-      <guid>https://shift07.ai/blog/bookreview-schema-markup-seo.html</guid>
-      <pubDate>Sat, 18 Apr 2026 00:45:51 +0000</pubDate>
-      <description>BookReview Schema Markup korrekt implementieren: So zeigt Google deine Buchrezensionen als Rich Snippets mit Sternebewertungen an. Vollständige Anleitung mit JSON-LD Beispielen.</description>
-      <category>Schema Markup</category>
-    </item>
-    <item>
-      <title>Course Schema Markup: Online-Kurse als Rich Snippets in Google</title>
-      <link>https://shift07.ai/blog/course-schema-markup-seo.html</link>
-      <guid>https://shift07.ai/blog/course-schema-markup-seo.html</guid>
-      <pubDate>Fri, 17 Apr 2026 05:06:35 +0000</pubDate>
-      <description>Course Schema Markup richtig einsetzen: So werden deine Online-Kurse und Weiterbildungsangebote in Google als Rich Snippets angezeigt. Mit JSON-LD-Beispielen und Schritt-für-Schritt-Anleitung.</description>
-      <category>Schema Markup</category>
-    </item>
-    <item>
-      <title>SoftwareApplication Schema Markup: Apps in Google Rich Results</title>
-      <link>https://shift07.ai/blog/softwareapplication-schema-markup-seo.html</link>
-      <guid>https://shift07.ai/blog/softwareapplication-schema-markup-seo.html</guid>
-      <pubDate>Fri, 17 Apr 2026 03:31:37 +0000</pubDate>
-      <description>SoftwareApplication Schema Markup für SEO: JSON-LD für Apps, Web-Tools und Software richtig implementieren, Bewertungen als Rich Snippets anzeigen und die Sichtbarkeit in Google steigern.</description>
-      <category>Schema Markup</category>
+      <title>OpeningHoursSpecification Schema Markup: Öffnungszeiten für Google richtig einbinden</title>
+      <link>https://shift07.ai/blog/openinghours-schema-markup-seo.html</link>
+      <guid>https://shift07.ai/blog/openinghours-schema-markup-seo.html</guid>
+      <pubDate>Mon, 20 Apr 2026 10:04:37 +0000</pubDate>
+      <description>OpeningHoursSpecification Schema Markup: So zeigt Google deine Öffnungszeiten direkt in den Suchergebnissen an - mit JSON-LD-Beispielen für Zahnärzte, Restaurants, Handwerker und Shops.</description>
+      <category>Lokal-SEO</category>
     </item>
   </channel>
 </rss>

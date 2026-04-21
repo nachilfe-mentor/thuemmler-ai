@@ -2,13 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://shift07.ai/</loc>
-    <lastmod>2026-04-02</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://shift07.ai/blog/</loc>
-    <lastmod>2026-04-20</lastmod>
+    <lastmod>2026-04-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
@@ -26,43 +26,43 @@
   </url>
   <url>
     <loc>https://shift07.ai/blog/amp-accelerated-mobile-pages-erklaert.html</loc>
-    <lastmod>2026-04-07</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://shift07.ai/blog/article-schema-markup-seo.html</loc>
-    <lastmod>2026-04-16</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://shift07.ai/blog/backlink-profil-analysieren-bereinigen.html</loc>
-    <lastmod>2026-04-10</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://shift07.ai/blog/bilder-web-optimieren.html</loc>
-    <lastmod>2026-04-04</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://shift07.ai/blog/bildoptimierung-webp-avif-lazy-loading.html</loc>
-    <lastmod>2026-04-13</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://shift07.ai/blog/bookreview-schema-markup-seo.html</loc>
-    <lastmod>2026-04-18</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://shift07.ai/blog/breadcrumblist-schema-markup-seo.html</loc>
-    <lastmod>2026-04-16</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -74,397 +74,403 @@
   </url>
   <url>
     <loc>https://shift07.ai/blog/broken-link-building-seo-chance.html</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://shift07.ai/blog/caching-website-einrichten.html</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://shift07.ai/blog/canonical-tags-seo.html</loc>
-    <lastmod>2026-04-03</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://shift07.ai/blog/collectionpage-schema-markup-seo.html</loc>
-    <lastmod>2026-04-19</lastmod>
+    <lastmod>2026-04-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://shift07.ai/blog/contactpoint-schema-markup-seo.html</loc>
+    <lastmod>2026-04-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://shift07.ai/blog/content-audit-inhalte-aktualisieren.html</loc>
-    <lastmod>2026-04-09</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://shift07.ai/blog/content-briefing-erstellen-seo-texte.html</loc>
-    <lastmod>2026-04-12</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://shift07.ai/blog/content-laenge-seo-wie-lang-artikel.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://shift07.ai/blog/content-marketing-seo-backlinks.html</loc>
-    <lastmod>2026-04-14</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://shift07.ai/blog/content-recycling-alte-inhalte-traffic.html</loc>
-    <lastmod>2026-04-12</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://shift07.ai/blog/core-web-vitals-erklaert.html</loc>
-    <lastmod>2026-04-04</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://shift07.ai/blog/core-web-vitals-verbessern-lcp-cls-inp.html</loc>
-    <lastmod>2026-04-13</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://shift07.ai/blog/course-schema-markup-seo.html</loc>
-    <lastmod>2026-04-17</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://shift07.ai/blog/crawl-budget-optimieren.html</loc>
-    <lastmod>2026-04-04</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://shift07.ai/blog/dofollow-nofollow-links-seo.html</loc>
-    <lastmod>2026-04-10</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://shift07.ai/blog/duplicate-content-erkennen-beheben.html</loc>
-    <lastmod>2026-04-14</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://shift07.ai/blog/dynamic-rendering-javascript-seo.html</loc>
-    <lastmod>2026-04-17</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://shift07.ai/blog/eat-google-qualitaetssignale.html</loc>
-    <lastmod>2026-04-09</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://shift07.ai/blog/ecommerce-seo-leitfaden.html</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://shift07.ai/blog/event-schema-markup-seo.html</loc>
-    <lastmod>2026-04-16</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://shift07.ai/blog/event-schema-markup-vertieft.html</loc>
-    <lastmod>2026-04-19</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://shift07.ai/blog/evergreen-content-seo-strategie.html</loc>
-    <lastmod>2026-04-14</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://shift07.ai/blog/facettennavigation-seo-filter-urls.html</loc>
-    <lastmod>2026-04-09</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://shift07.ai/blog/faq-schema-markup-vertieft.html</loc>
-    <lastmod>2026-04-18</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://shift07.ai/blog/faqpage-schema-markup-seo.html</loc>
-    <lastmod>2026-04-16</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://shift07.ai/blog/featured-snippets-position-0.html</loc>
-    <lastmod>2026-04-07</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://shift07.ai/blog/gastbeitraege-seo-backlinks.html</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://shift07.ai/blog/google-bewertungen-bekommen.html</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://shift07.ai/blog/google-my-business-optimieren.html</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://shift07.ai/blog/heading-struktur-optimieren.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://shift07.ai/blog/howto-schema-markup-seo.html</loc>
-    <lastmod>2026-04-17</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://shift07.ai/blog/hreflang-tags-mehrsprachige-seo.html</loc>
-    <lastmod>2026-04-11</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://shift07.ai/blog/https-ssl-zertifikat-website-sicherheit.html</loc>
-    <lastmod>2026-04-02</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://shift07.ai/blog/indexierung-pruefen-google.html</loc>
-    <lastmod>2026-04-04</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://shift07.ai/blog/indexnow-url-submission-standard.html</loc>
-    <lastmod>2026-04-11</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://shift07.ai/blog/inhalte-featured-snippets-optimieren.html</loc>
-    <lastmod>2026-04-10</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://shift07.ai/blog/interne-verlinkung-seo-strategie.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://shift07.ai/blog/itemlist-schema-markup-seo.html</loc>
-    <lastmod>2026-04-19</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://shift07.ai/blog/javascript-performance-seo-lazy-loading-code-splitting.html</loc>
-    <lastmod>2026-04-13</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://shift07.ai/blog/javascript-seo-spa-indexierung.html</loc>
-    <lastmod>2026-04-17</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://shift07.ai/blog/json-ld-microdata-rdfa-structured-data.html</loc>
-    <lastmod>2026-04-15</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://shift07.ai/blog/kategorieseiten-seo-optimieren.html</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://shift07.ai/blog/keyword-clustering-seo.html</loc>
-    <lastmod>2026-04-09</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://shift07.ai/blog/keyword-density-checker-tool.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://shift07.ai/blog/keyword-kannibalisierung-erkennen-beheben.html</loc>
-    <lastmod>2026-04-11</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://shift07.ai/blog/keyword-recherche-einsteiger.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://shift07.ai/blog/keyword-recherche-kostenlose-tools.html</loc>
-    <lastmod>2026-04-13</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://shift07.ai/blog/ladezeit-ranking-faktor-page-speed.html</loc>
-    <lastmod>2026-04-12</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://shift07.ai/blog/linkable-assets-backlinks-erstellen.html</loc>
-    <lastmod>2026-04-15</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://shift07.ai/blog/linkaufbau-messen-tools-kpis.html</loc>
-    <lastmod>2026-04-15</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://shift07.ai/blog/linkaufbau-strategien-backlinks.html</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://shift07.ai/blog/linkjuice-pagerank-seo.html</loc>
-    <lastmod>2026-04-10</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://shift07.ai/blog/localbusiness-schema-markup-anleitung.html</loc>
-    <lastmod>2026-04-16</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://shift07.ai/blog/log-datei-analyse-seo.html</loc>
-    <lastmod>2026-04-11</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://shift07.ai/blog/lokale-backlinks-aufbauen.html</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://shift07.ai/blog/lokale-keywords-finden-einsetzen.html</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://shift07.ai/blog/lokaler-linkaufbau-ohne-budget.html</loc>
-    <lastmod>2026-04-15</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://shift07.ai/blog/lokales-seo-kleine-unternehmen.html</loc>
-    <lastmod>2026-04-02</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://shift07.ai/blog/meta-description-optimieren-guide.html</loc>
-    <lastmod>2026-04-12</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://shift07.ai/blog/meta-tags-richtig-einsetzen.html</loc>
-    <lastmod>2026-04-03</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://shift07.ai/blog/mobile-core-web-vitals-optimieren.html</loc>
-    <lastmod>2026-04-07</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://shift07.ai/blog/mobile-optimierung-website-checkliste.html</loc>
-    <lastmod>2026-04-03</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://shift07.ai/blog/mobile-seo-responsive-design.html</loc>
-    <lastmod>2026-04-07</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://shift07.ai/blog/nap-konsistenz-lokales-seo.html</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://shift07.ai/blog/nutzerintention-optimieren-seo.html</loc>
-    <lastmod>2026-04-14</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://shift07.ai/blog/off-page-seo-leitfaden.html</loc>
-    <lastmod>2026-04-10</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://shift07.ai/blog/open-graph-vorschau-social-media-preview.html</loc>
-    <lastmod>2026-04-02</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -476,67 +482,67 @@
   </url>
   <url>
     <loc>https://shift07.ai/blog/organization-schema-markup-vertieft.html</loc>
-    <lastmod>2026-04-18</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://shift07.ai/blog/person-schema-markup-seo.html</loc>
-    <lastmod>2026-04-18</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://shift07.ai/blog/pillar-pages-content-silos.html</loc>
-    <lastmod>2026-04-09</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://shift07.ai/blog/product-schema-markup-seo.html</loc>
-    <lastmod>2026-04-16</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://shift07.ai/blog/produktseiten-seo-optimieren.html</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://shift07.ai/blog/recipe-schema-markup-seo.html</loc>
-    <lastmod>2026-04-18</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://shift07.ai/blog/render-blocking-ressourcen-entfernen.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://shift07.ai/blog/robots-txt-konfigurieren.html</loc>
-    <lastmod>2026-04-04</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://shift07.ai/blog/seitenstruktur-seo-content-hierarchie.html</loc>
-    <lastmod>2026-04-14</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://shift07.ai/blog/seo-fehler-analyse-deutsche-unternehmen.html</loc>
-    <lastmod>2026-04-15</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://shift07.ai/blog/seo-fehler-steuerberater-kanzlei-analyse.html</loc>
-    <lastmod>2026-04-19</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -548,37 +554,37 @@
   </url>
   <url>
     <loc>https://shift07.ai/blog/server-log-analyse-seo-fortgeschritten.html</loc>
-    <lastmod>2026-04-17</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://shift07.ai/blog/sitemap-validator-tool.html</loc>
-    <lastmod>2026-04-04</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://shift07.ai/blog/sitemap-xml-erstellen-einreichen.html</loc>
-    <lastmod>2026-04-04</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://shift07.ai/blog/skyscraper-technik-seo-backlinks.html</loc>
-    <lastmod>2026-04-14</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://shift07.ai/blog/softwareapplication-schema-markup-seo.html</loc>
-    <lastmod>2026-04-17</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://shift07.ai/blog/speakable-property-schema-markup.html</loc>
-    <lastmod>2026-04-19</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -590,67 +596,67 @@
   </url>
   <url>
     <loc>https://shift07.ai/blog/specialannouncement-schema-markup-seo.html</loc>
-    <lastmod>2026-04-19</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://shift07.ai/blog/strukturierte-daten-seo-schema-markup.html</loc>
-    <lastmod>2026-04-02</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://shift07.ai/blog/suchintention-verstehen-seo.html</loc>
-    <lastmod>2026-04-12</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://shift07.ai/blog/technisches-seo-audit-anleitung.html</loc>
-    <lastmod>2026-04-11</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://shift07.ai/blog/tf-idf-semantic-seo-thematische-relevanz.html</loc>
-    <lastmod>2026-04-12</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://shift07.ai/blog/title-tag-optimieren-seo.html</loc>
-    <lastmod>2026-04-13</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://shift07.ai/blog/touchscreen-ux-mobile-usability-seo.html</loc>
-    <lastmod>2026-04-07</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://shift07.ai/blog/toxic-links-disavow-seo.html</loc>
-    <lastmod>2026-04-15</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://shift07.ai/blog/ttfb-verbessern-server-antwortzeit.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://shift07.ai/blog/url-struktur-seo-freundlich.html</loc>
-    <lastmod>2026-04-13</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://shift07.ai/blog/videoobject-schema-markup-seo.html</loc>
-    <lastmod>2026-04-17</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -662,169 +668,169 @@
   </url>
   <url>
     <loc>https://shift07.ai/blog/was-ist-seo.html</loc>
-    <lastmod>2026-04-03</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://shift07.ai/blog/was-sind-backlinks-grundlagen-seo.html</loc>
-    <lastmod>2026-04-07</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://shift07.ai/blog/webpage-website-schema-markup-seo.html</loc>
-    <lastmod>2026-04-18</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://shift07.ai/blog/website-fehler-handwerker.html</loc>
-    <lastmod>2026-04-02</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://shift07.ai/blog/website-geschwindigkeit-verbessern.html</loc>
-    <lastmod>2026-04-02</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://shift07.ai/blog/woocommerce-seo-einstellungen.html</loc>
-    <lastmod>2026-04-09</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://shift07.ai/tools/anchor-text-diversitaet-checker.html</loc>
-    <lastmod>2026-04-15</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://shift07.ai/tools/article-schema-generator.html</loc>
-    <lastmod>2026-04-14</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://shift07.ai/tools/backlink-anchor-text-analyzer.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://shift07.ai/tools/base64-encoder-decoder.html</loc>
-    <lastmod>2026-04-03</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://shift07.ai/tools/bookreview-schema-generator.html</loc>
-    <lastmod>2026-04-18</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://shift07.ai/tools/breadcrumb-schema-generator.html</loc>
-    <lastmod>2026-04-14</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://shift07.ai/tools/canonical-tag-checker.html</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://shift07.ai/tools/core-web-vitals-erklaerer.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://shift07.ai/tools/disavow-datei-generator.html</loc>
-    <lastmod>2026-04-15</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://shift07.ai/tools/duplicate-meta-finder.html</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://shift07.ai/tools/event-schema-generator.html</loc>
-    <lastmod>2026-04-16</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://shift07.ai/tools/faq-schema-generator.html</loc>
-    <lastmod>2026-04-09</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://shift07.ai/tools/farbkontrast-pruefer.html</loc>
-    <lastmod>2026-04-02</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://shift07.ai/tools/heading-struktur-checker.html</loc>
-    <lastmod>2026-04-02</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://shift07.ai/tools/howto-schema-generator.html</loc>
-    <lastmod>2026-04-17</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://shift07.ai/tools/hreflang-tag-generator.html</loc>
-    <lastmod>2026-04-11</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://shift07.ai/tools/hreflang-tag-validator.html</loc>
-    <lastmod>2026-04-07</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://shift07.ai/tools/http-header-checker.html</loc>
-    <lastmod>2026-04-10</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://shift07.ai/tools/http-status-code-tester.html</loc>
-    <lastmod>2026-04-13</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://shift07.ai/tools/image-alt-tag-checker.html</loc>
-    <lastmod>2026-04-09</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://shift07.ai/tools/indexnow-url-submitter.html</loc>
-    <lastmod>2026-04-12</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://shift07.ai/tools/internal-link-counter.html</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -836,19 +842,19 @@
   </url>
   <url>
     <loc>https://shift07.ai/tools/itemlist-schema-generator.html</loc>
-    <lastmod>2026-04-19</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://shift07.ai/tools/javascript-seo-checker.html</loc>
-    <lastmod>2026-04-11</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://shift07.ai/tools/json-ld-structured-data-validator.html</loc>
-    <lastmod>2026-04-13</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -860,151 +866,151 @@
   </url>
   <url>
     <loc>https://shift07.ai/tools/keyword-clustering-tool.html</loc>
-    <lastmod>2026-04-13</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://shift07.ai/tools/keyword-density-checker.html</loc>
-    <lastmod>2026-04-02</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://shift07.ai/tools/keyword-dichte-visualizer.html</loc>
-    <lastmod>2026-04-09</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://shift07.ai/tools/keyword-intent-classifier.html</loc>
-    <lastmod>2026-04-15</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://shift07.ai/tools/lesbarkeits-score-checker.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://shift07.ai/tools/log-file-analyzer.html</loc>
-    <lastmod>2026-04-11</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://shift07.ai/tools/meta-tag-generator.html</loc>
-    <lastmod>2026-04-02</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://shift07.ai/tools/nofollow-link-checker.html</loc>
-    <lastmod>2026-04-10</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://shift07.ai/tools/open-graph-checker.html</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://shift07.ai/tools/open-graph-vorschau.html</loc>
-    <lastmod>2026-04-02</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://shift07.ai/tools/organization-schema-generator.html</loc>
-    <lastmod>2026-04-17</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://shift07.ai/tools/page-speed-estimator.html</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://shift07.ai/tools/person-schema-generator.html</loc>
-    <lastmod>2026-04-18</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://shift07.ai/tools/product-schema-generator.html</loc>
-    <lastmod>2026-04-16</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://shift07.ai/tools/qr-code-generator.html</loc>
-    <lastmod>2026-04-02</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://shift07.ai/tools/recipe-schema-generator.html</loc>
-    <lastmod>2026-04-18</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://shift07.ai/tools/redirect-ketten-tester.html</loc>
-    <lastmod>2026-04-10</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://shift07.ai/tools/review-schema-generator.html</loc>
-    <lastmod>2026-04-16</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://shift07.ai/tools/robots-meta-tag-generator.html</loc>
-    <lastmod>2026-04-14</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://shift07.ai/tools/robots-txt-generator.html</loc>
-    <lastmod>2026-04-02</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://shift07.ai/tools/robots-txt-tester.html</loc>
-    <lastmod>2026-04-07</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://shift07.ai/tools/schema-markup-generator.html</loc>
-    <lastmod>2026-04-04</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://shift07.ai/tools/serp-snippet-optimizer.html</loc>
-    <lastmod>2026-04-12</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://shift07.ai/tools/sitemap-generator.html</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://shift07.ai/tools/sitemap-validator.html</loc>
-    <lastmod>2026-04-04</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1016,61 +1022,61 @@
   </url>
   <url>
     <loc>https://shift07.ai/tools/specialannouncement-schema-generator.html</loc>
-    <lastmod>2026-04-19</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://shift07.ai/tools/ssl-zertifikat-checker.html</loc>
-    <lastmod>2026-04-03</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://shift07.ai/tools/text-html-ratio-checker.html</loc>
-    <lastmod>2026-04-07</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://shift07.ai/tools/title-tag-laengen-checker.html</loc>
-    <lastmod>2026-04-04</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://shift07.ai/tools/title-tag-serp-preview-generator.html</loc>
-    <lastmod>2026-04-12</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://shift07.ai/tools/videoobject-schema-generator.html</loc>
-    <lastmod>2026-04-17</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://shift07.ai/tools/website-schema-sitesearch-generator.html</loc>
-    <lastmod>2026-04-19</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://shift07.ai/impressum.html</loc>
-    <lastmod>2026-04-02</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://shift07.ai/datenschutz.html</loc>
-    <lastmod>2026-04-02</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://shift07.ai/agb.html</loc>
-    <lastmod>2026-04-02</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
