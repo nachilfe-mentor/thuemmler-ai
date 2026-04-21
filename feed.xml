@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Tue, 21 Apr 2026 06:26:53 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 21 Apr 2026 06:30:03 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>ImageObject Schema Markup: Bilder für Google Rich Results optimieren</title>
+      <link>https://shift07.ai/blog/imageobject-schema-markup-seo.html</link>
+      <guid>https://shift07.ai/blog/imageobject-schema-markup-seo.html</guid>
+      <pubDate>Tue, 21 Apr 2026 06:29:42 +0000</pubDate>
+      <description>ImageObject Schema Markup richtig einsetzen: So machst du Bilder für Google Rich Results sichtbar, verbesserst Google Discover-Traffic und optimierst dein E-E-A-T. Mit JSON-LD-Beispielen.</description>
+      <category>Schema Markup</category>
+    </item>
     <item>
       <title>PostalAddress Schema Markup: Adressdaten für Google strukturiert einbinden</title>
       <link>https://shift07.ai/blog/postaladdress-schema-markup-seo.html</link>
@@ -160,14 +168,6 @@
       <pubDate>Mon, 20 Apr 2026 10:04:37 +0000</pubDate>
       <description>Evergreen Content bringt dauerhaft organischen Traffic. Lerne, welche Themen zeitlos sind, wie du sie schreibst und wie du sie aktuell hältst.</description>
       <category>Content-Marketing</category>
-    </item>
-    <item>
-      <title>ItemList Schema Markup: Listenformate und Sitelinks für Google optimieren</title>
-      <link>https://shift07.ai/blog/itemlist-schema-markup-seo.html</link>
-      <guid>https://shift07.ai/blog/itemlist-schema-markup-seo.html</guid>
-      <pubDate>Mon, 20 Apr 2026 10:04:37 +0000</pubDate>
-      <description>ItemList Schema Markup erklärt: Wie du Listenformate, Top-10-Artikel, Rezeptsammlungen und Sitelinks mit JSON-LD für Google Rich Results optimierst.</description>
-      <category>Schema Markup</category>
     </item>
   </channel>
 </rss>
