@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Tue, 21 Apr 2026 04:51:52 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 21 Apr 2026 06:26:53 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>PostalAddress Schema Markup: Adressdaten für Google strukturiert einbinden</title>
+      <link>https://shift07.ai/blog/postaladdress-schema-markup-seo.html</link>
+      <guid>https://shift07.ai/blog/postaladdress-schema-markup-seo.html</guid>
+      <pubDate>Tue, 21 Apr 2026 06:26:15 +0000</pubDate>
+      <description>PostalAddress Schema Markup richtig einsetzen: So bindest du Adressdaten als JSON-LD ein, verbesserst dein LocalBusiness-Schema und stärkst dein lokales SEO. Mit Beispielen und Checkliste.</description>
+      <category>Schema Markup</category>
+    </item>
     <item>
       <title>GeoShape Schema Markup: Servicegebiete geografisch definieren</title>
       <link>https://shift07.ai/blog/geoshape-schema-markup-seo.html</link>
@@ -160,14 +168,6 @@
       <pubDate>Mon, 20 Apr 2026 10:04:37 +0000</pubDate>
       <description>ItemList Schema Markup erklärt: Wie du Listenformate, Top-10-Artikel, Rezeptsammlungen und Sitelinks mit JSON-LD für Google Rich Results optimierst.</description>
       <category>Schema Markup</category>
-    </item>
-    <item>
-      <title>JSON-LD vs. Microdata vs. RDFa: Structured Data Formate für SEO im Vergleich</title>
-      <link>https://shift07.ai/blog/json-ld-microdata-rdfa-structured-data.html</link>
-      <guid>https://shift07.ai/blog/json-ld-microdata-rdfa-structured-data.html</guid>
-      <pubDate>Mon, 20 Apr 2026 10:04:37 +0000</pubDate>
-      <description>JSON-LD, Microdata oder RDFa? Wir vergleichen alle drei Structured-Data-Formate für SEO, erklären die Unterschiede und zeigen, welches Format Google bevorzugt.</description>
-      <category>Tech-SEO</category>
     </item>
   </channel>
 </rss>
