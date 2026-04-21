@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Tue, 21 Apr 2026 00:46:12 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 21 Apr 2026 00:49:37 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>ServiceArea Schema Markup: Einzugsgebiet für Google klar definieren</title>
+      <link>https://shift07.ai/blog/servicearea-schema-markup-seo.html</link>
+      <guid>https://shift07.ai/blog/servicearea-schema-markup-seo.html</guid>
+      <pubDate>Tue, 21 Apr 2026 00:49:12 +0000</pubDate>
+      <description>ServiceArea Schema Markup erklärt: So teilst du Google mit, welche Regionen dein Unternehmen bedient — mit GeoShape, AdministrativeArea und Place. Praxisbeispiele für lokale Dienstleister.</description>
+      <category>Schema Markup</category>
+    </item>
     <item>
       <title>ContactPoint Schema Markup: Kontaktdaten für Google strukturiert bereitstellen</title>
       <link>https://shift07.ai/blog/contactpoint-schema-markup-seo.html</link>
@@ -160,14 +168,6 @@
       <pubDate>Mon, 20 Apr 2026 10:04:37 +0000</pubDate>
       <description>LocalBusiness Schema Markup richtig einsetzen: Alle Properties, JSON-LD-Beispiele, Sub-Typen und häufige Fehler - die vollständige Anleitung für lokale Unternehmen.</description>
       <category>Tech-SEO</category>
-    </item>
-    <item>
-      <title>OpeningHoursSpecification Schema Markup: Öffnungszeiten für Google richtig einbinden</title>
-      <link>https://shift07.ai/blog/openinghours-schema-markup-seo.html</link>
-      <guid>https://shift07.ai/blog/openinghours-schema-markup-seo.html</guid>
-      <pubDate>Mon, 20 Apr 2026 10:04:37 +0000</pubDate>
-      <description>OpeningHoursSpecification Schema Markup: So zeigt Google deine Öffnungszeiten direkt in den Suchergebnissen an - mit JSON-LD-Beispielen für Zahnärzte, Restaurants, Handwerker und Shops.</description>
-      <category>Lokal-SEO</category>
     </item>
   </channel>
 </rss>
