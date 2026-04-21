@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Tue, 21 Apr 2026 02:58:11 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 21 Apr 2026 04:48:16 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>GeoShape Schema Markup: Servicegebiete geografisch definieren</title>
+      <link>https://shift07.ai/blog/geoshape-schema-markup-seo.html</link>
+      <guid>https://shift07.ai/blog/geoshape-schema-markup-seo.html</guid>
+      <pubDate>Tue, 21 Apr 2026 04:47:40 +0000</pubDate>
+      <description>GeoShape Schema Markup erklärt: So definierst du Servicegebiete als Polygon, Kreis oder Box für Google – mit JSON-LD-Beispielen für lokale Unternehmen 2026.</description>
+      <category>Schema Markup</category>
+    </item>
     <item>
       <title>OfferCatalog Schema Markup: Leistungsverzeichnis für Google strukturieren</title>
       <link>https://shift07.ai/blog/offercatalog-schema-markup-seo.html</link>
@@ -160,14 +168,6 @@
       <pubDate>Mon, 20 Apr 2026 10:04:37 +0000</pubDate>
       <description>JSON-LD, Microdata oder RDFa? Wir vergleichen alle drei Structured-Data-Formate für SEO, erklären die Unterschiede und zeigen, welches Format Google bevorzugt.</description>
       <category>Tech-SEO</category>
-    </item>
-    <item>
-      <title>Linkable Assets erstellen: So baust du Inhalte, die Backlinks anziehen</title>
-      <link>https://shift07.ai/blog/linkable-assets-backlinks-erstellen.html</link>
-      <guid>https://shift07.ai/blog/linkable-assets-backlinks-erstellen.html</guid>
-      <pubDate>Mon, 20 Apr 2026 10:04:37 +0000</pubDate>
-      <description>Linkable Assets sind Inhalte, die andere Websites freiwillig verlinken. Erfahre, welche 7 Asset-Typen am besten funktionieren und wie du sie Schritt für Schritt erstellst.</description>
-      <category>Content-Marketing</category>
     </item>
   </channel>
 </rss>
