@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K1S1RXBDS8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K1S1RXBDS8');
+    </script>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8475857002943858" crossorigin="anonymous"></script>
+    <title>OfferCatalog Schema Generator - Kostenlos JSON-LD erstellen | Shift07</title>
+    <meta name="description" content="OfferCatalog Schema Generator: Erstelle kostenlos strukturierte Daten für dein Leistungsverzeichnis. JSON-LD für Physiotherapeuten, Handwerker, Berater und mehr.">
+    <meta name="keywords" content="offercatalog schema generator, offercatalog json-ld, leistungsverzeichnis schema markup, structured data generator">
+    <meta name="author" content="Thümmler AI GmbH">
+    <link rel="icon" type="image/png" href="/logo.png">
+    <link rel="canonical" href="https://shift07.ai/tools/offercatalog-schema-generator.html">
+    <link rel="alternate" type="application/rss+xml" title="Shift07 Blog" href="https://shift07.ai/feed.xml">
+    <!-- Open Graph -->
+    <meta property="og:title" content="OfferCatalog Schema Generator - Kostenlos JSON-LD erstellen">
+    <meta property="og:description" content="OfferCatalog Schema Generator: Erstelle kostenlos strukturierte Daten für dein Leistungsverzeichnis. JSON-LD für Physiotherapeuten, Handwerker, Berater und mehr.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://shift07.ai/tools/offercatalog-schema-generator.html">
+    <meta property="og:image" content="https://shift07.ai/tools/images/offercatalog-schema-generator.png">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="Shift07">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="OfferCatalog Schema Generator - Kostenlos JSON-LD erstellen">
+    <meta name="twitter:description" content="Erstelle kostenlos OfferCatalog JSON-LD für dein Leistungsverzeichnis.">
+    <meta name="twitter:image" content="https://shift07.ai/tools/images/offercatalog-schema-generator.png">
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "OfferCatalog Schema Generator",
+      "description": "Kostenloser Generator für OfferCatalog JSON-LD strukturierte Daten. Erstelle Leistungsverzeichnisse für lokale Unternehmen.",
+      "url": "https://shift07.ai/tools/offercatalog-schema-generator.html",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR"
+      },
+      "provider": {
+        "@type": "Organization",
+        "name": "Shift07",
+        "url": "https://shift07.ai"
+      }
+    }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { 'inter': ['Inter', 'system-ui', '-apple-system', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: rgba(15, 23, 42, 0.5); }
+        ::-webkit-scrollbar-thumb { background: rgba(59, 130, 246, 0.5); border-radius: 4px; }
+        html { scroll-behavior: smooth; }
+        .output-code { font-family: 'Courier New', monospace; font-size: 0.8rem; line-height: 1.5; }
+        .offer-card { transition: all 0.2s; }
+        .offer-card:hover { border-color: rgba(59, 130, 246, 0.5); }
+    </style>
+</head>
+<body class="bg-slate-900 text-white min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-slate-900/80 backdrop-blur-xl border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <a href="/" class="flex items-center gap-2">
+                    <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                    <span class="text-xl font-bold text-white">Shift07</span>
+                </a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="/" class="text-gray-300 hover:text-white transition-colors">SEO-Tool</a>
+                    <a href="/blog/" class="text-gray-300 hover:text-white transition-colors">Blog</a>
+                    <a href="/tools/" class="text-white font-medium border-b-2 border-blue-500 pb-0.5">Tools</a>
+                    <a href="/app/#/login" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-5 py-2 rounded-lg font-medium transition-all">Anmelden</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-gray-300 hover:text-white">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900/95 border-b border-white/10">
+            <div class="px-4 py-3 space-y-2">
+                <a href="/" class="block py-2 text-gray-300 hover:text-white">SEO-Tool</a>
+                <a href="/blog/" class="block py-2 text-gray-300 hover:text-white">Blog</a>
+                <a href="/tools/" class="block py-2 text-white font-medium">Tools</a>
+                <a href="/app/#/login" class="block py-2 text-blue-400 hover:text-blue-300">Anmelden</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="pt-16">
+        <div class="bg-gradient-to-br from-blue-600 via-indigo-700 to-purple-800 py-16 px-4 relative overflow-hidden">
+            <img src="/tools/images/offercatalog-schema-generator.png" alt="OfferCatalog Schema Generator" class="absolute inset-0 w-full h-full object-cover opacity-20">
+            <div class="absolute inset-0 bg-black/30"></div>
+            <div class="max-w-4xl mx-auto text-center relative">
+                <span class="inline-block text-sm font-semibold px-4 py-1.5 bg-white/10 text-white/90 rounded-full mb-4">Kostenloser SEO-Generator</span>
+                <h1 class="text-3xl md:text-5xl font-extrabold text-white mb-4">OfferCatalog Schema Generator</h1>
+                <p class="text-lg text-blue-100 max-w-2xl mx-auto">Erstelle strukturierte Daten für dein Leistungsverzeichnis — kopiere das JSON-LD direkt in deine Website.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tool -->
+    <section class="py-10 px-4">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid lg:grid-cols-2 gap-8">
+
+                <!-- Input Panel -->
+                <div class="space-y-6">
+
+                    <!-- Unternehmensdaten -->
+                    <div class="bg-slate-800/50 border border-white/10 rounded-2xl p-6">
+                        <div class="flex items-center gap-3 mb-5">
+                            <div class="w-8 h-8 rounded-full bg-blue-500/20 flex items-center justify-center text-blue-400 font-bold text-sm">1</div>
+                            <h2 class="text-lg font-bold text-white">Unternehmen</h2>
+                        </div>
+                        <div class="space-y-4">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-300 mb-1">Unternehmensname *</label>
+                                <input type="text" id="bizName" placeholder="z.B. Mustermann Physiotherapie" class="w-full bg-slate-700 border border-white/10 rounded-lg px-4 py-2.5 text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 text-sm">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-300 mb-1">Website-URL *</label>
+                                <input type="url" id="bizUrl" placeholder="https://mustermann-physio.de" class="w-full bg-slate-700 border border-white/10 rounded-lg px-4 py-2.5 text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 text-sm">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-300 mb-1">Unternehmenstyp</label>
+                                <select id="bizType" class="w-full bg-slate-700 border border-white/10 rounded-lg px-4 py-2.5 text-white focus:outline-none focus:border-blue-500 text-sm">
+                                    <option value="LocalBusiness">Lokales Unternehmen (allgemein)</option>
+                                    <option value="MedicalBusiness">Arzt / Heilberufe</option>
+                                    <option value="Physiotherapist">Physiotherapeut</option>
+                                    <option value="HomeAndConstructionBusiness">Handwerksbetrieb / Bau</option>
+                                    <option value="Electrician">Elektriker</option>
+                                    <option value="Plumber">Klempner / Sanitär</option>
+                                    <option value="Painter">Maler</option>
+                                    <option value="RoofingContractor">Dachdecker</option>
+                                    <option value="AutoRepair">KFZ-Werkstatt</option>
+                                    <option value="AutomotiveBusiness">Autohaus</option>
+                                    <option value="HairSalon">Friseur</option>
+                                    <option value="BeautySalon">Kosmetikstudio</option>
+                                    <option value="FitnessCenter">Fitnessstudio</option>
+                                    <option value="AccountingService">Steuerberater</option>
+                                    <option value="LegalService">Rechtsdienste</option>
+                                    <option value="Restaurant">Restaurant / Café</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-300 mb-1">Name des Leistungsverzeichnisses</label>
+                                <input type="text" id="catalogName" placeholder="z.B. Unsere Therapieleistungen" class="w-full bg-slate-700 border border-white/10 rounded-lg px-4 py-2.5 text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 text-sm">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Schnellstart-Templates -->
+                    <div class="bg-slate-800/50 border border-white/10 rounded-2xl p-6">
+                        <div class="flex items-center gap-3 mb-5">
+                            <div class="w-8 h-8 rounded-full bg-indigo-500/20 flex items-center justify-center text-indigo-400 font-bold text-sm">2</div>
+                            <h2 class="text-lg font-bold text-white">Vorlage laden (optional)</h2>
+                        </div>
+                        <div class="grid grid-cols-2 gap-2">
+                            <button onclick="loadTemplate('physio')" class="text-left p-3 bg-slate-700 hover:bg-slate-600 border border-white/10 rounded-lg text-sm text-gray-300 hover:text-white transition-all">
+                                <div class="font-medium mb-0.5">Physiotherapie</div>
+                                <div class="text-xs text-gray-500">5 typische Leistungen</div>
+                            </button>
+                            <button onclick="loadTemplate('handwerk')" class="text-left p-3 bg-slate-700 hover:bg-slate-600 border border-white/10 rounded-lg text-sm text-gray-300 hover:text-white transition-all">
+                                <div class="font-medium mb-0.5">Handwerksbetrieb</div>
+                                <div class="text-xs text-gray-500">5 typische Leistungen</div>
+                            </button>
+                            <button onclick="loadTemplate('steuerberater')" class="text-left p-3 bg-slate-700 hover:bg-slate-600 border border-white/10 rounded-lg text-sm text-gray-300 hover:text-white transition-all">
+                                <div class="font-medium mb-0.5">Steuerberater</div>
+                                <div class="text-xs text-gray-500">5 typische Leistungen</div>
+                            </button>
+                            <button onclick="loadTemplate('restaurant')" class="text-left p-3 bg-slate-700 hover:bg-slate-600 border border-white/10 rounded-lg text-sm text-gray-300 hover:text-white transition-all">
+                                <div class="font-medium mb-0.5">Restaurant</div>
+                                <div class="text-xs text-gray-500">5 Menü-Kategorien</div>
+                            </button>
+                            <button onclick="loadTemplate('friseur')" class="text-left p-3 bg-slate-700 hover:bg-slate-600 border border-white/10 rounded-lg text-sm text-gray-300 hover:text-white transition-all">
+                                <div class="font-medium mb-0.5">Friseur</div>
+                                <div class="text-xs text-gray-500">5 typische Leistungen</div>
+                            </button>
+                            <button onclick="loadTemplate('fitness')" class="text-left p-3 bg-slate-700 hover:bg-slate-600 border border-white/10 rounded-lg text-sm text-gray-300 hover:text-white transition-all">
+                                <div class="font-medium mb-0.5">Fitnessstudio</div>
+                                <div class="text-xs text-gray-500">5 Kurs-Typen</div>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Leistungen -->
+                    <div class="bg-slate-800/50 border border-white/10 rounded-2xl p-6">
+                        <div class="flex items-center justify-between mb-5">
+                            <div class="flex items-center gap-3">
+                                <div class="w-8 h-8 rounded-full bg-green-500/20 flex items-center justify-center text-green-400 font-bold text-sm">3</div>
+                                <h2 class="text-lg font-bold text-white">Leistungen</h2>
+                            </div>
+                            <button onclick="addOffer()" class="flex items-center gap-1.5 text-sm bg-blue-600 hover:bg-blue-500 text-white px-3 py-1.5 rounded-lg transition-all">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
+                                Leistung hinzufügen
+                            </button>
+                        </div>
+                        <div id="offers-container" class="space-y-3">
+                            <!-- Offers werden dynamisch eingefügt -->
+                        </div>
+                    </div>
+
+                    <!-- Generieren -->
+                    <button onclick="generateSchema()" class="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white py-4 rounded-xl font-bold text-lg transition-all shadow-lg shadow-blue-500/20">
+                        JSON-LD generieren
+                    </button>
+                </div>
+
+                <!-- Output Panel -->
+                <div class="space-y-6">
+                    <!-- Vorschau -->
+                    <div id="preview-section" class="hidden bg-slate-800/50 border border-green-500/30 rounded-2xl p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <h2 class="text-lg font-bold text-white flex items-center gap-2">
+                                <svg class="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                                JSON-LD bereit
+                            </h2>
+                            <button onclick="copyCode()" id="copy-btn" class="flex items-center gap-1.5 text-sm bg-green-600 hover:bg-green-500 text-white px-4 py-2 rounded-lg transition-all font-medium">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"/></svg>
+                                Kopieren
+                            </button>
+                        </div>
+                        <div class="bg-slate-900 rounded-xl p-4 overflow-auto max-h-96 border border-white/5">
+                            <pre id="output-code" class="output-code text-green-300 whitespace-pre-wrap"></pre>
+                        </div>
+                    </div>
+
+                    <!-- Einbau-Anleitung -->
+                    <div id="install-section" class="hidden bg-slate-800/50 border border-white/10 rounded-2xl p-6">
+                        <h3 class="text-lg font-bold text-white mb-4">Einbau in deine Website</h3>
+                        <div class="space-y-3 text-sm text-gray-300">
+                            <div class="flex gap-3">
+                                <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xs flex items-center justify-center shrink-0 mt-0.5">1</span>
+                                <p>Kopiere den generierten JSON-LD Code oben.</p>
+                            </div>
+                            <div class="flex gap-3">
+                                <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xs flex items-center justify-center shrink-0 mt-0.5">2</span>
+                                <p>Füge ihn im <code class="bg-slate-700 px-1 rounded">&lt;head&gt;</code>-Bereich oder am Ende des <code class="bg-slate-700 px-1 rounded">&lt;body&gt;</code> deiner Leistungsseite ein.</p>
+                            </div>
+                            <div class="flex gap-3">
+                                <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xs flex items-center justify-center shrink-0 mt-0.5">3</span>
+                                <p>Prüfe die Implementierung im <a href="https://search.google.com/test/rich-results" target="_blank" rel="noopener" class="text-blue-400 underline">Google Rich Results Test</a>.</p>
+                            </div>
+                            <div class="flex gap-3">
+                                <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xs flex items-center justify-center shrink-0 mt-0.5">4</span>
+                                <p>Prüfe nach 1-2 Wochen die <a href="https://search.google.com/search-console" target="_blank" rel="noopener" class="text-blue-400 underline">Google Search Console</a> auf Fehlermeldungen.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Info Box -->
+                    <div class="bg-slate-800/50 border border-white/10 rounded-2xl p-6">
+                        <h3 class="text-lg font-bold text-white mb-3">Was ist OfferCatalog?</h3>
+                        <p class="text-gray-400 text-sm mb-3">OfferCatalog ist ein Schema.org-Typ, der ein Verzeichnis von Angeboten oder Dienstleistungen beschreibt. Er ermöglicht es Google, dein Leistungsangebot strukturiert zu verstehen.</p>
+                        <ul class="space-y-2 text-sm text-gray-400">
+                            <li class="flex gap-2"><span class="text-blue-400">•</span> Klare Struktur für Google: Welche Services biete ich an?</li>
+                            <li class="flex gap-2"><span class="text-blue-400">•</span> Preisangaben optional — mit oder ohne Preis möglich</li>
+                            <li class="flex gap-2"><span class="text-blue-400">•</span> Hilft bei Voice Search ("Welche Leistungen bietet X an?")</li>
+                            <li class="flex gap-2"><span class="text-blue-400">•</span> Kombinierbar mit LocalBusiness und ServiceArea Schema</li>
+                        </ul>
+                        <a href="/blog/offercatalog-schema-markup-seo.html" class="inline-block mt-4 text-blue-400 hover:text-blue-300 text-sm underline">Mehr zu OfferCatalog Schema →</a>
+                    </div>
+
+                    <!-- Weitere Tools -->
+                    <div class="bg-slate-800/50 border border-white/10 rounded-2xl p-6">
+                        <h3 class="text-base font-bold text-white mb-3">Passende Tools</h3>
+                        <div class="space-y-2">
+                            <a href="/tools/servicearea-schema-generator.html" class="flex items-center gap-2 text-sm text-gray-300 hover:text-blue-400 transition-colors">
+                                <svg class="w-4 h-4 text-blue-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/></svg>
+                                ServiceArea Schema Generator
+                            </a>
+                            <a href="/tools/contactpoint-schema-generator.html" class="flex items-center gap-2 text-sm text-gray-300 hover:text-blue-400 transition-colors">
+                                <svg class="w-4 h-4 text-blue-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.948V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                                ContactPoint Schema Generator
+                            </a>
+                            <a href="/tools/localbusiness-schema-generator.html" class="flex items-center gap-2 text-sm text-gray-300 hover:text-blue-400 transition-colors">
+                                <svg class="w-4 h-4 text-blue-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-2 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+                                LocalBusiness Schema Generator
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-12 px-4 bg-slate-800/30">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-2xl font-bold text-white mb-8 text-center">Häufige Fragen zu OfferCatalog</h2>
+            <div class="space-y-4">
+                <details class="bg-slate-800/50 border border-white/10 rounded-xl p-5 group">
+                    <summary class="flex items-center justify-between cursor-pointer font-medium text-white">
+                        Wofür wird OfferCatalog Schema verwendet?
+                        <svg class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </summary>
+                    <p class="mt-3 text-gray-400 text-sm leading-relaxed">OfferCatalog beschreibt eine Sammlung von Angeboten oder Dienstleistungen. Es ermöglicht Google, strukturiert zu verstehen, was du anbietest. Besonders nützlich für Dienstleister wie Physiotherapeuten, Handwerker, Salons und Berater, die mehrere Leistungen auf ihrer Website auflisten.</p>
+                </details>
+                <details class="bg-slate-800/50 border border-white/10 rounded-xl p-5 group">
+                    <summary class="flex items-center justify-between cursor-pointer font-medium text-white">
+                        Muss ich Preise angeben?
+                        <svg class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </summary>
+                    <p class="mt-3 text-gray-400 text-sm leading-relaxed">Nein. Preise sind optional. Du kannst OfferCatalog auch ohne Preisinformationen verwenden. Wenn du Preise angibst, werden diese von Google besser verstanden. Wenn nicht, reicht die reine Beschreibung der Leistung aus.</p>
+                </details>
+                <details class="bg-slate-800/50 border border-white/10 rounded-xl p-5 group">
+                    <summary class="flex items-center justify-between cursor-pointer font-medium text-white">
+                        Werden OfferCatalog-Daten als Rich Snippet angezeigt?
+                        <svg class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </summary>
+                    <p class="mt-3 text-gray-400 text-sm leading-relaxed">OfferCatalog selbst erzeugt keine direkten Rich Snippets in den Google-Suchergebnissen. Es wird jedoch von Google als semantisches Signal verarbeitet und beeinflusst das Verständnis deiner Seite. In Kombination mit LocalBusiness und ServiceArea Schema entsteht ein vollständiges Profil deines Unternehmens.</p>
+                </details>
+                <details class="bg-slate-800/50 border border-white/10 rounded-xl p-5 group">
+                    <summary class="flex items-center justify-between cursor-pointer font-medium text-white">
+                        Auf welcher Seite soll ich OfferCatalog einbinden?
+                        <svg class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </summary>
+                    <p class="mt-3 text-gray-400 text-sm leading-relaxed">Idealerweise auf deiner Leistungsseite oder Startseite — wo du deine Dienste auflistest. Du kannst es auch auf der Startseite als Teil des LocalBusiness-Markups einbetten. Wichtig: Die Leistungen im Schema sollten mit dem sichtbaren Inhalt der Seite übereinstimmen.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer CTA -->
+    <section class="py-16 px-4 bg-gradient-to-r from-blue-900/30 to-indigo-900/30 border-t border-b border-white/5">
+        <div class="max-w-3xl mx-auto text-center">
+            <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">Weitere SEO-Probleme entdecken</h2>
+            <p class="text-gray-400 mb-8">Unsere kostenlose SEO-Analyse findet alle technischen Fehler auf deiner Website.</p>
+            <a href="/" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all shadow-lg shadow-blue-500/20 inline-block">Kostenlose SEO-Analyse starten</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/10 bg-slate-900/50 py-12 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="flex items-center gap-2">
+                    <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                    <span class="text-lg font-bold text-white">Shift07</span>
+                </div>
+                <div class="flex items-center space-x-6 text-sm text-gray-400">
+                    <a href="/impressum.html" class="hover:text-white transition-colors">Impressum</a>
+                    <a href="/datenschutz.html" class="hover:text-white transition-colors">Datenschutz</a>
+                    <a href="/agb.html" class="hover:text-white transition-colors">AGB</a>
+                </div>
+                <p class="text-sm text-gray-500">&copy; 2026 Thümmler AI GmbH</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        let offerCount = 0;
+
+        const templates = {
+            physio: {
+                name: 'Meine Physiotherapie-Praxis',
+                catalog: 'Unsere Therapieleistungen',
+                type: 'Physiotherapist',
+                offers: [
+                    { name: 'Manuelle Therapie', desc: 'Gezielte Behandlung von Gelenkfunktionsstörungen durch manuelle Techniken.', price: '', unit: '' },
+                    { name: 'Krankengymnastik', desc: 'Individuelle Übungstherapie zur Verbesserung von Kraft, Beweglichkeit und Koordination.', price: '35', unit: 'EUR' },
+                    { name: 'Massage', desc: 'Klassische Massage zur Entspannung der Muskulatur und Verbesserung der Durchblutung.', price: '45', unit: 'EUR' },
+                    { name: 'Elektrotherapie', desc: 'Schmerzlindernde Behandlung mit elektrischen Strömen (TENS, Ultraschall, Reizstrom).', price: '', unit: '' },
+                    { name: 'Wärme- und Kältetherapie', desc: 'Thermische Anwendungen zur Entspannung, Durchblutungsförderung oder Entzündungshemmung.', price: '', unit: '' },
+                ]
+            },
+            handwerk: {
+                name: 'Muster Handwerksbetrieb GmbH',
+                catalog: 'Unsere Handwerksleistungen',
+                type: 'HomeAndConstructionBusiness',
+                offers: [
+                    { name: 'Elektroinstallation', desc: 'Neuinstallation und Erweiterung von elektrischen Anlagen in Wohn- und Geschäftsgebäuden.', price: '', unit: '' },
+                    { name: 'Renovierungsarbeiten', desc: 'Umfassende Renovierungen von Badezimmern, Küchen und Wohnräumen.', price: '', unit: '' },
+                    { name: 'Sanitärinstallation', desc: 'Installation und Reparatur von Wasserleitungen, Heizungsanlagen und Sanitäranlagen.', price: '', unit: '' },
+                    { name: 'Malerarbeiten', desc: 'Innen- und Außenanstriche, Tapezierarbeiten und Fassadengestaltung.', price: '', unit: '' },
+                    { name: 'Notdienst & Reparaturen', desc: 'Schnelle Hilfe bei Rohrbruch, Stromausfall und anderen Notfällen – 24h erreichbar.', price: '', unit: '' },
+                ]
+            },
+            steuerberater: {
+                name: 'Muster Steuerberatung',
+                catalog: 'Unsere Beratungsleistungen',
+                type: 'AccountingService',
+                offers: [
+                    { name: 'Einkommensteuererklärung', desc: 'Erstellung der jährlichen Einkommensteuererklärung für Arbeitnehmer und Selbstständige.', price: '', unit: '' },
+                    { name: 'Buchführung', desc: 'Laufende Buchhaltung für Unternehmen aller Branchen – monatlich oder quartalsweise.', price: '', unit: '' },
+                    { name: 'Lohnbuchhaltung', desc: 'Lohnabrechnung, Meldewesen und Personalverwaltung für Unternehmen.', price: '', unit: '' },
+                    { name: 'Jahresabschluss', desc: 'Erstellung von Bilanzen, G&V und Jahresabschlüssen für GmbH, UG und andere Rechtsformen.', price: '', unit: '' },
+                    { name: 'Steuergestaltung & Beratung', desc: 'Individuelle Steuerplanung und Optimierungsstrategien für Privatpersonen und Unternehmen.', price: '', unit: '' },
+                ]
+            },
+            restaurant: {
+                name: 'Restaurant Muster',
+                catalog: 'Unsere Speisekarte',
+                type: 'Restaurant',
+                offers: [
+                    { name: 'Frühstück', desc: 'Täglich frisches Frühstücksbuffet mit regionalen Produkten, Eierspeisen und Backwaren.', price: '12.90', unit: 'EUR' },
+                    { name: 'Mittagsmenü', desc: 'Tägliches Mittagsangebot mit Hauptgang, Salat und Getränk – wechselnde Gerichte.', price: '8.90', unit: 'EUR' },
+                    { name: 'Abendessen', desc: 'Umfangreiche Abendkarte mit saisonalen Gerichten, Fleisch- und Fischspezialitäten.', price: '', unit: '' },
+                    { name: 'Catering', desc: 'Komplettes Catering für Firmenevents, Hochzeiten und private Feiern.', price: '', unit: '' },
+                    { name: 'Getränke & Weine', desc: 'Curatierte Weinkarte, regionale Craft-Biere und alkoholfreie Alternativen.', price: '', unit: '' },
+                ]
+            },
+            friseur: {
+                name: 'Muster Friseursalon',
+                catalog: 'Unsere Salon-Leistungen',
+                type: 'HairSalon',
+                offers: [
+                    { name: 'Haarschnitt Damen', desc: 'Waschen, Schneiden und Föhnen für Damen – inklusive Beratung.', price: '45', unit: 'EUR' },
+                    { name: 'Haarschnitt Herren', desc: 'Klassischer Herrenschnitt mit Waschen, Schneiden und Styling.', price: '25', unit: 'EUR' },
+                    { name: 'Coloration & Strähnen', desc: 'Haarfarbe, Balayage, Highlights und Strähnentechniken aller Art.', price: '', unit: '' },
+                    { name: 'Dauerwelle & Glättung', desc: 'Professionelle Dauerwelle oder Haarglättung für langanhaltende Styling-Effekte.', price: '', unit: '' },
+                    { name: 'Haarpflege & Kuren', desc: 'Intensive Haarpflege mit hochwertigen Produkten – für strapaziertes oder trockenes Haar.', price: '', unit: '' },
+                ]
+            },
+            fitness: {
+                name: 'Muster Fitnessstudio',
+                catalog: 'Unsere Fitness-Angebote',
+                type: 'FitnessCenter',
+                offers: [
+                    { name: 'Gerätetraining', desc: 'Unbegrenzter Zugang zu allen Trainingsgeräten – Kraft, Ausdauer und Funktional.', price: '29.90', unit: 'EUR' },
+                    { name: 'Kursangebote', desc: 'Wöchentliches Kursprogramm mit Yoga, Pilates, Zumba, Spinning und mehr.', price: '', unit: '' },
+                    { name: 'Personal Training', desc: '1-zu-1 Training mit erfahrenem Personal Trainer – individuell auf deine Ziele abgestimmt.', price: '65', unit: 'EUR' },
+                    { name: 'EMS-Training', desc: 'Elektromuskelstimulation für effizientes Ganzkörpertraining in 20 Minuten.', price: '35', unit: 'EUR' },
+                    { name: 'Sauna & Wellness', desc: 'Entspannen nach dem Training in unserem Sauna- und Wellnessbereich.', price: '', unit: '' },
+                ]
+            }
+        };
+
+        function loadTemplate(type) {
+            const t = templates[type];
+            if (!t) return;
+            document.getElementById('bizName').value = t.name;
+            document.getElementById('bizType').value = t.type;
+            document.getElementById('catalogName').value = t.catalog;
+            // Offers leeren und neu befüllen
+            document.getElementById('offers-container').innerHTML = '';
+            offerCount = 0;
+            t.offers.forEach(o => addOffer(o));
+        }
+
+        function addOffer(data = null) {
+            offerCount++;
+            const id = offerCount;
+            const container = document.getElementById('offers-container');
+            const div = document.createElement('div');
+            div.id = `offer-${id}`;
+            div.className = 'offer-card bg-slate-700/50 border border-white/10 rounded-xl p-4 space-y-3';
+            div.innerHTML = `
+                <div class="flex items-center justify-between mb-1">
+                    <span class="text-sm font-semibold text-gray-300">Leistung ${id}</span>
+                    <button onclick="removeOffer(${id})" class="text-gray-500 hover:text-red-400 transition-colors text-xs flex items-center gap-1">
+                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+                        Entfernen
+                    </button>
+                </div>
+                <div>
+                    <input type="text" id="offer-name-${id}" placeholder="Leistungsname *" value="${data?.name || ''}" class="w-full bg-slate-800 border border-white/10 rounded-lg px-3 py-2 text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 text-sm">
+                </div>
+                <div>
+                    <textarea id="offer-desc-${id}" rows="2" placeholder="Kurze Beschreibung der Leistung" class="w-full bg-slate-800 border border-white/10 rounded-lg px-3 py-2 text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 text-sm resize-none">${data?.desc || ''}</textarea>
+                </div>
+                <div class="grid grid-cols-2 gap-3">
+                    <div>
+                        <input type="number" id="offer-price-${id}" placeholder="Preis (optional)" value="${data?.price || ''}" min="0" step="0.01" class="w-full bg-slate-800 border border-white/10 rounded-lg px-3 py-2 text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 text-sm">
+                    </div>
+                    <div>
+                        <select id="offer-currency-${id}" class="w-full bg-slate-800 border border-white/10 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-blue-500 text-sm">
+                            <option value="EUR" ${data?.unit === 'EUR' ? 'selected' : ''}>EUR (€)</option>
+                            <option value="CHF" ${data?.unit === 'CHF' ? 'selected' : ''}>CHF (Fr.)</option>
+                            <option value="USD" ${data?.unit === 'USD' ? 'selected' : ''}>USD ($)</option>
+                        </select>
+                    </div>
+                </div>
+            `;
+            container.appendChild(div);
+        }
+
+        function removeOffer(id) {
+            const el = document.getElementById(`offer-${id}`);
+            if (el) el.remove();
+        }
+
+        function generateSchema() {
+            const bizName = document.getElementById('bizName').value.trim();
+            const bizUrl = document.getElementById('bizUrl').value.trim();
+            const bizType = document.getElementById('bizType').value;
+            const catalogName = document.getElementById('catalogName').value.trim() || 'Unsere Leistungen';
+
+            if (!bizName) { alert('Bitte gib einen Unternehmensnamen ein.'); return; }
+
+            const offerCards = document.querySelectorAll('[id^="offer-"]');
+            const offers = [];
+
+            offerCards.forEach(card => {
+                const idMatch = card.id.match(/offer-(\d+)/);
+                if (!idMatch) return;
+                const id = idMatch[1];
+                const name = document.getElementById(`offer-name-${id}`)?.value.trim();
+                const desc = document.getElementById(`offer-desc-${id}`)?.value.trim();
+                const price = document.getElementById(`offer-price-${id}`)?.value.trim();
+                const currency = document.getElementById(`offer-currency-${id}`)?.value;
+
+                if (!name) return;
+
+                const offer = {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": name,
+                        ...(desc ? { "description": desc } : {})
+                    }
+                };
+
+                if (price) {
+                    offer.price = parseFloat(price);
+                    offer.priceCurrency = currency || 'EUR';
+                }
+
+                offers.push(offer);
+            });
+
+            if (offers.length === 0) {
+                alert('Bitte füge mindestens eine Leistung hinzu.');
+                return;
+            }
+
+            const schema = {
+                "@context": "https://schema.org",
+                "@type": bizType,
+                "name": bizName,
+                ...(bizUrl ? { "url": bizUrl } : {}),
+                "hasOfferCatalog": {
+                    "@type": "OfferCatalog",
+                    "name": catalogName,
+                    "itemListElement": offers
+                }
+            };
+
+            const jsonStr = JSON.stringify(schema, null, 2);
+            const fullOutput = `<script type="application/ld+json">\n${jsonStr}\n<\/script>`;
+
+            document.getElementById('output-code').textContent = fullOutput;
+            document.getElementById('preview-section').classList.remove('hidden');
+            document.getElementById('install-section').classList.remove('hidden');
+            document.getElementById('preview-section').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+
+        function copyCode() {
+            const code = document.getElementById('output-code').textContent;
+            navigator.clipboard.writeText(code).then(() => {
+                const btn = document.getElementById('copy-btn');
+                btn.innerHTML = `<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> Kopiert!`;
+                btn.classList.replace('bg-green-600', 'bg-green-700');
+                setTimeout(() => {
+                    btn.innerHTML = `<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"/></svg> Kopieren`;
+                    btn.classList.replace('bg-green-700', 'bg-green-600');
+                }, 2000);
+            });
+        }
+
+        // Initiales Angebot hinzufügen
+        addOffer();
+    </script>
+</body>
+</html>
