@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K1S1RXBDS8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K1S1RXBDS8');
+    </script>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8475857002943858" crossorigin="anonymous"></script>
+    <title>ContactPoint Schema Generator – JSON-LD für Kontaktdaten kostenlos erstellen | Shift07</title>
+    <meta name="description" content="ContactPoint JSON-LD kostenlos generieren: Telefon, E-Mail, Kontakttyp, Erreichbarkeitszeiten und Einzugsgebiet als Schema Markup für Google strukturieren. 100% kostenlos, kein Login.">
+    <meta name="keywords" content="contactpoint schema generator, json-ld kontaktdaten, schema markup generator, kontaktpunkt generator, google schema">
+    <meta name="author" content="Thümmler AI GmbH">
+    <link rel="icon" type="image/png" href="/logo.png">
+    <link rel="canonical" href="https://shift07.ai/tools/contactpoint-generator.html">
+    <!-- Open Graph -->
+    <meta property="og:title" content="ContactPoint Schema Generator – JSON-LD für Kontaktdaten kostenlos erstellen">
+    <meta property="og:description" content="ContactPoint JSON-LD kostenlos generieren: Telefon, E-Mail, Kontakttyp, Erreichbarkeitszeiten und Einzugsgebiet als Schema Markup für Google strukturieren.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://shift07.ai/tools/contactpoint-generator.html">
+    <meta property="og:image" content="https://shift07.ai/tools/images/contactpoint-generator.png">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="Shift07">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ContactPoint Schema Generator – JSON-LD kostenlos erstellen">
+    <meta name="twitter:description" content="ContactPoint JSON-LD kostenlos generieren: Telefon, E-Mail, Kontakttyp und Erreichbarkeitszeiten als Schema Markup strukturieren.">
+    <meta name="twitter:image" content="https://shift07.ai/tools/images/contactpoint-generator.png">
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "ContactPoint Schema Generator",
+      "description": "ContactPoint JSON-LD kostenlos generieren: Telefon, E-Mail, Kontakttyp, Erreichbarkeitszeiten und Einzugsgebiet als Schema Markup für Google strukturieren.",
+      "url": "https://shift07.ai/tools/contactpoint-generator.html",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR"
+      },
+      "provider": {
+        "@type": "Organization",
+        "name": "Thümmler AI GmbH",
+        "url": "https://shift07.ai"
+      }
+    }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { 'inter': ['Inter', 'system-ui', '-apple-system', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: rgba(15,23,42,0.5); }
+        ::-webkit-scrollbar-thumb { background: rgba(59,130,246,0.5); border-radius: 4px; }
+        .contact-card { transition: all 0.2s; }
+        .contact-card:hover { border-color: rgba(59,130,246,0.4); }
+        pre { white-space: pre-wrap; word-break: break-all; }
+    </style>
+</head>
+<body class="bg-slate-900 text-white min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-slate-900/80 backdrop-blur-xl border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <a href="/" class="flex items-center gap-2">
+                    <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                    <span class="text-xl font-bold text-white">Shift07</span>
+                </a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="/" class="text-gray-300 hover:text-white transition-colors">SEO-Tool</a>
+                    <a href="/blog/" class="text-gray-300 hover:text-white transition-colors">Blog</a>
+                    <a href="/tools/" class="text-white font-medium border-b-2 border-blue-500 pb-0.5">Tools</a>
+                    <a href="/app/#/login" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-5 py-2 rounded-lg font-medium transition-all">Anmelden</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-gray-300 hover:text-white">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900/95 border-b border-white/10">
+            <div class="px-4 py-3 space-y-2">
+                <a href="/" class="block py-2 text-gray-300 hover:text-white">SEO-Tool</a>
+                <a href="/blog/" class="block py-2 text-gray-300 hover:text-white">Blog</a>
+                <a href="/tools/" class="block py-2 text-white font-medium">Tools</a>
+                <a href="/app/#/login" class="block py-2 text-blue-400 hover:text-blue-300">Anmelden</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="pt-24 pb-8 px-4">
+        <div class="max-w-4xl mx-auto text-center">
+            <div class="inline-flex items-center gap-2 bg-blue-500/10 border border-blue-500/20 rounded-full px-4 py-1.5 text-blue-400 text-sm font-medium mb-6">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                Schema Markup Tool
+            </div>
+            <h1 class="text-3xl md:text-5xl font-extrabold text-white mb-4 leading-tight">ContactPoint Schema Generator</h1>
+            <p class="text-lg text-gray-400 max-w-2xl mx-auto">JSON-LD für Kontaktdaten kostenlos erstellen — Telefon, E-Mail, Kontakttyp und Erreichbarkeitszeiten als Schema Markup für Google.</p>
+        </div>
+    </section>
+
+    <!-- Tool -->
+    <section class="py-8 px-4">
+        <div class="max-w-5xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+                <!-- LEFT: Form -->
+                <div class="space-y-6">
+
+                    <!-- Organization -->
+                    <div class="bg-slate-800/50 border border-white/10 rounded-2xl p-6">
+                        <h2 class="text-lg font-bold text-white mb-4 flex items-center gap-2">
+                            <svg class="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+                            Organisation
+                        </h2>
+                        <div class="space-y-3">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-300 mb-1">Unternehmensname *</label>
+                                <input type="text" id="org-name" placeholder="Muster GmbH" class="w-full bg-slate-700/50 border border-white/10 rounded-lg px-4 py-2.5 text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 text-sm" oninput="generate()">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-300 mb-1">Website-URL *</label>
+                                <input type="url" id="org-url" placeholder="https://www.muster-gmbh.de" class="w-full bg-slate-700/50 border border-white/10 rounded-lg px-4 py-2.5 text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 text-sm" oninput="generate()">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-300 mb-1">Schema-Typ</label>
+                                <select id="org-type" class="w-full bg-slate-700/50 border border-white/10 rounded-lg px-4 py-2.5 text-white focus:outline-none focus:border-blue-500 text-sm" onchange="generate()">
+                                    <option value="Organization">Organization (allgemein)</option>
+                                    <option value="LocalBusiness">LocalBusiness</option>
+                                    <option value="Corporation">Corporation (Kapitalgesellschaft)</option>
+                                    <option value="ProfessionalService">ProfessionalService</option>
+                                    <option value="MedicalClinic">MedicalClinic (Arztpraxis)</option>
+                                    <option value="DentalClinic">DentalClinic (Zahnarztpraxis)</option>
+                                    <option value="HomeAndConstructionBusiness">HomeAndConstructionBusiness (Handwerk)</option>
+                                    <option value="LegalService">LegalService (Rechtsberatung)</option>
+                                    <option value="FinancialService">FinancialService (Finanzdienstleister)</option>
+                                    <option value="FoodEstablishment">FoodEstablishment (Gastronomie)</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ContactPoints -->
+                    <div id="contact-points-container" class="space-y-4"></div>
+
+                    <button onclick="addContactPoint()" class="w-full bg-slate-700/50 hover:bg-slate-700 border border-dashed border-white/20 hover:border-blue-500/50 rounded-xl px-4 py-3 text-gray-400 hover:text-blue-400 text-sm font-medium transition-all flex items-center justify-center gap-2">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
+                        Weiteren Kontaktpunkt hinzufügen
+                    </button>
+
+                </div>
+
+                <!-- RIGHT: Output -->
+                <div class="space-y-6">
+                    <!-- Preview -->
+                    <div class="bg-slate-800/50 border border-white/10 rounded-2xl p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <h2 class="text-lg font-bold text-white">Generiertes JSON-LD</h2>
+                            <button onclick="copyCode()" id="copy-btn" class="flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                                Kopieren
+                            </button>
+                        </div>
+                        <pre id="output-code" class="text-xs text-green-300 bg-slate-900/80 border border-white/5 rounded-xl p-4 overflow-auto max-h-[500px] leading-relaxed"></pre>
+                    </div>
+
+                    <!-- Anleitung -->
+                    <div class="bg-slate-800/30 border border-white/5 rounded-2xl p-6">
+                        <h3 class="text-sm font-bold text-white mb-3">So verwendest du den Code</h3>
+                        <ol class="text-sm text-gray-400 space-y-2">
+                            <li class="flex gap-2"><span class="text-blue-400 font-bold flex-shrink-0">1.</span> Fülle die Felder links aus — der Code wird live aktualisiert</li>
+                            <li class="flex gap-2"><span class="text-blue-400 font-bold flex-shrink-0">2.</span> Klicke "Kopieren" um den JSON-LD-Block zu kopieren</li>
+                            <li class="flex gap-2"><span class="text-blue-400 font-bold flex-shrink-0">3.</span> Füge ihn im <code class="text-blue-300">&lt;head&gt;</code> deiner Startseite oder Kontaktseite ein</li>
+                            <li class="flex gap-2"><span class="text-blue-400 font-bold flex-shrink-0">4.</span> Validiere mit dem <a href="/tools/json-ld-structured-data-validator.html" class="text-blue-400 hover:underline">JSON-LD Validator</a></li>
+                        </ol>
+                    </div>
+
+                    <!-- Info -->
+                    <div class="bg-blue-900/20 border border-blue-500/20 rounded-2xl p-5">
+                        <h3 class="text-sm font-bold text-blue-300 mb-2">ContactType-Werte</h3>
+                        <div class="text-xs text-gray-400 grid grid-cols-2 gap-1">
+                            <span>customer service</span>
+                            <span>technical support</span>
+                            <span>billing support</span>
+                            <span>sales</span>
+                            <span>reservations</span>
+                            <span>emergency</span>
+                            <span>bill payment</span>
+                            <span>baggage tracking</span>
+                        </div>
+                        <p class="text-xs text-gray-500 mt-2">Müssen englisch sein — Google ignoriert deutsche Bezeichnungen.</p>
+                    </div>
+
+                    <!-- Related Links -->
+                    <div class="bg-slate-800/30 border border-white/5 rounded-xl p-5 text-sm">
+                        <p class="text-gray-400 mb-2 font-medium">Weitere Schema-Generatoren:</p>
+                        <div class="space-y-1.5">
+                            <a href="/tools/organization-schema-generator.html" class="block text-blue-400 hover:text-blue-300">→ Organization Schema Generator</a>
+                            <a href="/tools/schema-markup-generator.html" class="block text-blue-400 hover:text-blue-300">→ LocalBusiness Schema Generator</a>
+                            <a href="/tools/json-ld-structured-data-validator.html" class="block text-blue-400 hover:text-blue-300">→ JSON-LD Validator</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Info Section -->
+    <section class="py-12 px-4 bg-slate-800/20 border-t border-white/5 mt-8">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-2xl font-bold text-white mb-6">Was ist ContactPoint Schema Markup?</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                <div class="bg-slate-800/50 border border-white/10 rounded-xl p-5">
+                    <div class="w-10 h-10 bg-blue-500/10 rounded-lg flex items-center justify-center mb-3">
+                        <svg class="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                    </div>
+                    <h3 class="font-bold text-white mb-2 text-sm">Knowledge Card stärken</h3>
+                    <p class="text-xs text-gray-400">Google zeigt ContactPoint-Daten in der Knowledge Card an — Telefonnummer und Kontakttyp direkt in den Suchergebnissen.</p>
+                </div>
+                <div class="bg-slate-800/50 border border-white/10 rounded-xl p-5">
+                    <div class="w-10 h-10 bg-blue-500/10 rounded-lg flex items-center justify-center mb-3">
+                        <svg class="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                    </div>
+                    <h3 class="font-bold text-white mb-2 text-sm">E-E-A-T verbessern</h3>
+                    <p class="text-xs text-gray-400">Greifbare Kontaktinformationen als strukturierte Daten stärken das Vertrauenssignal (Trustworthiness) bei Google.</p>
+                </div>
+                <div class="bg-slate-800/50 border border-white/10 rounded-xl p-5">
+                    <div class="w-10 h-10 bg-blue-500/10 rounded-lg flex items-center justify-center mb-3">
+                        <svg class="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/></svg>
+                    </div>
+                    <h3 class="font-bold text-white mb-2 text-sm">Mehrere Kontaktkanäle</h3>
+                    <p class="text-xs text-gray-400">Vertrieb, Support, Abrechnung, Notfall — jeder Kanal bekommt seinen eigenen ContactPoint-Eintrag.</p>
+                </div>
+            </div>
+            <p class="text-gray-400 text-sm">Mehr Details im Artikel: <a href="/blog/contactpoint-schema-markup-seo.html" class="text-blue-400 hover:underline">ContactPoint Schema Markup: Kontaktdaten für Google strukturiert bereitstellen</a></p>
+        </div>
+    </section>
+
+    <!-- Footer CTA -->
+    <section class="py-16 px-4 bg-gradient-to-r from-blue-900/30 to-indigo-900/30 border-t border-b border-white/5">
+        <div class="max-w-3xl mx-auto text-center">
+            <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">Wie gut ist deine gesamte Website optimiert?</h2>
+            <p class="text-gray-400 mb-8">Kostenlose SEO-Analyse — Schema Markup, Meta-Tags, Ladezeit und mehr auf einen Blick.</p>
+            <a href="/" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-8 py-3 rounded-lg font-medium transition-all inline-block">Jetzt kostenlos analysieren</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/10 bg-slate-900/50 py-12 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="flex items-center gap-2">
+                    <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                    <span class="text-lg font-bold text-white">Shift07</span>
+                </div>
+                <div class="flex items-center space-x-6 text-sm text-gray-400">
+                    <a href="/impressum.html" class="hover:text-white transition-colors">Impressum</a>
+                    <a href="/datenschutz.html" class="hover:text-white transition-colors">Datenschutz</a>
+                    <a href="/agb.html" class="hover:text-white transition-colors">AGB</a>
+                </div>
+                <p class="text-sm text-gray-500">&copy; 2026 Thümmler AI GmbH</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        const DAYS = ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'];
+        const DAY_LABELS = ['Mo','Di','Mi','Do','Fr','Sa','So'];
+
+        let cpCount = 0;
+
+        function addContactPoint() {
+            cpCount++;
+            const id = cpCount;
+            const container = document.getElementById('contact-points-container');
+            const card = document.createElement('div');
+            card.id = 'cp-' + id;
+            card.className = 'contact-card bg-slate-800/50 border border-white/10 rounded-2xl p-6';
+            card.innerHTML = `
+                <div class="flex items-center justify-between mb-4">
+                    <h2 class="text-base font-bold text-white flex items-center gap-2">
+                        <svg class="w-4 h-4 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                        Kontaktpunkt ${id}
+                    </h2>
+                    ${id > 1 ? `<button onclick="removeCP(${id})" class="text-gray-500 hover:text-red-400 transition-colors text-xs">Entfernen</button>` : ''}
+                </div>
+                <div class="space-y-3">
+                    <div class="grid grid-cols-2 gap-3">
+                        <div>
+                            <label class="block text-xs font-medium text-gray-300 mb-1">Kontakttyp</label>
+                            <select id="cp-type-${id}" class="w-full bg-slate-700/50 border border-white/10 rounded-lg px-3 py-2 text-white text-xs focus:outline-none focus:border-blue-500" onchange="generate()">
+                                <option value="customer service">Customer Service</option>
+                                <option value="technical support">Technical Support</option>
+                                <option value="sales">Sales (Vertrieb)</option>
+                                <option value="billing support">Billing Support</option>
+                                <option value="reservations">Reservations</option>
+                                <option value="emergency">Emergency (Notfall)</option>
+                                <option value="bill payment">Bill Payment</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-medium text-gray-300 mb-1">Einzugsgebiet</label>
+                            <select id="cp-area-${id}" class="w-full bg-slate-700/50 border border-white/10 rounded-lg px-3 py-2 text-white text-xs focus:outline-none focus:border-blue-500" onchange="generate()">
+                                <option value="DE">Deutschland (DE)</option>
+                                <option value="AT">Österreich (AT)</option>
+                                <option value="CH">Schweiz (CH)</option>
+                                <option value="DE AT CH">DE + AT + CH</option>
+                                <option value="">Alle Länder</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-medium text-gray-300 mb-1">Telefonnummer (int. Format)</label>
+                        <input type="text" id="cp-phone-${id}" placeholder="+49-30-123456" class="w-full bg-slate-700/50 border border-white/10 rounded-lg px-3 py-2 text-white placeholder-gray-500 text-xs focus:outline-none focus:border-blue-500" oninput="generate()">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-medium text-gray-300 mb-1">E-Mail (optional)</label>
+                        <input type="email" id="cp-email-${id}" placeholder="kontakt@firma.de" class="w-full bg-slate-700/50 border border-white/10 rounded-lg px-3 py-2 text-white placeholder-gray-500 text-xs focus:outline-none focus:border-blue-500" oninput="generate()">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-medium text-gray-300 mb-1">Kontaktseite URL (optional)</label>
+                        <input type="url" id="cp-url-${id}" placeholder="https://firma.de/kontakt" class="w-full bg-slate-700/50 border border-white/10 rounded-lg px-3 py-2 text-white placeholder-gray-500 text-xs focus:outline-none focus:border-blue-500" oninput="generate()">
+                    </div>
+                    <div class="grid grid-cols-2 gap-3">
+                        <div>
+                            <label class="block text-xs font-medium text-gray-300 mb-1">Sprache</label>
+                            <select id="cp-lang-${id}" class="w-full bg-slate-700/50 border border-white/10 rounded-lg px-3 py-2 text-white text-xs focus:outline-none focus:border-blue-500" onchange="generate()">
+                                <option value="German">Deutsch</option>
+                                <option value="German English">Deutsch + Englisch</option>
+                                <option value="English">Englisch</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-medium text-gray-300 mb-1">Besonderheit</label>
+                            <select id="cp-option-${id}" class="w-full bg-slate-700/50 border border-white/10 rounded-lg px-3 py-2 text-white text-xs focus:outline-none focus:border-blue-500" onchange="generate()">
+                                <option value="">Keine</option>
+                                <option value="TollFree">Gebührenfrei (TollFree)</option>
+                                <option value="HearingImpairedSupported">Hörgeschädigte unterstützt</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-medium text-gray-300 mb-2">Erreichbarkeit</label>
+                        <div class="grid grid-cols-7 gap-1 mb-2" id="days-${id}">
+                            ${DAYS.map((d,i) => `<button type="button" id="day-${id}-${i}" onclick="toggleDay(${id},${i})" class="day-btn text-xs py-1.5 rounded-md font-medium transition-all bg-slate-700 text-gray-400 hover:bg-blue-600/30 hover:text-blue-300">${DAY_LABELS[i]}</button>`).join('')}
+                        </div>
+                        <div class="grid grid-cols-2 gap-2">
+                            <div>
+                                <label class="block text-xs text-gray-500 mb-1">Von</label>
+                                <input type="time" id="cp-opens-${id}" value="09:00" class="w-full bg-slate-700/50 border border-white/10 rounded-lg px-3 py-2 text-white text-xs focus:outline-none focus:border-blue-500" oninput="generate()">
+                            </div>
+                            <div>
+                                <label class="block text-xs text-gray-500 mb-1">Bis</label>
+                                <input type="time" id="cp-closes-${id}" value="18:00" class="w-full bg-slate-700/50 border border-white/10 rounded-lg px-3 py-2 text-white text-xs focus:outline-none focus:border-blue-500" oninput="generate()">
+                            </div>
+                        </div>
+                        <label class="flex items-center gap-2 mt-2 cursor-pointer">
+                            <input type="checkbox" id="cp-247-${id}" onchange="toggle247(${id})" class="w-4 h-4 rounded border-white/20">
+                            <span class="text-xs text-gray-400">24/7 erreichbar</span>
+                        </label>
+                    </div>
+                </div>
+            `;
+            container.appendChild(card);
+            // Select Mon-Fri by default
+            [0,1,2,3,4].forEach(i => activateDay(id, i));
+            generate();
+        }
+
+        function removeCP(id) {
+            document.getElementById('cp-' + id).remove();
+            generate();
+        }
+
+        function activateDay(cpId, dayIdx) {
+            const btn = document.getElementById('day-' + cpId + '-' + dayIdx);
+            if (!btn) return;
+            btn.dataset.active = '1';
+            btn.className = 'day-btn text-xs py-1.5 rounded-md font-medium transition-all bg-blue-600 text-white';
+        }
+
+        function toggleDay(cpId, dayIdx) {
+            const btn = document.getElementById('day-' + cpId + '-' + dayIdx);
+            if (btn.dataset.active === '1') {
+                btn.dataset.active = '0';
+                btn.className = 'day-btn text-xs py-1.5 rounded-md font-medium transition-all bg-slate-700 text-gray-400 hover:bg-blue-600/30 hover:text-blue-300';
+            } else {
+                activateDay(cpId, dayIdx);
+            }
+            generate();
+        }
+
+        function toggle247(cpId) {
+            const is247 = document.getElementById('cp-247-' + cpId).checked;
+            if (is247) {
+                DAYS.forEach((_, i) => activateDay(cpId, i));
+                document.getElementById('cp-opens-' + cpId).value = '00:00';
+                document.getElementById('cp-closes-' + cpId).value = '23:59';
+            }
+            generate();
+        }
+
+        function getActiveDays(cpId) {
+            return DAYS.filter((d, i) => {
+                const btn = document.getElementById('day-' + cpId + '-' + i);
+                return btn && btn.dataset.active === '1';
+            });
+        }
+
+        function buildContactPoint(id) {
+            const type = document.getElementById('cp-type-' + id)?.value;
+            const phone = document.getElementById('cp-phone-' + id)?.value?.trim();
+            const email = document.getElementById('cp-email-' + id)?.value?.trim();
+            const url = document.getElementById('cp-url-' + id)?.value?.trim();
+            const area = document.getElementById('cp-area-' + id)?.value;
+            const lang = document.getElementById('cp-lang-' + id)?.value;
+            const option = document.getElementById('cp-option-' + id)?.value;
+            const opens = document.getElementById('cp-opens-' + id)?.value;
+            const closes = document.getElementById('cp-closes-' + id)?.value;
+            const days = getActiveDays(id);
+
+            const cp = { "@type": "ContactPoint" };
+            if (phone) cp.telephone = phone;
+            if (email) cp.email = email;
+            if (url) cp.url = url;
+            if (type) cp.contactType = type;
+
+            if (area) {
+                const areas = area.split(' ');
+                cp.areaServed = areas.length === 1 ? areas[0] : areas;
+            }
+
+            if (lang) {
+                const langs = lang.split(' ');
+                cp.availableLanguage = langs.length === 1 ? langs[0] : langs;
+            }
+
+            if (option) cp.contactOption = option;
+
+            if (days.length > 0) {
+                cp.hoursAvailable = {
+                    "@type": "OpeningHoursSpecification",
+                    dayOfWeek: days.length === 1 ? days[0] : days,
+                    opens: opens || '09:00',
+                    closes: closes || '18:00'
+                };
+            }
+
+            return cp;
+        }
+
+        function generate() {
+            const name = document.getElementById('org-name').value.trim();
+            const url = document.getElementById('org-url').value.trim();
+            const type = document.getElementById('org-type').value;
+
+            const cards = document.querySelectorAll('[id^="cp-"]');
+            const cpIds = [];
+            cards.forEach(c => {
+                const match = c.id.match(/^cp-(\d+)$/);
+                if (match) cpIds.push(parseInt(match[1]));
+            });
+
+            const contactPoints = cpIds.map(id => buildContactPoint(id)).filter(cp => cp.telephone || cp.email || cp.url);
+
+            const schema = {
+                "@context": "https://schema.org",
+                "@type": type || "Organization"
+            };
+
+            if (name) schema.name = name;
+            if (url) schema.url = url;
+
+            if (contactPoints.length === 1) {
+                schema.contactPoint = contactPoints[0];
+            } else if (contactPoints.length > 1) {
+                schema.contactPoint = contactPoints;
+            }
+
+            const scriptTag = `<script type="application/ld+json">\n${JSON.stringify(schema, null, 2)}\n<\/script>`;
+            document.getElementById('output-code').textContent = scriptTag;
+        }
+
+        function copyCode() {
+            const text = document.getElementById('output-code').textContent;
+            navigator.clipboard.writeText(text).then(() => {
+                const btn = document.getElementById('copy-btn');
+                btn.innerHTML = '<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> Kopiert!';
+                setTimeout(() => {
+                    btn.innerHTML = '<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg> Kopieren';
+                }, 2000);
+            });
+        }
+
+        // Initialize
+        addContactPoint();
+        document.getElementById('org-name').value = 'Muster GmbH';
+        document.getElementById('org-url').value = 'https://www.muster-gmbh.de';
+        document.getElementById('cp-phone-1').value = '+49-30-123456';
+        generate();
+    </script>
+</body>
+</html>
