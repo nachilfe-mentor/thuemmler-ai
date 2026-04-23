@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Thu, 23 Apr 2026 06:14:36 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 23 Apr 2026 10:12:55 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>EducationalOrganization Schema Markup: Schulen und Bildungseinrichtungen für Google optimieren</title>
+      <link>https://shift07.ai/blog/educationalorganization-school-schema-markup.html</link>
+      <guid>https://shift07.ai/blog/educationalorganization-school-schema-markup.html</guid>
+      <pubDate>Thu, 23 Apr 2026 10:12:24 +0000</pubDate>
+      <description>Lerne, wie du EducationalOrganization Schema Markup für Schulen, Universitäten und Bildungseinrichtungen korrekt implementierst. Vollständige JSON-LD Anleitung mit Beispielen für School, CollegeOrUniversity und EducationEvent 2026.</description>
+      <category>Schema Markup</category>
+    </item>
     <item>
       <title>LegalService &amp; GovernmentOrganization Schema Markup: JSON-LD für Rechtsdienstleister und Behörden</title>
       <link>https://shift07.ai/blog/legalservice-governmentorganization-schema-markup.html</link>
@@ -158,14 +166,6 @@
       <pubDate>Mon, 20 Apr 2026 10:04:37 +0000</pubDate>
       <description>Product Schema Markup richtig einsetzen: Preis, Bewertungen und Verfügbarkeit als Rich Snippets in Google anzeigen. Vollständige JSON-LD-Anleitung für Online-Shops 2026.</description>
       <category>Tech-SEO</category>
-    </item>
-    <item>
-      <title>Server-Log-Analyse für SEO: Crawl-Anomalien erkennen und Googlebot-Muster verstehen</title>
-      <link>https://shift07.ai/blog/server-log-analyse-seo-fortgeschritten.html</link>
-      <guid>https://shift07.ai/blog/server-log-analyse-seo-fortgeschritten.html</guid>
-      <pubDate>Mon, 20 Apr 2026 10:04:37 +0000</pubDate>
-      <description>Fortgeschrittene Server-Log-Analyse für SEO: Crawl-Anomalien erkennen, Googlebot-Muster auswerten, Regex-Filter einsetzen und Log-Daten mit GSC kombinieren. Praxisanleitung für SEO-Profis.</description>
-      <category>Technisches SEO</category>
     </item>
   </channel>
 </rss>
