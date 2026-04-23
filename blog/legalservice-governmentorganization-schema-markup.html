@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LegalService & GovernmentOrganization Schema Markup: JSON-LD für Rechtsdienstleister und Behörden | Shift07</title>
+    <meta name="description" content="LegalService und GovernmentOrganization Schema Markup richtig implementieren: JSON-LD Beispiele, alle relevanten Properties, SEO-Vorteile und häufige Fehler vermeiden.">
+    <meta name="author" content="Laurenz Thümmler">
+    <link rel="icon" type="image/png" href="/logo.png">
+    <link rel="canonical" href="https://shift07.ai/blog/legalservice-governmentorganization-schema-markup">
+    <link rel="alternate" type="application/rss+xml" title="Shift07 Blog" href="https://shift07.ai/feed.xml">
+    <!-- Open Graph -->
+    <meta property="og:title" content="LegalService & GovernmentOrganization Schema Markup: JSON-LD für Rechtsdienstleister und Behörden">
+    <meta property="og:description" content="LegalService und GovernmentOrganization Schema Markup richtig implementieren: JSON-LD Beispiele, alle relevanten Properties und SEO-Vorteile.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://shift07.ai/blog/legalservice-governmentorganization-schema-markup">
+    <meta property="og:image" content="https://shift07.ai/blog/images/legalservice-governmentorganization-schema-markup.png">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="Shift07">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="LegalService & GovernmentOrganization Schema Markup">
+    <meta name="twitter:description" content="JSON-LD für Rechtsdienstleister und Behörden richtig implementieren — mit Praxisbeispielen.">
+    <meta name="twitter:image" content="https://shift07.ai/blog/images/legalservice-governmentorganization-schema-markup.png">
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "LegalService & GovernmentOrganization Schema Markup: JSON-LD für Rechtsdienstleister und Behörden",
+      "description": "LegalService und GovernmentOrganization Schema Markup richtig implementieren: JSON-LD Beispiele, alle relevanten Properties und SEO-Vorteile.",
+      "image": "https://shift07.ai/blog/images/legalservice-governmentorganization-schema-markup.png",
+      "author": {
+        "@type": "Person",
+        "name": "Laurenz Thümmler",
+        "url": "https://shift07.ai"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Shift07",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://shift07.ai/logo.png"
+        }
+      },
+      "datePublished": "2026-04-23",
+      "dateModified": "2026-04-23",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://shift07.ai/blog/legalservice-governmentorganization-schema-markup"
+      }
+    }
+    </script>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K1S1RXBDS8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K1S1RXBDS8');
+    </script>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8475857002943858" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { 'inter': ['Inter', 'system-ui', '-apple-system', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: rgba(15, 23, 42, 0.5); }
+        ::-webkit-scrollbar-thumb { background: rgba(59, 130, 246, 0.5); border-radius: 4px; }
+        pre { white-space: pre-wrap; word-break: break-all; }
+        .prose h2 { font-size: 1.5rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 1rem; color: #f1f5f9; }
+        .prose h3 { font-size: 1.15rem; font-weight: 600; margin-top: 1.75rem; margin-bottom: 0.75rem; color: #cbd5e1; }
+        .prose p { margin-bottom: 1.25rem; line-height: 1.8; color: #94a3b8; }
+        .prose ul { margin-bottom: 1.25rem; padding-left: 1.5rem; }
+        .prose li { margin-bottom: 0.4rem; color: #94a3b8; line-height: 1.7; }
+        .prose code { background: rgba(51,65,85,0.8); padding: 0.15rem 0.4rem; border-radius: 4px; font-size: 0.875rem; color: #93c5fd; }
+        .prose a { color: #60a5fa; text-decoration: underline; }
+        .prose a:hover { color: #93c5fd; }
+        .prose strong { color: #e2e8f0; }
+        .code-block { background: #0f172a; border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 1.5rem; margin: 1.5rem 0; overflow-x: auto; }
+        .code-block pre { color: #86efac; font-size: 0.82rem; white-space: pre; }
+    </style>
+</head>
+<body class="bg-slate-900 text-white min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-slate-900/80 backdrop-blur-xl border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <a href="/" class="flex items-center gap-2">
+                    <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                    <span class="text-xl font-bold text-white">Shift07</span>
+                </a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="/" class="text-gray-300 hover:text-white transition-colors">SEO-Tool</a>
+                    <a href="/blog/" class="text-white font-medium border-b-2 border-blue-500 pb-0.5">Blog</a>
+                    <a href="/tools/" class="text-gray-300 hover:text-white transition-colors">Tools</a>
+                    <a href="/app/#/login" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-5 py-2 rounded-lg font-medium transition-all">Anmelden</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-gray-300 hover:text-white">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900/95 border-b border-white/10">
+            <div class="px-4 py-3 space-y-2">
+                <a href="/" class="block py-2 text-gray-300 hover:text-white">SEO-Tool</a>
+                <a href="/blog/" class="block py-2 text-white font-medium">Blog</a>
+                <a href="/tools/" class="block py-2 text-gray-300 hover:text-white">Tools</a>
+                <a href="/app/#/login" class="block py-2 text-blue-400 hover:text-blue-300">Anmelden</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="pt-28 pb-8 px-4">
+        <div class="max-w-3xl mx-auto">
+            <div class="flex flex-wrap gap-2 mb-4">
+                <span class="bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs px-3 py-1 rounded-full">Schema Markup</span>
+                <span class="bg-slate-700 text-gray-300 text-xs px-3 py-1 rounded-full">Strukturierte Daten</span>
+                <span class="bg-slate-700 text-gray-300 text-xs px-3 py-1 rounded-full">LegalService</span>
+            </div>
+            <h1 class="text-3xl md:text-4xl font-extrabold mb-4 leading-tight text-white">
+                LegalService &amp; GovernmentOrganization Schema Markup: JSON-LD für Rechtsdienstleister und Behörden
+            </h1>
+            <p class="text-xl text-gray-300 mb-6">
+                Steuerberater, Notare, Behörden und rechtliche Dienstleister: So implementierst du LegalService und GovernmentOrganization Schema Markup korrekt — mit vollständigen JSON-LD Beispielen und den häufigsten Fehlern, die Google verwirren.
+            </p>
+            <div class="flex items-center gap-4 text-sm text-gray-400 mb-8">
+                <span>Von Laurenz Thümmler</span>
+                <span>·</span>
+                <time datetime="2026-04-23">23. April 2026</time>
+                <span>·</span>
+                <span>13 Min. Lesezeit</span>
+            </div>
+            <img src="/blog/images/legalservice-governmentorganization-schema-markup.png" alt="LegalService GovernmentOrganization Schema Markup JSON-LD Anleitung" class="w-full rounded-2xl border border-white/10">
+        </div>
+    </section>
+
+    <!-- Inhalt -->
+    <article class="py-8 px-4">
+        <div class="max-w-3xl mx-auto prose">
+
+            <p>
+                Wenn eine Steuerberatung oder ein Notariat strukturierte Daten auf der Website einbindet, entscheiden wenige Zeilen JSON-LD darüber, ob Google die Einrichtung als vertrauenswürdige Organisation versteht — oder als anonyme Web-Seite ohne Kontext. <a href="/blog/strukturierte-daten-seo-schema-markup">Schema Markup</a> ist für rechtlich tätige Dienstleister und Behörden kein optionaler Bonus, sondern ein echter Vertrauens- und Ranking-Faktor.
+            </p>
+            <p>
+                Dieser Artikel erklärt, wie du <code>LegalService</code> und <code>GovernmentOrganization</code> aus dem Schema.org-Vokabular korrekt implementierst — inklusive aller wichtigen Properties, vollständiger JSON-LD Beispiele und den häufigsten Implementierungsfehlern.
+            </p>
+
+            <h2>Was ist LegalService in Schema.org?</h2>
+            <p>
+                <code>LegalService</code> ist ein spezialisierter Typ innerhalb der <a href="/blog/localbusiness-schema-markup-anleitung">LocalBusiness-Hierarchie</a>. Die vollständige Vererbungskette lautet:
+            </p>
+            <div class="code-block">
+                <pre>Thing → Organization → LocalBusiness → ProfessionalService → LegalService</pre>
+            </div>
+            <p>
+                <code>LegalService</code> hat selbst mehrere Untertypen, die spezifischere Kontexte beschreiben:
+            </p>
+            <ul>
+                <li><strong>Attorney</strong> — Rechtsanwälte und Rechtsanwaltskanzleien</li>
+                <li><strong>Notary</strong> — Notare und Notarkanzleien</li>
+                <li><strong>LegalService</strong> (generisch) — Steuerberater, Wirtschaftsprüfer, rechtliche Beratungsstellen</li>
+            </ul>
+            <p>
+                Wichtig: Steuerberater (Steuerberatungskanzleien) fallen in der Praxis unter <code>LegalService</code>, da es keinen eigenen Schema.org-Typ <code>TaxAdvisor</code> gibt. Die Alternative wäre <code>ProfessionalService</code> oder <code>AccountingService</code> — wobei <code>AccountingService</code> für reine Buchhaltungsfirmen passender ist.
+            </p>
+
+            <h2>LegalService JSON-LD: Das Minimal-Beispiel</h2>
+            <p>
+                Das folgende Beispiel zeigt ein vollständiges, valides <code>LegalService</code>-Markup für eine Steuerberatungskanzlei:
+            </p>
+            <div class="code-block">
+                <pre>{
+  "@context": "https://schema.org",
+  "@type": "LegalService",
+  "name": "Steuerberatung Bergmann & Partner",
+  "url": "https://steuerberatung-bergmann.de",
+  "telephone": "+49 30 5551234",
+  "email": "info@steuerberatung-bergmann.de",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Friedrichstraße 88",
+    "postalCode": "10117",
+    "addressLocality": "Berlin",
+    "addressCountry": "DE"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "https://schema.org/Monday",
+        "https://schema.org/Tuesday",
+        "https://schema.org/Wednesday",
+        "https://schema.org/Thursday",
+        "https://schema.org/Friday"
+      ],
+      "opens": "08:30",
+      "closes": "17:30"
+    }
+  ],
+  "priceRange": "€€€",
+  "description": "Steuerberatung für Unternehmen, Selbstständige und Privatpersonen in Berlin-Mitte.",
+  "sameAs": [
+    "https://www.bundessteuerberaterkammer.de/verzeichnis/...",
+    "https://www.google.com/maps?cid=..."
+  ]
+}</pre>
+            </div>
+
+            <h2>Notary Schema Markup: Der Untertyp für Notare</h2>
+            <p>
+                Für Notariate steht der spezialisierte Typ <code>Notary</code> zur Verfügung. Er verhält sich identisch zu <code>LegalService</code> und erbt alle dessen Properties, signalisiert aber explizit die notarielle Tätigkeit:
+            </p>
+            <div class="code-block">
+                <pre>{
+  "@context": "https://schema.org",
+  "@type": "Notary",
+  "name": "Notariat Dr. Weber",
+  "url": "https://notar-weber-frankfurt.de",
+  "telephone": "+49 69 8887766",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Goethestraße 12",
+    "postalCode": "60313",
+    "addressLocality": "Frankfurt am Main",
+    "addressCountry": "DE"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "https://schema.org/Monday",
+        "https://schema.org/Tuesday",
+        "https://schema.org/Wednesday",
+        "https://schema.org/Thursday"
+      ],
+      "opens": "09:00",
+      "closes": "17:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "https://schema.org/Friday",
+      "opens": "09:00",
+      "closes": "14:00"
+    }
+  ],
+  "description": "Notariat in Frankfurt am Main – Beurkundungen, Beglaubigungen, Erbrecht und Immobilienrecht."
+}</pre>
+            </div>
+
+            <h2>Attorney Schema: JSON-LD für Rechtsanwaltskanzleien</h2>
+            <p>
+                Der Typ <code>Attorney</code> ist ein direkter Untertyp von <code>LegalService</code> und funktioniert für Rechtsanwaltskanzleien. Kombiniert mit <a href="/blog/person-schema-markup-seo">Person-Schema</a> für die einzelnen Anwälte entsteht eine vollständige E-E-A-T-Struktur:
+            </p>
+            <div class="code-block">
+                <pre>{
+  "@context": "https://schema.org",
+  "@type": "Attorney",
+  "name": "Kanzlei Schmidt & Müller Rechtsanwälte",
+  "url": "https://kanzlei-schmidt-mueller.de",
+  "telephone": "+49 211 4443322",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Königsallee 55",
+    "postalCode": "40215",
+    "addressLocality": "Düsseldorf",
+    "addressCountry": "DE"
+  },
+  "knowsAbout": [
+    "Arbeitsrecht",
+    "Familienrecht",
+    "Erbrecht"
+  ],
+  "member": [
+    {
+      "@type": "Person",
+      "name": "Dr. Klaus Schmidt",
+      "honorificPrefix": "Dr. jur.",
+      "jobTitle": "Rechtsanwalt und Fachanwalt für Arbeitsrecht"
+    },
+    {
+      "@type": "Person",
+      "name": "Sabine Müller",
+      "jobTitle": "Rechtsanwältin und Fachanwältin für Familienrecht"
+    }
+  ]
+}</pre>
+            </div>
+            <p>
+                Die Property <code>knowsAbout</code> ist ein mächtiges E-E-A-T-Signal: Sie kommuniziert an Google, in welchen Rechtsbereichen die Kanzlei tätig ist. Kombiniert mit <code>member</code>-Profilen entsteht eine für YMYL-Seiten wertvolle Expertise-Demonstration. Mehr zur Wichtigkeit solcher Signale erklärt der Artikel zu <a href="/blog/medicalwebpage-healthtopiccontent-schema-markup">MedicalWebPage Schema</a>, der denselben Ansatz für medizinische Inhalte beschreibt.
+            </p>
+
+            <h2>Was ist GovernmentOrganization?</h2>
+            <p>
+                <code>GovernmentOrganization</code> ist ein Untertyp von <code>Organization</code> und steht damit außerhalb der <code>LocalBusiness</code>-Hierarchie. Die Vererbungskette:
+            </p>
+            <div class="code-block">
+                <pre>Thing → Organization → GovernmentOrganization</pre>
+            </div>
+            <p>
+                Das bedeutet: <code>GovernmentOrganization</code> erbt nicht die typischen Geschäfts-Properties wie <code>priceRange</code>, <code>openingHoursSpecification</code> oder <code>paymentAccepted</code> — zumindest nicht direkt. In der Praxis akzeptiert Google viele LocalBusiness-Properties trotzdem, auch wenn sie technisch aus einer anderen Typen-Hierarchie stammen.
+            </p>
+            <p>
+                Einsatzbereiche für <code>GovernmentOrganization</code>:
+            </p>
+            <ul>
+                <li>Ministerien, Behörden, Ämter</li>
+                <li>Kommunale Einrichtungen (Rathaus, Bürgeramt, Standesamt)</li>
+                <li>Öffentlich-rechtliche Institutionen</li>
+                <li>Gerichte und Staatsanwaltschaften</li>
+                <li>Öffentliche Bibliotheken und Archive</li>
+            </ul>
+            <p>
+                Es gibt auch spezialisierte Untertypen:
+            </p>
+            <ul>
+                <li><strong>GovernmentOffice</strong> — Regierungsbüros und Amtsstellen</li>
+                <li><strong>CivicStructure</strong> — Öffentliche Strukturen und Gebäude</li>
+                <li><strong>GovernmentBuilding</strong> — Regierungsgebäude (Untertyp von CivicStructure)</li>
+            </ul>
+
+            <h2>GovernmentOrganization JSON-LD: Vollständiges Beispiel</h2>
+            <div class="code-block">
+                <pre>{
+  "@context": "https://schema.org",
+  "@type": "GovernmentOrganization",
+  "name": "Bürgeramt Mitte Berlin",
+  "url": "https://service.berlin.de/buergeramt-mitte",
+  "telephone": "+49 30 115",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Karl-Marx-Allee 31",
+    "postalCode": "10178",
+    "addressLocality": "Berlin",
+    "addressCountry": "DE"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "https://schema.org/Monday",
+        "https://schema.org/Tuesday",
+        "https://schema.org/Wednesday",
+        "https://schema.org/Friday"
+      ],
+      "opens": "07:30",
+      "closes": "15:30"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "https://schema.org/Thursday",
+      "opens": "07:30",
+      "closes": "18:00"
+    }
+  ],
+  "hasMap": "https://maps.google.com/?cid=...",
+  "description": "Bürgeramt Mitte — An- und Abmeldungen, Personalausweis, Reisepass, Führungszeugnis.",
+  "parentOrganization": {
+    "@type": "GovernmentOrganization",
+    "name": "Bezirksamt Mitte von Berlin",
+    "url": "https://www.berlin.de/ba-mitte/"
+  }
+}</pre>
+            </div>
+            <p>
+                Besonders nützlich ist die Property <code>parentOrganization</code>: Sie zeigt die behördliche Hierarchie und stärkt das Knowledge-Graph-Verständnis von Google — der Algorithmus versteht, welches übergeordnete Amt diese Einrichtung betreibt.
+            </p>
+
+            <h2>GovernmentService: Dienstleistungen von Behörden</h2>
+            <p>
+                Ergänzend zu <code>GovernmentOrganization</code> gibt es den Typ <code>GovernmentService</code>, der einzelne Behördenleistungen beschreibt. Dies ist besonders relevant für Service-Portale und Amt-Websites:
+            </p>
+            <div class="code-block">
+                <pre>{
+  "@context": "https://schema.org",
+  "@type": "GovernmentService",
+  "name": "Anmeldung Wohnsitz Berlin",
+  "url": "https://service.berlin.de/dienstleistung/120686/",
+  "description": "Anmeldung eines neuen Wohnsitzes in Berlin — online oder persönlich im Bürgeramt.",
+  "provider": {
+    "@type": "GovernmentOrganization",
+    "name": "Senatsverwaltung für Inneres Berlin"
+  },
+  "areaServed": {
+    "@type": "City",
+    "name": "Berlin"
+  },
+  "serviceType": "Einwohnermeldewesen"
+}</pre>
+            </div>
+
+            <h2>Häufige Fehler bei LegalService und GovernmentOrganization</h2>
+
+            <h3>Fehler 1: Falscher Typ für Steuerberater</h3>
+            <p>
+                Viele Steuerberatungen nutzen generisch <code>Organization</code> oder <code>LocalBusiness</code>. Korrekt wäre <code>LegalService</code> oder alternativ <code>AccountingService</code> — beide kommunizieren die Branche präziser. Der Unterschied ist für das Knowledge Panel messbar.
+            </p>
+
+            <h3>Fehler 2: Fehlende ContactPoint-Properties</h3>
+            <p>
+                Rechtliche Dienstleister und Behörden haben oft mehrere Kontaktmöglichkeiten (allgemeine Hotline, Terminvereinbarung, Fax). Das <a href="/blog/contactpoint-schema-markup-seo">ContactPoint Schema Markup</a> erlaubt es, diese differenziert zu beschreiben:
+            </p>
+            <div class="code-block">
+                <pre>{
+  "contactPoint": [
+    {
+      "@type": "ContactPoint",
+      "telephone": "+49 30 5551234",
+      "contactType": "customer service",
+      "availableLanguage": ["German", "English"]
+    },
+    {
+      "@type": "ContactPoint",
+      "telephone": "+49 30 5551235",
+      "contactType": "reservations",
+      "contactOption": "TollFree"
+    }
+  ]
+}</pre>
+            </div>
+
+            <h3>Fehler 3: openingHoursSpecification statt openingHours</h3>
+            <p>
+                Für komplexe Öffnungszeiten (unterschiedliche Zeiten pro Tag, Mittagspausen, Sondertage) sollte immer <code>openingHoursSpecification</code> mit dem Untertyp <code>OpeningHoursSpecification</code> verwendet werden — nicht das einfachere String-Format <code>openingHours: "Mo-Fr 09:00-17:00"</code>. Letzteres funktioniert, bietet aber weniger Präzision und wird von Google seltener als Rich Result ausgelöst.
+            </p>
+
+            <h3>Fehler 4: GovernmentOrganization ohne Hierarchie</h3>
+            <p>
+                Behörden-Websites, die mehrere Standorte oder Abteilungen abbilden, sollten <code>parentOrganization</code> und <code>subOrganization</code> nutzen. Ohne Hierarchie-Markup versteht Google nicht, welche Abteilung zu welchem Amt gehört.
+            </p>
+
+            <h3>Fehler 5: knowsAbout ignorieren</h3>
+            <p>
+                Die Property <code>knowsAbout</code> ist besonders für YMYL-Bereiche (Legal, Finance, Medical) relevant. Sie signalisiert thematische Expertise — ein direktes E-E-A-T-Signal. Für Kanzleien sollte sie die Rechtsgebiete aufführen, für Steuerberater die Spezialgebiete.
+            </p>
+
+            <h2>LegalService vs. ProfessionalService: Wann welcher Typ?</h2>
+            <div class="bg-slate-800/50 rounded-xl p-5 border border-white/10 my-6">
+                <table class="w-full text-sm">
+                    <thead>
+                        <tr class="text-left border-b border-white/10">
+                            <th class="pb-3 text-blue-300 font-semibold">Einrichtungstyp</th>
+                            <th class="pb-3 text-blue-300 font-semibold">Empfohlener Schema-Typ</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-white/5">
+                        <tr>
+                            <td class="py-2.5 text-gray-300">Rechtsanwaltskanzlei</td>
+                            <td class="py-2.5 text-green-400 font-mono text-xs">Attorney</td>
+                        </tr>
+                        <tr>
+                            <td class="py-2.5 text-gray-300">Notariat</td>
+                            <td class="py-2.5 text-green-400 font-mono text-xs">Notary</td>
+                        </tr>
+                        <tr>
+                            <td class="py-2.5 text-gray-300">Steuerberatungskanzlei</td>
+                            <td class="py-2.5 text-green-400 font-mono text-xs">LegalService oder AccountingService</td>
+                        </tr>
+                        <tr>
+                            <td class="py-2.5 text-gray-300">Wirtschaftsprüfung</td>
+                            <td class="py-2.5 text-green-400 font-mono text-xs">AccountingService</td>
+                        </tr>
+                        <tr>
+                            <td class="py-2.5 text-gray-300">Unternehmensberatung (allgemein)</td>
+                            <td class="py-2.5 text-green-400 font-mono text-xs">ProfessionalService</td>
+                        </tr>
+                        <tr>
+                            <td class="py-2.5 text-gray-300">Behörde / Amt</td>
+                            <td class="py-2.5 text-green-400 font-mono text-xs">GovernmentOrganization / GovernmentOffice</td>
+                        </tr>
+                        <tr>
+                            <td class="py-2.5 text-gray-300">Ministerium</td>
+                            <td class="py-2.5 text-green-400 font-mono text-xs">GovernmentOrganization</td>
+                        </tr>
+                        <tr>
+                            <td class="py-2.5 text-gray-300">Einzelner Anwalt / Beraterin</td>
+                            <td class="py-2.5 text-green-400 font-mono text-xs">Person + jobTitle</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h2>SEO-Wirkung: Welche Rich Results sind möglich?</h2>
+            <p>
+                Weder <code>LegalService</code> noch <code>GovernmentOrganization</code> lösen spezielle Rich Results wie Sternebewertungen, Rezept-Karten oder Produkt-Snippets aus. Trotzdem bringt korrektes Schema Markup messbare SEO-Vorteile:
+            </p>
+            <ul>
+                <li><strong>Knowledge Panel:</strong> Google zeigt Adresse, Öffnungszeiten und Telefon direkt in der Seitenleiste der Suchergebnisse</li>
+                <li><strong>Local Pack:</strong> Korrekte Adressdaten verbessern die Sichtbarkeit in der lokalen Kartenansicht</li>
+                <li><strong>Sitelinks:</strong> Klare Strukturierung der Website-Hierarchie fördert Sitelinks in der Suche</li>
+                <li><strong>E-E-A-T:</strong> Für YMYL-Themen (Legal, Finance) sind Expertise-Signale kritisch für das Ranking — Schema Markup ist einer der wenigen direkten Hebel</li>
+            </ul>
+            <p>
+                Wichtig: Google bewertet legal tätige Websites nach besonders strengen Qualitätsmaßstäben. Ein vollständiges <a href="/blog/organization-schema-markup-vertieft">Organization Schema Markup</a> mit nachvollziehbarer Inhaberstruktur ist ein starkes Vertrauenssignal.
+            </p>
+
+            <h2>Kombination mit LocalBusiness-Markup</h2>
+            <p>
+                Da <code>LegalService</code> ein Untertyp von <code>LocalBusiness</code> ist, stehen alle LocalBusiness-Properties zur Verfügung. Die Kombination mit einem vollständigen <a href="/blog/localbusiness-schema-markup-anleitung">LocalBusiness Schema</a> ist empfehlenswert:
+            </p>
+            <div class="code-block">
+                <pre>{
+  "@context": "https://schema.org",
+  "@type": "LegalService",
+  "name": "Steuerberatung Hoffmann GmbH",
+  "url": "https://stb-hoffmann.de",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://stb-hoffmann.de/logo.png"
+  },
+  "image": "https://stb-hoffmann.de/kanzlei.jpg",
+  "telephone": "+49 89 3335544",
+  "email": "kanzlei@stb-hoffmann.de",
+  "priceRange": "€€€",
+  "currenciesAccepted": "EUR",
+  "paymentAccepted": "Banküberweisung, SEPA",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Maximilianstraße 22",
+    "postalCode": "80539",
+    "addressLocality": "München",
+    "addressCountry": "DE"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 48.14,
+    "longitude": 11.58
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "https://schema.org/Monday",
+        "https://schema.org/Tuesday",
+        "https://schema.org/Wednesday",
+        "https://schema.org/Thursday",
+        "https://schema.org/Friday"
+      ],
+      "opens": "08:00",
+      "closes": "17:00"
+    }
+  ],
+  "knowsAbout": [
+    "Einkommensteuer",
+    "Körperschaftsteuer",
+    "Umsatzsteuer",
+    "Jahresabschluss",
+    "Buchführung"
+  ],
+  "sameAs": [
+    "https://www.bundessteuerberaterkammer.de/...",
+    "https://www.google.com/maps?cid=..."
+  ]
+}</pre>
+            </div>
+
+            <h2>Implementierung: Wo gehört das Script-Tag hin?</h2>
+            <p>
+                JSON-LD-Blöcke sollten im <code>&lt;head&gt;</code> der HTML-Seite platziert werden — idealerweise vor dem schließenden <code>&lt;/head&gt;</code>-Tag. Für CMS-Systeme gilt:
+            </p>
+            <ul>
+                <li><strong>WordPress:</strong> Nutze ein SEO-Plugin (Yoast, RankMath) oder füge den Code per <code>wp_head</code> Hook ein</li>
+                <li><strong>TYPO3:</strong> Über TypoScript <code>page.headerData</code> einfügen</li>
+                <li><strong>Statische Websites:</strong> Direkt im <code>&lt;head&gt;</code></li>
+                <li><strong>Tag Manager:</strong> Google Tag Manager kann JSON-LD über Custom HTML Tags einschleusen — funktioniert, ist aber langsamer als direktes Einbetten</li>
+            </ul>
+            <p>
+                Nach der Implementierung immer den <a href="/tools/json-ld-structured-data-validator.html">JSON-LD Validator</a> nutzen und anschließend in der Google Search Console den URL-Inspection-Tool-Test durchführen.
+            </p>
+
+            <h2>Fazit: LegalService und GovernmentOrganization richtig einsetzen</h2>
+            <p>
+                Schema Markup für rechtliche Dienstleister und Behörden ist technisch nicht komplex — aber präzise Typen-Auswahl und vollständige Property-Befüllung machen den Unterschied zwischen einem ignoriertem JSON-LD-Block und einem echten SEO-Vorteil.
+            </p>
+            <p>
+                Die wichtigsten Punkte zusammengefasst:
+            </p>
+            <ul>
+                <li>Steuerberater → <code>LegalService</code> oder <code>AccountingService</code>, nicht generisch <code>Organization</code></li>
+                <li>Notare → <code>Notary</code> verwenden (spezifischer als <code>LegalService</code>)</li>
+                <li>Behörden → <code>GovernmentOrganization</code> mit <code>parentOrganization</code> für Hierarchien</li>
+                <li><code>knowsAbout</code> für Fachgebiete angeben — starkes E-E-A-T-Signal</li>
+                <li><code>openingHoursSpecification</code> statt <code>openingHours</code>-String für präzise Zeiten</li>
+                <li>Implementierung prüfen mit dem <a href="/tools/json-ld-structured-data-validator.html">JSON-LD Validator</a></li>
+            </ul>
+
+        </div>
+    </article>
+
+    <!-- CTA Card -->
+    <section class="py-10 px-4">
+        <div class="max-w-3xl mx-auto bg-gradient-to-br from-blue-900/40 to-indigo-900/30 border border-blue-500/20 rounded-2xl p-8 text-center">
+            <h2 class="text-2xl font-bold mb-3">Kostenlose SEO-Analyse für deine Website</h2>
+            <p class="text-gray-300 mb-6">Shift07 prüft automatisch, ob dein Schema Markup korrekt ist, ob Meta-Tags fehlen und wo deine größten SEO-Hebel liegen.</p>
+            <a href="/" class="inline-block bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-8 py-3 rounded-xl font-semibold transition-all shadow-lg shadow-blue-900/30">
+                Jetzt kostenlos analysieren →
+            </a>
+        </div>
+    </section>
+
+    <!-- Verwandte Artikel -->
+    <section class="py-10 px-4 border-t border-white/10">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-2xl font-bold mb-6">Verwandte Artikel</h2>
+            <div class="grid sm:grid-cols-2 gap-4">
+                <a href="/blog/localbusiness-schema-markup-anleitung" class="bg-slate-800/50 hover:bg-slate-700/50 rounded-xl p-4 border border-white/10 transition-all group">
+                    <div class="text-sm text-blue-400 mb-1">Schema Markup</div>
+                    <div class="font-semibold group-hover:text-blue-300 transition-colors">LocalBusiness Schema: Vollständige Anleitung</div>
+                </a>
+                <a href="/blog/organization-schema-markup-vertieft" class="bg-slate-800/50 hover:bg-slate-700/50 rounded-xl p-4 border border-white/10 transition-all group">
+                    <div class="text-sm text-blue-400 mb-1">Schema Markup</div>
+                    <div class="font-semibold group-hover:text-blue-300 transition-colors">Organization Schema vertieft</div>
+                </a>
+                <a href="/blog/medicalwebpage-healthtopiccontent-schema-markup" class="bg-slate-800/50 hover:bg-slate-700/50 rounded-xl p-4 border border-white/10 transition-all group">
+                    <div class="text-sm text-blue-400 mb-1">Schema Markup</div>
+                    <div class="font-semibold group-hover:text-blue-300 transition-colors">MedicalWebPage & HealthTopicContent</div>
+                </a>
+                <a href="/blog/contactpoint-schema-markup-seo" class="bg-slate-800/50 hover:bg-slate-700/50 rounded-xl p-4 border border-white/10 transition-all group">
+                    <div class="text-sm text-blue-400 mb-1">Schema Markup</div>
+                    <div class="font-semibold group-hover:text-blue-300 transition-colors">ContactPoint Schema Markup</div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900/80 border-t border-white/10 py-8 px-4">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="flex items-center gap-2">
+                <img src="/logo.png" alt="Shift07 Logo" class="h-7 w-7">
+                <span class="text-gray-400">© 2026 Thümmler AI GmbH · Shift07</span>
+            </div>
+            <div class="flex gap-6 text-sm text-gray-400">
+                <a href="/impressum.html" class="hover:text-white transition-colors">Impressum</a>
+                <a href="/datenschutz.html" class="hover:text-white transition-colors">Datenschutz</a>
+                <a href="/blog/" class="hover:text-white transition-colors">Blog</a>
+                <a href="/tools/" class="hover:text-white transition-colors">Tools</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
