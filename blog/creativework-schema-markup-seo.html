@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CreativeWork Schema Markup: Bücher, Artikel und Kreativwerke für Google optimieren | Shift07 Blog</title>
+    <meta name="description" content="Vollständige Anleitung zum CreativeWork Schema Markup – wie du Bücher, Artikel, Kurse und andere Kreativwerke mit JSON-LD für Google Rich Results optimierst.">
+    <meta name="author" content="Thümmler AI GmbH">
+    <link rel="icon" type="image/png" href="/logo.png">
+    <link rel="canonical" href="https://shift07.ai/blog/creativework-schema-markup-seo.html">
+    <link rel="alternate" type="application/rss+xml" title="Shift07 Blog" href="https://shift07.ai/feed.xml">
+    <!-- Open Graph -->
+    <meta property="og:title" content="CreativeWork Schema Markup: Bücher, Artikel und Kreativwerke für Google optimieren | Shift07 Blog">
+    <meta property="og:description" content="Vollständige Anleitung zum CreativeWork Schema Markup – wie du Bücher, Artikel, Kurse und andere Kreativwerke mit JSON-LD für Google Rich Results optimierst.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://shift07.ai/blog/creativework-schema-markup-seo.html">
+    <meta property="og:image" content="https://shift07.ai/blog/images/creativework-schema-markup-seo.png">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="Shift07">
+    <meta property="article:published_time" content="2026-04-23T08:00:00+02:00">
+    <meta property="article:section" content="Schema Markup">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="CreativeWork Schema Markup: Bücher, Artikel und Kreativwerke für Google optimieren">
+    <meta name="twitter:description" content="Vollständige Anleitung zum CreativeWork Schema Markup – wie du Bücher, Artikel, Kurse und andere Kreativwerke mit JSON-LD für Google Rich Results optimierst.">
+    <meta name="twitter:image" content="https://shift07.ai/blog/images/creativework-schema-markup-seo.png">
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "CreativeWork Schema Markup: Bücher, Artikel und Kreativwerke für Google optimieren",
+      "description": "Vollständige Anleitung zum CreativeWork Schema Markup – wie du Bücher, Artikel, Kurse und andere Kreativwerke mit JSON-LD für Google Rich Results optimierst.",
+      "image": "https://shift07.ai/blog/images/creativework-schema-markup-seo.png",
+      "datePublished": "2026-04-23T08:00:00+02:00",
+      "dateModified": "2026-04-23T08:00:00+02:00",
+      "author": {
+        "@type": "Organization",
+        "name": "Shift07",
+        "url": "https://shift07.ai"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Shift07",
+        "url": "https://shift07.ai",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://shift07.ai/assets/logo.png"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://shift07.ai/blog/creativework-schema-markup-seo.html"
+      }
+    }
+    </script>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K1S1RXBDS8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K1S1RXBDS8');
+    </script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: #1a1a2e; background: #f8f9ff; line-height: 1.7; }
+        header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 16px 0; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 20px rgba(0,0,0,0.15); }
+        nav { max-width: 1200px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.5rem; font-weight: 800; text-decoration: none; color: white; }
+        .nav-links a { color: rgba(255,255,255,0.9); text-decoration: none; margin-left: 24px; font-weight: 500; transition: color 0.2s; }
+        .nav-links a:hover { color: white; }
+        .hero { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 60px 24px 40px; text-align: center; }
+        .hero-badge { display: inline-block; background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.3); border-radius: 20px; padding: 6px 16px; font-size: 0.85rem; font-weight: 600; margin-bottom: 20px; }
+        .hero h1 { font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 800; max-width: 900px; margin: 0 auto 20px; line-height: 1.2; }
+        .hero-meta { font-size: 0.9rem; opacity: 0.85; }
+        .container { max-width: 860px; margin: 0 auto; padding: 40px 24px; }
+        .hero-image { width: 100%; max-height: 420px; object-fit: cover; border-radius: 12px; margin-bottom: 40px; box-shadow: 0 8px 32px rgba(102,126,234,0.2); }
+        h2 { font-size: 1.7rem; font-weight: 700; color: #1a1a2e; margin: 44px 0 16px; padding-bottom: 10px; border-bottom: 3px solid #667eea; }
+        h3 { font-size: 1.25rem; font-weight: 700; color: #2d3561; margin: 28px 0 12px; }
+        p { margin-bottom: 18px; color: #374151; font-size: 1.05rem; }
+        ul, ol { margin: 16px 0 20px 28px; }
+        li { margin-bottom: 10px; color: #374151; font-size: 1.05rem; }
+        .highlight-box { background: linear-gradient(135deg, #f0f4ff 0%, #f8f0ff 100%); border-left: 4px solid #667eea; border-radius: 8px; padding: 20px 24px; margin: 28px 0; }
+        .highlight-box strong { color: #667eea; }
+        .tip-box { background: #f0fff4; border-left: 4px solid #48bb78; border-radius: 8px; padding: 20px 24px; margin: 28px 0; }
+        .tip-box strong { color: #2f855a; }
+        .warning-box { background: #fffbf0; border-left: 4px solid #ed8936; border-radius: 8px; padding: 20px 24px; margin: 28px 0; }
+        .warning-box strong { color: #c05621; }
+        code { background: #f1f5f9; color: #e53e3e; padding: 2px 7px; border-radius: 4px; font-size: 0.9em; font-family: 'Courier New', monospace; }
+        pre { background: #1e1e3f; color: #a8b2d8; padding: 24px; border-radius: 10px; overflow-x: auto; margin: 24px 0; font-size: 0.88rem; line-height: 1.6; }
+        pre code { background: none; color: inherit; padding: 0; font-size: inherit; }
+        .property-table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 0.95rem; }
+        .property-table th { background: #667eea; color: white; padding: 12px 16px; text-align: left; }
+        .property-table td { padding: 12px 16px; border-bottom: 1px solid #e2e8f0; vertical-align: top; }
+        .property-table tr:hover { background: #f7f9ff; }
+        .property-table .required { color: #e53e3e; font-weight: 700; font-size: 0.8rem; }
+        .property-table .recommended { color: #ed8936; font-weight: 700; font-size: 0.8rem; }
+        .property-table .optional { color: #718096; font-weight: 700; font-size: 0.8rem; }
+        .cta-box { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 36px; border-radius: 16px; text-align: center; margin: 48px 0; }
+        .cta-box h3 { color: white; margin: 0 0 12px; font-size: 1.4rem; }
+        .cta-box p { color: rgba(255,255,255,0.9); margin-bottom: 24px; font-size: 1.05rem; }
+        .cta-btn { display: inline-block; background: white; color: #667eea; padding: 14px 32px; border-radius: 8px; font-weight: 700; text-decoration: none; font-size: 1.05rem; transition: transform 0.2s; }
+        .cta-btn:hover { transform: translateY(-2px); }
+        .internal-links { background: #f8f9ff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 24px; margin: 36px 0; }
+        .internal-links h3 { margin: 0 0 14px; color: #667eea; font-size: 1.1rem; }
+        .internal-links ul { margin: 0; padding-left: 20px; }
+        .internal-links li { margin-bottom: 8px; }
+        .internal-links a { color: #667eea; text-decoration: none; font-weight: 500; }
+        .internal-links a:hover { text-decoration: underline; }
+        .subtype-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin: 24px 0; }
+        .subtype-card { background: white; border: 1px solid #e2e8f0; border-radius: 8px; padding: 16px; }
+        .subtype-card h4 { color: #667eea; font-size: 1rem; margin-bottom: 6px; }
+        .subtype-card p { color: #4a5568; font-size: 0.9rem; margin: 0; }
+        footer { background: #1a1a2e; color: rgba(255,255,255,0.7); text-align: center; padding: 32px 24px; margin-top: 60px; }
+        footer a { color: rgba(255,255,255,0.7); text-decoration: none; }
+        @media (max-width: 640px) { .hero h1 { font-size: 1.6rem; } h2 { font-size: 1.4rem; } .subtype-grid { grid-template-columns: 1fr 1fr; } }
+    </style>
+</head>
+<body>
+
+<header>
+    <nav>
+        <a href="/" class="logo">Shift07</a>
+        <div class="nav-links">
+            <a href="/blog">Blog</a>
+            <a href="/tools">Tools</a>
+            <a href="/#pricing">Preise</a>
+        </div>
+    </nav>
+</header>
+
+<div class="hero">
+    <div class="hero-badge">Schema Markup · Cluster 16</div>
+    <h1>CreativeWork Schema Markup: Bücher, Artikel und Kreativwerke für Google optimieren</h1>
+    <div class="hero-meta">Von Shift07 · 23. April 2026 · 12 Min. Lesezeit</div>
+</div>
+
+<div class="container">
+
+    <img src="images/creativework-schema-markup-seo.png" alt="CreativeWork Schema Markup für Google Rich Results optimieren" class="hero-image">
+
+    <p>Das <strong>CreativeWork Schema</strong> ist einer der mächtigsten und vielseitigsten Typen in Schema.org. Es ist die Basis-Klasse für fast alle Inhaltstypen — von Blog-Artikeln über Bücher bis hin zu Kursen, Rezepten und Filmen. Wer das CreativeWork-Schema versteht, versteht die Logik hinter einem Großteil der strukturierten Daten im Web.</p>
+
+    <p>In diesem Artikel erfährst du, was CreativeWork ist, welche Sub-Typen es gibt, welche Properties du einsetzen solltest und wie du konkrete JSON-LD-Snippets für verschiedene Kreativwerke schreibst. Außerdem zeigen wir dir, wo CreativeWork sich von spezialisierten Typen unterscheidet und wann du welchen Typ bevorzugen solltest.</p>
+
+    <div class="highlight-box">
+        <strong>Das Wichtigste vorab:</strong> CreativeWork selbst wird selten direkt verwendet — stattdessen nutzt Google spezialisierte Sub-Typen wie <code>Article</code>, <code>Book</code> oder <code>Course</code>. Das Verständnis von CreativeWork hilft dir aber, die gemeinsamen Properties aller Inhaltstypen richtig einzusetzen.
+    </div>
+
+    <h2>Was ist CreativeWork Schema?</h2>
+
+    <p>In der Schema.org-Hierarchie steht <code>CreativeWork</code> unter <code>Thing</code> und ist die übergeordnete Klasse für alle kreativen oder intellektuellen Werke. Das umfasst im Wesentlichen alles, was von Menschenhand erschaffen wurde und einen inhaltlichen Wert hat.</p>
+
+    <p>Google definiert CreativeWork als "the most generic kind of creative work, including books, movies, photographs, software programs, etc." — also das generischste Kreativwerk, das Bücher, Filme, Fotos, Software und mehr einschließt.</p>
+
+    <p>Die Besonderheit von CreativeWork liegt darin, dass es eine Vielzahl von Properties definiert, die alle seine Sub-Typen erben. Wenn du also weißt, welche Properties CreativeWork hat, weißt du auch, welche du bei einem <code>Article</code>, einem <code>Book</code> oder einem <code>Course</code> einsetzen kannst.</p>
+
+    <h2>Die CreativeWork Sub-Typen im Überblick</h2>
+
+    <p>CreativeWork hat mehr als 100 Sub-Typen in Schema.org. Die für SEO relevantesten sind:</p>
+
+    <div class="subtype-grid">
+        <div class="subtype-card">
+            <h4>Article</h4>
+            <p>Blog-Artikel, NewsArticle, TechArticle — das häufigste Sub-Format für redaktionelle Inhalte</p>
+        </div>
+        <div class="subtype-card">
+            <h4>Book</h4>
+            <p>Bücher (physisch und digital), Hörbücher, E-Books mit ISBNS und Verlags-Daten</p>
+        </div>
+        <div class="subtype-card">
+            <h4>Course</h4>
+            <p>Online-Kurse auf Lernplattformen, Weiterbildungen, Seminar-Seiten</p>
+        </div>
+        <div class="subtype-card">
+            <h4>Recipe</h4>
+            <p>Rezepte mit Zutaten, Kochzeit und Nährwert-Angaben für Rich Snippets</p>
+        </div>
+        <div class="subtype-card">
+            <h4>Movie</h4>
+            <p>Filme auf Streaming-Plattformen oder Film-Datenbanken</p>
+        </div>
+        <div class="subtype-card">
+            <h4>SoftwareApplication</h4>
+            <p>Apps, Desktop-Software, Web-Applikationen mit Bewertungen</p>
+        </div>
+        <div class="subtype-card">
+            <h4>MusicRecording</h4>
+            <p>Songs, Alben, Podcasts und Audio-Inhalte</p>
+        </div>
+        <div class="subtype-card">
+            <h4>Dataset</h4>
+            <p>Datensätze, Forschungsdaten, offene Datenquellen</p>
+        </div>
+        <div class="subtype-card">
+            <h4>Photograph</h4>
+            <p>Fotos, Stock-Images und Bildgalerien</p>
+        </div>
+        <div class="subtype-card">
+            <h4>DigitalDocument</h4>
+            <p>PDFs, Präsentationen, Word-Dokumente als herunterladbare Ressourcen</p>
+        </div>
+    </div>
+
+    <div class="tip-box">
+        <strong>Tipp:</strong> Wähle immer den spezifischsten Sub-Typ. Wenn du einen Blog-Artikel markierst, nutze <code>BlogPosting</code> statt <code>Article</code> oder gar <code>CreativeWork</code>. Je spezifischer, desto besser versteht Google den Inhaltstyp.
+    </div>
+
+    <h2>Die wichtigsten Properties von CreativeWork</h2>
+
+    <p>Alle CreativeWork-Sub-Typen erben diese Properties. Du kannst sie bei jedem konkreten Inhaltstyp verwenden:</p>
+
+    <table class="property-table">
+        <thead>
+            <tr>
+                <th>Property</th>
+                <th>Typ</th>
+                <th>Priorität</th>
+                <th>Beschreibung</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>name</code></td>
+                <td>Text</td>
+                <td><span class="required">PFLICHT</span></td>
+                <td>Titel des Werks</td>
+            </tr>
+            <tr>
+                <td><code>description</code></td>
+                <td>Text</td>
+                <td><span class="required">PFLICHT</span></td>
+                <td>Kurzbeschreibung (150–200 Zeichen ideal)</td>
+            </tr>
+            <tr>
+                <td><code>author</code></td>
+                <td>Person / Organization</td>
+                <td><span class="recommended">EMPFOHLEN</span></td>
+                <td>Urheber des Werks — wichtig für E-E-A-T</td>
+            </tr>
+            <tr>
+                <td><code>datePublished</code></td>
+                <td>Date / DateTime</td>
+                <td><span class="recommended">EMPFOHLEN</span></td>
+                <td>Veröffentlichungsdatum im ISO-8601-Format</td>
+            </tr>
+            <tr>
+                <td><code>dateModified</code></td>
+                <td>Date / DateTime</td>
+                <td><span class="recommended">EMPFOHLEN</span></td>
+                <td>Datum der letzten Überarbeitung</td>
+            </tr>
+            <tr>
+                <td><code>image</code></td>
+                <td>ImageObject / URL</td>
+                <td><span class="recommended">EMPFOHLEN</span></td>
+                <td>Repräsentatives Bild des Werks</td>
+            </tr>
+            <tr>
+                <td><code>publisher</code></td>
+                <td>Organization</td>
+                <td><span class="recommended">EMPFOHLEN</span></td>
+                <td>Verlag oder veröffentlichende Organisation</td>
+            </tr>
+            <tr>
+                <td><code>url</code></td>
+                <td>URL</td>
+                <td><span class="recommended">EMPFOHLEN</span></td>
+                <td>Kanonische URL des Inhalts</td>
+            </tr>
+            <tr>
+                <td><code>keywords</code></td>
+                <td>Text / DefinedTerm</td>
+                <td><span class="optional">OPTIONAL</span></td>
+                <td>Thematische Schlüsselwörter</td>
+            </tr>
+            <tr>
+                <td><code>inLanguage</code></td>
+                <td>Language / Text</td>
+                <td><span class="optional">OPTIONAL</span></td>
+                <td>Sprache des Inhalts (z.B. "de")</td>
+            </tr>
+            <tr>
+                <td><code>genre</code></td>
+                <td>Text / URL</td>
+                <td><span class="optional">OPTIONAL</span></td>
+                <td>Genre oder Kategorie des Werks</td>
+            </tr>
+            <tr>
+                <td><code>license</code></td>
+                <td>CreativeWork / URL</td>
+                <td><span class="optional">OPTIONAL</span></td>
+                <td>Lizenz (z.B. Creative Commons)</td>
+            </tr>
+            <tr>
+                <td><code>isPartOf</code></td>
+                <td>CreativeWork / URL</td>
+                <td><span class="optional">OPTIONAL</span></td>
+                <td>Übergeordnetes Werk (z.B. Serie, Band)</td>
+            </tr>
+            <tr>
+                <td><code>hasPart</code></td>
+                <td>CreativeWork</td>
+                <td><span class="optional">OPTIONAL</span></td>
+                <td>Untergeordnete Werke (z.B. Kapitel)</td>
+            </tr>
+            <tr>
+                <td><code>about</code></td>
+                <td>Thing</td>
+                <td><span class="optional">OPTIONAL</span></td>
+                <td>Worum handelt das Werk? (Thema, Entität)</td>
+            </tr>
+            <tr>
+                <td><code>citation</code></td>
+                <td>CreativeWork / Text</td>
+                <td><span class="optional">OPTIONAL</span></td>
+                <td>Quellenangaben und Zitate</td>
+            </tr>
+            <tr>
+                <td><code>copyrightYear</code></td>
+                <td>Number</td>
+                <td><span class="optional">OPTIONAL</span></td>
+                <td>Copyright-Jahr</td>
+            </tr>
+            <tr>
+                <td><code>copyrightHolder</code></td>
+                <td>Organization / Person</td>
+                <td><span class="optional">OPTIONAL</span></td>
+                <td>Inhaber des Copyrights</td>
+            </tr>
+            <tr>
+                <td><code>educationalLevel</code></td>
+                <td>Text / DefinedTerm</td>
+                <td><span class="optional">OPTIONAL</span></td>
+                <td>Zielgruppe (Anfänger, Fortgeschrittene, Experten)</td>
+            </tr>
+            <tr>
+                <td><code>learningResourceType</code></td>
+                <td>Text / DefinedTerm</td>
+                <td><span class="optional">OPTIONAL</span></td>
+                <td>Art des Lernmaterials (Kurs, Übung, Simulation)</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>CreativeWork direkt einsetzen: wann macht es Sinn?</h2>
+
+    <p>Es gibt Szenarien, in denen du <code>CreativeWork</code> direkt (ohne Sub-Typ) verwenden kannst:</p>
+
+    <ul>
+        <li><strong>Inhalte ohne passenden Sub-Typ:</strong> Wenn kein spezifischer Schema.org-Typ deinen Inhalt abbildet — z.B. ein Whitepaper, das weder Article noch Book ist.</li>
+        <li><strong>Manuskripte und Entwürfe:</strong> Unveröffentlichte Werke, für die kein spezialisierter Typ existiert.</li>
+        <li><strong>Gemischte Inhalte:</strong> Seiten die mehrere Kreativwerk-Typen kombinieren und keinem Einzeltyp eindeutig zuzuordnen sind.</li>
+        <li><strong>Podcast-Episoden:</strong> Obwohl <code>PodcastEpisode</code> existiert, nutzen manche Anbieter CreativeWork als Basis.</li>
+    </ul>
+
+    <div class="warning-box">
+        <strong>Wann du CreativeWork NICHT direkt nutzen solltest:</strong> Wenn ein spezifischer Sub-Typ wie <code>Article</code>, <code>Book</code>, <code>Course</code> oder <code>Recipe</code> passt, nutze immer diesen. Google versteht spezifische Typen besser und kann gezielter Rich Results generieren.
+    </div>
+
+    <h2>Beispiele: CreativeWork und Sub-Typen in JSON-LD</h2>
+
+    <h3>Beispiel 1: Generisches CreativeWork (Whitepaper / Studie)</h3>
+
+    <pre><code>{
+  "@context": "https://schema.org",
+  "@type": "CreativeWork",
+  "name": "SEO-Studie 2026: Die häufigsten Website-Fehler bei KMU",
+  "description": "Analyse von 500 deutschen Unternehmens-Websites — welche SEO-Fehler am häufigsten vorkommen und wie du sie behebst.",
+  "url": "https://shift07.ai/studien/seo-fehler-kmu-2026",
+  "datePublished": "2026-04-01T00:00:00+02:00",
+  "dateModified": "2026-04-15T00:00:00+02:00",
+  "author": {
+    "@type": "Organization",
+    "name": "Thümmler AI GmbH",
+    "url": "https://shift07.ai"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Thümmler AI GmbH",
+    "url": "https://shift07.ai"
+  },
+  "image": "https://shift07.ai/studien/images/seo-studie-2026.png",
+  "inLanguage": "de",
+  "keywords": "SEO Fehler KMU Deutschland, Website-Analyse Studie",
+  "genre": "Forschungsbericht",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "copyrightYear": 2026,
+  "copyrightHolder": {
+    "@type": "Organization",
+    "name": "Thümmler AI GmbH"
+  }
+}</code></pre>
+
+    <h3>Beispiel 2: Book Schema (Sub-Typ von CreativeWork)</h3>
+
+    <pre><code>{
+  "@context": "https://schema.org",
+  "@type": "Book",
+  "name": "SEO für Einsteiger: Schritt für Schritt zur Google-Top-10",
+  "author": {
+    "@type": "Person",
+    "name": "Laurenz Thümmler"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Thümmler AI GmbH"
+  },
+  "datePublished": "2026-01-15",
+  "isbn": "978-3-000-00000-0",
+  "inLanguage": "de",
+  "numberOfPages": 280,
+  "bookEdition": "1. Auflage",
+  "bookFormat": "https://schema.org/EBook",
+  "description": "Der vollständige Leitfaden für SEO-Einsteiger: Keyword-Recherche, technisches SEO, Backlinks und Content-Strategie einfach erklärt.",
+  "image": "https://shift07.ai/buecher/images/seo-einsteiger.jpg",
+  "url": "https://shift07.ai/buecher/seo-einsteiger",
+  "offers": {
+    "@type": "Offer",
+    "price": "19.99",
+    "priceCurrency": "EUR",
+    "availability": "https://schema.org/InStock"
+  }
+}</code></pre>
+
+    <h3>Beispiel 3: Course Schema (Sub-Typ von CreativeWork)</h3>
+
+    <pre><code>{
+  "@context": "https://schema.org",
+  "@type": "Course",
+  "name": "SEO-Grundkurs für kleine Unternehmen",
+  "description": "In 8 Lektionen lernst du, wie du deine Website in Google sichtbar machst — ohne Vorkenntnisse.",
+  "provider": {
+    "@type": "Organization",
+    "name": "Shift07",
+    "url": "https://shift07.ai"
+  },
+  "instructor": {
+    "@type": "Person",
+    "name": "Laurenz Thümmler"
+  },
+  "url": "https://shift07.ai/kurse/seo-grundkurs",
+  "image": "https://shift07.ai/kurse/images/seo-grundkurs.png",
+  "inLanguage": "de",
+  "educationalLevel": "Anfänger",
+  "learningResourceType": "Online-Kurs",
+  "teaches": "Suchmaschinenoptimierung, Keyword-Recherche, technisches SEO",
+  "hasCourseInstance": {
+    "@type": "CourseInstance",
+    "courseMode": "Online",
+    "courseWorkload": "PT8H",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "EUR",
+      "availability": "https://schema.org/InStock"
+    }
+  }
+}</code></pre>
+
+    <h3>Beispiel 4: CreativeWork mit hasPart und isPartOf (Serie)</h3>
+
+    <pre><code>{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "name": "Schema Markup Grundkurs: Teil 3 — CreativeWork",
+  "isPartOf": {
+    "@type": "CreativeWork",
+    "name": "Schema Markup Grundkurs",
+    "url": "https://shift07.ai/kurse/schema-markup-grundkurs"
+  },
+  "position": 3,
+  "description": "Der dritte Teil unserer Schema-Markup-Serie: CreativeWork und seine Sub-Typen.",
+  "datePublished": "2026-04-23T08:00:00+02:00",
+  "author": {
+    "@type": "Organization",
+    "name": "Shift07",
+    "url": "https://shift07.ai"
+  },
+  "inLanguage": "de",
+  "url": "https://shift07.ai/blog/creativework-schema-markup-seo.html"
+}</code></pre>
+
+    <h2>CreativeWork für Forschung und Datasets</h2>
+
+    <p>Ein wichtiger CreativeWork-Sub-Typ, der oft übersehen wird, ist <code>Dataset</code>. Wenn du auf deiner Website Datensätze, Forschungsdaten oder statistische Auswertungen veröffentlichst, lohnt sich Dataset-Schema besonders:</p>
+
+    <pre><code>{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "SEO-Fehler-Analyse: 198 deutsche Unternehmens-Websites 2026",
+  "description": "Datensatz mit SEO-Analyseergebnissen von 198 deutschen KMU-Websites, kategorisiert nach Fehlertypen und Branchen.",
+  "url": "https://shift07.ai/daten/seo-fehler-kmu-2026",
+  "creator": {
+    "@type": "Organization",
+    "name": "Thümmler AI GmbH",
+    "url": "https://shift07.ai"
+  },
+  "datePublished": "2026-04-01",
+  "dateModified": "2026-04-20",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "inLanguage": "de",
+  "keywords": "SEO, Website-Analyse, deutsche KMU, Fehler-Statistik",
+  "distribution": {
+    "@type": "DataDownload",
+    "encodingFormat": "CSV",
+    "contentUrl": "https://shift07.ai/daten/seo-fehler-kmu-2026.csv"
+  },
+  "measurementTechnique": "Automatische Website-Analyse mit Shift07 SEO-Tool",
+  "variableMeasured": "Anzahl SEO-Fehler pro Website, Fehlertypen, Branchen"
+}</code></pre>
+
+    <div class="tip-box">
+        <strong>Tipp für Datenbetriebene SEO:</strong> Dataset-Schema in Google Dataset Search kann deinen Datensatz einer völlig neuen Zielgruppe zugänglich machen — Journalisten, Forscher und andere Content-Ersteller, die nach Daten suchen, um darüber zu berichten und zu verlinken.
+    </div>
+
+    <h2>author, creator und contributor: Was ist der Unterschied?</h2>
+
+    <p>CreativeWork unterscheidet zwischen mehreren Rollen für Personen, die an einem Werk beteiligt waren:</p>
+
+    <ul>
+        <li><strong><code>author</code>:</strong> Der Hauptautor des Werks — am wichtigsten für E-E-A-T. Nutze Person-Schema mit <code>name</code>, <code>url</code> und optionalem <code>sameAs</code>.</li>
+        <li><strong><code>creator</code>:</strong> Allgemeinerer Begriff als author — geeignet für Werke ohne klassische Autorenschaft (z.B. Software, Designs).</li>
+        <li><strong><code>contributor</code>:</strong> Mitwirkende, die wesentlich beigetragen haben, aber nicht als Hauptautor gelten.</li>
+        <li><strong><code>editor</code>:</strong> Redakteure, die das Werk betreut haben.</li>
+        <li><strong><code>producer</code>:</strong> Produzenten — relevant bei Video- und Audio-Inhalten.</li>
+    </ul>
+
+    <pre><code>{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Schema Markup: Ein vollständiger Leitfaden",
+  "author": {
+    "@type": "Person",
+    "name": "Laurenz Thümmler",
+    "url": "https://shift07.ai/ueber-uns",
+    "sameAs": "https://www.linkedin.com/in/laurenz-thümmler"
+  },
+  "contributor": [
+    {
+      "@type": "Person",
+      "name": "Anna Müller"
+    },
+    {
+      "@type": "Person",
+      "name": "Thomas Weber"
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "Thümmler AI GmbH",
+    "url": "https://shift07.ai"
+  }
+}</code></pre>
+
+    <h2>keywords und about: Kontext für Google schaffen</h2>
+
+    <p>Zwei oft unterschätzte Properties sind <code>keywords</code> und <code>about</code>:</p>
+
+    <h3>keywords</h3>
+    <p>Die <code>keywords</code>-Property ist eine Komma-getrennte Liste thematischer Schlüsselwörter. Sie hilft Google, den Kontext des Inhalts besser einzuordnen — auch wenn Google <code>keywords</code> in Meta-Tags seit Jahren ignoriert, im strukturierten Daten-Kontext hat diese Property weiterhin Relevanz:</p>
+
+    <pre><code>"keywords": "CreativeWork Schema, Schema.org, strukturierte Daten, JSON-LD, Rich Snippets, Google"</code></pre>
+
+    <h3>about</h3>
+    <p>Die <code>about</code>-Property ist mächtiger: Sie verknüpft ein Werk mit einer konkreten Entität (Thing) — z.B. einem Ort, einer Person oder einem Konzept. Das unterstützt die Knowledge Graph-Integration:</p>
+
+    <pre><code>"about": {
+  "@type": "Thing",
+  "name": "Suchmaschinenoptimierung",
+  "sameAs": "https://de.wikipedia.org/wiki/Suchmaschinenoptimierung"
+}</code></pre>
+
+    <h2>Häufige Fehler bei CreativeWork-Schema</h2>
+
+    <p>Aus unserer Analyse von hunderten deutschen Websites haben wir diese typischen Implementierungsfehler identifiziert:</p>
+
+    <ol>
+        <li>
+            <strong>Zu generischer Typ gewählt:</strong> CreativeWork direkt statt des passenden Sub-Typs verwenden. Immer <code>Article</code>, <code>Book</code> etc. bevorzugen.
+        </li>
+        <li>
+            <strong>author fehlt oder ist unvollständig:</strong> Nur <code>"author": "Max Müller"</code> statt eines vollständigen Person-Objekts mit URL. Google benötigt die Person-Entität für E-E-A-T.
+        </li>
+        <li>
+            <strong>dateModified fehlt bei aktualisierten Inhalten:</strong> Nur <code>datePublished</code> angeben. Bei jeder Überarbeitung <code>dateModified</code> aktualisieren — Google nutzt diesen Wert für Freshness-Signale.
+        </li>
+        <li>
+            <strong>image als einfache URL statt ImageObject:</strong> Nur <code>"image": "https://example.com/bild.jpg"</code> statt eines vollständigen ImageObject mit Maßen. Google Discover bevorzugt Bilder mit definierten Dimensionen.
+        </li>
+        <li>
+            <strong>isPartOf falsch verketten:</strong> Bei einer Artikel-Serie <code>isPartOf</code> falsch befüllen oder das übergeordnete Werk nicht korrekt typisieren.
+        </li>
+        <li>
+            <strong>inLanguage vergessen:</strong> Besonders bei mehrsprachigen Websites wichtig — ohne inLanguage kann Google die Sprache falsch zuordnen.
+        </li>
+    </ol>
+
+    <h2>CreativeWork und E-E-A-T: Vertrauen signalisieren</h2>
+
+    <p>E-E-A-T (Experience, Expertise, Authoritativeness, Trustworthiness) ist ein zentrales Google-Qualitätskonzept — und CreativeWork-Schema ist ein direkter Hebel dafür.</p>
+
+    <p>Konkret hilft dir CreativeWork-Schema bei E-E-A-T so:</p>
+
+    <ul>
+        <li><strong>author mit sameAs:</strong> Verlinke den Autor mit seinem LinkedIn- oder Wikipedia-Eintrag — Google kann die Expertise verifizieren.</li>
+        <li><strong>publisher mit Logo:</strong> Ein vollständiges Organization-Schema mit verifizierbarem Logo stärkt die Autorität der Organisation.</li>
+        <li><strong>dateModified:</strong> Zeigt, dass Inhalte aktuell gehalten werden — Freshness ist ein Vertrauenssignal.</li>
+        <li><strong>citation:</strong> Quellenangaben im Schema signalisieren, dass dein Inhalt auf verifizierbaren Fakten basiert.</li>
+        <li><strong>license:</strong> Eine explizite Lizenz signalisiert transparenten Umgang mit Urheberrecht.</li>
+    </ul>
+
+    <div class="highlight-box">
+        <strong>E-E-A-T-Checkliste für CreativeWork:</strong><br>
+        ✅ author als Person-Objekt mit name + url<br>
+        ✅ publisher als Organization-Objekt mit logo<br>
+        ✅ datePublished + dateModified korrekt gesetzt<br>
+        ✅ Mindestens 1 citation für faktische Inhalte<br>
+        ✅ about auf eine konkrete Entität verweisen
+    </div>
+
+    <h2>CreativeWork validieren</h2>
+
+    <p>Bevor du CreativeWork-Schema live schaltest, solltest du es validieren. Nutze dafür das <a href="/tools/json-ld-structured-data-validator" style="color: #667eea;">JSON-LD Structured Data Validator</a> auf Shift07 — er prüft die Syntax deines JSON-LD und zeigt dir sofort Fehler an. Für eine tiefere Analyse empfiehlt sich zusätzlich das <a href="/tools/article-schema-generator" style="color: #667eea;">Article Schema Generator</a>-Tool, mit dem du sofort korrektes JSON-LD für Blog-Artikel generieren kannst.</p>
+
+    <p>Google verweist außerdem auf den <a href="https://search.google.com/test/rich-results" style="color: #667eea;" rel="nofollow">Rich Results Test</a>, der prüft ob deine strukturierten Daten Rich Snippets aktivieren können.</p>
+
+    <h2>Fazit: CreativeWork als Fundament verstehen</h2>
+
+    <p>CreativeWork ist weniger ein "Tool das du verwendest" als ein "Konzept das du verstehst". Wer die Properties von CreativeWork kennt, kann jeden Inhaltstyp — ob Artikel, Buch, Kurs oder Datensatz — korrekt und vollständig mit Schema markieren.</p>
+
+    <p>Die drei wichtigsten Takeaways:</p>
+    <ol>
+        <li>Immer den spezifischsten Sub-Typ verwenden (Article, Book, Course etc.), nicht CreativeWork direkt.</li>
+        <li>author, datePublished, dateModified und image gehören zu jedem CreativeWork — sie stärken E-E-A-T.</li>
+        <li>isPartOf und hasPart helfen Google, zusammenhängende Inhalte (Serien, Kurse, Bücher) als Einheit zu verstehen.</li>
+    </ol>
+
+    <p>In unserem nächsten Artikel schauen wir uns <strong>SiteNavigationElement Schema Markup</strong> an — wie du deine Hauptnavigation für Google strukturierst und die Sitelinks in den Suchergebnissen optimierst.</p>
+
+    <div class="internal-links">
+        <h3>Verwandte Artikel &amp; Tools</h3>
+        <ul>
+            <li><a href="/blog/strukturierte-daten-seo-schema-markup">Strukturierte Daten für SEO: Schema Markup einfach erklärt</a></li>
+            <li><a href="/blog/article-schema-markup-seo">Article Schema Markup: Blog-Artikel für Rich Snippets optimieren</a></li>
+            <li><a href="/blog/course-schema-markup-seo">Course Schema Markup: Online-Kurse als Rich Snippets in Google</a></li>
+            <li><a href="/blog/person-schema-markup-seo">Person Schema Markup: Autoren-Schema für Google und E-E-A-T</a></li>
+            <li><a href="/blog/imageobject-schema-markup-seo">ImageObject Schema Markup: Bilder für Google Rich Results optimieren</a></li>
+            <li><a href="/tools/article-schema-generator">Tool: Article Schema Generator – JSON-LD kostenlos erstellen</a></li>
+            <li><a href="/tools/json-ld-structured-data-validator">Tool: JSON-LD Structured Data Validator</a></li>
+        </ul>
+    </div>
+
+    <div class="cta-box">
+        <h3>Kostenlose SEO-Analyse für deine Website</h3>
+        <p>Prüfe sofort, ob deine Website strukturierte Daten richtig einsetzt — mit unserem kostenlosen SEO-Analyse-Tool.</p>
+        <a href="https://shift07.ai" class="cta-btn">Jetzt kostenlos analysieren →</a>
+    </div>
+
+</div>
+
+<footer>
+    <p>&copy; 2026 Thümmler AI GmbH · <a href="/impressum.html">Impressum</a> · <a href="/datenschutz.html">Datenschutz</a></p>
+</footer>
+
+</body>
+</html>
