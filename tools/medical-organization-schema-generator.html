@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedicalOrganization & Physician Schema Generator – JSON-LD kostenlos erstellen | Shift07</title>
+    <meta name="description" content="Erstelle kostenlos JSON-LD Schema Markup für Arztpraxen, Krankenhäuser, Zahnarztpraxen, Apotheken und Ärzte. MedicalOrganization und Physician Schema sofort einsatzbereit.">
+    <meta name="author" content="Thümmler AI GmbH">
+    <link rel="icon" type="image/png" href="/logo.png">
+    <link rel="canonical" href="https://shift07.ai/tools/medical-organization-schema-generator.html">
+    <link rel="alternate" type="application/rss+xml" title="Shift07 Blog" href="https://shift07.ai/feed.xml">
+    <!-- Open Graph -->
+    <meta property="og:title" content="MedicalOrganization & Physician Schema Generator – JSON-LD kostenlos erstellen">
+    <meta property="og:description" content="Erstelle kostenlos JSON-LD Schema Markup für Arztpraxen, Krankenhäuser, Zahnarztpraxen, Apotheken und Ärzte.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://shift07.ai/tools/medical-organization-schema-generator.html">
+    <meta property="og:image" content="https://shift07.ai/tools/images/medical-organization-schema-generator.png">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="Shift07">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="MedicalOrganization & Physician Schema Generator – JSON-LD kostenlos">
+    <meta name="twitter:description" content="JSON-LD Schema Markup für Arztpraxen, Krankenhäuser, Zahnarztpraxen, Apotheken und Ärzte kostenlos generieren.">
+    <meta name="twitter:image" content="https://shift07.ai/tools/images/medical-organization-schema-generator.png">
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "MedicalOrganization & Physician Schema Generator – JSON-LD kostenlos erstellen",
+      "description": "Erstelle kostenlos JSON-LD Schema Markup für Arztpraxen, Krankenhäuser, Zahnarztpraxen, Apotheken und Ärzte.",
+      "url": "https://shift07.ai/tools/medical-organization-schema-generator.html",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "Shift07",
+        "url": "https://shift07.ai"
+      }
+    }
+    </script>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K1S1RXBDS8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K1S1RXBDS8');
+    </script>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8475857002943858" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { 'inter': ['Inter', 'system-ui', '-apple-system', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: rgba(15, 23, 42, 0.5); }
+        ::-webkit-scrollbar-thumb { background: rgba(59, 130, 246, 0.5); border-radius: 4px; }
+        pre { white-space: pre-wrap; word-break: break-all; }
+        .physician-field { display: none; }
+        .physician-field.visible { display: block; }
+    </style>
+</head>
+<body class="bg-slate-900 text-white min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-slate-900/80 backdrop-blur-xl border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <a href="/" class="flex items-center gap-2">
+                    <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                    <span class="text-xl font-bold text-white">Shift07</span>
+                </a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="/" class="text-gray-300 hover:text-white transition-colors">SEO-Tool</a>
+                    <a href="/blog/" class="text-gray-300 hover:text-white transition-colors">Blog</a>
+                    <a href="/tools/" class="text-white font-medium border-b-2 border-blue-500 pb-0.5">Tools</a>
+                    <a href="/app/#/login" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-5 py-2 rounded-lg font-medium transition-all">Anmelden</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-gray-300 hover:text-white">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900/95 border-b border-white/10">
+            <div class="px-4 py-3 space-y-2">
+                <a href="/" class="block py-2 text-gray-300 hover:text-white">SEO-Tool</a>
+                <a href="/blog/" class="block py-2 text-gray-300 hover:text-white">Blog</a>
+                <a href="/tools/" class="block py-2 text-white font-medium">Tools</a>
+                <a href="/app/#/login" class="block py-2 text-blue-400 hover:text-blue-300">Anmelden</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="pt-28 pb-10 px-4">
+        <div class="max-w-4xl mx-auto text-center">
+            <div class="inline-flex items-center gap-2 bg-blue-500/10 border border-blue-500/20 rounded-full px-4 py-1.5 text-sm text-blue-400 mb-6">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
+                Schema.org · MedicalOrganization · Physician
+            </div>
+            <h1 class="text-4xl md:text-5xl font-extrabold mb-4 leading-tight">
+                MedicalOrganization &amp; Physician<br>
+                <span class="bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">Schema Generator</span>
+            </h1>
+            <p class="text-xl text-gray-300 mb-4 max-w-2xl mx-auto">
+                JSON-LD Schema Markup für Arztpraxen, Krankenhäuser, Zahnarztpraxen, Apotheken und Ärzte — kostenlos generieren und direkt einbinden.
+            </p>
+            <img src="/tools/images/medical-organization-schema-generator.png" alt="MedicalOrganization Physician Schema Generator JSON-LD" class="w-full max-w-2xl mx-auto rounded-xl mt-6 border border-white/10">
+        </div>
+    </section>
+
+    <!-- Generator -->
+    <section class="py-8 px-4">
+        <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-8">
+
+            <!-- Formular -->
+            <div class="space-y-6">
+
+                <!-- Typ-Auswahl -->
+                <div class="bg-slate-800/50 rounded-xl p-6 border border-white/10">
+                    <h2 class="text-lg font-semibold mb-4 text-blue-300">1. Schema-Typ wählen</h2>
+                    <div class="space-y-3">
+                        <div>
+                            <label class="block text-sm text-gray-400 mb-1">Typ der Einrichtung / Person</label>
+                            <select id="schemaType" onchange="updatePhysicianFields()" class="w-full bg-slate-700 border border-white/10 rounded-lg px-4 py-2.5 text-white focus:outline-none focus:border-blue-500">
+                                <option value="MedicalOrganization">MedicalOrganization (allgemein)</option>
+                                <option value="MedicalClinic">MedicalClinic (Klinik/Praxis)</option>
+                                <option value="Hospital">Hospital (Krankenhaus)</option>
+                                <option value="Dentist">Dentist (Zahnarztpraxis)</option>
+                                <option value="Pharmacy">Pharmacy (Apotheke)</option>
+                                <option value="Physician">Physician (Arzt/Ärztin)</option>
+                                <option value="MedicalBusiness">MedicalBusiness (mediz. Unternehmen)</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm text-gray-400 mb-1">Medizinische Fachrichtung (medicalSpecialty)</label>
+                            <select id="medicalSpecialty" class="w-full bg-slate-700 border border-white/10 rounded-lg px-4 py-2.5 text-white focus:outline-none focus:border-blue-500">
+                                <option value="">— keine Angabe —</option>
+                                <option value="Anesthesia">Anesthesia (Anästhesiologie)</option>
+                                <option value="Cardiovascular">Cardiovascular (Kardiologie)</option>
+                                <option value="Dermatology">Dermatology (Dermatologie)</option>
+                                <option value="DietNutrition">DietNutrition (Ernährungsmedizin)</option>
+                                <option value="Emergency">Emergency (Notfallmedizin)</option>
+                                <option value="Endocrine">Endocrine (Endokrinologie)</option>
+                                <option value="Gastroenterologic">Gastroenterologic (Gastroenterologie)</option>
+                                <option value="Geriatric">Geriatric (Geriatrie)</option>
+                                <option value="Gynecologic">Gynecologic (Gynäkologie)</option>
+                                <option value="Hematologic">Hematologic (Hämatologie)</option>
+                                <option value="Infectious">Infectious (Infektiologie)</option>
+                                <option value="Musculoskeletal">Musculoskeletal (Orthopädie/Physiotherapie)</option>
+                                <option value="Neurologic">Neurologic (Neurologie)</option>
+                                <option value="Nursing">Nursing (Pflege)</option>
+                                <option value="Obstetric">Obstetric (Geburtshilfe)</option>
+                                <option value="Oncologic">Oncologic (Onkologie)</option>
+                                <option value="Optometric">Optometric (Optometrie)</option>
+                                <option value="Otolaryngologic">Otolaryngologic (HNO)</option>
+                                <option value="Pediatric">Pediatric (Pädiatrie/Kinderheilkunde)</option>
+                                <option value="PharmacySpecialty">PharmacySpecialty (Pharmazie)</option>
+                                <option value="Physiotherapy">Physiotherapy (Physiotherapie)</option>
+                                <option value="PlasticSurgery">PlasticSurgery (Plastische Chirurgie)</option>
+                                <option value="Podiatric">Podiatric (Podologie)</option>
+                                <option value="PrimaryCare">PrimaryCare (Allgemeinmedizin/Hausarzt)</option>
+                                <option value="Psychiatric">Psychiatric (Psychiatrie)</option>
+                                <option value="Pulmonary">Pulmonary (Pneumologie)</option>
+                                <option value="Radiography">Radiography (Radiologie)</option>
+                                <option value="Renal">Renal (Nephrologie)</option>
+                                <option value="Rheumatologic">Rheumatologic (Rheumatologie)</option>
+                                <option value="SpeechPathology">SpeechPathology (Logopädie)</option>
+                                <option value="Surgical">Surgical (Chirurgie)</option>
+                                <option value="Urologic">Urologic (Urologie)</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Grunddaten -->
+                <div class="bg-slate-800/50 rounded-xl p-6 border border-white/10">
+                    <h2 class="text-lg font-semibold mb-4 text-blue-300">2. Grunddaten</h2>
+                    <div class="space-y-3">
+                        <div>
+                            <label class="block text-sm text-gray-400 mb-1">Name der Praxis / Einrichtung / des Arztes *</label>
+                            <input type="text" id="orgName" value="Zahnarztpraxis Dr. Müller" oninput="generate()" class="w-full bg-slate-700 border border-white/10 rounded-lg px-4 py-2.5 text-white focus:outline-none focus:border-blue-500" placeholder="Praxisname oder Ärztebezeichnung">
+                        </div>
+                        <!-- Physician-spezifische Felder -->
+                        <div id="physicianFields" class="physician-field space-y-3">
+                            <div>
+                                <label class="block text-sm text-gray-400 mb-1">Titel / Anrede (z. B. Dr. med., Prof. Dr.)</label>
+                                <input type="text" id="honorificPrefix" value="Dr. med." oninput="generate()" class="w-full bg-slate-700 border border-white/10 rounded-lg px-4 py-2.5 text-white focus:outline-none focus:border-blue-500" placeholder="Dr. med.">
+                            </div>
+                            <div class="grid grid-cols-2 gap-3">
+                                <div>
+                                    <label class="block text-sm text-gray-400 mb-1">Vorname</label>
+                                    <input type="text" id="givenName" value="" oninput="generate()" class="w-full bg-slate-700 border border-white/10 rounded-lg px-4 py-2.5 text-white focus:outline-none focus:border-blue-500" placeholder="Max">
+                                </div>
+                                <div>
+                                    <label class="block text-sm text-gray-400 mb-1">Nachname</label>
+                                    <input type="text" id="familyName" value="" oninput="generate()" class="w-full bg-slate-700 border border-white/10 rounded-lg px-4 py-2.5 text-white focus:outline-none focus:border-blue-500" placeholder="Müller">
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm text-gray-400 mb-1">Website-URL</label>
+                            <input type="url" id="orgUrl" value="https://zahnarzt-mueller.de" oninput="generate()" class="w-full bg-slate-700 border border-white/10 rounded-lg px-4 py-2.5 text-white focus:outline-none focus:border-blue-500" placeholder="https://ihre-praxis.de">
+                        </div>
+                        <div>
+                            <label class="block text-sm text-gray-400 mb-1">Bild-URL (Praxisfoto oder Ärztefoto)</label>
+                            <input type="url" id="orgImage" oninput="generate()" class="w-full bg-slate-700 border border-white/10 rounded-lg px-4 py-2.5 text-white focus:outline-none focus:border-blue-500" placeholder="https://ihre-praxis.de/bild.jpg">
+                        </div>
+                        <div>
+                            <label class="block text-sm text-gray-400 mb-1">Beschreibung</label>
+                            <textarea id="orgDescription" oninput="generate()" rows="2" class="w-full bg-slate-700 border border-white/10 rounded-lg px-4 py-2.5 text-white focus:outline-none focus:border-blue-500 resize-none" placeholder="Kurze Beschreibung der Praxis oder des Arztes"></textarea>
+                        </div>
+                        <div>
+                            <label class="block text-sm text-gray-400 mb-1">Preiskategorie (priceRange, z. B. €€)</label>
+                            <input type="text" id="priceRange" oninput="generate()" class="w-full bg-slate-700 border border-white/10 rounded-lg px-4 py-2.5 text-white focus:outline-none focus:border-blue-500" placeholder="€€">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Adresse & Kontakt -->
+                <div class="bg-slate-800/50 rounded-xl p-6 border border-white/10">
+                    <h2 class="text-lg font-semibold mb-4 text-blue-300">3. Adresse &amp; Kontakt</h2>
+                    <div class="space-y-3">
+                        <div>
+                            <label class="block text-sm text-gray-400 mb-1">Straße und Hausnummer</label>
+                            <input type="text" id="orgStreet" value="Musterstraße 1" oninput="generate()" class="w-full bg-slate-700 border border-white/10 rounded-lg px-4 py-2.5 text-white focus:outline-none focus:border-blue-500" placeholder="Musterstraße 1">
+                        </div>
+                        <div class="grid grid-cols-2 gap-3">
+                            <div>
+                                <label class="block text-sm text-gray-400 mb-1">PLZ</label>
+                                <input type="text" id="orgPostalCode" value="10115" oninput="generate()" class="w-full bg-slate-700 border border-white/10 rounded-lg px-4 py-2.5 text-white focus:outline-none focus:border-blue-500" placeholder="10115">
+                            </div>
+                            <div>
+                                <label class="block text-sm text-gray-400 mb-1">Stadt</label>
+                                <input type="text" id="orgCity" value="Berlin" oninput="generate()" class="w-full bg-slate-700 border border-white/10 rounded-lg px-4 py-2.5 text-white focus:outline-none focus:border-blue-500" placeholder="Berlin">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm text-gray-400 mb-1">Land (ISO-Code)</label>
+                            <input type="text" id="orgCountry" value="DE" oninput="generate()" class="w-full bg-slate-700 border border-white/10 rounded-lg px-4 py-2.5 text-white focus:outline-none focus:border-blue-500" placeholder="DE">
+                        </div>
+                        <div>
+                            <label class="block text-sm text-gray-400 mb-1">Telefon</label>
+                            <input type="text" id="orgPhone" value="+49 30 123456789" oninput="generate()" class="w-full bg-slate-700 border border-white/10 rounded-lg px-4 py-2.5 text-white focus:outline-none focus:border-blue-500" placeholder="+49 30 123456789">
+                        </div>
+                        <div>
+                            <label class="block text-sm text-gray-400 mb-1">E-Mail</label>
+                            <input type="email" id="orgEmail" oninput="generate()" class="w-full bg-slate-700 border border-white/10 rounded-lg px-4 py-2.5 text-white focus:outline-none focus:border-blue-500" placeholder="info@ihre-praxis.de">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Öffnungszeiten -->
+                <div class="bg-slate-800/50 rounded-xl p-6 border border-white/10">
+                    <h2 class="text-lg font-semibold mb-4 text-blue-300">4. Öffnungszeiten</h2>
+                    <p class="text-xs text-gray-400 mb-3">Format: Mo-Fr 08:00-18:00 oder Sa 09:00-13:00. Mehrere Einträge mit Komma trennen.</p>
+                    <div class="space-y-2">
+                        <div class="grid grid-cols-3 gap-2 items-center">
+                            <label class="text-sm text-gray-300">Montag–Freitag</label>
+                            <input type="text" id="ohMoFr" value="08:00-18:00" oninput="generate()" class="col-span-2 bg-slate-700 border border-white/10 rounded-lg px-3 py-2 text-white text-sm focus:outline-none focus:border-blue-500" placeholder="08:00-18:00">
+                        </div>
+                        <div class="grid grid-cols-3 gap-2 items-center">
+                            <label class="text-sm text-gray-300">Samstag</label>
+                            <input type="text" id="ohSa" oninput="generate()" class="col-span-2 bg-slate-700 border border-white/10 rounded-lg px-3 py-2 text-white text-sm focus:outline-none focus:border-blue-500" placeholder="09:00-13:00 (leer = geschlossen)">
+                        </div>
+                        <div class="grid grid-cols-3 gap-2 items-center">
+                            <label class="text-sm text-gray-300">Sonntag</label>
+                            <input type="text" id="ohSo" oninput="generate()" class="col-span-2 bg-slate-700 border border-white/10 rounded-lg px-3 py-2 text-white text-sm focus:outline-none focus:border-blue-500" placeholder="leer = geschlossen">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SameAs -->
+                <div class="bg-slate-800/50 rounded-xl p-6 border border-white/10">
+                    <h2 class="text-lg font-semibold mb-4 text-blue-300">5. Profile &amp; Verzeichnisse (sameAs)</h2>
+                    <div class="space-y-3">
+                        <div>
+                            <label class="block text-sm text-gray-400 mb-1">Jameda-Profil-URL</label>
+                            <input type="url" id="sameAsJameda" oninput="generate()" class="w-full bg-slate-700 border border-white/10 rounded-lg px-4 py-2.5 text-white focus:outline-none focus:border-blue-500" placeholder="https://www.jameda.de/...">
+                        </div>
+                        <div>
+                            <label class="block text-sm text-gray-400 mb-1">Google Maps URL</label>
+                            <input type="url" id="sameAsMaps" oninput="generate()" class="w-full bg-slate-700 border border-white/10 rounded-lg px-4 py-2.5 text-white focus:outline-none focus:border-blue-500" placeholder="https://maps.google.com/?cid=...">
+                        </div>
+                        <div>
+                            <label class="block text-sm text-gray-400 mb-1">Weitere URL (Doctolib, Facebook etc.)</label>
+                            <input type="url" id="sameAsExtra" oninput="generate()" class="w-full bg-slate-700 border border-white/10 rounded-lg px-4 py-2.5 text-white focus:outline-none focus:border-blue-500" placeholder="https://...">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Output -->
+            <div class="space-y-4 sticky top-24 self-start">
+                <div class="bg-slate-800/50 rounded-xl p-6 border border-white/10">
+                    <div class="flex justify-between items-center mb-4">
+                        <h2 class="text-lg font-semibold text-green-300">Generierter JSON-LD Code</h2>
+                        <button id="copyBtn" onclick="copyCode()" class="flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                            Kopieren
+                        </button>
+                    </div>
+                    <pre id="jsonOutput" class="text-green-300 text-xs bg-slate-900 rounded-lg p-4 overflow-auto max-h-[540px] min-h-[200px]"></pre>
+                </div>
+
+                <!-- Hinweis -->
+                <div class="bg-blue-900/30 border border-blue-500/20 rounded-xl p-4 text-sm text-blue-200">
+                    <p class="font-semibold mb-2">So verwendest du den Code:</p>
+                    <ol class="list-decimal list-inside space-y-1 text-xs text-blue-300">
+                        <li>Code generieren und kopieren</li>
+                        <li>Im <code class="bg-blue-900/50 px-1 rounded">&lt;head&gt;</code> deiner Website einfügen</li>
+                        <li>Mit dem <a href="/tools/json-ld-structured-data-validator.html" class="underline hover:text-white">JSON-LD Validator</a> prüfen</li>
+                        <li>In der Google Search Console auf Rich Results testen</li>
+                    </ol>
+                </div>
+
+                <!-- AdSense -->
+                <div class="text-center">
+                    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8475857002943858" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+                    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Erklärungsbereich -->
+    <section class="py-12 px-4">
+        <div class="max-w-4xl mx-auto space-y-10">
+
+            <!-- Was ist MedicalOrganization -->
+            <div>
+                <h2 class="text-2xl font-bold mb-4">Was ist MedicalOrganization Schema Markup?</h2>
+                <p class="text-gray-300 mb-4">
+                    <code class="bg-slate-700 px-2 py-0.5 rounded text-blue-300">MedicalOrganization</code> ist ein Schema.org-Typ, der speziell für medizinische Einrichtungen entwickelt wurde. Er erweitert <code class="bg-slate-700 px-2 py-0.5 rounded text-blue-300">LocalBusiness</code> um medizin-spezifische Properties wie <code class="bg-slate-700 px-2 py-0.5 rounded text-blue-300">medicalSpecialty</code> — und signalisiert Google damit, dass es sich um einen Anbieter im Gesundheitsbereich handelt.
+                </p>
+                <p class="text-gray-300 mb-4">
+                    Für Arztpraxen, Zahnärzte, Apotheken und Krankenhäuser ist korrektes Schema Markup besonders wichtig: Google hat in seinen <strong>Quality Rater Guidelines</strong> medizinische Websites als YMYL-Seiten (Your Money or Your Life) eingestuft — und bewertet Vertrauenssignale hier strenger als in anderen Branchen.
+                </p>
+                <div class="bg-slate-800/50 rounded-xl p-5 border border-white/10">
+                    <h3 class="font-semibold mb-3 text-blue-300">Verfügbare Schema-Typen im Gesundheitsbereich</h3>
+                    <div class="grid sm:grid-cols-2 gap-3 text-sm">
+                        <div class="bg-slate-700/50 rounded-lg p-3">
+                            <div class="font-medium text-white mb-1">MedicalOrganization</div>
+                            <div class="text-gray-400">Übergeordneter Typ für alle medizinischen Einrichtungen</div>
+                        </div>
+                        <div class="bg-slate-700/50 rounded-lg p-3">
+                            <div class="font-medium text-white mb-1">MedicalClinic</div>
+                            <div class="text-gray-400">Ambulante Kliniken und Arztpraxen</div>
+                        </div>
+                        <div class="bg-slate-700/50 rounded-lg p-3">
+                            <div class="font-medium text-white mb-1">Hospital</div>
+                            <div class="text-gray-400">Krankenhäuser mit stationärer Versorgung</div>
+                        </div>
+                        <div class="bg-slate-700/50 rounded-lg p-3">
+                            <div class="font-medium text-white mb-1">Dentist</div>
+                            <div class="text-gray-400">Zahnarztpraxen und Kieferorthopäden</div>
+                        </div>
+                        <div class="bg-slate-700/50 rounded-lg p-3">
+                            <div class="font-medium text-white mb-1">Pharmacy</div>
+                            <div class="text-gray-400">Apotheken und Drogerien</div>
+                        </div>
+                        <div class="bg-slate-700/50 rounded-lg p-3">
+                            <div class="font-medium text-white mb-1">Physician</div>
+                            <div class="text-gray-400">Einzelne Ärzte und Fachärzte (Person-Typ)</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- medicalSpecialty -->
+            <div>
+                <h2 class="text-2xl font-bold mb-4">Die medicalSpecialty Property richtig einsetzen</h2>
+                <p class="text-gray-300 mb-4">
+                    Die Property <code class="bg-slate-700 px-2 py-0.5 rounded text-blue-300">medicalSpecialty</code> akzeptiert nur Werte aus dem offiziellen <a href="https://schema.org/MedicalSpecialty" class="text-blue-400 hover:underline" target="_blank" rel="noopener">Schema.org MedicalSpecialty Enum</a>. Eigene Texte wie "Allgemeinmedizin" werden nicht als strukturierte Daten erkannt — du musst den exakten Enum-Wert verwenden:
+                </p>
+                <div class="bg-slate-900 rounded-lg p-4 text-sm overflow-x-auto">
+                    <pre class="text-green-300">{
+  "@context": "https://schema.org",
+  "@type": "MedicalClinic",
+  "name": "Hausarztpraxis Dr. Schmidt",
+  "medicalSpecialty": "PrimaryCare"
+}</pre>
+                </div>
+                <p class="text-gray-400 text-sm mt-3">
+                    Für Zahnarztpraxen gilt: Verwende den Typ <code class="bg-slate-700 px-1 rounded text-blue-300">Dentist</code> — dieser hat bereits eine implizite Spezialisierung und benötigt oft kein separates <code class="bg-slate-700 px-1 rounded text-blue-300">medicalSpecialty</code>.
+                </p>
+            </div>
+
+            <!-- Physician -->
+            <div>
+                <h2 class="text-2xl font-bold mb-4">Physician: Schema Markup für einzelne Ärzte</h2>
+                <p class="text-gray-300 mb-4">
+                    Der Typ <code class="bg-slate-700 px-2 py-0.5 rounded text-blue-300">Physician</code> ist ein Untertyp von <code class="bg-slate-700 px-2 py-0.5 rounded text-blue-300">Person</code> und <code class="bg-slate-700 px-2 py-0.5 rounded text-blue-300">MedicalBusiness</code>. Er eignet sich für Arzt-Profile, About-Pages und Autorenbios in medizinischen Inhalten. Kombiniert mit <code class="bg-slate-700 px-2 py-0.5 rounded text-blue-300">Person</code>-Properties stärkt er das E-E-A-T-Signal:
+                </p>
+                <div class="bg-slate-900 rounded-lg p-4 text-sm overflow-x-auto">
+                    <pre class="text-green-300">{
+  "@context": "https://schema.org",
+  "@type": "Physician",
+  "name": "Dr. med. Anna Berger",
+  "honorificPrefix": "Dr. med.",
+  "givenName": "Anna",
+  "familyName": "Berger",
+  "medicalSpecialty": "Gynecologic",
+  "telephone": "+49 30 987654321",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Berliner Str. 5",
+    "postalCode": "10178",
+    "addressLocality": "Berlin",
+    "addressCountry": "DE"
+  }
+}</pre>
+                </div>
+            </div>
+
+            <!-- SEO-Tipps -->
+            <div>
+                <h2 class="text-2xl font-bold mb-4">SEO-Vorteile für Arztpraxen und Kliniken</h2>
+                <div class="grid sm:grid-cols-2 gap-4">
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-white/10">
+                        <div class="w-10 h-10 bg-green-500/20 rounded-lg flex items-center justify-center mb-3">
+                            <svg class="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                        </div>
+                        <h3 class="font-semibold mb-2">Knowledge Panel in Google</h3>
+                        <p class="text-gray-400 text-sm">Vollständiges MedicalOrganization Schema erhöht die Chance, in der Google-Suche ein Knowledge Panel mit Adresse, Telefon und Öffnungszeiten zu erhalten.</p>
+                    </div>
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-white/10">
+                        <div class="w-10 h-10 bg-blue-500/20 rounded-lg flex items-center justify-center mb-3">
+                            <svg class="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                        </div>
+                        <h3 class="font-semibold mb-2">YMYL-Vertrauenssignal</h3>
+                        <p class="text-gray-400 text-sm">Strukturierte Daten stärken das E-E-A-T-Signal (Experience, Expertise, Authoritativeness, Trustworthiness) — kritisch für medizinische Websites.</p>
+                    </div>
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-white/10">
+                        <div class="w-10 h-10 bg-purple-500/20 rounded-lg flex items-center justify-center mb-3">
+                            <svg class="w-5 h-5 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/></svg>
+                        </div>
+                        <h3 class="font-semibold mb-2">Lokale Suchergebnisse</h3>
+                        <p class="text-gray-400 text-sm">Vollständige Adressdaten im Schema verbessern das lokale Ranking für Suchanfragen wie "Zahnarzt Berlin Mitte" oder "Hausarzt in der Nähe".</p>
+                    </div>
+                    <div class="bg-slate-800/50 rounded-xl p-5 border border-white/10">
+                        <div class="w-10 h-10 bg-orange-500/20 rounded-lg flex items-center justify-center mb-3">
+                            <svg class="w-5 h-5 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                        </div>
+                        <h3 class="font-semibold mb-2">Öffnungszeiten-Rich-Results</h3>
+                        <p class="text-gray-400 text-sm">Korrekt eingebundene Öffnungszeiten werden im Google-Snippet direkt angezeigt und erhöhen die Click-Through-Rate deutlich.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Verwandte Tools -->
+            <div>
+                <h2 class="text-2xl font-bold mb-4">Verwandte Tools und Ressourcen</h2>
+                <div class="grid sm:grid-cols-2 gap-4">
+                    <a href="/tools/json-ld-structured-data-validator.html" class="bg-slate-800/50 hover:bg-slate-700/50 rounded-xl p-4 border border-white/10 transition-all group">
+                        <div class="font-medium group-hover:text-blue-300 transition-colors mb-1">JSON-LD Structured Data Validator</div>
+                        <div class="text-gray-400 text-sm">Prüfe dein generiertes Schema auf Fehler und Vollständigkeit</div>
+                    </a>
+                    <a href="/tools/schema-markup-generator.html" class="bg-slate-800/50 hover:bg-slate-700/50 rounded-xl p-4 border border-white/10 transition-all group">
+                        <div class="font-medium group-hover:text-blue-300 transition-colors mb-1">LocalBusiness Schema Generator</div>
+                        <div class="text-gray-400 text-sm">Für alle lokalen Unternehmen — nicht nur medizinische</div>
+                    </a>
+                    <a href="/tools/openinghours-schema-generator.html" class="bg-slate-800/50 hover:bg-slate-700/50 rounded-xl p-4 border border-white/10 transition-all group">
+                        <div class="font-medium group-hover:text-blue-300 transition-colors mb-1">OpeningHours Schema Generator</div>
+                        <div class="text-gray-400 text-sm">Komplexe Öffnungszeiten-Schemas mit Sonderzeiten generieren</div>
+                    </a>
+                    <a href="/blog/medicalwebpage-healthtopiccontent-schema-markup" class="bg-slate-800/50 hover:bg-slate-700/50 rounded-xl p-4 border border-white/10 transition-all group">
+                        <div class="font-medium group-hover:text-blue-300 transition-colors mb-1">MedicalWebPage Schema Markup</div>
+                        <div class="text-gray-400 text-sm">So optimierst du medizinische Inhalte für Google</div>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-16 px-4 border-t border-white/10">
+        <div class="max-w-3xl mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-4">Komplette SEO-Analyse deiner Praxis-Website</h2>
+            <p class="text-gray-300 mb-8">Shift07 prüft deine Website auf über 50 SEO-Faktoren — Schema Markup, Ladezeit, Meta-Tags, Mobile-Optimierung und mehr. Kostenlos und sofort.</p>
+            <a href="/" class="inline-block bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all shadow-lg shadow-blue-900/30">
+                Kostenlose SEO-Analyse starten →
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900/80 border-t border-white/10 py-8 px-4">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="flex items-center gap-2">
+                <img src="/logo.png" alt="Shift07 Logo" class="h-7 w-7">
+                <span class="text-gray-400">© 2026 Thümmler AI GmbH · Shift07</span>
+            </div>
+            <div class="flex gap-6 text-sm text-gray-400">
+                <a href="/impressum.html" class="hover:text-white transition-colors">Impressum</a>
+                <a href="/datenschutz.html" class="hover:text-white transition-colors">Datenschutz</a>
+                <a href="/blog/" class="hover:text-white transition-colors">Blog</a>
+                <a href="/tools/" class="hover:text-white transition-colors">Tools</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        function updatePhysicianFields() {
+            const type = document.getElementById('schemaType').value;
+            const fields = document.getElementById('physicianFields');
+            if (type === 'Physician') {
+                fields.classList.add('visible');
+            } else {
+                fields.classList.remove('visible');
+            }
+            generate();
+        }
+
+        function parseTimeRange(str) {
+            if (!str || !str.trim()) return null;
+            const parts = str.trim().split('-');
+            if (parts.length !== 2) return null;
+            return { opens: parts[0].trim(), closes: parts[1].trim() };
+        }
+
+        function buildOpeningHours(moFr, sa, so) {
+            const specs = [];
+            const dayGroups = [
+                { days: ['Monday','Tuesday','Wednesday','Thursday','Friday'], value: moFr },
+                { days: ['Saturday'], value: sa },
+                { days: ['Sunday'], value: so }
+            ];
+            for (const g of dayGroups) {
+                if (!g.value || !g.value.trim()) continue;
+                const range = parseTimeRange(g.value);
+                if (!range) continue;
+                for (const day of g.days) {
+                    specs.push({
+                        "@type": "OpeningHoursSpecification",
+                        "dayOfWeek": `https://schema.org/${day}`,
+                        "opens": range.opens,
+                        "closes": range.closes
+                    });
+                }
+            }
+            return specs;
+        }
+
+        function generate() {
+            const type = document.getElementById('schemaType').value;
+            const specialty = document.getElementById('medicalSpecialty').value;
+            const name = document.getElementById('orgName').value.trim();
+            const url = document.getElementById('orgUrl').value.trim();
+            const image = document.getElementById('orgImage').value.trim();
+            const description = document.getElementById('orgDescription').value.trim();
+            const priceRange = document.getElementById('priceRange').value.trim();
+            const street = document.getElementById('orgStreet').value.trim();
+            const postalCode = document.getElementById('orgPostalCode').value.trim();
+            const city = document.getElementById('orgCity').value.trim();
+            const country = document.getElementById('orgCountry').value.trim() || 'DE';
+            const phone = document.getElementById('orgPhone').value.trim();
+            const email = document.getElementById('orgEmail').value.trim();
+            const ohMoFr = document.getElementById('ohMoFr').value.trim();
+            const ohSa = document.getElementById('ohSa').value.trim();
+            const ohSo = document.getElementById('ohSo').value.trim();
+            const jameda = document.getElementById('sameAsJameda').value.trim();
+            const maps = document.getElementById('sameAsMaps').value.trim();
+            const extra = document.getElementById('sameAsExtra').value.trim();
+
+            if (!name && !url) {
+                document.getElementById('jsonOutput').textContent = '// Bitte Name und URL eingeben...';
+                return;
+            }
+
+            const schema = {
+                "@context": "https://schema.org",
+                "@type": type
+            };
+
+            if (name) schema.name = name;
+            if (url) schema.url = url;
+            if (description) schema.description = description;
+            if (image) schema.image = image;
+            if (priceRange) schema.priceRange = priceRange;
+
+            if (specialty) {
+                schema.medicalSpecialty = specialty;
+            }
+
+            if (type === 'Physician') {
+                const prefix = document.getElementById('honorificPrefix').value.trim();
+                const given = document.getElementById('givenName').value.trim();
+                const family = document.getElementById('familyName').value.trim();
+                if (prefix) schema.honorificPrefix = prefix;
+                if (given) schema.givenName = given;
+                if (family) schema.familyName = family;
+            }
+
+            if (phone) schema.telephone = phone;
+            if (email) schema.email = email;
+
+            if (street || postalCode || city) {
+                schema.address = {
+                    "@type": "PostalAddress",
+                    "addressCountry": country
+                };
+                if (street) schema.address.streetAddress = street;
+                if (postalCode) schema.address.postalCode = postalCode;
+                if (city) schema.address.addressLocality = city;
+            }
+
+            const ohSpecs = buildOpeningHours(ohMoFr, ohSa, ohSo);
+            if (ohSpecs.length > 0) {
+                schema.openingHoursSpecification = ohSpecs;
+            }
+
+            const sameAs = [jameda, maps, extra].filter(s => s !== '');
+            if (sameAs.length > 0) schema.sameAs = sameAs;
+
+            const output = `<script type="application/ld+json">\n${JSON.stringify(schema, null, 2)}\n<\/script>`;
+            document.getElementById('jsonOutput').textContent = output;
+        }
+
+        function copyCode() {
+            const text = document.getElementById('jsonOutput').textContent;
+            if (!text || text.startsWith('//')) return;
+            navigator.clipboard.writeText(text).then(() => {
+                const btn = document.getElementById('copyBtn');
+                btn.textContent = 'Kopiert!';
+                btn.classList.replace('bg-blue-600', 'bg-green-600');
+                btn.classList.replace('hover:bg-blue-500', 'hover:bg-green-500');
+                setTimeout(() => {
+                    btn.innerHTML = `<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg> Kopieren`;
+                    btn.classList.replace('bg-green-600', 'bg-blue-600');
+                    btn.classList.replace('hover:bg-green-500', 'hover:bg-blue-500');
+                }, 2000);
+            });
+        }
+
+        // Initial
+        generate();
+    </script>
+</body>
+</html>
