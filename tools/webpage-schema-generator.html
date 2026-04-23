@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebPage Schema Generator – AboutPage, ContactPage, FAQPage JSON-LD kostenlos | Shift07</title>
+    <meta name="description" content="Erstelle kostenlos JSON-LD Schema Markup für alle WebPage-Untertypen: AboutPage, ContactPage, FAQPage, ItemPage, CollectionPage und mehr. Sofort einsatzbereit.">
+    <meta name="author" content="Thümmler AI GmbH">
+    <link rel="icon" type="image/png" href="/logo.png">
+    <link rel="canonical" href="https://shift07.ai/tools/webpage-schema-generator.html">
+    <link rel="alternate" type="application/rss+xml" title="Shift07 Blog" href="https://shift07.ai/feed.xml">
+    <!-- Open Graph -->
+    <meta property="og:title" content="WebPage Schema Generator – AboutPage, ContactPage, FAQPage JSON-LD kostenlos">
+    <meta property="og:description" content="Erstelle kostenlos JSON-LD Schema Markup für alle WebPage-Untertypen: AboutPage, ContactPage, FAQPage, ItemPage, CollectionPage und mehr.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://shift07.ai/tools/webpage-schema-generator.html">
+    <meta property="og:image" content="https://shift07.ai/tools/images/webpage-schema-generator.png">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="Shift07">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="WebPage Schema Generator – JSON-LD kostenlos erstellen">
+    <meta name="twitter:description" content="Erstelle kostenlos JSON-LD für alle WebPage-Untertypen: AboutPage, ContactPage, FAQPage, ItemPage und mehr.">
+    <meta name="twitter:image" content="https://shift07.ai/tools/images/webpage-schema-generator.png">
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "WebPage Schema Generator – AboutPage, ContactPage, FAQPage JSON-LD kostenlos",
+      "description": "Erstelle kostenlos JSON-LD Schema Markup für alle WebPage-Untertypen: AboutPage, ContactPage, FAQPage, ItemPage, CollectionPage und mehr.",
+      "url": "https://shift07.ai/tools/webpage-schema-generator.html",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "Shift07",
+        "url": "https://shift07.ai"
+      }
+    }
+    </script>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K1S1RXBDS8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K1S1RXBDS8');
+    </script>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8475857002943858" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { 'inter': ['Inter', 'system-ui', '-apple-system', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: rgba(15, 23, 42, 0.5); }
+        ::-webkit-scrollbar-thumb { background: rgba(59, 130, 246, 0.5); border-radius: 4px; }
+        pre { white-space: pre-wrap; word-break: break-all; }
+        .faq-row { display: none; }
+        .faq-row.visible { display: block; }
+    </style>
+</head>
+<body class="bg-slate-900 text-white min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-slate-900/80 backdrop-blur-xl border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <a href="/" class="flex items-center gap-2">
+                    <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                    <span class="text-xl font-bold text-white">Shift07</span>
+                </a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="/" class="text-gray-300 hover:text-white transition-colors">SEO-Tool</a>
+                    <a href="/blog/" class="text-gray-300 hover:text-white transition-colors">Blog</a>
+                    <a href="/tools/" class="text-white font-medium border-b-2 border-blue-500 pb-0.5">Tools</a>
+                    <a href="/app/#/login" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-5 py-2 rounded-lg font-medium transition-all">Anmelden</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-gray-300 hover:text-white">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900/95 border-b border-white/10">
+            <div class="px-4 py-3 space-y-2">
+                <a href="/" class="block py-2 text-gray-300 hover:text-white">SEO-Tool</a>
+                <a href="/blog/" class="block py-2 text-gray-300 hover:text-white">Blog</a>
+                <a href="/tools/" class="block py-2 text-white font-medium">Tools</a>
+                <a href="/app/#/login" class="block py-2 text-blue-400 hover:text-blue-300">Anmelden</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="pt-24 pb-12 px-4">
+        <div class="max-w-4xl mx-auto text-center">
+            <div class="inline-flex items-center gap-2 px-4 py-2 bg-blue-500/10 border border-blue-500/20 rounded-full text-blue-400 text-sm font-medium mb-6">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+                Schema Markup · 100% kostenlos
+            </div>
+            <h1 class="text-3xl md:text-5xl font-extrabold text-white mb-4">WebPage Schema Generator</h1>
+            <p class="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto">Erstelle JSON-LD für alle WebPage-Untertypen: AboutPage, ContactPage, FAQPage, ItemPage und mehr. Einfach Felder ausfüllen — fertiger Code.</p>
+        </div>
+    </section>
+
+    <!-- Tool -->
+    <section class="pb-16 px-4">
+        <div class="max-w-4xl mx-auto">
+
+            <!-- Typ-Auswahl -->
+            <div class="bg-slate-800/50 border border-white/10 rounded-2xl p-6 mb-6">
+                <h2 class="text-lg font-bold text-white mb-4">1. Seitentyp wählen</h2>
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-3" id="type-grid">
+                    <button onclick="setType('AboutPage')" class="type-btn bg-blue-600 text-white px-4 py-3 rounded-xl text-sm font-semibold transition-all hover:bg-blue-500" data-type="AboutPage">
+                        Über uns<br><span class="text-xs font-normal opacity-80">AboutPage</span>
+                    </button>
+                    <button onclick="setType('ContactPage')" class="type-btn bg-slate-700 text-gray-300 px-4 py-3 rounded-xl text-sm font-semibold transition-all hover:bg-slate-600" data-type="ContactPage">
+                        Kontakt<br><span class="text-xs font-normal opacity-80">ContactPage</span>
+                    </button>
+                    <button onclick="setType('FAQPage')" class="type-btn bg-slate-700 text-gray-300 px-4 py-3 rounded-xl text-sm font-semibold transition-all hover:bg-slate-600" data-type="FAQPage">
+                        FAQ<br><span class="text-xs font-normal opacity-80">FAQPage</span>
+                    </button>
+                    <button onclick="setType('ItemPage')" class="type-btn bg-slate-700 text-gray-300 px-4 py-3 rounded-xl text-sm font-semibold transition-all hover:bg-slate-600" data-type="ItemPage">
+                        Produkt/Artikel<br><span class="text-xs font-normal opacity-80">ItemPage</span>
+                    </button>
+                    <button onclick="setType('CollectionPage')" class="type-btn bg-slate-700 text-gray-300 px-4 py-3 rounded-xl text-sm font-semibold transition-all hover:bg-slate-600" data-type="CollectionPage">
+                        Kategorie<br><span class="text-xs font-normal opacity-80">CollectionPage</span>
+                    </button>
+                    <button onclick="setType('ProfilePage')" class="type-btn bg-slate-700 text-gray-300 px-4 py-3 rounded-xl text-sm font-semibold transition-all hover:bg-slate-600" data-type="ProfilePage">
+                        Autorenprofil<br><span class="text-xs font-normal opacity-80">ProfilePage</span>
+                    </button>
+                    <button onclick="setType('SearchResultsPage')" class="type-btn bg-slate-700 text-gray-300 px-4 py-3 rounded-xl text-sm font-semibold transition-all hover:bg-slate-600" data-type="SearchResultsPage">
+                        Suchergebnisse<br><span class="text-xs font-normal opacity-80">SearchResultsPage</span>
+                    </button>
+                    <button onclick="setType('CheckoutPage')" class="type-btn bg-slate-700 text-gray-300 px-4 py-3 rounded-xl text-sm font-semibold transition-all hover:bg-slate-600" data-type="CheckoutPage">
+                        Checkout<br><span class="text-xs font-normal opacity-80">CheckoutPage</span>
+                    </button>
+                </div>
+
+                <!-- Typ-Erklärung -->
+                <div id="type-hint" class="mt-4 p-4 bg-blue-500/10 border border-blue-500/20 rounded-xl text-sm text-blue-300">
+                    <strong>AboutPage:</strong> Für deine Über-uns- oder Unternehmensprofil-Seite. Hilft Google, das Unternehmen als Entität zu verstehen und stärkt E-E-A-T.
+                </div>
+            </div>
+
+            <!-- Basis-Felder -->
+            <div class="bg-slate-800/50 border border-white/10 rounded-2xl p-6 mb-6">
+                <h2 class="text-lg font-bold text-white mb-4">2. Seitendetails eingeben</h2>
+                <div class="grid gap-4">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-300 mb-2">Seitentitel <span class="text-red-400">*</span></label>
+                        <input type="text" id="pageName" placeholder="z.B. Über uns – Musterunternehmen GmbH" class="w-full bg-slate-700 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-blue-500" oninput="generate()">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-300 mb-2">Seiten-URL <span class="text-red-400">*</span></label>
+                        <input type="url" id="pageUrl" placeholder="https://www.example.de/ueber-uns/" class="w-full bg-slate-700 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-blue-500" oninput="generate()">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-300 mb-2">Meta-Description</label>
+                        <textarea id="pageDesc" rows="2" placeholder="Kurze Beschreibung der Seite (wie im Meta-Description-Tag)" class="w-full bg-slate-700 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 resize-none" oninput="generate()"></textarea>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-300 mb-2">Website-Name</label>
+                            <input type="text" id="siteName" placeholder="Musterunternehmen GmbH" class="w-full bg-slate-700 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-blue-500" oninput="generate()">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-300 mb-2">Website-URL</label>
+                            <input type="url" id="siteUrl" placeholder="https://www.example.de" class="w-full bg-slate-700 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-blue-500" oninput="generate()">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ-Felder (nur wenn FAQPage) -->
+            <div id="faq-section" class="hidden bg-slate-800/50 border border-white/10 rounded-2xl p-6 mb-6">
+                <h2 class="text-lg font-bold text-white mb-1">3. FAQ-Einträge</h2>
+                <p class="text-sm text-gray-400 mb-4">Füge deine Fragen und Antworten ein. Mindestens 2 Einträge für Rich Snippets.</p>
+                <div id="faq-list">
+                    <div class="faq-item mb-4 p-4 bg-slate-700/50 rounded-xl">
+                        <div class="mb-3">
+                            <label class="block text-sm font-medium text-gray-300 mb-1">Frage 1</label>
+                            <input type="text" class="faq-q w-full bg-slate-600 border border-white/10 rounded-lg px-3 py-2 text-white placeholder-gray-500 text-sm focus:outline-none focus:border-blue-500" placeholder="Wie lange dauert die Lieferung?" oninput="generate()">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-300 mb-1">Antwort 1</label>
+                            <textarea class="faq-a w-full bg-slate-600 border border-white/10 rounded-lg px-3 py-2 text-white placeholder-gray-500 text-sm focus:outline-none focus:border-blue-500 resize-none" rows="2" placeholder="Die Lieferzeit beträgt in der Regel 2–3 Werktage." oninput="generate()"></textarea>
+                        </div>
+                    </div>
+                    <div class="faq-item mb-4 p-4 bg-slate-700/50 rounded-xl">
+                        <div class="mb-3">
+                            <label class="block text-sm font-medium text-gray-300 mb-1">Frage 2</label>
+                            <input type="text" class="faq-q w-full bg-slate-600 border border-white/10 rounded-lg px-3 py-2 text-white placeholder-gray-500 text-sm focus:outline-none focus:border-blue-500" placeholder="Bieten Sie Express-Versand an?" oninput="generate()">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-300 mb-1">Antwort 2</label>
+                            <textarea class="faq-a w-full bg-slate-600 border border-white/10 rounded-lg px-3 py-2 text-white placeholder-gray-500 text-sm focus:outline-none focus:border-blue-500 resize-none" rows="2" placeholder="Ja, Express-Versand ist gegen Aufpreis möglich." oninput="generate()"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <button onclick="addFaqItem()" class="mt-2 text-sm text-blue-400 hover:text-blue-300 flex items-center gap-1">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
+                    Weitere Frage hinzufügen
+                </button>
+            </div>
+
+            <!-- Output -->
+            <div class="bg-slate-800/50 border border-white/10 rounded-2xl p-6 mb-6">
+                <div class="flex items-center justify-between mb-4">
+                    <h2 class="text-lg font-bold text-white">Generiertes JSON-LD</h2>
+                    <button onclick="copyCode()" class="flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white rounded-lg text-sm font-medium transition-colors">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                        <span id="copy-label">Kopieren</span>
+                    </button>
+                </div>
+                <pre id="output" class="bg-slate-900/80 border border-white/10 rounded-xl p-4 text-sm text-green-300 overflow-x-auto min-h-[200px]"><code id="output-code">// Fülle die Felder oben aus — das JSON-LD wird automatisch generiert.</code></pre>
+            </div>
+
+            <!-- Einbau-Anleitung -->
+            <div class="bg-slate-800/50 border border-white/10 rounded-2xl p-6 mb-10">
+                <h2 class="text-lg font-bold text-white mb-3">So bindest du das Markup ein</h2>
+                <ol class="space-y-3 text-sm text-gray-300">
+                    <li class="flex gap-3">
+                        <span class="flex-shrink-0 w-6 h-6 bg-blue-600 rounded-full flex items-center justify-center text-xs font-bold">1</span>
+                        Kopiere den generierten Code mit dem Knopf oben.
+                    </li>
+                    <li class="flex gap-3">
+                        <span class="flex-shrink-0 w-6 h-6 bg-blue-600 rounded-full flex items-center justify-center text-xs font-bold">2</span>
+                        Füge ihn in den <code class="bg-slate-700 px-1.5 py-0.5 rounded text-blue-300">&lt;head&gt;</code>-Bereich der entsprechenden Seite ein — am besten direkt nach dem <code class="bg-slate-700 px-1.5 py-0.5 rounded text-blue-300">&lt;title&gt;</code>-Tag.
+                    </li>
+                    <li class="flex gap-3">
+                        <span class="flex-shrink-0 w-6 h-6 bg-blue-600 rounded-full flex items-center justify-center text-xs font-bold">3</span>
+                        Prüfe das Ergebnis mit dem <a href="/tools/json-ld-structured-data-validator.html" class="text-blue-400 hover:text-blue-300">JSON-LD Structured Data Validator</a>.
+                    </li>
+                    <li class="flex gap-3">
+                        <span class="flex-shrink-0 w-6 h-6 bg-blue-600 rounded-full flex items-center justify-center text-xs font-bold">4</span>
+                        Überprüfe nach einigen Tagen in der Google Search Console unter "Verbesserungen", ob Google die strukturierten Daten erkannt hat.
+                    </li>
+                </ol>
+            </div>
+
+            <!-- Info-Box: Was sind WebPage-Untertypen? -->
+            <div class="grid md:grid-cols-2 gap-6 mb-10">
+                <div class="bg-slate-800/50 border border-white/10 rounded-2xl p-6">
+                    <h3 class="font-bold text-white mb-3">Warum WebPage-Untertypen?</h3>
+                    <ul class="space-y-2 text-sm text-gray-300">
+                        <li class="flex gap-2"><span class="text-green-400 mt-0.5">✓</span> Google versteht den Kontext deiner Seite besser</li>
+                        <li class="flex gap-2"><span class="text-green-400 mt-0.5">✓</span> FAQPage kann direkte Rich Snippets in Google erzeugen</li>
+                        <li class="flex gap-2"><span class="text-green-400 mt-0.5">✓</span> ContactPage stärkt lokale SEO-Signale</li>
+                        <li class="flex gap-2"><span class="text-green-400 mt-0.5">✓</span> AboutPage verbessert E-E-A-T und Knowledge Panel</li>
+                        <li class="flex gap-2"><span class="text-green-400 mt-0.5">✓</span> Kein negativer Effekt — nur Vorteile möglich</li>
+                    </ul>
+                </div>
+                <div class="bg-slate-800/50 border border-white/10 rounded-2xl p-6">
+                    <h3 class="font-bold text-white mb-3">Welcher Typ für welche Seite?</h3>
+                    <ul class="space-y-2 text-sm text-gray-300">
+                        <li class="flex gap-2"><span class="text-blue-400">→</span> <strong>AboutPage</strong>: /ueber-uns/, /about/</li>
+                        <li class="flex gap-2"><span class="text-blue-400">→</span> <strong>ContactPage</strong>: /kontakt/, /contact/</li>
+                        <li class="flex gap-2"><span class="text-blue-400">→</span> <strong>FAQPage</strong>: /faq/, /fragen/</li>
+                        <li class="flex gap-2"><span class="text-blue-400">→</span> <strong>ItemPage</strong>: /produkte/[name]/, /artikel/[slug]/</li>
+                        <li class="flex gap-2"><span class="text-blue-400">→</span> <strong>CollectionPage</strong>: /kategorie/[name]/, /blog/</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- CTA -->
+            <div class="bg-gradient-to-br from-blue-600/20 to-indigo-600/20 border border-blue-500/30 rounded-2xl p-8 text-center">
+                <h2 class="text-xl font-bold text-white mb-2">Welche SEO-Probleme hat deine Website noch?</h2>
+                <p class="text-gray-400 mb-6">Unsere kostenlose Analyse prüft alle technischen SEO-Faktoren — nicht nur Schema Markup.</p>
+                <a href="/" class="inline-block bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-8 py-3 rounded-xl font-semibold transition-all">Kostenlose SEO-Analyse starten</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Weiterlesen -->
+    <section class="py-12 px-4 border-t border-white/10">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-xl font-bold text-white mb-6">Weiterlesen</h2>
+            <div class="grid md:grid-cols-3 gap-4">
+                <a href="/blog/webpage-untertypen-aboutpage-contactpage-faqpage.html" class="block bg-slate-800/50 border border-white/10 rounded-xl p-4 hover:border-blue-500/40 transition-colors">
+                    <p class="font-medium text-white text-sm mb-1">WebPage-Untertypen richtig einsetzen</p>
+                    <p class="text-xs text-gray-400">Vollständige Anleitung mit Beispielen</p>
+                </a>
+                <a href="/blog/faqpage-schema-markup-seo.html" class="block bg-slate-800/50 border border-white/10 rounded-xl p-4 hover:border-blue-500/40 transition-colors">
+                    <p class="font-medium text-white text-sm mb-1">FAQPage Schema Markup</p>
+                    <p class="text-xs text-gray-400">Rich Snippets für Fragen aktivieren</p>
+                </a>
+                <a href="/blog/webpage-website-schema-markup-seo.html" class="block bg-slate-800/50 border border-white/10 rounded-xl p-4 hover:border-blue-500/40 transition-colors">
+                    <p class="font-medium text-white text-sm mb-1">WebPage & WebSite Schema</p>
+                    <p class="text-xs text-gray-400">Vollständige Anleitung 2026</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/10 bg-slate-900/50 py-12 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="flex items-center gap-2">
+                    <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                    <span class="text-lg font-bold text-white">Shift07</span>
+                </div>
+                <div class="flex items-center space-x-6 text-sm text-gray-400">
+                    <a href="/impressum.html" class="hover:text-white transition-colors">Impressum</a>
+                    <a href="/datenschutz.html" class="hover:text-white transition-colors">Datenschutz</a>
+                    <a href="/agb.html" class="hover:text-white transition-colors">AGB</a>
+                </div>
+                <p class="text-sm text-gray-500">&copy; 2026 Thümmler AI GmbH</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        let currentType = 'AboutPage';
+        let faqCount = 2;
+
+        const typeHints = {
+            AboutPage: '<strong>AboutPage:</strong> Für deine Über-uns- oder Unternehmensprofil-Seite. Hilft Google, das Unternehmen als Entität zu verstehen und stärkt E-E-A-T.',
+            ContactPage: '<strong>ContactPage:</strong> Für Kontaktseiten mit Adresse, Telefon und Formular. Besonders für lokale SEO sehr wirksam.',
+            FAQPage: '<strong>FAQPage:</strong> Kann direkte Rich Snippets in Google auslösen — Fragen erscheinen direkt unter dem Suchergebnis. Fragen müssen sichtbar auf der Seite stehen.',
+            ItemPage: '<strong>ItemPage:</strong> Für einzelne Produktseiten oder Artikel-Detailseiten. Kombiniere sie mit einem Product-Schema in mainEntity.',
+            CollectionPage: '<strong>CollectionPage:</strong> Für Kategorie-, Archiv- oder Übersichtsseiten, die mehrere Items zusammenfassen.',
+            ProfilePage: '<strong>ProfilePage:</strong> Für Autorenprofile oder Nutzerseiten. Stärkt E-E-A-T für den jeweiligen Autor.',
+            SearchResultsPage: '<strong>SearchResultsPage:</strong> Für interne Suchergebnisseiten. Sollte in der Regel mit noindex versehen sein.',
+            CheckoutPage: '<strong>CheckoutPage:</strong> Für Checkout-Bereiche im E-Commerce. Keine Rich Snippets, aber hilft Google die Shop-Struktur zu verstehen.'
+        };
+
+        function setType(type) {
+            currentType = type;
+            document.querySelectorAll('.type-btn').forEach(btn => {
+                if (btn.dataset.type === type) {
+                    btn.className = 'type-btn bg-blue-600 text-white px-4 py-3 rounded-xl text-sm font-semibold transition-all hover:bg-blue-500';
+                } else {
+                    btn.className = 'type-btn bg-slate-700 text-gray-300 px-4 py-3 rounded-xl text-sm font-semibold transition-all hover:bg-slate-600';
+                }
+            });
+            document.getElementById('type-hint').innerHTML = typeHints[type] || '';
+            document.getElementById('faq-section').classList.toggle('hidden', type !== 'FAQPage');
+            generate();
+        }
+
+        function generate() {
+            const name = document.getElementById('pageName').value.trim();
+            const url = document.getElementById('pageUrl').value.trim();
+            const desc = document.getElementById('pageDesc').value.trim();
+            const siteName = document.getElementById('siteName').value.trim();
+            const siteUrl = document.getElementById('siteUrl').value.trim();
+
+            const obj = {
+                "@context": "https://schema.org",
+                "@type": currentType,
+            };
+
+            if (name) obj.name = name;
+            if (desc) obj.description = desc;
+            if (url) obj.url = url;
+
+            if (siteName || siteUrl) {
+                obj.isPartOf = { "@type": "WebSite" };
+                if (siteName) obj.isPartOf.name = siteName;
+                if (siteUrl) obj.isPartOf.url = siteUrl;
+            }
+
+            if (currentType === 'FAQPage') {
+                const questions = document.querySelectorAll('.faq-item');
+                const mainEntity = [];
+                questions.forEach(item => {
+                    const q = item.querySelector('.faq-q').value.trim();
+                    const a = item.querySelector('.faq-a').value.trim();
+                    if (q || a) {
+                        mainEntity.push({
+                            "@type": "Question",
+                            "name": q || "Ihre Frage hier",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": a || "Ihre Antwort hier"
+                            }
+                        });
+                    }
+                });
+                if (mainEntity.length > 0) obj.mainEntity = mainEntity;
+            }
+
+            const scriptTag = `<script type="application/ld+json">\n${JSON.stringify(obj, null, 2)}\n<\/script>`;
+            document.getElementById('output-code').textContent = scriptTag;
+        }
+
+        function addFaqItem() {
+            faqCount++;
+            const div = document.createElement('div');
+            div.className = 'faq-item mb-4 p-4 bg-slate-700/50 rounded-xl';
+            div.innerHTML = `
+                <div class="mb-3">
+                    <label class="block text-sm font-medium text-gray-300 mb-1">Frage ${faqCount}</label>
+                    <input type="text" class="faq-q w-full bg-slate-600 border border-white/10 rounded-lg px-3 py-2 text-white placeholder-gray-500 text-sm focus:outline-none focus:border-blue-500" placeholder="Ihre Frage hier" oninput="generate()">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-300 mb-1">Antwort ${faqCount}</label>
+                    <textarea class="faq-a w-full bg-slate-600 border border-white/10 rounded-lg px-3 py-2 text-white placeholder-gray-500 text-sm focus:outline-none focus:border-blue-500 resize-none" rows="2" placeholder="Ihre Antwort hier" oninput="generate()"></textarea>
+                </div>
+            `;
+            document.getElementById('faq-list').appendChild(div);
+        }
+
+        function copyCode() {
+            const code = document.getElementById('output-code').textContent;
+            if (navigator.clipboard) {
+                navigator.clipboard.writeText(code).then(() => {
+                    const label = document.getElementById('copy-label');
+                    label.textContent = 'Kopiert!';
+                    setTimeout(() => { label.textContent = 'Kopieren'; }, 2000);
+                });
+            }
+        }
+
+        // Initial generieren
+        generate();
+    </script>
+</body>
+</html>
