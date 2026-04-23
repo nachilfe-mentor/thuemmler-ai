@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Thu, 23 Apr 2026 00:53:58 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 23 Apr 2026 00:56:40 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>SiteNavigationElement Schema Markup: Navigation für Google strukturieren</title>
+      <link>https://shift07.ai/blog/sitenavigationelement-schema-markup-seo.html</link>
+      <guid>https://shift07.ai/blog/sitenavigationelement-schema-markup-seo.html</guid>
+      <pubDate>Thu, 23 Apr 2026 00:56:19 +0000</pubDate>
+      <description>SiteNavigationElement Schema Markup erklärt: Wie du die Hauptnavigation deiner Website mit JSON-LD für Google strukturierst und Sitelinks in den Suchergebnissen optimierst.</description>
+      <category>Schema Markup</category>
+    </item>
     <item>
       <title>CreativeWork Schema Markup: Bücher, Artikel und Kreativwerke für Google optimieren</title>
       <link>https://shift07.ai/blog/creativework-schema-markup-seo.html</link>
@@ -159,14 +167,6 @@
       <guid>https://shift07.ai/blog/breadcrumblist-schema-markup-vertieft.html</guid>
       <pubDate>Mon, 20 Apr 2026 10:04:37 +0000</pubDate>
       <description>BreadcrumbList Schema Markup vertieft: Dynamische Breadcrumbs für SPAs, mehrsprachige Sites, E-Commerce-Szenarien und häufige GSC-Fehler beheben - die komplette Profi-Anleitung.</description>
-      <category>Schema Markup</category>
-    </item>
-    <item>
-      <title>CollectionPage Schema Markup: Kategorieseiten und Sammlungen für Google optimieren</title>
-      <link>https://shift07.ai/blog/collectionpage-schema-markup-seo.html</link>
-      <guid>https://shift07.ai/blog/collectionpage-schema-markup-seo.html</guid>
-      <pubDate>Mon, 20 Apr 2026 10:04:37 +0000</pubDate>
-      <description>CollectionPage Schema Markup erklärt: Wie du Kategorieseiten, Archivseiten und Inhaltssammlungen mit JSON-LD für Google strukturierst und semantisch beschreibst.</description>
       <category>Schema Markup</category>
     </item>
   </channel>
