@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Thu, 23 Apr 2026 02:45:38 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 23 Apr 2026 04:31:11 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>DataFeed und DataCatalog Schema Markup: Datensätze für Google strukturieren</title>
+      <link>https://shift07.ai/blog/datafeed-datacatalog-schema-markup-seo.html</link>
+      <guid>https://shift07.ai/blog/datafeed-datacatalog-schema-markup-seo.html</guid>
+      <pubDate>Thu, 23 Apr 2026 04:29:57 +0000</pubDate>
+      <description>DataFeed und DataCatalog Schema Markup richtig einsetzen: JSON-LD-Beispiele, Google Dataset Search optimieren und Datensätze maschinenlesbar machen. Vollständige Anleitung 2026.</description>
+      <category>Schema Markup</category>
+    </item>
     <item>
       <title>WebPage-Untertypen: AboutPage, ContactPage, FAQPage und ItemPage</title>
       <link>https://shift07.ai/blog/webpage-untertypen-aboutpage-contactpage-faqpage.html</link>
@@ -158,16 +166,6 @@
       <pubDate>Mon, 20 Apr 2026 10:04:37 +0000</pubDate>
       <description>Das speakable Property von Schema.org markiert Inhalte für Sprachassistenten. Lerne, wie du Google Assistant, Alexa und Co. mit JSON-LD-Markup optimierst.</description>
       <category>Schema Markup</category>
-    </item>
-    <item>
-      <title>VideoObject Schema Markup: Videos in Google Rich Results und Key Moments</title>
-      <link>https://shift07.ai/blog/videoobject-schema-markup-seo.html</link>
-      <guid>https://shift07.ai/blog/videoobject-schema-markup-seo.html</guid>
-      <pubDate>Mon, 20 Apr 2026 10:04:37 +0000</pubDate>
-      <description>VideoObject Schema Markup für SEO: So werden deine Videos als Rich Results in Google angezeigt. Pflichtfelder, Key Moments, Clip-Segmente und häufige Fehler - vollständige Anleitung.</description>
-      <category>Structured Data</meta>
-    <!-- Twitter Card -->
-    <meta name=</category>
     </item>
   </channel>
 </rss>
