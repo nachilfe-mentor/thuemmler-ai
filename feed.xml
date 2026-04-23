@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Tue, 21 Apr 2026 06:30:03 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 23 Apr 2026 00:51:02 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>CreativeWork Schema Markup: Bücher, Artikel und Kreativwerke für Google optimieren</title>
+      <link>https://shift07.ai/blog/creativework-schema-markup-seo.html</link>
+      <guid>https://shift07.ai/blog/creativework-schema-markup-seo.html</guid>
+      <pubDate>Thu, 23 Apr 2026 00:50:32 +0000</pubDate>
+      <description>Vollständige Anleitung zum CreativeWork Schema Markup – wie du Bücher, Artikel, Kurse und andere Kreativwerke mit JSON-LD für Google Rich Results optimierst.</description>
+      <category>Schema Markup</category>
+    </item>
     <item>
       <title>ImageObject Schema Markup: Bilder für Google Rich Results optimieren</title>
       <link>https://shift07.ai/blog/imageobject-schema-markup-seo.html</link>
@@ -160,14 +168,6 @@
       <pubDate>Mon, 20 Apr 2026 10:04:37 +0000</pubDate>
       <description>CollectionPage Schema Markup erklärt: Wie du Kategorieseiten, Archivseiten und Inhaltssammlungen mit JSON-LD für Google strukturierst und semantisch beschreibst.</description>
       <category>Schema Markup</category>
-    </item>
-    <item>
-      <title>Evergreen Content für SEO: Artikel, die jahrelang Traffic bringen</title>
-      <link>https://shift07.ai/blog/evergreen-content-seo-strategie.html</link>
-      <guid>https://shift07.ai/blog/evergreen-content-seo-strategie.html</guid>
-      <pubDate>Mon, 20 Apr 2026 10:04:37 +0000</pubDate>
-      <description>Evergreen Content bringt dauerhaft organischen Traffic. Lerne, welche Themen zeitlos sind, wie du sie schreibst und wie du sie aktuell hältst.</description>
-      <category>Content-Marketing</category>
     </item>
   </channel>
 </rss>
