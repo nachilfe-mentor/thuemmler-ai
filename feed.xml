@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Thu, 23 Apr 2026 00:56:40 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 23 Apr 2026 02:42:34 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>WebPage-Untertypen: AboutPage, ContactPage, FAQPage und ItemPage</title>
+      <link>https://shift07.ai/blog/webpage-untertypen-aboutpage-contactpage-faqpage.html</link>
+      <guid>https://shift07.ai/blog/webpage-untertypen-aboutpage-contactpage-faqpage.html</guid>
+      <pubDate>Thu, 23 Apr 2026 02:42:16 +0000</pubDate>
+      <description>So setzt du WebPage-Untertypen wie AboutPage, ContactPage, FAQPage und ItemPage als Schema Markup richtig ein – mit JSON-LD-Beispielen und Schritt-für-Schritt-Anleitung 2026.</description>
+      <category>Schema Markup</category>
+    </item>
     <item>
       <title>SiteNavigationElement Schema Markup: Navigation für Google strukturieren</title>
       <link>https://shift07.ai/blog/sitenavigationelement-schema-markup-seo.html</link>
@@ -160,14 +168,6 @@
       <category>Structured Data</meta>
     <!-- Twitter Card -->
     <meta name=</category>
-    </item>
-    <item>
-      <title>BreadcrumbList Schema Markup vertieft: Dynamische Breadcrumbs, E-Commerce und Fehlerdiagnose</title>
-      <link>https://shift07.ai/blog/breadcrumblist-schema-markup-vertieft.html</link>
-      <guid>https://shift07.ai/blog/breadcrumblist-schema-markup-vertieft.html</guid>
-      <pubDate>Mon, 20 Apr 2026 10:04:37 +0000</pubDate>
-      <description>BreadcrumbList Schema Markup vertieft: Dynamische Breadcrumbs für SPAs, mehrsprachige Sites, E-Commerce-Szenarien und häufige GSC-Fehler beheben - die komplette Profi-Anleitung.</description>
-      <category>Schema Markup</category>
     </item>
   </channel>
 </rss>
