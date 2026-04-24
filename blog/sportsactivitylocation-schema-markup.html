@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SportsActivityLocation Schema Markup: Fitnessstudio & Sporthalle für Google | Shift07 Blog</title>
+    <meta name="description" content="SportsActivityLocation Schema Markup richtig implementieren: JSON-LD für Fitnessstudios, Sporthallen, Kletterhallen und Tennisanlagen. Vollständige Anleitung 2026.">
+    <meta name="author" content="Thümmler AI GmbH">
+    <link rel="icon" type="image/png" href="/logo.png">
+    <link rel="canonical" href="https://shift07.ai/blog/sportsactivitylocation-schema-markup.html">
+    <link rel="alternate" type="application/rss+xml" title="Shift07 Blog" href="https://shift07.ai/feed.xml">
+    <!-- Open Graph -->
+    <meta property="og:title" content="SportsActivityLocation Schema Markup: Fitnessstudio & Sporthalle für Google | Shift07 Blog">
+    <meta property="og:description" content="SportsActivityLocation Schema Markup richtig implementieren: JSON-LD für Fitnessstudios, Sporthallen, Kletterhallen und Tennisanlagen. Vollständige Anleitung 2026.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://shift07.ai/blog/sportsactivitylocation-schema-markup.html">
+    <meta property="og:image" content="https://shift07.ai/blog/images/sportsactivitylocation-schema-markup.png">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="Shift07">
+    <meta property="article:published_time" content="2026-04-24T08:00:00+02:00">
+    <meta property="article:section" content="Schema Markup">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SportsActivityLocation Schema Markup: Fitnessstudio & Sporthalle für Google">
+    <meta name="twitter:description" content="SportsActivityLocation Schema Markup richtig implementieren: JSON-LD für Fitnessstudios, Sporthallen, Kletterhallen und Tennisanlagen.">
+    <meta name="twitter:image" content="https://shift07.ai/blog/images/sportsactivitylocation-schema-markup.png">
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "SportsActivityLocation Schema Markup: Fitnessstudio, Sporthalle und Kletterhalle für Google optimieren",
+      "description": "SportsActivityLocation Schema Markup richtig implementieren: JSON-LD für Fitnessstudios, Sporthallen, Kletterhallen und Tennisanlagen. Vollständige Anleitung 2026.",
+      "image": "https://shift07.ai/blog/images/sportsactivitylocation-schema-markup.png",
+      "datePublished": "2026-04-24T08:00:00+02:00",
+      "dateModified": "2026-04-24T08:00:00+02:00",
+      "author": {
+        "@type": "Organization",
+        "name": "Shift07",
+        "url": "https://shift07.ai"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Shift07",
+        "url": "https://shift07.ai",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://shift07.ai/assets/logo.png"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://shift07.ai/blog/sportsactivitylocation-schema-markup.html"
+      }
+    }
+    </script>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K1S1RXBDS8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K1S1RXBDS8');
+    </script>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8475857002943858" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: rgba(15, 23, 42, 0.5); }
+        ::-webkit-scrollbar-thumb { background: rgba(59, 130, 246, 0.5); border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: rgba(59, 130, 246, 0.7); }
+        html { scroll-behavior: smooth; }
+        .article-content h2 { font-size: 1.5rem; font-weight: 700; color: #fff; margin-top: 2.5rem; margin-bottom: 1rem; }
+        .article-content h3 { font-size: 1.25rem; font-weight: 600; color: #e2e8f0; margin-top: 2rem; margin-bottom: 0.75rem; }
+        .article-content p { color: #cbd5e1; line-height: 1.8; margin-bottom: 1.25rem; }
+        .article-content ul, .article-content ol { color: #cbd5e1; margin-bottom: 1.25rem; padding-left: 1.5rem; }
+        .article-content li { margin-bottom: 0.5rem; line-height: 1.7; }
+        .article-content ul li { list-style-type: disc; }
+        .article-content ol li { list-style-type: decimal; }
+        .article-content a { color: #60a5fa; text-decoration: underline; text-underline-offset: 2px; }
+        .article-content a:hover { color: #93bbfc; }
+        .article-content blockquote { border-left: 4px solid #3b82f6; padding-left: 1.25rem; margin: 1.5rem 0; color: #94a3b8; font-style: italic; }
+        .article-content code { background: rgba(59, 130, 246, 0.15); color: #93c5fd; padding: 0.15rem 0.4rem; border-radius: 0.25rem; font-size: 0.9em; }
+        .article-content pre { background: rgba(15, 23, 42, 0.8); border: 1px solid rgba(255,255,255,0.1); border-radius: 0.75rem; padding: 1.25rem; overflow-x: auto; margin-bottom: 1.5rem; }
+        .article-content pre code { background: none; padding: 0; color: #e2e8f0; }
+        .article-content strong { color: #f1f5f9; }
+    </style>
+</head>
+<body class="bg-slate-900 text-white min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-slate-900/80 backdrop-blur-xl border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <a href="/" class="flex items-center gap-2">
+                    <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                    <span class="text-xl font-bold text-white">Shift07</span>
+                </a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="/" class="text-gray-300 hover:text-white transition-colors">SEO-Tool</a>
+                    <a href="/blog/" class="text-white font-medium border-b-2 border-blue-500 pb-0.5">Blog</a>
+                    <a href="/tools/" class="text-gray-300 hover:text-white transition-colors">Tools</a>
+                    <a href="/app/#/login" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-5 py-2 rounded-lg font-medium transition-all">Anmelden</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-gray-300 hover:text-white">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900/95 border-b border-white/10">
+            <div class="px-4 py-3 space-y-2">
+                <a href="/" class="block py-2 text-gray-300 hover:text-white">SEO-Tool</a>
+                <a href="/blog/" class="block py-2 text-white font-medium">Blog</a>
+                <a href="/tools/" class="block py-2 text-gray-300 hover:text-white">Tools</a>
+                <a href="/app/#/login" class="block py-2 text-blue-400 hover:text-blue-300">Anmelden</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Image -->
+    <section class="pt-16 relative">
+        <div class="h-[400px] bg-gradient-to-br from-blue-600 via-indigo-700 to-purple-800 relative overflow-hidden">
+            <img src="/blog/images/sportsactivitylocation-schema-markup.png" alt="SportsActivityLocation Schema Markup für Fitnessstudio und Sporthalle" class="absolute inset-0 w-full h-full object-cover opacity-30">
+            <div class="absolute inset-0 bg-black/40"></div>
+            <div class="absolute inset-0 flex items-center justify-center">
+                <div class="text-center px-4 max-w-4xl">
+                    <span class="inline-block text-sm font-semibold px-4 py-1.5 bg-white/10 text-white/90 rounded-full mb-6">Schema Markup</span>
+                    <h1 class="text-3xl md:text-5xl font-extrabold text-white leading-tight">SportsActivityLocation Schema Markup: Fitnessstudio, Sporthalle und Kletterhalle für Google optimieren</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Article Content -->
+    <section class="py-12 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col lg:flex-row gap-12">
+
+                <!-- Main Content -->
+                <article class="lg:w-2/3">
+                    <!-- Meta -->
+                    <div class="flex flex-wrap items-center gap-4 text-sm text-gray-400 mb-10 pb-6 border-b border-white/10">
+                        <div class="flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+                            Shift07 Team
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                            24. April 2026
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                            12 Min. Lesezeit
+                        </div>
+                        <span class="text-xs font-semibold px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full">Schema Markup</span>
+                    </div>
+
+                    <!-- Article Body -->
+                    <div class="article-content">
+
+                        <p>Wenn jemand nach einem „Fitnessstudio in meiner Nähe" oder einer „Kletterhalle in München" sucht, entscheidet Google in Sekundenbruchteilen, welche Ergebnisse angezeigt werden. Wer sein <strong>SportsActivityLocation Schema Markup</strong> korrekt implementiert hat, verschafft sich dabei einen messbaren Vorteil: Die eigene Website erscheint mit strukturierten Informationen direkt im Suchergebnis — inklusive Adresse, Öffnungszeiten und Bewertungen.</p>
+
+                        <p>Dieser Artikel erklärt, was <code>SportsActivityLocation</code> in Schema.org ist, welche Sub-Typen es gibt, welche Properties wirklich wichtig sind, und zeigt vollständige JSON-LD-Beispiele für Fitnessstudios, Sporthallen, Kletterhallen und Tennisanlagen.</p>
+
+                        <h2>Was ist SportsActivityLocation?</h2>
+
+                        <p><code>SportsActivityLocation</code> ist ein Schema.org-Typ, der von <code>LocalBusiness</code> und <code>Place</code> erbt. Er beschreibt Orte, an denen sportliche Aktivitäten stattfinden oder ausgeübt werden können — von der kleinen Yoga-Studio bis zur großen Mehrzweck-Sporthalle.</p>
+
+                        <p>Als Untertyp von <a href="/blog/localbusiness-schema-markup-anleitung.html">LocalBusiness</a> erbt <code>SportsActivityLocation</code> alle Properties wie <code>name</code>, <code>address</code>, <code>telephone</code>, <code>openingHours</code> und <code>geo</code>. Zusätzlich stehen sport-spezifische Properties wie <code>amenityFeature</code> zur Verfügung, mit denen Ausstattungsmerkmale wie Parkplätze, Duschen oder WLAN beschrieben werden können.</p>
+
+                        <p>Das Markup wird als <a href="/blog/strukturierte-daten-seo-schema-markup.html">strukturierte Daten</a> im <code>&lt;head&gt;</code> oder <code>&lt;body&gt;</code> der Website eingebettet und von Google Crawler direkt ausgelesen. Korrekt implementiert, kann es zu sogenannten <strong>Rich Results</strong> führen — erweiterten Suchergebnissen mit mehr Informationen direkt im SERP.</p>
+
+                        <h2>Sub-Typen von SportsActivityLocation</h2>
+
+                        <p>Schema.org definiert für <code>SportsActivityLocation</code> mehrere spezialisierte Untertypen, die du anstelle des allgemeinen Typs verwenden solltest, wenn sie auf dein Unternehmen zutreffen:</p>
+
+                        <ul>
+                            <li><strong>BowlingAlley</strong> — Bowlingbahn</li>
+                            <li><strong>ExerciseGym</strong> — Fitnessstudio, Gym, Trainingszentrum</li>
+                            <li><strong>GolfCourse</strong> — Golfplatz, Golfanlage</li>
+                            <li><strong>PublicSwimmingPool</strong> — Öffentliches Schwimmbad, Hallenbad</li>
+                            <li><strong>SkiResort</strong> — Skigebiet, Skianlage</li>
+                            <li><strong>SportsClub</strong> — Sportverein, Sportclub mit Mitgliedschaft</li>
+                            <li><strong>StadiumOrArena</strong> — Stadion oder Arena für Zuschauersportveranstaltungen</li>
+                            <li><strong>TennisComplex</strong> — Tennisanlage, Tennisclub</li>
+                        </ul>
+
+                        <p>Für Kletterhallen, Kampfsportstudios, Yoga-Studios oder Squashanlagen gibt es keinen eigenen Sub-Typ — hier verwendest du den allgemeinen Typ <code>SportsActivityLocation</code> direkt.</p>
+
+                        <h2>Die wichtigsten Properties im Überblick</h2>
+
+                        <p>Diese Properties sollte jedes vollständige SportsActivityLocation-Markup enthalten:</p>
+
+                        <h3>Pflicht-Properties</h3>
+                        <ul>
+                            <li><strong>@type</strong> — Der passende Schema-Typ (z.B. <code>ExerciseGym</code>, <code>TennisComplex</code>)</li>
+                            <li><strong>name</strong> — Exakter Name des Ortes</li>
+                            <li><strong>address</strong> — Vollständige Adresse als <code>PostalAddress</code></li>
+                            <li><strong>url</strong> — URL der Website oder Seite</li>
+                        </ul>
+
+                        <h3>Stark empfohlene Properties</h3>
+                        <ul>
+                            <li><strong>telephone</strong> — Telefonnummer im Format <code>+49 30 12345678</code></li>
+                            <li><strong>openingHoursSpecification</strong> — Öffnungszeiten als strukturiertes Objekt (besser als der einfache String <code>openingHours</code>)</li>
+                            <li><strong>geo</strong> — Geografische Koordinaten (Breitengrad + Längengrad)</li>
+                            <li><strong>image</strong> — URL eines Fotos des Ortes</li>
+                            <li><strong>description</strong> — Kurze Beschreibung des Angebots</li>
+                            <li><strong>priceRange</strong> — Preisindikator (z.B. <code>€€</code> oder <code>Ab 19 €/Monat</code>)</li>
+                            <li><strong>aggregateRating</strong> — Durchschnittsbewertung mit Anzahl der Bewertungen</li>
+                            <li><strong>amenityFeature</strong> — Ausstattungsmerkmale (Parkplatz, Duschen, Sauna etc.)</li>
+                        </ul>
+
+                        <h3>Optionale Properties</h3>
+                        <ul>
+                            <li><strong>email</strong> — E-Mail-Adresse</li>
+                            <li><strong>sameAs</strong> — Links zu Google My Business, Facebook, Instagram etc.</li>
+                            <li><strong>hasMap</strong> — URL zu Google Maps</li>
+                            <li><strong>smokingAllowed</strong> — Rauchen erlaubt (true/false)</li>
+                            <li><strong>publicAccess</strong> — Öffentlich zugänglich (true/false)</li>
+                            <li><strong>sport</strong> — Welche Sportart(en) werden angeboten</li>
+                        </ul>
+
+                        <h2>Vollständiges JSON-LD-Beispiel: Fitnessstudio</h2>
+
+                        <p>Hier ist ein vollständiges Markup für ein <code>ExerciseGym</code> — das genaueste Schema für ein Fitnessstudio:</p>
+
+                        <pre><code>{
+  "@context": "https://schema.org",
+  "@type": "ExerciseGym",
+  "name": "FitLife Fitnessstudio Hamburg",
+  "description": "Modernes Fitnessstudio in Hamburg-Altona mit über 200 Geräten, Kursprogramm und persönlichem Training.",
+  "url": "https://fitlife-hamburg.de",
+  "telephone": "+49 40 12345678",
+  "email": "info@fitlife-hamburg.de",
+  "priceRange": "Ab 29 €/Monat",
+  "image": "https://fitlife-hamburg.de/images/studio.jpg",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Altonaer Hauptstraße 42",
+    "addressLocality": "Hamburg",
+    "addressRegion": "HH",
+    "postalCode": "22765",
+    "addressCountry": "DE"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 53.5511,
+    "longitude": 9.9398
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+      "opens": "06:00",
+      "closes": "23:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Saturday","Sunday"],
+      "opens": "08:00",
+      "closes": "20:00"
+    }
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.6",
+    "reviewCount": "238",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "amenityFeature": [
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Parkplatz",
+      "value": true
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Duschen",
+      "value": true
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Sauna",
+      "value": true
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "WLAN",
+      "value": true
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Barrierefreiheit",
+      "value": true
+    }
+  ],
+  "sameAs": [
+    "https://maps.google.com/?cid=12345678",
+    "https://www.facebook.com/fitlifehamburg",
+    "https://www.instagram.com/fitlifehamburg"
+  ]
+}</code></pre>
+
+                        <h2>Vollständiges JSON-LD-Beispiel: Kletterhalle</h2>
+
+                        <p>Für eine Kletterhalle gibt es keinen eigenen Sub-Typ. Hier wird der generelle Typ <code>SportsActivityLocation</code> verwendet. Entscheidend ist, dass das Angebot über <code>description</code> und <code>amenityFeature</code> klar beschrieben wird:</p>
+
+                        <pre><code>{
+  "@context": "https://schema.org",
+  "@type": "SportsActivityLocation",
+  "name": "Kletterhalle Alpin München",
+  "description": "Kletterhalle in München mit Boulder- und Seilbereich. Anfängerkurse, Tagesticket ab 12 €.",
+  "url": "https://kletterhalle-alpin.de",
+  "telephone": "+49 89 98765432",
+  "priceRange": "Ab 12 €/Tag",
+  "image": "https://kletterhalle-alpin.de/bilder/halle.jpg",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Sportweg 18",
+    "addressLocality": "München",
+    "addressRegion": "BY",
+    "postalCode": "80939",
+    "addressCountry": "DE"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 48.1851,
+    "longitude": 11.6020
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+      "opens": "10:00",
+      "closes": "22:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Saturday","Sunday"],
+      "opens": "09:00",
+      "closes": "21:00"
+    }
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "reviewCount": "412",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "amenityFeature": [
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Boulderbereich",
+      "value": true
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Seilklettern",
+      "value": true
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Ausrüstungsverleih",
+      "value": true
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Anfängerkurse",
+      "value": true
+    }
+  ]
+}</code></pre>
+
+                        <h2>Vollständiges JSON-LD-Beispiel: Tennisanlage</h2>
+
+                        <p>Für eine Tennisanlage steht der Sub-Typ <code>TennisComplex</code> bereit. Dieser ist präziser als der allgemeine Typ und sollte bevorzugt werden, wenn er passt:</p>
+
+                        <pre><code>{
+  "@context": "https://schema.org",
+  "@type": "TennisComplex",
+  "name": "Tennis-Club Blau-Weiß Berlin",
+  "description": "Tennisanlage in Berlin-Charlottenburg mit 8 Außen- und 4 Hallenplätzen, Vereinsmitgliedschaft und Gastspielen.",
+  "url": "https://tc-blau-weiss-berlin.de",
+  "telephone": "+49 30 55667788",
+  "priceRange": "Gastspiel ab 20 €/Stunde",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Tennisweg 5",
+    "addressLocality": "Berlin",
+    "addressRegion": "BE",
+    "postalCode": "10587",
+    "addressCountry": "DE"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 52.5165,
+    "longitude": 13.2960
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+      "opens": "07:00",
+      "closes": "22:00"
+    }
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.5",
+    "reviewCount": "89",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "amenityFeature": [
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Hallenplätze",
+      "value": true
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Außenplätze",
+      "value": true
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Schlägerverleih",
+      "value": true
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Gastronomie",
+      "value": true
+    }
+  ]
+}</code></pre>
+
+                        <h2>Die sport-Property: Angebotene Sportarten angeben</h2>
+
+                        <p>Die <code>sport</code>-Property ist bei <code>SportsActivityLocation</code> besonders nützlich, wenn ein Ort mehrere Sportarten anbietet. Du kannst einen einfachen Text-Wert oder eine URL zu einer Definition angeben:</p>
+
+                        <pre><code>{
+  "@context": "https://schema.org",
+  "@type": "SportsActivityLocation",
+  "name": "Mehrkampf-Zentrum Köln",
+  "sport": ["Kampfsport", "Fitness", "Yoga", "Pilates"],
+  ...
+}</code></pre>
+
+                        <p>Google nutzt diese Angabe, um Inhalte thematisch besser einzuordnen. Für Sportarten, die gut in Suchanfragen auftauchen (z.B. „Yoga Studio Köln", „BJJ Gym Hamburg"), lohnt sich die Angabe besonders.</p>
+
+                        <h2>OpeningHoursSpecification vs. openingHours</h2>
+
+                        <p>Schema.org bietet zwei Wege, Öffnungszeiten anzugeben: den einfachen String <code>openingHours</code> und das strukturierte Objekt <code>openingHoursSpecification</code>. Letzteres ist präziser und wird von Google für Rich Results bevorzugt.</p>
+
+                        <p>Für Sonderöffnungszeiten — etwa Heiligabend, Silvester oder Betriebsferien — kann <code>openingHoursSpecification</code> mit <code>validFrom</code> und <code>validThrough</code> kombiniert werden:</p>
+
+                        <pre><code>{
+  "@type": "OpeningHoursSpecification",
+  "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+  "opens": "10:00",
+  "closes": "14:00",
+  "validFrom": "2026-12-24",
+  "validThrough": "2026-12-26"
+}</code></pre>
+
+                        <p>Mehr Details dazu findest du im Artikel zu <a href="/blog/openinghours-schema-markup-seo.html">OpeningHoursSpecification Schema Markup</a>.</p>
+
+                        <h2>amenityFeature: Ausstattungsmerkmale strukturiert angeben</h2>
+
+                        <p>Die <code>amenityFeature</code>-Property erlaubt es, Ausstattungsmerkmale als <code>LocationFeatureSpecification</code>-Objekte zu listen. Das ist für Sportanlagen besonders wertvoll, weil Nutzer häufig nach spezifischen Features suchen:</p>
+
+                        <ul>
+                            <li>„Fitnessstudio mit Sauna Berlin"</li>
+                            <li>„Schwimmbad mit Kinderbereich Hamburg"</li>
+                            <li>„Kletterhalle mit Kursangebot München"</li>
+                        </ul>
+
+                        <p>Jedes Ausstattungsmerkmal wird als eigenes Objekt angegeben:</p>
+
+                        <pre><code>"amenityFeature": [
+  {
+    "@type": "LocationFeatureSpecification",
+    "name": "Parkplatz",
+    "value": true
+  },
+  {
+    "@type": "LocationFeatureSpecification",
+    "name": "Umkleidekabinen",
+    "value": true
+  },
+  {
+    "@type": "LocationFeatureSpecification",
+    "name": "Kinderprogramm",
+    "value": false
+  }
+]</code></pre>
+
+                        <p>Der <code>value</code>-Wert kann <code>true</code>, <code>false</code> oder ein Text-String sein (z.B. <code>"8 Außenplätze, 4 Hallenplätze"</code>).</p>
+
+                        <h2>aggregateRating: Bewertungen einbinden</h2>
+
+                        <p>Wenn dein Studio oder deine Anlage Bewertungen hat — sei es über Google, ein eigenes Bewertungssystem oder eine andere Plattform — solltest du sie mit <code>aggregateRating</code> ins Markup einbinden. Das führt zu Sternebewertungen im Suchergebnis und erhöht die Klickrate signifikant.</p>
+
+                        <blockquote>
+                            <strong>Wichtig:</strong> Google zeigt Sternebewertungen nur dann, wenn die Bewertungen von echten Nutzern stammen und auf der eigenen Website verwaltet werden. Bewertungen, die nur von externen Plattformen (Google Maps, Yelp) agregiert werden ohne eigene Basis auf der Website, akzeptiert Google nicht für Rich Snippets.
+                        </blockquote>
+
+                        <p>Details zur korrekten Implementierung erklärt unser Artikel zu <a href="/blog/aggregaterating-schema-markup-vertieft.html">AggregateRating Schema Markup</a>.</p>
+
+                        <h2>Sporthalle vs. Fitnessstudio: Welcher Typ passt?</h2>
+
+                        <p>Die Auswahl des richtigen Sub-Typs ist entscheidend für die semantische Präzision des Markups. Hier eine schnelle Orientierungshilfe:</p>
+
+                        <ul>
+                            <li><strong>Fitnessstudio / Gym / Trainingscenter</strong> → <code>ExerciseGym</code></li>
+                            <li><strong>Sportverein mit Mitgliedschaft</strong> → <code>SportsClub</code></li>
+                            <li><strong>Tennisclub / Tennisanlage</strong> → <code>TennisComplex</code></li>
+                            <li><strong>Golfanlage / Golfclub</strong> → <code>GolfCourse</code></li>
+                            <li><strong>Bowlingbahn</strong> → <code>BowlingAlley</code></li>
+                            <li><strong>Hallenbad / Freibad</strong> → <code>PublicSwimmingPool</code></li>
+                            <li><strong>Skigebiet / Skipiste</strong> → <code>SkiResort</code></li>
+                            <li><strong>Kletterhalle, Yoga-Studio, Kampfsportschule, Squashhalle, Reitsport</strong> → <code>SportsActivityLocation</code> (allgemein)</li>
+                        </ul>
+
+                        <h2>Einbindung in die Website: Wo platziert man das JSON-LD?</h2>
+
+                        <p>Das JSON-LD-Markup wird idealerweise im <code>&lt;head&gt;</code>-Bereich der Seite platziert, kann aber auch im <code>&lt;body&gt;</code> stehen. Google empfiehlt <a href="/blog/json-ld-microdata-rdfa-structured-data.html">JSON-LD gegenüber Microdata und RDFa</a>, da es einfacher zu warten ist und keine Auswirkungen auf das sichtbare HTML hat.</p>
+
+                        <pre><code>&lt;head&gt;
+  ...
+  &lt;script type="application/ld+json"&gt;
+  {
+    "@context": "https://schema.org",
+    "@type": "ExerciseGym",
+    ...
+  }
+  &lt;/script&gt;
+  ...
+&lt;/head&gt;</code></pre>
+
+                        <p>Wenn deine Website WordPress nutzt, kannst du Plugins wie <em>Rank Math</em> oder <em>Yoast SEO</em> verwenden, die für Unterseiten automatisch lokales Schema generieren. Für maßgeschneiderte Sportanlagen-Websites ist manuelles JSON-LD jedoch oft präziser.</p>
+
+                        <h2>Validierung: Markup auf Fehler prüfen</h2>
+
+                        <p>Bevor du das Markup live schaltest, solltest du es zwingend validieren. Fehler in strukturierten Daten werden von Google nicht ignoriert — sie können dazu führen, dass kein Rich Result ausgespielt wird.</p>
+
+                        <p>Zwei Tools für die Validierung:</p>
+
+                        <ol>
+                            <li><strong>Google Rich Results Test</strong> — Prüft ob Google das Markup erkennt und ob Rich Results möglich sind</li>
+                            <li><strong>Schema.org Validator</strong> — Prüft die Konformität mit den Schema.org-Definitionen</li>
+                        </ol>
+
+                        <p>Alternativ kannst du unseren kostenlosen <a href="/tools/json-ld-structured-data-validator.html">JSON-LD Structured Data Validator</a> nutzen, um das Markup direkt im Browser zu testen.</p>
+
+                        <h2>Häufige Fehler und wie du sie vermeidest</h2>
+
+                        <h3>1. Falsche oder nicht passende Koordinaten</h3>
+                        <p>Die <code>geo</code>-Property mit <code>GeoCoordinates</code> muss präzise sein. Falsche Koordinaten können dazu führen, dass Google dein Unternehmen falsch in der lokalen Suche positioniert. Nutze Google Maps, um die exakten Koordinaten deines Standorts zu ermitteln.</p>
+
+                        <h3>2. Inkonsistenz zwischen Website und Markup</h3>
+                        <p>Google prüft, ob die Angaben im Markup mit dem sichtbaren Inhalt der Seite übereinstimmen. Wenn auf der Seite Öffnungszeiten von 8–20 Uhr stehen, das Markup aber 6–22 Uhr angibt, kann Google das als Manipulation werten. Stelle <a href="/blog/nap-konsistenz-lokales-seo.html">NAP-Konsistenz</a> sicher — Name, Adresse und Telefon müssen überall identisch sein.</p>
+
+                        <h3>3. Bewertungen ohne eigene Basis einbinden</h3>
+                        <p>Wie oben erwähnt: Nur Bewertungen, die wirklich auf der eigenen Website gesammelt wurden, dürfen im <code>aggregateRating</code> stehen. Google-Maps-Sterne dürfen nicht 1:1 übernommen werden.</p>
+
+                        <h3>4. Fehlende Required Properties</h3>
+                        <p>Ohne <code>name</code> und <code>address</code> wird Google das Markup nicht für Rich Results nutzen. Prüfe nach der Implementierung immer mit dem Rich Results Test, ob alle erforderlichen Felder vorhanden sind.</p>
+
+                        <h3>5. Markup nur auf der Startseite</h3>
+                        <p>Wenn deine Sportanlage mehrere Standorte hat, sollte jeder Standort eine eigene Unterseite mit eigenem Schema-Markup erhalten. Ein generisches Markup auf der Startseite reicht für mehrere Standorte nicht aus.</p>
+
+                        <h2>SportsActivityLocation und lokale SEO</h2>
+
+                        <p>Das Schema-Markup allein reicht nicht aus, um lokal gut zu ranken. Es ist ein Signal von vielen. Ergänzend solltest du:</p>
+
+                        <ul>
+                            <li>Deinen <a href="/blog/google-my-business-optimieren.html">Google My Business Eintrag optimieren</a> — er ist für lokale Suchergebnisse entscheidend</li>
+                            <li>Lokale Keywords wie „Fitnessstudio [Stadtname]" auf der Seite gezielt einsetzen</li>
+                            <li>Echte Kundenbewertungen sammeln und beantworten</li>
+                            <li>NAP-Daten auf allen Plattformen konsistent halten</li>
+                            <li>Lokale Backlinks aufbauen (Stadtportale, Sportverbände, lokale Blogs)</li>
+                        </ul>
+
+                        <p>Die Kombination aus korrektem Schema-Markup und einem gepflegten Google My Business Profil ist die wirkungsvollste Maßnahme für Sportanlagen im lokalen Suchbereich.</p>
+
+                        <h2>Checkliste: SportsActivityLocation Schema Markup</h2>
+
+                        <ul>
+                            <li>Richtigen Sub-Typ gewählt (ExerciseGym, TennisComplex, SportsClub etc.)?</li>
+                            <li><code>name</code>, <code>address</code> und <code>url</code> vollständig und korrekt?</li>
+                            <li><code>telephone</code> im internationalen Format (+49...)?</li>
+                            <li><code>geo</code> mit exakten Koordinaten?</li>
+                            <li><code>openingHoursSpecification</code> für alle Wochentage konfiguriert?</li>
+                            <li><code>image</code> mit URL eines qualitativ hochwertigen Fotos?</li>
+                            <li><code>amenityFeature</code> mit den wichtigsten Merkmalen der Anlage?</li>
+                            <li><code>aggregateRating</code> falls echte Bewertungen vorhanden?</li>
+                            <li><code>sameAs</code> mit Links zu Google My Business und Social Media?</li>
+                            <li>Markup mit Google Rich Results Test validiert?</li>
+                            <li>Konsistenz zwischen sichtbarem Content und Markup geprüft?</li>
+                        </ul>
+
+                        <h2>Fazit</h2>
+
+                        <p><strong>SportsActivityLocation Schema Markup</strong> ist ein wichtiger Baustein für Sportanlagen, Fitnessstudios und Freizeiteinrichtungen, die in der lokalen Suche sichtbar werden wollen. Es kostet wenig Aufwand, bringt aber strukturierte Informationen direkt in die Suchergebnisse und kann die Klickrate spürbar erhöhen.</p>
+
+                        <p>Wähle den passenden Sub-Typ, fülle alle wichtigen Properties aus, und validiere das Markup vor der Veröffentlichung. Kombiniere das Schema-Markup mit einem gepflegten Google My Business Profil — dann hast du die beste Grundlage für mehr organischen Traffic aus dem lokalen Suchbereich.</p>
+
+                        <p>Möchtest du wissen, welche weiteren strukturierten Daten für deine Website sinnvoll sind? Nutze unsere <a href="/">kostenlose SEO-Analyse auf shift07.ai</a> und erhalte konkrete Empfehlungen für deine Website.</p>
+
+                    </div>
+
+                    <!-- Share / Back -->
+                    <div class="mt-12 pt-8 border-t border-white/10 flex items-center justify-between">
+                        <a href="/blog/" class="text-blue-400 hover:text-blue-300 flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+                            Zurück zum Blog
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Sidebar -->
+                <aside class="lg:w-1/3 space-y-8">
+                    <!-- CTA Box -->
+                    <div class="bg-gradient-to-br from-blue-600/20 to-indigo-600/20 border border-blue-500/30 rounded-2xl p-6 text-center">
+                        <h3 class="text-lg font-bold text-white mb-3">Kostenlose SEO-Analyse</h3>
+                        <p class="text-gray-400 text-sm mb-5">Finde heraus, wie gut deine Website für Suchmaschinen optimiert ist.</p>
+                        <a href="/" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-6 py-3 rounded-lg font-medium transition-all inline-block w-full">Jetzt testen</a>
+                    </div>
+
+                    <!-- Related Articles -->
+                    <div class="bg-slate-800/50 border border-white/10 rounded-2xl p-6">
+                        <h3 class="text-lg font-bold text-white mb-4">Verwandte Artikel</h3>
+                        <div class="space-y-4">
+                            <a href="/blog/localbusiness-schema-markup-anleitung.html" class="block group">
+                                <p class="text-sm text-gray-300 group-hover:text-blue-400 transition-colors font-medium">LocalBusiness Schema Markup: Vollständige Anleitung 2026</p>
+                                <p class="text-xs text-gray-500 mt-1">Schema Markup</p>
+                            </a>
+                            <a href="/blog/google-my-business-optimieren.html" class="block group">
+                                <p class="text-sm text-gray-300 group-hover:text-blue-400 transition-colors font-medium">Google My Business optimieren: Anleitung für lokale Unternehmen</p>
+                                <p class="text-xs text-gray-500 mt-1">Lokal-SEO</p>
+                            </a>
+                            <a href="/blog/openinghours-schema-markup-seo.html" class="block group">
+                                <p class="text-sm text-gray-300 group-hover:text-blue-400 transition-colors font-medium">OpeningHoursSpecification Schema Markup: Öffnungszeiten richtig einbinden</p>
+                                <p class="text-xs text-gray-500 mt-1">Schema Markup</p>
+                            </a>
+                            <a href="/blog/strukturierte-daten-seo-schema-markup.html" class="block group">
+                                <p class="text-sm text-gray-300 group-hover:text-blue-400 transition-colors font-medium">Strukturierte Daten für SEO: Schema Markup einfach erklärt</p>
+                                <p class="text-xs text-gray-500 mt-1">Tech-SEO</p>
+                            </a>
+                            <a href="/tools/schema-markup-generator.html" class="block group">
+                                <p class="text-sm text-gray-300 group-hover:text-blue-400 transition-colors font-medium">Schema-Markup-Generator für lokale Unternehmen</p>
+                                <p class="text-xs text-gray-500 mt-1">Tool</p>
+                            </a>
+                        </div>
+                    </div>
+                </aside>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer CTA -->
+    <section class="py-16 px-4 bg-gradient-to-r from-blue-900/30 to-indigo-900/30 border-t border-b border-white/5">
+        <div class="max-w-3xl mx-auto text-center">
+            <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">Teste deine Website jetzt kostenlos</h2>
+            <p class="text-gray-400 mb-8">Erhalte eine vollständige SEO-Analyse mit konkreten Verbesserungsvorschlägen.</p>
+            <a href="/" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-8 py-3 rounded-lg font-medium transition-all inline-block">Analyse starten</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/10 bg-slate-900/50 py-12 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="flex items-center gap-2">
+                    <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                    <span class="text-lg font-bold text-white">Shift07</span>
+                </div>
+                <div class="flex items-center space-x-6 text-sm text-gray-400">
+                    <a href="/impressum.html" class="hover:text-white transition-colors">Impressum</a>
+                    <a href="/datenschutz.html" class="hover:text-white transition-colors">Datenschutz</a>
+                    <a href="/agb.html" class="hover:text-white transition-colors">AGB</a>
+                </div>
+                <p class="text-sm text-gray-500">&copy; 2026 Thümmler AI GmbH</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
