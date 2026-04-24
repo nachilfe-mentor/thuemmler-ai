@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K1S1RXBDS8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K1S1RXBDS8');
+    </script>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8475857002943858" crossorigin="anonymous"></script>
+    <title>MedicalClinic & Hospital Schema Generator – JSON-LD für Arztpraxis kostenlos | Shift07</title>
+    <meta name="description" content="MedicalClinic und Hospital Schema Markup kostenlos generieren: JSON-LD für Arztpraxis, Krankenhaus und Facharztpraxis. isAcceptingNewPatients, medicalSpecialty und department korrekt einbinden.">
+    <meta name="keywords" content="MedicalClinic Schema Generator, Hospital JSON-LD, Arztpraxis Schema Markup, Krankenhaus strukturierte Daten, medicalSpecialty JSON-LD, isAcceptingNewPatients Schema">
+    <meta name="author" content="Thümmler AI GmbH">
+    <link rel="icon" type="image/png" href="/logo.png">
+    <link rel="canonical" href="https://shift07.ai/tools/medicalclinic-hospital-schema-generator.html">
+    <!-- Open Graph -->
+    <meta property="og:title" content="MedicalClinic & Hospital Schema Generator – JSON-LD für Arztpraxis kostenlos">
+    <meta property="og:description" content="MedicalClinic und Hospital Schema Markup kostenlos generieren: JSON-LD für Arztpraxis, Krankenhaus und Facharztpraxis. isAcceptingNewPatients, medicalSpecialty und department korrekt einbinden.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://shift07.ai/tools/medicalclinic-hospital-schema-generator.html">
+    <meta property="og:image" content="https://shift07.ai/tools/images/medicalclinic-hospital-schema-generator.png">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="Shift07">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="MedicalClinic & Hospital Schema Generator – JSON-LD für Arztpraxis kostenlos">
+    <meta name="twitter:description" content="MedicalClinic und Hospital Schema Markup kostenlos generieren: isAcceptingNewPatients, medicalSpecialty und department korrekt einbinden.">
+    <meta name="twitter:image" content="https://shift07.ai/tools/images/medicalclinic-hospital-schema-generator.png">
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "MedicalClinic & Hospital Schema Generator",
+      "description": "MedicalClinic und Hospital Schema Markup kostenlos generieren: JSON-LD für Arztpraxis, Krankenhaus und Facharztpraxis.",
+      "url": "https://shift07.ai/tools/medicalclinic-hospital-schema-generator.html",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR"
+      },
+      "provider": {
+        "@type": "Organization",
+        "name": "Thümmler AI GmbH",
+        "url": "https://shift07.ai"
+      }
+    }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { 'inter': ['Inter', 'system-ui', '-apple-system', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: rgba(15, 23, 42, 0.5); }
+        ::-webkit-scrollbar-thumb { background: rgba(20, 184, 166, 0.5); border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: rgba(20, 184, 166, 0.7); }
+        html { scroll-behavior: smooth; }
+        .glass {
+            background: rgba(255, 255, 255, 0.06);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .input-field {
+            background: rgba(255,255,255,0.07);
+            border: 1px solid rgba(255,255,255,0.15);
+            color: white;
+            border-radius: 0.5rem;
+            padding: 0.6rem 0.9rem;
+            width: 100%;
+            transition: border-color 0.2s;
+        }
+        .input-field:focus { outline: none; border-color: rgba(20,184,166,0.7); }
+        .input-field option { background: #1e293b; color: white; }
+        #output-code {
+            background: rgba(0,0,0,0.5);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 0.75rem;
+            color: #86efac;
+            font-family: 'Courier New', monospace;
+            font-size: 0.8rem;
+            line-height: 1.6;
+            min-height: 400px;
+            white-space: pre;
+            overflow-x: auto;
+            padding: 1.25rem;
+        }
+    </style>
+</head>
+<body class="antialiased">
+<div class="min-h-screen bg-gradient-to-br from-slate-900 via-teal-900 to-cyan-900">
+
+    <!-- Navigation -->
+    <nav class="bg-black/20 backdrop-blur-md border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="/" class="flex items-center gap-2">
+                    <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                    <span class="text-xl font-bold text-white">Shift07</span>
+                </a>
+                <div class="hidden md:flex items-center gap-6">
+                    <a href="/blog/" class="text-white/70 hover:text-white text-sm font-medium transition-colors">Blog</a>
+                    <a href="/tools/" class="text-white/70 hover:text-white text-sm font-medium transition-colors">Alle Tools</a>
+                    <a href="https://shift07.ai" class="bg-teal-500 hover:bg-teal-400 text-white px-4 py-2 rounded-lg text-sm font-semibold transition-colors">Kostenlos analysieren</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-8">
+        <div class="text-center mb-10">
+            <div class="inline-flex items-center gap-2 bg-teal-500/20 border border-teal-500/30 text-teal-300 text-sm font-medium px-4 py-2 rounded-full mb-6">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                Kostenloser JSON-LD Generator
+            </div>
+            <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-4">
+                MedicalClinic &amp; Hospital<br>
+                <span class="text-teal-400">Schema Generator</span>
+            </h1>
+            <p class="text-xl text-white/70 max-w-2xl mx-auto">
+                JSON-LD Schema Markup für Arztpraxen, Krankenhäuser und Fachkliniken kostenlos generieren — mit isAcceptingNewPatients, medicalSpecialty und department.
+            </p>
+        </div>
+    </div>
+
+    <!-- Tool -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+            <!-- Linke Spalte: Eingabe -->
+            <div class="space-y-6">
+
+                <!-- Typ -->
+                <div class="glass rounded-2xl p-6">
+                    <h2 class="text-lg font-bold text-white mb-4">Einrichtungstyp</h2>
+                    <div class="space-y-3">
+                        <label class="text-white/70 text-sm font-medium">Schema-Typ *</label>
+                        <select id="schemaType" class="input-field" onchange="updateForm()">
+                            <option value="MedicalClinic">MedicalClinic — Arztpraxis / MVZ / Klinik</option>
+                            <option value="Hospital">Hospital — Krankenhaus / Klinikum</option>
+                            <option value="Physician">Physician — Einzelne Arztperson</option>
+                            <option value="MedicalClinic,Hospital">MedicalClinic + Hospital — Kombination</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Basisinformationen -->
+                <div class="glass rounded-2xl p-6">
+                    <h2 class="text-lg font-bold text-white mb-4">Basisinformationen</h2>
+                    <div class="space-y-4">
+                        <div>
+                            <label class="text-white/70 text-sm font-medium mb-1 block">Name der Einrichtung *</label>
+                            <input type="text" id="name" placeholder="z.B. Praxis Dr. Müller — Allgemeinmedizin" class="input-field" oninput="generateSchema()">
+                        </div>
+                        <div>
+                            <label class="text-white/70 text-sm font-medium mb-1 block">Website-URL</label>
+                            <input type="url" id="url" placeholder="https://www.praxis-mueller.de" class="input-field" oninput="generateSchema()">
+                        </div>
+                        <div>
+                            <label class="text-white/70 text-sm font-medium mb-1 block">Telefon</label>
+                            <input type="text" id="telephone" placeholder="+49 30 1234567" class="input-field" oninput="generateSchema()">
+                        </div>
+                        <div>
+                            <label class="text-white/70 text-sm font-medium mb-1 block">E-Mail</label>
+                            <input type="email" id="email" placeholder="info@praxis-mueller.de" class="input-field" oninput="generateSchema()">
+                        </div>
+                        <div>
+                            <label class="text-white/70 text-sm font-medium mb-1 block">Beschreibung</label>
+                            <textarea id="description" rows="2" placeholder="Kurze Beschreibung der Einrichtung..." class="input-field" oninput="generateSchema()"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Adresse -->
+                <div class="glass rounded-2xl p-6">
+                    <h2 class="text-lg font-bold text-white mb-4">Adresse</h2>
+                    <div class="space-y-3">
+                        <div>
+                            <label class="text-white/70 text-sm font-medium mb-1 block">Straße und Hausnummer</label>
+                            <input type="text" id="street" placeholder="Musterstraße 12" class="input-field" oninput="generateSchema()">
+                        </div>
+                        <div class="grid grid-cols-2 gap-3">
+                            <div>
+                                <label class="text-white/70 text-sm font-medium mb-1 block">PLZ</label>
+                                <input type="text" id="postalCode" placeholder="10115" class="input-field" oninput="generateSchema()">
+                            </div>
+                            <div>
+                                <label class="text-white/70 text-sm font-medium mb-1 block">Stadt</label>
+                                <input type="text" id="city" placeholder="Berlin" class="input-field" oninput="generateSchema()">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Medizinische Properties -->
+                <div class="glass rounded-2xl p-6">
+                    <h2 class="text-lg font-bold text-white mb-4">Medizinische Properties</h2>
+                    <div class="space-y-4">
+                        <div>
+                            <label class="text-white/70 text-sm font-medium mb-1 block">Fachrichtung (medicalSpecialty)</label>
+                            <select id="medicalSpecialty" class="input-field" onchange="generateSchema()">
+                                <option value="">— Keine Angabe —</option>
+                                <option value="Anesthesia">Anästhesiologie</option>
+                                <option value="CardiovascularCondition">Kardiologie</option>
+                                <option value="Dentist">Zahnmedizin</option>
+                                <option value="Dermatology">Dermatologie / Hautarzt</option>
+                                <option value="DietNutrition">Ernährungsmedizin</option>
+                                <option value="Emergency">Notfallmedizin</option>
+                                <option value="Endocrine">Endokrinologie</option>
+                                <option value="Gastroenterologic">Gastroenterologie</option>
+                                <option value="Genetic">Humangenetik</option>
+                                <option value="Geriatric">Geriatrie</option>
+                                <option value="Gynecologic">Gynäkologie / Frauenarzt</option>
+                                <option value="Hematologic">Hämatologie</option>
+                                <option value="Infectious">Infektiologie</option>
+                                <option value="LaboratoryScience">Labormedizin</option>
+                                <option value="Midwifery">Hebammenwesen</option>
+                                <option value="Musculoskeletal">Orthopädie</option>
+                                <option value="Neurologic">Neurologie</option>
+                                <option value="Nursing">Pflege</option>
+                                <option value="Obstetric">Geburtshilfe</option>
+                                <option value="Oncologic">Onkologie</option>
+                                <option value="Optometric">Augenheilkunde</option>
+                                <option value="Otolaryngologic">HNO-Heilkunde</option>
+                                <option value="Pathology">Pathologie</option>
+                                <option value="Pediatric">Pädiatrie / Kinderarzt</option>
+                                <option value="PharmacySpecialty">Pharmazie</option>
+                                <option value="Physiotherapy">Physiotherapie</option>
+                                <option value="PlasticSurgery">Plastische Chirurgie</option>
+                                <option value="Podiatry">Podologie</option>
+                                <option value="PrimaryCare">Allgemeinmedizin / Hausarzt</option>
+                                <option value="Psychiatric">Psychiatrie / Psychotherapie</option>
+                                <option value="PublicHealth">Öffentliche Gesundheit</option>
+                                <option value="Pulmonary">Pneumologie / Lungenheilkunde</option>
+                                <option value="Radiography">Radiologie</option>
+                                <option value="Renal">Nephrologie</option>
+                                <option value="RespiratoryTherapy">Atemtherapie</option>
+                                <option value="Rheumatologic">Rheumatologie</option>
+                                <option value="SpeechPathology">Logopädie</option>
+                                <option value="Surgical">Chirurgie</option>
+                                <option value="Toxicologic">Toxikologie</option>
+                                <option value="Urologic">Urologie</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="text-white/70 text-sm font-medium mb-1 block">Neue Patienten (isAcceptingNewPatients)</label>
+                            <select id="isAcceptingNewPatients" class="input-field" onchange="generateSchema()">
+                                <option value="">— Keine Angabe —</option>
+                                <option value="true">Ja — nimmt neue Patienten an</option>
+                                <option value="false">Nein — aktuell keine neuen Patienten</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="text-white/70 text-sm font-medium mb-1 block">Verfügbare Leistungen (je Zeile eine)</label>
+                            <textarea id="availableService" rows="4" placeholder="z.B.&#10;Vorsorgeuntersuchung&#10;Impfungen&#10;Reisemedizin&#10;EKG" class="input-field" oninput="generateSchema()"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Abteilungen (Hospital) -->
+                <div class="glass rounded-2xl p-6" id="deptSection">
+                    <h2 class="text-lg font-bold text-white mb-2">Abteilungen <span class="text-teal-400 text-sm font-normal">(für Krankenhäuser)</span></h2>
+                    <p class="text-white/50 text-sm mb-4">Eine Abteilung pro Zeile. Format: Name | Fachrichtung (optional)</p>
+                    <textarea id="departments" rows="5" placeholder="Innere Medizin | Gastroenterologic&#10;Chirurgie | Surgical&#10;Notaufnahme | Emergency&#10;Kardiologie | CardiovascularCondition" class="input-field" oninput="generateSchema()"></textarea>
+                </div>
+
+                <!-- Öffnungszeiten -->
+                <div class="glass rounded-2xl p-6">
+                    <h2 class="text-lg font-bold text-white mb-4">Sprechzeiten / Öffnungszeiten</h2>
+                    <div id="openingHours" class="space-y-3">
+                        <!-- Dynamisch generiert -->
+                    </div>
+                </div>
+
+                <!-- Bewertungen -->
+                <div class="glass rounded-2xl p-6">
+                    <h2 class="text-lg font-bold text-white mb-4">Bewertungen (optional)</h2>
+                    <div class="space-y-3">
+                        <div class="grid grid-cols-2 gap-3">
+                            <div>
+                                <label class="text-white/70 text-sm font-medium mb-1 block">Durchschnittsbewertung</label>
+                                <input type="number" id="ratingValue" min="1" max="5" step="0.1" placeholder="4.5" class="input-field" oninput="generateSchema()">
+                            </div>
+                            <div>
+                                <label class="text-white/70 text-sm font-medium mb-1 block">Anzahl Bewertungen</label>
+                                <input type="number" id="reviewCount" min="1" placeholder="128" class="input-field" oninput="generateSchema()">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Rechte Spalte: Ausgabe -->
+            <div class="space-y-6">
+                <div class="glass rounded-2xl p-6 sticky top-20">
+                    <div class="flex items-center justify-between mb-4">
+                        <h2 class="text-lg font-bold text-white">JSON-LD Ausgabe</h2>
+                        <button onclick="copyOutput()" class="bg-teal-500 hover:bg-teal-400 text-white text-sm font-semibold px-4 py-2 rounded-lg transition-colors flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                            Kopieren
+                        </button>
+                    </div>
+                    <div id="output-code">// Felder ausfüllen — JSON-LD wird live generiert</div>
+
+                    <!-- Validierung -->
+                    <div class="mt-4 p-4 bg-white/5 rounded-xl border border-white/10">
+                        <div id="validationResult" class="text-white/60 text-sm">
+                            Fülle die Pflichtfelder aus, um das Schema zu generieren.
+                        </div>
+                    </div>
+
+                    <!-- Einfüge-Anleitung -->
+                    <div class="mt-4 p-4 bg-teal-500/10 border border-teal-500/20 rounded-xl">
+                        <h3 class="text-teal-300 font-semibold text-sm mb-2">So verwendest du den Code</h3>
+                        <p class="text-white/60 text-xs leading-relaxed">
+                            Kopiere den generierten JSON-LD und füge ihn in den <code class="text-teal-300">&lt;head&gt;</code>-Bereich deiner Website ein — innerhalb eines <code class="text-teal-300">&lt;script type="application/ld+json"&gt;</code>-Tags.
+                        </p>
+                    </div>
+
+                    <!-- Links -->
+                    <div class="mt-4 grid grid-cols-2 gap-3">
+                        <a href="/tools/json-ld-structured-data-validator.html" class="text-center bg-white/5 hover:bg-white/10 border border-white/10 text-white/70 text-xs font-medium px-3 py-2 rounded-lg transition-colors">
+                            JSON-LD Validator
+                        </a>
+                        <a href="/blog/medicalclinic-hospital-schema-markup.html" class="text-center bg-white/5 hover:bg-white/10 border border-white/10 text-white/70 text-xs font-medium px-3 py-2 rounded-lg transition-colors">
+                            Erklärungs-Artikel
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Info-Karten -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
+            <div class="glass rounded-2xl p-6">
+                <div class="text-3xl mb-3">🏥</div>
+                <h3 class="text-white font-bold mb-2">isAcceptingNewPatients</h3>
+                <p class="text-white/60 text-sm">Diese Property ist für Patienten extrem wichtig: Sie filtern aktiv nach Praxen, die neue Patienten annehmen. Halte diese Angabe stets aktuell.</p>
+            </div>
+            <div class="glass rounded-2xl p-6">
+                <div class="text-3xl mb-3">🔬</div>
+                <h3 class="text-white font-bold mb-2">medicalSpecialty</h3>
+                <p class="text-white/60 text-sm">Gibt Google präzise Auskunft über die Fachrichtung. Google verwendet diese Information, um Praxen in fachrichtungsspezifischen Suchanfragen besser einzustufen.</p>
+            </div>
+            <div class="glass rounded-2xl p-6">
+                <div class="text-3xl mb-3">🏢</div>
+                <h3 class="text-white font-bold mb-2">department (Hospital)</h3>
+                <p class="text-white/60 text-sm">Krankenhäuser mit department-Array ermöglichen es Google, einzelne Fachabteilungen als separate Entitäten zu verstehen und in spezifischen Anfragen zu ranken.</p>
+            </div>
+        </div>
+
+        <!-- Weiterführende Links -->
+        <div class="glass rounded-2xl p-8 mt-8">
+            <h2 class="text-xl font-bold text-white mb-4">Verwandte Artikel und Tools</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <a href="/blog/medicalclinic-hospital-schema-markup.html" class="block bg-white/5 hover:bg-white/10 border border-white/10 rounded-xl p-4 transition-colors">
+                    <div class="font-semibold text-white mb-1">MedicalClinic & Hospital Schema Markup erklärt</div>
+                    <div class="text-white/50 text-sm">Vollständiger Leitfaden mit allen Properties und Beispielen</div>
+                </a>
+                <a href="/tools/medical-organization-schema-generator.html" class="block bg-white/5 hover:bg-white/10 border border-white/10 rounded-xl p-4 transition-colors">
+                    <div class="font-semibold text-white mb-1">MedicalOrganization & Physician Generator</div>
+                    <div class="text-white/50 text-sm">Für einzelne Ärzte und allgemeine medizinische Organisationen</div>
+                </a>
+                <a href="/tools/organization-schema-generator.html" class="block bg-white/5 hover:bg-white/10 border border-white/10 rounded-xl p-4 transition-colors">
+                    <div class="font-semibold text-white mb-1">Organization Schema Generator</div>
+                    <div class="text-white/50 text-sm">Allgemeines Unternehmens-Schema als Basis</div>
+                </a>
+                <a href="/tools/json-ld-structured-data-validator.html" class="block bg-white/5 hover:bg-white/10 border border-white/10 rounded-xl p-4 transition-colors">
+                    <div class="font-semibold text-white mb-1">JSON-LD Structured Data Validator</div>
+                    <div class="text-white/50 text-sm">Generierten Code sofort prüfen und validieren</div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-black/30 border-t border-white/10 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center gap-2 mb-3">
+                        <img src="/logo.png" alt="Shift07" class="h-8 w-8">
+                        <span class="font-bold text-white text-lg">Shift07</span>
+                    </div>
+                    <p class="text-white/50 text-sm">KI-gestütztes SEO-Analyse-Tool für deutsche Unternehmen.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-white mb-3">Schema-Tools</h4>
+                    <ul class="space-y-1 text-sm">
+                        <li><a href="/tools/schema-markup-generator.html" class="text-white/50 hover:text-white transition-colors">LocalBusiness Generator</a></li>
+                        <li><a href="/tools/medical-organization-schema-generator.html" class="text-white/50 hover:text-white transition-colors">MedicalOrganization Generator</a></li>
+                        <li><a href="/tools/foodestablishment-schema-generator.html" class="text-white/50 hover:text-white transition-colors">FoodEstablishment Generator</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-white mb-3">Unternehmen</h4>
+                    <ul class="space-y-1 text-sm">
+                        <li><a href="/impressum.html" class="text-white/50 hover:text-white transition-colors">Impressum</a></li>
+                        <li><a href="/datenschutz.html" class="text-white/50 hover:text-white transition-colors">Datenschutz</a></li>
+                        <li><a href="/blog/" class="text-white/50 hover:text-white transition-colors">Blog</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-white/10 pt-6 text-center text-white/30 text-sm">
+                &copy; 2026 Thümmler AI GmbH · Leonardo-da-Vinci-Straße 15 · 14467 Potsdam
+            </div>
+        </div>
+    </footer>
+
+</div>
+
+<script>
+const days = [
+    {id:'mo', label:'Mo'},
+    {id:'tu', label:'Di'},
+    {id:'we', label:'Mi'},
+    {id:'th', label:'Do'},
+    {id:'fr', label:'Fr'},
+    {id:'sa', label:'Sa'},
+    {id:'su', label:'So'},
+];
+const daySchema = {
+    mo:'Monday', tu:'Tuesday', we:'Wednesday', th:'Thursday',
+    fr:'Friday', sa:'Saturday', su:'Sunday'
+};
+
+function buildOpeningHoursUI() {
+    const container = document.getElementById('openingHours');
+    let html = `<div class="grid grid-cols-7 gap-1 mb-2">`;
+    days.forEach(d => {
+        html += `<div class="text-center text-white/60 text-xs font-medium">${d.label}</div>`;
+    });
+    html += `</div><div class="grid grid-cols-7 gap-1 mb-4">`;
+    days.forEach(d => {
+        html += `<div class="flex justify-center">
+            <input type="checkbox" id="day_${d.id}" class="w-4 h-4 accent-teal-400" onchange="generateSchema()">
+        </div>`;
+    });
+    html += `</div>`;
+    html += `<div class="grid grid-cols-2 gap-3">
+        <div>
+            <label class="text-white/70 text-xs mb-1 block">Öffnet</label>
+            <input type="time" id="oh_opens" value="08:00" class="input-field text-sm" oninput="generateSchema()">
+        </div>
+        <div>
+            <label class="text-white/70 text-xs mb-1 block">Schließt</label>
+            <input type="time" id="oh_closes" value="18:00" class="input-field text-sm" oninput="generateSchema()">
+        </div>
+    </div>`;
+    container.innerHTML = html;
+    // Mo-Fr vorausgewählt
+    ['mo','tu','we','th','fr'].forEach(d => {
+        document.getElementById('day_'+d).checked = true;
+    });
+}
+
+function updateForm() {
+    const type = document.getElementById('schemaType').value;
+    const deptSection = document.getElementById('deptSection');
+    deptSection.style.display = type.includes('Hospital') ? 'block' : 'none';
+    generateSchema();
+}
+
+function getOpeningHours() {
+    const opens = document.getElementById('oh_opens')?.value || '08:00';
+    const closes = document.getElementById('oh_closes')?.value || '18:00';
+    const selectedDays = days.filter(d => document.getElementById('day_'+d.id)?.checked);
+    if (selectedDays.length === 0) return null;
+    return {
+        '@type': 'OpeningHoursSpecification',
+        dayOfWeek: selectedDays.map(d => daySchema[d.id]),
+        opens: opens,
+        closes: closes
+    };
+}
+
+function generateSchema() {
+    const type = document.getElementById('schemaType').value;
+    const name = document.getElementById('name').value.trim();
+    const url = document.getElementById('url').value.trim();
+    const telephone = document.getElementById('telephone').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const description = document.getElementById('description').value.trim();
+    const street = document.getElementById('street').value.trim();
+    const postalCode = document.getElementById('postalCode').value.trim();
+    const city = document.getElementById('city').value.trim();
+    const medicalSpecialty = document.getElementById('medicalSpecialty').value;
+    const isAcceptingNewPatients = document.getElementById('isAcceptingNewPatients').value;
+    const availableServiceRaw = document.getElementById('availableService').value.trim();
+    const departmentsRaw = document.getElementById('departments').value.trim();
+    const ratingValue = document.getElementById('ratingValue').value.trim();
+    const reviewCount = document.getElementById('reviewCount').value.trim();
+
+    if (!name) {
+        document.getElementById('output-code').textContent = '// Bitte den Einrichtungsnamen eingeben...';
+        document.getElementById('validationResult').innerHTML = '<span class="text-yellow-400">⚠ Pflichtfeld fehlt: Name der Einrichtung</span>';
+        return;
+    }
+
+    const typeValue = type.includes(',') ? type.split(',') : type;
+    const schema = {
+        '@context': 'https://schema.org',
+        '@type': typeValue
+    };
+
+    schema.name = name;
+    if (description) schema.description = description;
+    if (url) schema.url = url;
+    if (telephone) schema.telephone = telephone;
+    if (email) schema.email = email;
+
+    // Adresse
+    if (street || postalCode || city) {
+        schema.address = { '@type': 'PostalAddress' };
+        if (street) schema.address.streetAddress = street;
+        if (postalCode) schema.address.postalCode = postalCode;
+        if (city) schema.address.addressLocality = city;
+        schema.address.addressCountry = 'DE';
+    }
+
+    // medicalSpecialty
+    if (medicalSpecialty) {
+        schema.medicalSpecialty = `https://schema.org/${medicalSpecialty}`;
+    }
+
+    // isAcceptingNewPatients
+    if (isAcceptingNewPatients !== '') {
+        schema.isAcceptingNewPatients = isAcceptingNewPatients === 'true';
+    }
+
+    // availableService
+    if (availableServiceRaw) {
+        const services = availableServiceRaw.split('\n').filter(s => s.trim());
+        if (services.length > 0) {
+            schema.availableService = services.map(s => ({
+                '@type': 'MedicalProcedure',
+                'name': s.trim()
+            }));
+        }
+    }
+
+    // department (für Hospital)
+    if (departmentsRaw && type.includes('Hospital')) {
+        const deptLines = departmentsRaw.split('\n').filter(l => l.trim());
+        if (deptLines.length > 0) {
+            schema.department = deptLines.map(line => {
+                const parts = line.split('|').map(p => p.trim());
+                const dept = {
+                    '@type': 'MedicalClinic',
+                    'name': parts[0]
+                };
+                if (parts[1]) {
+                    dept.medicalSpecialty = `https://schema.org/${parts[1]}`;
+                }
+                return dept;
+            });
+        }
+    }
+
+    // Öffnungszeiten
+    const oh = getOpeningHours();
+    if (oh) schema.openingHoursSpecification = [oh];
+
+    // Bewertung
+    if (ratingValue && reviewCount) {
+        schema.aggregateRating = {
+            '@type': 'AggregateRating',
+            ratingValue: parseFloat(ratingValue),
+            reviewCount: parseInt(reviewCount),
+            bestRating: '5',
+            worstRating: '1'
+        };
+    }
+
+    document.getElementById('output-code').textContent = JSON.stringify(schema, null, 2);
+
+    // Validierung
+    let checks = [];
+    let warnings = [];
+    checks.push('<span class="text-green-400">✓ @type gesetzt: ' + (Array.isArray(typeValue) ? typeValue.join(', ') : typeValue) + '</span>');
+    checks.push('<span class="text-green-400">✓ name vorhanden</span>');
+    if (schema.address) checks.push('<span class="text-green-400">✓ Adresse vorhanden</span>');
+    else warnings.push('<span class="text-yellow-400">⚠ Keine Adresse angegeben</span>');
+    if (telephone) checks.push('<span class="text-green-400">✓ Telefon vorhanden</span>');
+    if (medicalSpecialty) checks.push('<span class="text-green-400">✓ medicalSpecialty gesetzt</span>');
+    else warnings.push('<span class="text-yellow-400">⚠ Empfohlen: medicalSpecialty angeben</span>');
+    if (isAcceptingNewPatients !== '') checks.push('<span class="text-green-400">✓ isAcceptingNewPatients gesetzt</span>');
+    else warnings.push('<span class="text-yellow-400">⚠ Empfohlen: isAcceptingNewPatients angeben (wichtig für Patienten!)</span>');
+
+    const allChecks = [...checks, ...warnings];
+    document.getElementById('validationResult').innerHTML = allChecks.join('<br>');
+}
+
+function copyOutput() {
+    const text = document.getElementById('output-code').textContent;
+    if (text.startsWith('//')) return;
+    navigator.clipboard.writeText(
+        `<script type="application/ld+json">\n${text}\n<\/script>`
+    ).then(() => {
+        const btn = document.querySelector('button[onclick="copyOutput()"]');
+        const orig = btn.innerHTML;
+        btn.innerHTML = '✓ Kopiert!';
+        btn.classList.replace('bg-teal-500', 'bg-green-500');
+        setTimeout(() => { btn.innerHTML = orig; btn.classList.replace('bg-green-500', 'bg-teal-500'); }, 2000);
+    });
+}
+
+// Init
+buildOpeningHoursUI();
+updateForm();
+generateSchema();
+</script>
+</body>
+</html>
