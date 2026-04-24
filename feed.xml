@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Fri, 24 Apr 2026 00:11:50 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 24 Apr 2026 01:47:04 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>MedicalClinic &amp; Hospital Schema Markup: Arztpraxis und Krankenhaus für Google</title>
+      <link>https://shift07.ai/blog/medicalclinic-hospital-schema-markup.html</link>
+      <guid>https://shift07.ai/blog/medicalclinic-hospital-schema-markup.html</guid>
+      <pubDate>Fri, 24 Apr 2026 01:46:34 +0000</pubDate>
+      <description>MedicalClinic und Hospital Schema Markup: Vollständige JSON-LD-Anleitung für Arztpraxen, Kliniken und Krankenhäuser. Physician, medicalSpecialty und availableService richtig einsetzen 2026.</description>
+      <category>Schema Markup</category>
+    </item>
     <item>
       <title>FoodEstablishment Schema Markup: Restaurant, Café und Bäckerei für Google</title>
       <link>https://shift07.ai/blog/foodestablishment-schema-markup.html</link>
@@ -158,14 +166,6 @@
       <pubDate>Mon, 20 Apr 2026 10:04:37 +0000</pubDate>
       <description>Course Schema Markup richtig einsetzen: So werden deine Online-Kurse und Weiterbildungsangebote in Google als Rich Snippets angezeigt. Mit JSON-LD-Beispielen und Schritt-für-Schritt-Anleitung.</description>
       <category>Schema Markup</category>
-    </item>
-    <item>
-      <title>Dynamic Rendering für JavaScript SEO: So liest Googlebot deine Website richtig</title>
-      <link>https://shift07.ai/blog/dynamic-rendering-javascript-seo.html</link>
-      <guid>https://shift07.ai/blog/dynamic-rendering-javascript-seo.html</guid>
-      <pubDate>Mon, 20 Apr 2026 10:04:37 +0000</pubDate>
-      <description>Dynamic Rendering erklärt: Warum JavaScript-Websites für Googlebot unsichtbar sein können, wie Dynamic Rendering funktioniert und wann du es wirklich brauchst.</description>
-      <category>Technisches SEO</category>
     </item>
   </channel>
 </rss>
