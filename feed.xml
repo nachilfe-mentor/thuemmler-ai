@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Fri, 24 Apr 2026 03:33:18 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 24 Apr 2026 03:37:12 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>AutoDealer &amp; CarRepair Schema Markup: Autohaus und KFZ-Werkstatt für Google</title>
+      <link>https://shift07.ai/blog/autodealer-carrepair-schema-markup.html</link>
+      <guid>https://shift07.ai/blog/autodealer-carrepair-schema-markup.html</guid>
+      <pubDate>Fri, 24 Apr 2026 03:36:39 +0000</pubDate>
+      <description>AutoDealer und CarRepair Schema Markup als JSON-LD: Autohaus, KFZ-Werkstatt und Reifenhandel für Google Rich Results optimieren — mit priceRange, brand, serviceType und vollständigen Beispielen.</description>
+      <category>Schema Markup</category>
+    </item>
     <item>
       <title>LodgingBusiness Schema Markup vertieft: Hotel, Resort &amp; HotelRoom für Google</title>
       <link>https://shift07.ai/blog/lodgingbusiness-hotel-schema-markup-vertieft.html</link>
@@ -158,14 +166,6 @@
       <pubDate>Mon, 20 Apr 2026 10:04:37 +0000</pubDate>
       <description>Article Schema Markup richtig implementieren: NewsArticle vs. BlogPosting vs. Article - Unterschiede, vollständiges JSON-LD-Beispiel und Google-Anforderungen erklärt.</description>
       <category>Tech-SEO</category>
-    </item>
-    <item>
-      <title>BookReview Schema Markup: Buchrezensionen als Rich Snippets in Google</title>
-      <link>https://shift07.ai/blog/bookreview-schema-markup-seo.html</link>
-      <guid>https://shift07.ai/blog/bookreview-schema-markup-seo.html</guid>
-      <pubDate>Mon, 20 Apr 2026 10:04:37 +0000</pubDate>
-      <description>BookReview Schema Markup korrekt implementieren: So zeigt Google deine Buchrezensionen als Rich Snippets mit Sternebewertungen an. Vollständige Anleitung mit JSON-LD Beispielen.</description>
-      <category>Schema Markup</category>
     </item>
   </channel>
 </rss>
