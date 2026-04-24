@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoDealer & CarRepair Schema Markup: Autohaus und KFZ-Werkstatt für Google | Shift07 Blog</title>
+    <meta name="description" content="AutoDealer und CarRepair Schema Markup als JSON-LD: Autohaus, KFZ-Werkstatt und Reifenhandel für Google Rich Results optimieren — mit priceRange, brand, serviceType und vollständigen Beispielen.">
+    <meta name="author" content="Thümmler AI GmbH">
+    <link rel="icon" type="image/png" href="/logo.png">
+    <link rel="canonical" href="https://shift07.ai/blog/autodealer-carrepair-schema-markup.html">
+    <link rel="alternate" type="application/rss+xml" title="Shift07 Blog" href="https://shift07.ai/feed.xml">
+    <!-- Open Graph -->
+    <meta property="og:title" content="AutoDealer & CarRepair Schema Markup: Autohaus und KFZ-Werkstatt für Google | Shift07 Blog">
+    <meta property="og:description" content="AutoDealer und CarRepair Schema Markup als JSON-LD: Autohaus, KFZ-Werkstatt und Reifenhandel für Google Rich Results optimieren.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://shift07.ai/blog/autodealer-carrepair-schema-markup.html">
+    <meta property="og:image" content="https://shift07.ai/blog/images/autodealer-carrepair-schema-markup.png">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="Shift07">
+    <meta property="article:published_time" content="2026-04-24T08:00:00+02:00">
+    <meta property="article:section" content="Schema Markup">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AutoDealer & CarRepair Schema Markup: Autohaus und KFZ-Werkstatt für Google">
+    <meta name="twitter:description" content="AutoDealer und CarRepair Schema Markup als JSON-LD: Autohaus, KFZ-Werkstatt und Reifenhandel für Google Rich Results optimieren.">
+    <meta name="twitter:image" content="https://shift07.ai/blog/images/autodealer-carrepair-schema-markup.png">
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "AutoDealer & CarRepair Schema Markup: Autohaus und KFZ-Werkstatt für Google optimieren",
+      "description": "AutoDealer und CarRepair Schema Markup als JSON-LD: Autohaus, KFZ-Werkstatt und Reifenhandel für Google Rich Results optimieren — mit priceRange, brand, serviceType und vollständigen Beispielen.",
+      "image": "https://shift07.ai/blog/images/autodealer-carrepair-schema-markup.png",
+      "datePublished": "2026-04-24T08:00:00+02:00",
+      "dateModified": "2026-04-24T08:00:00+02:00",
+      "author": {
+        "@type": "Organization",
+        "name": "Shift07",
+        "url": "https://shift07.ai"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Shift07",
+        "url": "https://shift07.ai",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://shift07.ai/assets/logo.png"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://shift07.ai/blog/autodealer-carrepair-schema-markup.html"
+      }
+    }
+    </script>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K1S1RXBDS8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K1S1RXBDS8');
+    </script>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8475857002943858" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-inter bg-gray-50 text-gray-900">
+
+    <!-- Navigation -->
+    <nav class="bg-white border-b border-gray-200 sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="/" class="flex items-center space-x-2">
+                    <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-auto">
+                    <span class="font-bold text-xl text-gray-900">Shift07</span>
+                </a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="/" class="text-gray-600 hover:text-gray-900 font-medium">Home</a>
+                    <a href="/blog/" class="text-gray-600 hover:text-gray-900 font-medium">Blog</a>
+                    <a href="/tools/" class="text-gray-600 hover:text-gray-900 font-medium">Tools</a>
+                    <a href="https://shift07.ai" class="bg-blue-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-blue-700 transition-colors">Kostenlos analysieren</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <div class="bg-gradient-to-br from-gray-900 via-zinc-800 to-slate-900 text-white py-16">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center space-x-2 mb-4">
+                <span class="bg-orange-500 bg-opacity-30 text-orange-200 text-sm font-medium px-3 py-1 rounded-full">Schema Markup</span>
+                <span class="text-gray-400 text-sm">24. April 2026</span>
+            </div>
+            <h1 class="text-3xl md:text-5xl font-extrabold mb-6 leading-tight">
+                AutoDealer &amp; CarRepair Schema Markup: Autohaus und KFZ-Werkstatt für Google optimieren
+            </h1>
+            <p class="text-xl text-gray-300 leading-relaxed mb-8">
+                Autohäuser, KFZ-Werkstätten und Reifenhändler werden in lokalen Google-Suchen täglich gesucht. Mit dem richtigen Schema Markup erscheinen deine Öffnungszeiten, Marken und Serviceleistungen direkt in den Suchergebnissen.
+            </p>
+            <div class="flex items-center space-x-4">
+                <div class="flex items-center space-x-2">
+                    <div class="w-10 h-10 bg-orange-600 rounded-full flex items-center justify-center font-bold text-lg">L</div>
+                    <div>
+                        <div class="font-semibold">Laurenz Thümmler</div>
+                        <div class="text-gray-400 text-sm">Shift07 · Thümmler AI GmbH</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bild -->
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 -mt-8 mb-12">
+        <img src="/blog/images/autodealer-carrepair-schema-markup.png"
+             alt="AutoDealer CarRepair Schema Markup JSON-LD für Autohaus und KFZ-Werkstatt"
+             class="w-full rounded-2xl shadow-2xl">
+    </div>
+
+    <!-- Hauptinhalt -->
+    <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
+
+        <!-- Inhaltsverzeichnis -->
+        <div class="bg-orange-50 border border-orange-200 rounded-2xl p-6 mb-10">
+            <h2 class="text-lg font-bold text-orange-900 mb-3">Inhaltsverzeichnis</h2>
+            <ol class="list-decimal list-inside space-y-1 text-orange-800">
+                <li><a href="#typen-ueberblick" class="hover:underline">AutoDealer, CarRepair und AutomotiveBusiness im Überblick</a></li>
+                <li><a href="#autodealer-properties" class="hover:underline">AutoDealer: Properties für Autohäuser und Gebrauchtwagenhändler</a></li>
+                <li><a href="#carrepair-properties" class="hover:underline">CarRepair: Schema Markup für KFZ-Werkstätten</a></li>
+                <li><a href="#marken-hersteller" class="hover:underline">Marken und Hersteller strukturiert einbinden</a></li>
+                <li><a href="#oeffnungszeiten-preise" class="hover:underline">Öffnungszeiten und Preisbereich</a></li>
+                <li><a href="#vollstaendige-beispiele" class="hover:underline">Vollständige JSON-LD-Beispiele</a></li>
+                <li><a href="#lokale-seo-tipps" class="hover:underline">Lokale SEO-Tipps für Kfz-Betriebe</a></li>
+                <li><a href="#haeufige-fehler" class="hover:underline">Häufige Fehler und Checkliste</a></li>
+            </ol>
+        </div>
+
+        <div class="prose prose-lg max-w-none">
+
+            <p class="text-xl text-gray-700 leading-relaxed mb-8">
+                Wenn jemand "Reifenwechsel Berlin" oder "Autohaus Hamburg Toyota" googelt, zeigt Google lokale Suchergebnisse mit Rich Results: Öffnungszeiten, Bewertungen, Telefonnummer. Mit dem richtigen AutoDealer- und CarRepair-Schema Markup erhält Google diese Informationen maschinenlesbar — und kann sie direkt im SERP anzeigen, noch bevor der Nutzer deine Website besucht.
+            </p>
+
+            <!-- Abschnitt 1 -->
+            <h2 id="typen-ueberblick" class="text-3xl font-bold text-gray-900 mt-12 mb-6">1. AutoDealer, CarRepair und AutomotiveBusiness im Überblick</h2>
+
+            <p class="mb-6">
+                Schema.org hat eine eigene Kategorie für Kfz-Betriebe: <strong>AutomotiveBusiness</strong>. Dieser Typ ist ein Subtyp von LocalBusiness und dient als Dachbegriff für alle fahrzeugbezogenen Unternehmen. Die wichtigsten Untertypen:
+            </p>
+
+            <div class="bg-gray-900 text-green-400 rounded-xl p-6 mb-6 font-mono text-sm overflow-x-auto">
+                <div class="text-gray-400 mb-2">// AutomotiveBusiness-Hierarchie</div>
+                <div>AutomotiveBusiness (Subtyp von LocalBusiness)</div>
+                <div class="ml-4">├── AutoDealer (Autohaus / Fahrzeughändler)</div>
+                <div class="ml-4">├── AutoRepair → entspricht CarRepair</div>
+                <div class="ml-4">├── CarRepair (KFZ-Werkstatt)</div>
+                <div class="ml-4">├── AutoRental (Autovermietung)</div>
+                <div class="ml-4">├── AutoWash (Autowaschanlage)</div>
+                <div class="ml-4">├── AutoPartsStore (Ersatzteilhandel)</div>
+                <div class="ml-4">├── MotorcycleDealer (Motorradhändler)</div>
+                <div class="ml-4">└── MotorcycleRepair (Motorradwerkstatt)</div>
+            </div>
+
+            <p class="mb-6">
+                Ein Autohaus das auch eine Werkstatt betreibt, kann beide Typen kombinieren:
+            </p>
+
+            <div class="bg-gray-900 text-green-400 rounded-xl p-6 mb-6 font-mono text-sm overflow-x-auto">
+<pre>{
+  "@context": "https://schema.org",
+  "@type": ["AutoDealer", "CarRepair"],
+  "name": "Autohaus Schneider GmbH — VW & Audi"
+}</pre>
+            </div>
+
+            <p class="mb-6">
+                Diese Kombination ist bei integrierten Betrieben (Verkauf + Werkstatt unter einem Dach) die korrekte Vorgehensweise. Google kann so beide Dienstleistungen klar zuordnen.
+            </p>
+
+            <!-- Abschnitt 2 -->
+            <h2 id="autodealer-properties" class="text-3xl font-bold text-gray-900 mt-12 mb-6">2. AutoDealer: Properties für Autohäuser und Gebrauchtwagenhändler</h2>
+
+            <p class="mb-6">
+                AutoDealer erbt alle Properties von LocalBusiness. Für ein Autohaus sind diese Properties besonders relevant:
+            </p>
+
+            <div class="overflow-x-auto mb-8">
+                <table class="w-full border-collapse border border-gray-200 rounded-xl">
+                    <thead class="bg-gray-50">
+                        <tr>
+                            <th class="border border-gray-200 px-4 py-3 text-left font-semibold">Property</th>
+                            <th class="border border-gray-200 px-4 py-3 text-left font-semibold">Typ</th>
+                            <th class="border border-gray-200 px-4 py-3 text-left font-semibold">Beschreibung</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="hover:bg-gray-50">
+                            <td class="border border-gray-200 px-4 py-3 font-mono text-sm">name</td>
+                            <td class="border border-gray-200 px-4 py-3 text-sm">Text</td>
+                            <td class="border border-gray-200 px-4 py-3 text-sm">Offizieller Firmenname inkl. Marke wenn möglich</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50 bg-gray-50">
+                            <td class="border border-gray-200 px-4 py-3 font-mono text-sm">brand</td>
+                            <td class="border border-gray-200 px-4 py-3 text-sm">Brand</td>
+                            <td class="border border-gray-200 px-4 py-3 text-sm">Automobilmarke(n) die das Haus führt</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="border border-gray-200 px-4 py-3 font-mono text-sm">priceRange</td>
+                            <td class="border border-gray-200 px-4 py-3 text-sm">Text</td>
+                            <td class="border border-gray-200 px-4 py-3 text-sm">Preissegment (€, €€, €€€) oder Preisbereich</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50 bg-gray-50">
+                            <td class="border border-gray-200 px-4 py-3 font-mono text-sm">aggregateRating</td>
+                            <td class="border border-gray-200 px-4 py-3 text-sm">AggregateRating</td>
+                            <td class="border border-gray-200 px-4 py-3 text-sm">Durchschnittliche Kundenbewertung</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="border border-gray-200 px-4 py-3 font-mono text-sm">hasOfferCatalog</td>
+                            <td class="border border-gray-200 px-4 py-3 text-sm">OfferCatalog</td>
+                            <td class="border border-gray-200 px-4 py-3 text-sm">Fahrzeugkategorien oder Dienstleistungsportfolio</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50 bg-gray-50">
+                            <td class="border border-gray-200 px-4 py-3 font-mono text-sm">openingHoursSpecification</td>
+                            <td class="border border-gray-200 px-4 py-3 text-sm">OpeningHoursSpecification</td>
+                            <td class="border border-gray-200 px-4 py-3 text-sm">Öffnungszeiten Verkauf und/oder Werkstatt</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="border border-gray-200 px-4 py-3 font-mono text-sm">paymentAccepted</td>
+                            <td class="border border-gray-200 px-4 py-3 text-sm">Text</td>
+                            <td class="border border-gray-200 px-4 py-3 text-sm">Akzeptierte Zahlungsmethoden</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50 bg-gray-50">
+                            <td class="border border-gray-200 px-4 py-3 font-mono text-sm">currenciesAccepted</td>
+                            <td class="border border-gray-200 px-4 py-3 text-sm">Text</td>
+                            <td class="border border-gray-200 px-4 py-3 text-sm">Immer "EUR" für Deutschland</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3 class="text-2xl font-bold text-gray-900 mt-8 mb-4">Gebrauchtwagenhändler: Zusätzliche Hinweise</h3>
+
+            <p class="mb-6">
+                Reine Gebrauchtwagenhändler ohne Markenvertrag verwenden den @type <code class="bg-gray-100 px-1 rounded">AutoDealer</code> mit einer allgemeinen Beschreibung. Wenn das Sortiment bekannte Marken umfasst, kann <code class="bg-gray-100 px-1 rounded">brand</code> als Array mehrere Marken enthalten:
+            </p>
+
+            <div class="bg-gray-900 text-green-400 rounded-xl p-6 mb-6 font-mono text-sm overflow-x-auto">
+<pre>{
+  "@type": "AutoDealer",
+  "name": "AutoCenter Rhein-Ruhr GmbH",
+  "description": "Gebrauchtwagen aller Marken — über 200 Fahrzeuge auf Lager.",
+  "brand": [
+    {"@type": "Brand", "name": "Volkswagen"},
+    {"@type": "Brand", "name": "BMW"},
+    {"@type": "Brand", "name": "Mercedes-Benz"},
+    {"@type": "Brand", "name": "Audi"},
+    {"@type": "Brand", "name": "Ford"}
+  ],
+  "priceRange": "€€"
+}</pre>
+            </div>
+
+            <!-- Abschnitt 3 -->
+            <h2 id="carrepair-properties" class="text-3xl font-bold text-gray-900 mt-12 mb-6">3. CarRepair: Schema Markup für KFZ-Werkstätten</h2>
+
+            <p class="mb-6">
+                KFZ-Werkstätten, Reifenhändler und Autowerkstätten nutzen den @type <code class="bg-gray-100 px-1 rounded">CarRepair</code>. Besonders wichtig ist hier die Beschreibung der angebotenen Serviceleistungen — diese helfen Google, die Werkstatt bei spezifischen Serviceanfragen zu ranken (z. B. "Bremsenservice Hamburg").
+            </p>
+
+            <p class="mb-6">
+                Serviceleistungen bindest du über <code class="bg-gray-100 px-1 rounded">hasOfferCatalog</code> ein:
+            </p>
+
+            <div class="bg-gray-900 text-green-400 rounded-xl p-6 mb-6 font-mono text-sm overflow-x-auto">
+<pre>{
+  "@type": "CarRepair",
+  "name": "KFZ-Meisterbetrieb Hoffmann",
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Werkstatt-Leistungen",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Hauptuntersuchung (HU/TÜV)"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Reifenwechsel und Einlagerung"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Bremsenservice (Scheiben, Beläge)"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Klimaanlagenservice"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Ölwechsel und Inspektion"
+        }
+      }
+    ]
+  }
+}</pre>
+            </div>
+
+            <p class="mb-6">
+                Reifenhändler kombinieren häufig CarRepair mit AutoPartsStore, wenn sie neben der Montage auch Reifen verkaufen:
+            </p>
+
+            <div class="bg-gray-900 text-green-400 rounded-xl p-6 mb-6 font-mono text-sm overflow-x-auto">
+<pre>{
+  "@context": "https://schema.org",
+  "@type": ["CarRepair", "AutoPartsStore"],
+  "name": "Reifen-Schmidt — Reifenhandel & Montage"
+}</pre>
+            </div>
+
+            <!-- Abschnitt 4 -->
+            <h2 id="marken-hersteller" class="text-3xl font-bold text-gray-900 mt-12 mb-6">4. Marken und Hersteller strukturiert einbinden</h2>
+
+            <p class="mb-6">
+                Für Autohäuser mit Markenvertretung (VW, BMW, Mercedes, Toyota etc.) ist die <code class="bg-gray-100 px-1 rounded">brand</code>-Property entscheidend. Google verknüpft diese Marken-Entitäten mit dem bekannten Markenwissen im Knowledge Graph — ein starkes Trust-Signal.
+            </p>
+
+            <div class="bg-gray-900 text-green-400 rounded-xl p-6 mb-6 font-mono text-sm overflow-x-auto">
+<pre>{
+  "@type": "AutoDealer",
+  "name": "Autohaus Weber — Volkswagen & Skoda",
+  "brand": [
+    {
+      "@type": "Brand",
+      "name": "Volkswagen",
+      "sameAs": "https://www.wikidata.org/wiki/Q246"
+    },
+    {
+      "@type": "Brand",
+      "name": "Škoda",
+      "sameAs": "https://www.wikidata.org/wiki/Q11338"
+    }
+  ]
+}</pre>
+            </div>
+
+            <div class="bg-blue-50 border-l-4 border-blue-500 p-5 mb-8 rounded-r-xl">
+                <strong class="text-blue-800">Profi-Tipp:</strong>
+                <p class="text-blue-700 mt-1">Verwende <code>sameAs</code> mit dem Wikidata-Link der Automobilmarke. Google nutzt Wikidata als vertrauenswürdige Datenquelle — dieser Link stärkt die Verknüpfung zwischen deinem Autohaus und der offiziellen Markenentität im Knowledge Graph.</p>
+            </div>
+
+            <!-- Abschnitt 5 -->
+            <h2 id="oeffnungszeiten-preise" class="text-3xl font-bold text-gray-900 mt-12 mb-6">5. Öffnungszeiten und Preisbereich</h2>
+
+            <p class="mb-6">
+                Autohäuser haben oft unterschiedliche Öffnungszeiten für Verkauf und Werkstatt. Du kannst das mit mehreren <code class="bg-gray-100 px-1 rounded">OpeningHoursSpecification</code>-Objekten abbilden:
+            </p>
+
+            <div class="bg-gray-900 text-green-400 rounded-xl p-6 mb-6 font-mono text-sm overflow-x-auto">
+<pre>{
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "name": "Verkauf",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+      "opens": "09:00",
+      "closes": "18:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "name": "Verkauf",
+      "dayOfWeek": ["Saturday"],
+      "opens": "09:00",
+      "closes": "13:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "name": "Werkstatt",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+      "opens": "07:30",
+      "closes": "17:30"
+    }
+  ]
+}</pre>
+            </div>
+
+            <p class="mb-6">
+                Für <code class="bg-gray-100 px-1 rounded">priceRange</code> gibt es keine strikten Schema.org-Vorgaben, aber Google und Yelp interpretieren das klassische €/€€/€€€-System:
+            </p>
+
+            <div class="overflow-x-auto mb-8">
+                <table class="w-full border-collapse border border-gray-200 rounded-xl">
+                    <thead class="bg-gray-50">
+                        <tr>
+                            <th class="border border-gray-200 px-4 py-3 text-left font-semibold">priceRange</th>
+                            <th class="border border-gray-200 px-4 py-3 text-left font-semibold">Bedeutung im Kfz-Bereich</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="hover:bg-gray-50">
+                            <td class="border border-gray-200 px-4 py-3 font-mono">€</td>
+                            <td class="border border-gray-200 px-4 py-3 text-sm">Günstiger Gebrauchtwagenhändler, No-Name-Werkstatt</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50 bg-gray-50">
+                            <td class="border border-gray-200 px-4 py-3 font-mono">€€</td>
+                            <td class="border border-gray-200 px-4 py-3 text-sm">Freie Werkstatt mit Originalteilen, Markenhändler Gebrauchtwagen</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="border border-gray-200 px-4 py-3 font-mono">€€€</td>
+                            <td class="border border-gray-200 px-4 py-3 text-sm">Autorisierter Markenhändler, Premiumhersteller (BMW, Mercedes)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Abschnitt 6 -->
+            <h2 id="vollstaendige-beispiele" class="text-3xl font-bold text-gray-900 mt-12 mb-6">6. Vollständige JSON-LD-Beispiele</h2>
+
+            <h3 class="text-2xl font-bold text-gray-900 mt-8 mb-4">Beispiel 1: Volkswagen-Autohaus mit Werkstatt</h3>
+
+            <div class="bg-gray-900 text-green-400 rounded-xl p-6 mb-6 font-mono text-sm overflow-x-auto">
+<pre>{
+  "@context": "https://schema.org",
+  "@type": ["AutoDealer", "CarRepair"],
+  "name": "Autohaus Berger GmbH — Volkswagen",
+  "description": "Autorisierter VW-Händler und Servicepartner in Nürnberg. Neuwagen, Gebrauchtwagen und VW-Werkstattservice.",
+  "url": "https://www.autohaus-berger-nbg.de",
+  "telephone": "+49 911 4567890",
+  "email": "info@autohaus-berger-nbg.de",
+  "priceRange": "€€€",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Ziegelsteinstraße 45",
+    "addressLocality": "Nürnberg",
+    "postalCode": "90411",
+    "addressRegion": "Bayern",
+    "addressCountry": "DE"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 49.4654,
+    "longitude": 11.0574
+  },
+  "brand": [
+    {
+      "@type": "Brand",
+      "name": "Volkswagen",
+      "sameAs": "https://www.wikidata.org/wiki/Q246"
+    }
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.4",
+    "reviewCount": 187,
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+      "opens": "08:00",
+      "closes": "18:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Saturday"],
+      "opens": "09:00",
+      "closes": "14:00"
+    }
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Fahrzeuge & Service",
+    "itemListElement": [
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "VW Neuwagen"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "VW Gebrauchtwagen"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "VW Inspektion & Wartung"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Karosserie & Lackierung"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "VW-Finanzierung & Leasing"}}
+    ]
+  },
+  "paymentAccepted": "Barzahlung, EC-Karte, Kreditkarte, Finanzierung",
+  "currenciesAccepted": "EUR"
+}</pre>
+            </div>
+
+            <h3 class="text-2xl font-bold text-gray-900 mt-8 mb-4">Beispiel 2: Freie KFZ-Werkstatt</h3>
+
+            <div class="bg-gray-900 text-green-400 rounded-xl p-6 mb-6 font-mono text-sm overflow-x-auto">
+<pre>{
+  "@context": "https://schema.org",
+  "@type": "CarRepair",
+  "name": "KFZ-Meister Klaus Richter",
+  "description": "Freie KFZ-Werkstatt in Dresden — alle Marken, Originalteile, faire Preise.",
+  "url": "https://www.kfz-richter-dresden.de",
+  "telephone": "+49 351 8901234",
+  "priceRange": "€€",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Lockwitzer Straße 88",
+    "addressLocality": "Dresden",
+    "postalCode": "01239",
+    "addressCountry": "DE"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 51.0024,
+    "longitude": 13.7630
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "reviewCount": 93,
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+      "opens": "07:30",
+      "closes": "17:00"
+    }
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Werkstatt-Leistungen",
+    "itemListElement": [
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "HU & AU (TÜV / DEKRA)"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Reifenwechsel & Einlagerung"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Bremsen, Stoßdämpfer, Fahrwerk"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Ölwechsel & Inspektion"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Klimaanlagen-Service"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Unfallinstandsetzung"}}
+    ]
+  }
+}</pre>
+            </div>
+
+            <!-- Abschnitt 7 -->
+            <h2 id="lokale-seo-tipps" class="text-3xl font-bold text-gray-900 mt-12 mb-6">7. Lokale SEO-Tipps für Kfz-Betriebe</h2>
+
+            <p class="mb-6">
+                Schema Markup ist ein wichtiger Baustein für die lokale Sichtbarkeit von Autohäusern und Werkstätten. Weitere Maßnahmen, die mit dem Schema Markup synergetisch wirken:
+            </p>
+
+            <div class="space-y-4 mb-8">
+                <div class="bg-white border border-gray-200 rounded-xl p-5 shadow-sm">
+                    <h3 class="font-bold text-gray-900 mb-2">Google My Business (Google Business Profile)</h3>
+                    <p class="text-gray-600 text-sm">Pflege dein Google Business Profile vollständig aus: alle Dienstleistungen eintragen, Fotos hochladen, auf Bewertungen antworten. Das Schema Markup und GMB-Daten ergänzen sich — Konsistenz zwischen beiden ist entscheidend (NAP-Konsistenz).</p>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-xl p-5 shadow-sm">
+                    <h3 class="font-bold text-gray-900 mb-2">Reviews aktiv sammeln</h3>
+                    <p class="text-gray-600 text-sm">Autohäuser und Werkstätten mit vielen positiven Google-Bewertungen ranken in lokalen Suchen deutlich besser. Bitte zufriedene Kunden aktiv um eine Bewertung — per E-Mail nach dem Servicetermin oder mit QR-Code am Empfang. Unser Artikel zum Thema <a href="/blog/google-bewertungen-bekommen.html" class="text-blue-600 hover:underline">Google Bewertungen bekommen</a> gibt konkrete Taktiken.</p>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-xl p-5 shadow-sm">
+                    <h3 class="font-bold text-gray-900 mb-2">Lokale Keywords in den Content</h3>
+                    <p class="text-gray-600 text-sm">Verwende Kombinationen aus Service + Stadt: "Reifenwechsel Nürnberg", "VW-Inspektion Bayern", "Unfallinstandsetzung Dresden". Diese Long-Tail-Keywords haben wenig Konkurrenz und hohe Kaufabsicht.</p>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-xl p-5 shadow-sm">
+                    <h3 class="font-bold text-gray-900 mb-2">ServiceArea Schema für mobile Dienste</h3>
+                    <p class="text-gray-600 text-sm">Bietet dein Betrieb Pannenhilfe oder Abschleppdienst an? Nutze <a href="/blog/servicearea-schema-markup-seo.html" class="text-blue-600 hover:underline">ServiceArea Schema</a>, um das Einzugsgebiet für Google klar zu definieren.</p>
+                </div>
+            </div>
+
+            <!-- Abschnitt 8 -->
+            <h2 id="haeufige-fehler" class="text-3xl font-bold text-gray-900 mt-12 mb-6">8. Häufige Fehler und Checkliste</h2>
+
+            <div class="space-y-4 mb-8">
+                <div class="bg-red-50 border border-red-200 rounded-xl p-5">
+                    <h3 class="font-bold text-red-800 mb-2">Fehler 1: Nur @type "LocalBusiness" statt "AutoDealer"</h3>
+                    <p class="text-red-700 text-sm">Viele Autohäuser verwenden noch immer <code>LocalBusiness</code> als @type. Damit verlieren sie den semantischen Vorteil des spezifischen Automotive-Vokabulars. Google kann den Betrieb schlechter einordnen.</p>
+                </div>
+                <div class="bg-red-50 border border-red-200 rounded-xl p-5">
+                    <h3 class="font-bold text-red-800 mb-2">Fehler 2: Öffnungszeiten nicht getrennt für Verkauf und Werkstatt</h3>
+                    <p class="text-red-700 text-sm">Ein Autohaus hat oft andere Öffnungszeiten für Verkauf (Sa offen) und Werkstatt (Sa geschlossen). Nur eine einzige OpeningHoursSpecification ist zu ungenau — nutze mehrere Objekte mit beschreibendem <code>name</code>-Feld.</p>
+                </div>
+                <div class="bg-red-50 border border-red-200 rounded-xl p-5">
+                    <h3 class="font-bold text-red-800 mb-2">Fehler 3: brand als einfacher String</h3>
+                    <p class="text-red-700 text-sm">Falsch: <code>"brand": "Volkswagen"</code><br>Richtig: <code>"brand": {"@type": "Brand", "name": "Volkswagen"}</code><br>Nur das Brand-Objekt erlaubt Google die korrekte Verknüpfung mit der Markenentität.</p>
+                </div>
+                <div class="bg-red-50 border border-red-200 rounded-xl p-5">
+                    <h3 class="font-bold text-red-800 mb-2">Fehler 4: Keine aggregateRating trotz vorhandener Bewertungen</h3>
+                    <p class="text-red-700 text-sm">Autohäuser und Werkstätten mit Google-Bewertungen sollten diese unbedingt im Schema einbinden. Bewertungssterne in den Suchergebnissen erhöhen die Klickrate erheblich.</p>
+                </div>
+            </div>
+
+            <!-- Checkliste -->
+            <div class="bg-green-50 border border-green-200 rounded-xl p-6 mb-8">
+                <h3 class="font-bold text-green-800 mb-3">Checkliste: AutoDealer & CarRepair Schema</h3>
+                <ul class="space-y-2 text-green-700 text-sm">
+                    <li class="flex items-center space-x-2"><span class="text-green-500 font-bold">✓</span><span>Spezifischsten @type gewählt (AutoDealer, CarRepair, oder Kombination)</span></li>
+                    <li class="flex items-center space-x-2"><span class="text-green-500 font-bold">✓</span><span>brand als Brand-Objekt mit name (und sameAs für große Marken)</span></li>
+                    <li class="flex items-center space-x-2"><span class="text-green-500 font-bold">✓</span><span>Serviceleistungen via hasOfferCatalog strukturiert</span></li>
+                    <li class="flex items-center space-x-2"><span class="text-green-500 font-bold">✓</span><span>Öffnungszeiten vollständig und getrennt nach Bereich</span></li>
+                    <li class="flex items-center space-x-2"><span class="text-green-500 font-bold">✓</span><span>aggregateRating aus echten Kundenbewertungen</span></li>
+                    <li class="flex items-center space-x-2"><span class="text-green-500 font-bold">✓</span><span>geo-Koordinaten für präzise Kartenpositionierung</span></li>
+                    <li class="flex items-center space-x-2"><span class="text-green-500 font-bold">✓</span><span>paymentAccepted und priceRange angegeben</span></li>
+                    <li class="flex items-center space-x-2"><span class="text-green-500 font-bold">✓</span><span>Daten konsistent mit Google Business Profile (NAP)</span></li>
+                    <li class="flex items-center space-x-2"><span class="text-green-500 font-bold">✓</span><span>JSON-LD validiert mit JSON-LD Validator</span></li>
+                </ul>
+            </div>
+
+            <!-- CTA -->
+            <div class="bg-gradient-to-br from-gray-900 to-zinc-800 rounded-2xl p-8 text-white text-center mt-12">
+                <h2 class="text-2xl font-bold mb-3">Autohaus-Website kostenlos analysieren</h2>
+                <p class="text-gray-300 mb-6">Unser kostenloser SEO-Checker erkennt, ob dein AutoDealer-Schema korrekt implementiert ist und welche lokalen SEO-Potenziale du noch nicht ausschöpfst.</p>
+                <a href="https://shift07.ai" class="bg-orange-500 text-white font-bold px-8 py-3 rounded-xl hover:bg-orange-400 transition-colors inline-block">
+                    Jetzt kostenlos prüfen →
+                </a>
+            </div>
+
+            <!-- Interne Links -->
+            <div class="mt-12 pt-8 border-t border-gray-200">
+                <h3 class="text-xl font-bold text-gray-900 mb-4">Verwandte Artikel</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <a href="/blog/localbusiness-schema-markup-anleitung.html" class="block bg-gray-50 hover:bg-orange-50 border border-gray-200 hover:border-orange-300 rounded-xl p-4 transition-colors">
+                        <div class="font-semibold text-gray-900 mb-1">LocalBusiness Schema Markup: Vollständige Anleitung</div>
+                        <div class="text-gray-500 text-sm">Die Basis für AutoDealer und CarRepair</div>
+                    </a>
+                    <a href="/blog/google-my-business-optimieren.html" class="block bg-gray-50 hover:bg-orange-50 border border-gray-200 hover:border-orange-300 rounded-xl p-4 transition-colors">
+                        <div class="font-semibold text-gray-900 mb-1">Google My Business optimieren</div>
+                        <div class="text-gray-500 text-sm">Lokale Sichtbarkeit für Autohäuser und Werkstätten</div>
+                    </a>
+                    <a href="/blog/servicearea-schema-markup-seo.html" class="block bg-gray-50 hover:bg-orange-50 border border-gray-200 hover:border-orange-300 rounded-xl p-4 transition-colors">
+                        <div class="font-semibold text-gray-900 mb-1">ServiceArea Schema Markup</div>
+                        <div class="text-gray-500 text-sm">Einzugsgebiet für Kfz-Dienste definieren</div>
+                    </a>
+                    <a href="/blog/openinghours-schema-markup-seo.html" class="block bg-gray-50 hover:bg-orange-50 border border-gray-200 hover:border-orange-300 rounded-xl p-4 transition-colors">
+                        <div class="font-semibold text-gray-900 mb-1">OpeningHours Schema Markup</div>
+                        <div class="text-gray-500 text-sm">Öffnungszeiten für Werkstatt und Verkauf</div>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-12 mt-20">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-auto">
+                        <span class="font-bold text-white text-xl">Shift07</span>
+                    </div>
+                    <p class="text-gray-500 text-sm">KI-gestütztes SEO-Analyse-Tool für deutsche Unternehmen.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-white mb-3">Tools</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="/tools/schema-markup-generator.html" class="hover:text-white transition-colors">Schema Markup Generator</a></li>
+                        <li><a href="/tools/json-ld-structured-data-validator.html" class="hover:text-white transition-colors">JSON-LD Validator</a></li>
+                        <li><a href="/tools/openinghours-schema-generator.html" class="hover:text-white transition-colors">Öffnungszeiten-Generator</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-white mb-3">Unternehmen</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="/impressum.html" class="hover:text-white transition-colors">Impressum</a></li>
+                        <li><a href="/datenschutz.html" class="hover:text-white transition-colors">Datenschutz</a></li>
+                        <li><a href="/blog/" class="hover:text-white transition-colors">Blog</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-sm text-center text-gray-600">
+                &copy; 2026 Thümmler AI GmbH · Leonardo-da-Vinci-Straße 15 · 14467 Potsdam
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
