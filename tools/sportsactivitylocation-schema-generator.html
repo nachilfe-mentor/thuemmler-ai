@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K1S1RXBDS8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K1S1RXBDS8');
+    </script>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8475857002943858" crossorigin="anonymous"></script>
+    <title>SportsActivityLocation Schema Generator – JSON-LD kostenlos erstellen | Shift07</title>
+    <meta name="description" content="SportsActivityLocation Schema Markup kostenlos generieren: JSON-LD für Fitnessstudio, Golfplatz, Stadion, Tennisanlage, Bowlingbahn und alle Sport-Sub-Typen mit Öffnungszeiten und Preisen.">
+    <meta name="keywords" content="SportsActivityLocation Schema Generator, ExerciseGym JSON-LD, GolfCourse Schema Markup, StadiumOrArena strukturierte Daten, Sportstätte Schema, BowlingAlley JSON-LD kostenlos">
+    <meta name="author" content="Thümmler AI GmbH">
+    <link rel="icon" type="image/png" href="/logo.png">
+    <link rel="canonical" href="https://shift07.ai/tools/sportsactivitylocation-schema-generator.html">
+    <link rel="alternate" type="application/rss+xml" title="Shift07 Blog" href="https://shift07.ai/feed.xml">
+    <!-- Open Graph -->
+    <meta property="og:title" content="SportsActivityLocation Schema Generator – JSON-LD kostenlos erstellen">
+    <meta property="og:description" content="JSON-LD für Fitnessstudio, Golfplatz, Stadion, Tennisanlage und alle Sportstätten-Typen kostenlos generieren — mit Öffnungszeiten, Preisen und Sport-Schema.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://shift07.ai/tools/sportsactivitylocation-schema-generator.html">
+    <meta property="og:image" content="https://shift07.ai/tools/images/sportsactivitylocation-schema-generator.png">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="Shift07">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SportsActivityLocation Schema Generator – JSON-LD kostenlos">
+    <meta name="twitter:description" content="Schema Markup für alle Sportstätten-Typen: Fitnessstudio, Golfplatz, Stadion, Tennisanlage, Bowlingbahn kostenlos generieren.">
+    <meta name="twitter:image" content="https://shift07.ai/tools/images/sportsactivitylocation-schema-generator.png">
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "SportsActivityLocation Schema Generator",
+      "description": "SportsActivityLocation Schema Markup kostenlos generieren: JSON-LD für Fitnessstudio, Golfplatz, Stadion, Tennisanlage und alle Sport-Sub-Typen.",
+      "url": "https://shift07.ai/tools/sportsactivitylocation-schema-generator.html",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR"
+      },
+      "provider": {
+        "@type": "Organization",
+        "name": "Thümmler AI GmbH",
+        "url": "https://shift07.ai"
+      }
+    }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: rgba(15, 23, 42, 0.5); }
+        ::-webkit-scrollbar-thumb { background: rgba(16, 185, 129, 0.5); border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: rgba(16, 185, 129, 0.7); }
+        html { scroll-behavior: smooth; }
+        .glass { background: rgba(255,255,255,0.06); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.1); }
+        .input-field {
+            background: rgba(255,255,255,0.07);
+            border: 1px solid rgba(255,255,255,0.12);
+            color: white;
+            border-radius: 0.5rem;
+            padding: 0.625rem 0.875rem;
+            width: 100%;
+            font-size: 0.875rem;
+            transition: border-color 0.2s, background 0.2s;
+        }
+        .input-field:focus { outline: none; border-color: rgba(16,185,129,0.6); background: rgba(255,255,255,0.1); }
+        .input-field::placeholder { color: rgba(156,163,175,0.7); }
+        select.input-field option { background: #1e293b; color: white; }
+        .label { display: block; font-size: 0.8rem; font-weight: 500; color: #94a3b8; margin-bottom: 0.375rem; }
+        .section-title { font-size: 0.95rem; font-weight: 700; color: #e2e8f0; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.08); }
+        .hours-row { display: grid; grid-template-columns: 1fr 1fr 1fr auto; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem; }
+        #jsonOutput {
+            background: rgba(15,23,42,0.9);
+            color: #86efac;
+            font-family: 'Courier New', monospace;
+            font-size: 0.8rem;
+            line-height: 1.6;
+            padding: 1.25rem;
+            border-radius: 0.75rem;
+            border: 1px solid rgba(16,185,129,0.2);
+            width: 100%;
+            min-height: 400px;
+            resize: vertical;
+            white-space: pre;
+            overflow-x: auto;
+        }
+        .badge { display: inline-block; padding: 0.15rem 0.6rem; border-radius: 9999px; font-size: 0.7rem; font-weight: 600; }
+        .tab-btn { padding: 0.5rem 1rem; font-size: 0.875rem; font-weight: 500; border-radius: 0.5rem; cursor: pointer; transition: all 0.2s; color: #94a3b8; }
+        .tab-btn.active { background: rgba(16,185,129,0.2); color: #34d399; }
+        .tab-btn:hover:not(.active) { background: rgba(255,255,255,0.05); color: #e2e8f0; }
+    </style>
+</head>
+<body class="bg-slate-900 text-white min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-slate-900/80 backdrop-blur-xl border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <a href="/" class="flex items-center gap-2">
+                    <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                    <span class="text-lg font-bold text-white">Shift07</span>
+                </a>
+                <div class="hidden md:flex items-center space-x-6 text-sm">
+                    <a href="/" class="text-gray-300 hover:text-white transition-colors">Analyse</a>
+                    <a href="/blog/" class="text-gray-300 hover:text-white transition-colors">Blog</a>
+                    <a href="/tools/" class="text-gray-300 hover:text-white transition-colors">Tools</a>
+                    <a href="/" class="bg-emerald-600 hover:bg-emerald-500 text-white px-4 py-2 rounded-lg font-medium transition-colors">Kostenlos testen</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-gray-300 hover:text-white">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900 border-t border-white/10 px-4 py-4 space-y-3">
+            <a href="/" class="block text-gray-300 hover:text-white">Analyse</a>
+            <a href="/blog/" class="block text-gray-300 hover:text-white">Blog</a>
+            <a href="/tools/" class="block text-gray-300 hover:text-white">Tools</a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="pt-28 pb-10 px-4">
+        <div class="max-w-4xl mx-auto text-center">
+            <div class="inline-flex items-center gap-2 bg-emerald-500/10 border border-emerald-500/20 rounded-full px-4 py-2 text-sm text-emerald-400 mb-6">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                Kostenlos &amp; ohne Anmeldung
+            </div>
+            <h1 class="text-3xl md:text-5xl font-bold text-white mb-4 leading-tight">
+                SportsActivityLocation<br>Schema Generator
+            </h1>
+            <p class="text-xl text-gray-400 mb-4">JSON-LD für Sportstätten kostenlos erstellen</p>
+            <p class="text-gray-500 max-w-2xl mx-auto text-sm leading-relaxed">
+                Generiert strukturierte Daten für Fitnessstudio, Golfplatz, Stadion, Tennisanlage, Bowlingbahn, Schwimmbad, Skigebiet und alle weiteren <code class="text-emerald-400 bg-emerald-500/10 px-1 rounded">SportsActivityLocation</code>-Sub-Typen — direkt kopierbereit für deinen <code class="text-emerald-400 bg-emerald-500/10 px-1 rounded">&lt;head&gt;</code>.
+            </p>
+        </div>
+    </section>
+
+    <!-- Tool -->
+    <section class="pb-20 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 xl:grid-cols-2 gap-8">
+
+                <!-- Input Panel -->
+                <div class="space-y-6">
+
+                    <!-- Schema-Typ -->
+                    <div class="glass rounded-2xl p-6">
+                        <div class="section-title">Schema-Typ wählen</div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-4">
+                            <div id="typeCards" class="sm:col-span-2 grid grid-cols-2 sm:grid-cols-3 gap-2">
+                                <!-- JS generiert -->
+                            </div>
+                        </div>
+                        <label class="label">Benutzerdefinierter Typ (falls nicht in der Liste)</label>
+                        <select id="customType" class="input-field">
+                            <option value="">— Oben einen Typ auswählen —</option>
+                            <option value="SportsActivityLocation">SportsActivityLocation (Basis)</option>
+                            <option value="BowlingAlley">BowlingAlley (Bowlingbahn)</option>
+                            <option value="ExerciseGym">ExerciseGym (Fitnessstudio)</option>
+                            <option value="GolfCourse">GolfCourse (Golfplatz / Minigolf)</option>
+                            <option value="HealthClub">HealthClub (Gesundheits- / Wellness-Club)</option>
+                            <option value="PublicSwimmingPool">PublicSwimmingPool (Schwimmbad)</option>
+                            <option value="SkiResort">SkiResort (Skigebiet / Wintersportort)</option>
+                            <option value="SportsClub">SportsClub (Sportverein / -club)</option>
+                            <option value="StadiumOrArena">StadiumOrArena (Stadion / Arena / Halle)</option>
+                            <option value="TennisComplex">TennisComplex (Tennisanlage / -center)</option>
+                        </select>
+                    </div>
+
+                    <!-- Basisinfos -->
+                    <div class="glass rounded-2xl p-6">
+                        <div class="section-title">Basisinformationen</div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div class="sm:col-span-2">
+                                <label class="label">Name der Sportstätte *</label>
+                                <input type="text" id="name" class="input-field" placeholder="z.B. Fitnessstudio FitLife Hamburg">
+                            </div>
+                            <div class="sm:col-span-2">
+                                <label class="label">Beschreibung</label>
+                                <textarea id="description" class="input-field" rows="2" placeholder="Kurze Beschreibung des Angebots..."></textarea>
+                            </div>
+                            <div>
+                                <label class="label">Website-URL</label>
+                                <input type="url" id="url" class="input-field" placeholder="https://fitlife-hamburg.de">
+                            </div>
+                            <div>
+                                <label class="label">Telefonnummer</label>
+                                <input type="tel" id="telephone" class="input-field" placeholder="+49 40 12345678">
+                            </div>
+                            <div>
+                                <label class="label">E-Mail-Adresse</label>
+                                <input type="email" id="email" class="input-field" placeholder="info@fitlife-hamburg.de">
+                            </div>
+                            <div>
+                                <label class="label">Preisklasse</label>
+                                <select id="priceRange" class="input-field">
+                                    <option value="">— nicht angeben —</option>
+                                    <option value="€">€ (günstig)</option>
+                                    <option value="€€">€€ (mittel)</option>
+                                    <option value="€€€">€€€ (gehoben)</option>
+                                    <option value="€€€€">€€€€ (luxuriös)</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="label">Gründungsjahr</label>
+                                <input type="number" id="foundingYear" class="input-field" placeholder="z.B. 2005" min="1900" max="2030">
+                            </div>
+                            <div>
+                                <label class="label">Anzahl Mitglieder / Kapazität</label>
+                                <input type="number" id="capacity" class="input-field" placeholder="z.B. 500">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Adresse -->
+                    <div class="glass rounded-2xl p-6">
+                        <div class="section-title">Adresse</div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div class="sm:col-span-2">
+                                <label class="label">Straße + Hausnummer</label>
+                                <input type="text" id="street" class="input-field" placeholder="Musterstraße 42">
+                            </div>
+                            <div>
+                                <label class="label">PLZ</label>
+                                <input type="text" id="postalCode" class="input-field" placeholder="20095">
+                            </div>
+                            <div>
+                                <label class="label">Stadt</label>
+                                <input type="text" id="city" class="input-field" placeholder="Hamburg">
+                            </div>
+                            <div>
+                                <label class="label">Bundesland</label>
+                                <input type="text" id="region" class="input-field" placeholder="Hamburg">
+                            </div>
+                            <div>
+                                <label class="label">Land</label>
+                                <input type="text" id="country" class="input-field" value="DE">
+                            </div>
+                            <div>
+                                <label class="label">Breitengrad (Latitude)</label>
+                                <input type="number" step="0.000001" id="lat" class="input-field" placeholder="53.5753">
+                            </div>
+                            <div>
+                                <label class="label">Längengrad (Longitude)</label>
+                                <input type="number" step="0.000001" id="lng" class="input-field" placeholder="10.0153">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Öffnungszeiten -->
+                    <div class="glass rounded-2xl p-6">
+                        <div class="section-title">Öffnungszeiten</div>
+                        <div id="hoursContainer" class="space-y-2 mb-3">
+                            <!-- JS generiert -->
+                        </div>
+                        <button onclick="addHoursRow()" class="text-xs text-emerald-400 hover:text-emerald-300 flex items-center gap-1 mt-1">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
+                            Weitere Öffnungszeiten hinzufügen
+                        </button>
+                    </div>
+
+                    <!-- Sport & Ausstattung -->
+                    <div class="glass rounded-2xl p-6">
+                        <div class="section-title">Sport &amp; Ausstattung</div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div class="sm:col-span-2">
+                                <label class="label">Sportarten / Angebote (kommagetrennt)</label>
+                                <input type="text" id="sports" class="input-field" placeholder="z.B. Fitness, Yoga, Kursangebote, Sauna">
+                                <p class="text-xs text-gray-500 mt-1">Werden als <code>sport</code>-Properties eingebunden</p>
+                            </div>
+                            <div class="sm:col-span-2">
+                                <label class="label">Ausstattungsmerkmale / amenityFeature (kommagetrennt)</label>
+                                <input type="text" id="amenities" class="input-field" placeholder="z.B. Parkplatz, Umkleiden, Duschen, WLAN, Locker">
+                                <p class="text-xs text-gray-500 mt-1">Werden als <code>amenityFeature</code> mit <code>LocationFeatureSpecification</code> ausgegeben</p>
+                            </div>
+                            <div>
+                                <label class="label">Bild-URL (og:image / ImageObject)</label>
+                                <input type="url" id="imageUrl" class="input-field" placeholder="https://fitlife-hamburg.de/img/studio.jpg">
+                            </div>
+                            <div>
+                                <label class="label">Google Maps / Karteneintrag URL</label>
+                                <input type="url" id="mapUrl" class="input-field" placeholder="https://maps.google.com/...">
+                            </div>
+                            <div>
+                                <label class="label">Online-Mitgliedschaft / Terminbuchung URL</label>
+                                <input type="url" id="membershipUrl" class="input-field" placeholder="https://fitlife-hamburg.de/mitgliedschaft">
+                            </div>
+                            <div>
+                                <label class="label">Currentsportsevents URL (bei Arenen/Stadien)</label>
+                                <input type="url" id="eventsUrl" class="input-field" placeholder="https://hsg-arena.de/events">
+                            </div>
+                        </div>
+
+                        <!-- Bewertung -->
+                        <div class="mt-4 pt-4 border-t border-white/08">
+                            <p class="section-title" style="margin-bottom:0.75rem">Bewertung (AggregateRating, optional)</p>
+                            <div class="grid grid-cols-3 gap-4">
+                                <div>
+                                    <label class="label">Ø Bewertung</label>
+                                    <input type="number" step="0.1" min="1" max="5" id="ratingValue" class="input-field" placeholder="4.7">
+                                </div>
+                                <div>
+                                    <label class="label">Anzahl Bewertungen</label>
+                                    <input type="number" id="ratingCount" class="input-field" placeholder="128">
+                                </div>
+                                <div>
+                                    <label class="label">Max. Bewertung</label>
+                                    <input type="number" id="ratingMax" class="input-field" placeholder="5" value="5">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Generate Button -->
+                    <button onclick="generateSchema()" class="w-full bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white py-4 rounded-xl font-bold text-lg transition-all shadow-lg shadow-emerald-900/30 flex items-center justify-center gap-2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                        JSON-LD generieren
+                    </button>
+                </div>
+
+                <!-- Output Panel -->
+                <div class="space-y-6">
+
+                    <!-- Output -->
+                    <div class="glass rounded-2xl p-6 sticky top-24">
+                        <div class="flex items-center justify-between mb-4">
+                            <h2 class="text-lg font-bold text-white">Generierter JSON-LD Code</h2>
+                            <div class="flex gap-2">
+                                <button onclick="copyCode()" id="copyBtn" class="text-xs bg-emerald-600/20 hover:bg-emerald-600/30 text-emerald-400 px-3 py-1.5 rounded-lg font-medium transition-colors flex items-center gap-1">
+                                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                                    Kopieren
+                                </button>
+                                <button onclick="downloadCode()" class="text-xs bg-white/5 hover:bg-white/10 text-gray-400 px-3 py-1.5 rounded-lg font-medium transition-colors flex items-center gap-1">
+                                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                                    Download
+                                </button>
+                            </div>
+                        </div>
+                        <textarea id="jsonOutput" readonly placeholder="// Klicke auf &quot;JSON-LD generieren&quot; um den Code zu erstellen..."></textarea>
+                        <p class="text-xs text-gray-500 mt-3">Den Code kopieren und zwischen <code class="text-emerald-400">&lt;script type="application/ld+json"&gt;</code> und <code class="text-emerald-400">&lt;/script&gt;</code> im <code class="text-emerald-400">&lt;head&gt;</code> deiner Seite einfügen.</p>
+
+                        <!-- Validation Hint -->
+                        <div id="validationHint" class="hidden mt-4 p-3 bg-emerald-500/10 border border-emerald-500/20 rounded-lg">
+                            <p class="text-xs text-emerald-400 font-medium mb-1">✓ Code generiert!</p>
+                            <p class="text-xs text-gray-400">Teste das Schema auf: <a href="https://search.google.com/test/rich-results" target="_blank" rel="noopener" class="text-emerald-400 underline">Google Rich Results Test</a> oder <a href="https://validator.schema.org" target="_blank" rel="noopener" class="text-emerald-400 underline">Schema.org Validator</a>.</p>
+                        </div>
+                    </div>
+
+                    <!-- Typ-Erklärungen -->
+                    <div class="glass rounded-2xl p-6">
+                        <h3 class="text-base font-bold text-white mb-4">Welcher Typ für welche Sportstätte?</h3>
+                        <div class="space-y-3 text-sm">
+                            <div class="flex items-start gap-3">
+                                <span class="text-emerald-400 font-mono text-xs bg-emerald-500/10 px-2 py-1 rounded mt-0.5 whitespace-nowrap">ExerciseGym</span>
+                                <p class="text-gray-400">Fitnessstudio, Kraft- & Ausdauertraining, CrossFit-Box</p>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <span class="text-emerald-400 font-mono text-xs bg-emerald-500/10 px-2 py-1 rounded mt-0.5 whitespace-nowrap">HealthClub</span>
+                                <p class="text-gray-400">Wellness-/Gesundheitsclub mit mehreren Sport- & Relax-Angeboten</p>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <span class="text-emerald-400 font-mono text-xs bg-emerald-500/10 px-2 py-1 rounded mt-0.5 whitespace-nowrap">GolfCourse</span>
+                                <p class="text-gray-400">Golfplatz, Driving Range, Minigolfanlage</p>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <span class="text-emerald-400 font-mono text-xs bg-emerald-500/10 px-2 py-1 rounded mt-0.5 whitespace-nowrap">TennisComplex</span>
+                                <p class="text-gray-400">Tennisanlage, Tenniscenter, Squash-Center</p>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <span class="text-emerald-400 font-mono text-xs bg-emerald-500/10 px-2 py-1 rounded mt-0.5 whitespace-nowrap">StadiumOrArena</span>
+                                <p class="text-gray-400">Fußballstadion, Eishalle, Mehrzweckarena, Indoor-Halle</p>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <span class="text-emerald-400 font-mono text-xs bg-emerald-500/10 px-2 py-1 rounded mt-0.5 whitespace-nowrap">PublicSwimmingPool</span>
+                                <p class="text-gray-400">Freibad, Hallenbad, Erlebnisbad, Wellenbad</p>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <span class="text-emerald-400 font-mono text-xs bg-emerald-500/10 px-2 py-1 rounded mt-0.5 whitespace-nowrap">BowlingAlley</span>
+                                <p class="text-gray-400">Bowling-Center, Kegelbahn, Bocce-Anlage</p>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <span class="text-emerald-400 font-mono text-xs bg-emerald-500/10 px-2 py-1 rounded mt-0.5 whitespace-nowrap">SkiResort</span>
+                                <p class="text-gray-400">Skigebiet, Wintersportort, Loipen-Zentrum</p>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <span class="text-emerald-400 font-mono text-xs bg-emerald-500/10 px-2 py-1 rounded mt-0.5 whitespace-nowrap">SportsClub</span>
+                                <p class="text-gray-400">Vereins-Sportanlage, Multi-Sport-Club ohne spez. Typ</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Related Tools -->
+                    <div class="glass rounded-2xl p-6">
+                        <h3 class="text-base font-bold text-white mb-4">Ähnliche Tools &amp; Artikel</h3>
+                        <div class="space-y-2 text-sm">
+                            <a href="/tools/schema-markup-generator.html" class="block text-blue-400 hover:text-blue-300">LocalBusiness Schema Generator</a>
+                            <a href="/tools/foodestablishment-schema-generator.html" class="block text-blue-400 hover:text-blue-300">FoodEstablishment Schema Generator</a>
+                            <a href="/tools/openinghours-schema-generator.html" class="block text-blue-400 hover:text-blue-300">OpeningHours Schema Generator</a>
+                            <a href="/blog/sportsactivitylocation-schema-markup-vertieft.html" class="block text-blue-400 hover:text-blue-300">Blog: SportsActivityLocation Schema vertieft</a>
+                            <a href="/blog/sportsactivitylocation-schema-markup.html" class="block text-blue-400 hover:text-blue-300">Blog: SportsActivityLocation Grundlagen</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/10 bg-slate-900/50 py-12 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="flex items-center gap-2">
+                    <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                    <span class="text-lg font-bold text-white">Shift07</span>
+                </div>
+                <div class="flex items-center space-x-6 text-sm text-gray-400">
+                    <a href="/impressum.html" class="hover:text-white transition-colors">Impressum</a>
+                    <a href="/datenschutz.html" class="hover:text-white transition-colors">Datenschutz</a>
+                    <a href="/agb.html" class="hover:text-white transition-colors">AGB</a>
+                    <a href="/ueber-uns.html" class="hover:text-white transition-colors">Über uns</a>
+                </div>
+                <p class="text-sm text-gray-500">&copy; 2026 Thümmler AI GmbH</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // ── Typ-Karten ──────────────────────────────────────────────────────────────
+        const TYPES = [
+            { id: 'ExerciseGym',         label: 'Fitnessstudio',    icon: '🏋️' },
+            { id: 'HealthClub',          label: 'Health-Club',      icon: '🧘' },
+            { id: 'GolfCourse',          label: 'Golfplatz',        icon: '⛳' },
+            { id: 'TennisComplex',       label: 'Tennis',           icon: '🎾' },
+            { id: 'StadiumOrArena',      label: 'Stadion/Arena',    icon: '🏟️' },
+            { id: 'PublicSwimmingPool',  label: 'Schwimmbad',       icon: '🏊' },
+            { id: 'BowlingAlley',        label: 'Bowling',          icon: '🎳' },
+            { id: 'SkiResort',           label: 'Skigebiet',        icon: '⛷️' },
+            { id: 'SportsClub',         label: 'Sportverein',      icon: '🏅' },
+        ];
+
+        let selectedType = 'ExerciseGym';
+
+        function renderTypeCards() {
+            const container = document.getElementById('typeCards');
+            container.innerHTML = TYPES.map(t => `
+                <button onclick="selectType('${t.id}')" id="card-${t.id}"
+                    class="flex flex-col items-center gap-1 p-3 rounded-xl border transition-all text-sm font-medium
+                    ${selectedType === t.id
+                        ? 'bg-emerald-500/20 border-emerald-500/50 text-emerald-300'
+                        : 'bg-white/5 border-white/10 text-gray-400 hover:bg-white/8 hover:border-white/20'
+                    }">
+                    <span class="text-2xl">${t.icon}</span>
+                    <span>${t.label}</span>
+                </button>
+            `).join('');
+        }
+
+        function selectType(typeId) {
+            selectedType = typeId;
+            document.getElementById('customType').value = typeId;
+            renderTypeCards();
+        }
+
+        document.getElementById('customType').addEventListener('change', function() {
+            if (this.value) {
+                selectedType = this.value;
+                renderTypeCards();
+            }
+        });
+
+        // ── Öffnungszeiten ──────────────────────────────────────────────────────────
+        const DAYS = [
+            { id: 'Mo', label: 'Mo' },
+            { id: 'Tu', label: 'Di' },
+            { id: 'We', label: 'Mi' },
+            { id: 'Th', label: 'Do' },
+            { id: 'Fr', label: 'Fr' },
+            { id: 'Sa', label: 'Sa' },
+            { id: 'Su', label: 'So' },
+        ];
+
+        let hoursRows = [];
+        let rowCounter = 0;
+
+        function addHoursRow(days = ['Mo','Tu','We','Th','Fr'], open = '09:00', close = '21:00') {
+            rowCounter++;
+            const id = rowCounter;
+            hoursRows.push({ id, days: [...days], open, close });
+            renderHoursRows();
+        }
+
+        function removeHoursRow(id) {
+            hoursRows = hoursRows.filter(r => r.id !== id);
+            renderHoursRows();
+        }
+
+        function renderHoursRows() {
+            const container = document.getElementById('hoursContainer');
+            if (hoursRows.length === 0) {
+                container.innerHTML = '<p class="text-xs text-gray-500">Keine Öffnungszeiten hinzugefügt.</p>';
+                return;
+            }
+            container.innerHTML = hoursRows.map(row => `
+                <div class="bg-white/5 rounded-lg p-3">
+                    <div class="flex gap-1 flex-wrap mb-2">
+                        ${DAYS.map(d => `
+                            <button onclick="toggleDay(${row.id},'${d.id}')"
+                                class="px-2 py-1 text-xs rounded font-medium transition-colors
+                                ${row.days.includes(d.id)
+                                    ? 'bg-emerald-600 text-white'
+                                    : 'bg-white/10 text-gray-400 hover:bg-white/15'
+                                }">
+                                ${d.label}
+                            </button>
+                        `).join('')}
+                        <button onclick="removeHoursRow(${row.id})" class="ml-auto text-xs text-red-400 hover:text-red-300 px-2">✕</button>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <input type="time" value="${row.open}" onchange="updateHoursRow(${row.id},'open',this.value)"
+                            class="input-field text-xs" style="width:120px">
+                        <span class="text-gray-500 text-sm">—</span>
+                        <input type="time" value="${row.close}" onchange="updateHoursRow(${row.id},'close',this.value)"
+                            class="input-field text-xs" style="width:120px">
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function toggleDay(rowId, dayId) {
+            const row = hoursRows.find(r => r.id === rowId);
+            if (!row) return;
+            if (row.days.includes(dayId)) {
+                row.days = row.days.filter(d => d !== dayId);
+            } else {
+                row.days.push(dayId);
+            }
+            renderHoursRows();
+        }
+
+        function updateHoursRow(rowId, field, value) {
+            const row = hoursRows.find(r => r.id === rowId);
+            if (row) row[field] = value;
+        }
+
+        // ── Schema generieren ────────────────────────────────────────────────────────
+        function generateSchema() {
+            const type = document.getElementById('customType').value || selectedType || 'ExerciseGym';
+            const name = document.getElementById('name').value.trim();
+            const description = document.getElementById('description').value.trim();
+            const url = document.getElementById('url').value.trim();
+            const telephone = document.getElementById('telephone').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const priceRange = document.getElementById('priceRange').value;
+            const foundingYear = document.getElementById('foundingYear').value.trim();
+            const capacity = document.getElementById('capacity').value.trim();
+
+            const street = document.getElementById('street').value.trim();
+            const postalCode = document.getElementById('postalCode').value.trim();
+            const city = document.getElementById('city').value.trim();
+            const region = document.getElementById('region').value.trim();
+            const country = document.getElementById('country').value.trim();
+            const lat = document.getElementById('lat').value.trim();
+            const lng = document.getElementById('lng').value.trim();
+
+            const sports = document.getElementById('sports').value.trim();
+            const amenities = document.getElementById('amenities').value.trim();
+            const imageUrl = document.getElementById('imageUrl').value.trim();
+            const mapUrl = document.getElementById('mapUrl').value.trim();
+            const membershipUrl = document.getElementById('membershipUrl').value.trim();
+            const eventsUrl = document.getElementById('eventsUrl').value.trim();
+
+            const ratingValue = document.getElementById('ratingValue').value.trim();
+            const ratingCount = document.getElementById('ratingCount').value.trim();
+            const ratingMax = document.getElementById('ratingMax').value.trim() || '5';
+
+            if (!name) {
+                alert('Bitte gib den Namen der Sportstätte ein.');
+                document.getElementById('name').focus();
+                return;
+            }
+
+            const schema = { "@context": "https://schema.org", "@type": type };
+
+            schema.name = name;
+            if (description) schema.description = description;
+            if (url) schema.url = url;
+            if (telephone) schema.telephone = telephone;
+            if (email) schema.email = email;
+            if (priceRange) schema.priceRange = priceRange;
+
+            // Adresse
+            const addr = {};
+            addr["@type"] = "PostalAddress";
+            if (street) addr.streetAddress = street;
+            if (postalCode) addr.postalCode = postalCode;
+            if (city) addr.addressLocality = city;
+            if (region) addr.addressRegion = region;
+            if (country) addr.addressCountry = country;
+            if (Object.keys(addr).length > 1) schema.address = addr;
+
+            // Geo
+            if (lat && lng) {
+                schema.geo = { "@type": "GeoCoordinates", latitude: parseFloat(lat), longitude: parseFloat(lng) };
+            }
+
+            // Öffnungszeiten
+            if (hoursRows.length > 0) {
+                const hoursSpecs = [];
+                const dayMap = { Mo: 'Monday', Tu: 'Tuesday', We: 'Wednesday', Th: 'Thursday', Fr: 'Friday', Sa: 'Saturday', Su: 'Sunday' };
+                hoursRows.forEach(row => {
+                    if (row.days.length > 0) {
+                        hoursSpecs.push({
+                            "@type": "OpeningHoursSpecification",
+                            dayOfWeek: row.days.map(d => `https://schema.org/${dayMap[d]}`),
+                            opens: row.open,
+                            closes: row.close
+                        });
+                    }
+                });
+                if (hoursSpecs.length > 0) schema.openingHoursSpecification = hoursSpecs;
+            }
+
+            // Sportarten
+            if (sports) {
+                const sportList = sports.split(',').map(s => s.trim()).filter(Boolean);
+                if (sportList.length === 1) {
+                    schema.sport = sportList[0];
+                } else if (sportList.length > 1) {
+                    schema.sport = sportList;
+                }
+            }
+
+            // Ausstattung
+            if (amenities) {
+                const amenityList = amenities.split(',').map(a => a.trim()).filter(Boolean);
+                if (amenityList.length > 0) {
+                    schema.amenityFeature = amenityList.map(a => ({
+                        "@type": "LocationFeatureSpecification",
+                        name: a,
+                        value: true
+                    }));
+                }
+            }
+
+            // Bild
+            if (imageUrl) {
+                schema.image = { "@type": "ImageObject", url: imageUrl };
+            }
+
+            // Maps
+            if (mapUrl) schema.hasMap = mapUrl;
+
+            // Mitgliedschaft / Buchung
+            if (membershipUrl) {
+                schema.potentialAction = {
+                    "@type": "JoinAction",
+                    target: membershipUrl,
+                    name: "Mitglied werden / Termin buchen"
+                };
+            }
+
+            // Events URL (für Arenen)
+            if (eventsUrl) {
+                schema.subjectOf = { "@type": "EventSeries", url: eventsUrl };
+            }
+
+            // Gründungsjahr
+            if (foundingYear) schema.foundingDate = foundingYear;
+
+            // Kapazität
+            if (capacity) {
+                schema.maximumAttendeeCapacity = parseInt(capacity);
+            }
+
+            // Bewertung
+            if (ratingValue && ratingCount) {
+                schema.aggregateRating = {
+                    "@type": "AggregateRating",
+                    ratingValue: parseFloat(ratingValue),
+                    reviewCount: parseInt(ratingCount),
+                    bestRating: parseInt(ratingMax),
+                    worstRating: 1
+                };
+            }
+
+            const fullOutput = `<script type="application/ld+json">\n${JSON.stringify(schema, null, 2)}\n<\/script>`;
+            document.getElementById('jsonOutput').value = fullOutput;
+            document.getElementById('validationHint').classList.remove('hidden');
+            document.getElementById('jsonOutput').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+
+        function copyCode() {
+            const output = document.getElementById('jsonOutput').value;
+            if (!output.trim()) { alert('Bitte zuerst JSON-LD generieren.'); return; }
+            navigator.clipboard.writeText(output).then(() => {
+                const btn = document.getElementById('copyBtn');
+                btn.textContent = '✓ Kopiert!';
+                btn.classList.add('bg-emerald-600/40');
+                setTimeout(() => {
+                    btn.innerHTML = '<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg> Kopieren';
+                    btn.classList.remove('bg-emerald-600/40');
+                }, 2000);
+            });
+        }
+
+        function downloadCode() {
+            const output = document.getElementById('jsonOutput').value;
+            if (!output.trim()) { alert('Bitte zuerst JSON-LD generieren.'); return; }
+            const blob = new Blob([output], { type: 'text/html' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'sportsactivitylocation-schema.html';
+            a.click();
+            URL.revokeObjectURL(url);
+        }
+
+        // ── Init ─────────────────────────────────────────────────────────────────────
+        renderTypeCards();
+        addHoursRow(['Mo','Tu','We','Th','Fr'], '09:00', '21:00');
+        addHoursRow(['Sa'], '09:00', '17:00');
+
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
