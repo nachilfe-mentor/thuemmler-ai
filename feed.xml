@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Sat, 25 Apr 2026 02:37:52 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 25 Apr 2026 04:14:12 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>SEO-Fehler bei deutschen Physiotherapeuten: Auswertung von 93 Praxis-Websites</title>
+      <link>https://shift07.ai/blog/seo-fehler-physiotherapeuten-deutsche-praxen.html</link>
+      <guid>https://shift07.ai/blog/seo-fehler-physiotherapeuten-deutsche-praxen.html</guid>
+      <pubDate>Sat, 25 Apr 2026 04:13:50 +0000</pubDate>
+      <description>Wir haben 93 Physiotherapie-Praxis-Websites in Deutschland analysiert. Ergebnis: 72% haben kein Schema Markup, 67% kämpfen mit Title-Tag-Problemen, 58% fehlt eine optimierte Meta-Description. Die vollständige Auswertung.</description>
+      <category>Datenanalyse</category>
+    </item>
     <item>
       <title>ProfessionalService Schema Markup: Unternehmensberater, Architekten und Dienstleister für Google</title>
       <link>https://shift07.ai/blog/professionalservice-schema-markup.html</link>
@@ -157,14 +165,6 @@
       <guid>https://shift07.ai/blog/postaladdress-schema-markup-seo.html</guid>
       <pubDate>Tue, 21 Apr 2026 06:26:15 +0000</pubDate>
       <description>PostalAddress Schema Markup richtig einsetzen: So bindest du Adressdaten als JSON-LD ein, verbesserst dein LocalBusiness-Schema und stärkst dein lokales SEO. Mit Beispielen und Checkliste.</description>
-      <category>Schema Markup</category>
-    </item>
-    <item>
-      <title>GeoShape Schema Markup: Servicegebiete geografisch definieren</title>
-      <link>https://shift07.ai/blog/geoshape-schema-markup-seo.html</link>
-      <guid>https://shift07.ai/blog/geoshape-schema-markup-seo.html</guid>
-      <pubDate>Tue, 21 Apr 2026 04:47:40 +0000</pubDate>
-      <description>GeoShape Schema Markup erklärt: So definierst du Servicegebiete als Polygon, Kreis oder Box für Google – mit JSON-LD-Beispielen für lokale Unternehmen 2026.</description>
       <category>Schema Markup</category>
     </item>
   </channel>
