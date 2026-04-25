@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Sat, 25 Apr 2026 04:17:14 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 25 Apr 2026 04:20:02 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>AccountingService Schema Markup: Steuerberater für Google optimieren</title>
+      <link>https://shift07.ai/blog/accountingservice-schema-markup.html</link>
+      <guid>https://shift07.ai/blog/accountingservice-schema-markup.html</guid>
+      <pubDate>Sat, 25 Apr 2026 04:19:39 +0000</pubDate>
+      <description>AccountingService Schema Markup richtig implementieren: JSON-LD für Steuerberater, Wirtschaftsprüfer und Buchhalter. Mit konkreten Beispielen für hasOfferCatalog, areaServed und Bewertungen.</description>
+      <category>Schema Markup</category>
+    </item>
     <item>
       <title>SEO-Fehler bei deutschen Physiotherapeuten: Auswertung von 93 Praxis-Websites</title>
       <link>https://shift07.ai/blog/seo-fehler-physiotherapeuten-deutsche-praxen.html</link>
@@ -157,14 +165,6 @@
       <guid>https://shift07.ai/blog/imageobject-schema-markup-seo.html</guid>
       <pubDate>Tue, 21 Apr 2026 06:29:42 +0000</pubDate>
       <description>ImageObject Schema Markup richtig einsetzen: So machst du Bilder für Google Rich Results sichtbar, verbesserst Google Discover-Traffic und optimierst dein E-E-A-T. Mit JSON-LD-Beispielen.</description>
-      <category>Schema Markup</category>
-    </item>
-    <item>
-      <title>PostalAddress Schema Markup: Adressdaten für Google strukturiert einbinden</title>
-      <link>https://shift07.ai/blog/postaladdress-schema-markup-seo.html</link>
-      <guid>https://shift07.ai/blog/postaladdress-schema-markup-seo.html</guid>
-      <pubDate>Tue, 21 Apr 2026 06:26:15 +0000</pubDate>
-      <description>PostalAddress Schema Markup richtig einsetzen: So bindest du Adressdaten als JSON-LD ein, verbesserst dein LocalBusiness-Schema und stärkst dein lokales SEO. Mit Beispielen und Checkliste.</description>
       <category>Schema Markup</category>
     </item>
   </channel>
