@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Sat, 25 Apr 2026 02:34:08 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 25 Apr 2026 02:37:52 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>ProfessionalService Schema Markup: Unternehmensberater, Architekten und Dienstleister für Google</title>
+      <link>https://shift07.ai/blog/professionalservice-schema-markup.html</link>
+      <guid>https://shift07.ai/blog/professionalservice-schema-markup.html</guid>
+      <pubDate>Sat, 25 Apr 2026 02:37:28 +0000</pubDate>
+      <description>ProfessionalService Schema Markup vollständig erklärt: JSON-LD für Unternehmensberater, Architekten, Steuerberater und Dienstleister. Alle Properties, Praxisbeispiele und Fehler vermeiden 2026.</description>
+      <category>Schema Markup</category>
+    </item>
     <item>
       <title>SportsActivityLocation Schema Markup vertieft: GolfCourse, StadiumOrArena &amp; alle Sub-Typen</title>
       <link>https://shift07.ai/blog/sportsactivitylocation-schema-markup-vertieft.html</link>
@@ -157,14 +165,6 @@
       <guid>https://shift07.ai/blog/geoshape-schema-markup-seo.html</guid>
       <pubDate>Tue, 21 Apr 2026 04:47:40 +0000</pubDate>
       <description>GeoShape Schema Markup erklärt: So definierst du Servicegebiete als Polygon, Kreis oder Box für Google – mit JSON-LD-Beispielen für lokale Unternehmen 2026.</description>
-      <category>Schema Markup</category>
-    </item>
-    <item>
-      <title>OfferCatalog Schema Markup: Leistungsverzeichnis für Google strukturieren</title>
-      <link>https://shift07.ai/blog/offercatalog-schema-markup-seo.html</link>
-      <guid>https://shift07.ai/blog/offercatalog-schema-markup-seo.html</guid>
-      <pubDate>Tue, 21 Apr 2026 02:26:59 +0000</pubDate>
-      <description>OfferCatalog Schema Markup erklärt: So bindest du dein Dienstleistungs- und Produktverzeichnis als strukturierte Daten ein und machst es für Google und Kunden sichtbar.</description>
       <category>Schema Markup</category>
     </item>
   </channel>
