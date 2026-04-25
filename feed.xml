@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Fri, 24 Apr 2026 03:37:12 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 25 Apr 2026 00:49:57 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>RealEstateAgent Schema Markup: Immobilienmakler für Google optimieren</title>
+      <link>https://shift07.ai/blog/realestate-agent-schema-markup.html</link>
+      <guid>https://shift07.ai/blog/realestate-agent-schema-markup.html</guid>
+      <pubDate>Sat, 25 Apr 2026 00:49:26 +0000</pubDate>
+      <description>Wie du mit RealEstateAgent Schema Markup dein Immobilienbüro in Google hervorhebst – vollständiges JSON-LD-Beispiel, alle Properties, Fehlerdiagnose und Praxis-Tipps.</description>
+      <category>Schema Markup</category>
+    </item>
     <item>
       <title>AutoDealer &amp; CarRepair Schema Markup: Autohaus und KFZ-Werkstatt für Google</title>
       <link>https://shift07.ai/blog/autodealer-carrepair-schema-markup.html</link>
@@ -158,14 +166,6 @@
       <pubDate>Tue, 21 Apr 2026 00:45:46 +0000</pubDate>
       <description>ContactPoint Schema Markup erklärt: So bindest du Telefonnummern, E-Mail-Adressen und Kontaktformulare als strukturierte Daten ein und verbesserst deine Sichtbarkeit in Google.</description>
       <category>Schema Markup</category>
-    </item>
-    <item>
-      <title>Article Schema Markup: Blog-Artikel für Rich Snippets optimieren</title>
-      <link>https://shift07.ai/blog/article-schema-markup-seo.html</link>
-      <guid>https://shift07.ai/blog/article-schema-markup-seo.html</guid>
-      <pubDate>Mon, 20 Apr 2026 10:04:37 +0000</pubDate>
-      <description>Article Schema Markup richtig implementieren: NewsArticle vs. BlogPosting vs. Article - Unterschiede, vollständiges JSON-LD-Beispiel und Google-Anforderungen erklärt.</description>
-      <category>Tech-SEO</category>
     </item>
   </channel>
 </rss>
