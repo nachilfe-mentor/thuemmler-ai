@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K1S1RXBDS8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K1S1RXBDS8');
+    </script>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8475857002943858" crossorigin="anonymous"></script>
+    <title>InsuranceAgency Schema Generator – JSON-LD für Versicherungsmakler kostenlos | Shift07</title>
+    <meta name="description" content="InsuranceAgency Schema Markup kostenlos generieren: JSON-LD für Versicherungsmakler und Versicherungsagenturen für Google Rich Results. Inkl. Öffnungszeiten, Bewertungen und Serviceangebote.">
+    <meta name="keywords" content="InsuranceAgency Schema Generator, Versicherungsmakler JSON-LD, InsuranceAgency structured data, Versicherungsagentur Schema Markup, InsuranceAgency JSON-LD kostenlos">
+    <meta name="author" content="Thümmler AI GmbH">
+    <link rel="icon" type="image/png" href="/logo.png">
+    <link rel="canonical" href="https://shift07.ai/tools/insuranceagency-schema-generator.html">
+    <link rel="alternate" type="application/rss+xml" title="Shift07 Blog" href="https://shift07.ai/feed.xml">
+    <!-- Open Graph -->
+    <meta property="og:title" content="InsuranceAgency Schema Generator – JSON-LD für Versicherungsmakler kostenlos erstellen">
+    <meta property="og:description" content="JSON-LD für Versicherungsmakler und Versicherungsagenturen kostenlos generieren — mit Leistungen, Öffnungszeiten und Bewertungen.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://shift07.ai/tools/insuranceagency-schema-generator.html">
+    <meta property="og:image" content="https://shift07.ai/tools/images/insuranceagency-schema-generator.png">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="Shift07">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="InsuranceAgency Schema Generator – JSON-LD kostenlos">
+    <meta name="twitter:description" content="JSON-LD für Versicherungsmakler kostenlos generieren — mit Leistungen, Öffnungszeiten und Bewertungen.">
+    <meta name="twitter:image" content="https://shift07.ai/tools/images/insuranceagency-schema-generator.png">
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "InsuranceAgency Schema Generator",
+      "description": "InsuranceAgency Schema Markup kostenlos generieren: JSON-LD für Versicherungsmakler und Versicherungsagenturen für Google Rich Results.",
+      "url": "https://shift07.ai/tools/insuranceagency-schema-generator.html",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR"
+      },
+      "provider": {
+        "@type": "Organization",
+        "name": "Thümmler AI GmbH",
+        "url": "https://shift07.ai"
+      }
+    }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: rgba(15, 23, 42, 0.5); }
+        ::-webkit-scrollbar-thumb { background: rgba(16, 185, 129, 0.5); border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: rgba(16, 185, 129, 0.7); }
+        html { scroll-behavior: smooth; }
+        .glass { background: rgba(255,255,255,0.06); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.1); }
+        .glass-strong { background: rgba(255,255,255,0.1); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(255,255,255,0.15); }
+        .gradient-text { background: linear-gradient(135deg, #10b981, #3b82f6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .hero-gradient { background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%); }
+        .input-dark { background: rgba(15, 23, 42, 0.8); border: 1px solid rgba(255,255,255,0.15); color: #e2e8f0; }
+        .input-dark:focus { outline: none; border-color: #10b981; box-shadow: 0 0 0 3px rgba(16,185,129,0.15); }
+        .btn-primary { background: linear-gradient(135deg, #10b981, #059669); transition: all 0.2s; }
+        .btn-primary:hover { transform: translateY(-1px); box-shadow: 0 8px 25px rgba(16,185,129,0.35); }
+        .code-output { background: rgba(2, 6, 23, 0.95); border: 1px solid rgba(16,185,129,0.3); font-family: 'Fira Code', 'Courier New', monospace; font-size: 0.8rem; color: #86efac; }
+        .tag { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; font-weight: 600; }
+        .tag-new { background: rgba(16,185,129,0.2); color: #10b981; border: 1px solid rgba(16,185,129,0.3); }
+        .section-divider { height: 1px; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent); }
+        .checkbox-green:checked { accent-color: #10b981; }
+    </style>
+</head>
+<body class="hero-gradient min-h-screen text-gray-100">
+
+    <!-- Navigation -->
+    <nav class="glass sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+            <a href="/" class="flex items-center gap-2">
+                <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                <span class="font-bold text-white">Shift07</span>
+            </a>
+            <div class="hidden md:flex items-center gap-6 text-sm">
+                <a href="/" class="text-gray-400 hover:text-white transition-colors">Home</a>
+                <a href="/blog/" class="text-gray-400 hover:text-white transition-colors">Blog</a>
+                <a href="/tools/" class="text-emerald-400 font-medium">Tools</a>
+            </div>
+            <a href="/#analyse" class="btn-primary text-white text-sm font-semibold px-4 py-2 rounded-lg">
+                Kostenlose Analyse
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="max-w-4xl mx-auto px-4 pt-16 pb-10 text-center">
+        <div class="flex items-center justify-center gap-2 mb-4">
+            <span class="tag tag-new">Kostenlos</span>
+            <span class="tag tag-new">Kein Login</span>
+            <span class="tag tag-new">InsuranceAgency JSON-LD</span>
+        </div>
+        <h1 class="text-4xl md:text-5xl font-black mb-4 leading-tight">
+            <span class="gradient-text">InsuranceAgency</span><br>Schema Generator
+        </h1>
+        <p class="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto">
+            JSON-LD Schema Markup für Versicherungsmakler und Versicherungsagenturen kostenlos generieren — für Google Rich Results, lokale Suche und bessere Sichtbarkeit.
+        </p>
+    </header>
+
+    <!-- Headerbild -->
+    <div class="max-w-4xl mx-auto px-4 mb-10">
+        <img src="/tools/images/insuranceagency-schema-generator.png" alt="InsuranceAgency Schema Generator für Versicherungsmakler JSON-LD" class="w-full rounded-2xl object-cover" style="max-height:320px; object-fit:cover;">
+    </div>
+
+    <!-- AdSense Banner -->
+    <div class="max-w-4xl mx-auto px-4 mb-8 text-center">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8475857002943858" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <!-- Generator Form -->
+    <main class="max-w-4xl mx-auto px-4 pb-16">
+
+        <!-- Erklärung -->
+        <div class="glass rounded-2xl p-6 mb-8">
+            <h2 class="text-xl font-bold text-white mb-2">Was ist InsuranceAgency Schema Markup?</h2>
+            <p class="text-gray-400 text-sm leading-relaxed">
+                <code class="text-emerald-400">InsuranceAgency</code> ist ein Schema.org-Typ speziell für Versicherungsmakler und -agenturen — ein Untertyp von <code class="text-emerald-400">FinancialService</code>. Mit diesem JSON-LD-Schema kannst du Google mitteilen, welche Versicherungsprodukte du anbietest, wo du erreichbar bist und wann du geöffnet hast. Das steigert die Chancen auf Rich Results und bessere Platzierungen in der lokalen Suche.
+            </p>
+        </div>
+
+        <!-- Formular -->
+        <div class="glass rounded-2xl p-6 md:p-8 mb-8">
+            <h2 class="text-2xl font-bold text-white mb-6">Deine Versicherungsagentur</h2>
+
+            <!-- Basisdaten -->
+            <div class="mb-8">
+                <h3 class="text-lg font-semibold text-emerald-400 mb-4 flex items-center gap-2">
+                    <span class="w-7 h-7 bg-emerald-500 rounded-full flex items-center justify-center text-sm font-bold text-white">1</span>
+                    Basisdaten
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-300 mb-1">Name der Agentur *</label>
+                        <input type="text" id="agencyName" placeholder="z.B. Versicherung Müller GmbH" class="input-dark w-full rounded-lg px-3 py-2 text-sm">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-300 mb-1">Website-URL *</label>
+                        <input type="url" id="agencyUrl" placeholder="https://ihre-versicherung.de" class="input-dark w-full rounded-lg px-3 py-2 text-sm">
+                    </div>
+                    <div class="md:col-span-2">
+                        <label class="block text-sm font-medium text-gray-300 mb-1">Kurzbeschreibung</label>
+                        <textarea id="agencyDesc" placeholder="Ihr unabhängiger Versicherungsmakler in Berlin — wir finden die besten Tarife für Sie." rows="2" class="input-dark w-full rounded-lg px-3 py-2 text-sm resize-none"></textarea>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-300 mb-1">Telefon</label>
+                        <input type="text" id="agencyPhone" placeholder="+49 30 123456" class="input-dark w-full rounded-lg px-3 py-2 text-sm">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-300 mb-1">E-Mail</label>
+                        <input type="email" id="agencyEmail" placeholder="info@ihre-versicherung.de" class="input-dark w-full rounded-lg px-3 py-2 text-sm">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-300 mb-1">Preiskategorie</label>
+                        <select id="agencyPriceRange" class="input-dark w-full rounded-lg px-3 py-2 text-sm">
+                            <option value="">— keine Angabe —</option>
+                            <option value="€">€ — günstig</option>
+                            <option value="€€">€€ — mittel</option>
+                            <option value="€€€">€€€ — gehoben</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-300 mb-1">Logo-URL</label>
+                        <input type="url" id="agencyLogo" placeholder="https://ihre-versicherung.de/logo.png" class="input-dark w-full rounded-lg px-3 py-2 text-sm">
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-divider my-6"></div>
+
+            <!-- Adresse -->
+            <div class="mb-8">
+                <h3 class="text-lg font-semibold text-emerald-400 mb-4 flex items-center gap-2">
+                    <span class="w-7 h-7 bg-emerald-500 rounded-full flex items-center justify-center text-sm font-bold text-white">2</span>
+                    Adresse
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="md:col-span-2">
+                        <label class="block text-sm font-medium text-gray-300 mb-1">Straße und Hausnummer</label>
+                        <input type="text" id="addrStreet" placeholder="Musterstraße 12" class="input-dark w-full rounded-lg px-3 py-2 text-sm">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-300 mb-1">PLZ</label>
+                        <input type="text" id="addrPostal" placeholder="10115" class="input-dark w-full rounded-lg px-3 py-2 text-sm">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-300 mb-1">Stadt</label>
+                        <input type="text" id="addrCity" placeholder="Berlin" class="input-dark w-full rounded-lg px-3 py-2 text-sm">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-300 mb-1">Bundesland</label>
+                        <input type="text" id="addrRegion" placeholder="Berlin" class="input-dark w-full rounded-lg px-3 py-2 text-sm">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-300 mb-1">Land</label>
+                        <input type="text" id="addrCountry" value="DE" class="input-dark w-full rounded-lg px-3 py-2 text-sm">
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-divider my-6"></div>
+
+            <!-- Versicherungsprodukte -->
+            <div class="mb-8">
+                <h3 class="text-lg font-semibold text-emerald-400 mb-4 flex items-center gap-2">
+                    <span class="w-7 h-7 bg-emerald-500 rounded-full flex items-center justify-center text-sm font-bold text-white">3</span>
+                    Versicherungsprodukte / Leistungen
+                </h3>
+                <p class="text-gray-500 text-xs mb-4">Wähle alle Versicherungsarten, die du anbietest:</p>
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
+                    <label class="flex items-center gap-2 cursor-pointer">
+                        <input type="checkbox" class="checkbox-green service-check" value="Kfz-Versicherung">
+                        <span class="text-sm text-gray-300">Kfz-Versicherung</span>
+                    </label>
+                    <label class="flex items-center gap-2 cursor-pointer">
+                        <input type="checkbox" class="checkbox-green service-check" value="Hausratversicherung">
+                        <span class="text-sm text-gray-300">Hausratversicherung</span>
+                    </label>
+                    <label class="flex items-center gap-2 cursor-pointer">
+                        <input type="checkbox" class="checkbox-green service-check" value="Haftpflichtversicherung">
+                        <span class="text-sm text-gray-300">Haftpflichtversicherung</span>
+                    </label>
+                    <label class="flex items-center gap-2 cursor-pointer">
+                        <input type="checkbox" class="checkbox-green service-check" value="Lebensversicherung">
+                        <span class="text-sm text-gray-300">Lebensversicherung</span>
+                    </label>
+                    <label class="flex items-center gap-2 cursor-pointer">
+                        <input type="checkbox" class="checkbox-green service-check" value="Krankenversicherung">
+                        <span class="text-sm text-gray-300">Krankenversicherung</span>
+                    </label>
+                    <label class="flex items-center gap-2 cursor-pointer">
+                        <input type="checkbox" class="checkbox-green service-check" value="Berufsunfähigkeitsversicherung">
+                        <span class="text-sm text-gray-300">Berufsunfähigkeit</span>
+                    </label>
+                    <label class="flex items-center gap-2 cursor-pointer">
+                        <input type="checkbox" class="checkbox-green service-check" value="Rechtsschutzversicherung">
+                        <span class="text-sm text-gray-300">Rechtsschutz</span>
+                    </label>
+                    <label class="flex items-center gap-2 cursor-pointer">
+                        <input type="checkbox" class="checkbox-green service-check" value="Reiseversicherung">
+                        <span class="text-sm text-gray-300">Reiseversicherung</span>
+                    </label>
+                    <label class="flex items-center gap-2 cursor-pointer">
+                        <input type="checkbox" class="checkbox-green service-check" value="Gebäudeversicherung">
+                        <span class="text-sm text-gray-300">Gebäudeversicherung</span>
+                    </label>
+                    <label class="flex items-center gap-2 cursor-pointer">
+                        <input type="checkbox" class="checkbox-green service-check" value="Betriebliche Altersvorsorge">
+                        <span class="text-sm text-gray-300">Betriebliche Altersvorsorge</span>
+                    </label>
+                    <label class="flex items-center gap-2 cursor-pointer">
+                        <input type="checkbox" class="checkbox-green service-check" value="Unfallversicherung">
+                        <span class="text-sm text-gray-300">Unfallversicherung</span>
+                    </label>
+                    <label class="flex items-center gap-2 cursor-pointer">
+                        <input type="checkbox" class="checkbox-green service-check" value="Pflegeversicherung">
+                        <span class="text-sm text-gray-300">Pflegeversicherung</span>
+                    </label>
+                </div>
+                <div class="mt-3">
+                    <label class="block text-sm font-medium text-gray-300 mb-1">Weitere Leistungen (kommagetrennt)</label>
+                    <input type="text" id="serviceExtra" placeholder="z.B. Tierversicherung, Cyberversicherung" class="input-dark w-full rounded-lg px-3 py-2 text-sm">
+                </div>
+            </div>
+
+            <div class="section-divider my-6"></div>
+
+            <!-- Öffnungszeiten -->
+            <div class="mb-8">
+                <h3 class="text-lg font-semibold text-emerald-400 mb-4 flex items-center gap-2">
+                    <span class="w-7 h-7 bg-emerald-500 rounded-full flex items-center justify-center text-sm font-bold text-white">4</span>
+                    Öffnungszeiten
+                </h3>
+                <div id="openingHoursContainer" class="space-y-3">
+                    <!-- Generiert via JS -->
+                </div>
+                <button onclick="addOpeningHour()" class="mt-3 text-emerald-400 text-sm hover:text-emerald-300 transition-colors">+ Weitere Öffnungszeit hinzufügen</button>
+            </div>
+
+            <div class="section-divider my-6"></div>
+
+            <!-- Bewertungen -->
+            <div class="mb-8">
+                <h3 class="text-lg font-semibold text-emerald-400 mb-4 flex items-center gap-2">
+                    <span class="w-7 h-7 bg-emerald-500 rounded-full flex items-center justify-center text-sm font-bold text-white">5</span>
+                    Bewertungen (optional)
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-300 mb-1">Durchschnittsbewertung</label>
+                        <input type="number" id="ratingValue" placeholder="4.8" min="1" max="5" step="0.1" class="input-dark w-full rounded-lg px-3 py-2 text-sm">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-300 mb-1">Anzahl Bewertungen</label>
+                        <input type="number" id="ratingCount" placeholder="127" min="1" class="input-dark w-full rounded-lg px-3 py-2 text-sm">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-300 mb-1">Beste Bewertung</label>
+                        <input type="number" id="ratingBest" value="5" min="1" max="5" class="input-dark w-full rounded-lg px-3 py-2 text-sm">
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-divider my-6"></div>
+
+            <!-- Servicegebiet -->
+            <div class="mb-8">
+                <h3 class="text-lg font-semibold text-emerald-400 mb-4 flex items-center gap-2">
+                    <span class="w-7 h-7 bg-emerald-500 rounded-full flex items-center justify-center text-sm font-bold text-white">6</span>
+                    Servicegebiet (optional)
+                </h3>
+                <div>
+                    <label class="block text-sm font-medium text-gray-300 mb-1">Städte / Regionen (kommagetrennt)</label>
+                    <input type="text" id="areaServed" placeholder="z.B. Berlin, Potsdam, Brandenburg an der Havel" class="input-dark w-full rounded-lg px-3 py-2 text-sm">
+                </div>
+            </div>
+
+            <!-- Button -->
+            <button onclick="generateSchema()" class="btn-primary w-full text-white font-bold py-4 rounded-xl text-lg">
+                JSON-LD Schema generieren →
+            </button>
+        </div>
+
+        <!-- Output -->
+        <div id="outputSection" class="hidden glass rounded-2xl p-6 md:p-8 mb-8">
+            <div class="flex items-center justify-between mb-4">
+                <h2 class="text-xl font-bold text-white">Dein JSON-LD Schema</h2>
+                <button onclick="copySchema()" class="btn-primary text-white text-sm font-semibold px-4 py-2 rounded-lg">Kopieren</button>
+            </div>
+            <pre id="schemaOutput" class="code-output rounded-xl p-4 overflow-x-auto whitespace-pre-wrap text-xs leading-relaxed"></pre>
+            <div id="copyMsg" class="hidden mt-3 text-emerald-400 text-sm font-medium">✓ In die Zwischenablage kopiert!</div>
+
+            <!-- Einbindungsanleitung -->
+            <div class="mt-6 p-4 rounded-xl" style="background:rgba(16,185,129,0.08);border:1px solid rgba(16,185,129,0.2)">
+                <h3 class="text-emerald-400 font-semibold text-sm mb-2">So bindest du das Schema ein:</h3>
+                <ol class="text-gray-400 text-xs space-y-1 list-decimal list-inside">
+                    <li>Kopiere den JSON-LD-Code (Button oben rechts)</li>
+                    <li>Füge ihn in den <code>&lt;head&gt;</code>-Bereich deiner Website ein</li>
+                    <li>Teste das Ergebnis im <a href="https://search.google.com/test/rich-results" target="_blank" rel="noopener" class="text-emerald-400 underline">Google Rich Results Test</a></li>
+                    <li>Warte 1–2 Wochen, bis Google das Schema erkennt</li>
+                </ol>
+            </div>
+        </div>
+
+        <!-- AdSense Middle -->
+        <div class="mb-8 text-center">
+            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8475857002943858" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        </div>
+
+        <!-- FAQ / Info -->
+        <div class="glass rounded-2xl p-6 md:p-8 mb-8">
+            <h2 class="text-2xl font-bold text-white mb-6">InsuranceAgency Schema — alles was du wissen musst</h2>
+
+            <div class="space-y-6 text-sm text-gray-400 leading-relaxed">
+                <div>
+                    <h3 class="text-white font-semibold mb-1">Was ist InsuranceAgency?</h3>
+                    <p><code class="text-emerald-400">InsuranceAgency</code> ist ein spezialisierter Schema.org-Typ für Versicherungsmakler und -agenturen. Er ist ein Untertyp von <code class="text-emerald-400">FinancialService</code>, der wiederum von <code class="text-emerald-400">LocalBusiness</code> abgeleitet ist. Damit bekommst du alle Eigenschaften eines lokalen Unternehmens — plus spezifische Felder für Finanzdienstleister.</p>
+                </div>
+                <div>
+                    <h3 class="text-white font-semibold mb-1">Welche Vorteile bringt das Schema?</h3>
+                    <ul class="list-disc list-inside space-y-1">
+                        <li>Bessere Sichtbarkeit im Google Local Pack</li>
+                        <li>Sternebewertungen im Suchergebnis (mit AggregateRating)</li>
+                        <li>Öffnungszeiten direkt in der Google-Suche</li>
+                        <li>Mehr Klickrate durch strukturierte Informationen</li>
+                        <li>Stärkeres Vertrauen durch klar dargestellte Kontaktdaten</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white font-semibold mb-1">Wie unterscheidet sich InsuranceAgency von FinancialService?</h3>
+                    <p><code class="text-emerald-400">FinancialService</code> ist der Oberbegriff für Finanzdienstleister allgemein (Banken, Finanzberater, Steuerberater). <code class="text-emerald-400">InsuranceAgency</code> ist der präzisere Typ für Versicherungsmakler und -agenturen — damit signalisierst du Google noch klarer, welche Art von Dienstleistung du anbietest, was zu besserer Topical Relevance führt.</p>
+                </div>
+                <div>
+                    <h3 class="text-white font-semibold mb-1">Kann ich mehrere Versicherungsarten angeben?</h3>
+                    <p>Ja — über das <code class="text-emerald-400">hasOfferCatalog</code>-Property listest du alle angebotenen Versicherungsprodukte auf. Unser Generator erstellt automatisch ein korrektes Angebot für jede ausgewählte Versicherungsart. So weiß Google genau, welche Produkte du anbietest.</p>
+                </div>
+                <div>
+                    <h3 class="text-white font-semibold mb-1">Wie überprüfe ich ob mein Schema korrekt ist?</h3>
+                    <p>Nutze den <a href="https://search.google.com/test/rich-results" target="_blank" rel="noopener" class="text-emerald-400 underline">Google Rich Results Test</a> oder den <a href="https://validator.schema.org" target="_blank" rel="noopener" class="text-emerald-400 underline">Schema.org Validator</a>. Alternativ kannst du deinen JSON-LD-Code auch mit unserem <a href="/tools/json-ld-structured-data-validator.html" class="text-emerald-400 underline">JSON-LD Validator</a> überprüfen.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Interne Verlinkung -->
+        <div class="glass rounded-2xl p-6 mb-8">
+            <h2 class="text-lg font-bold text-white mb-4">Mehr Schema-Tools für Finanzdienstleister</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                <a href="/tools/accountingservice-financialservice-schema-generator.html" class="glass p-3 rounded-xl hover:border-emerald-500 transition-colors block">
+                    <span class="text-emerald-400 font-medium text-sm">AccountingService & FinancialService Generator</span>
+                    <p class="text-gray-500 text-xs mt-1">JSON-LD für Steuerberater und Finanzberater</p>
+                </a>
+                <a href="/tools/schema-markup-generator.html" class="glass p-3 rounded-xl hover:border-emerald-500 transition-colors block">
+                    <span class="text-emerald-400 font-medium text-sm">LocalBusiness Schema Generator</span>
+                    <p class="text-gray-500 text-xs mt-1">Allgemeines Schema für lokale Unternehmen</p>
+                </a>
+                <a href="/tools/openinghours-schema-generator.html" class="glass p-3 rounded-xl hover:border-emerald-500 transition-colors block">
+                    <span class="text-emerald-400 font-medium text-sm">OpeningHours Schema Generator</span>
+                    <p class="text-gray-500 text-xs mt-1">Öffnungszeiten als JSON-LD einbinden</p>
+                </a>
+                <a href="/tools/review-schema-generator.html" class="glass p-3 rounded-xl hover:border-emerald-500 transition-colors block">
+                    <span class="text-emerald-400 font-medium text-sm">Review & Bewertungs-Schema Generator</span>
+                    <p class="text-gray-500 text-xs mt-1">AggregateRating JSON-LD für Bewertungen</p>
+                </a>
+            </div>
+            <div class="mt-4">
+                <a href="/blog/insuranceagency-schema-markup.html" class="text-emerald-400 text-sm hover:text-emerald-300 transition-colors">→ Blog: InsuranceAgency Schema Markup ausführlich erklärt</a>
+            </div>
+        </div>
+
+        <!-- AdSense Bottom -->
+        <div class="mb-8 text-center">
+            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8475857002943858" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="glass mt-auto py-8">
+        <div class="max-w-6xl mx-auto px-4 text-center text-gray-500 text-sm">
+            <p>© 2026 Thümmler AI GmbH · <a href="/impressum.html" class="hover:text-gray-300">Impressum</a> · <a href="/datenschutz.html" class="hover:text-gray-300">Datenschutz</a></p>
+        </div>
+    </footer>
+
+    <script>
+        // Öffnungszeiten initialisieren
+        const dayNames = ['Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa', 'So'];
+        const daySchemaNames = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+        let openingHoursRows = [];
+
+        function initOpeningHours() {
+            const container = document.getElementById('openingHoursContainer');
+            // Standardzeiten: Mo-Fr 09:00-18:00
+            const defaultRows = [
+                { days: ['Mo', 'Di', 'Mi', 'Do', 'Fr'], open: '09:00', close: '18:00' },
+                { days: ['Sa'], open: '10:00', close: '14:00' }
+            ];
+            defaultRows.forEach(row => addOpeningHourRow(row));
+        }
+
+        function addOpeningHourRow(defaults = null) {
+            const container = document.getElementById('openingHoursContainer');
+            const id = Date.now() + Math.random();
+            openingHoursRows.push(id);
+
+            const div = document.createElement('div');
+            div.id = 'oh-' + id;
+            div.className = 'grid grid-cols-12 gap-2 items-center p-3 rounded-xl bg-white/5';
+
+            const selectedDays = defaults ? defaults.days : [];
+            const daysHtml = dayNames.map((d, i) => `
+                <label class="flex items-center gap-1 cursor-pointer">
+                    <input type="checkbox" class="checkbox-green day-check-${id}" value="${daySchemaNames[i]}" ${selectedDays.includes(d) ? 'checked' : ''}>
+                    <span class="text-xs text-gray-400">${d}</span>
+                </label>
+            `).join('');
+
+            div.innerHTML = `
+                <div class="col-span-7 flex flex-wrap gap-2">
+                    ${daysHtml}
+                </div>
+                <div class="col-span-2">
+                    <input type="time" class="oh-open-${id} input-dark w-full rounded px-2 py-1 text-xs" value="${defaults ? defaults.open : '09:00'}">
+                </div>
+                <div class="col-span-2">
+                    <input type="time" class="oh-close-${id} input-dark w-full rounded px-2 py-1 text-xs" value="${defaults ? defaults.close : '18:00'}">
+                </div>
+                <div class="col-span-1 text-right">
+                    <button onclick="removeOhRow('${id}')" class="text-red-400 hover:text-red-300 text-sm">✕</button>
+                </div>
+            `;
+            container.appendChild(div);
+        }
+
+        function addOpeningHour() { addOpeningHourRow(); }
+
+        function removeOhRow(id) {
+            const el = document.getElementById('oh-' + id);
+            if (el) el.remove();
+            openingHoursRows = openingHoursRows.filter(r => r != id);
+        }
+
+        function getOpeningHoursSpecs() {
+            const specs = [];
+            document.querySelectorAll('[id^="oh-"]').forEach(row => {
+                const id = row.id.replace('oh-', '');
+                const checkedDays = [...row.querySelectorAll(`input[type="checkbox"]:checked`)].map(cb => cb.value);
+                if (checkedDays.length === 0) return;
+                const opens = row.querySelector(`input[type="time"]:nth-of-type(1)`)?.value || '09:00';
+                const closes = row.querySelector(`input[type="time"]:nth-of-type(2)`)?.value || '18:00';
+                specs.push({ dayOfWeek: checkedDays, opens, closes });
+            });
+            return specs;
+        }
+
+        function getCheckedServices() {
+            const checked = [...document.querySelectorAll('.service-check:checked')].map(cb => cb.value);
+            const extra = document.getElementById('serviceExtra').value.trim();
+            if (extra) extra.split(',').forEach(s => { const t = s.trim(); if (t) checked.push(t); });
+            return checked;
+        }
+
+        function generateSchema() {
+            const name = document.getElementById('agencyName').value.trim();
+            const url = document.getElementById('agencyUrl').value.trim();
+            const desc = document.getElementById('agencyDesc').value.trim();
+            const phone = document.getElementById('agencyPhone').value.trim();
+            const email = document.getElementById('agencyEmail').value.trim();
+            const priceRange = document.getElementById('agencyPriceRange').value;
+            const logo = document.getElementById('agencyLogo').value.trim();
+            const street = document.getElementById('addrStreet').value.trim();
+            const postal = document.getElementById('addrPostal').value.trim();
+            const city = document.getElementById('addrCity').value.trim();
+            const region = document.getElementById('addrRegion').value.trim();
+            const country = document.getElementById('addrCountry').value.trim() || 'DE';
+            const ratingValue = document.getElementById('ratingValue').value.trim();
+            const ratingCount = document.getElementById('ratingCount').value.trim();
+            const ratingBest = document.getElementById('ratingBest').value.trim();
+            const areaServed = document.getElementById('areaServed').value.trim();
+
+            if (!name || !url) {
+                alert('Bitte mindestens Name und URL eingeben.');
+                return;
+            }
+
+            const schema = {
+                "@context": "https://schema.org",
+                "@type": "InsuranceAgency",
+                "name": name,
+                "url": url
+            };
+
+            if (desc) schema.description = desc;
+            if (logo) schema.logo = logo;
+            if (phone) schema.telephone = phone;
+            if (email) schema.email = email;
+            if (priceRange) schema.priceRange = priceRange;
+
+            // Adresse
+            if (street || postal || city) {
+                schema.address = { "@type": "PostalAddress" };
+                if (street) schema.address.streetAddress = street;
+                if (postal) schema.address.postalCode = postal;
+                if (city) schema.address.addressLocality = city;
+                if (region) schema.address.addressRegion = region;
+                schema.address.addressCountry = country;
+            }
+
+            // Servicegebiet
+            if (areaServed) {
+                const areas = areaServed.split(',').map(s => s.trim()).filter(Boolean);
+                schema.areaServed = areas.length === 1 ? areas[0] : areas;
+            }
+
+            // Leistungen
+            const services = getCheckedServices();
+            if (services.length > 0) {
+                schema.hasOfferCatalog = {
+                    "@type": "OfferCatalog",
+                    "name": "Versicherungsangebote",
+                    "itemListElement": services.map(s => ({
+                        "@type": "Offer",
+                        "itemOffered": {
+                            "@type": "Service",
+                            "name": s
+                        }
+                    }))
+                };
+            }
+
+            // Öffnungszeiten
+            const ohSpecs = getOpeningHoursSpecs();
+            if (ohSpecs.length > 0) {
+                schema.openingHoursSpecification = ohSpecs.map(spec => ({
+                    "@type": "OpeningHoursSpecification",
+                    "dayOfWeek": spec.dayOfWeek,
+                    "opens": spec.opens,
+                    "closes": spec.closes
+                }));
+            }
+
+            // Bewertungen
+            if (ratingValue && ratingCount) {
+                schema.aggregateRating = {
+                    "@type": "AggregateRating",
+                    "ratingValue": parseFloat(ratingValue),
+                    "reviewCount": parseInt(ratingCount),
+                    "bestRating": ratingBest ? parseInt(ratingBest) : 5
+                };
+            }
+
+            const output = `<script type="application/ld+json">\n${JSON.stringify(schema, null, 2)}\n<\/script>`;
+            document.getElementById('schemaOutput').textContent = output;
+            document.getElementById('outputSection').classList.remove('hidden');
+            document.getElementById('outputSection').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        function copySchema() {
+            const text = document.getElementById('schemaOutput').textContent;
+            navigator.clipboard.writeText(text).then(() => {
+                const msg = document.getElementById('copyMsg');
+                msg.classList.remove('hidden');
+                setTimeout(() => msg.classList.add('hidden'), 2500);
+            });
+        }
+
+        // Init
+        initOpeningHours();
+    </script>
+</body>
+</html>
