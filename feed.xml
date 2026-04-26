@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Sun, 26 Apr 2026 04:52:25 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 26 Apr 2026 04:55:56 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Locksmith &amp; MovingCompany Schema Markup: Schlüsseldienst und Umzugsunternehmen für Google</title>
+      <link>https://shift07.ai/blog/locksmith-movingcompany-schema-markup.html</link>
+      <guid>https://shift07.ai/blog/locksmith-movingcompany-schema-markup.html</guid>
+      <pubDate>Sun, 26 Apr 2026 04:55:28 +0000</pubDate>
+      <description>Locksmith und MovingCompany Schema Markup richtig implementieren: JSON-LD für Schlüsseldienste und Umzugsunternehmen. Mit vollständigen Code-Beispielen, Notdienst-Signalisierung und Checkliste 2026.</description>
+      <category>Schema Markup</category>
+    </item>
     <item>
       <title>HVACBusiness Schema Markup: Heizung, Klimaanlage und Lüftung für Google optimieren</title>
       <link>https://shift07.ai/blog/hvacbusiness-schema-markup.html</link>
@@ -158,14 +166,6 @@
       <pubDate>Thu, 23 Apr 2026 06:14:08 +0000</pubDate>
       <description>LegalService und GovernmentOrganization Schema Markup richtig implementieren: JSON-LD Beispiele, alle relevanten Properties, SEO-Vorteile und häufige Fehler vermeiden.</description>
       <category>SEO</category>
-    </item>
-    <item>
-      <title>MedicalWebPage und HealthTopicContent Schema Markup: Medizinische Inhalte für Google</title>
-      <link>https://shift07.ai/blog/medicalwebpage-healthtopiccontent-schema-markup.html</link>
-      <guid>https://shift07.ai/blog/medicalwebpage-healthtopiccontent-schema-markup.html</guid>
-      <pubDate>Thu, 23 Apr 2026 04:34:40 +0000</pubDate>
-      <description>MedicalWebPage und HealthTopicContent Schema Markup für Arztpraxen, Kliniken und Gesundheitsportale: JSON-LD-Beispiele, E-E-A-T stärken und in Google Health strukturiert erscheinen.</description>
-      <category>Schema Markup</category>
     </item>
   </channel>
 </rss>
