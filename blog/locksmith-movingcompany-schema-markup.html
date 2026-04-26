@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Locksmith & MovingCompany Schema Markup: Schlüsseldienst und Umzugsunternehmen für Google | Shift07 Blog</title>
+    <meta name="description" content="Locksmith und MovingCompany Schema Markup richtig implementieren: JSON-LD für Schlüsseldienste und Umzugsunternehmen. Mit vollständigen Code-Beispielen, Notdienst-Signalisierung und Checkliste 2026.">
+    <meta name="author" content="Thümmler AI GmbH">
+    <link rel="icon" type="image/png" href="/logo.png">
+    <link rel="canonical" href="https://shift07.ai/blog/locksmith-movingcompany-schema-markup.html">
+    <link rel="alternate" type="application/rss+xml" title="Shift07 Blog" href="https://shift07.ai/feed.xml">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Locksmith & MovingCompany Schema Markup: Schlüsseldienst und Umzugsunternehmen für Google | Shift07 Blog">
+    <meta property="og:description" content="Locksmith und MovingCompany Schema Markup richtig implementieren: JSON-LD für Schlüsseldienste und Umzugsunternehmen. Mit vollständigen Code-Beispielen, Notdienst-Signalisierung und Checkliste 2026.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://shift07.ai/blog/locksmith-movingcompany-schema-markup.html">
+    <meta property="og:image" content="https://shift07.ai/blog/images/locksmith-movingcompany-schema-markup.png">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="Shift07">
+    <meta property="article:published_time" content="2026-04-26T10:00:00+02:00">
+    <meta property="article:section" content="Schema Markup">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Locksmith & MovingCompany Schema Markup: Schlüsseldienst und Umzugsunternehmen für Google">
+    <meta name="twitter:description" content="Locksmith und MovingCompany Schema Markup: JSON-LD für Schlüsseldienste und Umzugsunternehmen mit Notdienst-Signalisierung und vollständigem Code-Beispiel 2026.">
+    <meta name="twitter:image" content="https://shift07.ai/blog/images/locksmith-movingcompany-schema-markup.png">
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Locksmith & MovingCompany Schema Markup: Schlüsseldienst und Umzugsunternehmen für Google",
+      "description": "Locksmith und MovingCompany Schema Markup richtig implementieren: JSON-LD für Schlüsseldienste und Umzugsunternehmen. Mit vollständigen Code-Beispielen, Notdienst-Signalisierung und Checkliste 2026.",
+      "image": "https://shift07.ai/blog/images/locksmith-movingcompany-schema-markup.png",
+      "datePublished": "2026-04-26T10:00:00+02:00",
+      "dateModified": "2026-04-26T10:00:00+02:00",
+      "author": {
+        "@type": "Organization",
+        "name": "Shift07",
+        "url": "https://shift07.ai"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Shift07",
+        "url": "https://shift07.ai",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://shift07.ai/assets/logo.png"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://shift07.ai/blog/locksmith-movingcompany-schema-markup.html"
+      }
+    }
+    </script>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K1S1RXBDS8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K1S1RXBDS8');
+    </script>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8475857002943858" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: rgba(15, 23, 42, 0.5); }
+        ::-webkit-scrollbar-thumb { background: rgba(59, 130, 246, 0.5); border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: rgba(59, 130, 246, 0.7); }
+        html { scroll-behavior: smooth; }
+        .article-content h2 { font-size: 1.5rem; font-weight: 700; color: #fff; margin-top: 2.5rem; margin-bottom: 1rem; }
+        .article-content h3 { font-size: 1.25rem; font-weight: 600; color: #e2e8f0; margin-top: 2rem; margin-bottom: 0.75rem; }
+        .article-content p { color: #cbd5e1; line-height: 1.8; margin-bottom: 1.25rem; }
+        .article-content ul, .article-content ol { color: #cbd5e1; margin-bottom: 1.25rem; padding-left: 1.5rem; }
+        .article-content li { margin-bottom: 0.5rem; line-height: 1.7; }
+        .article-content ul li { list-style-type: disc; }
+        .article-content ol li { list-style-type: decimal; }
+        .article-content a { color: #60a5fa; text-decoration: underline; text-underline-offset: 2px; }
+        .article-content a:hover { color: #93bbfc; }
+        .article-content blockquote { border-left: 4px solid #3b82f6; padding-left: 1.25rem; margin: 1.5rem 0; color: #94a3b8; font-style: italic; }
+        .article-content code { background: rgba(59, 130, 246, 0.15); color: #93c5fd; padding: 0.15rem 0.4rem; border-radius: 0.25rem; font-size: 0.9em; }
+        .article-content pre { background: rgba(15, 23, 42, 0.8); border: 1px solid rgba(255,255,255,0.1); border-radius: 0.75rem; padding: 1.25rem; overflow-x: auto; margin-bottom: 1.5rem; }
+        .article-content pre code { background: none; padding: 0; color: #e2e8f0; }
+        .article-content strong { color: #f1f5f9; }
+    </style>
+</head>
+<body class="bg-slate-900 text-white min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-slate-900/80 backdrop-blur-xl border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <a href="/" class="flex items-center gap-2">
+                    <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                    <span class="text-xl font-bold text-white">Shift07</span>
+                </a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="/" class="text-gray-300 hover:text-white transition-colors">SEO-Tool</a>
+                    <a href="/blog/" class="text-white font-medium border-b-2 border-blue-500 pb-0.5">Blog</a>
+                    <a href="/tools/" class="text-gray-300 hover:text-white transition-colors">Tools</a>
+                    <a href="/app/#/login" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-5 py-2 rounded-lg font-medium transition-all">Anmelden</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-gray-300 hover:text-white">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900/95 border-b border-white/10">
+            <div class="px-4 py-3 space-y-2">
+                <a href="/" class="block py-2 text-gray-300 hover:text-white">SEO-Tool</a>
+                <a href="/blog/" class="block py-2 text-white font-medium">Blog</a>
+                <a href="/tools/" class="block py-2 text-gray-300 hover:text-white">Tools</a>
+                <a href="/app/#/login" class="block py-2 text-blue-400 hover:text-blue-300">Anmelden</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Image -->
+    <section class="pt-16 relative">
+        <div class="h-[400px] bg-gradient-to-br from-violet-700 via-purple-700 to-fuchsia-800 relative overflow-hidden">
+            <img src="/blog/images/locksmith-movingcompany-schema-markup.png" alt="Locksmith und MovingCompany Schema Markup für Schlüsseldienst und Umzugsunternehmen" class="absolute inset-0 w-full h-full object-cover opacity-30">
+            <div class="absolute inset-0 bg-black/40"></div>
+            <div class="absolute inset-0 flex items-center justify-center">
+                <div class="text-center px-4 max-w-4xl">
+                    <span class="inline-block text-sm font-semibold px-4 py-1.5 bg-white/10 text-white/90 rounded-full mb-6">Schema Markup</span>
+                    <h1 class="text-3xl md:text-5xl font-extrabold text-white leading-tight">Locksmith &amp; MovingCompany Schema Markup: Schlüsseldienst und Umzugsunternehmen für Google</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Article Content -->
+    <section class="py-12 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col lg:flex-row gap-12">
+
+                <!-- Main Content -->
+                <article class="lg:w-2/3">
+                    <!-- Meta -->
+                    <div class="flex flex-wrap items-center gap-4 text-sm text-gray-400 mb-10 pb-6 border-b border-white/10">
+                        <div class="flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+                            Shift07 Team
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                            26. April 2026
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                            12 Min. Lesezeit
+                        </div>
+                        <span class="text-xs font-semibold px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full">Schema Markup</span>
+                    </div>
+
+                    <!-- Article Body -->
+                    <div class="article-content">
+
+                        <p>Schlüsseldienste und Umzugsunternehmen kämpfen täglich um die besten Plätze in lokalen Google-Suchergebnissen. Wer bei Suchanfragen wie „Schlüsseldienst Notöffnung Berlin" oder „Umzugsunternehmen München" oben erscheinen will, braucht mehr als nur eine optimierte Website — er braucht auch das richtige <strong>Schema Markup</strong>.</p>
+
+                        <p>Schema.org hat für beide Branchen spezialisierte Typen entwickelt: <code>Locksmith</code> für Schlüsseldienste und <code>MovingCompany</code> für Umzugsunternehmen. Beide sind direkte Untertypen von <code>HomeAndConstructionBusiness</code>, was bedeutet: Sie erben alle Properties von <code>LocalBusiness</code> und lassen sich nahtlos in dein bestehendes SEO-Konzept integrieren.</p>
+
+                        <h2>Teil 1: Locksmith Schema Markup für Schlüsseldienste</h2>
+
+                        <h3>Was ist der Schema-Typ Locksmith?</h3>
+
+                        <p><code>Locksmith</code> ist ein spezialisierter Schema.org-Typ für Schlüsseldienste, Schlossereien und Sicherheitstechnik-Anbieter. Die vollständige Typhierarchie:</p>
+
+                        <pre><code>Thing
+└── Organization
+    └── LocalBusiness
+        └── HomeAndConstructionBusiness
+            └── Locksmith</code></pre>
+
+                        <p>Für Schlüsseldienste ist Schema Markup besonders wichtig, weil sie häufig für Notfallsuchanfragen mit hoher Kaufabsicht gesucht werden. Jemand, der seinen Schlüssel verloren hat, sucht sofort und lokal — und will auf einen Blick Telefonnummer, Öffnungszeiten und Erreichbarkeit sehen.</p>
+
+                        <h3>Vollständiges Locksmith JSON-LD Beispiel</h3>
+
+                        <pre><code>&lt;script type="application/ld+json"&gt;
+{
+  "@context": "https://schema.org",
+  "@type": ["Locksmith", "LocalBusiness"],
+  "name": "Schlüsselservice Müller Berlin",
+  "description": "Ihr zuverlässiger Schlüsseldienst in Berlin – Türöffnung, Schlossaustausch und Einbruchschutz. 24/7 Notdienst.",
+  "url": "https://www.schluessel-berlin.de",
+  "telephone": "+49 30 12345678",
+  "email": "info@schluessel-berlin.de",
+  "priceRange": "€€",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Musterstraße 12",
+    "addressLocality": "Berlin",
+    "postalCode": "10115",
+    "addressCountry": "DE"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 52.5200,
+    "longitude": 13.4050
+  },
+  "areaServed": {
+    "@type": "GeoCircle",
+    "geoMidpoint": {
+      "@type": "GeoCoordinates",
+      "latitude": 52.5200,
+      "longitude": 13.4050
+    },
+    "geoRadius": "25000"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "08:00",
+      "closes": "20:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Saturday", "Sunday"],
+      "opens": "00:00",
+      "closes": "23:59"
+    }
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+49 30 12345699",
+    "contactType": "emergency",
+    "description": "24h Schlüsseldienst-Notdienst"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.7",
+    "reviewCount": "214",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Unsere Leistungen",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Türöffnung",
+          "description": "Professionelle Türöffnung ohne Beschädigung – 24/7 erreichbar"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Schlossaustausch",
+          "description": "Austausch aller gängigen Schlosssysteme – Profilzylinder, Sicherheitsschlösser"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Einbruchschutz",
+          "description": "Beratung und Installation von Sicherheitstechnik, Zusatzschlösser, Türsicherungen"
+        }
+      }
+    ]
+  },
+  "sameAs": [
+    "https://www.google.com/maps?cid=XXXXXXXX",
+    "https://www.facebook.com/schluesseldienst.berlin"
+  ]
+}
+&lt;/script&gt;</code></pre>
+
+                        <h3>Notdienst richtig signalisieren</h3>
+
+                        <p>Für Schlüsseldienste, die einen 24/7-Notdienst anbieten, ist die korrekte Darstellung der Erreichbarkeit besonders wichtig. Nutze dafür:</p>
+
+                        <ol>
+                            <li><strong>Öffnungszeiten</strong>: Trage für Samstag und Sonntag <code>opens: "00:00"</code> und <code>closes: "23:59"</code> ein — das signalisiert durchgehende Erreichbarkeit</li>
+                            <li><strong>ContactPoint</strong> mit <code>contactType: "emergency"</code> für die Notfall-Telefonnummer</li>
+                            <li><strong>description</strong>: Erwähne „24/7 Notdienst" oder „24h Schlüsseldienst" explizit im <code>description</code>-Feld</li>
+                        </ol>
+
+                        <blockquote>
+                            Tipp: Lies dazu unseren Artikel über <a href="/blog/contactpoint-schema-markup-seo.html">ContactPoint Schema Markup</a> für alle verfügbaren <code>contactType</code>-Werte.
+                        </blockquote>
+
+                        <h3>Besonderheiten für Schlüsseldienste</h3>
+
+                        <ul>
+                            <li><strong>Servicegebiet klein halten</strong>: Schlüsseldienste arbeiten meist in einem Radius von 10-30 km. Ein realistisches <code>areaServed</code> mit <code>geoRadius: "20000"</code> (20 km) ist glaubwürdiger als ein deutschlandweiter Anspruch.</li>
+                            <li><strong>Preisklasse transparent</strong>: Schlüsseldienste werden oft mit überhöhten Preisen assoziiert. Ein realistisches <code>priceRange</code> (z. B. <code>€€</code>) und echte Kundenbewertungen schaffen Vertrauen.</li>
+                            <li><strong>Behördenregistrierung</strong>: Falls du im Handwerk eingetragen bist, erwähne das in der <code>description</code>. Ein Hinweis auf Innungsmitgliedschaft stärkt das E-E-A-T-Signal.</li>
+                        </ul>
+
+                        <h2>Teil 2: MovingCompany Schema Markup für Umzugsunternehmen</h2>
+
+                        <h3>Was ist der Schema-Typ MovingCompany?</h3>
+
+                        <p><code>MovingCompany</code> ist der spezialisierte Schema.org-Typ für Umzugsunternehmen und Transportdienstleister. Die Typhierarchie ist identisch:</p>
+
+                        <pre><code>Thing
+└── Organization
+    └── LocalBusiness
+        └── HomeAndConstructionBusiness
+            └── MovingCompany</code></pre>
+
+                        <p>Umzugsunternehmen profitieren besonders von Schema Markup, weil Suchanfragen wie „Umzugsfirma München" oder „günstiger Umzug Berlin" eine sehr hohe Kaufabsicht haben. Sterne-Bewertungen und klare Angaben zum Servicegebiet sind hier entscheidend.</p>
+
+                        <h3>Vollständiges MovingCompany JSON-LD Beispiel</h3>
+
+                        <pre><code>&lt;script type="application/ld+json"&gt;
+{
+  "@context": "https://schema.org",
+  "@type": ["MovingCompany", "LocalBusiness"],
+  "name": "Umzug Express München GmbH",
+  "description": "Professionelles Umzugsunternehmen in München: Privatumzüge, Firmenumzüge, Möbelmontage und Einlagerung. Kostenlose Besichtigung auf Wunsch.",
+  "url": "https://www.umzug-express-muenchen.de",
+  "telephone": "+49 89 98765432",
+  "email": "info@umzug-express-muenchen.de",
+  "priceRange": "€€",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Umzugsweg 8",
+    "addressLocality": "München",
+    "postalCode": "80939",
+    "addressCountry": "DE"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 48.1750,
+    "longitude": 11.5800
+  },
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "München"
+    },
+    {
+      "@type": "City",
+      "name": "Augsburg"
+    },
+    {
+      "@type": "AdministrativeArea",
+      "name": "Bayern"
+    }
+  ],
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "08:00",
+      "closes": "18:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "09:00",
+      "closes": "14:00"
+    }
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "312",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Unsere Umzugsleistungen",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Privatumzug",
+          "description": "Kompletter Umzugsservice für Privathaushalte inkl. Verpackung und Möbelmontage"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Firmenumzug",
+          "description": "Büroumzüge und Firmenumzüge mit minimalem Betriebsausfall"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Möbellift",
+          "description": "Möbelliftverleih für schwere Möbel und enge Treppenhäuser"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Einlagerung",
+          "description": "Sichere Möbeleinlagerung und Zwischenlagerung"
+        }
+      }
+    ]
+  },
+  "sameAs": [
+    "https://www.google.com/maps?cid=YYYYYYYY",
+    "https://www.facebook.com/umzug.express.muenchen",
+    "https://www.trustpilot.com/review/umzug-express-muenchen.de"
+  ],
+  "foundingDate": "2010",
+  "numberOfEmployees": {
+    "@type": "QuantitativeValue",
+    "value": 25
+  }
+}
+&lt;/script&gt;</code></pre>
+
+                        <h3>Servicegebiet für Umzugsunternehmen optimal definieren</h3>
+
+                        <p>Anders als ein Schlüsseldienst, der meist nur einen kleinen Radius abdeckt, fahren Umzugsunternehmen oft quer durch Deutschland. Du kannst mehrere Servicegebiete als Array in <code>areaServed</code> angeben:</p>
+
+                        <pre><code>"areaServed": [
+  { "@type": "City", "name": "München" },
+  { "@type": "City", "name": "Augsburg" },
+  { "@type": "City", "name": "Ingolstadt" },
+  { "@type": "AdministrativeArea", "name": "Bayern" }
+]</code></pre>
+
+                        <p>Alternativ mit GeoCircle für einen Radius-basierten Ansatz:</p>
+
+                        <pre><code>"areaServed": {
+  "@type": "GeoCircle",
+  "geoMidpoint": {
+    "@type": "GeoCoordinates",
+    "latitude": 48.1351,
+    "longitude": 11.5820
+  },
+  "geoRadius": "200000"
+}</code></pre>
+
+                        <p>Weitere Details zu Servicegebieten findest du in unserem Artikel über <a href="/blog/servicearea-schema-markup-seo.html">ServiceArea Schema Markup</a> und <a href="/blog/geoshape-schema-markup-seo.html">GeoShape Schema Markup</a>.</p>
+
+                        <h3>Besonderheiten für Umzugsunternehmen</h3>
+
+                        <ul>
+                            <li><strong>Anzahl der Mitarbeiter</strong>: Das Property <code>numberOfEmployees</code> kann das Vertrauen stärken — ein Betrieb mit 20 Mitarbeitern wirkt seriöser als ein Einzelunternehmer ohne Angaben.</li>
+                            <li><strong>Bewertungen priorisieren</strong>: Umzüge sind emotionale Erlebnisse — Kunden lesen Bewertungen sehr genau. Sterne-Bewertungen aus eigenem Markup oder von Google Maps (über <code>sameAs</code>) sind entscheidend.</li>
+                            <li><strong>Fahrzeugflotte als Service</strong>: Du kannst Trucks und Möbellifte als Serviceangebote in <code>hasOfferCatalog</code> eintragen. Das gibt Google einen besseren Überblick über dein Angebot.</li>
+                            <li><strong>IHK/Handwerkskammer-Zertifizierung</strong>: Falls vorhanden, erwähne Mitgliedschaften in <code>memberOf</code>.</li>
+                        </ul>
+
+                        <h2>Gemeinsame Best Practices für Locksmith und MovingCompany</h2>
+
+                        <h3>1. Immer den spezifischsten Typ verwenden</h3>
+                        <p>Nutze das Array-Format, damit Google beide Klassifizierungen erhält:</p>
+                        <pre><code>"@type": ["Locksmith", "LocalBusiness"]
+// oder
+"@type": ["MovingCompany", "LocalBusiness"]</code></pre>
+
+                        <h3>2. Adresse exakt wie im Impressum</h3>
+                        <p>Die Adresse im Schema Markup muss identisch mit der Adresse im Impressum und in Google My Business sein. Abweichungen schaden der NAP-Konsistenz und damit dem lokalen SEO. Mehr dazu in unserem Artikel über <a href="/blog/nap-konsistenz-lokales-seo.html">NAP-Konsistenz für lokales SEO</a>.</p>
+
+                        <h3>3. Sterne-Bewertungen korrekt einbinden</h3>
+                        <p>Google zeigt <code>aggregateRating</code>-Sterne nur an, wenn die Bewertungen auf deiner eigenen Website eingebettet sind. Verlinke zusätzlich auf externe Bewertungsplattformen über <code>sameAs</code>.</p>
+
+                        <h3>4. Markup validieren</h3>
+                        <p>Nutze unseren <a href="/tools/json-ld-structured-data-validator.html">JSON-LD Structured Data Validator</a>, um sicherzustellen, dass dein Markup keine Syntaxfehler enthält. Google ignoriert fehlerhaftes Markup komplett.</p>
+
+                        <h2>Schnellgenerator: JSON-LD für Schlüsseldienst und Umzugsunternehmen</h2>
+
+                        <p>Statt das JSON-LD manuell zu schreiben, kannst du es mit unserem <a href="/tools/homeandconstruction-schema-generator.html">HomeAndConstruction Schema Generator</a> schnell und fehlerfrei erstellen. Wähle dazu den Typ „Locksmith" oder „MovingCompany" aus — und fülle die Felder aus. Das Tool generiert dir das vollständige JSON-LD zum Kopieren.</p>
+
+                        <h2>Checkliste: Locksmith Schema Markup</h2>
+
+                        <ul>
+                            <li>✅ <code>@type</code>: <code>["Locksmith", "LocalBusiness"]</code></li>
+                            <li>✅ Firmenname, URL, Telefon ausgefüllt</li>
+                            <li>✅ Vollständige Adresse (PostalAddress)</li>
+                            <li>✅ Öffnungszeiten inkl. Notdienst-Zeiten am Wochenende</li>
+                            <li>✅ ContactPoint für Notfall-Telefonnummer</li>
+                            <li>✅ GPS-Koordinaten (geo)</li>
+                            <li>✅ Servicegebiet (areaServed) — realistischer Radius</li>
+                            <li>✅ Leistungen (hasOfferCatalog): Türöffnung, Schlossaustausch, Einbruchschutz</li>
+                            <li>✅ Bewertungen (aggregateRating) wenn vorhanden</li>
+                            <li>✅ Markup validiert</li>
+                        </ul>
+
+                        <h2>Checkliste: MovingCompany Schema Markup</h2>
+
+                        <ul>
+                            <li>✅ <code>@type</code>: <code>["MovingCompany", "LocalBusiness"]</code></li>
+                            <li>✅ Firmenname, URL, Telefon ausgefüllt</li>
+                            <li>✅ Vollständige Adresse (PostalAddress)</li>
+                            <li>✅ Öffnungszeiten (ggf. Samstag extra)</li>
+                            <li>✅ GPS-Koordinaten (geo)</li>
+                            <li>✅ Servicegebiet (areaServed) — als Array für mehrere Städte möglich</li>
+                            <li>✅ Leistungen (hasOfferCatalog): Privatumzug, Firmenumzug, Möbellift, Einlagerung</li>
+                            <li>✅ Bewertungen (aggregateRating) wenn vorhanden</li>
+                            <li>✅ foundingDate und numberOfEmployees für Vertrauenssignal</li>
+                            <li>✅ Markup validiert</li>
+                        </ul>
+
+                        <h2>Fazit</h2>
+
+                        <p>Sowohl <code>Locksmith</code> als auch <code>MovingCompany</code> Schema Markup sind einfach zu implementieren und bringen spürbaren Nutzen: bessere Darstellung in lokalen Suchergebnissen, Sterne-Bewertungen, klares Servicegebiet und vertrauenswürdige Darstellung des Angebots.</p>
+
+                        <p>Beide Branchen kämpfen um hochwertige Suchanfragen mit hoher Kaufabsicht — Schema Markup ist eines der wenigen SEO-Mittel, die du direkt kontrollieren kannst und die unmittelbare Wirkung zeigen. Nutze unseren <a href="/tools/homeandconstruction-schema-generator.html">HomeAndConstruction Schema Generator</a> für eine schnelle Implementierung.</p>
+
+                        <p>Weitere verwandte Schema-Typen findest du in unseren Artikeln zu <a href="/blog/hvacbusiness-schema-markup.html">HVACBusiness Schema Markup</a>, <a href="/blog/contractor-roofer-plumber-schema-markup.html">Contractor, Roofer &amp; Plumber Schema Markup</a> und <a href="/blog/homeandconstructionbusiness-schema-markup.html">HomeAndConstructionBusiness Schema Markup</a>.</p>
+
+                    </div>
+
+                    <!-- Share / Back -->
+                    <div class="mt-12 pt-8 border-t border-white/10 flex items-center justify-between">
+                        <a href="/blog/" class="text-blue-400 hover:text-blue-300 flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+                            Zurück zum Blog
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Sidebar -->
+                <aside class="lg:w-1/3 space-y-8">
+                    <!-- CTA Box -->
+                    <div class="bg-gradient-to-br from-blue-600/20 to-indigo-600/20 border border-blue-500/30 rounded-2xl p-6 text-center">
+                        <h3 class="text-lg font-bold text-white mb-3">Kostenlose SEO-Analyse</h3>
+                        <p class="text-gray-400 text-sm mb-5">Finde heraus, wie gut deine Website für Suchmaschinen optimiert ist.</p>
+                        <a href="/" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-6 py-3 rounded-lg font-medium transition-all inline-block w-full">Jetzt testen</a>
+                    </div>
+
+                    <!-- Related Articles -->
+                    <div class="bg-slate-800/50 border border-white/10 rounded-2xl p-6">
+                        <h3 class="text-lg font-bold text-white mb-4">Weitere Artikel</h3>
+                        <div class="space-y-4">
+                            <a href="/blog/hvacbusiness-schema-markup.html" class="block group">
+                                <p class="text-sm text-gray-300 group-hover:text-blue-400 transition-colors font-medium">HVACBusiness Schema Markup: Heizung, Klimaanlage und Lüftung für Google optimieren</p>
+                                <p class="text-xs text-gray-500 mt-1">Schema Markup</p>
+                            </a>
+                            <a href="/blog/contractor-roofer-plumber-schema-markup.html" class="block group">
+                                <p class="text-sm text-gray-300 group-hover:text-blue-400 transition-colors font-medium">Contractor, Roofer & Plumber Schema Markup: Dachdecker und Sanitär für Google</p>
+                                <p class="text-xs text-gray-500 mt-1">Schema Markup</p>
+                            </a>
+                            <a href="/blog/homeandconstructionbusiness-schema-markup.html" class="block group">
+                                <p class="text-sm text-gray-300 group-hover:text-blue-400 transition-colors font-medium">HomeAndConstructionBusiness Schema Markup: Handwerker für Google optimieren</p>
+                                <p class="text-xs text-gray-500 mt-1">Schema Markup</p>
+                            </a>
+                            <a href="/blog/nap-konsistenz-lokales-seo.html" class="block group">
+                                <p class="text-sm text-gray-300 group-hover:text-blue-400 transition-colors font-medium">NAP-Konsistenz: Name, Adresse, Telefon einheitlich halten</p>
+                                <p class="text-xs text-gray-500 mt-1">Lokal-SEO</p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Tool CTA -->
+                    <div class="bg-slate-800/50 border border-white/10 rounded-2xl p-6 text-center">
+                        <h3 class="text-lg font-bold text-white mb-3">Schema Markup erstellen</h3>
+                        <p class="text-gray-400 text-sm mb-5">JSON-LD für Schlüsseldienst oder Umzugsunternehmen kostenlos generieren.</p>
+                        <a href="/tools/homeandconstruction-schema-generator.html" class="bg-slate-700 hover:bg-slate-600 text-white px-6 py-3 rounded-lg font-medium transition-all inline-block w-full">Zum Generator</a>
+                    </div>
+                </aside>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer CTA -->
+    <section class="py-16 px-4 bg-gradient-to-r from-blue-900/30 to-indigo-900/30 border-t border-b border-white/5">
+        <div class="max-w-3xl mx-auto text-center">
+            <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">Teste deine Website jetzt kostenlos</h2>
+            <p class="text-gray-400 mb-8">Erhalte eine vollständige SEO-Analyse mit konkreten Verbesserungsvorschlägen.</p>
+            <form action="/" method="get" class="flex flex-col sm:flex-row gap-3 max-w-xl mx-auto">
+                <input type="url" placeholder="https://deine-website.de" class="flex-1 bg-slate-800 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-blue-500">
+                <a href="/" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-8 py-3 rounded-lg font-medium transition-all whitespace-nowrap">Analyse starten</a>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/10 bg-slate-900/50 py-12 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="flex items-center gap-2">
+                    <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                    <span class="text-lg font-bold text-white">Shift07</span>
+                </div>
+                <div class="flex items-center space-x-6 text-sm text-gray-400">
+                    <a href="/impressum.html" class="hover:text-white transition-colors">Impressum</a>
+                    <a href="/datenschutz.html" class="hover:text-white transition-colors">Datenschutz</a>
+                    <a href="/agb.html" class="hover:text-white transition-colors">AGB</a>
+                </div>
+                <p class="text-sm text-gray-500">&copy; 2026 Thümmler AI GmbH</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
