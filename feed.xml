@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Sun, 26 Apr 2026 03:06:23 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 26 Apr 2026 03:10:01 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>HomeAndConstructionBusiness Schema Markup: Handwerker für Google optimieren</title>
+      <link>https://shift07.ai/blog/homeandconstructionbusiness-schema-markup.html</link>
+      <guid>https://shift07.ai/blog/homeandconstructionbusiness-schema-markup.html</guid>
+      <pubDate>Sun, 26 Apr 2026 03:09:34 +0000</pubDate>
+      <description>HomeAndConstructionBusiness Schema Markup für Maler, Elektriker, Dachdecker und Handwerker: JSON-LD richtig einsetzen für Google Rich Results, lokale Suche und mehr Aufträge.</description>
+      <category>SEO</category>
+    </item>
     <item>
       <title>InsuranceAgency Schema Markup: Versicherungsmakler für Google optimieren</title>
       <link>https://shift07.ai/blog/insuranceagency-schema-markup.html</link>
@@ -157,14 +165,6 @@
       <guid>https://shift07.ai/blog/webpage-untertypen-aboutpage-contactpage-faqpage.html</guid>
       <pubDate>Thu, 23 Apr 2026 02:42:16 +0000</pubDate>
       <description>So setzt du WebPage-Untertypen wie AboutPage, ContactPage, FAQPage und ItemPage als Schema Markup richtig ein – mit JSON-LD-Beispielen und Schritt-für-Schritt-Anleitung 2026.</description>
-      <category>Schema Markup</category>
-    </item>
-    <item>
-      <title>SiteNavigationElement Schema Markup: Navigation für Google strukturieren</title>
-      <link>https://shift07.ai/blog/sitenavigationelement-schema-markup-seo.html</link>
-      <guid>https://shift07.ai/blog/sitenavigationelement-schema-markup-seo.html</guid>
-      <pubDate>Thu, 23 Apr 2026 00:56:19 +0000</pubDate>
-      <description>SiteNavigationElement Schema Markup erklärt: Wie du die Hauptnavigation deiner Website mit JSON-LD für Google strukturierst und Sitelinks in den Suchergebnissen optimierst.</description>
       <category>Schema Markup</category>
     </item>
   </channel>
