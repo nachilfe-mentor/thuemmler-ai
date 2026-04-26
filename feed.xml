@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Sun, 26 Apr 2026 03:13:42 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 26 Apr 2026 04:49:06 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>HVACBusiness Schema Markup: Heizung, Klimaanlage und Lüftung für Google optimieren</title>
+      <link>https://shift07.ai/blog/hvacbusiness-schema-markup.html</link>
+      <guid>https://shift07.ai/blog/hvacbusiness-schema-markup.html</guid>
+      <pubDate>Sun, 26 Apr 2026 04:48:17 +0000</pubDate>
+      <description>HVACBusiness Schema Markup richtig implementieren: JSON-LD für Heizungsinstallateure, Klimatechniker und Lüftungsbauer. Mit vollständigem Code-Beispiel und Checkliste für 2026.</description>
+      <category>Schema Markup</category>
+    </item>
     <item>
       <title>Contractor, Roofer &amp; Plumber Schema Markup: Dachdecker und Sanitär für Google</title>
       <link>https://shift07.ai/blog/contractor-roofer-plumber-schema-markup.html</link>
@@ -157,14 +165,6 @@
       <guid>https://shift07.ai/blog/medicalwebpage-healthtopiccontent-schema-markup.html</guid>
       <pubDate>Thu, 23 Apr 2026 04:34:40 +0000</pubDate>
       <description>MedicalWebPage und HealthTopicContent Schema Markup für Arztpraxen, Kliniken und Gesundheitsportale: JSON-LD-Beispiele, E-E-A-T stärken und in Google Health strukturiert erscheinen.</description>
-      <category>Schema Markup</category>
-    </item>
-    <item>
-      <title>DataFeed und DataCatalog Schema Markup: Datensätze für Google strukturieren</title>
-      <link>https://shift07.ai/blog/datafeed-datacatalog-schema-markup-seo.html</link>
-      <guid>https://shift07.ai/blog/datafeed-datacatalog-schema-markup-seo.html</guid>
-      <pubDate>Thu, 23 Apr 2026 04:29:57 +0000</pubDate>
-      <description>DataFeed und DataCatalog Schema Markup richtig einsetzen: JSON-LD-Beispiele, Google Dataset Search optimieren und Datensätze maschinenlesbar machen. Vollständige Anleitung 2026.</description>
       <category>Schema Markup</category>
     </item>
   </channel>
