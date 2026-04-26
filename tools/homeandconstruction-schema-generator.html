@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K1S1RXBDS8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K1S1RXBDS8');
+    </script>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8475857002943858" crossorigin="anonymous"></script>
+    <title>HomeAndConstruction Schema Generator – JSON-LD für Handwerker kostenlos erstellen | Shift07</title>
+    <meta name="description" content="Kostenloser HomeAndConstructionBusiness Schema Generator: JSON-LD für Heizungsbauer, Dachdecker, Elektriker, Sanitärbetriebe und alle Handwerker erstellen. HVACBusiness, Plumber, RoofingContractor und mehr.">
+    <meta name="keywords" content="HomeAndConstructionBusiness Schema Generator, HVACBusiness JSON-LD, Handwerker Schema Markup, Dachdecker Schema, Heizung Schema, Plumber JSON-LD">
+    <meta name="author" content="Thümmler AI GmbH">
+    <link rel="icon" type="image/png" href="/logo.png">
+    <link rel="canonical" href="https://shift07.ai/tools/homeandconstruction-schema-generator.html">
+    <!-- Open Graph -->
+    <meta property="og:title" content="HomeAndConstruction Schema Generator – JSON-LD für Handwerker kostenlos erstellen">
+    <meta property="og:description" content="Kostenloser HomeAndConstructionBusiness Schema Generator: JSON-LD für Heizungsbauer, Dachdecker, Elektriker, Sanitärbetriebe und alle Handwerker erstellen.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://shift07.ai/tools/homeandconstruction-schema-generator.html">
+    <meta property="og:image" content="https://shift07.ai/tools/images/homeandconstruction-schema-generator.png">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="Shift07">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="HomeAndConstruction Schema Generator – JSON-LD für Handwerker kostenlos erstellen">
+    <meta name="twitter:description" content="Kostenloser HomeAndConstructionBusiness Schema Generator für alle Handwerksberufe. HVACBusiness, Plumber, RoofingContractor, Locksmith und mehr.">
+    <meta name="twitter:image" content="https://shift07.ai/tools/images/homeandconstruction-schema-generator.png">
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "HomeAndConstruction Schema Generator",
+      "description": "Kostenloser HomeAndConstructionBusiness Schema Generator: JSON-LD für Heizungsbauer, Dachdecker, Elektriker, Sanitärbetriebe und alle Handwerker erstellen.",
+      "url": "https://shift07.ai/tools/homeandconstruction-schema-generator.html",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR"
+      },
+      "provider": {
+        "@type": "Organization",
+        "name": "Thümmler AI GmbH",
+        "url": "https://shift07.ai"
+      }
+    }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: rgba(15, 23, 42, 0.5); }
+        ::-webkit-scrollbar-thumb { background: rgba(59, 130, 246, 0.5); border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: rgba(59, 130, 246, 0.7); }
+        html { scroll-behavior: smooth; }
+        .glass {
+            background: rgba(255, 255, 255, 0.06);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .code-block {
+            background: rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 0.5rem;
+            overflow-x: auto;
+        }
+        .input-field {
+            background: rgba(255,255,255,0.07);
+            border: 1px solid rgba(255,255,255,0.15);
+            color: white;
+            border-radius: 0.5rem;
+            padding: 0.6rem 0.85rem;
+            width: 100%;
+            font-size: 0.9rem;
+            transition: border-color 0.2s;
+        }
+        .input-field:focus { outline: none; border-color: #3b82f6; }
+        .input-field option { background: #1e293b; }
+        label { display: block; font-size: 0.8rem; color: #94a3b8; margin-bottom: 0.3rem; font-weight: 500; }
+        .section-title { font-size: 0.95rem; font-weight: 600; color: #e2e8f0; margin-bottom: 1rem; margin-top: 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.08); padding-bottom: 0.4rem; }
+        .type-pill {
+            padding: 0.35rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.78rem;
+            font-weight: 600;
+            cursor: pointer;
+            border: 1px solid rgba(255,255,255,0.15);
+            color: #94a3b8;
+            background: rgba(255,255,255,0.05);
+            transition: all 0.18s;
+        }
+        .type-pill:hover, .type-pill.active {
+            background: rgba(59,130,246,0.25);
+            border-color: #3b82f6;
+            color: #60a5fa;
+        }
+        .oh-row { display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem; }
+        .oh-row select, .oh-row input { background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.15); color: white; border-radius: 0.4rem; padding: 0.4rem 0.6rem; font-size: 0.82rem; }
+        .oh-row select option { background: #1e293b; }
+        .service-tag { display: inline-flex; align-items: center; gap: 0.3rem; padding: 0.3rem 0.65rem; background: rgba(59,130,246,0.18); border: 1px solid rgba(59,130,246,0.35); border-radius: 9999px; color: #93c5fd; font-size: 0.78rem; margin: 0.2rem; cursor: pointer; }
+        .service-tag:hover { background: rgba(239,68,68,0.2); border-color: rgba(239,68,68,0.4); color: #fca5a5; }
+    </style>
+</head>
+<body class="antialiased">
+    <div class="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
+        <!-- Navigation -->
+        <nav class="bg-black/20 backdrop-blur-md border-b border-white/10">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center h-16">
+                    <a href="/" class="flex items-center gap-2">
+                        <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                        <span class="text-xl font-bold text-white">Shift07</span>
+                    </a>
+                    <div class="hidden md:flex items-baseline space-x-4">
+                        <a href="/" class="text-white hover:text-blue-300 px-3 py-2 text-sm font-medium transition-colors">SEO-Tool</a>
+                        <a href="/blog/" class="text-white hover:text-blue-300 px-3 py-2 text-sm font-medium transition-colors">Blog</a>
+                        <a href="/tools/" class="text-blue-300 px-3 py-2 text-sm font-medium">Tools</a>
+                        <a href="/app/#/login" class="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:from-blue-600 hover:to-purple-700 transition-all">Anmelden</a>
+                    </div>
+                    <button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="md:hidden text-white">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                    </button>
+                </div>
+                <div id="mobile-menu" class="hidden md:hidden pb-4">
+                    <a href="/" class="block text-white hover:text-blue-300 px-3 py-2 text-sm font-medium">SEO-Tool</a>
+                    <a href="/blog/" class="block text-white hover:text-blue-300 px-3 py-2 text-sm font-medium">Blog</a>
+                    <a href="/tools/" class="block text-blue-300 px-3 py-2 text-sm font-medium">Tools</a>
+                    <a href="/app/#/login" class="block text-white hover:text-blue-300 px-3 py-2 text-sm font-medium">Anmelden</a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero -->
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-6 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">
+                <span class="bg-gradient-to-r from-orange-400 to-amber-400 bg-clip-text text-transparent">HomeAndConstruction Schema Generator</span>
+            </h1>
+            <p class="text-xl text-blue-200/80 max-w-2xl mx-auto">JSON-LD Schema Markup für Handwerksbetriebe kostenlos erstellen — Heizung, Dachdecker, Elektriker, Sanitär und mehr.</p>
+        </section>
+
+        <!-- Main Tool -->
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+            <div class="grid lg:grid-cols-2 gap-8">
+
+                <!-- Input Form -->
+                <div class="glass rounded-xl p-6 md:p-8">
+                    <h2 class="text-xl font-semibold text-white mb-5">Deine Angaben</h2>
+
+                    <!-- Typ-Auswahl -->
+                    <div class="mb-6">
+                        <p class="section-title">Unternehmenstyp wählen</p>
+                        <div class="flex flex-wrap gap-2" id="typePills">
+                            <button class="type-pill active" data-type="HVACBusiness">Heizung / Klima</button>
+                            <button class="type-pill" data-type="GeneralContractor">Generalunternehmer</button>
+                            <button class="type-pill" data-type="RoofingContractor">Dachdecker</button>
+                            <button class="type-pill" data-type="Plumber">Sanitär</button>
+                            <button class="type-pill" data-type="Electrician">Elektriker</button>
+                            <button class="type-pill" data-type="Locksmith">Schlüsseldienst</button>
+                            <button class="type-pill" data-type="MovingCompany">Umzugsunternehmen</button>
+                            <button class="type-pill" data-type="PaintingContractor">Maler / Lackierer</button>
+                            <button class="type-pill" data-type="FlooringContractor">Bodenleger</button>
+                            <button class="type-pill" data-type="HomeAndConstructionBusiness">Allgemeines Handwerk</button>
+                        </div>
+                    </div>
+
+                    <!-- Grunddaten -->
+                    <p class="section-title">Grunddaten</p>
+                    <div class="grid grid-cols-1 gap-4 mb-2">
+                        <div>
+                            <label>Firmenname *</label>
+                            <input class="input-field" id="name" type="text" placeholder="z.B. Heizungs- und Klimatechnik Müller GmbH" oninput="generate()">
+                        </div>
+                        <div>
+                            <label>Website-URL *</label>
+                            <input class="input-field" id="url" type="url" placeholder="https://www.ihre-firma.de" oninput="generate()">
+                        </div>
+                        <div>
+                            <label>Kurzbeschreibung</label>
+                            <input class="input-field" id="description" type="text" placeholder="z.B. Ihr Fachbetrieb für Heizung und Klimaanlagen in Berlin." oninput="generate()">
+                        </div>
+                    </div>
+
+                    <!-- Kontakt -->
+                    <p class="section-title">Kontakt</p>
+                    <div class="grid grid-cols-2 gap-4 mb-2">
+                        <div>
+                            <label>Telefon</label>
+                            <input class="input-field" id="telephone" type="tel" placeholder="+49 30 12345678" oninput="generate()">
+                        </div>
+                        <div>
+                            <label>E-Mail</label>
+                            <input class="input-field" id="email" type="email" placeholder="info@firma.de" oninput="generate()">
+                        </div>
+                    </div>
+
+                    <!-- Adresse -->
+                    <p class="section-title">Adresse</p>
+                    <div class="grid grid-cols-1 gap-3 mb-2">
+                        <div>
+                            <label>Straße & Hausnummer</label>
+                            <input class="input-field" id="street" type="text" placeholder="Musterstraße 12" oninput="generate()">
+                        </div>
+                        <div class="grid grid-cols-2 gap-3">
+                            <div>
+                                <label>PLZ</label>
+                                <input class="input-field" id="postalCode" type="text" placeholder="10115" oninput="generate()">
+                            </div>
+                            <div>
+                                <label>Ort</label>
+                                <input class="input-field" id="city" type="text" placeholder="Berlin" oninput="generate()">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Geo -->
+                    <p class="section-title">GPS-Koordinaten (optional)</p>
+                    <div class="grid grid-cols-2 gap-4 mb-2">
+                        <div>
+                            <label>Breitengrad (lat)</label>
+                            <input class="input-field" id="lat" type="number" step="0.0001" placeholder="52.5200" oninput="generate()">
+                        </div>
+                        <div>
+                            <label>Längengrad (lon)</label>
+                            <input class="input-field" id="lon" type="number" step="0.0001" placeholder="13.4050" oninput="generate()">
+                        </div>
+                    </div>
+
+                    <!-- Servicegebiet -->
+                    <p class="section-title">Servicegebiet (optional)</p>
+                    <div class="mb-2">
+                        <label>Einzugsgebiet (Radius in km)</label>
+                        <input class="input-field" id="radius" type="number" placeholder="50" oninput="generate()">
+                        <p class="text-xs text-gray-500 mt-1">Nur ausfüllen wenn GPS-Koordinaten angegeben sind. Wert in Kilometern.</p>
+                    </div>
+
+                    <!-- Öffnungszeiten -->
+                    <p class="section-title">Öffnungszeiten</p>
+                    <div id="ohContainer" class="mb-3">
+                        <div class="oh-row">
+                            <select class="oh-day" onchange="generate()">
+                                <option value="Monday">Mo</option>
+                                <option value="Tuesday">Di</option>
+                                <option value="Wednesday">Mi</option>
+                                <option value="Thursday">Do</option>
+                                <option value="Friday">Fr</option>
+                                <option value="Saturday">Sa</option>
+                                <option value="Sunday">So</option>
+                            </select>
+                            <span style="color:#94a3b8;font-size:0.8rem">–</span>
+                            <select class="oh-day-end" onchange="generate()">
+                                <option value="Monday">Mo</option>
+                                <option value="Tuesday">Di</option>
+                                <option value="Wednesday" selected>Mi</option>
+                                <option value="Thursday">Do</option>
+                                <option value="Friday" selected>Fr</option>
+                                <option value="Saturday">Sa</option>
+                                <option value="Sunday">So</option>
+                            </select>
+                            <input class="oh-open" type="time" value="08:00" onchange="generate()" style="width:90px">
+                            <span style="color:#94a3b8;font-size:0.8rem">–</span>
+                            <input class="oh-close" type="time" value="17:00" onchange="generate()" style="width:90px">
+                            <button onclick="removeOhRow(this)" style="color:#ef4444;font-size:1.1rem;margin-left:4px;background:none;border:none;cursor:pointer">×</button>
+                        </div>
+                    </div>
+                    <button onclick="addOhRow()" class="text-blue-400 text-sm hover:text-blue-300 transition-colors mb-4">+ Zeile hinzufügen</button>
+
+                    <!-- Leistungen -->
+                    <p class="section-title">Leistungen (optional)</p>
+                    <div class="flex gap-2 mb-3">
+                        <input class="input-field" id="serviceInput" type="text" placeholder="Leistung eingeben und Enter drücken" style="flex:1">
+                        <button onclick="addService()" class="bg-blue-600 hover:bg-blue-500 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors">+</button>
+                    </div>
+                    <div id="serviceTags"></div>
+                    <p class="text-xs text-gray-500 mt-1">z.B. Heizungseinbau, Klimaanlage, Wartung, Notdienst 24/7</p>
+
+                    <!-- Bewertungen -->
+                    <p class="section-title">Bewertungen (optional)</p>
+                    <div class="grid grid-cols-2 gap-4 mb-2">
+                        <div>
+                            <label>Durchschnittswert (z.B. 4.8)</label>
+                            <input class="input-field" id="ratingValue" type="number" min="1" max="5" step="0.1" placeholder="4.8" oninput="generate()">
+                        </div>
+                        <div>
+                            <label>Anzahl Bewertungen</label>
+                            <input class="input-field" id="reviewCount" type="number" placeholder="124" oninput="generate()">
+                        </div>
+                    </div>
+
+                    <!-- Extras -->
+                    <p class="section-title">Weitere Angaben (optional)</p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label>Gründungsjahr</label>
+                            <input class="input-field" id="foundingDate" type="number" placeholder="2005" oninput="generate()">
+                        </div>
+                        <div>
+                            <label>Preisklasse</label>
+                            <select class="input-field" id="priceRange" onchange="generate()">
+                                <option value="">-- keine Angabe --</option>
+                                <option value="€">€ (günstig)</option>
+                                <option value="€€">€€ (mittel)</option>
+                                <option value="€€€">€€€ (gehoben)</option>
+                            </select>
+                        </div>
+                        <div class="col-span-2">
+                            <label>Logo-URL</label>
+                            <input class="input-field" id="logo" type="url" placeholder="https://www.firma.de/logo.png" oninput="generate()">
+                        </div>
+                        <div class="col-span-2">
+                            <label>Google Maps / Social Media Links (eine URL pro Zeile)</label>
+                            <textarea class="input-field" id="sameAs" rows="3" placeholder="https://www.google.com/maps?cid=...&#10;https://www.facebook.com/..." oninput="generate()" style="resize:vertical"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Output -->
+                <div>
+                    <div class="glass rounded-xl p-6 md:p-8">
+                        <div class="flex justify-between items-center mb-6">
+                            <h2 class="text-xl font-semibold text-white">Generiertes JSON-LD</h2>
+                            <button id="copyBtn" onclick="copyOutput()" class="bg-gradient-to-r from-orange-500 to-amber-500 text-white px-5 py-2 rounded-lg text-sm font-medium hover:from-orange-600 hover:to-amber-600 transition-all flex items-center gap-2">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                                Kopieren
+                            </button>
+                        </div>
+                        <div class="code-block p-4 text-sm leading-relaxed max-h-[600px] overflow-y-auto">
+                            <pre class="text-white/80 whitespace-pre-wrap" id="output"></pre>
+                        </div>
+                    </div>
+
+                    <!-- Cross-sell -->
+                    <div class="glass rounded-xl p-6 mt-6 border-orange-500/30 border">
+                        <div class="flex items-start gap-4">
+                            <div class="bg-orange-500/20 rounded-lg p-3 flex-shrink-0">
+                                <svg class="w-6 h-6 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                            </div>
+                            <div>
+                                <h3 class="text-white font-semibold mb-1">Alle SEO-Fehler deiner Website finden</h3>
+                                <p class="text-blue-200/70 text-sm mb-3">Shift07 analysiert deine Website vollständig — fehlende Meta-Tags, Schema-Markup-Probleme, Ladezeit und mehr. Kostenlos in 30 Sekunden.</p>
+                                <a href="/" class="inline-flex items-center text-orange-400 hover:text-orange-300 text-sm font-medium transition-colors">
+                                    Jetzt kostenlos mit Shift07 prüfen
+                                    <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Validator Link -->
+                    <div class="glass rounded-xl p-5 mt-4 text-center">
+                        <p class="text-gray-400 text-sm mb-2">Markup direkt validieren:</p>
+                        <a href="/tools/json-ld-structured-data-validator.html" class="text-orange-400 hover:text-orange-300 text-sm font-medium transition-colors">JSON-LD Structured Data Validator →</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Info-Bereich -->
+            <div class="glass rounded-xl p-6 md:p-8 mt-12">
+                <h2 class="text-2xl font-bold text-white mb-6">Welchen Handwerkstyp sollte ich wählen?</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+                    <div class="bg-white/5 rounded-lg p-5">
+                        <div class="text-orange-400 font-bold text-sm mb-2 uppercase tracking-wide">HVACBusiness</div>
+                        <p class="text-gray-300 text-sm">Für Heizungsinstallateure, Klimatechniker, Lüftungsbauer und Kälteanlagentechniker. HVAC = Heating, Ventilation, Air Conditioning.</p>
+                    </div>
+                    <div class="bg-white/5 rounded-lg p-5">
+                        <div class="text-orange-400 font-bold text-sm mb-2 uppercase tracking-wide">Plumber</div>
+                        <p class="text-gray-300 text-sm">Für Sanitärbetriebe, Rohrleitungsbauer und Klempner. Beinhaltet Wasser-, Abwasser- und Gasinstallation.</p>
+                    </div>
+                    <div class="bg-white/5 rounded-lg p-5">
+                        <div class="text-orange-400 font-bold text-sm mb-2 uppercase tracking-wide">RoofingContractor</div>
+                        <p class="text-gray-300 text-sm">Für Dachdeckerbetriebe, Dachsanierungen und alle Arbeiten rund ums Dach.</p>
+                    </div>
+                    <div class="bg-white/5 rounded-lg p-5">
+                        <div class="text-orange-400 font-bold text-sm mb-2 uppercase tracking-wide">Electrician</div>
+                        <p class="text-gray-300 text-sm">Für Elektrobetriebe, Elektroinstallateure und Anbieter von Elektroinstallationen in Wohn- und Gewerbegebäuden.</p>
+                    </div>
+                    <div class="bg-white/5 rounded-lg p-5">
+                        <div class="text-orange-400 font-bold text-sm mb-2 uppercase tracking-wide">Locksmith</div>
+                        <p class="text-gray-300 text-sm">Für Schlüsseldienste, Schlossereien und Sicherheitstechnik-Anbieter. Besonders relevant für Notdienst-Signalisierung.</p>
+                    </div>
+                    <div class="bg-white/5 rounded-lg p-5">
+                        <div class="text-orange-400 font-bold text-sm mb-2 uppercase tracking-wide">GeneralContractor</div>
+                        <p class="text-gray-300 text-sm">Für Generalunternehmer und Baufirmen, die mehrere Gewerke übernehmen. Auch für Baufirmen ohne spezialisiertes Handwerk.</p>
+                    </div>
+                </div>
+                <p class="text-gray-400 text-sm mt-6">Mehr Details zu den einzelnen Typen findest du in unseren Blog-Artikeln: <a href="/blog/hvacbusiness-schema-markup.html" class="text-orange-400 hover:text-orange-300">HVACBusiness Schema Markup</a>, <a href="/blog/contractor-roofer-plumber-schema-markup.html" class="text-orange-400 hover:text-orange-300">Contractor, Roofer & Plumber Schema Markup</a> und <a href="/blog/homeandconstructionbusiness-schema-markup.html" class="text-orange-400 hover:text-orange-300">HomeAndConstructionBusiness Schema Markup</a>.</p>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-black/30 backdrop-blur-md border-t border-white/10">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <div class="text-white/60 mb-4 md:mb-0 text-sm">
+                        &copy; 2026 Thümmler AI GmbH. Alle Rechte vorbehalten.
+                    </div>
+                    <div class="flex space-x-6">
+                        <a href="/impressum.html" class="text-gray-300 hover:text-white transition-colors text-sm">Impressum</a>
+                        <a href="/datenschutz.html" class="text-gray-300 hover:text-white transition-colors text-sm">Datenschutz</a>
+                        <a href="/agb.html" class="text-gray-300 hover:text-white transition-colors text-sm">AGB</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        let selectedType = 'HVACBusiness';
+        let services = [];
+
+        // Type pill selection
+        document.querySelectorAll('.type-pill').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.type-pill').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                selectedType = this.dataset.type;
+                generate();
+            });
+        });
+
+        document.getElementById('serviceInput').addEventListener('keydown', function(e) {
+            if (e.key === 'Enter') { e.preventDefault(); addService(); }
+        });
+
+        function addService() {
+            const val = document.getElementById('serviceInput').value.trim();
+            if (!val) return;
+            services.push(val);
+            document.getElementById('serviceInput').value = '';
+            renderServiceTags();
+            generate();
+        }
+
+        function renderServiceTags() {
+            const container = document.getElementById('serviceTags');
+            container.innerHTML = services.map((s, i) =>
+                `<span class="service-tag" onclick="removeService(${i})">${s} <span style="font-size:1rem;margin-left:2px">×</span></span>`
+            ).join('');
+        }
+
+        function removeService(i) {
+            services.splice(i, 1);
+            renderServiceTags();
+            generate();
+        }
+
+        function addOhRow() {
+            const container = document.getElementById('ohContainer');
+            const row = document.createElement('div');
+            row.className = 'oh-row';
+            const days = ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'];
+            const dayLabels = ['Mo','Di','Mi','Do','Fr','Sa','So'];
+            let opts = days.map((d,i) => `<option value="${d}">${dayLabels[i]}</option>`).join('');
+            row.innerHTML = `
+                <select class="oh-day" onchange="generate()">${opts}</select>
+                <span style="color:#94a3b8;font-size:0.8rem">–</span>
+                <select class="oh-day-end" onchange="generate()">${opts.replace('<option value="Friday">Fr</option>', '<option value="Friday" selected>Fr</option>')}</select>
+                <input class="oh-open" type="time" value="08:00" onchange="generate()" style="width:90px">
+                <span style="color:#94a3b8;font-size:0.8rem">–</span>
+                <input class="oh-close" type="time" value="17:00" onchange="generate()" style="width:90px">
+                <button onclick="removeOhRow(this)" style="color:#ef4444;font-size:1.1rem;margin-left:4px;background:none;border:none;cursor:pointer">×</button>
+            `;
+            container.appendChild(row);
+        }
+
+        function removeOhRow(btn) {
+            btn.closest('.oh-row').remove();
+            generate();
+        }
+
+        function getOhRows() {
+            const rows = document.querySelectorAll('#ohContainer .oh-row');
+            const result = [];
+            rows.forEach(row => {
+                const dayStart = row.querySelector('.oh-day').value;
+                const dayEnd = row.querySelector('.oh-day-end').value;
+                const open = row.querySelector('.oh-open').value;
+                const close = row.querySelector('.oh-close').value;
+                if (!open || !close) return;
+                const orderedDays = ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'];
+                const startIdx = orderedDays.indexOf(dayStart);
+                const endIdx = orderedDays.indexOf(dayEnd);
+                const rangeDays = endIdx >= startIdx
+                    ? orderedDays.slice(startIdx, endIdx + 1)
+                    : [dayStart];
+                result.push({ days: rangeDays, opens: open, closes: close });
+            });
+            return result;
+        }
+
+        function generate() {
+            const name = document.getElementById('name').value.trim();
+            const url = document.getElementById('url').value.trim();
+            const description = document.getElementById('description').value.trim();
+            const telephone = document.getElementById('telephone').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const street = document.getElementById('street').value.trim();
+            const postalCode = document.getElementById('postalCode').value.trim();
+            const city = document.getElementById('city').value.trim();
+            const lat = document.getElementById('lat').value.trim();
+            const lon = document.getElementById('lon').value.trim();
+            const radius = document.getElementById('radius').value.trim();
+            const ratingValue = document.getElementById('ratingValue').value.trim();
+            const reviewCount = document.getElementById('reviewCount').value.trim();
+            const foundingDate = document.getElementById('foundingDate').value.trim();
+            const priceRange = document.getElementById('priceRange').value.trim();
+            const logo = document.getElementById('logo').value.trim();
+            const sameAsRaw = document.getElementById('sameAs').value.trim();
+
+            const schema = {
+                "@context": "https://schema.org",
+                "@type": [selectedType, "LocalBusiness"]
+            };
+
+            if (name) schema.name = name;
+            if (description) schema.description = description;
+            if (url) schema.url = url;
+            if (telephone) schema.telephone = telephone;
+            if (email) schema.email = email;
+            if (priceRange) schema.priceRange = priceRange;
+            if (foundingDate) schema.foundingDate = foundingDate;
+
+            // Address
+            if (street || postalCode || city) {
+                schema.address = { "@type": "PostalAddress" };
+                if (street) schema.address.streetAddress = street;
+                if (postalCode) schema.address.postalCode = postalCode;
+                if (city) schema.address.addressLocality = city;
+                schema.address.addressCountry = "DE";
+            }
+
+            // Geo
+            if (lat && lon) {
+                schema.geo = {
+                    "@type": "GeoCoordinates",
+                    "latitude": parseFloat(lat),
+                    "longitude": parseFloat(lon)
+                };
+                if (radius) {
+                    schema.areaServed = {
+                        "@type": "GeoCircle",
+                        "geoMidpoint": {
+                            "@type": "GeoCoordinates",
+                            "latitude": parseFloat(lat),
+                            "longitude": parseFloat(lon)
+                        },
+                        "geoRadius": (parseFloat(radius) * 1000).toString()
+                    };
+                }
+            }
+
+            // Opening Hours
+            const ohRows = getOhRows();
+            if (ohRows.length > 0) {
+                schema.openingHoursSpecification = ohRows.map(row => ({
+                    "@type": "OpeningHoursSpecification",
+                    "dayOfWeek": row.days.length === 1 ? row.days[0] : row.days,
+                    "opens": row.opens,
+                    "closes": row.closes
+                }));
+            }
+
+            // Aggregate Rating
+            if (ratingValue && reviewCount) {
+                schema.aggregateRating = {
+                    "@type": "AggregateRating",
+                    "ratingValue": ratingValue,
+                    "reviewCount": reviewCount,
+                    "bestRating": "5",
+                    "worstRating": "1"
+                };
+            }
+
+            // Services / Offer Catalog
+            if (services.length > 0) {
+                schema.hasOfferCatalog = {
+                    "@type": "OfferCatalog",
+                    "name": "Unsere Leistungen",
+                    "itemListElement": services.map(s => ({
+                        "@type": "Offer",
+                        "itemOffered": {
+                            "@type": "Service",
+                            "name": s
+                        }
+                    }))
+                };
+            }
+
+            // Logo
+            if (logo) {
+                schema.logo = { "@type": "ImageObject", "url": logo };
+            }
+
+            // sameAs
+            if (sameAsRaw) {
+                const links = sameAsRaw.split('\n').map(l => l.trim()).filter(l => l.startsWith('http'));
+                if (links.length > 0) schema.sameAs = links;
+            }
+
+            const wrapped = `<script type="application/ld+json">\n${JSON.stringify(schema, null, 2)}\n<\/script>`;
+            document.getElementById('output').textContent = wrapped;
+        }
+
+        function copyOutput() {
+            const text = document.getElementById('output').textContent;
+            if (!text) return;
+            navigator.clipboard.writeText(text).then(() => {
+                const btn = document.getElementById('copyBtn');
+                const orig = btn.innerHTML;
+                btn.innerHTML = '<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> Kopiert!';
+                btn.classList.remove('from-orange-500','to-amber-500');
+                btn.classList.add('from-green-500','to-emerald-500');
+                setTimeout(() => {
+                    btn.innerHTML = orig;
+                    btn.classList.remove('from-green-500','to-emerald-500');
+                    btn.classList.add('from-orange-500','to-amber-500');
+                }, 2000);
+            });
+        }
+
+        // Initial generate on load
+        generate();
+    </script>
+</body>
+</html>
