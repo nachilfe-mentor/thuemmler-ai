@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Sun, 26 Apr 2026 01:28:17 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 26 Apr 2026 01:31:37 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>InsuranceAgency Schema Markup: Versicherungsmakler für Google optimieren</title>
+      <link>https://shift07.ai/blog/insuranceagency-schema-markup.html</link>
+      <guid>https://shift07.ai/blog/insuranceagency-schema-markup.html</guid>
+      <pubDate>Sun, 26 Apr 2026 01:31:14 +0000</pubDate>
+      <description>InsuranceAgency Schema Markup richtig implementieren: JSON-LD für Versicherungsmakler und Versicherungsagenturen — mit vollständigem Beispiel, allen Properties und Validierung.</description>
+      <category>SEO</category>
+    </item>
     <item>
       <title>FinancialService Schema Markup: Finanzberater und Versicherungsmakler für Google optimieren</title>
       <link>https://shift07.ai/blog/financialservice-schema-markup.html</link>
@@ -157,14 +165,6 @@
       <guid>https://shift07.ai/blog/sitenavigationelement-schema-markup-seo.html</guid>
       <pubDate>Thu, 23 Apr 2026 00:56:19 +0000</pubDate>
       <description>SiteNavigationElement Schema Markup erklärt: Wie du die Hauptnavigation deiner Website mit JSON-LD für Google strukturierst und Sitelinks in den Suchergebnissen optimierst.</description>
-      <category>Schema Markup</category>
-    </item>
-    <item>
-      <title>CreativeWork Schema Markup: Bücher, Artikel und Kreativwerke für Google optimieren</title>
-      <link>https://shift07.ai/blog/creativework-schema-markup-seo.html</link>
-      <guid>https://shift07.ai/blog/creativework-schema-markup-seo.html</guid>
-      <pubDate>Thu, 23 Apr 2026 00:50:32 +0000</pubDate>
-      <description>Vollständige Anleitung zum CreativeWork Schema Markup – wie du Bücher, Artikel, Kurse und andere Kreativwerke mit JSON-LD für Google Rich Results optimierst.</description>
       <category>Schema Markup</category>
     </item>
   </channel>
