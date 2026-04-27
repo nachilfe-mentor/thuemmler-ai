@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Mon, 27 Apr 2026 04:13:24 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 27 Apr 2026 05:51:09 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>AutoRental &amp;amp; TaxiService Schema Markup: Mietwagen und Taxi für Google optimieren</title>
+      <link>https://shift07.ai/blog/autorental-taxiservice-schema-markup.html</link>
+      <guid>https://shift07.ai/blog/autorental-taxiservice-schema-markup.html</guid>
+      <pubDate>Mon, 27 Apr 2026 05:50:12 +0000</pubDate>
+      <description>AutoRental und TaxiService Schema Markup richtig implementieren: JSON-LD Beispiele, alle Properties und Schritt-für-Schritt-Anleitung für Mietwagenunternehmen und Taxibetriebe.</description>
+      <category>Schema Markup</category>
+    </item>
     <item>
       <title>SportingGoodsStore Schema Markup: Sportartikelgeschäft für Google optimieren</title>
       <link>https://shift07.ai/blog/sportinggoods-store-schema-markup.html</link>
@@ -157,14 +165,6 @@
       <guid>https://shift07.ai/blog/accommodation-schema-markup.html</guid>
       <pubDate>Fri, 24 Apr 2026 01:53:08 +0000</pubDate>
       <description>Accommodation Schema Markup für Hotel, Hostel, BedAndBreakfast und Pension: Vollständige JSON-LD-Anleitung mit LodgingBusiness, numberOfRooms, amenityFeature und starRating 2026.</description>
-      <category>Schema Markup</category>
-    </item>
-    <item>
-      <title>MedicalClinic &amp; Hospital Schema Markup: Arztpraxis und Krankenhaus für Google</title>
-      <link>https://shift07.ai/blog/medicalclinic-hospital-schema-markup.html</link>
-      <guid>https://shift07.ai/blog/medicalclinic-hospital-schema-markup.html</guid>
-      <pubDate>Fri, 24 Apr 2026 01:46:34 +0000</pubDate>
-      <description>MedicalClinic und Hospital Schema Markup: Vollständige JSON-LD-Anleitung für Arztpraxen, Kliniken und Krankenhäuser. Physician, medicalSpecialty und availableService richtig einsetzen 2026.</description>
       <category>Schema Markup</category>
     </item>
   </channel>
