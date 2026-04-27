@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SportingGoodsStore Schema Markup: Sportartikelgeschäft für Google optimieren | Shift07 Blog</title>
+    <meta name="description" content="So implementierst du SportingGoodsStore Schema Markup als JSON-LD für dein Sportartikelgeschäft – mit vollständiger Schritt-für-Schritt-Anleitung, Code-Beispielen und allen wichtigen Properties.">
+    <meta name="author" content="Thümmler AI GmbH">
+    <link rel="icon" type="image/png" href="/logo.png">
+    <link rel="canonical" href="https://shift07.ai/blog/sportinggoods-store-schema-markup.html">
+    <link rel="alternate" type="application/rss+xml" title="Shift07 Blog" href="https://shift07.ai/feed.xml">
+    <!-- Open Graph -->
+    <meta property="og:title" content="SportingGoodsStore Schema Markup: Sportartikelgeschäft für Google optimieren | Shift07 Blog">
+    <meta property="og:description" content="So implementierst du SportingGoodsStore Schema Markup als JSON-LD für dein Sportartikelgeschäft – mit vollständiger Schritt-für-Schritt-Anleitung, Code-Beispielen und allen wichtigen Properties.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://shift07.ai/blog/sportinggoods-store-schema-markup.html">
+    <meta property="og:image" content="https://shift07.ai/blog/images/sportinggoods-store-schema-markup.png">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="Shift07">
+    <meta property="article:published_time" content="2026-04-27T08:00:00+02:00">
+    <meta property="article:section" content="Schema Markup">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SportingGoodsStore Schema Markup: Sportartikelgeschäft für Google optimieren">
+    <meta name="twitter:description" content="So implementierst du SportingGoodsStore Schema Markup als JSON-LD für dein Sportartikelgeschäft – mit vollständiger Schritt-für-Schritt-Anleitung, Code-Beispielen und allen wichtigen Properties.">
+    <meta name="twitter:image" content="https://shift07.ai/blog/images/sportinggoods-store-schema-markup.png">
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "SportingGoodsStore Schema Markup: Sportartikelgeschäft für Google optimieren",
+      "description": "So implementierst du SportingGoodsStore Schema Markup als JSON-LD für dein Sportartikelgeschäft – mit vollständiger Schritt-für-Schritt-Anleitung, Code-Beispielen und allen wichtigen Properties.",
+      "image": "https://shift07.ai/blog/images/sportinggoods-store-schema-markup.png",
+      "datePublished": "2026-04-27T08:00:00+02:00",
+      "dateModified": "2026-04-27T08:00:00+02:00",
+      "author": {
+        "@type": "Organization",
+        "name": "Shift07",
+        "url": "https://shift07.ai"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Shift07",
+        "url": "https://shift07.ai",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://shift07.ai/assets/logo.png"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://shift07.ai/blog/sportinggoods-store-schema-markup.html"
+      }
+    }
+    </script>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K1S1RXBDS8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K1S1RXBDS8');
+    </script>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8475857002943858" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: rgba(15, 23, 42, 0.5); }
+        ::-webkit-scrollbar-thumb { background: rgba(59, 130, 246, 0.5); border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: rgba(59, 130, 246, 0.7); }
+        html { scroll-behavior: smooth; }
+        .article-content h2 { font-size: 1.5rem; font-weight: 700; color: #fff; margin-top: 2.5rem; margin-bottom: 1rem; }
+        .article-content h3 { font-size: 1.25rem; font-weight: 600; color: #e2e8f0; margin-top: 2rem; margin-bottom: 0.75rem; }
+        .article-content p { color: #cbd5e1; line-height: 1.8; margin-bottom: 1.25rem; }
+        .article-content ul, .article-content ol { color: #cbd5e1; margin-bottom: 1.25rem; padding-left: 1.5rem; }
+        .article-content li { margin-bottom: 0.5rem; line-height: 1.7; }
+        .article-content ul li { list-style-type: disc; }
+        .article-content ol li { list-style-type: decimal; }
+        .article-content a { color: #60a5fa; text-decoration: underline; text-underline-offset: 2px; }
+        .article-content a:hover { color: #93bbfc; }
+        .article-content blockquote { border-left: 4px solid #3b82f6; padding-left: 1.25rem; margin: 1.5rem 0; color: #94a3b8; font-style: italic; }
+        .article-content code { background: rgba(59, 130, 246, 0.15); color: #93c5fd; padding: 0.15rem 0.4rem; border-radius: 0.25rem; font-size: 0.9em; }
+        .article-content pre { background: rgba(15, 23, 42, 0.8); border: 1px solid rgba(255,255,255,0.1); border-radius: 0.75rem; padding: 1.25rem; overflow-x: auto; margin-bottom: 1.5rem; }
+        .article-content pre code { background: none; padding: 0; color: #e2e8f0; }
+        .article-content strong { color: #f1f5f9; }
+    </style>
+</head>
+<body class="bg-slate-900 text-white min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-slate-900/80 backdrop-blur-xl border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <a href="/" class="flex items-center gap-2">
+                    <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                    <span class="text-xl font-bold text-white">Shift07</span>
+                </a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="/" class="text-gray-300 hover:text-white transition-colors">SEO-Tool</a>
+                    <a href="/blog/" class="text-white font-medium border-b-2 border-blue-500 pb-0.5">Blog</a>
+                    <a href="/tools/" class="text-gray-300 hover:text-white transition-colors">Tools</a>
+                    <a href="/app/#/login" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-5 py-2 rounded-lg font-medium transition-all">Anmelden</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-gray-300 hover:text-white">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900/95 border-b border-white/10">
+            <div class="px-4 py-3 space-y-2">
+                <a href="/" class="block py-2 text-gray-300 hover:text-white">SEO-Tool</a>
+                <a href="/blog/" class="block py-2 text-white font-medium">Blog</a>
+                <a href="/tools/" class="block py-2 text-gray-300 hover:text-white">Tools</a>
+                <a href="/app/#/login" class="block py-2 text-blue-400 hover:text-blue-300">Anmelden</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Image -->
+    <section class="pt-16 relative">
+        <div class="h-[400px] bg-gradient-to-br from-blue-600 via-indigo-700 to-purple-800 relative overflow-hidden">
+            <img src="/blog/images/sportinggoods-store-schema-markup.png" alt="SportingGoodsStore Schema Markup für Sportartikelgeschäfte" class="absolute inset-0 w-full h-full object-cover opacity-40">
+            <div class="absolute inset-0 bg-black/40"></div>
+            <div class="absolute inset-0 flex items-center justify-center">
+                <div class="text-center px-4 max-w-4xl">
+                    <span class="inline-block text-sm font-semibold px-4 py-1.5 bg-white/10 text-white/90 rounded-full mb-6">Schema Markup</span>
+                    <h1 class="text-3xl md:text-5xl font-extrabold text-white leading-tight">SportingGoodsStore Schema Markup: Sportartikelgeschäft für Google optimieren</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Article Content -->
+    <section class="py-12 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col lg:flex-row gap-12">
+
+                <!-- Main Content -->
+                <article class="lg:w-2/3">
+                    <!-- Meta -->
+                    <div class="flex flex-wrap items-center gap-4 text-sm text-gray-400 mb-10 pb-6 border-b border-white/10">
+                        <div class="flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+                            Shift07 Team
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                            27. April 2026
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                            9 Min. Lesezeit
+                        </div>
+                        <span class="text-xs font-semibold px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full">Schema Markup</span>
+                    </div>
+
+                    <!-- Article Body -->
+                    <div class="article-content">
+
+                        <p>Sportartikelgeschäfte stehen im lokalen Wettbewerb vor einer klaren Herausforderung: Große Online-Händler dominieren die generischen Suchanfragen, während lokale Geschäfte mit ihrem Vor-Ort-Vorteil punkten können – aber nur dann, wenn Google diese Stärken auch versteht. <strong>SportingGoodsStore Schema Markup</strong> ist das strukturierte Datenvokabular, mit dem du Google exakt mitteilst: „Hier bin ich, das biete ich an, und so erreichst du mich."</p>
+
+                        <p>In diesem Artikel erfährst du, was <code>SportingGoodsStore</code> auf Schema.org bedeutet, welche Properties du unbedingt implementieren solltest, wie vollständiges JSON-LD aussieht und welche Fehler du vermeiden musst. Am Ende hast du alles, was du brauchst, um dein Sportartikelgeschäft in den lokalen Suchergebnissen sichtbarer zu machen.</p>
+
+                        <h2>Was ist SportingGoodsStore?</h2>
+
+                        <p><code>SportingGoodsStore</code> ist ein spezifischer Typ aus dem Schema.org-Vokabular und beschreibt ein Geschäft, das Sportartikel, Sportbekleidung und Sportausrüstung verkauft – von Laufschuhen über Fahrräder bis hin zu Kletterausrüstung. In der Typhierarchie ist es wie folgt eingeordnet:</p>
+
+                        <pre><code>Thing → Organization → LocalBusiness → Store → SportingGoodsStore</code></pre>
+
+                        <p>Diese Einordnung ist entscheidend: Als Untertyp von <code>Store</code> und <code>LocalBusiness</code> erbt <code>SportingGoodsStore</code> sämtliche Properties dieser übergeordneten Typen. Du kannst also alle relevanten Informationen eines lokalen Unternehmens angeben – Adresse, Öffnungszeiten, Bewertungen, Zahlungsarten und vieles mehr.</p>
+
+                        <p>Der entscheidende SEO-Vorteil: Google erkennt deinen Betrieb nicht nur als generisches Unternehmen, sondern als <em>Sportartikelgeschäft</em>. Das verbessert deine Chancen auf relevante lokale Suchanfragen wie „Sportgeschäft in der Nähe", „Fahrradladen [Stadt]" oder „Laufschuhe kaufen [Stadtname]".</p>
+
+                        <h2>Pflicht-Properties für SportingGoodsStore</h2>
+
+                        <p>Google empfiehlt für LocalBusiness-Typen (und damit auch für SportingGoodsStore) folgende Mindestangaben. Ohne diese Properties ist dein Markup zwar technisch valide, aber für Google wenig aussagekräftig:</p>
+
+                        <h3>name</h3>
+                        <p>Der offizielle Name deines Sportgeschäfts, genau wie er auch auf deinem Schild und in deinen Unterlagen steht. Keine Zusätze wie „Willkommen bei" oder Marketing-Phrasen.</p>
+
+                        <h3>address (PostalAddress)</h3>
+                        <p>Die vollständige Adresse mit <code>streetAddress</code>, <code>postalCode</code>, <code>addressLocality</code> und <code>addressCountry</code>. Diese Information ist für Local SEO unverzichtbar – Google nutzt sie, um dein Geschäft in der Google Maps-Integration zu verankern. Lerne mehr dazu in unserem Artikel über <a href="/blog/postaladdress-schema-markup-seo.html">PostalAddress Schema Markup</a>.</p>
+
+                        <h3>telephone</h3>
+                        <p>Die primäre Telefonnummer im internationalen Format (z. B. <code>+49 221 12345678</code>). Kunden, die auf mobilen Geräten suchen, können direkt anrufen – ein direkter Conversion-Faktor.</p>
+
+                        <h3>url</h3>
+                        <p>Die vollständige URL deiner Website. Nicht die Homepage, sondern die exakte URL der Seite, auf der das Markup eingebettet ist – bei einer lokalen Sportgeschäft-Startseite wäre das typischerweise die Homepage.</p>
+
+                        <h3>openingHoursSpecification</h3>
+                        <p>Öffnungszeiten sind für Sportgeschäfte besonders wichtig: Kunden suchen gezielt nach Geschäften, die gerade geöffnet haben. Nutze <code>OpeningHoursSpecification</code> mit <code>dayOfWeek</code>, <code>opens</code> und <code>closes</code>. Unsere <a href="/blog/openinghours-schema-markup-seo.html">Anleitung zu OpeningHoursSpecification</a> erklärt alle Details.</p>
+
+                        <h2>Empfohlene Properties für maximale Sichtbarkeit</h2>
+
+                        <p>Über die Pflichtangaben hinaus gibt es Properties, die deine Rich-Snippet-Chancen erheblich verbessern:</p>
+
+                        <h3>geo (GeoCoordinates)</h3>
+                        <p>Geografische Koordinaten (Breiten- und Längengrad) helfen Google, dein Geschäft präzise auf der Karte zu verorten – wichtig für Suchanfragen mit Entfernungsangaben wie „Sportgeschäft 5 km".</p>
+
+                        <h3>aggregateRating</h3>
+                        <p>Bewertungssterne in den Suchergebnissen steigern die Klickrate nachweislich um bis zu 30 %. Wenn du Kundenbewertungen auf deiner Website aggregierst, binde sie mit <code>AggregateRating</code> ein (mindestens <code>ratingValue</code> und <code>reviewCount</code>). Details dazu in unserem Artikel über <a href="/blog/aggregaterating-schema-markup-vertieft.html">AggregateRating Schema Markup</a>.</p>
+
+                        <h3>priceRange</h3>
+                        <p>Ein einfaches String-Feld mit Preisniveau-Indikatoren (z. B. <code>€€</code> oder <code>€ – €€€</code>). Kunden wählen Geschäfte oft nach Preissegment – diese Information hilft, relevante Zielgruppen anzusprechen.</p>
+
+                        <h3>image</h3>
+                        <p>Ein hochwertiges Foto deines Geschäfts oder deines Logos. Bilder erhöhen die Klickattraktivität in Knowledge Panels und Google Maps erheblich.</p>
+
+                        <h3>hasMap</h3>
+                        <p>Ein Link zu Google Maps oder einer ähnlichen Karte, die deinen Standort zeigt. Erleichtert die Wegfindung für Kunden direkt aus den Suchergebnissen.</p>
+
+                        <h3>currenciesAccepted und paymentAccepted</h3>
+                        <p>Akzeptierte Währungen und Zahlungsarten (z. B. „EUR" und „Kreditkarte, EC, Bar"). Für Kunden, die unterwegs sind und prüfen wollen, ob sie mit Karte zahlen können, ist das eine nützliche Information direkt in den Suchergebnissen.</p>
+
+                        <h3>sameAs</h3>
+                        <p>Links zu deinen Social-Media-Profilen (Instagram, Facebook) und Einträgen in Verzeichnissen (Google My Business, Yelp). Das stärkt dein digitales Profil und hilft Google, deine Entität zuverlässiger zu identifizieren.</p>
+
+                        <h2>Vollständiges JSON-LD Beispiel</h2>
+
+                        <p>Hier ist ein vollständiges, praxistaugliches Beispiel für ein Sportartikelgeschäft in Köln:</p>
+
+                        <pre><code>&lt;script type="application/ld+json"&gt;
+{
+  "@context": "https://schema.org",
+  "@type": "SportingGoodsStore",
+  "name": "Sport & More Köln",
+  "url": "https://www.sportandmore-koeln.de",
+  "telephone": "+49 221 98765432",
+  "email": "info@sportandmore-koeln.de",
+  "image": "https://www.sportandmore-koeln.de/images/store-front.jpg",
+  "logo": "https://www.sportandmore-koeln.de/images/logo.png",
+  "description": "Ihr Sportartikelgeschäft in Köln-Mitte mit über 5.000 Produkten für alle Sportarten – von Laufen über Radfahren bis Klettern.",
+  "priceRange": "€€",
+  "currenciesAccepted": "EUR",
+  "paymentAccepted": "Kreditkarte, EC-Karte, Bar",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Schildergasse 45",
+    "postalCode": "50667",
+    "addressLocality": "Köln",
+    "addressRegion": "NRW",
+    "addressCountry": "DE"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 50.9387,
+    "longitude": 6.9512
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "09:30",
+      "closes": "19:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "09:00",
+      "closes": "18:00"
+    }
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.7",
+    "reviewCount": "213",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "hasMap": "https://maps.google.com/maps?q=Sport+More+K%C3%B6ln",
+  "sameAs": [
+    "https://www.instagram.com/sportandmore_koeln",
+    "https://www.facebook.com/sportandmorekoeln"
+  ]
+}
+&lt;/script&gt;</code></pre>
+
+                        <h2>SportingGoodsStore vs. SportsActivityLocation – der Unterschied</h2>
+
+                        <p>Ein häufiger Fehler: Sportgeschäfte verwechseln <code>SportingGoodsStore</code> mit <code>SportsActivityLocation</code>. Der Unterschied ist fundamental:</p>
+
+                        <ul>
+                            <li><strong>SportingGoodsStore</strong>: Du <em>verkaufst</em> Sportartikel – ein Laden, Sportfachgeschäft oder Online-Shop mit physischem Standort.</li>
+                            <li><strong>SportsActivityLocation</strong>: Du <em>bietest</em> sportliche Aktivitäten an – Fitnessstudio, Sporthalle, Golfplatz, Kletteranlage. Mehr dazu in unserem Artikel über <a href="/blog/sportsactivitylocation-schema-markup.html">SportsActivityLocation Schema Markup</a>.</li>
+                        </ul>
+
+                        <p>Manche Betriebe sind beides: Ein Kletterladen, der auch Kurse anbietet, kann beide Typen als Array kombinieren:</p>
+
+                        <pre><code>"@type": ["SportingGoodsStore", "SportsActivityLocation"]</code></pre>
+
+                        <p>Das ist eine valide und empfehlenswerte Praxis, wenn dein Betrieb tatsächlich beide Funktionen erfüllt.</p>
+
+                        <h2>Besondere Eigenschaften für Sportgeschäfte</h2>
+
+                        <h3>Departments und Abteilungen</h3>
+                        <p>Größere Sportgeschäfte mit mehreren Abteilungen (z. B. Radsport, Outdoorausrüstung, Laufen) können die <code>department</code>-Property nutzen. Jede Abteilung wird als eigenes <code>LocalBusiness</code>-Objekt mit eigenem Typ beschrieben:</p>
+
+                        <pre><code>"department": [
+  {
+    "@type": "SportingGoodsStore",
+    "name": "Radsport",
+    "description": "Fahrräder, E-Bikes und Zubehör"
+  },
+  {
+    "@type": "SportingGoodsStore",
+    "name": "Laufen",
+    "description": "Laufschuhe, Laufkleidung und GPS-Uhren"
+  }
+]</code></pre>
+
+                        <h3>Serviceangebote mit hasOfferCatalog</h3>
+                        <p>Viele Sportgeschäfte bieten Zusatzservices an: Fahrradreparatur, Skiservice, Schlägerbesaitung. Diese lassen sich mit <code>hasOfferCatalog</code> strukturiert einbinden:</p>
+
+                        <pre><code>"hasOfferCatalog": {
+  "@type": "OfferCatalog",
+  "name": "Reparaturservices",
+  "itemListElement": [
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Fahrrad-Inspektion",
+        "description": "Vollständige Fahrradinspektion inkl. Bremsencheck"
+      }
+    }
+  ]
+}</code></pre>
+
+                        <h3>Mehrere Filialen</h3>
+                        <p>Hast du mehrere Standorte, erstelle für jeden Standort ein separates JSON-LD auf der jeweiligen Filialseite. Verknüpfe sie über die <code>parentOrganization</code>-Property mit der Haupt-Organisation, um Google die Unternehmensstruktur klar zu machen.</p>
+
+                        <h2>Sportgeschäft und Markenkooperationen</h2>
+
+                        <p>Viele Sportfachgeschäfte sind autorisierte Händler bestimmter Marken (Nike, Adidas, Salomon, etc.). Die <code>brand</code>-Property kannst du nutzen, um Hauptmarken anzugeben – wichtig für Markensuchen:</p>
+
+                        <pre><code>"brand": [
+  { "@type": "Brand", "name": "Nike" },
+  { "@type": "Brand", "name": "Adidas" },
+  { "@type": "Brand", "name": "Salomon" }
+]</code></pre>
+
+                        <p>Damit signalisierst du Google, dass dein Geschäft offizielle Produkte dieser Marken führt – relevant für Suchanfragen wie „Nike Händler in [Stadt]".</p>
+
+                        <h2>Häufige Fehler und wie du sie vermeidest</h2>
+
+                        <h3>Falscher Schema-Typ</h3>
+                        <p>Viele Sportgeschäfte setzen nur <code>LocalBusiness</code> oder gar <code>Organization</code> – und verschenken damit die branchenspezifische Stärke des präzisen Typs. Nutze immer den spezifischsten passenden Typ.</p>
+
+                        <h3>Inkonsistente NAP-Daten</h3>
+                        <p>Name, Adresse und Telefonnummer (NAP) im Schema Markup müssen exakt mit den Angaben auf deiner Website, bei Google My Business und in Branchenverzeichnissen übereinstimmen. Schon kleine Abweichungen (z. B. „Str." vs. „Straße") können das Google-Vertrauen schwächen. Lies mehr dazu in unserem Artikel über <a href="/blog/nap-konsistenz-lokales-seo.html">NAP-Konsistenz für lokales SEO</a>.</p>
+
+                        <h3>Fehlende oder erfundene Bewertungen</h3>
+                        <p>Nutze <code>aggregateRating</code> nur, wenn du tatsächlich Kundenbewertungen auf deiner eigenen Website aggregierst. Erfundene Bewertungsdaten führen zu Abstrafungen. Reviews auf Google Maps zählen hier nicht – für die ist Google My Business zuständig, nicht das Schema Markup deiner Website.</p>
+
+                        <h3>Statische Öffnungszeiten ohne Sonderregelungen</h3>
+                        <p>Viele Sportgeschäfte haben an Feiertagen oder in der Ferienzeit andere Öffnungszeiten. Nutze <code>specialOpeningHoursSpecification</code> für solche Ausnahmen – andernfalls zeigt Google veraltete Informationen an, was Kunden verärgert.</p>
+
+                        <h2>Integration in deine Google My Business Strategie</h2>
+
+                        <p>Schema Markup auf deiner Website und Google My Business (GMB) sind zwei verschiedene Kanäle, die sich gegenseitig stärken. Schema Markup beeinflusst, wie Google deine <em>Website</em> versteht; GMB beeinflusst deinen Eintrag in <em>Google Maps</em> und dem lokalen Pack. Beide sollten konsistente Informationen enthalten.</p>
+
+                        <p>Unsere Empfehlung: Nutze die <a href="/blog/google-my-business-optimieren.html">Google My Business Optimierungs-Anleitung</a> parallel zu dieser Schema-Markup-Implementierung. Die Kombination aus perfektem GMB-Profil und vollständigem Schema Markup gibt dir die beste Ausgangsbasis für lokale Rankings.</p>
+
+                        <h2>Validierung deines SportingGoodsStore Markups</h2>
+
+                        <p>Bevor du den Code veröffentlichst, teste ihn immer mit dem <a href="/tools/json-ld-structured-data-validator.html">kostenlosen JSON-LD Validator von Shift07</a>. Das Tool prüft die Syntax, meldet fehlende Pflichtfelder und zeigt, wie Google deine Daten interpretiert.</p>
+
+                        <p>Alternativ kannst du auch Googles Rich Results Test (search.google.com/test/rich-results) nutzen – beide Tools ergänzen sich gut, weil sie unterschiedliche Validierungsaspekte abdecken.</p>
+
+                        <h2>Checkliste: SportingGoodsStore Schema Markup</h2>
+
+                        <ul>
+                            <li>✅ <code>@type: "SportingGoodsStore"</code> gesetzt (nicht nur <code>LocalBusiness</code>)</li>
+                            <li>✅ <code>name</code> – Offizieller Geschäftsname</li>
+                            <li>✅ <code>address</code> – Vollständige PostalAddress</li>
+                            <li>✅ <code>telephone</code> – Im internationalen Format</li>
+                            <li>✅ <code>url</code> – URL der aktuellen Seite</li>
+                            <li>✅ <code>openingHoursSpecification</code> – Alle Wochentage, ggf. <code>specialOpeningHoursSpecification</code></li>
+                            <li>✅ <code>geo</code> – Koordinaten für präzise Verortung</li>
+                            <li>✅ <code>image</code> – Hochwertiges Foto des Geschäfts</li>
+                            <li>✅ <code>aggregateRating</code> – Wenn Bewertungen vorhanden</li>
+                            <li>✅ <code>sameAs</code> – Social-Media-Links und Verzeichniseinträge</li>
+                            <li>✅ <code>priceRange</code> – Preisniveau-Einschätzung</li>
+                            <li>✅ JSON-LD im <code>&lt;head&gt;</code> der Seite platziert</li>
+                            <li>✅ Mit JSON-LD Validator geprüft</li>
+                            <li>✅ NAP-Daten konsistent mit GMB und Website</li>
+                        </ul>
+
+                        <h2>Fazit</h2>
+
+                        <p><strong>SportingGoodsStore Schema Markup</strong> ist für lokale Sportartikelgeschäfte ein direkter Hebel zur besseren Sichtbarkeit in Google – sowohl in den organischen Ergebnissen als auch im lokalen Pack. Die Implementierung ist einmalig, die Wirkung dauerhaft: Google versteht deinen Betrieb präzise, zeigt deinen Kunden relevante Informationen direkt in den Suchergebnissen und erhöht damit deine Klickrate.</p>
+
+                        <p>Nutze unseren <a href="/tools/schema-markup-generator.html">kostenlosen Schema Markup Generator</a> um dein LocalBusiness JSON-LD schnell und fehlerfrei zu erstellen – oder prüfe dein bestehendes Markup mit dem <a href="/tools/json-ld-structured-data-validator.html">JSON-LD Validator</a>. Der nächste Schritt nach der Implementierung: Verifiziere dein Google My Business Profil und stelle sicher, dass alle Informationen konsistent sind.</p>
+
+                    </div>
+
+                    <!-- Share / Back -->
+                    <div class="mt-12 pt-8 border-t border-white/10 flex items-center justify-between">
+                        <a href="/blog/" class="text-blue-400 hover:text-blue-300 flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+                            Zurück zum Blog
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Sidebar -->
+                <aside class="lg:w-1/3 space-y-8">
+                    <!-- CTA Box -->
+                    <div class="bg-gradient-to-br from-blue-600/20 to-indigo-600/20 border border-blue-500/30 rounded-2xl p-6 text-center">
+                        <h3 class="text-lg font-bold text-white mb-3">Kostenlose SEO-Analyse</h3>
+                        <p class="text-gray-400 text-sm mb-5">Finde heraus, wie gut deine Website für Suchmaschinen optimiert ist.</p>
+                        <a href="/" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-6 py-3 rounded-lg font-medium transition-all inline-block w-full">Jetzt testen</a>
+                    </div>
+
+                    <!-- Related Articles -->
+                    <div class="bg-slate-800/50 border border-white/10 rounded-2xl p-6">
+                        <h3 class="text-lg font-bold text-white mb-4">Weitere Artikel</h3>
+                        <div class="space-y-4">
+                            <a href="/blog/sportsactivitylocation-schema-markup.html" class="block group">
+                                <p class="text-sm text-gray-300 group-hover:text-blue-400 transition-colors font-medium">SportsActivityLocation Schema Markup: Fitnessstudio &amp; Sporthalle</p>
+                                <p class="text-xs text-gray-500 mt-1">Schema Markup</p>
+                            </a>
+                            <a href="/blog/localbusiness-schema-markup-anleitung.html" class="block group">
+                                <p class="text-sm text-gray-300 group-hover:text-blue-400 transition-colors font-medium">LocalBusiness Schema Markup: Vollständige Anleitung 2026</p>
+                                <p class="text-xs text-gray-500 mt-1">Schema Markup</p>
+                            </a>
+                            <a href="/blog/strukturierte-daten-seo-schema-markup.html" class="block group">
+                                <p class="text-sm text-gray-300 group-hover:text-blue-400 transition-colors font-medium">Strukturierte Daten für SEO: Schema Markup einfach erklärt</p>
+                                <p class="text-xs text-gray-500 mt-1">Tech-SEO</p>
+                            </a>
+                            <a href="/blog/google-my-business-optimieren.html" class="block group">
+                                <p class="text-sm text-gray-300 group-hover:text-blue-400 transition-colors font-medium">Google My Business optimieren: Anleitung 2026</p>
+                                <p class="text-xs text-gray-500 mt-1">Lokal-SEO</p>
+                            </a>
+                            <a href="/blog/nap-konsistenz-lokales-seo.html" class="block group">
+                                <p class="text-sm text-gray-300 group-hover:text-blue-400 transition-colors font-medium">NAP-Konsistenz: Name, Adresse, Telefon einheitlich halten</p>
+                                <p class="text-xs text-gray-500 mt-1">Lokal-SEO</p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Tool CTA -->
+                    <div class="bg-slate-800/50 border border-white/10 rounded-2xl p-6">
+                        <h3 class="text-lg font-bold text-white mb-3">Tools</h3>
+                        <div class="space-y-3">
+                            <a href="/tools/schema-markup-generator.html" class="flex items-center gap-3 group">
+                                <div class="w-8 h-8 bg-blue-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-4 h-4 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+                                </div>
+                                <span class="text-sm text-gray-300 group-hover:text-blue-400 transition-colors">Schema Markup Generator</span>
+                            </a>
+                            <a href="/tools/json-ld-structured-data-validator.html" class="flex items-center gap-3 group">
+                                <div class="w-8 h-8 bg-blue-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-4 h-4 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                                </div>
+                                <span class="text-sm text-gray-300 group-hover:text-blue-400 transition-colors">JSON-LD Validator</span>
+                            </a>
+                        </div>
+                    </div>
+                </aside>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer CTA -->
+    <section class="py-16 px-4 bg-gradient-to-r from-blue-900/30 to-indigo-900/30 border-t border-b border-white/5">
+        <div class="max-w-3xl mx-auto text-center">
+            <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">Teste deine Website jetzt kostenlos</h2>
+            <p class="text-gray-400 mb-8">Erhalte eine vollständige SEO-Analyse mit konkreten Verbesserungsvorschlägen.</p>
+            <form action="/" method="get" class="flex flex-col sm:flex-row gap-3 max-w-xl mx-auto">
+                <input type="url" placeholder="https://deine-website.de" class="flex-1 bg-slate-800 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-blue-500">
+                <a href="/" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-8 py-3 rounded-lg font-medium transition-all whitespace-nowrap">Analyse starten</a>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/10 bg-slate-900/50 py-12 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="flex items-center gap-2">
+                    <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                    <span class="text-lg font-bold text-white">Shift07</span>
+                </div>
+                <div class="flex items-center space-x-6 text-sm text-gray-400">
+                    <a href="/impressum.html" class="hover:text-white transition-colors">Impressum</a>
+                    <a href="/datenschutz.html" class="hover:text-white transition-colors">Datenschutz</a>
+                    <a href="/agb.html" class="hover:text-white transition-colors">AGB</a>
+                </div>
+                <p class="text-sm text-gray-500">&copy; 2026 Thümmler AI GmbH</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
