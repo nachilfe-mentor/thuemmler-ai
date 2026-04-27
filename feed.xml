@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Sun, 26 Apr 2026 04:55:56 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 27 Apr 2026 00:31:41 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Electrician &amp; PaintingContractor Schema Markup: Elektriker und Maler für Google</title>
+      <link>https://shift07.ai/blog/electrician-paintingcontractor-schema-markup.html</link>
+      <guid>https://shift07.ai/blog/electrician-paintingcontractor-schema-markup.html</guid>
+      <pubDate>Mon, 27 Apr 2026 00:31:06 +0000</pubDate>
+      <description>Electrician und PaintingContractor Schema Markup richtig einsetzen: JSON-LD Beispiele für Elektriker und Malerbetriebe, Google Rich Results und lokale Suche optimieren.</description>
+      <category>SEO</category>
+    </item>
     <item>
       <title>Locksmith &amp; MovingCompany Schema Markup: Schlüsseldienst und Umzugsunternehmen für Google</title>
       <link>https://shift07.ai/blog/locksmith-movingcompany-schema-markup.html</link>
@@ -158,14 +166,6 @@
       <pubDate>Thu, 23 Apr 2026 10:12:24 +0000</pubDate>
       <description>Lerne, wie du EducationalOrganization Schema Markup für Schulen, Universitäten und Bildungseinrichtungen korrekt implementierst. Vollständige JSON-LD Anleitung mit Beispielen für School, CollegeOrUniversity und EducationEvent 2026.</description>
       <category>Schema Markup</category>
-    </item>
-    <item>
-      <title>LegalService &amp; GovernmentOrganization Schema Markup: JSON-LD für Rechtsdienstleister und Behörden</title>
-      <link>https://shift07.ai/blog/legalservice-governmentorganization-schema-markup.html</link>
-      <guid>https://shift07.ai/blog/legalservice-governmentorganization-schema-markup.html</guid>
-      <pubDate>Thu, 23 Apr 2026 06:14:08 +0000</pubDate>
-      <description>LegalService und GovernmentOrganization Schema Markup richtig implementieren: JSON-LD Beispiele, alle relevanten Properties, SEO-Vorteile und häufige Fehler vermeiden.</description>
-      <category>SEO</category>
     </item>
   </channel>
 </rss>
