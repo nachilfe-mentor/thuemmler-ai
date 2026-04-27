@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Mon, 27 Apr 2026 05:51:09 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 27 Apr 2026 05:54:29 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>GardenStore &amp;amp; PetStore Schema Markup: Gartencenter und Tierhandlung für Google optimieren</title>
+      <link>https://shift07.ai/blog/gardenstore-petstore-schema-markup.html</link>
+      <guid>https://shift07.ai/blog/gardenstore-petstore-schema-markup.html</guid>
+      <pubDate>Mon, 27 Apr 2026 05:54:03 +0000</pubDate>
+      <description>GardenStore und PetStore Schema Markup als JSON-LD implementieren: vollständige Anleitung mit Code-Beispielen, allen Properties und häufigen Fehlern für Gartencenter und Tierhandlungen.</description>
+      <category>Schema Markup</category>
+    </item>
     <item>
       <title>AutoRental &amp;amp; TaxiService Schema Markup: Mietwagen und Taxi für Google optimieren</title>
       <link>https://shift07.ai/blog/autorental-taxiservice-schema-markup.html</link>
@@ -157,14 +165,6 @@
       <guid>https://shift07.ai/blog/lodgingbusiness-hotel-schema-markup-vertieft.html</guid>
       <pubDate>Fri, 24 Apr 2026 03:28:47 +0000</pubDate>
       <description>LodgingBusiness Schema Markup vertieft: HotelRoom, checkinTime, checkoutTime, amenityFeature und Resort-spezifische Properties als JSON-LD für Google Rich Results 2026.</description>
-      <category>Schema Markup</category>
-    </item>
-    <item>
-      <title>Accommodation Schema Markup: Hotel, Hostel und Pension für Google</title>
-      <link>https://shift07.ai/blog/accommodation-schema-markup.html</link>
-      <guid>https://shift07.ai/blog/accommodation-schema-markup.html</guid>
-      <pubDate>Fri, 24 Apr 2026 01:53:08 +0000</pubDate>
-      <description>Accommodation Schema Markup für Hotel, Hostel, BedAndBreakfast und Pension: Vollständige JSON-LD-Anleitung mit LodgingBusiness, numberOfRooms, amenityFeature und starRating 2026.</description>
       <category>Schema Markup</category>
     </item>
   </channel>
