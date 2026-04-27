@@ -14,7 +14,7 @@
   </url>
   <url>
     <loc>https://shift07.ai/tools/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-04-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -975,6 +975,12 @@
   <url>
     <loc>https://shift07.ai/tools/educationalorganization-schema-generator.html</loc>
     <lastmod>2026-04-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://shift07.ai/tools/electrician-paintingcontractor-schema-generator.html</loc>
+    <lastmod>2026-04-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
