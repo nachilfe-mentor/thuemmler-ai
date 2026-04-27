@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Mon, 27 Apr 2026 00:35:14 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 27 Apr 2026 02:26:13 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>FlooringContractor &amp; LandscapingBusiness Schema Markup: Bodenleger und Gartengestalter für Google</title>
+      <link>https://shift07.ai/blog/flooring-contractor-landscaping-business-schema-markup.html</link>
+      <guid>https://shift07.ai/blog/flooring-contractor-landscaping-business-schema-markup.html</guid>
+      <pubDate>Mon, 27 Apr 2026 02:25:28 +0000</pubDate>
+      <description>So implementierst du FlooringContractor und LandscapingBusiness Schema Markup korrekt – mit JSON-LD-Beispielen, Checkliste und Tipps für lokales SEO.</description>
+      <category>Schema Markup</category>
+    </item>
     <item>
       <title>Electrician &amp; PaintingContractor Schema Markup: Elektriker und Maler für Google</title>
       <link>https://shift07.ai/blog/electrician-paintingcontractor-schema-markup.html</link>
@@ -157,14 +165,6 @@
       <guid>https://shift07.ai/blog/sportsactivitylocation-schema-markup.html</guid>
       <pubDate>Fri, 24 Apr 2026 00:04:40 +0000</pubDate>
       <description>SportsActivityLocation Schema Markup richtig implementieren: JSON-LD für Fitnessstudios, Sporthallen, Kletterhallen und Tennisanlagen. Vollständige Anleitung 2026.</description>
-      <category>Schema Markup</category>
-    </item>
-    <item>
-      <title>EducationalOrganization Schema Markup: Schulen und Bildungseinrichtungen für Google optimieren</title>
-      <link>https://shift07.ai/blog/educationalorganization-school-schema-markup.html</link>
-      <guid>https://shift07.ai/blog/educationalorganization-school-schema-markup.html</guid>
-      <pubDate>Thu, 23 Apr 2026 10:12:24 +0000</pubDate>
-      <description>Lerne, wie du EducationalOrganization Schema Markup für Schulen, Universitäten und Bildungseinrichtungen korrekt implementierst. Vollständige JSON-LD Anleitung mit Beispielen für School, CollegeOrUniversity und EducationEvent 2026.</description>
       <category>Schema Markup</category>
     </item>
   </channel>
