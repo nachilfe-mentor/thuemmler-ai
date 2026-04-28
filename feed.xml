@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Tue, 28 Apr 2026 05:17:27 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 28 Apr 2026 05:20:35 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>MusicStore &amp;amp; VideoStore Schema Markup: Musikhandel und Videotheken für Google</title>
+      <link>https://shift07.ai/blog/musicstore-videostore-schema-markup.html</link>
+      <guid>https://shift07.ai/blog/musicstore-videostore-schema-markup.html</guid>
+      <pubDate>Tue, 28 Apr 2026 05:20:14 +0000</pubDate>
+      <description>MusicStore und VideoStore Schema Markup: vollständige JSON-LD Anleitung für Musikfachhandel, Plattenshops und Videotheken. Mit Beispiel-Code, Properties-Tabelle und Implementierungs-Checkliste.</description>
+      <category>SEO</category>
+    </item>
     <item>
       <title>ElectronicsStore Schema Markup: Elektronikfachhandel für Google optimieren</title>
       <link>https://shift07.ai/blog/electronicsstore-schema-markup.html</link>
@@ -157,14 +165,6 @@
       <guid>https://shift07.ai/blog/professionalservice-schema-markup.html</guid>
       <pubDate>Sat, 25 Apr 2026 02:37:28 +0000</pubDate>
       <description>ProfessionalService Schema Markup vollständig erklärt: JSON-LD für Unternehmensberater, Architekten, Steuerberater und Dienstleister. Alle Properties, Praxisbeispiele und Fehler vermeiden 2026.</description>
-      <category>Schema Markup</category>
-    </item>
-    <item>
-      <title>SportsActivityLocation Schema Markup vertieft: GolfCourse, StadiumOrArena &amp; alle Sub-Typen</title>
-      <link>https://shift07.ai/blog/sportsactivitylocation-schema-markup-vertieft.html</link>
-      <guid>https://shift07.ai/blog/sportsactivitylocation-schema-markup-vertieft.html</guid>
-      <pubDate>Sat, 25 Apr 2026 02:30:29 +0000</pubDate>
-      <description>SportsActivityLocation Schema vertieft: GolfCourse, BowlingAlley, SkiResort, StadiumOrArena und TennisComplex als JSON-LD implementieren. Alle Sub-Typen mit Praxisbeispielen 2026.</description>
       <category>Schema Markup</category>
     </item>
   </channel>
