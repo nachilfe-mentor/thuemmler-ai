@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Tue, 28 Apr 2026 01:27:46 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 28 Apr 2026 01:31:28 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>HobbyShop &amp; CraftStore Schema Markup: Bastelbedarf für Google optimieren</title>
+      <link>https://shift07.ai/blog/hobbyshop-craftstore-schema-markup.html</link>
+      <guid>https://shift07.ai/blog/hobbyshop-craftstore-schema-markup.html</guid>
+      <pubDate>Tue, 28 Apr 2026 01:31:00 +0000</pubDate>
+      <description>HobbyShop und CraftStore Schema Markup richtig implementieren: JSON-LD für Bastlerläden, Modellbaugeschäfte und Kreativläden. Mit vollständigem Beispiel-Code und Schritt-für-Schritt-Anleitung.</description>
+      <category>SEO</category>
+    </item>
     <item>
       <title>GardenStore &amp;amp; PetStore Schema Markup: Gartencenter und Tierhandlung für Google optimieren</title>
       <link>https://shift07.ai/blog/gardenstore-petstore-schema-markup.html</link>
@@ -157,14 +165,6 @@
       <guid>https://shift07.ai/blog/autodealer-carrepair-schema-markup.html</guid>
       <pubDate>Fri, 24 Apr 2026 03:36:39 +0000</pubDate>
       <description>AutoDealer und CarRepair Schema Markup als JSON-LD: Autohaus, KFZ-Werkstatt und Reifenhandel für Google Rich Results optimieren — mit priceRange, brand, serviceType und vollständigen Beispielen.</description>
-      <category>Schema Markup</category>
-    </item>
-    <item>
-      <title>LodgingBusiness Schema Markup vertieft: Hotel, Resort &amp; HotelRoom für Google</title>
-      <link>https://shift07.ai/blog/lodgingbusiness-hotel-schema-markup-vertieft.html</link>
-      <guid>https://shift07.ai/blog/lodgingbusiness-hotel-schema-markup-vertieft.html</guid>
-      <pubDate>Fri, 24 Apr 2026 03:28:47 +0000</pubDate>
-      <description>LodgingBusiness Schema Markup vertieft: HotelRoom, checkinTime, checkoutTime, amenityFeature und Resort-spezifische Properties als JSON-LD für Google Rich Results 2026.</description>
       <category>Schema Markup</category>
     </item>
   </channel>
