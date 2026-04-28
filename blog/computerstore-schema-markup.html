@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K1S1RXBDS8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K1S1RXBDS8');
+    </script>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8475857002943858" crossorigin="anonymous"></script>
+    <title>ComputerStore Schema Markup: JSON-LD für Computerfachgeschäfte richtig einsetzen | Shift07</title>
+    <meta name="description" content="ComputerStore Schema Markup: vollständige JSON-LD Anleitung für Computerfachgeschäfte, IT-Händler und Technikläden. Mit Beispiel-Code, Properties-Übersicht und Kombination mit ElectronicsStore.">
+    <meta name="keywords" content="ComputerStore Schema Markup, ComputerStore JSON-LD, Computerfachgeschäft Schema, IT-Händler structured data, ComputerStore Google">
+    <meta name="author" content="Laurenz Thümmler">
+    <link rel="icon" type="image/png" href="/logo.png">
+    <link rel="canonical" href="https://shift07.ai/blog/computerstore-schema-markup.html">
+    <link rel="alternate" type="application/rss+xml" title="Shift07 Blog" href="https://shift07.ai/feed.xml">
+    <!-- Open Graph -->
+    <meta property="og:title" content="ComputerStore Schema Markup: JSON-LD für Computerfachgeschäfte richtig einsetzen">
+    <meta property="og:description" content="ComputerStore Schema Markup: vollständige JSON-LD Anleitung für Computerfachgeschäfte, IT-Händler und Technikläden. Mit Code-Beispielen und Properties-Tabelle.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://shift07.ai/blog/computerstore-schema-markup.html">
+    <meta property="og:image" content="https://shift07.ai/blog/images/computerstore-schema-markup.png">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="Shift07">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ComputerStore Schema Markup: JSON-LD für Computerfachgeschäfte">
+    <meta name="twitter:description" content="JSON-LD für Computerfachgeschäfte und IT-Händler: vollständige Anleitung mit Beispiel-Code und Properties-Übersicht.">
+    <meta name="twitter:image" content="https://shift07.ai/blog/images/computerstore-schema-markup.png">
+    <!-- Structured Data: Article + Breadcrumb -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "ComputerStore Schema Markup: JSON-LD für Computerfachgeschäfte richtig einsetzen",
+      "description": "ComputerStore Schema Markup: vollständige JSON-LD Anleitung für Computerfachgeschäfte, IT-Händler und Technikläden.",
+      "image": "https://shift07.ai/blog/images/computerstore-schema-markup.png",
+      "datePublished": "2026-04-28",
+      "dateModified": "2026-04-28",
+      "author": {
+        "@type": "Person",
+        "name": "Laurenz Thümmler",
+        "url": "https://shift07.ai"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Shift07",
+        "url": "https://shift07.ai",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://shift07.ai/assets/logo.png"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://shift07.ai/blog/computerstore-schema-markup.html"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://shift07.ai/"},
+        {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://shift07.ai/blog.html"},
+        {"@type": "ListItem", "position": 3, "name": "ComputerStore Schema Markup", "item": "https://shift07.ai/blog/computerstore-schema-markup.html"}
+      ]
+    }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+        pre { background: #1e293b; color: #e2e8f0; padding: 1.5rem; border-radius: 0.75rem; overflow-x: auto; font-size: 0.875rem; line-height: 1.7; }
+        code { font-family: 'Courier New', Courier, monospace; }
+        .prose h2 { font-size: 1.5rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 1rem; color: #1e293b; }
+        .prose h3 { font-size: 1.2rem; font-weight: 600; margin-top: 2rem; margin-bottom: 0.75rem; color: #334155; }
+        .prose p { margin-bottom: 1.25rem; line-height: 1.8; color: #374151; }
+        .prose ul { margin-bottom: 1.25rem; padding-left: 1.5rem; }
+        .prose ul li { margin-bottom: 0.4rem; line-height: 1.7; color: #374151; list-style-type: disc; }
+        .prose ol li { margin-bottom: 0.4rem; line-height: 1.7; color: #374151; list-style-type: decimal; }
+        .prose ol { margin-bottom: 1.25rem; padding-left: 1.5rem; }
+        .prose table { width: 100%; border-collapse: collapse; margin-bottom: 1.5rem; }
+        .prose table th { background: #f1f5f9; padding: 0.6rem 1rem; text-align: left; font-weight: 600; font-size: 0.875rem; border: 1px solid #e2e8f0; }
+        .prose table td { padding: 0.6rem 1rem; font-size: 0.875rem; border: 1px solid #e2e8f0; vertical-align: top; }
+        .prose table tr:nth-child(even) td { background: #f8fafc; }
+        .tip-box { background: #f0fdf4; border-left: 4px solid #22c55e; padding: 1rem 1.25rem; border-radius: 0 0.5rem 0.5rem 0; margin-bottom: 1.5rem; }
+        .warning-box { background: #fffbeb; border-left: 4px solid #f59e0b; padding: 1rem 1.25rem; border-radius: 0 0.5rem 0.5rem 0; margin-bottom: 1.5rem; }
+        .info-box { background: #eff6ff; border-left: 4px solid #3b82f6; padding: 1rem 1.25rem; border-radius: 0 0.5rem 0.5rem 0; margin-bottom: 1.5rem; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+
+    <!-- Navigation -->
+    <nav class="bg-white border-b border-gray-200 sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="/" class="flex items-center gap-2">
+                    <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                    <span class="font-bold text-gray-900 text-lg">Shift07</span>
+                </a>
+                <div class="hidden md:flex items-center gap-6 text-sm font-medium text-gray-600">
+                    <a href="/blog.html" class="hover:text-blue-600 transition-colors">Blog</a>
+                    <a href="/tools.html" class="hover:text-blue-600 transition-colors">Tools</a>
+                    <a href="/#analyse" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">Kostenlose Analyse</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="bg-white border-b border-gray-100">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="flex items-center gap-2 text-sm text-blue-600 font-medium mb-4">
+                <a href="/blog.html" class="hover:underline">Blog</a>
+                <span class="text-gray-400">/</span>
+                <span class="text-gray-500">Schema Markup</span>
+            </div>
+            <h1 class="text-3xl sm:text-4xl font-extrabold text-gray-900 leading-tight mb-4">
+                ComputerStore Schema Markup: JSON-LD für Computerfachgeschäfte richtig einsetzen
+            </h1>
+            <p class="text-xl text-gray-600 mb-6 leading-relaxed">
+                Du betreibst ein Computerfachgeschäft, einen IT-Handel oder einen Technik-Shop? Mit dem richtigen ComputerStore Schema Markup lieferst du Google strukturierte Daten über dein Geschäft — und erhöhst deine Chancen auf prominente Rich Results in der lokalen Suche.
+            </p>
+            <div class="flex items-center gap-4 text-sm text-gray-500">
+                <span>Von <strong class="text-gray-700">Laurenz Thümmler</strong></span>
+                <span>·</span>
+                <time datetime="2026-04-28">28. April 2026</time>
+                <span>·</span>
+                <span>12 Min. Lesezeit</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Header Image -->
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mt-8">
+        <img src="/blog/images/computerstore-schema-markup.png"
+             alt="ComputerStore Schema Markup JSON-LD Anleitung für Computerfachgeschäfte"
+             class="w-full rounded-xl shadow-md">
+    </div>
+
+    <!-- Content -->
+    <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 prose">
+
+        <div class="info-box">
+            <strong>Auf einen Blick:</strong> ComputerStore ist ein Untertyp von <a href="/blog/electronicsstore-schema-markup.html" class="text-blue-600 hover:underline">ElectronicsStore</a>, das wiederum von <a href="/blog/localbusiness-schema-markup-anleitung.html" class="text-blue-600 hover:underline">LocalBusiness</a> erbt. Der Typ kennzeichnet Geschäfte, die sich speziell auf Computer, Laptops, Hardware und IT-Zubehör spezialisieren. Du nutzt dieselben Properties wie bei ElectronicsStore, signalisierst Google aber eine präzisere Spezialisierung.
+        </div>
+
+        <h2>Was ist ComputerStore Schema Markup?</h2>
+        <p>
+            <code>ComputerStore</code> ist ein offizieller Schema.org-Typ für stationäre und gemischte Einzelhändler, die sich auf Computer, Laptops, Tablets, Hardware-Komponenten, Peripheriegeräte und IT-Zubehör spezialisieren. Der Typ ist Teil der umfangreichen Schema.org-Hierarchie:
+        </p>
+        <ul>
+            <li><strong>Thing</strong> → Organization → LocalBusiness → Store → ElectronicsStore → <strong>ComputerStore</strong></li>
+        </ul>
+        <p>
+            Diese Hierarchie bedeutet: Alle Properties, die für LocalBusiness, Store und ElectronicsStore gelten, kannst du auch für ComputerStore verwenden. Gleichzeitig sagst du Google mit der präzisen Typisierung: "Dieses Geschäft ist ein Computerfachhandel" — nicht irgendein Elektronikgeschäft.
+        </p>
+        <p>
+            Für die <a href="/blog/strukturierte-daten-seo-schema-markup.html" class="text-blue-600 hover:underline">strukturierten Daten im SEO</a> ist die Typenspezifität wichtig: Google kann dein Geschäft genauer kategorisieren, was bei lokalen Suchanfragen wie "Computerfachgeschäft in meiner Nähe" oder "Laptop kaufen [Stadt]" helfen kann.
+        </p>
+
+        <h2>Wann ComputerStore, wann ElectronicsStore?</h2>
+        <p>
+            Die Wahl des richtigen Typs hängt von deinem tatsächlichen Sortiment ab:
+        </p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Situation</th>
+                    <th>Empfohlener Typ</th>
+                    <th>Begründung</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Nur Computer, Laptops, Hardware, IT-Zubehör</td>
+                    <td><strong>ComputerStore</strong></td>
+                    <td>Maximale Präzision für spezialisierte Fachgeschäfte</td>
+                </tr>
+                <tr>
+                    <td>Computer + TV + Smartphones + Haushaltsgeräte</td>
+                    <td><strong>ElectronicsStore</strong></td>
+                    <td>Breiteres Sortiment passt zum übergeordneten Typ</td>
+                </tr>
+                <tr>
+                    <td>Computer-Reparatur mit kleinem Zubehör-Verkauf</td>
+                    <td>ComputerStore + Repair-Hinweise</td>
+                    <td>ComputerStore als Haupttyp, Reparatur im description/name erwähnen</td>
+                </tr>
+                <tr>
+                    <td>Online-Only-Shop (kein Ladenlokal)</td>
+                    <td>ComputerStore ohne geo-Properties</td>
+                    <td>LocalBusiness-Properties weglassen wenn kein physischer Standort</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="tip-box">
+            <strong>Tipp:</strong> Du kannst mehrere <code>@type</code>-Werte als Array angeben: <code>"@type": ["ComputerStore", "LocalBusiness"]</code>. Das ist aber eigentlich redundant, weil ComputerStore bereits von LocalBusiness erbt. Nutze einfach <code>"@type": "ComputerStore"</code> — Google versteht die Vererbungshierarchie.
+        </div>
+
+        <h2>Vollständiges ComputerStore JSON-LD Beispiel</h2>
+        <p>
+            Das folgende Beispiel zeigt alle wichtigen Properties für ein Computerfachgeschäft mit stationärem Ladenlokal:
+        </p>
+        <pre><code>{
+  "@context": "https://schema.org",
+  "@type": "ComputerStore",
+  "name": "TechWorld Computerfachhandel Berlin",
+  "description": "Ihr Computerfachgeschäft in Berlin Mitte. Laptops, Desktop-PCs, Hardware-Komponenten, Reparaturservice und IT-Beratung für Privat- und Geschäftskunden.",
+  "url": "https://www.techworld-berlin.de",
+  "telephone": "+49 30 12345678",
+  "email": "info@techworld-berlin.de",
+  "image": "https://www.techworld-berlin.de/images/store-front.jpg",
+  "logo": "https://www.techworld-berlin.de/images/logo.png",
+  "priceRange": "€€",
+  "currenciesAccepted": "EUR",
+  "paymentAccepted": "Cash, Credit Card, EC Card",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Unter den Linden 42",
+    "addressLocality": "Berlin",
+    "postalCode": "10117",
+    "addressRegion": "Berlin",
+    "addressCountry": "DE"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 52.5164,
+    "longitude": 13.3776
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "09:30",
+      "closes": "18:30"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "10:00",
+      "closes": "16:00"
+    }
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Produktkategorien",
+    "itemListElement": [
+      {
+        "@type": "OfferCatalog",
+        "name": "Laptops & Notebooks",
+        "description": "Business-Laptops, Gaming-Notebooks und Ultrabooks aller großen Hersteller"
+      },
+      {
+        "@type": "OfferCatalog",
+        "name": "Desktop-PCs & Workstations",
+        "description": "Tower-PCs, Kompakt-PCs und professionelle Workstations"
+      },
+      {
+        "@type": "OfferCatalog",
+        "name": "Komponenten & Zubehör",
+        "description": "Grafikkarten, RAM, SSDs, Gehäuse, Netzteile und Peripheriegeräte"
+      },
+      {
+        "@type": "OfferCatalog",
+        "name": "Reparatur & Service",
+        "description": "Hardware-Reparatur, Datensicherung und IT-Beratung für Privat- und Geschäftskunden"
+      }
+    ]
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.7",
+    "reviewCount": "128",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "sameAs": [
+    "https://www.google.com/maps?cid=XXXXXXXX",
+    "https://www.facebook.com/techworldberlin"
+  ],
+  "founder": {
+    "@type": "Person",
+    "name": "Max Mustermann"
+  },
+  "foundingDate": "2015",
+  "areaServed": {
+    "@type": "City",
+    "name": "Berlin"
+  }
+}</code></pre>
+
+        <h2>Die wichtigsten Properties im Detail</h2>
+        <p>
+            Nicht alle Properties sind gleich wichtig. Hier eine Übersicht nach Priorität:
+        </p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Property</th>
+                    <th>Typ</th>
+                    <th>Priorität</th>
+                    <th>Beschreibung</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>@type</code></td>
+                    <td>Text</td>
+                    <td>⭐⭐⭐ Pflicht</td>
+                    <td>Immer "ComputerStore"</td>
+                </tr>
+                <tr>
+                    <td><code>name</code></td>
+                    <td>Text</td>
+                    <td>⭐⭐⭐ Pflicht</td>
+                    <td>Offizieller Geschäftsname (exakt wie bei Google My Business)</td>
+                </tr>
+                <tr>
+                    <td><code>address</code></td>
+                    <td>PostalAddress</td>
+                    <td>⭐⭐⭐ Pflicht</td>
+                    <td>Vollständige Adresse für lokale Suche</td>
+                </tr>
+                <tr>
+                    <td><code>telephone</code></td>
+                    <td>Text</td>
+                    <td>⭐⭐⭐ Pflicht</td>
+                    <td>Im E.164-Format: +49 30 12345678</td>
+                </tr>
+                <tr>
+                    <td><code>url</code></td>
+                    <td>URL</td>
+                    <td>⭐⭐⭐ Pflicht</td>
+                    <td>Kanonische URL der Website</td>
+                </tr>
+                <tr>
+                    <td><code>openingHoursSpecification</code></td>
+                    <td>OpeningHoursSpecification</td>
+                    <td>⭐⭐ Empfohlen</td>
+                    <td>Präzise Öffnungszeiten (besser als openingHours-String)</td>
+                </tr>
+                <tr>
+                    <td><code>geo</code></td>
+                    <td>GeoCoordinates</td>
+                    <td>⭐⭐ Empfohlen</td>
+                    <td>Exakte GPS-Koordinaten für Maps-Integration</td>
+                </tr>
+                <tr>
+                    <td><code>aggregateRating</code></td>
+                    <td>AggregateRating</td>
+                    <td>⭐⭐ Empfohlen</td>
+                    <td>Bewertungssterne in den Suchergebnissen</td>
+                </tr>
+                <tr>
+                    <td><code>hasOfferCatalog</code></td>
+                    <td>OfferCatalog</td>
+                    <td>⭐ Optional</td>
+                    <td>Produktkategorien und Dienstleistungen strukturieren</td>
+                </tr>
+                <tr>
+                    <td><code>priceRange</code></td>
+                    <td>Text</td>
+                    <td>⭐ Optional</td>
+                    <td>€, €€, €€€ oder €€€€ (Preissegment)</td>
+                </tr>
+                <tr>
+                    <td><code>sameAs</code></td>
+                    <td>URL[]</td>
+                    <td>⭐ Optional</td>
+                    <td>Google Maps-Link, Social-Media-Profile für Entitätsabgleich</td>
+                </tr>
+                <tr>
+                    <td><code>image</code></td>
+                    <td>URL</td>
+                    <td>⭐⭐ Empfohlen</td>
+                    <td>Foto des Geschäfts (min. 720px breit, JPEG/PNG)</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Minimales Beispiel für den schnellen Start</h2>
+        <p>
+            Du willst schnell implementieren und später ergänzen? Das hier ist das absolute Minimum, das Google für ein LocalBusiness erwartet — ergänzt um den ComputerStore-Typ:
+        </p>
+        <pre><code>{
+  "@context": "https://schema.org",
+  "@type": "ComputerStore",
+  "name": "PC Expert Hannover",
+  "telephone": "+49 511 9876543",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Georgstraße 12",
+    "addressLocality": "Hannover",
+    "postalCode": "30159",
+    "addressCountry": "DE"
+  },
+  "url": "https://www.pcexpert-hannover.de",
+  "openingHours": [
+    "Mo-Fr 09:00-18:00",
+    "Sa 10:00-15:00"
+  ]
+}</code></pre>
+        <div class="warning-box">
+            <strong>Achtung:</strong> <code>openingHours</code> (als String-Array) und <code>openingHoursSpecification</code> (als Objekt) existieren beide. Das String-Format ist kürzer, das Objekt-Format ist genauer und unterstützt Ausnahmen (z. B. Feiertage). Für neue Implementierungen empfiehlt sich <a href="/blog/openinghours-schema-markup-seo.html" class="text-blue-600 hover:underline">openingHoursSpecification</a>.
+        </div>
+
+        <h2>ComputerStore mit Reparatur-Service kombinieren</h2>
+        <p>
+            Viele Computerfachgeschäfte bieten neben dem Verkauf auch Reparaturservices an. Schema.org hat dafür keinen eigenen Subtyp für "Computer-Reparatur" — aber du hast zwei Möglichkeiten, das zu kommunizieren:
+        </p>
+        <h3>Option 1: Im description-Feld erwähnen</h3>
+        <p>
+            Einfach und effektiv: Erwähne den Reparaturservice in der Beschreibung. Google liest das <code>description</code>-Feld und verknüpft es mit dem Geschäftstyp.
+        </p>
+        <pre><code>"description": "Computerfachhandel und Reparaturservice in München. Laptops, Desktop-PCs, Komponenten sowie Hardware-Reparatur und Datensicherung für Privat- und Geschäftskunden."</code></pre>
+        <h3>Option 2: Separaten Dienst-Block mit @graph</h3>
+        <p>
+            Für komplexere Fälle kannst du mit <code>@graph</code> mehrere Entitäten in einem JSON-LD-Block kombinieren:
+        </p>
+        <pre><code>{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ComputerStore",
+      "@id": "https://www.mein-computerladen.de/#store",
+      "name": "ComputerHaus München",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Leopoldstraße 88",
+        "addressLocality": "München",
+        "postalCode": "80802",
+        "addressCountry": "DE"
+      },
+      "telephone": "+49 89 55667788",
+      "url": "https://www.mein-computerladen.de"
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.mein-computerladen.de/#repair",
+      "name": "Computer-Reparaturservice",
+      "description": "Laptops, Desktop-PCs, MacBooks und Tablets reparieren lassen. Schnell, günstig, mit Garantie.",
+      "provider": {
+        "@id": "https://www.mein-computerladen.de/#store"
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "München"
+      },
+      "serviceType": "Computer Repair"
+    }
+  ]
+}</code></pre>
+
+        <h2>Öffnungszeiten-Ausnahmen: Feiertage und Sonderöffnungszeiten</h2>
+        <p>
+            Ein oft übersehenes Feature von <code>openingHoursSpecification</code> sind Ausnahmen für Feiertage oder besondere Anlässe. Das ist besonders für IT-Fachgeschäfte relevant, die zu Weihnachten oder Ostern Sonderaktionen haben:
+        </p>
+        <pre><code>"openingHoursSpecification": [
+  {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+    "opens": "09:00",
+    "closes": "18:30"
+  },
+  {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": "Saturday",
+    "opens": "10:00",
+    "closes": "16:00"
+  },
+  {
+    "@type": "OpeningHoursSpecification",
+    "validFrom": "2026-12-24",
+    "validThrough": "2026-12-26",
+    "opens": "00:00",
+    "closes": "00:00"
+  }
+]</code></pre>
+        <p>
+            Der Block mit <code>validFrom</code>/<code>validThrough</code> und <code>opens: "00:00"</code> / <code>closes: "00:00"</code> signalisiert Schließung an diesen Tagen. Google zeigt das dann in der Suche entsprechend an.
+        </p>
+
+        <h2>AggregateRating: Bewertungssterne in den Suchergebnissen</h2>
+        <p>
+            Wenn du verifizierbare Kundenbewertungen hast (z. B. von Google oder einer Plattform auf deiner eigenen Website), kannst du diese als <code>aggregateRating</code> einbinden. Das kann zu Bewertungssternen in den Google-Suchergebnissen führen:
+        </p>
+        <pre><code>"aggregateRating": {
+  "@type": "AggregateRating",
+  "ratingValue": "4.6",
+  "reviewCount": "94",
+  "bestRating": "5",
+  "worstRating": "1"
+}</code></pre>
+        <div class="warning-box">
+            <strong>Wichtig:</strong> Google erlaubt AggregateRating für LocalBusiness nur, wenn die Bewertungen auf der eigenen Website sichtbar sind — nicht für externe Plattformen wie Google Maps. Wenn du nur Google-Rezensionen hast und diese nicht auf deiner Seite einbindest, verzichte auf diesen Block.
+        </div>
+
+        <h2>Wo das Markup auf deiner Website einbinden?</h2>
+        <p>
+            Das ComputerStore JSON-LD gehört in den <code>&lt;head&gt;</code>-Bereich deiner Homepage — oder auf jede relevante Seite (Kontaktseite, Über-uns-Seite), die das Geschäft als Ganzes beschreibt. Für einzelne Produktseiten verwendest du <a href="/blog/product-schema-markup-seo.html" class="text-blue-600 hover:underline">Product Schema Markup</a>.
+        </p>
+        <p>
+            Die Einbindung ist immer gleich:
+        </p>
+        <pre><code>&lt;head&gt;
+  ...
+  &lt;script type="application/ld+json"&gt;
+  {
+    "@context": "https://schema.org",
+    "@type": "ComputerStore",
+    ...
+  }
+  &lt;/script&gt;
+&lt;/head&gt;</code></pre>
+        <p>
+            Du kannst mehrere JSON-LD-Blöcke im <code>&lt;head&gt;</code> verwenden — z. B. einen für das Geschäft und einen für das <a href="/blog/breadcrumblist-schema-markup-seo.html" class="text-blue-600 hover:underline">BreadcrumbList-Schema</a>.
+        </p>
+
+        <h2>Testen und validieren</h2>
+        <p>
+            Bevor du das Markup live schaltest, solltest du es testen. Google stellt dafür zwei Tools bereit:
+        </p>
+        <ul>
+            <li><strong>Rich Results Test</strong> (search.google.com/test/rich-results): Prüft ob deine Seite für Rich Results qualifiziert ist. Gibt direktes Feedback zu Fehlern und Warnungen.</li>
+            <li><strong>Schema Markup Validator</strong> (validator.schema.org): Prüft die technische Korrektheit des JSON-LD gegen die Schema.org-Spezifikation.</li>
+        </ul>
+        <p>
+            Alternativ kannst du unseren <a href="/tools/json-ld-structured-data-validator.html" class="text-blue-600 hover:underline">kostenlosen JSON-LD Structured Data Validator</a> nutzen, um das Markup direkt im Browser zu testen.
+        </p>
+
+        <h2>Häufige Fehler und wie du sie vermeidest</h2>
+        <h3>Fehler 1: Name weicht von Google My Business ab</h3>
+        <p>
+            Verwende im Schema exakt denselben Geschäftsnamen wie in deinem Google-My-Business-Eintrag. Abweichungen (z. B. "PC World GmbH" vs. "PC World") können Google verwirren und den Entitätsabgleich erschweren.
+        </p>
+        <h3>Fehler 2: Adresse nicht konsistent (NAP-Problem)</h3>
+        <p>
+            Name, Adresse und Telefonnummer (NAP) müssen auf deiner Website, im Schema Markup und in allen Verzeichnissen identisch sein. Mehr dazu in unserem Artikel zur <a href="/blog/nap-konsistenz-lokales-seo.html" class="text-blue-600 hover:underline">NAP-Konsistenz im lokalen SEO</a>.
+        </p>
+        <h3>Fehler 3: aggregateRating ohne eigene Bewertungen einbinden</h3>
+        <p>
+            Google ignoriert oder penalisiert AggregateRating-Markup, wenn die Bewertungen nicht auf der eigenen Seite sichtbar sind. Zeige die Rezensionen auf deiner Seite an, oder lasse den Block weg.
+        </p>
+        <h3>Fehler 4: Telefonnummer im falschen Format</h3>
+        <p>
+            Nutze das internationale Format: <code>"+49 30 12345678"</code> statt <code>"030 / 12345678"</code> oder <code>"030-12345678"</code>. Das E.164-Format ist die Schema.org-Empfehlung.
+        </p>
+        <h3>Fehler 5: Koordinaten vertauscht</h3>
+        <p>
+            In <code>GeoCoordinates</code> kommt erst <code>latitude</code> (Breitengrad, ~47-55 für Deutschland), dann <code>longitude</code> (Längengrad, ~5-15 für Deutschland). Vertauschte Werte setzen dein Geschäft auf den falschen Kontinent.
+        </p>
+
+        <h2>ComputerStore und lokales SEO: Das Gesamtbild</h2>
+        <p>
+            Schema Markup ist nur ein Baustein im lokalen SEO. Die größte Wirkung entfaltetet es zusammen mit:
+        </p>
+        <ul>
+            <li><strong>Google My Business (Google Maps):</strong> Vollständig ausgefüllter Eintrag mit Fotos, aktuellen Öffnungszeiten und regelmäßigen Posts</li>
+            <li><strong>NAP-Konsistenz:</strong> Identische Unternehmensdaten in allen Verzeichnissen</li>
+            <li><strong>Lokale Keywords:</strong> "Computerfachgeschäft [Stadt]", "Laptop kaufen [Stadtteil]" in Seitentitel und Texten</li>
+            <li><strong>Lokale Backlinks:</strong> Einträge in Stadtportalen, Branchenverzeichnissen und lokalen Partnerseiten</li>
+        </ul>
+        <p>
+            Mehr dazu in unserem <a href="/blog/lokales-seo-kleine-unternehmen.html" class="text-blue-600 hover:underline">kompletten Leitfaden zum lokalen SEO für kleine Unternehmen</a>.
+        </p>
+
+        <h2>Schritt-für-Schritt: ComputerStore Schema Markup implementieren</h2>
+        <ol>
+            <li><strong>Daten sammeln:</strong> Offizieller Geschäftsname (= GMB-Name), vollständige Adresse, Telefonnummer im E.164-Format, Website-URL, Öffnungszeiten, GPS-Koordinaten</li>
+            <li><strong>JSON-LD erstellen:</strong> Nutze das Vollbeispiel oben als Vorlage oder den <a href="/tools/schema-markup-generator.html" class="text-blue-600 hover:underline">Schema-Markup-Generator</a> auf shift07.ai</li>
+            <li><strong>Typ anpassen:</strong> Setze <code>"@type": "ComputerStore"</code> — nicht ElectronicsStore oder Store</li>
+            <li><strong>Im &lt;head&gt; einbinden:</strong> Als <code>&lt;script type="application/ld+json"&gt;</code>-Block</li>
+            <li><strong>Testen:</strong> Rich Results Test und/oder unseren <a href="/tools/json-ld-structured-data-validator.html" class="text-blue-600 hover:underline">JSON-LD Validator</a> nutzen</li>
+            <li><strong>Fehler beheben:</strong> Alle roten Warnungen beheben, gelbe Hinweise prüfen</li>
+            <li><strong>Monitoring:</strong> Google Search Console → Verbesserungen → Strukturierte Daten (2-4 Wochen nach Implementierung prüfen)</li>
+        </ol>
+
+        <div class="tip-box">
+            <strong>Pro-Tipp:</strong> Führe nach dem Einbauen des Schema Markups eine <a href="/blog/technisches-seo-audit-anleitung.html" class="text-blue-600 hover:underline">technisches SEO Audit</a> durch, um sicherzustellen, dass keine anderen technischen Fehler den Indexierungserfolg blockieren. Schema Markup allein kann keine grundlegenden SEO-Probleme lösen — es verstärkt, was bereits gut ist.
+        </div>
+
+        <h2>Fazit</h2>
+        <p>
+            ComputerStore Schema Markup ist ein präzises Signal an Google: "Hier ist ein spezialisierter Computerfachhandel." Verglichen mit dem allgemeineren ElectronicsStore-Typ kommunizierst du damit genauer, was dein Geschäft anbietet — was bei spezifischen lokalen Suchanfragen ein Vorteil sein kann.
+        </p>
+        <p>
+            Die Implementierung ist technisch unkompliziert: Ein JSON-LD-Block mit Name, Adresse, Telefon, URL und Öffnungszeiten genügt für den Einstieg. Wer mehr herausholen möchte, ergänzt AggregateRating, geo-Koordinaten und hasOfferCatalog schrittweise.
+        </p>
+        <p>
+            Willst du wissen, ob deine Website bereits SEO-Probleme hat, die über Schema Markup hinausgehen? Nutze unsere <a href="/#analyse" class="text-blue-600 hover:underline">kostenlose SEO-Analyse auf shift07.ai</a> — sie scannt deine Website in Sekunden auf technische SEO-Fehler.
+        </p>
+
+        <!-- CTA -->
+        <div class="bg-blue-50 border border-blue-200 rounded-xl p-6 mt-8 text-center">
+            <h3 class="text-xl font-bold text-gray-900 mb-2">Kostenlose SEO-Analyse für deine Website</h3>
+            <p class="text-gray-600 mb-4">Finde heraus, welche SEO-Fehler deine Website hat — in unter 60 Sekunden.</p>
+            <a href="/#analyse" class="inline-block bg-blue-600 text-white font-semibold px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+                Jetzt kostenlos analysieren →
+            </a>
+        </div>
+
+        <!-- Related Articles -->
+        <div class="mt-10 pt-8 border-t border-gray-200">
+            <h3 class="text-lg font-bold text-gray-900 mb-4">Verwandte Artikel</h3>
+            <div class="grid sm:grid-cols-2 gap-4">
+                <a href="/blog/electronicsstore-schema-markup.html" class="block p-4 bg-white border border-gray-200 rounded-lg hover:border-blue-300 hover:shadow-sm transition-all">
+                    <div class="text-sm font-semibold text-blue-600 mb-1">Schema Markup</div>
+                    <div class="font-medium text-gray-900 text-sm">ElectronicsStore Schema Markup: Elektronikfachhandel für Google optimieren</div>
+                </a>
+                <a href="/blog/localbusiness-schema-markup-anleitung.html" class="block p-4 bg-white border border-gray-200 rounded-lg hover:border-blue-300 hover:shadow-sm transition-all">
+                    <div class="text-sm font-semibold text-blue-600 mb-1">Schema Markup</div>
+                    <div class="font-medium text-gray-900 text-sm">LocalBusiness Schema Markup: Vollständige Anleitung 2026</div>
+                </a>
+                <a href="/blog/openinghours-schema-markup-seo.html" class="block p-4 bg-white border border-gray-200 rounded-lg hover:border-blue-300 hover:shadow-sm transition-all">
+                    <div class="text-sm font-semibold text-blue-600 mb-1">Schema Markup</div>
+                    <div class="font-medium text-gray-900 text-sm">OpeningHoursSpecification: Öffnungszeiten für Google richtig einbinden</div>
+                </a>
+                <a href="/blog/nap-konsistenz-lokales-seo.html" class="block p-4 bg-white border border-gray-200 rounded-lg hover:border-blue-300 hover:shadow-sm transition-all">
+                    <div class="text-sm font-semibold text-blue-600 mb-1">Lokales SEO</div>
+                    <div class="font-medium text-gray-900 text-sm">NAP-Konsistenz: Name, Adresse, Telefon einheitlich halten</div>
+                </a>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-200 mt-16 py-10">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <div class="flex items-center gap-2 mb-3">
+                        <img src="/logo.png" alt="Shift07 Logo" class="h-7 w-7">
+                        <span class="font-bold text-gray-900">Shift07</span>
+                    </div>
+                    <p class="text-sm text-gray-500">KI-gestütztes SEO-Analyse-Tool für kleine und mittlere Unternehmen.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-gray-900 mb-3 text-sm">Ressourcen</h4>
+                    <ul class="space-y-2 text-sm text-gray-500">
+                        <li><a href="/blog.html" class="hover:text-blue-600">Blog</a></li>
+                        <li><a href="/tools.html" class="hover:text-blue-600">Kostenlose Tools</a></li>
+                        <li><a href="/#analyse" class="hover:text-blue-600">Kostenlose Analyse</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-gray-900 mb-3 text-sm">Rechtliches</h4>
+                    <ul class="space-y-2 text-sm text-gray-500">
+                        <li><a href="/impressum.html" class="hover:text-blue-600">Impressum</a></li>
+                        <li><a href="/datenschutz.html" class="hover:text-blue-600">Datenschutz</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-8 pt-6 border-t border-gray-100 text-center text-xs text-gray-400">
+                © 2026 Thümmler AI GmbH · Leonardo-da-Vinci-Straße 15, 14467 Potsdam
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
