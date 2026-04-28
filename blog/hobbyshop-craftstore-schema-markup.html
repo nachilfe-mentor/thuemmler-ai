@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K1S1RXBDS8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K1S1RXBDS8');
+    </script>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8475857002943858" crossorigin="anonymous"></script>
+    <title>HobbyShop & CraftStore Schema Markup: Bastelbedarf für Google optimieren | Shift07</title>
+    <meta name="description" content="HobbyShop und CraftStore Schema Markup richtig implementieren: JSON-LD für Bastlerläden, Modellbaugeschäfte und Kreativläden. Mit vollständigem Beispiel-Code und Schritt-für-Schritt-Anleitung.">
+    <meta name="keywords" content="HobbyShop Schema Markup, CraftStore JSON-LD, Bastelbedarf Schema, HobbyShop structured data, Freizeitladen Schema Markup">
+    <meta name="author" content="Laurenz Thümmler">
+    <link rel="icon" type="image/png" href="/logo.png">
+    <link rel="canonical" href="https://shift07.ai/blog/hobbyshop-craftstore-schema-markup.html">
+    <link rel="alternate" type="application/rss+xml" title="Shift07 Blog" href="https://shift07.ai/feed.xml">
+    <!-- Open Graph -->
+    <meta property="og:title" content="HobbyShop & CraftStore Schema Markup: Bastelbedarf für Google optimieren">
+    <meta property="og:description" content="HobbyShop und CraftStore Schema Markup richtig implementieren: JSON-LD für Bastlerläden, Modellbaugeschäfte und Kreativläden. Vollständiges Beispiel inklusive.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://shift07.ai/blog/hobbyshop-craftstore-schema-markup.html">
+    <meta property="og:image" content="https://shift07.ai/blog/images/hobbyshop-craftstore-schema-markup.png">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="Shift07">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="HobbyShop & CraftStore Schema Markup: Bastelbedarf für Google optimieren">
+    <meta name="twitter:description" content="JSON-LD für Hobby- und Kreativläden: vollständige Implementierungsanleitung mit Beispiel-Code.">
+    <meta name="twitter:image" content="https://shift07.ai/blog/images/hobbyshop-craftstore-schema-markup.png">
+    <!-- Structured Data: Article + Breadcrumb -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "HobbyShop & CraftStore Schema Markup: Bastelbedarf für Google optimieren",
+      "description": "HobbyShop und CraftStore Schema Markup richtig implementieren: JSON-LD für Bastlerläden, Modellbaugeschäfte und Kreativläden. Mit vollständigem Beispiel-Code.",
+      "image": "https://shift07.ai/blog/images/hobbyshop-craftstore-schema-markup.png",
+      "datePublished": "2026-04-28",
+      "dateModified": "2026-04-28",
+      "author": {
+        "@type": "Person",
+        "name": "Laurenz Thümmler",
+        "url": "https://shift07.ai"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Thümmler AI GmbH",
+        "logo": { "@type": "ImageObject", "url": "https://shift07.ai/logo.png" }
+      },
+      "mainEntityOfPage": { "@type": "WebPage", "@id": "https://shift07.ai/blog/hobbyshop-craftstore-schema-markup.html" }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://shift07.ai/" },
+        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://shift07.ai/blog/" },
+        { "@type": "ListItem", "position": 3, "name": "HobbyShop & CraftStore Schema Markup", "item": "https://shift07.ai/blog/hobbyshop-craftstore-schema-markup.html" }
+      ]
+    }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { 'inter': ['Inter', 'system-ui', '-apple-system', 'sans-serif'] },
+                    typography: { DEFAULT: { css: { color: '#94a3b8', maxWidth: 'none' } } }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+        html { scroll-behavior: smooth; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: rgba(15,23,42,0.5); }
+        ::-webkit-scrollbar-thumb { background: rgba(59,130,246,0.5); border-radius: 4px; }
+        .prose h2 { color: #f1f5f9; font-size: 1.5rem; font-weight: 700; margin: 2rem 0 1rem; }
+        .prose h3 { color: #e2e8f0; font-size: 1.2rem; font-weight: 600; margin: 1.5rem 0 0.75rem; }
+        .prose p { color: #94a3b8; line-height: 1.8; margin-bottom: 1rem; }
+        .prose ul, .prose ol { color: #94a3b8; margin: 1rem 0 1rem 1.5rem; }
+        .prose li { margin-bottom: 0.4rem; line-height: 1.7; }
+        .prose ul li { list-style-type: disc; }
+        .prose ol li { list-style-type: decimal; }
+        .prose strong { color: #f1f5f9; }
+        .prose a { color: #60a5fa; text-decoration: underline; }
+        .prose a:hover { color: #93c5fd; }
+        .code-block {
+            background: rgba(15,23,42,0.9);
+            border: 1px solid rgba(59,130,246,0.3);
+            border-radius: 12px;
+            padding: 1.5rem;
+            font-family: 'Courier New', monospace;
+            font-size: 0.82rem;
+            color: #93c5fd;
+            overflow-x: auto;
+            white-space: pre;
+            line-height: 1.5;
+            margin: 1.5rem 0;
+        }
+        .info-box {
+            background: rgba(59,130,246,0.08);
+            border-left: 4px solid #3b82f6;
+            border-radius: 0 8px 8px 0;
+            padding: 1rem 1.5rem;
+            margin: 1.5rem 0;
+        }
+        .tip-box {
+            background: rgba(16,185,129,0.08);
+            border-left: 4px solid #10b981;
+            border-radius: 0 8px 8px 0;
+            padding: 1rem 1.5rem;
+            margin: 1.5rem 0;
+        }
+        .warn-box {
+            background: rgba(245,158,11,0.08);
+            border-left: 4px solid #f59e0b;
+            border-radius: 0 8px 8px 0;
+            padding: 1rem 1.5rem;
+            margin: 1.5rem 0;
+        }
+        .property-table { width: 100%; border-collapse: collapse; margin: 1rem 0 1.5rem; }
+        .property-table th { background: rgba(59,130,246,0.15); color: #e2e8f0; padding: 0.6rem 1rem; text-align: left; font-size: 0.875rem; }
+        .property-table td { color: #94a3b8; padding: 0.6rem 1rem; border-bottom: 1px solid rgba(255,255,255,0.06); font-size: 0.875rem; }
+        .property-table tr:hover td { background: rgba(255,255,255,0.02); }
+        .badge-required { background: rgba(239,68,68,0.2); color: #fca5a5; font-size: 0.7rem; padding: 2px 6px; border-radius: 4px; }
+        .badge-recommended { background: rgba(245,158,11,0.2); color: #fcd34d; font-size: 0.7rem; padding: 2px 6px; border-radius: 4px; }
+        .badge-optional { background: rgba(100,116,139,0.2); color: #94a3b8; font-size: 0.7rem; padding: 2px 6px; border-radius: 4px; }
+    </style>
+</head>
+<body class="bg-slate-900 text-white min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-slate-900/80 backdrop-blur-xl border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <a href="/" class="flex items-center gap-2">
+                    <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                    <span class="text-xl font-bold text-white">Shift07</span>
+                </a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="/" class="text-gray-300 hover:text-white transition-colors">SEO-Tool</a>
+                    <a href="/blog/" class="text-white font-medium border-b-2 border-blue-500 pb-0.5">Blog</a>
+                    <a href="/tools/" class="text-gray-300 hover:text-white transition-colors">Tools</a>
+                    <a href="/app/#/login" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-5 py-2 rounded-lg font-medium transition-all">Anmelden</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-gray-300 hover:text-white">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900/95 border-b border-white/10">
+            <div class="px-4 py-3 space-y-2">
+                <a href="/" class="block py-2 text-gray-300 hover:text-white">SEO-Tool</a>
+                <a href="/blog/" class="block py-2 text-white font-medium">Blog</a>
+                <a href="/tools/" class="block py-2 text-gray-300 hover:text-white">Tools</a>
+                <a href="/app/#/login" class="block py-2 text-blue-400 hover:text-blue-300">Anmelden</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="pt-20 pb-0 px-4">
+        <div class="max-w-4xl mx-auto">
+            <nav class="text-sm text-gray-500 flex items-center gap-2">
+                <a href="/" class="hover:text-gray-300">Home</a>
+                <span>/</span>
+                <a href="/blog/" class="hover:text-gray-300">Blog</a>
+                <span>/</span>
+                <span class="text-gray-400">HobbyShop &amp; CraftStore Schema Markup</span>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Article Header -->
+    <header class="py-12 px-4">
+        <div class="max-w-4xl mx-auto">
+            <div class="flex flex-wrap gap-3 mb-6">
+                <span class="px-3 py-1 bg-emerald-500/10 text-emerald-400 rounded-full text-sm font-medium border border-emerald-500/20">Schema Markup</span>
+                <span class="px-3 py-1 bg-blue-500/10 text-blue-400 rounded-full text-sm font-medium border border-blue-500/20">Cluster 16</span>
+            </div>
+            <h1 class="text-3xl md:text-5xl font-extrabold text-white mb-6 leading-tight">
+                HobbyShop &amp; CraftStore Schema Markup: Bastelbedarf und Freizeitgeschäfte für Google optimieren
+            </h1>
+            <p class="text-xl text-gray-400 mb-8">
+                Wie Hobbyläden, Modellbaugeschäfte und Kreativläden mit <strong class="text-white">HobbyShop Schema Markup</strong> bei Google mehr Sichtbarkeit gewinnen – vollständige Anleitung mit JSON-LD Beispiel und allen relevanten Properties.
+            </p>
+            <div class="flex flex-wrap items-center gap-6 text-sm text-gray-500">
+                <span class="flex items-center gap-2">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+                    Laurenz Thümmler
+                </span>
+                <span class="flex items-center gap-2">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                    28. April 2026
+                </span>
+                <span class="flex items-center gap-2">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                    9 Min. Lesezeit
+                </span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Image -->
+    <div class="px-4 mb-12">
+        <div class="max-w-4xl mx-auto">
+            <img src="/blog/images/hobbyshop-craftstore-schema-markup.png" alt="HobbyShop CraftStore Schema Markup JSON-LD für Bastelbedarf und Freizeitgeschäfte" class="w-full rounded-2xl border border-white/10" loading="lazy">
+        </div>
+    </div>
+
+    <!-- Article Content -->
+    <main class="pb-16 px-4">
+        <div class="max-w-4xl mx-auto prose">
+
+            <div class="info-box">
+                <p class="text-blue-300 text-sm font-medium mb-1">Worum geht es in diesem Artikel?</p>
+                <p class="text-blue-200 text-sm">Du betreibst einen Hobbyladen, ein Modellbaugeschäft, einen Kreativladen oder eine Bastelbedarfs-Filiale? Dann zeigen wir dir, wie du mit <strong>HobbyShop Schema Markup</strong> dein Google-Ranking verbessern und in den lokalen Suchergebnissen auffallen kannst – inklusive fertigem JSON-LD Code zum Kopieren.</p>
+            </div>
+
+            <h2>Was ist HobbyShop Schema Markup?</h2>
+            <p><strong>HobbyShop</strong> ist ein strukturierter Datentyp aus dem <a href="https://schema.org/HobbyShop" rel="noopener">schema.org-Vokabular</a>, der speziell für Freizeitläden, Bastelgeschäfte, Modellbauläden und ähnliche Spezialgeschäfte entwickelt wurde. Er ist ein direkter Untertyp von <code>Store</code>, der wiederum von <code>LocalBusiness</code> erbt.</p>
+
+            <p>Die Hierarchie sieht so aus:</p>
+            <div class="code-block">Thing → Organization → LocalBusiness → Store → HobbyShop</div>
+
+            <p>Als Untertyp von <code>Store</code> und <code>LocalBusiness</code> erbt <code>HobbyShop</code> alle Properties dieser Elterntypen – inklusive Adresse, Öffnungszeiten, Telefonnummer, Bewertungen und Geo-Koordinaten. Gleichzeitig signalisiert der spezifischere Typ Google eindeutig, um welche Art von Geschäft es sich handelt.</p>
+
+            <h2>Für welche Geschäfte ist HobbyShop geeignet?</h2>
+            <p>Der Typ <code>HobbyShop</code> passt für alle Einzelhandelsgeschäfte, die Freizeitartikel und Hobbyprodukte verkaufen:</p>
+            <ul>
+                <li><strong>Bastelbedarf &amp; Kreativläden</strong> – Papier, Farben, Leinwände, Stoffe, Näh- und Handarbeitsmaterial</li>
+                <li><strong>Modellbaugeschäfte</strong> – Modellbausätze, RC-Fahrzeuge, Modellbahn, Drohnen, Werkzeug</li>
+                <li><strong>Spielzeugläden mit Hobbysortiment</strong> – Brettspiele, Puzzles, Sammlerfiguren, Trading Cards</li>
+                <li><strong>Angelbedarf-Geschäfte</strong> – Angelruten, Köder, Zubehör für Angler</li>
+                <li><strong>Jagd &amp; Outdoor-Ausrüstung</strong> – sofern Freizeitfokus im Vordergrund steht</li>
+                <li><strong>Wollläden &amp; Handarbeit</strong> – Wolle, Stricknadeln, Häkelzubehör</li>
+                <li><strong>Scrapbooking &amp; Kartengestaltung</strong> – Spezialgeschäfte für Paper-Crafting</li>
+            </ul>
+
+            <div class="tip-box">
+                <p class="text-emerald-300 text-sm font-medium mb-1">Tipp: Sub-Typen kennen</p>
+                <p class="text-emerald-200 text-sm">Schema.org bietet für einige Hobbybereiche spezifischere Typen: <strong>BicycleStore</strong> für Fahrradläden, <strong>SportingGoodsStore</strong> für allgemeine Sportgeschäfte. Für Modellbau, Bastelbedarf und Kreativläden ist <strong>HobbyShop</strong> der passendste Typ – er ist spezifischer als <code>Store</code> und signalisiert Google den konkreten Geschäftsbereich. Lies auch unseren Artikel zu <a href="/blog/sportinggoods-store-schema-markup.html">SportingGoodsStore Schema Markup</a> für verwandte Typen.</p>
+            </div>
+
+            <h2>Warum lohnt sich HobbyShop Schema Markup für SEO?</h2>
+            <p>Wer im Netz nach einem Hobbyladen sucht, tippt meist sehr spezifische Suchanfragen ein: „Modellbauladen München", „Bastelbedarf Köln", „Angelgeschäft in der Nähe" oder „Wolladen Hamburg". Diese lokalen Suchanfragen haben hohe kaufmäßige Absicht (Commercial Intent) – die Person will kaufen, nicht nur informieren.</p>
+
+            <p>Mit korrektem <strong>Schema Markup für HobbyShop</strong> profitierst du von:</p>
+            <ul>
+                <li><strong>Bewertungssterne in der SERP</strong> – wenn du <code>aggregateRating</code> einbindest</li>
+                <li><strong>Öffnungszeiten direkt in Google</strong> – besonders im Google Business-ähnlichen Knowledge Panel</li>
+                <li><strong>Lokale Rich Snippets</strong> – Adresse, Telefon, Directions direkt sichtbar</li>
+                <li><strong>Besseres Ranking bei lokalen Suchanfragen</strong> – Google versteht dein Geschäft präziser</li>
+                <li><strong>Sprachsuche (Voice Search)</strong> – „Wo kaufe ich Modellbausätze in Düsseldorf?" wird besser beantwortet</li>
+            </ul>
+
+            <p>Laut unserer Analyse von <a href="/blog/seo-fehler-analyse-deutsche-unternehmen.html">198 deutschen Unternehmens-Websites</a> fehlt bei über 73 % der lokalen Einzelhändler ein vollständiges Schema Markup – das bedeutet freie Bahn für alle, die es richtig machen.</p>
+
+            <h2>Alle wichtigen Properties im Überblick</h2>
+            <p>Da <code>HobbyShop</code> alle Properties von <code>LocalBusiness</code> erbt, hast du eine große Auswahl. Diese Properties sind für Hobbyläden besonders relevant:</p>
+
+            <div class="overflow-x-auto">
+            <table class="property-table">
+                <thead>
+                    <tr>
+                        <th>Property</th>
+                        <th>Typ</th>
+                        <th>Wichtigkeit</th>
+                        <th>Beschreibung</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><code>@type</code></td><td>Text</td><td><span class="badge-required">Pflicht</span></td><td>Muss „HobbyShop" sein</td></tr>
+                    <tr><td><code>name</code></td><td>Text</td><td><span class="badge-required">Pflicht</span></td><td>Offizieller Name des Geschäfts</td></tr>
+                    <tr><td><code>address</code></td><td>PostalAddress</td><td><span class="badge-required">Pflicht</span></td><td>Vollständige Adresse für lokales SEO</td></tr>
+                    <tr><td><code>telephone</code></td><td>Text</td><td><span class="badge-recommended">Empfohlen</span></td><td>Telefonnummer im internationalen Format</td></tr>
+                    <tr><td><code>url</code></td><td>URL</td><td><span class="badge-recommended">Empfohlen</span></td><td>Website-URL des Geschäfts</td></tr>
+                    <tr><td><code>openingHoursSpecification</code></td><td>OpeningHoursSpecification</td><td><span class="badge-recommended">Empfohlen</span></td><td>Öffnungszeiten strukturiert angeben</td></tr>
+                    <tr><td><code>aggregateRating</code></td><td>AggregateRating</td><td><span class="badge-recommended">Empfohlen</span></td><td>Durchschnittsbewertung (z.B. Google Maps)</td></tr>
+                    <tr><td><code>geo</code></td><td>GeoCoordinates</td><td><span class="badge-recommended">Empfohlen</span></td><td>GPS-Koordinaten für Kartenintegration</td></tr>
+                    <tr><td><code>description</code></td><td>Text</td><td><span class="badge-optional">Optional</span></td><td>Kurzbeschreibung des Sortiments</td></tr>
+                    <tr><td><code>image</code></td><td>URL</td><td><span class="badge-optional">Optional</span></td><td>Foto des Geschäfts oder des Logos</td></tr>
+                    <tr><td><code>email</code></td><td>Text</td><td><span class="badge-optional">Optional</span></td><td>Kontakt-E-Mail-Adresse</td></tr>
+                    <tr><td><code>priceRange</code></td><td>Text</td><td><span class="badge-optional">Optional</span></td><td>Preissegment: €, €€, €€€</td></tr>
+                    <tr><td><code>paymentAccepted</code></td><td>Text</td><td><span class="badge-optional">Optional</span></td><td>Akzeptierte Zahlungsmethoden</td></tr>
+                    <tr><td><code>sameAs</code></td><td>URL</td><td><span class="badge-optional">Optional</span></td><td>Social Media, Google Maps, Yelp-Links</td></tr>
+                    <tr><td><code>currenciesAccepted</code></td><td>Text</td><td><span class="badge-optional">Optional</span></td><td>Akzeptierte Währungen (z.B. „EUR")</td></tr>
+                </tbody>
+            </table>
+            </div>
+
+            <h2>Vollständiges JSON-LD Beispiel für einen HobbyShop</h2>
+            <p>Hier ist ein vollständiges Beispiel für ein Modellbaugeschäft mit Bastelbedarf in München:</p>
+
+            <div class="code-block">&lt;script type="application/ld+json"&gt;
+{
+  "@context": "https://schema.org",
+  "@type": "HobbyShop",
+  "name": "Modellbau &amp; Bastelbedarf Meier",
+  "url": "https://www.modellbau-meier.de",
+  "telephone": "+49 89 12345678",
+  "email": "info@modellbau-meier.de",
+  "description": "Ihr Fachgeschäft für Modellbau, Bastelbedarf und Kreativmaterial in München-Schwabing. Große Auswahl an Modellbausätzen, RC-Fahrzeugen, Farben und Werkzeug.",
+  "image": "https://www.modellbau-meier.de/images/laden.jpg",
+  "priceRange": "€€",
+  "paymentAccepted": "Cash, Debit card, Credit card",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Leopoldstraße 42",
+    "postalCode": "80802",
+    "addressLocality": "München",
+    "addressRegion": "Bayern",
+    "addressCountry": "DE"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 48.1549,
+    "longitude": 11.5832
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+      "opens": "10:00",
+      "closes": "18:30"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "10:00",
+      "closes": "16:00"
+    }
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "reviewCount": "94",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "sameAs": [
+    "https://www.facebook.com/modellbau-meier",
+    "https://www.instagram.com/modellbau_meier",
+    "https://www.google.com/maps/place/modellbau-meier-münchen"
+  ]
+}
+&lt;/script&gt;</div>
+
+            <h2>Schritt-für-Schritt: So implementierst du den Code</h2>
+            <p>Die Implementierung von HobbyShop Schema Markup ist unkompliziert. Folge diesen Schritten:</p>
+
+            <h3>Schritt 1: Code vorbereiten</h3>
+            <p>Nutze unser kostenloses Tool, um das JSON-LD für dein Geschäft zu generieren – du musst nur das Formular ausfüllen: <a href="/tools/sportinggoods-store-schema-generator.html">SportingGoodsStore &amp; HobbyShop Schema Generator</a>. Das Tool unterstützt den HobbyShop-Typ direkt über das Drop-down-Menü.</p>
+
+            <h3>Schritt 2: Code in den Head-Bereich einfügen</h3>
+            <p>Platziere den vollständigen <code>&lt;script type="application/ld+json"&gt;</code>-Block im <code>&lt;head&gt;</code>-Bereich deiner Website – idealerweise direkt nach dem öffnenden <code>&lt;head&gt;</code>-Tag oder kurz vor dem schließenden <code>&lt;/head&gt;</code>.</p>
+
+            <div class="warn-box">
+                <p class="text-yellow-300 text-sm font-medium mb-1">Wichtig: Eine Seite = ein Haupttyp</p>
+                <p class="text-yellow-200 text-sm">Binde das HobbyShop-Schema nur auf der <strong>Startseite oder der Über-uns-Seite</strong> deines Shops ein – nicht auf jeder Produktseite. Für Produktseiten nutze stattdessen <a href="/blog/product-schema-markup-seo.html" class="text-yellow-300 hover:underline">Product Schema Markup</a>.</p>
+            </div>
+
+            <h3>Schritt 3: Code validieren</h3>
+            <p>Prüfe das fertige Markup mit dem <a href="/tools/json-ld-structured-data-validator.html">JSON-LD Structured Data Validator</a>. Achte auf Warnungen bei fehlenden empfohlenen Properties – diese sind zwar nicht Pflicht, aber sie verbessern die Darstellung in Google.</p>
+
+            <h3>Schritt 4: Google Search Console überwachen</h3>
+            <p>Nach dem Deployment kannst du in der Google Search Console unter „Verbesserungen" prüfen, ob Google dein neues Schema Markup erkannt hat. Bei strukturierten Daten-Fehlern siehst du dort auch konkrete Fehlermeldungen.</p>
+
+            <h2>Häufige Fehler beim HobbyShop Schema Markup</h2>
+            <p>Bei der Analyse tausender Websites fallen immer wieder dieselben Fehler auf:</p>
+
+            <h3>1. Falsche oder veraltete Öffnungszeiten</h3>
+            <p>Google zeigt Öffnungszeiten aus dem Schema Markup direkt in der SERP an. Stimmen die Zeiten nicht mit dem tatsächlichen Betrieb überein, kostet das Vertrauen – und kann sogar zu negativen Bewertungen führen. Halte die Öffnungszeiten aktuell, besonders rund um Feiertage.</p>
+
+            <h3>2. Inkonsistente NAP-Daten</h3>
+            <p><strong>NAP</strong> steht für Name, Address, Phone – die drei zentralen Kontaktdaten. Wenn diese im Schema Markup anders lauten als auf deiner Website, im Google My Business-Eintrag oder in Branchenverzeichnissen, schadet das deinem lokalen Ranking. Mehr dazu im Artikel <a href="/blog/nap-konsistenz-lokales-seo.html">NAP-Konsistenz für lokales SEO</a>.</p>
+
+            <h3>3. Fehlende Geo-Koordinaten</h3>
+            <p>Ohne <code>geo</code>-Property (Breitengrad/Längengrad) kann Google dein Geschäft nicht präzise in Maps und lokalen Suchergebnissen verorten. Die Koordinaten findest du einfach über Google Maps: rechts auf den Standort klicken → „Was ist hier?" → Koordinaten ablesen.</p>
+
+            <h3>4. Bewertungen aus veralteten Quellen</h3>
+            <p>Trage nur echte, aktuelle Bewertungen ein. Wenn dein Geschäft 4,8 Sterne bei 5 Bewertungen hat, trage auch genau diese Zahlen ein – nicht gerundete oder geschätzte Werte. Google kann die Plausibilität prüfen.</p>
+
+            <h3>5. Schema auf jeder Seite wiederholen</h3>
+            <p>Es genügt, das HobbyShop-Schema auf der Hauptseite zu platzieren. Wenn du es auf jeder Unterseite wiederholst, kann das als Spam gewertet werden. Ausnahme: Wenn du mehrere Filialen hast, kannst du je eine lokale Seite pro Filiale mit eigenem Schema anlegen.</p>
+
+            <h2>GardenStore und PetStore: Ähnliche Schema-Typen</h2>
+            <p>Wenn du nicht nur ein reines Hobbygeschäft betreibst, sondern ein Gartencenter oder eine Tierhandlung, gibt es spezifischere Typen. Mehr dazu findest du im Artikel <a href="/blog/gardenstore-petstore-schema-markup.html">GardenStore &amp; PetStore Schema Markup</a>. Die Implementierungslogik ist identisch – nur der <code>@type</code>-Wert unterscheidet sich.</p>
+
+            <h2>Erweiterte Optimierung: Was noch dazugehört</h2>
+            <p>Schema Markup ist nur ein Baustein eines vollständigen lokalen SEO-Setups. Für maximalen Effekt kombiniere das HobbyShop-Schema mit:</p>
+            <ul>
+                <li><strong>Google Business Profile</strong> – optimiertes Profil mit Fotos, Posts und Q&amp;A. Anleitung: <a href="/blog/google-my-business-optimieren.html">Google My Business optimieren</a></li>
+                <li><strong>Lokale Keywords</strong> – targetiere „Bastelbedarf [Stadt]", „Modellbauladen [Stadtteil]". Mehr dazu: <a href="/blog/lokale-keywords-finden-einsetzen.html">Lokale Keywords finden und einsetzen</a></li>
+                <li><strong>NAP-Konsistenz</strong> – gleiche Kontaktdaten in allen Verzeichnissen: <a href="/blog/nap-konsistenz-lokales-seo.html">NAP-Konsistenz für lokales SEO</a></li>
+                <li><strong>Lokale Backlinks</strong> – Verlinkungen von lokalen Websites und Blogs: <a href="/blog/lokale-backlinks-aufbauen.html">Lokale Backlinks aufbauen</a></li>
+            </ul>
+
+            <h2>Kostenloser Schema-Generator für HobbyShop</h2>
+            <p>Du möchtest den JSON-LD Code nicht manuell schreiben? Nutze unseren kostenlosen Generator: <a href="/tools/sportinggoods-store-schema-generator.html">SportingGoodsStore &amp; HobbyShop Schema Generator</a>. Fülle einfach das Formular aus – Name, Adresse, Öffnungszeiten, Bewertungen – und kopiere den fertigen Code direkt in deine Website.</p>
+
+            <div class="tip-box">
+                <p class="text-emerald-300 text-sm font-medium mb-1">Validation nicht vergessen!</p>
+                <p class="text-emerald-200 text-sm">Nach dem Einfügen: Code immer mit dem <a href="/tools/json-ld-structured-data-validator.html" class="text-emerald-300 hover:underline">JSON-LD Structured Data Validator</a> prüfen. Fehler im Schema können dazu führen, dass Google das Markup ignoriert.</p>
+            </div>
+
+            <h2>Fazit</h2>
+            <p><strong>HobbyShop Schema Markup</strong> ist ein einfacher, aber wirkungsvoller SEO-Hebel für Bastlerläden, Modellbaugeschäfte und Kreativläden. Der Implementierungsaufwand ist gering – wenige Minuten Code-Einbau – aber die potenziellen Vorteile sind erheblich: Bewertungssterne in der SERP, Öffnungszeiten direkt sichtbar und besseres lokales Ranking.</p>
+            <p>Nutze unseren kostenlosen <a href="/tools/sportinggoods-store-schema-generator.html">HobbyShop Schema Generator</a>, um in wenigen Minuten fertiges JSON-LD für dein Geschäft zu erstellen. Für den vollständigen Einstieg in strukturierte Daten empfehlen wir außerdem unseren Leitfaden <a href="/blog/localbusiness-schema-markup-anleitung.html">LocalBusiness Schema Markup: Vollständige Anleitung 2026</a>.</p>
+
+        </div>
+    </main>
+
+    <!-- Related Articles -->
+    <section class="pb-16 px-4">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-2xl font-bold text-white mb-8">Verwandte Artikel</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <a href="/blog/sportinggoods-store-schema-markup.html" class="block bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-blue-500/50 transition-all">
+                    <h3 class="text-white font-semibold mb-2 text-sm">SportingGoodsStore Schema Markup</h3>
+                    <p class="text-gray-400 text-xs">Sportartikelgeschäfte für Google optimieren</p>
+                </a>
+                <a href="/blog/gardenstore-petstore-schema-markup.html" class="block bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-blue-500/50 transition-all">
+                    <h3 class="text-white font-semibold mb-2 text-sm">GardenStore &amp; PetStore Schema</h3>
+                    <p class="text-gray-400 text-xs">Gartencenter und Tierhandlungen optimieren</p>
+                </a>
+                <a href="/blog/localbusiness-schema-markup-anleitung.html" class="block bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-blue-500/50 transition-all">
+                    <h3 class="text-white font-semibold mb-2 text-sm">LocalBusiness Schema Markup</h3>
+                    <p class="text-gray-400 text-xs">Die vollständige Anleitung für alle Branchen</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-16 px-4 bg-gradient-to-r from-blue-900/30 to-indigo-900/30 border-t border-b border-white/5">
+        <div class="max-w-3xl mx-auto text-center">
+            <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">Kostenlose SEO-Analyse für deinen Onlineshop</h2>
+            <p class="text-gray-400 mb-8">Prüfe jetzt, welche SEO-Potenziale deine Website noch hat – kostenlos und sofort.</p>
+            <a href="/" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all inline-block">Jetzt analysieren</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/10 bg-slate-900/50 py-12 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="flex items-center gap-2">
+                    <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                    <span class="text-lg font-bold text-white">Shift07</span>
+                </div>
+                <div class="flex items-center space-x-6 text-sm text-gray-400">
+                    <a href="/impressum.html" class="hover:text-white transition-colors">Impressum</a>
+                    <a href="/datenschutz.html" class="hover:text-white transition-colors">Datenschutz</a>
+                    <a href="/agb.html" class="hover:text-white transition-colors">AGB</a>
+                </div>
+                <p class="text-sm text-gray-500">&copy; 2026 Thümmler AI GmbH</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
