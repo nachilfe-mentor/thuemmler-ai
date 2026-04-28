@@ -5,22 +5,30 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Tue, 28 Apr 2026 05:20:35 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 28 Apr 2026 06:57:44 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>ElectronicsStore Schema Markup: Elektronikfachhandel für Google optimieren</title>
+      <link>https://shift07.ai/blog/electronicsstore-schema-markup.html</link>
+      <guid>https://shift07.ai/blog/electronicsstore-schema-markup.html</guid>
+      <pubDate>Tue, 28 Apr 2026 06:57:26 +0000</pubDate>
+      <description>ElectronicsStore Schema Markup: vollständige JSON-LD Anleitung für Elektronikfachhandel, Computer- und Handygeschäfte. Mit Beispiel-Code, Properties-Tabelle und ComputerStore-Erweiterung.</description>
+      <category>SEO</category>
+    </item>
+    <item>
+      <title>ComputerStore Schema Markup: JSON-LD für Computerfachgeschäfte richtig einsetzen</title>
+      <link>https://shift07.ai/blog/computerstore-schema-markup.html</link>
+      <guid>https://shift07.ai/blog/computerstore-schema-markup.html</guid>
+      <pubDate>Tue, 28 Apr 2026 06:56:42 +0000</pubDate>
+      <description>ComputerStore Schema Markup: vollständige JSON-LD Anleitung für Computerfachgeschäfte, IT-Händler und Technikläden. Mit Beispiel-Code, Properties-Übersicht und Kombination mit ElectronicsStore.</description>
+      <category>SEO</category>
+    </item>
     <item>
       <title>MusicStore &amp;amp; VideoStore Schema Markup: Musikhandel und Videotheken für Google</title>
       <link>https://shift07.ai/blog/musicstore-videostore-schema-markup.html</link>
       <guid>https://shift07.ai/blog/musicstore-videostore-schema-markup.html</guid>
       <pubDate>Tue, 28 Apr 2026 05:20:14 +0000</pubDate>
       <description>MusicStore und VideoStore Schema Markup: vollständige JSON-LD Anleitung für Musikfachhandel, Plattenshops und Videotheken. Mit Beispiel-Code, Properties-Tabelle und Implementierungs-Checkliste.</description>
-      <category>SEO</category>
-    </item>
-    <item>
-      <title>ElectronicsStore Schema Markup: Elektronikfachhandel für Google optimieren</title>
-      <link>https://shift07.ai/blog/electronicsstore-schema-markup.html</link>
-      <guid>https://shift07.ai/blog/electronicsstore-schema-markup.html</guid>
-      <pubDate>Tue, 28 Apr 2026 05:14:29 +0000</pubDate>
-      <description>ElectronicsStore Schema Markup: vollständige JSON-LD Anleitung für Elektronikfachhandel, Computer- und Handygeschäfte. Mit Beispiel-Code, Properties-Tabelle und ComputerStore-Erweiterung.</description>
       <category>SEO</category>
     </item>
     <item>
@@ -158,14 +166,6 @@
       <pubDate>Sat, 25 Apr 2026 04:13:50 +0000</pubDate>
       <description>Wir haben 93 Physiotherapie-Praxis-Websites in Deutschland analysiert. Ergebnis: 72% haben kein Schema Markup, 67% kämpfen mit Title-Tag-Problemen, 58% fehlt eine optimierte Meta-Description. Die vollständige Auswertung.</description>
       <category>Datenanalyse</category>
-    </item>
-    <item>
-      <title>ProfessionalService Schema Markup: Unternehmensberater, Architekten und Dienstleister für Google</title>
-      <link>https://shift07.ai/blog/professionalservice-schema-markup.html</link>
-      <guid>https://shift07.ai/blog/professionalservice-schema-markup.html</guid>
-      <pubDate>Sat, 25 Apr 2026 02:37:28 +0000</pubDate>
-      <description>ProfessionalService Schema Markup vollständig erklärt: JSON-LD für Unternehmensberater, Architekten, Steuerberater und Dienstleister. Alle Properties, Praxisbeispiele und Fehler vermeiden 2026.</description>
-      <category>Schema Markup</category>
     </item>
   </channel>
 </rss>
