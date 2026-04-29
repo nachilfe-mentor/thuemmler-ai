@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Wed, 29 Apr 2026 04:58:06 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 29 Apr 2026 05:01:17 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>ToyStore &amp; GameStore Schema Markup: JSON-LD für Spielzeugläden und Spielegeschäfte</title>
+      <link>https://shift07.ai/blog/toystore-gamestore-schema-markup.html</link>
+      <guid>https://shift07.ai/blog/toystore-gamestore-schema-markup.html</guid>
+      <pubDate>Wed, 29 Apr 2026 05:00:55 +0000</pubDate>
+      <description>ToyStore und GameStore Schema Markup richtig implementieren: Vollständige JSON-LD Anleitung für Spielzeugläden, Brettspielgeschäfte und Videospiel-Stores — inkl. Altersempfehlungen und Produktdaten.</description>
+      <category>Schema Markup</category>
+    </item>
     <item>
       <title>HardwareStore Schema Markup: JSON-LD für Baumärkte und Werkzeughandel</title>
       <link>https://shift07.ai/blog/hardwarestore-schema-markup.html</link>
@@ -157,14 +165,6 @@
       <guid>https://shift07.ai/blog/homeandconstructionbusiness-schema-markup.html</guid>
       <pubDate>Sun, 26 Apr 2026 03:09:34 +0000</pubDate>
       <description>HomeAndConstructionBusiness Schema Markup für Maler, Elektriker, Dachdecker und Handwerker: JSON-LD richtig einsetzen für Google Rich Results, lokale Suche und mehr Aufträge.</description>
-      <category>SEO</category>
-    </item>
-    <item>
-      <title>InsuranceAgency Schema Markup: Versicherungsmakler für Google optimieren</title>
-      <link>https://shift07.ai/blog/insuranceagency-schema-markup.html</link>
-      <guid>https://shift07.ai/blog/insuranceagency-schema-markup.html</guid>
-      <pubDate>Sun, 26 Apr 2026 01:31:14 +0000</pubDate>
-      <description>InsuranceAgency Schema Markup richtig implementieren: JSON-LD für Versicherungsmakler und Versicherungsagenturen — mit vollständigem Beispiel, allen Properties und Validierung.</description>
       <category>SEO</category>
     </item>
   </channel>
