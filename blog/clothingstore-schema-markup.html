@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K1S1RXBDS8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K1S1RXBDS8');
+    </script>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8475857002943858" crossorigin="anonymous"></script>
+    <title>ClothingStore Schema Markup: JSON-LD für Modeboutiquen und Bekleidungsgeschäfte | Shift07</title>
+    <meta name="description" content="ClothingStore Schema Markup richtig implementieren: JSON-LD für Modeboutiquen, Bekleidungsgeschäfte und Accessoire-Shops. Mit Code-Beispielen, Checkliste und Tipps für Rich Snippets.">
+    <meta name="keywords" content="ClothingStore Schema Markup, Modeboutique JSON-LD, Bekleidungsgeschäft structured data, ClothingStore Schema Generator, Mode SEO Schema">
+    <meta name="author" content="Laurenz Thümmler">
+    <link rel="icon" type="image/png" href="/logo.png">
+    <link rel="canonical" href="https://shift07.ai/blog/clothingstore-schema-markup.html">
+    <link rel="alternate" type="application/rss+xml" title="Shift07 Blog" href="https://shift07.ai/feed.xml">
+    <!-- Open Graph -->
+    <meta property="og:title" content="ClothingStore Schema Markup: JSON-LD für Modeboutiquen und Bekleidungsgeschäfte">
+    <meta property="og:description" content="ClothingStore Schema Markup richtig implementieren: JSON-LD für Modeboutiquen, Bekleidungsgeschäfte und Accessoire-Shops mit Code-Beispielen und Checkliste.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://shift07.ai/blog/clothingstore-schema-markup.html">
+    <meta property="og:image" content="https://shift07.ai/blog/images/clothingstore-schema-markup.png">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="Shift07">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ClothingStore Schema Markup: JSON-LD für Modeboutiquen">
+    <meta name="twitter:description" content="ClothingStore JSON-LD richtig einsetzen: Code-Beispiele, alle Properties und Checkliste für Bekleidungsgeschäfte.">
+    <meta name="twitter:image" content="https://shift07.ai/blog/images/clothingstore-schema-markup.png">
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "ClothingStore Schema Markup: JSON-LD für Modeboutiquen und Bekleidungsgeschäfte",
+      "description": "ClothingStore Schema Markup richtig implementieren: JSON-LD für Modeboutiquen, Bekleidungsgeschäfte und Accessoire-Shops mit Code-Beispielen und Checkliste.",
+      "image": "https://shift07.ai/blog/images/clothingstore-schema-markup.png",
+      "datePublished": "2026-04-29",
+      "dateModified": "2026-04-29",
+      "author": {
+        "@type": "Person",
+        "name": "Laurenz Thümmler",
+        "url": "https://shift07.ai"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Thümmler AI GmbH",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://shift07.ai/logo.png"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://shift07.ai/blog/clothingstore-schema-markup.html"
+      }
+    }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: { extend: { fontFamily: { 'inter': ['Inter', 'system-ui', '-apple-system', 'sans-serif'] } } }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+        html { scroll-behavior: smooth; }
+        .prose h2 { font-size: 1.6rem; font-weight: 700; color: white; margin: 2.5rem 0 1rem; }
+        .prose h3 { font-size: 1.2rem; font-weight: 600; color: #e2e8f0; margin: 2rem 0 0.75rem; }
+        .prose p { color: #94a3b8; line-height: 1.8; margin-bottom: 1.2rem; }
+        .prose ul, .prose ol { color: #94a3b8; margin: 1rem 0 1.5rem 1.5rem; }
+        .prose li { margin-bottom: 0.5rem; line-height: 1.7; }
+        .prose strong { color: #e2e8f0; }
+        .prose a { color: #60a5fa; text-decoration: underline; }
+        .prose a:hover { color: #93c5fd; }
+        .code-block {
+            background: rgba(15, 23, 42, 0.9);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            font-family: 'Courier New', monospace;
+            font-size: 0.82rem;
+            color: #7dd3fc;
+            line-height: 1.6;
+            overflow-x: auto;
+            white-space: pre;
+            margin: 1.5rem 0;
+        }
+        .info-box {
+            background: rgba(59, 130, 246, 0.08);
+            border-left: 4px solid #3b82f6;
+            padding: 1.25rem 1.5rem;
+            border-radius: 0 0.5rem 0.5rem 0;
+            margin: 1.5rem 0;
+        }
+        .tip-box {
+            background: rgba(16, 185, 129, 0.08);
+            border-left: 4px solid #10b981;
+            padding: 1.25rem 1.5rem;
+            border-radius: 0 0.5rem 0.5rem 0;
+            margin: 1.5rem 0;
+        }
+        .warning-box {
+            background: rgba(245, 158, 11, 0.08);
+            border-left: 4px solid #f59e0b;
+            padding: 1.25rem 1.5rem;
+            border-radius: 0 0.5rem 0.5rem 0;
+            margin: 1.5rem 0;
+        }
+        .checklist li { list-style: none; padding-left: 0; }
+        .checklist li::before { content: "✓ "; color: #10b981; font-weight: bold; }
+    </style>
+</head>
+<body class="bg-slate-900 text-white min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-slate-900/80 backdrop-blur-xl border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <a href="/" class="flex items-center gap-2">
+                    <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                    <span class="text-xl font-bold text-white">Shift07</span>
+                </a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="/" class="text-gray-300 hover:text-white transition-colors">SEO-Tool</a>
+                    <a href="/blog/" class="text-white font-medium border-b-2 border-blue-500 pb-0.5">Blog</a>
+                    <a href="/tools/" class="text-gray-300 hover:text-white transition-colors">Tools</a>
+                    <a href="/app/#/login" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-5 py-2 rounded-lg font-medium transition-all">Anmelden</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-gray-300 hover:text-white">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900/95 border-b border-white/10">
+            <div class="px-4 py-3 space-y-2">
+                <a href="/" class="block py-2 text-gray-300 hover:text-white">SEO-Tool</a>
+                <a href="/blog/" class="block py-2 text-white font-medium">Blog</a>
+                <a href="/tools/" class="block py-2 text-gray-300 hover:text-white">Tools</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="pt-24 pb-8 px-4">
+        <div class="max-w-4xl mx-auto">
+            <div class="flex items-center gap-2 text-sm text-gray-400 mb-6">
+                <a href="/blog/" class="hover:text-white transition-colors">Blog</a>
+                <span>/</span>
+                <span class="text-blue-400">Schema Markup</span>
+            </div>
+            <h1 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-white mb-6 leading-tight">
+                ClothingStore Schema Markup: JSON-LD für Modeboutiquen und Bekleidungsgeschäfte
+            </h1>
+            <p class="text-xl text-gray-400 mb-8">
+                Mit dem richtigen <strong class="text-white">ClothingStore Schema Markup</strong> machst du dein Bekleidungsgeschäft bei Google sichtbarer: Rich Snippets mit Öffnungszeiten, Bewertungen und Produktkategorien direkt in den Suchergebnissen.
+            </p>
+            <div class="flex flex-wrap items-center gap-4 text-sm text-gray-500 mb-8">
+                <span>von Laurenz Thümmler</span>
+                <span>·</span>
+                <span>29. April 2026</span>
+                <span>·</span>
+                <span>12 Min. Lesezeit</span>
+            </div>
+            <img src="/blog/images/clothingstore-schema-markup.png" alt="ClothingStore Schema Markup JSON-LD für Modeboutiquen" class="w-full rounded-2xl mb-10 object-cover" style="max-height:400px;">
+        </div>
+    </section>
+
+    <!-- Article Content -->
+    <article class="pb-20 px-4">
+        <div class="max-w-4xl mx-auto prose">
+
+            <h2>Was ist ClothingStore Schema Markup?</h2>
+            <p>
+                <strong>ClothingStore</strong> ist ein spezialisierter Schema.org-Typ für Bekleidungsgeschäfte, Modeboutiquen, Accessoire-Shops und Textilhändler. Es ist ein direkter Untertyp von <strong>Store → LocalBusiness → Organization</strong> und teilt alle Properties dieser übergeordneten Typen.
+            </p>
+            <p>
+                Mit ClothingStore-Schema-Markup teilst du Google strukturierte Daten über dein Modegeschäft mit: Name, Adresse, Öffnungszeiten, Bewertungen, Preiskategorie und Produktsortiment. Google kann diese Daten für <strong>Rich Snippets in der lokalen Suche</strong> nutzen — besonders wertvoll, wenn Kunden nach "Modeboutique München" oder "Damenbekleidung Köln" suchen.
+            </p>
+
+            <div class="info-box">
+                <p class="text-blue-300 font-semibold mb-1">Schema.org-Hierarchie für Bekleidungsgeschäfte</p>
+                <p class="text-gray-400 text-sm mb-0">Thing → Organization → LocalBusiness → Store → <strong class="text-white">ClothingStore</strong></p>
+                <p class="text-gray-400 text-sm mt-1">Verwandte Typen: JewelryStore (Schmuck), ShoeStore (Schuhe), AccessoryStore (Accessoires)</p>
+            </div>
+
+            <h2>Warum ClothingStore Schema für Mode-Shops wichtig ist</h2>
+            <p>
+                Der lokale Modemarkt ist intensiv umkämpft: Ketten wie Zara oder H&amp;M dominieren bundesweit, aber <strong>lokale Modeboutiquen punkten mit Individualität und Beratung</strong>. Genau hier hilft strukturiertes Schema Markup:
+            </p>
+            <ul>
+                <li><strong>Lokale Suchanfragen gewinnen:</strong> "Modeboutique [Stadt]" zeigt im Local Pack (Google Maps-Einträge mit Öffnungszeiten und Bewertungssternen) — mit Schema Markup optimierst du genau diese Anzeige.</li>
+                <li><strong>Bewertungssterne in der Suche:</strong> AggregateRating-Daten aus deinem Schema Markup können als Sterne direkt unter deinem Suchergebnis erscheinen.</li>
+                <li><strong>Öffnungszeiten auf einen Blick:</strong> Google zeigt "Jetzt geöffnet" oder "Schließt um 18:00" in den Suchergebnissen — direkt aus deinen OpeningHoursSpecification-Daten.</li>
+                <li><strong>E-E-A-T stärken:</strong> Vollständige strukturierte Daten signalisieren Google Vertrauenswürdigkeit und Professionalität.</li>
+            </ul>
+
+            <h2>Der vollständige ClothingStore JSON-LD Code</h2>
+            <p>
+                Hier ist ein vollständiges Beispiel für eine Modeboutique mit allen relevanten Properties:
+            </p>
+
+            <div class="code-block">&lt;script type="application/ld+json"&gt;
+{
+  "@context": "https://schema.org",
+  "@type": "ClothingStore",
+  "name": "Boutique Élégance München",
+  "description": "Ihre Modeboutique für Damen- und Herrenmode in München. Sorgfältig kuratierte Kollektionen von europäischen Designern.",
+  "url": "https://boutique-elegance-muenchen.de",
+  "telephone": "+49 89 98765432",
+  "email": "info@boutique-elegance-muenchen.de",
+  "priceRange": "€€€",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Maximilianstraße 12",
+    "postalCode": "80539",
+    "addressLocality": "München",
+    "addressRegion": "Bayern",
+    "addressCountry": "DE"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 48.139,
+    "longitude": 11.584
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+      "opens": "10:00",
+      "closes": "19:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "10:00",
+      "closes": "18:00"
+    }
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "reviewCount": "134",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Sortiment Boutique Élégance",
+    "itemListElement": [
+      { "@type": "OfferCatalog", "name": "Damenbekleidung" },
+      { "@type": "OfferCatalog", "name": "Herrenbekleidung" },
+      { "@type": "OfferCatalog", "name": "Accessoires &amp; Taschen" },
+      { "@type": "OfferCatalog", "name": "Schuhe" }
+    ]
+  },
+  "sameAs": "https://maps.google.com/maps?cid=DEIN-CID"
+}
+&lt;/script&gt;</div>
+
+            <div class="tip-box">
+                <p class="text-emerald-300 font-semibold mb-1">Tipp: priceRange richtig einsetzen</p>
+                <p class="text-gray-400 text-sm mb-0">Nutze priceRange als relativen Indikator: € (günstig/Fast Fashion), €€ (mittel/Mainstream), €€€ (gehoben/Designerboutique). Google zeigt diesen Wert oft im Knowledge Panel und hilft Kunden, die richtige Boutique für ihr Budget zu finden.</p>
+            </div>
+
+            <h2>Alle wichtigen ClothingStore Properties im Überblick</h2>
+
+            <h3>Pflichtfelder (immer angeben)</h3>
+            <ul>
+                <li><strong>@type: "ClothingStore"</strong> — Der Schema-Typ</li>
+                <li><strong>name</strong> — Vollständiger Name des Geschäfts (wie auf dem Schild)</li>
+                <li><strong>address</strong> — PostalAddress mit streetAddress, postalCode, addressLocality, addressCountry</li>
+            </ul>
+
+            <h3>Empfohlene Felder (deutlich mehr SEO-Potenzial)</h3>
+            <ul>
+                <li><strong>url</strong> — Die Website-URL (Startseite oder spezifische Filialseite)</li>
+                <li><strong>telephone</strong> — Im internationalen Format (+49 ...)</li>
+                <li><strong>openingHoursSpecification</strong> — Strukturierte Öffnungszeiten für "Jetzt geöffnet"-Anzeige</li>
+                <li><strong>aggregateRating</strong> — Bewertungssterne (nur wenn echte, verifizierbare Bewertungen vorliegen)</li>
+                <li><strong>priceRange</strong> — €, €€ oder €€€ für Preisindikator</li>
+                <li><strong>geo</strong> — GPS-Koordinaten für präzises Local Pack-Ranking</li>
+                <li><strong>description</strong> — Kurze, keyword-reiche Beschreibung des Geschäfts</li>
+                <li><strong>image</strong> — URL zu einem repräsentativen Foto des Geschäfts</li>
+                <li><strong>sameAs</strong> — Google My Business URL für Datenkonsistenz</li>
+            </ul>
+
+            <h3>Optionale Felder</h3>
+            <ul>
+                <li><strong>hasOfferCatalog</strong> — Produktkategorien strukturiert auflisten</li>
+                <li><strong>paymentAccepted</strong> — Akzeptierte Zahlungsmethoden ("Cash, Credit Card, SEPA")</li>
+                <li><strong>email</strong> — Kontakt-E-Mail-Adresse</li>
+                <li><strong>currenciesAccepted</strong> — Akzeptierte Währungen ("EUR")</li>
+                <li><strong>areaServed</strong> — Bedientes Einzugsgebiet</li>
+                <li><strong>founder</strong> — Person-Objekt für den Gründer (stärkt E-E-A-T)</li>
+                <li><strong>foundingDate</strong> — Gründungsjahr des Geschäfts</li>
+            </ul>
+
+            <h2>Sonderfälle: JewelryStore, ShoeStore und Accessoire-Shops</h2>
+            <p>
+                Je nach Spezialisierung deines Geschäfts gibt es passendere Untertypen, die du statt ClothingStore verwenden kannst:
+            </p>
+
+            <div class="code-block"><!-- Für Schuhgeschäfte: -->
+"@type": "ShoeStore"
+
+<!-- Für Juweliere und Schmuckläden: -->
+"@type": "JewelryStore"
+
+<!-- Für Accessoire-Spezialisten (Taschen, Gürtel, Hüte): -->
+"@type": "AccessoryStore"
+
+<!-- Für gemischte Mode + Schuhe + Accessoires: -->
+"@type": "ClothingStore"  &lt;-- am flexibelsten</div>
+
+            <p>
+                Wenn du sowohl Kleidung als auch Schuhe und Accessoires verkaufst, ist <strong>ClothingStore der richtige Typ</strong> — er deckt das breiteste Spektrum ab. JewelryStore und ShoeStore nutzt du nur, wenn das der klar dominierende Schwerpunkt ist.
+            </p>
+
+            <div class="info-box">
+                <p class="text-blue-300 font-semibold mb-1">Kann ich mehrere @types kombinieren?</p>
+                <p class="text-gray-400 text-sm mb-0">Ja, über ein @graph-Array kannst du mehrere Entitäten beschreiben. Für eine Modeboutique mit Änderungsschneiderei kannst du ClothingStore + Service kombinieren. Das ist jedoch aufwendig — für die meisten Geschäfte reicht ein einzelner ClothingStore-Eintrag vollkommen aus.</p>
+            </div>
+
+            <h2>Öffnungszeiten korrekt einbinden</h2>
+            <p>
+                OpeningHoursSpecification ist eine der wichtigsten Properties für lokale Geschäfte. Google zeigt "Jetzt geöffnet" oder "Schließt in 2 Stunden" direkt in den Suchergebnissen an — ein starkes Signal für kaufbereite Kunden:
+            </p>
+
+            <div class="code-block">"openingHoursSpecification": [
+  {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+    "opens": "10:00",
+    "closes": "19:00"
+  },
+  {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": "Saturday",
+    "opens": "10:00",
+    "closes": "18:00"
+  },
+  {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": "Sunday",
+    "opens": "11:00",
+    "closes": "17:00"
+  }
+]</div>
+
+            <p>
+                Für Geschäfte mit Mittagspause (z.B. kleinere Boutiquen auf dem Land) verwendest du zwei Einträge pro Wochentag mit unterschiedlichen Opens/Closes-Zeiten. Mehr dazu in unserem Artikel zu <a href="/blog/openinghours-schema-markup-seo.html">OpeningHoursSpecification Schema Markup</a>.
+            </p>
+
+            <h2>Bewertungen korrekt einbinden</h2>
+            <p>
+                AggregateRating-Daten können Bewertungssterne direkt in den Google-Suchergebnissen erzeugen. <strong>Wichtige Regel:</strong> Die angegebenen Bewertungen müssen real und verifizierbar sein — keine gefälschten oder selbst erstellten Bewertungen.
+            </p>
+
+            <div class="code-block">"aggregateRating": {
+  "@type": "AggregateRating",
+  "ratingValue": "4.8",
+  "reviewCount": "134",
+  "bestRating": "5",
+  "worstRating": "1"
+}</div>
+
+            <div class="warning-box">
+                <p class="text-amber-300 font-semibold mb-1">Achtung: Nur echte Bewertungen angeben</p>
+                <p class="text-gray-400 text-sm mb-0">Google prüft AggregateRating-Angaben zunehmend. Nutze nur Bewertungen, die echte Kunden hinterlassen haben (Google, Trustpilot, etc.). Gefälschte Bewertungen führen zu manuellem Penalty und Verlust von Rich Snippets.</p>
+            </div>
+
+            <h2>hasOfferCatalog: Produktkategorien strukturieren</h2>
+            <p>
+                Mit <strong>hasOfferCatalog</strong> kannst du Google mitteilen, welche Produktkategorien dein Geschäft führt. Das hilft bei kategorienspezifischen Suchanfragen:
+            </p>
+
+            <div class="code-block">"hasOfferCatalog": {
+  "@type": "OfferCatalog",
+  "name": "Sortiment Boutique Élégance",
+  "itemListElement": [
+    { "@type": "OfferCatalog", "name": "Damenbekleidung" },
+    { "@type": "OfferCatalog", "name": "Herrenbekleidung" },
+    { "@type": "OfferCatalog", "name": "Accessoires &amp; Taschen" },
+    { "@type": "OfferCatalog", "name": "Schuhe" },
+    { "@type": "OfferCatalog", "name": "Abendmode" }
+  ]
+}</div>
+
+            <h2>GPS-Koordinaten für Local Pack-Rankings</h2>
+            <p>
+                GeoCoordinates helfen Google, deinen Standort präzise zu bestimmen. Das ist besonders wichtig, wenn deine Adresse in Google Maps leicht von deiner tatsächlichen Position abweicht (z.B. große Gebäude, Seitenstraßen):
+            </p>
+
+            <div class="code-block">"geo": {
+  "@type": "GeoCoordinates",
+  "latitude": 48.139,
+  "longitude": 11.584
+}</div>
+
+            <p>
+                Die genauen Koordinaten findest du über Google Maps: Rechtsklick auf deinen Standort → "Was ist hier?" — dann erscheinen Breitengrad und Längengrad. Alternativ findest du sie in deinem Google My Business-Eintrag.
+            </p>
+
+            <h2>ClothingStore mit sameAs verknüpfen</h2>
+            <p>
+                Die <strong>sameAs</strong>-Property verknüpft deinen Schema Markup-Eintrag mit externen Profilen — besonders wichtig für die Datenkonsistenz, die Google für Local Pack-Rankings auswertet:
+            </p>
+
+            <div class="code-block">"sameAs": [
+  "https://maps.google.com/maps?cid=DEIN-CID",
+  "https://www.instagram.com/boutique_elegance_muenchen",
+  "https://www.facebook.com/BoutiqueEleganceMuenchen"
+]</div>
+
+            <p>
+                Wichtig: Die URLs in sameAs müssen konsistent mit den Daten in deinem Schema Markup übereinstimmen. Verschiedene Namen oder Adressen zwischen den Profilen wirken sich negativ auf das Local SEO aus — mehr dazu in unserem Artikel zu <a href="/blog/nap-konsistenz-lokales-seo.html">NAP-Konsistenz für lokales SEO</a>.
+            </p>
+
+            <h2>Wo gehört der Code hin?</h2>
+            <p>
+                Den JSON-LD-Block fügst du in den <code>&lt;head&gt;</code>-Bereich deiner Website ein — am besten auf der Startseite und (bei Filialseiten) auf der entsprechenden Standortseite:
+            </p>
+
+            <div class="code-block">&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;title&gt;Boutique Élégance München – Ihre Modeboutique&lt;/title&gt;
+
+  &lt;!-- ClothingStore Schema Markup --&gt;
+  &lt;script type="application/ld+json"&gt;
+  {
+    "@context": "https://schema.org",
+    "@type": "ClothingStore",
+    "name": "Boutique Élégance München",
+    ...
+  }
+  &lt;/script&gt;
+&lt;/head&gt;</div>
+
+            <div class="tip-box">
+                <p class="text-emerald-300 font-semibold mb-1">Tipp: JSON-LD bevorzugen</p>
+                <p class="text-gray-400 text-sm mb-0">Google empfiehlt JSON-LD gegenüber Microdata oder RDFa für Schema Markup. JSON-LD ist einfacher zu pflegen und zu validieren — und lässt sich ohne Änderungen am HTML-Inhalt einfügen. Mehr dazu in unserem Artikel zu <a href="/blog/json-ld-microdata-rdfa-structured-data.html" class="text-emerald-400">JSON-LD vs. Microdata vs. RDFa</a>.</p>
+            </div>
+
+            <h2>Schema Markup validieren</h2>
+            <p>
+                Nach dem Einbinden unbedingt validieren:
+            </p>
+            <ul>
+                <li><strong>Shift07 JSON-LD Validator:</strong> <a href="/tools/json-ld-structured-data-validator.html">Strukturierte Daten kostenlos prüfen</a></li>
+                <li><strong>Google Rich Results Test:</strong> test.google.com/structured-data (offizielle Prüfung ob Google die Daten erkennt)</li>
+                <li><strong>Schema.org Validator:</strong> validator.schema.org (vollständige Schema.org-Konformitätsprüfung)</li>
+            </ul>
+
+            <h2>ClothingStore Schema Markup mit WordPress einbinden</h2>
+            <p>
+                Bei WordPress-Websites empfiehlt sich entweder:
+            </p>
+            <ul>
+                <li><strong>Rank Math oder Yoast SEO:</strong> Beide Plugins unterstützen LocalBusiness Schema Markup, das du dann zu ClothingStore anpassen kannst.</li>
+                <li><strong>Header &amp; Footer Scripts Plugin:</strong> Fügt den JSON-LD-Code direkt in den &lt;head&gt; ein, ohne Theme-Änderungen.</li>
+                <li><strong>Direkte Theme-Bearbeitung:</strong> In functions.php oder header.php einfügen — nur für erfahrene Nutzer.</li>
+            </ul>
+
+            <h2>Checkliste: ClothingStore Schema Markup richtig implementiert</h2>
+            <ul class="checklist">
+                <li>@type: "ClothingStore" verwendet (nicht nur "LocalBusiness" oder "Store")</li>
+                <li>Name identisch mit Google My Business-Eintrag</li>
+                <li>Vollständige Adresse mit streetAddress, postalCode, addressLocality, addressCountry: "DE"</li>
+                <li>Telefonnummer im internationalen Format (+49 ...)</li>
+                <li>Öffnungszeiten als OpeningHoursSpecification (nicht als String)</li>
+                <li>GPS-Koordinaten (GeoCoordinates) angegeben</li>
+                <li>AggregateRating nur mit echten, verifizierbaren Bewertungsdaten</li>
+                <li>priceRange mit €, €€ oder €€€ angegeben</li>
+                <li>sameAs mit Google My Business URL verknüpft</li>
+                <li>JSON-LD im &lt;head&gt;-Bereich der Seite</li>
+                <li>Validierung mit Google Rich Results Test durchgeführt</li>
+                <li>Konsistenz mit allen anderen Unternehmensprofilen geprüft (NAP)</li>
+            </ul>
+
+            <h2>Häufige Fehler beim ClothingStore Schema Markup</h2>
+
+            <h3>Fehler 1: Falsche Bewertungen</h3>
+            <p>
+                Der häufigste Fehler: Eine reviewCount von 500 angeben, obwohl nur 12 Google-Bewertungen vorhanden sind. Google kann solche Inkonsistenzen erkennen und ahndet sie mit Entzug der Rich Snippets.
+            </p>
+
+            <h3>Fehler 2: Veraltete Öffnungszeiten</h3>
+            <p>
+                Schema Markup-Öffnungszeiten und Google My Business-Öffnungszeiten stimmen nicht überein. Google wechselt dann zur GMB-Quelle und ignoriert dein Schema Markup. Immer synchron halten!
+            </p>
+
+            <h3>Fehler 3: Fehlende Telefonnummer im internationalen Format</h3>
+            <p>
+                "+49 89 12345678" statt "089 12345678" — das internationale Format ist Pflicht für korrekte Schema.org-Validierung.
+            </p>
+
+            <h3>Fehler 4: name mit Schema Markup-Informationen aufblähen</h3>
+            <p>
+                Nicht: "Boutique Élégance – Damen- und Herrenmode – München – Jetzt geöffnet". Der Name ist nur der echte Geschäftsname. Alle anderen Informationen gehören in die entsprechenden Properties.
+            </p>
+
+            <h2>Schnell starten: ClothingStore Schema Generator</h2>
+            <p>
+                Du möchtest deinen JSON-LD-Code ohne Tipp-Fehler und ohne manuelle Anpassung generieren? Unser kostenloser <a href="/tools/schema-markup-generator.html">LocalBusiness Schema Generator</a> erstellt vollständiges JSON-LD — Formular ausfüllen, kopieren, einfügen. Fertig.
+            </p>
+            <p>
+                Für die Überprüfung deines generierten Codes nutze unseren <a href="/tools/json-ld-structured-data-validator.html">JSON-LD Structured Data Validator</a> — er prüft Syntax und Schema.org-Konformität direkt im Browser.
+            </p>
+
+            <h2>Fazit</h2>
+            <p>
+                ClothingStore Schema Markup ist für Modeboutiquen und Bekleidungsgeschäfte ein vergleichsweise geringer Aufwand mit potenziell deutlichem Nutzen: bessere Sichtbarkeit in lokalen Suchergebnissen, Bewertungssterne in der SERP und eine stärkere E-E-A-T-Signalgebung. Der vollständige JSON-LD-Block aus diesem Artikel lässt sich in 15 Minuten einbinden und validieren.
+            </p>
+            <p>
+                <strong>Nächste Schritte:</strong> Kopiere das Codebeispiel oben, passe es auf dein Geschäft an und teste es mit dem Google Rich Results Test. Wenn der Test grünes Licht gibt, ist dein Schema Markup aktiv — Google wird es beim nächsten Crawl auswerten.
+            </p>
+            <p>
+                Weitere Schema-Markup-Anleitungen für Einzelhandel: <a href="/blog/electronicsstore-schema-markup.html">ElectronicsStore Schema Markup</a> · <a href="/blog/bookstore-officesupplies-schema-markup.html">BookStore Schema Markup</a> · <a href="/blog/gardenstore-petstore-schema-markup.html">GardenStore &amp; PetStore Schema Markup</a>.
+            </p>
+
+        </div>
+    </article>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/10 py-12 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center gap-2 mb-4">
+                        <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                        <span class="text-lg font-bold text-white">Shift07</span>
+                    </div>
+                    <p class="text-gray-400 text-sm">Kostenlose SEO-Tools und Anleitungen für Webmaster und lokale Unternehmen.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-white mb-3">Schema Markup</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="/blog/localbusiness-schema-markup-anleitung.html" class="hover:text-white transition-colors">LocalBusiness Schema</a></li>
+                        <li><a href="/blog/electronicsstore-schema-markup.html" class="hover:text-white transition-colors">ElectronicsStore Schema</a></li>
+                        <li><a href="/blog/bookstore-officesupplies-schema-markup.html" class="hover:text-white transition-colors">BookStore Schema</a></li>
+                        <li><a href="/blog/" class="hover:text-white transition-colors">Alle Artikel →</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-white mb-3">SEO-Tools</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="/tools/schema-markup-generator.html" class="hover:text-white transition-colors">LocalBusiness Generator</a></li>
+                        <li><a href="/tools/json-ld-structured-data-validator.html" class="hover:text-white transition-colors">JSON-LD Validator</a></li>
+                        <li><a href="/tools/" class="hover:text-white transition-colors">Alle Tools →</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-white mb-3">Unternehmen</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="/impressum.html" class="hover:text-white transition-colors">Impressum</a></li>
+                        <li><a href="/datenschutz.html" class="hover:text-white transition-colors">Datenschutz</a></li>
+                        <li><a href="/app/#/login" class="hover:text-white transition-colors">Anmelden</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-white/10 pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-gray-500 text-sm">© 2026 Thümmler AI GmbH. Alle Rechte vorbehalten.</p>
+                <p class="text-gray-600 text-xs">Leonardo-da-Vinci-Straße 15, 14467 Potsdam</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
