@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Wed, 29 Apr 2026 01:06:45 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 29 Apr 2026 02:56:29 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>HomeGoodsStore &amp; FurnitureStore Schema Markup: JSON-LD für Einrichtungshäuser</title>
+      <link>https://shift07.ai/blog/homegoodsstore-furniturestore-schema-markup.html</link>
+      <guid>https://shift07.ai/blog/homegoodsstore-furniturestore-schema-markup.html</guid>
+      <pubDate>Wed, 29 Apr 2026 02:56:05 +0000</pubDate>
+      <description>Mit HomeGoodsStore und FurnitureStore Schema Markup machst du dein Möbelgeschäft oder Einrichtungshaus bei Google sichtbarer. Vollständige JSON-LD Anleitung mit Beispielen für 2026.</description>
+      <category>Schema Markup</category>
+    </item>
     <item>
       <title>ClothingStore Schema Markup: JSON-LD für Modeboutiquen und Bekleidungsgeschäfte</title>
       <link>https://shift07.ai/blog/clothingstore-schema-markup.html</link>
@@ -158,14 +166,6 @@
       <pubDate>Sun, 26 Apr 2026 01:27:50 +0000</pubDate>
       <description>FinancialService Schema Markup richtig implementieren: JSON-LD für Finanzberater, Versicherungsmakler und Bankberater — mit Beispielen, allen Properties und Fehlervermeidung.</description>
       <category>SEO</category>
-    </item>
-    <item>
-      <title>AccountingService Schema Markup: Steuerberater für Google optimieren</title>
-      <link>https://shift07.ai/blog/accountingservice-schema-markup.html</link>
-      <guid>https://shift07.ai/blog/accountingservice-schema-markup.html</guid>
-      <pubDate>Sat, 25 Apr 2026 04:19:39 +0000</pubDate>
-      <description>AccountingService Schema Markup richtig implementieren: JSON-LD für Steuerberater, Wirtschaftsprüfer und Buchhalter. Mit konkreten Beispielen für hasOfferCatalog, areaServed und Bewertungen.</description>
-      <category>Schema Markup</category>
     </item>
   </channel>
 </rss>
