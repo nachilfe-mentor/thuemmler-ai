@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K1S1RXBDS8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K1S1RXBDS8');
+    </script>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8475857002943858" crossorigin="anonymous"></script>
+    <title>ClothingStore, ShoeStore & JewelryStore Schema Generator – JSON-LD kostenlos erstellen | Shift07</title>
+    <meta name="description" content="ClothingStore, ShoeStore und JewelryStore Schema Markup kostenlos generieren. JSON-LD für Modeboutiquen, Schuhgeschäfte und Schmuckläden — mit Öffnungszeiten, Bewertungen und Produktkatalog.">
+    <meta name="keywords" content="ClothingStore Schema Generator, ShoeStore Schema Markup, JewelryStore JSON-LD, Modeboutique Schema, Schuhgeschäft Schema, Schmuckladen Schema">
+    <meta name="author" content="Thümmler AI GmbH">
+    <link rel="icon" type="image/png" href="/logo.png">
+    <link rel="canonical" href="https://shift07.ai/tools/clothingstore-shoestore-jewelrystore-schema-generator.html">
+    <!-- Open Graph -->
+    <meta property="og:title" content="ClothingStore, ShoeStore & JewelryStore Schema Generator – JSON-LD kostenlos erstellen">
+    <meta property="og:description" content="ClothingStore, ShoeStore und JewelryStore Schema Markup kostenlos generieren. JSON-LD für Modeboutiquen, Schuhgeschäfte und Schmuckläden.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://shift07.ai/tools/clothingstore-shoestore-jewelrystore-schema-generator.html">
+    <meta property="og:image" content="https://shift07.ai/tools/images/clothingstore-shoestore-jewelrystore-schema-generator.png">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="Shift07">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ClothingStore, ShoeStore & JewelryStore Schema Generator">
+    <meta name="twitter:description" content="JSON-LD für Modeboutiquen, Schuhgeschäfte und Schmuckläden kostenlos generieren.">
+    <meta name="twitter:image" content="https://shift07.ai/tools/images/clothingstore-shoestore-jewelrystore-schema-generator.png">
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "ClothingStore, ShoeStore & JewelryStore Schema Generator",
+      "description": "ClothingStore, ShoeStore und JewelryStore Schema Markup kostenlos generieren. JSON-LD für Modeboutiquen, Schuhgeschäfte und Schmuckläden.",
+      "url": "https://shift07.ai/tools/clothingstore-shoestore-jewelrystore-schema-generator.html",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR"
+      },
+      "provider": {
+        "@type": "Organization",
+        "name": "Thümmler AI GmbH",
+        "url": "https://shift07.ai"
+      }
+    }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: rgba(15, 23, 42, 0.5); }
+        ::-webkit-scrollbar-thumb { background: rgba(59, 130, 246, 0.5); border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: rgba(59, 130, 246, 0.7); }
+        html { scroll-behavior: smooth; }
+        .glass {
+            background: rgba(255, 255, 255, 0.06);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .code-block {
+            background: rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 0.5rem;
+            overflow-x: auto;
+        }
+        .form-input {
+            background: rgba(255,255,255,0.07);
+            border: 1px solid rgba(255,255,255,0.15);
+            border-radius: 0.5rem;
+            color: white;
+            width: 100%;
+            padding: 0.6rem 0.9rem;
+            font-size: 0.95rem;
+            transition: border-color 0.2s;
+        }
+        .form-input:focus { outline: none; border-color: rgba(99,102,241,0.7); }
+        .form-input option { background: #1e293b; color: white; }
+        .form-label { color: rgba(255,255,255,0.75); font-size: 0.85rem; font-weight: 500; margin-bottom: 0.3rem; display: block; }
+        .section-divider { border-color: rgba(255,255,255,0.1); margin: 1.25rem 0; }
+        .day-row { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; }
+        .day-label { width: 60px; font-size: 0.82rem; color: rgba(255,255,255,0.6); flex-shrink: 0; }
+        .time-input { background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.15); border-radius: 0.4rem; color: white; padding: 0.35rem 0.5rem; font-size: 0.82rem; width: 80px; }
+        .time-input:focus { outline: none; border-color: rgba(99,102,241,0.7); }
+        .closed-check { accent-color: #6366f1; }
+    </style>
+</head>
+<body class="antialiased">
+    <div class="min-h-screen bg-gradient-to-br from-slate-900 via-pink-950 to-indigo-900">
+        <!-- Navigation -->
+        <nav class="bg-black/20 backdrop-blur-md border-b border-white/10">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center h-16">
+                    <a href="/" class="flex items-center gap-2">
+                        <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                        <span class="text-xl font-bold text-white">Shift07</span>
+                    </a>
+                    <div class="hidden md:flex items-baseline space-x-4">
+                        <a href="/" class="text-white hover:text-blue-300 px-3 py-2 text-sm font-medium transition-colors">SEO-Tool</a>
+                        <a href="/blog/" class="text-white hover:text-blue-300 px-3 py-2 text-sm font-medium transition-colors">Blog</a>
+                        <a href="/tools/" class="text-blue-300 px-3 py-2 text-sm font-medium">Tools</a>
+                        <a href="/app/#/login" class="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:from-blue-600 hover:to-purple-700 transition-all">Anmelden</a>
+                    </div>
+                    <button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="md:hidden text-white">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                    </button>
+                </div>
+                <div id="mobile-menu" class="hidden md:hidden pb-4">
+                    <a href="/" class="block text-white hover:text-blue-300 px-3 py-2 text-sm font-medium">SEO-Tool</a>
+                    <a href="/blog/" class="block text-white hover:text-blue-300 px-3 py-2 text-sm font-medium">Blog</a>
+                    <a href="/tools/" class="block text-blue-300 px-3 py-2 text-sm font-medium">Tools</a>
+                    <a href="/app/#/login" class="block text-white hover:text-blue-300 px-3 py-2 text-sm font-medium">Anmelden</a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero -->
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-6 text-center">
+            <div class="inline-flex items-center gap-2 bg-pink-500/20 text-pink-300 text-sm font-medium px-4 py-1.5 rounded-full mb-5">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3l14 9-14 9V3z"/></svg>
+                Kostenloser Schema Generator
+            </div>
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">
+                <span class="bg-gradient-to-r from-pink-400 via-rose-400 to-purple-400 bg-clip-text text-transparent">ClothingStore, ShoeStore &amp; JewelryStore</span><br>
+                <span class="text-white">Schema Generator</span>
+            </h1>
+            <p class="text-xl text-blue-200/80 max-w-2xl mx-auto">Erstelle professionelles JSON-LD Schema Markup für Modeboutiquen, Schuhgeschäfte und Schmuckläden — kostenlos und sofort einsatzbereit.</p>
+        </section>
+
+        <!-- Main Tool -->
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+            <div class="grid lg:grid-cols-2 gap-8">
+
+                <!-- Input Form -->
+                <div class="glass rounded-xl p-6 md:p-8">
+                    <h2 class="text-xl font-semibold text-white mb-6">Deine Angaben</h2>
+
+                    <!-- Geschäftstyp -->
+                    <div class="mb-4">
+                        <label class="form-label">Geschäftstyp *</label>
+                        <select id="storeType" class="form-input" onchange="generate()">
+                            <option value="ClothingStore">ClothingStore – Modeboutique / Bekleidungsgeschäft</option>
+                            <option value="ShoeStore">ShoeStore – Schuhgeschäft / Schuhladen</option>
+                            <option value="JewelryStore">JewelryStore – Schmuckladen / Juwelier</option>
+                            <option value="ClothingStore,ShoeStore">ClothingStore + ShoeStore – Mode &amp; Schuhe</option>
+                            <option value="ClothingStore,JewelryStore">ClothingStore + JewelryStore – Mode &amp; Schmuck</option>
+                        </select>
+                    </div>
+
+                    <hr class="section-divider">
+                    <p class="text-pink-300 text-xs font-semibold uppercase tracking-wider mb-3">Basisinformationen</p>
+
+                    <div class="grid grid-cols-1 gap-3 mb-4">
+                        <div>
+                            <label class="form-label">Geschäftsname *</label>
+                            <input type="text" id="name" class="form-input" placeholder="z.B. Mode Boutique Schiller" oninput="generate()">
+                        </div>
+                        <div>
+                            <label class="form-label">Alternativer Name / Marke</label>
+                            <input type="text" id="altName" class="form-input" placeholder="z.B. Boutique Schiller" oninput="generate()">
+                        </div>
+                        <div>
+                            <label class="form-label">Beschreibung</label>
+                            <input type="text" id="description" class="form-input" placeholder="z.B. Ihr Modeboutique in Hamburg mit aktuellen Kollektionen" oninput="generate()">
+                        </div>
+                        <div>
+                            <label class="form-label">Website-URL</label>
+                            <input type="url" id="url" class="form-input" placeholder="https://www.boutique-schiller.de" oninput="generate()">
+                        </div>
+                    </div>
+
+                    <hr class="section-divider">
+                    <p class="text-pink-300 text-xs font-semibold uppercase tracking-wider mb-3">Kontakt &amp; Adresse</p>
+
+                    <div class="grid grid-cols-2 gap-3 mb-4">
+                        <div class="col-span-2">
+                            <label class="form-label">Straße &amp; Hausnummer</label>
+                            <input type="text" id="street" class="form-input" placeholder="Mönckebergstraße 7" oninput="generate()">
+                        </div>
+                        <div>
+                            <label class="form-label">PLZ</label>
+                            <input type="text" id="postalCode" class="form-input" placeholder="20095" oninput="generate()">
+                        </div>
+                        <div>
+                            <label class="form-label">Stadt</label>
+                            <input type="text" id="city" class="form-input" placeholder="Hamburg" oninput="generate()">
+                        </div>
+                        <div>
+                            <label class="form-label">Telefon</label>
+                            <input type="text" id="phone" class="form-input" placeholder="+49-40-555-0100" oninput="generate()">
+                        </div>
+                        <div>
+                            <label class="form-label">E-Mail</label>
+                            <input type="email" id="email" class="form-input" placeholder="info@boutique-schiller.de" oninput="generate()">
+                        </div>
+                        <div>
+                            <label class="form-label">Preisklasse</label>
+                            <select id="priceRange" class="form-input" onchange="generate()">
+                                <option value="">– nicht angeben –</option>
+                                <option value="€">€ (günstig)</option>
+                                <option value="€€" selected>€€ (mittel)</option>
+                                <option value="€€€">€€€ (gehoben)</option>
+                                <option value="€€€€">€€€€ (Luxus)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <hr class="section-divider">
+                    <p class="text-pink-300 text-xs font-semibold uppercase tracking-wider mb-3">Öffnungszeiten</p>
+
+                    <div id="hoursContainer" class="mb-4">
+                        <div class="day-row">
+                            <span class="day-label">Mo–Fr</span>
+                            <input type="time" class="time-input" id="wdOpen" value="10:00" oninput="generate()">
+                            <span class="text-white/40 text-sm">–</span>
+                            <input type="time" class="time-input" id="wdClose" value="19:00" oninput="generate()">
+                            <label class="flex items-center gap-1 text-xs text-white/50 ml-1"><input type="checkbox" id="wdClosed" class="closed-check" onchange="generate()"> Geschl.</label>
+                        </div>
+                        <div class="day-row">
+                            <span class="day-label">Samstag</span>
+                            <input type="time" class="time-input" id="saOpen" value="10:00" oninput="generate()">
+                            <span class="text-white/40 text-sm">–</span>
+                            <input type="time" class="time-input" id="saClose" value="18:00" oninput="generate()">
+                            <label class="flex items-center gap-1 text-xs text-white/50 ml-1"><input type="checkbox" id="saClosed" class="closed-check" onchange="generate()"> Geschl.</label>
+                        </div>
+                        <div class="day-row">
+                            <span class="day-label">Sonntag</span>
+                            <input type="time" class="time-input" id="suOpen" value="12:00" oninput="generate()">
+                            <span class="text-white/40 text-sm">–</span>
+                            <input type="time" class="time-input" id="suClose" value="17:00" oninput="generate()">
+                            <label class="flex items-center gap-1 text-xs text-white/50 ml-1"><input type="checkbox" id="suClosed" class="closed-check" checked onchange="generate()"> Geschl.</label>
+                        </div>
+                    </div>
+
+                    <hr class="section-divider">
+                    <p class="text-pink-300 text-xs font-semibold uppercase tracking-wider mb-3">Bewertungen (optional)</p>
+
+                    <div class="grid grid-cols-2 gap-3 mb-4">
+                        <div>
+                            <label class="form-label">Durchschnittsbewertung</label>
+                            <input type="number" id="ratingValue" class="form-input" placeholder="4.5" min="1" max="5" step="0.1" oninput="generate()">
+                        </div>
+                        <div>
+                            <label class="form-label">Anzahl Bewertungen</label>
+                            <input type="number" id="reviewCount" class="form-input" placeholder="87" min="1" oninput="generate()">
+                        </div>
+                    </div>
+
+                    <hr class="section-divider">
+                    <p class="text-pink-300 text-xs font-semibold uppercase tracking-wider mb-3">Geo-Koordinaten (optional)</p>
+
+                    <div class="grid grid-cols-2 gap-3 mb-4">
+                        <div>
+                            <label class="form-label">Breitengrad (Lat)</label>
+                            <input type="text" id="lat" class="form-input" placeholder="53.5510" oninput="generate()">
+                        </div>
+                        <div>
+                            <label class="form-label">Längengrad (Lng)</label>
+                            <input type="text" id="lng" class="form-input" placeholder="9.9937" oninput="generate()">
+                        </div>
+                    </div>
+
+                    <hr class="section-divider">
+                    <p class="text-pink-300 text-xs font-semibold uppercase tracking-wider mb-3">Social Media / Google Maps (optional)</p>
+
+                    <div class="grid grid-cols-1 gap-3">
+                        <div>
+                            <label class="form-label">Google Maps URL</label>
+                            <input type="url" id="mapsUrl" class="form-input" placeholder="https://g.page/..." oninput="generate()">
+                        </div>
+                        <div>
+                            <label class="form-label">Instagram URL</label>
+                            <input type="url" id="instagram" class="form-input" placeholder="https://www.instagram.com/..." oninput="generate()">
+                        </div>
+                        <div>
+                            <label class="form-label">Facebook URL</label>
+                            <input type="url" id="facebook" class="form-input" placeholder="https://www.facebook.com/..." oninput="generate()">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Output -->
+                <div>
+                    <div class="glass rounded-xl p-6 md:p-8">
+                        <div class="flex justify-between items-center mb-6">
+                            <h2 class="text-xl font-semibold text-white">JSON-LD Schema Markup</h2>
+                            <button id="copyBtn" onclick="copyOutput()" class="bg-gradient-to-r from-pink-500 to-purple-600 text-white px-5 py-2 rounded-lg text-sm font-medium hover:from-pink-600 hover:to-purple-700 transition-all flex items-center gap-2">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                                Kopieren
+                            </button>
+                        </div>
+                        <div class="code-block p-4 text-sm leading-relaxed max-h-[600px] overflow-y-auto">
+                            <pre class="text-green-300 whitespace-pre-wrap break-words" id="output">Fülle die Felder links aus, um dein JSON-LD zu generieren.</pre>
+                        </div>
+                    </div>
+
+                    <!-- Cross-sell -->
+                    <div class="glass rounded-xl p-6 mt-6 border-pink-500/30 border">
+                        <div class="flex items-start gap-4">
+                            <div class="bg-pink-500/20 rounded-lg p-3 flex-shrink-0">
+                                <svg class="w-6 h-6 text-pink-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                            </div>
+                            <div>
+                                <h3 class="text-white font-semibold mb-1">Schema korrekt implementiert?</h3>
+                                <p class="text-blue-200/70 text-sm mb-3">Prüfe mit unserem Validator, ob dein JSON-LD valide ist und von Google korrekt erkannt wird.</p>
+                                <a href="/tools/json-ld-structured-data-validator.html" class="inline-flex items-center text-pink-400 hover:text-pink-300 text-sm font-medium transition-colors">
+                                    JSON-LD Validator öffnen
+                                    <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Related Tools -->
+                    <div class="glass rounded-xl p-6 mt-6">
+                        <h3 class="text-white font-semibold mb-3">Ähnliche Tools</h3>
+                        <div class="space-y-2">
+                            <a href="/tools/electronicsstore-computerstore-schema-generator.html" class="flex items-center gap-2 text-sm text-blue-300 hover:text-blue-200 transition-colors">
+                                <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                                ElectronicsStore &amp; ComputerStore Generator
+                            </a>
+                            <a href="/tools/bookstore-schema-generator.html" class="flex items-center gap-2 text-sm text-blue-300 hover:text-blue-200 transition-colors">
+                                <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                                BookStore Schema Generator
+                            </a>
+                            <a href="/tools/sportinggoods-store-schema-generator.html" class="flex items-center gap-2 text-sm text-blue-300 hover:text-blue-200 transition-colors">
+                                <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                                SportingGoodsStore Generator
+                            </a>
+                            <a href="/tools/product-schema-generator.html" class="flex items-center gap-2 text-sm text-blue-300 hover:text-blue-200 transition-colors">
+                                <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                                Product Schema Generator
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Explanation Section -->
+            <div class="glass rounded-xl p-6 md:p-8 mt-12">
+                <h2 class="text-2xl font-bold text-white mb-6">Warum Schema Markup für Mode- und Schuhgeschäfte?</h2>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-white/5 rounded-xl p-5">
+                        <div class="text-2xl mb-3">👗</div>
+                        <h3 class="text-white font-semibold mb-2">ClothingStore</h3>
+                        <p class="text-blue-200/70 text-sm">Für Modeboutiquen, Bekleidungsgeschäfte und Accessoire-Läden. Google erkennt das Sortiment und zeigt Öffnungszeiten und Bewertungen direkt in den Suchergebnissen an.</p>
+                    </div>
+                    <div class="bg-white/5 rounded-xl p-5">
+                        <div class="text-2xl mb-3">👟</div>
+                        <h3 class="text-white font-semibold mb-2">ShoeStore</h3>
+                        <p class="text-blue-200/70 text-sm">Für Schuhgeschäfte und Schuhfachhändler. Der spezifische Typ signalisiert Google, dass es sich um ein Fachgeschäft handelt — ideal für lokale Suchanfragen wie „Schuhgeschäft in der Nähe".</p>
+                    </div>
+                    <div class="bg-white/5 rounded-xl p-5">
+                        <div class="text-2xl mb-3">💍</div>
+                        <h3 class="text-white font-semibold mb-2">JewelryStore</h3>
+                        <p class="text-blue-200/70 text-sm">Für Juweliere, Schmuckläden und Uhrengeschäfte. Bewertungssterne im SERP sind besonders bei hochpreisigen Produkten entscheidend — Vertrauen wird hier noch stärker bewertet.</p>
+                    </div>
+                    <div class="bg-white/5 rounded-xl p-5">
+                        <div class="text-2xl mb-3">🔗</div>
+                        <h3 class="text-white font-semibold mb-2">Kombinations-Typen</h3>
+                        <p class="text-blue-200/70 text-sm">Führst du Mode und Schuhe unter einem Dach? Setze <code style="background:rgba(255,255,255,0.1);padding:0.1em 0.3em;border-radius:0.2em;font-size:0.9em">@type</code> als Array: <code style="background:rgba(255,255,255,0.1);padding:0.1em 0.3em;border-radius:0.2em;font-size:0.9em">["ClothingStore","ShoeStore"]</code> — so deckst du beide Suchabsichten gleichzeitig ab.</p>
+                    </div>
+                </div>
+                <div class="mt-6 p-4 bg-pink-500/10 border border-pink-500/30 rounded-xl">
+                    <p class="text-pink-200 text-sm"><strong class="text-pink-300">Tipp:</strong> Ergänze dein Schema nach der Implementierung mit <a href="/blog/clothingstore-schema-markup.html" class="text-pink-400 hover:text-pink-300 underline">Product-Markup für einzelne Bestseller</a> — so kannst du auch in Google Shopping sichtbar werden, ohne für Anzeigen zu bezahlen.</p>
+                </div>
+            </div>
+
+            <!-- Blog Link -->
+            <div class="text-center mt-10">
+                <p class="text-blue-200/70 text-sm mb-3">Mehr über Schema Markup für Modeboutiquen erfahren?</p>
+                <a href="/blog/clothingstore-schema-markup.html" class="inline-flex items-center gap-2 text-pink-400 hover:text-pink-300 font-medium transition-colors">
+                    ClothingStore Schema Markup: Vollständiger Blog-Artikel
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                </a>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-black/30 backdrop-blur-md border-t border-white/10">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <div class="text-white/60 mb-4 md:mb-0 text-sm">
+                        &copy; 2026 Thümmler AI GmbH. Alle Rechte vorbehalten.
+                    </div>
+                    <div class="flex space-x-6">
+                        <a href="/impressum.html" class="text-gray-300 hover:text-white transition-colors text-sm">Impressum</a>
+                        <a href="/datenschutz.html" class="text-gray-300 hover:text-white transition-colors text-sm">Datenschutz</a>
+                        <a href="/agb.html" class="text-gray-300 hover:text-white transition-colors text-sm">AGB</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        const DAYS_MAP = {
+            wd: ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+            sa: ["Saturday"],
+            su: ["Sunday"]
+        };
+
+        function val(id) {
+            const el = document.getElementById(id);
+            return el ? el.value.trim() : '';
+        }
+        function checked(id) {
+            const el = document.getElementById(id);
+            return el ? el.checked : false;
+        }
+
+        function buildOpeningHours() {
+            const hours = [];
+            ['wd','sa','su'].forEach(prefix => {
+                if (!checked(prefix + 'Closed')) {
+                    const open = val(prefix + 'Open');
+                    const close = val(prefix + 'Close');
+                    if (open && close) {
+                        hours.push({
+                            "@type": "OpeningHoursSpecification",
+                            "dayOfWeek": DAYS_MAP[prefix],
+                            "opens": open,
+                            "closes": close
+                        });
+                    }
+                }
+            });
+            return hours;
+        }
+
+        function generate() {
+            const storeTypeRaw = val('storeType');
+            const storeTypes = storeTypeRaw.split(',');
+            const typeValue = storeTypes.length > 1 ? storeTypes : storeTypes[0];
+
+            const name = val('name');
+            const altName = val('altName');
+            const description = val('description');
+            const url = val('url');
+            const street = val('street');
+            const postalCode = val('postalCode');
+            const city = val('city');
+            const phone = val('phone');
+            const email = val('email');
+            const priceRange = val('priceRange');
+            const ratingValue = val('ratingValue');
+            const reviewCount = val('reviewCount');
+            const lat = val('lat');
+            const lng = val('lng');
+            const mapsUrl = val('mapsUrl');
+            const instagram = val('instagram');
+            const facebook = val('facebook');
+
+            if (!name) {
+                document.getElementById('output').textContent = 'Bitte gib mindestens den Geschäftsnamen ein.';
+                return;
+            }
+
+            const schema = {
+                "@context": "https://schema.org",
+                "@type": typeValue
+            };
+
+            schema.name = name;
+            if (altName) schema.alternateName = altName;
+            if (description) schema.description = description;
+            if (url) schema.url = url;
+            if (phone) schema.telephone = phone;
+            if (email) schema.email = email;
+            if (priceRange) schema.priceRange = priceRange;
+
+            if (street || postalCode || city) {
+                schema.address = {
+                    "@type": "PostalAddress"
+                };
+                if (street) schema.address.streetAddress = street;
+                if (postalCode) schema.address.postalCode = postalCode;
+                if (city) schema.address.addressLocality = city;
+                schema.address.addressRegion = "DE";
+                schema.address.addressCountry = "DE";
+            }
+
+            if (lat && lng) {
+                schema.geo = {
+                    "@type": "GeoCoordinates",
+                    "latitude": parseFloat(lat),
+                    "longitude": parseFloat(lng)
+                };
+            }
+
+            const hours = buildOpeningHours();
+            if (hours.length > 0) {
+                schema.openingHoursSpecification = hours;
+            }
+
+            if (ratingValue && reviewCount) {
+                schema.aggregateRating = {
+                    "@type": "AggregateRating",
+                    "ratingValue": ratingValue,
+                    "reviewCount": reviewCount,
+                    "bestRating": "5",
+                    "worstRating": "1"
+                };
+            }
+
+            const sameAs = [];
+            if (mapsUrl) sameAs.push(mapsUrl);
+            if (instagram) sameAs.push(instagram);
+            if (facebook) sameAs.push(facebook);
+            if (sameAs.length > 0) schema.sameAs = sameAs;
+
+            const json = JSON.stringify(schema, null, 2);
+            const wrapped = `<script type="application/ld+json">\n${json}\n<\/script>`;
+            document.getElementById('output').textContent = wrapped;
+        }
+
+        function copyOutput() {
+            const text = document.getElementById('output').textContent;
+            navigator.clipboard.writeText(text).then(() => {
+                const btn = document.getElementById('copyBtn');
+                const orig = btn.innerHTML;
+                btn.innerHTML = '<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> Kopiert!';
+                btn.classList.add('from-green-500','to-green-600');
+                btn.classList.remove('from-pink-500','to-purple-600');
+                setTimeout(() => {
+                    btn.innerHTML = orig;
+                    btn.classList.remove('from-green-500','to-green-600');
+                    btn.classList.add('from-pink-500','to-purple-600');
+                }, 2000);
+            });
+        }
+
+        // Auto-generate on load with placeholder
+        generate();
+    </script>
+</body>
+</html>
