@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Wed, 29 Apr 2026 06:36:32 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 29 Apr 2026 06:39:39 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>AutoPartsStore &amp; AutomotiveBusiness Schema Markup: JSON-LD für KFZ-Zubehör</title>
+      <link>https://shift07.ai/blog/autopartsstore-automotivebusiness-schema-markup.html</link>
+      <guid>https://shift07.ai/blog/autopartsstore-automotivebusiness-schema-markup.html</guid>
+      <pubDate>Wed, 29 Apr 2026 06:39:19 +0000</pubDate>
+      <description>AutoPartsStore und AutomotiveBusiness Schema Markup korrekt implementieren: JSON-LD Anleitung für Autoteilehändler, KFZ-Zubehörgeschäfte und Kfz-Betriebe — inkl. Produktdaten und Serviceleistungen.</description>
+      <category>Schema Markup</category>
+    </item>
     <item>
       <title>PharmacyStore &amp; DrugStore Schema Markup: JSON-LD für Apotheken und Drogerien</title>
       <link>https://shift07.ai/blog/pharmacystore-drugstore-schema-markup.html</link>
@@ -158,14 +166,6 @@
       <pubDate>Sun, 26 Apr 2026 04:48:17 +0000</pubDate>
       <description>HVACBusiness Schema Markup richtig implementieren: JSON-LD für Heizungsinstallateure, Klimatechniker und Lüftungsbauer. Mit vollständigem Code-Beispiel und Checkliste für 2026.</description>
       <category>Schema Markup</category>
-    </item>
-    <item>
-      <title>Contractor, Roofer &amp; Plumber Schema Markup: Dachdecker und Sanitär für Google</title>
-      <link>https://shift07.ai/blog/contractor-roofer-plumber-schema-markup.html</link>
-      <guid>https://shift07.ai/blog/contractor-roofer-plumber-schema-markup.html</guid>
-      <pubDate>Sun, 26 Apr 2026 03:13:18 +0000</pubDate>
-      <description>GeneralContractor, RoofingContractor und Plumber Schema Markup: JSON-LD für Dachdecker, Sanitärbetriebe und Baufirmen. Vollständige Anleitung mit Codebeispielen für lokales SEO.</description>
-      <category>SEO</category>
     </item>
   </channel>
 </rss>
