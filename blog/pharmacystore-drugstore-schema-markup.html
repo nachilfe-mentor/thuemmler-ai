@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PharmacyStore & DrugStore Schema Markup: JSON-LD für Apotheken und Drogerien | Shift07 Blog</title>
+    <meta name="description" content="PharmacyStore und DrugStore Schema Markup korrekt implementieren: Vollständige JSON-LD Anleitung für Apotheken, Drogerien und Gesundheitsgeschäfte — inkl. Notdienst, Botendienst und Produktdaten.">
+    <meta name="author" content="Thümmler AI GmbH">
+    <link rel="icon" type="image/png" href="/logo.png">
+    <link rel="canonical" href="https://shift07.ai/blog/pharmacystore-drugstore-schema-markup.html">
+    <link rel="alternate" type="application/rss+xml" title="Shift07 Blog" href="https://shift07.ai/feed.xml">
+    <!-- Open Graph -->
+    <meta property="og:title" content="PharmacyStore & DrugStore Schema Markup: JSON-LD für Apotheken und Drogerien | Shift07 Blog">
+    <meta property="og:description" content="PharmacyStore und DrugStore Schema Markup korrekt implementieren: Vollständige JSON-LD Anleitung für Apotheken, Drogerien und Gesundheitsgeschäfte — inkl. Notdienst, Botendienst und Produktdaten.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://shift07.ai/blog/pharmacystore-drugstore-schema-markup.html">
+    <meta property="og:image" content="https://shift07.ai/blog/images/pharmacystore-drugstore-schema-markup.png">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="Shift07">
+    <meta property="article:published_time" content="2026-04-29T13:00:00+02:00">
+    <meta property="article:section" content="Schema Markup">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="PharmacyStore & DrugStore Schema Markup: JSON-LD für Apotheken">
+    <meta name="twitter:description" content="PharmacyStore und DrugStore Schema Markup vollständig erklärt — JSON-LD für Apotheken und Drogerien mit Notdienst und Botendienst.">
+    <meta name="twitter:image" content="https://shift07.ai/blog/images/pharmacystore-drugstore-schema-markup.png">
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "PharmacyStore & DrugStore Schema Markup: JSON-LD für Apotheken und Drogerien",
+      "description": "PharmacyStore und DrugStore Schema Markup korrekt implementieren: Vollständige JSON-LD Anleitung für Apotheken, Drogerien und Gesundheitsgeschäfte — inkl. Notdienst, Botendienst und Produktdaten.",
+      "image": "https://shift07.ai/blog/images/pharmacystore-drugstore-schema-markup.png",
+      "datePublished": "2026-04-29T13:00:00+02:00",
+      "dateModified": "2026-04-29T13:00:00+02:00",
+      "author": {
+        "@type": "Organization",
+        "name": "Shift07",
+        "url": "https://shift07.ai"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Shift07",
+        "url": "https://shift07.ai",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://shift07.ai/assets/logo.png"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://shift07.ai/blog/pharmacystore-drugstore-schema-markup.html"
+      }
+    }
+    </script>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K1S1RXBDS8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K1S1RXBDS8');
+    </script>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8475857002943858" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: rgba(15, 23, 42, 0.5); }
+        ::-webkit-scrollbar-thumb { background: rgba(59, 130, 246, 0.5); border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: rgba(59, 130, 246, 0.7); }
+        html { scroll-behavior: smooth; }
+        .article-content h2 { font-size: 1.5rem; font-weight: 700; color: #fff; margin-top: 2.5rem; margin-bottom: 1rem; }
+        .article-content h3 { font-size: 1.25rem; font-weight: 600; color: #e2e8f0; margin-top: 2rem; margin-bottom: 0.75rem; }
+        .article-content p { color: #cbd5e1; line-height: 1.8; margin-bottom: 1.25rem; }
+        .article-content ul, .article-content ol { color: #cbd5e1; margin-bottom: 1.25rem; padding-left: 1.5rem; }
+        .article-content li { margin-bottom: 0.5rem; line-height: 1.7; }
+        .article-content ul li { list-style-type: disc; }
+        .article-content ol li { list-style-type: decimal; }
+        .article-content a { color: #60a5fa; text-decoration: underline; text-underline-offset: 2px; }
+        .article-content a:hover { color: #93bbfc; }
+        .article-content blockquote { border-left: 4px solid #3b82f6; padding-left: 1.25rem; margin: 1.5rem 0; color: #94a3b8; font-style: italic; }
+        .article-content code { background: rgba(59, 130, 246, 0.15); color: #93c5fd; padding: 0.15rem 0.4rem; border-radius: 0.25rem; font-size: 0.9em; }
+        .article-content pre { background: rgba(15, 23, 42, 0.8); border: 1px solid rgba(255,255,255,0.1); border-radius: 0.75rem; padding: 1.25rem; overflow-x: auto; margin-bottom: 1.5rem; }
+        .article-content pre code { background: none; padding: 0; color: #e2e8f0; }
+        .article-content strong { color: #f1f5f9; }
+        .article-content table { width: 100%; border-collapse: collapse; margin-bottom: 1.5rem; }
+        .article-content th { background: rgba(59, 130, 246, 0.2); color: #e2e8f0; padding: 0.75rem 1rem; text-align: left; font-weight: 600; border: 1px solid rgba(255,255,255,0.1); }
+        .article-content td { color: #cbd5e1; padding: 0.6rem 1rem; border: 1px solid rgba(255,255,255,0.07); }
+        .article-content tr:nth-child(even) td { background: rgba(255,255,255,0.03); }
+    </style>
+</head>
+<body class="bg-slate-900 text-white min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-slate-900/80 backdrop-blur-xl border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <a href="/" class="flex items-center gap-2">
+                    <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                    <span class="text-xl font-bold text-white">Shift07</span>
+                </a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="/" class="text-gray-300 hover:text-white transition-colors">SEO-Tool</a>
+                    <a href="/blog/" class="text-white font-medium border-b-2 border-blue-500 pb-0.5">Blog</a>
+                    <a href="/tools/" class="text-gray-300 hover:text-white transition-colors">Tools</a>
+                    <a href="/app/#/login" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-5 py-2 rounded-lg font-medium transition-all">Anmelden</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-gray-300 hover:text-white">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                </button>
+            </div>
+            <div id="mobile-menu" class="hidden md:hidden py-4 border-t border-white/10">
+                <div class="flex flex-col space-y-3">
+                    <a href="/" class="text-gray-300 hover:text-white transition-colors">SEO-Tool</a>
+                    <a href="/blog/" class="text-white font-medium">Blog</a>
+                    <a href="/tools/" class="text-gray-300 hover:text-white transition-colors">Tools</a>
+                    <a href="/app/#/login" class="text-blue-400 font-medium">Anmelden</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="pt-24 pb-12 px-4 bg-gradient-to-b from-slate-800/50 to-transparent">
+        <div class="max-w-4xl mx-auto">
+            <div class="flex items-center gap-2 text-sm text-gray-400 mb-6">
+                <a href="/blog/" class="hover:text-white transition-colors">Blog</a>
+                <span>/</span>
+                <span>Schema Markup</span>
+            </div>
+            <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
+                PharmacyStore & DrugStore Schema Markup: JSON-LD für Apotheken und Drogerien
+            </h1>
+            <p class="text-xl text-gray-400 mb-8 leading-relaxed">
+                Wie du mit PharmacyStore und DrugStore Schema Markup deine Apotheke oder Drogerie in den Google-Suchergebnissen optimal präsentierst — mit Notdienst-Zeiten, Botendienst und Produktkategorien.
+            </p>
+            <div class="flex items-center gap-6 text-sm text-gray-500">
+                <span>29. April 2026</span>
+                <span>·</span>
+                <span>11 Min. Lesezeit</span>
+                <span>·</span>
+                <span>Schema Markup</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Image -->
+    <div class="max-w-4xl mx-auto px-4 mb-12">
+        <img src="/blog/images/pharmacystore-drugstore-schema-markup.png"
+             alt="PharmacyStore und DrugStore Schema Markup für Apotheken und Drogerien"
+             class="w-full rounded-2xl border border-white/10 shadow-2xl"
+             width="1200" height="630">
+    </div>
+
+    <!-- Main Content -->
+    <section class="px-4 pb-20">
+        <div class="max-w-7xl mx-auto flex flex-col lg:flex-row gap-12">
+
+            <article class="lg:w-2/3 article-content">
+
+                <p>Apotheken und Drogerien sind Vertrauensgeschäfte: Wer Medikamente oder Gesundheitsprodukte sucht, tippt einen Standort in Google — und erwartet sofort Öffnungszeiten, Kontaktdaten und den Hinweis auf einen eventuellen Nachtdienst. Mit dem richtigen <strong>PharmacyStore Schema Markup</strong> liefert Google diese Informationen direkt im Suchergebnis, noch bevor der Nutzer klickt.</p>
+
+                <p>Dieser Artikel zeigt, wie du <code>PharmacyStore</code> und <code>DrugStore</code> nach Schema.org korrekt implementierst, welche Properties besonders für Gesundheitsgeschäfte relevant sind und wie du Notdienst, Botendienst und Produktsortiment strukturiert einbindest.</p>
+
+                <h2>PharmacyStore vs. DrugStore — wo liegt der Unterschied?</h2>
+
+                <p>Schema.org unterscheidet zwei Typen für apothekenähnliche Einrichtungen:</p>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Schema-Typ</th>
+                            <th>Verwendung</th>
+                            <th>Übertyp</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>PharmacyStore</code></td>
+                            <td>Apotheken mit Rezeptpflicht und pharmazeutischer Beratung</td>
+                            <td>MedicalOrganization → LocalBusiness</td>
+                        </tr>
+                        <tr>
+                            <td><code>DrugStore</code></td>
+                            <td>Drogerien, Reformhäuser, Parapharmazien (ohne Rezept)</td>
+                            <td>Store → LocalBusiness</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <p>Der wichtigste Unterschied: <code>PharmacyStore</code> erbt von <code>MedicalOrganization</code> und darf deshalb medizinische Properties wie <code>medicalSpecialty</code> oder <code>hasHealthAspect</code> verwenden. <code>DrugStore</code> ist ein reiner Store-Typ ohne medizinische Semantik — ideal für dm, Rossmann und ähnliche Drogeriemärkte.</p>
+
+                <blockquote>
+                    <strong>Faustregel:</strong> Wenn deine Apotheke Rezepte annimmt und von approbierten Pharmazeuten geführt wird, nutze <code>PharmacyStore</code>. Für Drogeriemärkte und reformhäuser ohne Verschreibungspflicht wähle <code>DrugStore</code>.
+                </blockquote>
+
+                <h2>Warum Schema Markup für Apotheken besonders wichtig ist</h2>
+
+                <p>Google priorisiert bei Gesundheitssuchen stark lokale Ergebnisse. Wer nach „Apotheke geöffnet Sonntag Berlin" sucht, sieht im Local Pack sofort Öffnungszeiten, Bewertungen und Adressen. Mit strukturierten Daten kannst du diese Informationen maschinenlesbar bereitstellen und sicherstellst, dass Google die richtigen Angaben anzeigt — statt sie aus deinem unstrukturierten Text zu extrahieren.</p>
+
+                <p>Besonders relevant für Apotheken sind:</p>
+                <ul>
+                    <li><strong>Notdienstzeiten:</strong> Spezielle Öffnungszeiten für Wochenenden und Nächte</li>
+                    <li><strong>Botendienst:</strong> Lieferservice als zusätzliche Leistung</li>
+                    <li><strong>Produktkategorien:</strong> Rezeptpflichtige vs. rezeptfreie Produkte</li>
+                    <li><strong>Spezialisierungen:</strong> Homöopathie, Tierarzneimittel, Krankenpflege-Artikel</li>
+                    <li><strong>Zertifizierungen:</strong> DIHK-zertifizierte Versandapotheke, EU-weit zugelassen</li>
+                </ul>
+
+                <p>Außerdem verbessert <a href="/blog/localbusiness-schema-markup-anleitung.html">vollständiges LocalBusiness Schema Markup</a> — das <code>PharmacyStore</code> durch Vererbung ebenfalls nutzt — dein Ranking in der lokalen Suche deutlich.</p>
+
+                <h2>Grundstruktur: PharmacyStore JSON-LD</h2>
+
+                <p>Hier ist ein vollständiges Basis-Beispiel für eine deutsche Apotheke:</p>
+
+                <pre><code>{
+  "@context": "https://schema.org",
+  "@type": "PharmacyStore",
+  "name": "Stadtapotheke am Markt",
+  "alternateName": "Apotheke Müller",
+  "description": "Ihre Apotheke im Herzen von Musterstadt — rezeptpflichtige Medikamente, Naturheilkunde, Botendienst und Notdienst.",
+  "url": "https://stadtapotheke-musterstadt.de",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://stadtapotheke-musterstadt.de/logo.png",
+    "width": 200,
+    "height": 80
+  },
+  "image": "https://stadtapotheke-musterstadt.de/images/apotheke-aussen.jpg",
+  "telephone": "+49 1234 567890",
+  "email": "info@stadtapotheke-musterstadt.de",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Marktplatz 5",
+    "addressLocality": "Musterstadt",
+    "postalCode": "12345",
+    "addressRegion": "Bayern",
+    "addressCountry": "DE"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 48.1234,
+    "longitude": 11.5678
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+      "opens": "08:00",
+      "closes": "18:30"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "09:00",
+      "closes": "14:00"
+    }
+  ],
+  "priceRange": "€€",
+  "currenciesAccepted": "EUR",
+  "paymentAccepted": "Cash, Credit Card, EC-Karte",
+  "medicalSpecialty": "Pharmacy",
+  "hasMap": "https://maps.google.com/?q=Stadtapotheke+am+Markt+Musterstadt",
+  "sameAs": [
+    "https://www.google.com/maps/place/stadtapotheke-musterstadt",
+    "https://www.apothekensuche.de/apotheke/stadtapotheke-musterstadt"
+  ]
+}</code></pre>
+
+                <h2>Notdienst korrekt abbilden</h2>
+
+                <p>Der Apothekennotdienst ist in Deutschland gesetzlich geregelt: Immer eine Apotheke im Umkreis hat Bereitschaftsdienst. Mit <code>openingHoursSpecification</code> kannst du Sonderöffnungszeiten strukturiert angeben. Für den regulären Notdienst-Turnus eignet sich eine zusätzliche Angabe mit <code>validFrom</code> und <code>validThrough</code>:</p>
+
+                <pre><code>"openingHoursSpecification": [
+  {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+    "opens": "08:00",
+    "closes": "18:30"
+  },
+  {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": "Saturday",
+    "opens": "09:00",
+    "closes": "14:00"
+  },
+  {
+    "@type": "OpeningHoursSpecification",
+    "description": "Notdienst — Bitte klingeln",
+    "dayOfWeek": ["Saturday","Sunday"],
+    "opens": "00:00",
+    "closes": "23:59",
+    "validFrom": "2026-04-26",
+    "validThrough": "2026-04-27"
+  }
+]</code></pre>
+
+                <p>Da Notdienst-Zeiten wöchentlich wechseln, empfiehlt sich hier eine dynamische Generierung über das CMS oder eine Apotheken-Software-Schnittstelle. Statische Einträge veralten schnell und können von Google als falsche Angaben gewertet werden.</p>
+
+                <p>Mehr zu allen Möglichkeiten von OpeningHoursSpecification findest du in unserem Artikel <a href="/blog/openinghours-schema-markup-seo.html">Öffnungszeiten Schema Markup vollständig implementieren</a>.</p>
+
+                <h2>Botendienst und Lieferservice einbinden</h2>
+
+                <p>Viele Apotheken bieten heute einen Botendienst an — Medikamente werden innerhalb der Stadt geliefert. Das lässt sich über <code>potentialAction</code> mit einem <code>OrderAction</code> oder über <code>hasOfferCatalog</code> mit einer Lieferoption abbilden:</p>
+
+                <pre><code>{
+  "@context": "https://schema.org",
+  "@type": "PharmacyStore",
+  "name": "Stadtapotheke am Markt",
+  ...
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Leistungen der Stadtapotheke",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Botendienst",
+          "description": "Lieferung von Medikamenten und Pflegeprodukten nach Hause — kostenlos ab 20 € Bestellwert"
+        },
+        "price": "0",
+        "priceCurrency": "EUR",
+        "areaServed": {
+          "@type": "City",
+          "name": "Musterstadt"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Rezept-Service",
+          "description": "Rezept per Post einsenden oder App fotografieren — wir bereiten alles vor"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Blutdruckmessung",
+          "description": "Kostenlose Blutdruckmessung ohne Termin"
+        }
+      }
+    ]
+  }
+}</code></pre>
+
+                <h2>Produktkategorien strukturieren</h2>
+
+                <p>Apotheken führen tausende Produkte in unterschiedlichen Kategorien. Statt jedes Produkt einzeln zu markieren (was bei einer Apotheke unrealistisch wäre), kannst du Hauptkategorien als <code>OfferCatalog</code> beschreiben:</p>
+
+                <pre><code>"hasOfferCatalog": {
+  "@type": "OfferCatalog",
+  "name": "Produktsortiment",
+  "itemListElement": [
+    {
+      "@type": "OfferCatalog",
+      "name": "Rezeptpflichtige Arzneimittel",
+      "description": "Verschreibungspflichtige Medikamente gegen Vorlage eines gültigen Rezepts"
+    },
+    {
+      "@type": "OfferCatalog",
+      "name": "Rezeptfreie Medikamente (OTC)",
+      "description": "Schmerzmittel, Erkältungsmittel, Vitamin-Präparate und mehr"
+    },
+    {
+      "@type": "OfferCatalog",
+      "name": "Naturheilkunde & Homöopathie",
+      "description": "Pflanzliche Arzneimittel, Bachblüten, Schüßler-Salze"
+    },
+    {
+      "@type": "OfferCatalog",
+      "name": "Pflegeprodukte & Kosmetik",
+      "description": "Dermatologisch getestete Hautpflegeprodukte, Sonnenschutz, Babypflege"
+    },
+    {
+      "@type": "OfferCatalog",
+      "name": "Medizinische Hilfsmittel",
+      "description": "Blutdruckmessgeräte, Rollstühle, Gehhilfen, Kompressionsstrümpfe"
+    }
+  ]
+}</code></pre>
+
+                <h2>DrugStore Schema Markup für Drogerien</h2>
+
+                <p>Für Drogeriemärkte und -filialen, die keine verschreibungspflichtigen Medikamente verkaufen, ist <code>DrugStore</code> der passende Typ. Er leitet sich von <code>Store</code> ab und hat einen stärker kommerziellen Charakter:</p>
+
+                <pre><code>{
+  "@context": "https://schema.org",
+  "@type": "DrugStore",
+  "name": "dm-drogerie markt Musterstadt",
+  "legalName": "dm-drogerie markt GmbH + Co. KG",
+  "description": "dm Drogerie in Musterstadt — Drogerie, Naturkosmetik, Babybedarf, Nahrungsergänzung und mehr.",
+  "url": "https://www.dm.de/filialen/musterstadt",
+  "telephone": "+49 1234 987654",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Einkaufsstraße 12",
+    "addressLocality": "Musterstadt",
+    "postalCode": "12345",
+    "addressCountry": "DE"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+      "opens": "09:00",
+      "closes": "20:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "09:00",
+      "closes": "18:00"
+    }
+  ],
+  "priceRange": "€€",
+  "department": [
+    {
+      "@type": "DrugStore",
+      "name": "Naturkosmetik-Abteilung",
+      "description": "INCI-zertifizierte Naturkosmetik und vegane Pflegeprodukte"
+    },
+    {
+      "@type": "DrugStore",
+      "name": "Baby & Kind",
+      "description": "Windeln, Babynahrung, Pflegeprodukte für Neugeborene"
+    }
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.2",
+    "reviewCount": "178",
+    "bestRating": "5",
+    "worstRating": "1"
+  }
+}</code></pre>
+
+                <h2>MedicalSpecialty für Apotheken-Spezialisierungen</h2>
+
+                <p>Da <code>PharmacyStore</code> von <code>MedicalOrganization</code> erbt, kannst du die Property <code>medicalSpecialty</code> nutzen, um besondere Schwerpunkte auszuweisen. Schema.org definiert dafür spezifische Werte:</p>
+
+                <pre><code>"medicalSpecialty": [
+  "https://schema.org/Pharmacy",
+  "https://schema.org/Dermatology",
+  "https://schema.org/Geriatric"
+]</code></pre>
+
+                <p>Mögliche Werte für Apotheken sind unter anderem <code>Pharmacy</code>, <code>Dermatology</code> (Hautpflegefokus), <code>Geriatric</code> (Senioren-Versorgung) oder <code>Pediatric</code> (Kindermedikamente). Die vollständige Liste findest du unter schema.org/MedicalSpecialty.</p>
+
+                <h2>Bewertungen und Social Proof einbinden</h2>
+
+                <p>Positive Bewertungen erhöhen das Vertrauen — und <code>AggregateRating</code> zeigt sie direkt in den Suchergebnissen an. Das ist besonders für Gesundheitsgeschäfte relevant, weil Nutzer hier besonders auf Vertrauen achten:</p>
+
+                <pre><code>"aggregateRating": {
+  "@type": "AggregateRating",
+  "ratingValue": "4.7",
+  "reviewCount": "312",
+  "bestRating": "5",
+  "worstRating": "1"
+}</code></pre>
+
+                <p>Damit Google Bewertungs-Rich-Results tatsächlich anzeigt, müssen die Bewertungen auf deiner Website sichtbar und überprüfbar sein — nicht nur im Schema. Reine Schema-Angaben ohne sichtbare Rezensionen werden von Google ignoriert oder abgestraft.</p>
+
+                <h2>Vollständiges PharmacyStore Beispiel (Kombination)</h2>
+
+                <p>Hier ist ein praxisnahes, vollständiges Beispiel, das alle wichtigen Elemente kombiniert:</p>
+
+                <pre><code>{
+  "@context": "https://schema.org",
+  "@type": "PharmacyStore",
+  "name": "Rosenapotheke Berlin-Mitte",
+  "legalName": "Rosenapotheke GmbH",
+  "description": "Apotheke in Berlin-Mitte mit pharmazeutischer Beratung, Botendienst und Notdienst. Spezialisiert auf Naturheilkunde und Homöopathie.",
+  "url": "https://rosenApotheke-berlin.de",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://rosenapotheke-berlin.de/logo.png"
+  },
+  "image": "https://rosenapotheke-berlin.de/images/apotheke.jpg",
+  "telephone": "+49 30 1234567",
+  "email": "info@rosenapotheke-berlin.de",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Rosenstraße 12",
+    "addressLocality": "Berlin",
+    "postalCode": "10178",
+    "addressRegion": "Berlin",
+    "addressCountry": "DE"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 52.5186,
+    "longitude": 13.4040
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+      "opens": "08:00",
+      "closes": "19:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "09:00",
+      "closes": "14:00"
+    }
+  ],
+  "medicalSpecialty": "https://schema.org/Pharmacy",
+  "priceRange": "€€",
+  "currenciesAccepted": "EUR",
+  "paymentAccepted": "Cash, Credit Card, EC-Karte, Girocard",
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Leistungen und Sortiment",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Pharmazeutische Beratung",
+          "description": "Kostenlose Beratung durch approbierte Apotheker"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Botendienst",
+          "description": "Lieferung innerhalb von Berlin-Mitte — kostenlos ab 30 €"
+        },
+        "areaServed": {
+          "@type": "City",
+          "name": "Berlin"
+        }
+      },
+      {
+        "@type": "OfferCatalog",
+        "name": "Rezeptpflichtige Medikamente"
+      },
+      {
+        "@type": "OfferCatalog",
+        "name": "Naturheilkunde & Homöopathie"
+      }
+    ]
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "reviewCount": "246",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "sameAs": [
+    "https://www.google.com/maps/place/rosenapotheke-berlin",
+    "https://www.facebook.com/rosenapothekeberlin"
+  ]
+}</code></pre>
+
+                <h2>Häufige Fehler bei PharmacyStore Markup</h2>
+
+                <p>In unserer Analyse tausender deutscher Unternehmens-Websites stoßen wir immer wieder auf dieselben Fehler:</p>
+
+                <ul>
+                    <li><strong>Falscher Typ:</strong> Viele Apotheken nutzen nur <code>LocalBusiness</code> oder <code>MedicalOrganization</code> — beides ist weniger präzise als <code>PharmacyStore</code></li>
+                    <li><strong>Fehlende Öffnungszeiten:</strong> Gerade die Notdienst-Zeiten werden häufig vergessen, obwohl sie für Nutzer besonders wichtig sind</li>
+                    <li><strong>Unvollständige Adresse:</strong> Fehlende PLZ oder Bundesland verhindert korrekte lokale Zuordnung</li>
+                    <li><strong>Bewertungen ohne Nachweis:</strong> AggregateRating ohne sichtbare Reviews auf der Seite führt zur Ablehnung durch Google</li>
+                    <li><strong>Doppeltes Markup:</strong> Gleichzeitig <code>PharmacyStore</code> und <code>MedicalClinic</code> — das verwirrt Suchmaschinen; wähle den präzisesten Typ</li>
+                </ul>
+
+                <h2>Schema Markup validieren und testen</h2>
+
+                <p>Bevor du das Markup live schaltest, solltest du es unbedingt validieren. Nutze dafür unseren <a href="/tools/json-ld-structured-data-validator.html">JSON-LD Structured Data Validator</a> — er prüft dein Markup auf Fehler, fehlende Pflichtfelder und Warnungen.</p>
+
+                <p>Google bietet außerdem das Rich Results Test Tool an: Dort siehst du, ob dein PharmacyStore-Markup tatsächlich für Rich Results in Frage kommt. Besonders OpeningHoursSpecification und AggregateRating sind dort gut testbar.</p>
+
+                <p>Für die technische SEO-Grundlage deiner Apotheken-Website empfiehlt sich außerdem ein vollständiges <a href="/blog/strukturierte-daten-seo-schema-markup.html">Structured-Data-Setup nach Schema.org-Standard</a>.</p>
+
+                <h2>Einbindung in die Apotheken-Website</h2>
+
+                <p>Das JSON-LD-Script gehört in den <code>&lt;head&gt;</code>-Bereich deiner Homepage (oder auf jede Seite, die die Apotheke beschreibt). Bei CMS-Systemen wie WordPress kannst du Plugins wie Yoast SEO oder RankMath verwenden, die <code>LocalBusiness</code>-Markup automatisch generieren — allerdings müssen die PharmacyStore-spezifischen Properties wie <code>medicalSpecialty</code> oft manuell ergänzt werden.</p>
+
+                <p>Bei statischen Websites oder Eigenentwicklungen empfiehlt sich unsere <a href="/tools/schema-markup-generator.html">kostenlose Schema-Markup-Generator-Tool</a>, das LocalBusiness-JSON-LD mit einem Klick erzeugt.</p>
+
+                <h2>Fazit</h2>
+
+                <p>PharmacyStore und DrugStore Schema Markup sind für Apotheken und Drogerien ein wichtiger SEO-Baustein — besonders weil Nutzer bei Gesundheitssuchen schnelle, zuverlässige Informationen erwarten. Richtig implementiert erhöht das Markup die Sichtbarkeit im Local Pack, verbessert die Klickrate durch Rich Results und sorgt dafür, dass Google korrekte Daten anzeigt.</p>
+
+                <p>Die wichtigsten Schritte zusammengefasst:</p>
+                <ol>
+                    <li>Für Apotheken: <code>PharmacyStore</code> wählen (Übertyp <code>MedicalOrganization</code>)</li>
+                    <li>Für Drogerien: <code>DrugStore</code> wählen (Übertyp <code>Store</code>)</li>
+                    <li>Vollständige Adresse, Telefon und E-Mail einbinden</li>
+                    <li>Öffnungszeiten inkl. Notdienst über <code>openingHoursSpecification</code></li>
+                    <li>Leistungen und Sortiment via <code>hasOfferCatalog</code></li>
+                    <li>Bewertungen via <code>aggregateRating</code> — nur wenn Reviews auf der Seite sichtbar sind</li>
+                    <li>Validierung mit dem <a href="/tools/json-ld-structured-data-validator.html">JSON-LD Validator</a></li>
+                </ol>
+
+                <p>Verwandte Artikel: <a href="/blog/medicalclinic-hospital-schema-markup.html">MedicalClinic Schema Markup für Arztpraxen</a>, <a href="/blog/localbusiness-schema-markup-anleitung.html">LocalBusiness Schema Markup vollständige Anleitung</a> und <a href="/blog/openinghours-schema-markup-seo.html">OpeningHoursSpecification korrekt einbinden</a>.</p>
+
+                    <!-- Share / Back -->
+                    <div class="mt-12 pt-8 border-t border-white/10 flex items-center justify-between">
+                        <a href="/blog/" class="text-blue-400 hover:text-blue-300 flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+                            Zurück zum Blog
+                        </a>
+                    </div>
+            </article>
+
+            <!-- Sidebar -->
+            <aside class="lg:w-1/3 space-y-8">
+                <!-- CTA Box -->
+                <div class="bg-gradient-to-br from-blue-600/20 to-indigo-600/20 border border-blue-500/30 rounded-2xl p-6 text-center">
+                    <h3 class="text-lg font-bold text-white mb-3">Kostenlose SEO-Analyse</h3>
+                    <p class="text-gray-400 text-sm mb-5">Finde heraus, wie gut deine Apotheken-Website für Suchmaschinen optimiert ist.</p>
+                    <a href="/" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-6 py-3 rounded-lg font-medium transition-all inline-block w-full">Jetzt testen</a>
+                </div>
+
+                <!-- Tool Box -->
+                <div class="bg-slate-800/50 border border-white/10 rounded-2xl p-6">
+                    <h3 class="text-lg font-bold text-white mb-4">Passende Tools</h3>
+                    <div class="space-y-3">
+                        <a href="/tools/json-ld-structured-data-validator.html" class="block bg-slate-700/50 hover:bg-slate-700 rounded-lg p-3 transition-colors">
+                            <p class="text-sm font-medium text-white">JSON-LD Validator</p>
+                            <p class="text-xs text-gray-400 mt-1">Schema Markup kostenlos prüfen</p>
+                        </a>
+                        <a href="/tools/schema-markup-generator.html" class="block bg-slate-700/50 hover:bg-slate-700 rounded-lg p-3 transition-colors">
+                            <p class="text-sm font-medium text-white">Schema Generator</p>
+                            <p class="text-xs text-gray-400 mt-1">LocalBusiness JSON-LD erstellen</p>
+                        </a>
+                        <a href="/tools/openinghours-schema-generator.html" class="block bg-slate-700/50 hover:bg-slate-700 rounded-lg p-3 transition-colors">
+                            <p class="text-sm font-medium text-white">Öffnungszeiten-Generator</p>
+                            <p class="text-xs text-gray-400 mt-1">OpeningHoursSpecification erstellen</p>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Related Articles -->
+                <div class="bg-slate-800/50 border border-white/10 rounded-2xl p-6">
+                    <h3 class="text-lg font-bold text-white mb-4">Weitere Artikel</h3>
+                    <div class="space-y-4">
+                        <a href="/blog/medicalclinic-hospital-schema-markup.html" class="block group">
+                            <p class="text-sm text-gray-300 group-hover:text-blue-400 transition-colors font-medium">MedicalClinic & Hospital Schema Markup</p>
+                            <p class="text-xs text-gray-500 mt-1">Schema Markup</p>
+                        </a>
+                        <a href="/blog/localbusiness-schema-markup-anleitung.html" class="block group">
+                            <p class="text-sm text-gray-300 group-hover:text-blue-400 transition-colors font-medium">LocalBusiness Schema Markup Anleitung</p>
+                            <p class="text-xs text-gray-500 mt-1">Schema Markup</p>
+                        </a>
+                        <a href="/blog/openinghours-schema-markup-seo.html" class="block group">
+                            <p class="text-sm text-gray-300 group-hover:text-blue-400 transition-colors font-medium">Öffnungszeiten Schema Markup</p>
+                            <p class="text-xs text-gray-500 mt-1">Schema Markup</p>
+                        </a>
+                        <a href="/blog/strukturierte-daten-seo-schema-markup.html" class="block group">
+                            <p class="text-sm text-gray-300 group-hover:text-blue-400 transition-colors font-medium">Strukturierte Daten für SEO erklärt</p>
+                            <p class="text-xs text-gray-500 mt-1">Schema Markup Grundlagen</p>
+                        </a>
+                    </div>
+                </div>
+            </aside>
+
+        </div>
+    </section>
+
+    <!-- Footer CTA -->
+    <section class="py-16 px-4 bg-gradient-to-r from-blue-900/30 to-indigo-900/30 border-t border-b border-white/5">
+        <div class="max-w-3xl mx-auto text-center">
+            <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">Teste deine Website jetzt kostenlos</h2>
+            <p class="text-gray-400 mb-8">Erhalte eine vollständige SEO-Analyse mit konkreten Verbesserungsvorschlägen.</p>
+            <form action="/" method="get" class="flex flex-col sm:flex-row gap-3 max-w-xl mx-auto">
+                <input type="url" placeholder="https://deine-apotheke.de" class="flex-1 bg-slate-800 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-blue-500">
+                <a href="/" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-8 py-3 rounded-lg font-medium transition-all whitespace-nowrap">Analyse starten</a>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/10 bg-slate-900/50 py-12 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="flex items-center gap-2">
+                    <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                    <span class="text-lg font-bold text-white">Shift07</span>
+                </div>
+                <div class="flex items-center space-x-6 text-sm text-gray-400">
+                    <a href="/impressum.html" class="hover:text-white transition-colors">Impressum</a>
+                    <a href="/datenschutz.html" class="hover:text-white transition-colors">Datenschutz</a>
+                    <a href="/agb.html" class="hover:text-white transition-colors">AGB</a>
+                </div>
+                <p class="text-sm text-gray-500">&copy; 2026 Thümmler AI GmbH</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
