@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Wed, 29 Apr 2026 02:59:21 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 29 Apr 2026 04:55:25 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>HardwareStore Schema Markup: JSON-LD für Baumärkte und Werkzeughandel</title>
+      <link>https://shift07.ai/blog/hardwarestore-schema-markup.html</link>
+      <guid>https://shift07.ai/blog/hardwarestore-schema-markup.html</guid>
+      <pubDate>Wed, 29 Apr 2026 04:55:01 +0000</pubDate>
+      <description>HardwareStore Schema Markup richtig implementieren: Vollständige Anleitung mit JSON-LD für Baumärkte, Werkzeughandel und Heimwerkerbedarf — inkl. Produktdaten und Öffnungszeiten.</description>
+      <category>Schema Markup</category>
+    </item>
     <item>
       <title>HomeGoodsStore &amp; FurnitureStore Schema Markup: JSON-LD für Einrichtungshäuser</title>
       <link>https://shift07.ai/blog/homegoodsstore-furniturestore-schema-markup.html</link>
@@ -157,14 +165,6 @@
       <guid>https://shift07.ai/blog/insuranceagency-schema-markup.html</guid>
       <pubDate>Sun, 26 Apr 2026 01:31:14 +0000</pubDate>
       <description>InsuranceAgency Schema Markup richtig implementieren: JSON-LD für Versicherungsmakler und Versicherungsagenturen — mit vollständigem Beispiel, allen Properties und Validierung.</description>
-      <category>SEO</category>
-    </item>
-    <item>
-      <title>FinancialService Schema Markup: Finanzberater und Versicherungsmakler für Google optimieren</title>
-      <link>https://shift07.ai/blog/financialservice-schema-markup.html</link>
-      <guid>https://shift07.ai/blog/financialservice-schema-markup.html</guid>
-      <pubDate>Sun, 26 Apr 2026 01:27:50 +0000</pubDate>
-      <description>FinancialService Schema Markup richtig implementieren: JSON-LD für Finanzberater, Versicherungsmakler und Bankberater — mit Beispielen, allen Properties und Fehlervermeidung.</description>
       <category>SEO</category>
     </item>
   </channel>
