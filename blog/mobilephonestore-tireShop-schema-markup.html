@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MobilePhoneStore &amp; TireShop Schema Markup: JSON-LD für Handyläden und Reifenhandel | Shift07 Blog</title>
+    <meta name="description" content="MobilePhoneStore und TireShop Schema Markup richtig einsetzen: JSON-LD Beispiele, alle Properties erklärt und häufige Fehler für Handygeschäfte und Reifenhändler.">
+    <meta name="author" content="Thümmler AI GmbH">
+    <link rel="icon" type="image/png" href="/logo.png">
+    <link rel="canonical" href="https://shift07.ai/blog/mobilephonestore-tireShop-schema-markup.html">
+    <link rel="alternate" type="application/rss+xml" title="Shift07 Blog" href="https://shift07.ai/feed.xml">
+    <!-- Open Graph -->
+    <meta property="og:title" content="MobilePhoneStore &amp; TireShop Schema Markup: JSON-LD für Handyläden und Reifenhandel | Shift07 Blog">
+    <meta property="og:description" content="MobilePhoneStore und TireShop Schema Markup richtig einsetzen: JSON-LD Beispiele, alle Properties erklärt und häufige Fehler für Handygeschäfte und Reifenhändler.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://shift07.ai/blog/mobilephonestore-tireShop-schema-markup.html">
+    <meta property="og:image" content="https://shift07.ai/blog/images/mobilephonestore-tireShop-schema-markup.png">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="Shift07">
+    <meta property="article:published_time" content="2026-04-30T10:00:00+02:00">
+    <meta property="article:section" content="Schema Markup">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="MobilePhoneStore &amp; TireShop Schema Markup: JSON-LD für Handyläden und Reifenhandel">
+    <meta name="twitter:description" content="MobilePhoneStore und TireShop Schema Markup richtig einsetzen: JSON-LD Beispiele, alle Properties erklärt und häufige Fehler für Handygeschäfte und Reifenhändler.">
+    <meta name="twitter:image" content="https://shift07.ai/blog/images/mobilephonestore-tireShop-schema-markup.png">
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "MobilePhoneStore & TireShop Schema Markup: JSON-LD für Handyläden und Reifenhandel",
+      "description": "MobilePhoneStore und TireShop Schema Markup richtig einsetzen: JSON-LD Beispiele, alle Properties erklärt und häufige Fehler für Handygeschäfte und Reifenhändler.",
+      "image": "https://shift07.ai/blog/images/mobilephonestore-tireShop-schema-markup.png",
+      "datePublished": "2026-04-30T10:00:00+02:00",
+      "dateModified": "2026-04-30T10:00:00+02:00",
+      "author": {
+        "@type": "Organization",
+        "name": "Shift07",
+        "url": "https://shift07.ai"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Shift07",
+        "url": "https://shift07.ai",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://shift07.ai/assets/logo.png"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://shift07.ai/blog/mobilephonestore-tireShop-schema-markup.html"
+      }
+    }
+    </script>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K1S1RXBDS8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K1S1RXBDS8');
+    </script>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8475857002943858" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: rgba(15, 23, 42, 0.5); }
+        ::-webkit-scrollbar-thumb { background: rgba(59, 130, 246, 0.5); border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: rgba(59, 130, 246, 0.7); }
+        html { scroll-behavior: smooth; }
+        .article-content h2 { font-size: 1.5rem; font-weight: 700; color: #fff; margin-top: 2.5rem; margin-bottom: 1rem; }
+        .article-content h3 { font-size: 1.25rem; font-weight: 600; color: #e2e8f0; margin-top: 2rem; margin-bottom: 0.75rem; }
+        .article-content p { color: #cbd5e1; line-height: 1.8; margin-bottom: 1.25rem; }
+        .article-content ul, .article-content ol { color: #cbd5e1; margin-bottom: 1.25rem; padding-left: 1.5rem; }
+        .article-content li { margin-bottom: 0.5rem; line-height: 1.7; }
+        .article-content ul li { list-style-type: disc; }
+        .article-content ol li { list-style-type: decimal; }
+        .article-content a { color: #60a5fa; text-decoration: underline; text-underline-offset: 2px; }
+        .article-content a:hover { color: #93bbfc; }
+        .article-content blockquote { border-left: 4px solid #3b82f6; padding-left: 1.25rem; margin: 1.5rem 0; color: #94a3b8; font-style: italic; }
+        .article-content code { background: rgba(59, 130, 246, 0.15); color: #93c5fd; padding: 0.15rem 0.4rem; border-radius: 0.25rem; font-size: 0.9em; }
+        .article-content pre { background: rgba(15, 23, 42, 0.8); border: 1px solid rgba(255,255,255,0.1); border-radius: 0.75rem; padding: 1.25rem; overflow-x: auto; margin-bottom: 1.5rem; }
+        .article-content pre code { background: none; padding: 0; color: #e2e8f0; }
+        .article-content strong { color: #f1f5f9; }
+    </style>
+</head>
+<body class="bg-slate-900 text-white min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-slate-900/80 backdrop-blur-xl border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <a href="/" class="flex items-center gap-2">
+                    <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                    <span class="text-xl font-bold text-white">Shift07</span>
+                </a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="/" class="text-gray-300 hover:text-white transition-colors">SEO-Tool</a>
+                    <a href="/blog/" class="text-white font-medium border-b-2 border-blue-500 pb-0.5">Blog</a>
+                    <a href="/tools/" class="text-gray-300 hover:text-white transition-colors">Tools</a>
+                    <a href="/app/#/login" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-5 py-2 rounded-lg font-medium transition-all">Anmelden</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-gray-300 hover:text-white">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900/95 border-b border-white/10">
+            <div class="px-4 py-3 space-y-2">
+                <a href="/" class="block py-2 text-gray-300 hover:text-white">SEO-Tool</a>
+                <a href="/blog/" class="block py-2 text-white font-medium">Blog</a>
+                <a href="/tools/" class="block py-2 text-gray-300 hover:text-white">Tools</a>
+                <a href="/app/#/login" class="block py-2 text-blue-400 hover:text-blue-300">Anmelden</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Image -->
+    <section class="pt-16 relative">
+        <div class="h-[400px] bg-gradient-to-br from-blue-600 via-indigo-700 to-purple-800 relative overflow-hidden">
+            <img src="/blog/images/mobilephonestore-tireShop-schema-markup.png" alt="MobilePhoneStore und TireShop Schema Markup JSON-LD" class="absolute inset-0 w-full h-full object-cover opacity-30">
+            <div class="absolute inset-0 bg-black/40"></div>
+            <div class="absolute inset-0 flex items-center justify-center">
+                <div class="text-center px-4 max-w-4xl">
+                    <span class="inline-block text-sm font-semibold px-4 py-1.5 bg-white/10 text-white/90 rounded-full mb-6">Schema Markup</span>
+                    <h1 class="text-3xl md:text-5xl font-extrabold text-white leading-tight">MobilePhoneStore &amp; TireShop Schema Markup: JSON-LD für Handyläden und Reifenhandel</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Article Content -->
+    <section class="py-12 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col lg:flex-row gap-12">
+
+                <!-- Main Content -->
+                <article class="lg:w-2/3">
+                    <!-- Meta -->
+                    <div class="flex flex-wrap items-center gap-4 text-sm text-gray-400 mb-10 pb-6 border-b border-white/10">
+                        <div class="flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+                            Shift07 Team
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                            30. April 2026
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                            10 Min. Lesezeit
+                        </div>
+                        <span class="text-xs font-semibold px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full">Schema Markup</span>
+                    </div>
+
+                    <!-- Article Body -->
+                    <div class="article-content">
+
+                        <p>Handyläden und Reifenhändler sind zwei Branchen mit sehr unterschiedlichem Geschäftsmodell — aber beide profitieren enorm von präzisem Schema Markup. <strong>MobilePhoneStore</strong> und <strong>TireShop</strong> sind spezialisierte Schema.org-Typen, die Google helfen, diese Geschäfte klar einzuordnen und in lokalen Suchergebnissen bevorzugt darzustellen. In diesem Artikel zeigen wir, wie du das JSON-LD für beide Typen korrekt implementierst.</p>
+
+                        <img src="/blog/images/mobilephonestore-tireShop-schema-markup.png" alt="MobilePhoneStore und TireShop Schema Markup JSON-LD für Handyläden und Reifenhandel" class="w-full rounded-xl mb-8 border border-white/10">
+
+                        <h2>Was sind MobilePhoneStore und TireShop?</h2>
+
+                        <p>Beide Typen sind Unterklassen von <code>schema:LocalBusiness</code> und repräsentieren stationäre Fachgeschäfte mit klar definiertem Sortiment:</p>
+
+                        <ul>
+                            <li><strong>MobilePhoneStore</strong> (<code>schema:MobilePhoneStore</code>): Ein Laden, der Mobiltelefone, Smartphones, Zubehör und zugehörige Dienstleistungen (Reparatur, Vertragsabschluss) anbietet. Direktes Untertyp von <code>schema:Store</code>.</li>
+                            <li><strong>TireShop</strong> (<code>schema:TireShop</code>): Ein Reifenhandel, der Reifen verkauft und montiert — typischerweise auch Felgen, Reifenwechsel-Service und Einlagerung. Untertyp von <code>schema:AutomotiveBusiness</code>.</li>
+                        </ul>
+
+                        <p>Beide profitieren besonders von <a href="/blog/localbusiness-schema-markup-anleitung.html">LocalBusiness Schema Markup</a> — dem Grundgerüst für alle lokalen Unternehmen — sowie von spezifischen Erweiterungen, die das jeweilige Geschäftsmodell abbilden.</p>
+
+                        <h2>MobilePhoneStore Schema Markup: vollständiges JSON-LD Beispiel</h2>
+
+                        <p>Ein Handygeschäft hat häufig mehrere Filialstandorte, wechselnde Produktangebote und Serviceleistungen wie Reparaturen. Das Schema sollte all das widerspiegeln:</p>
+
+<pre><code>{
+  "@context": "https://schema.org",
+  "@type": "MobilePhoneStore",
+  "name": "Handy Welt München",
+  "description": "Ihr Fachgeschäft für Smartphones, Tablets und Zubehör in München. Reparaturen aller Marken, Vertragsabschluss und Eintausch.",
+  "url": "https://www.handy-welt-muenchen.de",
+  "telephone": "+49-89-1234567",
+  "email": "info@handy-welt-muenchen.de",
+  "image": "https://www.handy-welt-muenchen.de/images/store-front.jpg",
+  "priceRange": "€€",
+  "currenciesAccepted": "EUR",
+  "paymentAccepted": "Cash, Credit Card, Debit Card, PayPal",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Kaufingerstraße 12",
+    "addressLocality": "München",
+    "addressRegion": "Bayern",
+    "postalCode": "80331",
+    "addressCountry": "DE"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 48.1375,
+    "longitude": 11.5754
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+      "opens": "09:30",
+      "closes": "19:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "10:00",
+      "closes": "18:00"
+    }
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Smartphones und Zubehör",
+    "itemListElement": [
+      {
+        "@type": "OfferCatalog",
+        "name": "Smartphones",
+        "description": "Aktuelle Modelle von Apple, Samsung, Google und weiteren Herstellern"
+      },
+      {
+        "@type": "OfferCatalog",
+        "name": "Zubehör",
+        "description": "Cases, Ladekabel, Kopfhörer, Powerbanks und mehr"
+      },
+      {
+        "@type": "OfferCatalog",
+        "name": "Reparaturservice",
+        "description": "Display-Reparatur, Akkuwechsel, Software-Probleme für alle Marken"
+      }
+    ]
+  },
+  "sameAs": [
+    "https://www.facebook.com/handyweltmuenchen",
+    "https://www.instagram.com/handyweltmuenchen",
+    "https://maps.google.com/?cid=123456789"
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.6",
+    "reviewCount": "187",
+    "bestRating": "5"
+  }
+}</code></pre>
+
+                        <h3>Wichtige Properties für MobilePhoneStore im Detail</h3>
+
+                        <ul>
+                            <li><strong>hasOfferCatalog</strong>: Listet die verschiedenen Produktkategorien und Services auf. Besonders wertvoll für Google Shopping und Featured Snippets.</li>
+                            <li><strong>paymentAccepted</strong>: Gibt an, welche Zahlungsarten akzeptiert werden — ein oft vernachlässigtes Feld, das aber nutzerrelevant ist.</li>
+                            <li><strong>currenciesAccepted</strong>: Für den deutschen Markt immer "EUR".</li>
+                            <li><strong>priceRange</strong>: Die €-Symbole (€, €€, €€€) helfen Google bei der Einordnung des Preisniveaus.</li>
+                            <li><strong>aggregateRating</strong>: Kundenbewertungen erhöhen die Klickrate erheblich — nur einbinden wenn echte Bewertungen vorhanden sind.</li>
+                        </ul>
+
+                        <h2>TireShop Schema Markup: vollständiges JSON-LD Beispiel</h2>
+
+                        <p>Ein Reifenhandel ist ein <code>AutomotiveBusiness</code> — die Unterklasse <code>TireShop</code> macht ihn für Google noch spezifischer erkennbar. Reifenhändler haben oft saisonale Stoßzeiten (Frühjahrs- und Herbstwechsel), Lagerflächen und Montagebereiche, die sich im Schema abbilden lassen:</p>
+
+<pre><code>{
+  "@context": "https://schema.org",
+  "@type": "TireShop",
+  "name": "Reifen Meister Köln",
+  "description": "Ihr Reifenspezialist in Köln. Reifen aller Marken, Felgen, Reifeneinlagerung und professioneller Reifenwechsel.",
+  "url": "https://www.reifen-meister-koeln.de",
+  "telephone": "+49-221-9876543",
+  "email": "info@reifen-meister-koeln.de",
+  "image": "https://www.reifen-meister-koeln.de/images/werkstatt.jpg",
+  "priceRange": "€€",
+  "currenciesAccepted": "EUR",
+  "paymentAccepted": "Cash, Credit Card, Debit Card, EC-Karte",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Industriestraße 45",
+    "addressLocality": "Köln",
+    "addressRegion": "Nordrhein-Westfalen",
+    "postalCode": "50769",
+    "addressCountry": "DE"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 50.9975,
+    "longitude": 6.8997
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+      "opens": "08:00",
+      "closes": "18:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "08:00",
+      "closes": "14:00"
+    }
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Reifen und Services",
+    "itemListElement": [
+      {
+        "@type": "OfferCatalog",
+        "name": "Sommerreifen",
+        "description": "Sommerreifen aller Größen: Michelin, Continental, Bridgestone, Pirelli und weitere"
+      },
+      {
+        "@type": "OfferCatalog",
+        "name": "Winterreifen",
+        "description": "Geprüfte Winterreifen für sichere Fahrt bei Eis und Schnee"
+      },
+      {
+        "@type": "OfferCatalog",
+        "name": "Ganzjahresreifen",
+        "description": "AllSeasons-Reifen für das ganze Jahr"
+      },
+      {
+        "@type": "OfferCatalog",
+        "name": "Reifenmontage",
+        "description": "Professioneller Reifenwechsel und Auswuchten"
+      },
+      {
+        "@type": "OfferCatalog",
+        "name": "Reifeneinlagerung",
+        "description": "Sichere und trockene Einlagerung Ihrer Saisonreifen"
+      }
+    ]
+  },
+  "serviceArea": {
+    "@type": "GeoCircle",
+    "geoMidpoint": {
+      "@type": "GeoCoordinates",
+      "latitude": 50.9975,
+      "longitude": 6.8997
+    },
+    "geoRadius": "30000"
+  },
+  "sameAs": [
+    "https://www.facebook.com/reifenmeisterkoeln",
+    "https://maps.google.com/?cid=987654321"
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "reviewCount": "312",
+    "bestRating": "5"
+  }
+}</code></pre>
+
+                        <h3>Spezifische Properties für TireShop</h3>
+
+                        <ul>
+                            <li><strong>serviceArea</strong>: Für Reifenhändler, die auch Montageservice anbieten und Kunden aus einem bestimmten Einzugsgebiet bedienen, ist das <code>serviceArea</code>-Property wertvoll. Mehr dazu im Artikel <a href="/blog/servicearea-schema-markup-seo.html">ServiceArea Schema Markup</a>.</li>
+                            <li><strong>hasOfferCatalog</strong>: Sommer-, Winter- und Ganzjahresreifen als separate Katalogeinträge machen das Angebot für Google transparent.</li>
+                            <li><strong>priceRange</strong>: Reifenhandel ist ein preissensibles Geschäft. Das Preisniveau im Schema hilft bei der richtigen Einordnung.</li>
+                        </ul>
+
+                        <h2>TireShop als AutomotiveBusiness: die Klassenhierarchie verstehen</h2>
+
+                        <p>Im Gegensatz zu MobilePhoneStore, der direkt von <code>Store</code> erbt, ist TireShop ein <code>AutomotiveBusiness</code> — also Teil der automobilen Servicekette. Das ist wichtig für die Suchmaschinenoptimierung, weil Google Geschäfte in derselben Branchenkategorie zusammenführt.</p>
+
+                        <p>Die vollständige Hierarchie für TireShop lautet:</p>
+
+                        <ul>
+                            <li><code>schema:Thing</code></li>
+                            <li>→ <code>schema:Organization</code></li>
+                            <li>→ <code>schema:LocalBusiness</code></li>
+                            <li>→ <code>schema:AutomotiveBusiness</code></li>
+                            <li>→ <code>schema:TireShop</code></li>
+                        </ul>
+
+                        <p>Das bedeutet: Du kannst für einen TireShop auch alle Properties von <code>AutomotiveBusiness</code> und <code>LocalBusiness</code> verwenden. Ein verwandter Artikel behandelt die <a href="/blog/autodealer-carrepair-schema-markup.html">AutoDealer &amp; CarRepair Schema Markup</a> — ebenfalls AutomotiveBusiness-Typen mit ähnlichen Properties.</p>
+
+                        <h2>Kombination beider Typen in einem @graph</h2>
+
+                        <p>Manche Unternehmen betreiben sowohl ein Handygeschäft als auch einen KFZ-Zubehörhandel unter einer Domain. In solchen Fällen empfiehlt sich ein <code>@graph</code>-Konstrukt:</p>
+
+<pre><code>{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "MobilePhoneStore",
+      "@id": "https://www.beispiel.de/#handyladen",
+      "name": "Handy & Reifen GmbH — Handyladen",
+      "address": { "@type": "PostalAddress", "addressLocality": "Hamburg" }
+    },
+    {
+      "@type": "TireShop",
+      "@id": "https://www.beispiel.de/#reifenhandel",
+      "name": "Handy & Reifen GmbH — Reifenhandel",
+      "address": { "@type": "PostalAddress", "addressLocality": "Hamburg" }
+    }
+  ]
+}</code></pre>
+
+                        <p>Mit dem <code>@id</code>-Feld kann Google beide Entitäten auf derselben Website eindeutig unterscheiden. Das ist ein fortgeschrittener Ansatz — für die meisten Einzelgeschäfte reicht ein einzelner Schema-Block.</p>
+
+                        <h2>Google Rich Results: Was ist möglich?</h2>
+
+                        <p>Sowohl MobilePhoneStore als auch TireShop können in Google folgende Rich Results erhalten:</p>
+
+                        <ul>
+                            <li><strong>Knowledge Panel</strong>: Seitenleiste mit Öffnungszeiten, Adresse und Bewertungssterne bei Suche nach dem Firmennamen.</li>
+                            <li><strong>Local Pack (Map Pack)</strong>: Die 3-er Box in Google Maps-Ergebnissen bei standortbezogenen Suchen wie "Reifenwechsel Köln".</li>
+                            <li><strong>Bewertungssterne im Suchergebnis</strong>: Über <code>aggregateRating</code> können Sternebewertungen direkt in den organischen Suchergebnissen erscheinen.</li>
+                            <li><strong>Öffnungszeiten-Anzeige</strong>: Google zeigt "Geöffnet / Geschlossen" direkt in der Suche an, wenn <code>openingHoursSpecification</code> korrekt gesetzt ist.</li>
+                        </ul>
+
+                        <h2>Häufige Fehler bei MobilePhoneStore und TireShop Schema</h2>
+
+                        <h3>1. Falschen Typen verwenden</h3>
+                        <p>Viele Handyläden verwenden <code>LocalBusiness</code> oder <code>Store</code> statt <code>MobilePhoneStore</code>. Das ist zwar technisch gültig, aber weniger präzise. Google kann das Geschäft zwar indexieren, aber die branchenspezifischen Einordnungen fehlen. Nutze immer den spezifischsten Typ, der zur Realität passt.</p>
+
+                        <h3>2. Öffnungszeiten fehlen oder sind falsch formatiert</h3>
+                        <p>Ein klassischer Fehler: Öffnungszeiten im Format "Mo-Fr 9-18 Uhr" als Freitext — das versteht Google nicht. Immer <code>openingHoursSpecification</code> mit den korrekten <code>dayOfWeek</code>-Werten und ISO 8601-Zeitformat verwenden. Unser Artikel zu <a href="/blog/openinghours-schema-markup-seo.html">OpeningHoursSpecification Schema Markup</a> erklärt alle Varianten.</p>
+
+                        <h3>3. aggregateRating ohne echte Bewertungen</h3>
+                        <p>Erfundene Bewertungswerte sind ein Verstoß gegen Googles Richtlinien und können zur Entfernung aus den Suchergebnissen führen. Nur echte, gesammelte Kundenbewertungen einbinden — und das <code>reviewCount</code>-Feld immer auf den aktuellen Stand halten.</p>
+
+                        <h3>4. Geo-Koordinaten fehlen</h3>
+                        <p>Für lokale Suchanfragen ("Reifenhändler in meiner Nähe") sind präzise Geo-Koordinaten entscheidend. Google kann sie zwar aus der Adresse ableiten, aber explizite Koordinaten erhöhen die Zuverlässigkeit der lokalen Einordnung deutlich.</p>
+
+                        <h3>5. sameAs verlinkt auf veraltete Profile</h3>
+                        <p>Tote Links in <code>sameAs</code> — etwa zu einem gelöschten Facebook-Profil oder einer veralteten Google Maps-ID — schaden der Signalstärke. Regelmäßig prüfen und aktualisieren.</p>
+
+                        <h2>Implementierung: Wo gehört das Schema hin?</h2>
+
+                        <p>Das JSON-LD-Snippet gehört in den <code>&lt;head&gt;</code>-Bereich der entsprechenden Seite, eingeschlossen in ein <code>&lt;script type="application/ld+json"&gt;</code>-Tag. Die beste Praxis:</p>
+
+                        <ul>
+                            <li><strong>Startseite</strong>: Unternehmensprofil mit allen allgemeinen Informationen (Adresse, Öffnungszeiten, Telefon).</li>
+                            <li><strong>Kontaktseite</strong>: Einfachere Variante mit Kontaktdaten und Standortdaten.</li>
+                            <li><strong>Produktseiten</strong>: Hier kann zusätzlich <code>Product</code> Schema eingebunden werden, um spezifische Artikel wie einzelne Reifenmodelle oder Smartphone-Serien auszuzeichnen.</li>
+                        </ul>
+
+                        <p>Die Entscheidung JSON-LD vs. Microdata erklärt unser Artikel zu <a href="/blog/json-ld-microdata-rdfa-structured-data.html">Structured Data Formaten</a> — wir empfehlen immer JSON-LD, da es am flexibelsten und wartungsfreundlichsten ist.</p>
+
+                        <h2>Schema testen und validieren</h2>
+
+                        <p>Nach der Implementierung immer validieren:</p>
+
+                        <ol>
+                            <li><strong>Google Rich Results Test</strong> (search.google.com/test/rich-results): Prüft ob das Schema valide ist und welche Rich Results möglich sind.</li>
+                            <li><strong>Schema.org Validator</strong> (validator.schema.org): Detailliertere Fehlermeldungen auf Schema-Ebene.</li>
+                            <li><strong>Unser JSON-LD Validator</strong>: <a href="/tools/json-ld-structured-data-validator.html">Kostenlos Schema Markup validieren</a> direkt im Browser.</li>
+                        </ol>
+
+                        <p>Häufige Validierungsfehler: Fehlendes Pflichtfeld <code>name</code>, ungültiges Datum-Format bei <code>openingHoursSpecification</code>, oder Tippfehler in den <code>@type</code>-Werten (Groß- und Kleinschreibung ist bei Schema.org relevant!).</p>
+
+                        <h2>Praxis-Checkliste: MobilePhoneStore und TireShop Schema</h2>
+
+                        <ul>
+                            <li>☑ Richtiger <code>@type</code>: <code>MobilePhoneStore</code> bzw. <code>TireShop</code> (nicht nur <code>LocalBusiness</code>)</li>
+                            <li>☑ <code>name</code>, <code>url</code>, <code>telephone</code>, <code>address</code> vollständig ausgefüllt</li>
+                            <li>☑ <code>openingHoursSpecification</code> mit korrekten Wochentagen und Zeiten</li>
+                            <li>☑ <code>geo</code> mit Latitude und Longitude</li>
+                            <li>☑ <code>image</code> mit absoluter URL eines repräsentativen Fotos</li>
+                            <li>☑ <code>hasOfferCatalog</code> mit den wichtigsten Produktkategorien/Services</li>
+                            <li>☑ <code>aggregateRating</code> nur mit echten, aktuellen Bewertungen</li>
+                            <li>☑ <code>sameAs</code> mit aktiven, korrekten Profil-Links</li>
+                            <li>☑ <code>priceRange</code> für bessere Einordnung in lokalen Ergebnissen</li>
+                            <li>☑ Validierung über Google Rich Results Test</li>
+                        </ul>
+
+                        <h2>Fazit</h2>
+
+                        <p>MobilePhoneStore und TireShop sind zwei sehr unterschiedliche, aber für lokale SEO äußerst relevante Schema.org-Typen. Handyläden profitieren besonders von strukturierten Produktkatalogen und Servicebeschreibungen, Reifenhändler von sauber definierten Servicegebieten und Öffnungszeiten. Beide Typen gehören in den breiteren Kontext des <a href="/blog/strukturierte-daten-seo-schema-markup.html">Schema Markup für SEO</a> — wer die Grundlagen kennt, setzt spezifische Typen gezielt ein.</p>
+
+                        <p>Für die schnelle Implementierung empfehlen wir unseren <a href="/tools/schema-markup-generator.html">kostenlosen Schema-Markup-Generator</a>, der valides JSON-LD für alle LocalBusiness-Typen erzeugt — ohne Coding-Kenntnisse.</p>
+
+                    </div>
+
+                    <!-- Share / Back -->
+                    <div class="mt-12 pt-8 border-t border-white/10 flex items-center justify-between">
+                        <a href="/blog/" class="text-blue-400 hover:text-blue-300 flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+                            Zurück zum Blog
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Sidebar -->
+                <aside class="lg:w-1/3 space-y-8">
+                    <!-- CTA Box -->
+                    <div class="bg-gradient-to-br from-blue-600/20 to-indigo-600/20 border border-blue-500/30 rounded-2xl p-6 text-center">
+                        <h3 class="text-lg font-bold text-white mb-3">Kostenlose SEO-Analyse</h3>
+                        <p class="text-gray-400 text-sm mb-5">Finde heraus, wie gut deine Website für Suchmaschinen optimiert ist.</p>
+                        <a href="/" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-6 py-3 rounded-lg font-medium transition-all inline-block w-full">Jetzt testen</a>
+                    </div>
+
+                    <!-- Related Articles -->
+                    <div class="bg-slate-800/50 border border-white/10 rounded-2xl p-6">
+                        <h3 class="text-lg font-bold text-white mb-4">Verwandte Artikel</h3>
+                        <div class="space-y-4">
+                            <a href="/blog/localbusiness-schema-markup-anleitung.html" class="block group">
+                                <p class="text-sm text-gray-300 group-hover:text-blue-400 transition-colors font-medium">LocalBusiness Schema Markup: Vollständige Anleitung 2026</p>
+                                <p class="text-xs text-gray-500 mt-1">Schema Markup Grundlagen</p>
+                            </a>
+                            <a href="/blog/autodealer-carrepair-schema-markup.html" class="block group">
+                                <p class="text-sm text-gray-300 group-hover:text-blue-400 transition-colors font-medium">AutoDealer &amp; CarRepair Schema Markup</p>
+                                <p class="text-xs text-gray-500 mt-1">AutomotiveBusiness</p>
+                            </a>
+                            <a href="/blog/autopartsstore-automotivebusiness-schema-markup.html" class="block group">
+                                <p class="text-sm text-gray-300 group-hover:text-blue-400 transition-colors font-medium">AutoPartsStore &amp; AutomotiveBusiness Schema Markup</p>
+                                <p class="text-xs text-gray-500 mt-1">KFZ-Zubehör</p>
+                            </a>
+                            <a href="/blog/openinghours-schema-markup-seo.html" class="block group">
+                                <p class="text-sm text-gray-300 group-hover:text-blue-400 transition-colors font-medium">OpeningHoursSpecification Schema Markup</p>
+                                <p class="text-xs text-gray-500 mt-1">Öffnungszeiten richtig einbinden</p>
+                            </a>
+                            <a href="/tools/schema-markup-generator.html" class="block group">
+                                <p class="text-sm text-gray-300 group-hover:text-blue-400 transition-colors font-medium">Schema-Markup-Generator für lokale Unternehmen</p>
+                                <p class="text-xs text-gray-500 mt-1">Kostenloses Tool</p>
+                            </a>
+                        </div>
+                    </div>
+
+                </aside>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer CTA -->
+    <section class="py-16 px-4 bg-gradient-to-r from-blue-900/30 to-indigo-900/30 border-t border-b border-white/5">
+        <div class="max-w-3xl mx-auto text-center">
+            <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">Teste deine Website jetzt kostenlos</h2>
+            <p class="text-gray-400 mb-8">Erhalte eine vollständige SEO-Analyse mit konkreten Verbesserungsvorschlägen.</p>
+            <form action="/" method="get" class="flex flex-col sm:flex-row gap-3 max-w-xl mx-auto">
+                <input type="url" placeholder="https://deine-website.de" class="flex-1 bg-slate-800 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-blue-500">
+                <a href="/" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-8 py-3 rounded-lg font-medium transition-all whitespace-nowrap">Analyse starten</a>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 px-4 border-t border-white/10">
+        <div class="max-w-7xl mx-auto text-center text-gray-500 text-sm">
+            <p>&copy; 2026 Thümmler AI GmbH · <a href="/impressum.html" class="hover:text-gray-300">Impressum</a> · <a href="/datenschutz.html" class="hover:text-gray-300">Datenschutz</a></p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
