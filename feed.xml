@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Thu, 30 Apr 2026 00:46:51 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 30 Apr 2026 02:45:22 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>ConvenienceStore &amp;amp; GroceryStore Schema Markup: JSON-LD für Lebensmittelgeschäfte</title>
+      <link>https://shift07.ai/blog/conveniencestore-grocerystore-schema-markup.html</link>
+      <guid>https://shift07.ai/blog/conveniencestore-grocerystore-schema-markup.html</guid>
+      <pubDate>Thu, 30 Apr 2026 02:44:59 +0000</pubDate>
+      <description>ConvenienceStore und GroceryStore Schema Markup richtig implementieren – mit vollständigen JSON-LD Beispielen, allen wichtigen Properties und Praxis-Tipps für Supermärkte, Kioske und Lebensmittelhändler.</description>
+      <category>Schema Markup</category>
+    </item>
     <item>
       <title>PetStore &amp;amp; AnimalShelter Schema Markup: Tierhandlungen und Tierheime für Google</title>
       <link>https://shift07.ai/blog/petstore-animalshelter-schema-markup.html</link>
@@ -158,14 +166,6 @@
       <pubDate>Mon, 27 Apr 2026 00:31:06 +0000</pubDate>
       <description>Electrician und PaintingContractor Schema Markup richtig einsetzen: JSON-LD Beispiele für Elektriker und Malerbetriebe, Google Rich Results und lokale Suche optimieren.</description>
       <category>SEO</category>
-    </item>
-    <item>
-      <title>Locksmith &amp; MovingCompany Schema Markup: Schlüsseldienst und Umzugsunternehmen für Google</title>
-      <link>https://shift07.ai/blog/locksmith-movingcompany-schema-markup.html</link>
-      <guid>https://shift07.ai/blog/locksmith-movingcompany-schema-markup.html</guid>
-      <pubDate>Sun, 26 Apr 2026 04:55:28 +0000</pubDate>
-      <description>Locksmith und MovingCompany Schema Markup richtig implementieren: JSON-LD für Schlüsseldienste und Umzugsunternehmen. Mit vollständigen Code-Beispielen, Notdienst-Signalisierung und Checkliste 2026.</description>
-      <category>Schema Markup</category>
     </item>
   </channel>
 </rss>
