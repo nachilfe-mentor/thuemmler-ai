@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Thu, 30 Apr 2026 04:30:29 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 30 Apr 2026 04:33:54 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>JewelryStore &amp;amp; ShoeStore Schema Markup: JSON-LD für Juweliere und Schuhgeschäfte</title>
+      <link>https://shift07.ai/blog/jewelrystore-shoestore-schema-markup.html</link>
+      <guid>https://shift07.ai/blog/jewelrystore-shoestore-schema-markup.html</guid>
+      <pubDate>Thu, 30 Apr 2026 04:33:29 +0000</pubDate>
+      <description>JewelryStore und ShoeStore Schema Markup korrekt einsetzen. JSON-LD für Juweliergeschäfte, Uhrenhandlungen und Schuhgeschäfte — mit vollständigen Codebeispielen und Praxis-Tipps für Google Rich Results.</description>
+      <category>SEO</category>
+    </item>
     <item>
       <title>LiquorStore &amp;amp; WineStore Schema Markup: JSON-LD für Spirituosen- und Weinhandlungen</title>
       <link>https://shift07.ai/blog/liquorstore-winestore-schema-markup.html</link>
@@ -157,14 +165,6 @@
       <guid>https://shift07.ai/blog/sportinggoods-store-schema-markup.html</guid>
       <pubDate>Mon, 27 Apr 2026 04:09:52 +0000</pubDate>
       <description>So implementierst du SportingGoodsStore Schema Markup als JSON-LD für dein Sportartikelgeschäft – mit vollständiger Schritt-für-Schritt-Anleitung, Code-Beispielen und allen wichtigen Properties.</description>
-      <category>Schema Markup</category>
-    </item>
-    <item>
-      <title>ChildCare &amp; DayCare Schema Markup: Kitas und Kinderbetreuung für Google optimieren</title>
-      <link>https://shift07.ai/blog/childcare-daycare-schema-markup.html</link>
-      <guid>https://shift07.ai/blog/childcare-daycare-schema-markup.html</guid>
-      <pubDate>Mon, 27 Apr 2026 02:32:33 +0000</pubDate>
-      <description>So implementierst du ChildCare und DayCare Schema Markup für Kitas, Kindertagesstätten und Tagesmütter – mit JSON-LD-Beispielen, Checkliste und lokalen SEO-Tipps.</description>
       <category>Schema Markup</category>
     </item>
   </channel>
