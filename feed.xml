@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Wed, 29 Apr 2026 06:39:39 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 30 Apr 2026 00:43:05 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>PetStore &amp;amp; AnimalShelter Schema Markup: Tierhandlungen und Tierheime für Google</title>
+      <link>https://shift07.ai/blog/petstore-animalshelter-schema-markup.html</link>
+      <guid>https://shift07.ai/blog/petstore-animalshelter-schema-markup.html</guid>
+      <pubDate>Thu, 30 Apr 2026 00:42:25 +0000</pubDate>
+      <description>Lerne, wie du PetStore und AnimalShelter Schema Markup als JSON-LD implementierst — mit vollständigen Code-Beispielen für Tierhandlungen, Zoogeschäfte und Tierheime.</description>
+      <category>Schema Markup</category>
+    </item>
     <item>
       <title>AutoPartsStore &amp; AutomotiveBusiness Schema Markup: JSON-LD für KFZ-Zubehör</title>
       <link>https://shift07.ai/blog/autopartsstore-automotivebusiness-schema-markup.html</link>
@@ -157,14 +165,6 @@
       <guid>https://shift07.ai/blog/locksmith-movingcompany-schema-markup.html</guid>
       <pubDate>Sun, 26 Apr 2026 04:55:28 +0000</pubDate>
       <description>Locksmith und MovingCompany Schema Markup richtig implementieren: JSON-LD für Schlüsseldienste und Umzugsunternehmen. Mit vollständigen Code-Beispielen, Notdienst-Signalisierung und Checkliste 2026.</description>
-      <category>Schema Markup</category>
-    </item>
-    <item>
-      <title>HVACBusiness Schema Markup: Heizung, Klimaanlage und Lüftung für Google optimieren</title>
-      <link>https://shift07.ai/blog/hvacbusiness-schema-markup.html</link>
-      <guid>https://shift07.ai/blog/hvacbusiness-schema-markup.html</guid>
-      <pubDate>Sun, 26 Apr 2026 04:48:17 +0000</pubDate>
-      <description>HVACBusiness Schema Markup richtig implementieren: JSON-LD für Heizungsinstallateure, Klimatechniker und Lüftungsbauer. Mit vollständigem Code-Beispiel und Checkliste für 2026.</description>
       <category>Schema Markup</category>
     </item>
   </channel>
