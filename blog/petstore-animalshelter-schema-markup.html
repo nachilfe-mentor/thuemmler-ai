@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetStore &amp; AnimalShelter Schema Markup: Tierhandlungen und Tierheime für Google | Shift07 Blog</title>
+    <meta name="description" content="Lerne, wie du PetStore und AnimalShelter Schema Markup als JSON-LD implementierst — mit vollständigen Code-Beispielen für Tierhandlungen, Zoogeschäfte und Tierheime.">
+    <meta name="author" content="Thümmler AI GmbH">
+    <link rel="icon" type="image/png" href="/logo.png">
+    <link rel="canonical" href="https://shift07.ai/blog/petstore-animalshelter-schema-markup.html">
+    <link rel="alternate" type="application/rss+xml" title="Shift07 Blog" href="https://shift07.ai/feed.xml">
+    <!-- Open Graph -->
+    <meta property="og:title" content="PetStore &amp; AnimalShelter Schema Markup: Tierhandlungen und Tierheime für Google | Shift07 Blog">
+    <meta property="og:description" content="Lerne, wie du PetStore und AnimalShelter Schema Markup als JSON-LD implementierst — mit vollständigen Code-Beispielen für Tierhandlungen, Zoogeschäfte und Tierheime.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://shift07.ai/blog/petstore-animalshelter-schema-markup.html">
+    <meta property="og:image" content="https://shift07.ai/blog/images/petstore-animalshelter-schema-markup.png">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="Shift07">
+    <meta property="article:published_time" content="2026-04-30T08:00:00+02:00">
+    <meta property="article:section" content="Schema Markup">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="PetStore &amp; AnimalShelter Schema Markup: Tierhandlungen und Tierheime für Google">
+    <meta name="twitter:description" content="Lerne, wie du PetStore und AnimalShelter Schema Markup als JSON-LD implementierst — mit vollständigen Code-Beispielen für Tierhandlungen, Zoogeschäfte und Tierheime.">
+    <meta name="twitter:image" content="https://shift07.ai/blog/images/petstore-animalshelter-schema-markup.png">
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "PetStore & AnimalShelter Schema Markup: Tierhandlungen und Tierheime für Google",
+      "description": "Lerne, wie du PetStore und AnimalShelter Schema Markup als JSON-LD implementierst — mit vollständigen Code-Beispielen für Tierhandlungen, Zoogeschäfte und Tierheime.",
+      "image": "https://shift07.ai/blog/images/petstore-animalshelter-schema-markup.png",
+      "datePublished": "2026-04-30T08:00:00+02:00",
+      "dateModified": "2026-04-30T08:00:00+02:00",
+      "author": {
+        "@type": "Organization",
+        "name": "Shift07",
+        "url": "https://shift07.ai"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Shift07",
+        "url": "https://shift07.ai",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://shift07.ai/assets/logo.png"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://shift07.ai/blog/petstore-animalshelter-schema-markup.html"
+      }
+    }
+    </script>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K1S1RXBDS8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K1S1RXBDS8');
+    </script>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8475857002943858" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: rgba(15, 23, 42, 0.5); }
+        ::-webkit-scrollbar-thumb { background: rgba(59, 130, 246, 0.5); border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: rgba(59, 130, 246, 0.7); }
+        html { scroll-behavior: smooth; }
+        .article-content h2 { font-size: 1.5rem; font-weight: 700; color: #fff; margin-top: 2.5rem; margin-bottom: 1rem; }
+        .article-content h3 { font-size: 1.25rem; font-weight: 600; color: #e2e8f0; margin-top: 2rem; margin-bottom: 0.75rem; }
+        .article-content p { color: #cbd5e1; line-height: 1.8; margin-bottom: 1.25rem; }
+        .article-content ul, .article-content ol { color: #cbd5e1; margin-bottom: 1.25rem; padding-left: 1.5rem; }
+        .article-content li { margin-bottom: 0.5rem; line-height: 1.7; }
+        .article-content ul li { list-style-type: disc; }
+        .article-content ol li { list-style-type: decimal; }
+        .article-content a { color: #60a5fa; text-decoration: underline; text-underline-offset: 2px; }
+        .article-content a:hover { color: #93bbfc; }
+        .article-content blockquote { border-left: 4px solid #3b82f6; padding-left: 1.25rem; margin: 1.5rem 0; color: #94a3b8; font-style: italic; }
+        .article-content code { background: rgba(59, 130, 246, 0.15); color: #93c5fd; padding: 0.15rem 0.4rem; border-radius: 0.25rem; font-size: 0.9em; }
+        .article-content pre { background: rgba(15, 23, 42, 0.8); border: 1px solid rgba(255,255,255,0.1); border-radius: 0.75rem; padding: 1.25rem; overflow-x: auto; margin-bottom: 1.5rem; }
+        .article-content pre code { background: none; padding: 0; color: #e2e8f0; }
+        .article-content strong { color: #f1f5f9; }
+    </style>
+</head>
+<body class="bg-slate-900 text-white min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-slate-900/80 backdrop-blur-xl border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <a href="/" class="flex items-center gap-2">
+                    <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                    <span class="text-xl font-bold text-white">Shift07</span>
+                </a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="/" class="text-gray-300 hover:text-white transition-colors">SEO-Tool</a>
+                    <a href="/blog/" class="text-white font-medium border-b-2 border-blue-500 pb-0.5">Blog</a>
+                    <a href="/tools/" class="text-gray-300 hover:text-white transition-colors">Tools</a>
+                    <a href="/app/#/login" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-5 py-2 rounded-lg font-medium transition-all">Anmelden</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-gray-300 hover:text-white">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900/95 border-b border-white/10">
+            <div class="px-4 py-3 space-y-2">
+                <a href="/" class="block py-2 text-gray-300 hover:text-white">SEO-Tool</a>
+                <a href="/blog/" class="block py-2 text-white font-medium">Blog</a>
+                <a href="/tools/" class="block py-2 text-gray-300 hover:text-white">Tools</a>
+                <a href="/app/#/login" class="block py-2 text-blue-400 hover:text-blue-300">Anmelden</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Image -->
+    <section class="pt-16 relative">
+        <div class="h-[400px] relative overflow-hidden">
+            <img src="/blog/images/petstore-animalshelter-schema-markup.png" alt="PetStore AnimalShelter Schema Markup JSON-LD für Tierhandlungen und Tierheime" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black/50"></div>
+            <div class="absolute inset-0 flex items-center justify-center">
+                <div class="text-center px-4 max-w-4xl">
+                    <span class="inline-block text-sm font-semibold px-4 py-1.5 bg-white/10 text-white/90 rounded-full mb-6">Schema Markup</span>
+                    <h1 class="text-3xl md:text-5xl font-extrabold text-white leading-tight">PetStore &amp; AnimalShelter Schema Markup: Tierhandlungen und Tierheime für Google</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Article Content -->
+    <section class="py-12 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col lg:flex-row gap-12">
+
+                <!-- Main Content -->
+                <article class="lg:w-2/3">
+                    <!-- Meta -->
+                    <div class="flex flex-wrap items-center gap-4 text-sm text-gray-400 mb-10 pb-6 border-b border-white/10">
+                        <div class="flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+                            Shift07 Team
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                            30. April 2026
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                            10 Min. Lesezeit
+                        </div>
+                        <span class="text-xs font-semibold px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full">Schema Markup</span>
+                    </div>
+
+                    <!-- Article Body -->
+                    <div class="article-content">
+
+                        <p>Tierhandlungen und Tierheime sind Anlaufstellen für Millionen von Tierbesitzern — und dennoch haben die wenigsten von ihnen strukturierte Daten auf ihrer Website. Dabei ist <strong>PetStore und AnimalShelter Schema Markup</strong> einer der einfachsten Wege, um in den lokalen Google-Suchergebnissen sichtbarer zu werden. In diesem Artikel zeigen wir dir Schritt für Schritt, wie du JSON-LD für Zoogeschäfte, Tierfachhandlungen und Tierheime korrekt implementierst.</p>
+
+                        <h2>Was ist PetStore Schema Markup?</h2>
+                        <p>Das <code>PetStore</code>-Schema ist ein Untertyp von <code>LocalBusiness</code> im Schema.org-Vokabular. Es teilt Google mit: „Diese Website gehört zu einem Tiergeschäft." Damit kann Google die Informationen deiner Tierhandlung strukturiert verarbeiten und in den lokalen Suchergebnissen, im Google Knowledge Panel und in Google Maps korrekt darstellen.</p>
+
+                        <p>Suchen wie <em>„Tierhandlung in meiner Nähe"</em>, <em>„Zoogeschäft Hamburg"</em> oder <em>„Fischfutter kaufen Berlin"</em> liefern Ergebnisse, bei denen das lokale Ranking entscheidend ist. Wer hier weit oben erscheint, gewinnt Kunden — und strukturierte Daten sind ein wichtiger Faktor für genau dieses Ranking. Mehr zur grundlegenden Strategie findest du in unserem Artikel über <a href="/blog/foodestablishment-schema-markup.html">FoodEstablishment Schema Markup</a>, der ähnliche Prinzipien für Gastronomiebetriebe erklärt.</p>
+
+                        <h2>PetStore JSON-LD: Vollständiges Code-Beispiel</h2>
+                        <p>Das folgende JSON-LD ist ein vollständiges Beispiel für eine Tierhandlung. Platziere diesen Code im <code>&lt;head&gt;</code>-Bereich deiner Website:</p>
+
+<pre><code>&lt;script type="application/ld+json"&gt;
+{
+  "@context": "https://schema.org",
+  "@type": "PetStore",
+  "name": "Tierparadies Müller",
+  "description": "Ihr Fachgeschäft für Aquarien, Terrarien, Kleintiere und Heimtierbedarf in Hamburg.",
+  "url": "https://tierparadies-mueller.de",
+  "telephone": "+49 40 12345678",
+  "email": "info@tierparadies-mueller.de",
+  "image": "https://tierparadies-mueller.de/images/fassade.jpg",
+  "priceRange": "€€",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Musterstraße 12",
+    "addressLocality": "Hamburg",
+    "postalCode": "20095",
+    "addressCountry": "DE"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 53.5488,
+    "longitude": 9.9872
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+      "opens": "09:00",
+      "closes": "18:30"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "09:00",
+      "closes": "16:00"
+    }
+  ],
+  "hasMap": "https://maps.google.com/?q=Tierparadies+Müller+Hamburg",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.7",
+    "reviewCount": "134"
+  },
+  "sameAs": [
+    "https://www.facebook.com/tierparadies-mueller",
+    "https://www.instagram.com/tierparadies_mueller"
+  ]
+}
+&lt;/script&gt;</code></pre>
+
+                        <h2>AnimalShelter Schema Markup: Tierheime richtig auszeichnen</h2>
+                        <p>Für Tierheime, Tierschutzorganisationen und Auffangstationen verwendet man den Schema-Typ <code>AnimalShelter</code>. Dieser ist ebenfalls ein direkter Untertyp von <code>LocalBusiness</code> und signalisiert Google, dass es sich um eine Organisation handelt, die Tiere aufnimmt, vermittelt oder pflegt.</p>
+
+                        <p>Das ist besonders wichtig, weil viele Menschen gezielt nach Tierheimen suchen, wenn sie ein Tier adoptieren möchten. Wer hier strukturierte Daten nutzt, erscheint prominenter in den Suchergebnissen und erhält durch das Google Knowledge Panel mehr Vertrauen beim Nutzer.</p>
+
+<pre><code>&lt;script type="application/ld+json"&gt;
+{
+  "@context": "https://schema.org",
+  "@type": "AnimalShelter",
+  "name": "Tierheim Grüntal e.V.",
+  "description": "Wir vermitteln Hunde, Katzen und Kleintiere ein liebevolles Zuhause. Tierschutz im Herzen von Berlin.",
+  "url": "https://tierheim-gruental.de",
+  "telephone": "+49 30 9876543",
+  "email": "info@tierheim-gruental.de",
+  "image": "https://tierheim-gruental.de/images/eingang.jpg",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Tierweg 5",
+    "addressLocality": "Berlin",
+    "postalCode": "12347",
+    "addressCountry": "DE"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 52.4896,
+    "longitude": 13.4289
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday"],
+      "opens": "11:00",
+      "closes": "17:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Saturday","Sunday"],
+      "opens": "10:00",
+      "closes": "16:00"
+    }
+  ],
+  "nonprofitStatus": "NonprofitType",
+  "foundingDate": "1998",
+  "sameAs": [
+    "https://www.facebook.com/tierheim-gruental",
+    "https://www.instagram.com/tierheim_gruental"
+  ]
+}
+&lt;/script&gt;</code></pre>
+
+                        <h2>Die wichtigsten Felder im Überblick</h2>
+                        <p>Nicht alle Felder sind verpflichtend — aber je vollständiger dein Schema, desto besser. Hier eine Übersicht der wichtigsten Eigenschaften:</p>
+
+                        <h3>Pflichtfelder (für gutes Ranking)</h3>
+                        <ul>
+                            <li><strong>name</strong> — Offizieller Name des Geschäfts oder Tierheims</li>
+                            <li><strong>address</strong> — Vollständige Adresse mit Straße, PLZ und Stadt</li>
+                            <li><strong>telephone</strong> — Telefonnummer im internationalen Format (+49...)</li>
+                            <li><strong>url</strong> — Kanonische URL der Website</li>
+                        </ul>
+
+                        <h3>Empfohlene Felder (für Rich Snippets)</h3>
+                        <ul>
+                            <li><strong>image</strong> — Foto des Geschäfts oder Eingangsbereichs</li>
+                            <li><strong>openingHoursSpecification</strong> — Öffnungszeiten pro Wochentag</li>
+                            <li><strong>aggregateRating</strong> — Bewertungsdurchschnitt und Anzahl Bewertungen</li>
+                            <li><strong>geo</strong> — GPS-Koordinaten für präzises Map-Mapping</li>
+                            <li><strong>priceRange</strong> — Preisniveau (€, €€ oder €€€)</li>
+                            <li><strong>description</strong> — Kurze Beschreibung des Angebots</li>
+                        </ul>
+
+                        <h3>Optionale Felder für mehr Kontext</h3>
+                        <ul>
+                            <li><strong>sameAs</strong> — Links zu Social-Media-Profilen und Einträgen (Google My Business, Facebook, Instagram)</li>
+                            <li><strong>hasMap</strong> — Direktlink zur Google Maps Seite</li>
+                            <li><strong>email</strong> — Kontakt-E-Mail-Adresse</li>
+                            <li><strong>foundingDate</strong> — Gründungsjahr (besonders für Tierheime relevant)</li>
+                        </ul>
+
+                        <h2>Spezialfall: Tierarztpraxis mit Tierpflege-Angebot</h2>
+                        <p>Viele Tierarztpraxen bieten auch Tierpflege-Leistungen an oder betreiben ein kleines Zubehör-Sortiment. In diesem Fall kannst du mehrere Schema-Typen kombinieren. Google erlaubt es, ein Array von Typen anzugeben:</p>
+
+<pre><code>&lt;script type="application/ld+json"&gt;
+{
+  "@context": "https://schema.org",
+  "@type": ["VeterinaryCare", "PetStore"],
+  "name": "Tierarztzentrum am Park",
+  "description": "Tierarztpraxis mit Tierpflege, Impfservice und großem Zubehör-Sortiment.",
+  "url": "https://tierarztzentrum-am-park.de",
+  "telephone": "+49 211 555000",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Parkstraße 22",
+    "addressLocality": "Düsseldorf",
+    "postalCode": "40213",
+    "addressCountry": "DE"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+      "opens": "08:00",
+      "closes": "19:00"
+    }
+  ],
+  "medicalSpecialty": "Veterinary"
+}
+&lt;/script&gt;</code></pre>
+
+                        <h2>Öffnungszeiten korrekt angeben</h2>
+                        <p>Ein häufiger Fehler ist die falsche Angabe von Öffnungszeiten. Das Schema.org-Format erwartet für <code>dayOfWeek</code> englische Wochentagnamen mit großem Anfangsbuchstaben: <code>Monday</code>, <code>Tuesday</code>, <code>Wednesday</code>, <code>Thursday</code>, <code>Friday</code>, <code>Saturday</code>, <code>Sunday</code>.</p>
+
+                        <p>Für Betriebe mit Mittagspause musst du zwei separate <code>OpeningHoursSpecification</code>-Objekte erstellen — eines für den Vormittag, eines für den Nachmittag:</p>
+
+<pre><code>"openingHoursSpecification": [
+  {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+    "opens": "09:00",
+    "closes": "12:30"
+  },
+  {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+    "opens": "14:00",
+    "closes": "18:00"
+  }
+]</code></pre>
+
+                        <h2>Bewertungen einbinden: aggregateRating richtig nutzen</h2>
+                        <p>Das <code>aggregateRating</code>-Feld kann bei Tierhandlungen und Tierheimen echte Klickraten-Vorteile bringen. Wenn in den Suchergebnissen gelbe Sterne neben dem Eintrag erscheinen, klicken Nutzer deutlich häufiger. Wichtig dabei: Du darfst <strong>nur echte, von Kunden stammende Bewertungen</strong> einbinden — keine selbst erfundenen Werte.</p>
+
+                        <p>Die Werte sollten mit deiner Google My Business-Seite oder anderen Bewertungsportalen übereinstimmen. Stimmen die Zahlen nicht überein, kann Google das Schema ignorieren oder im schlimmsten Fall als manipulativ bewerten. Wir haben das Thema ausführlich im Artikel über <a href="/blog/aggregaterating-schema-markup-vertieft.html">AggregateRating Schema Markup vertieft</a> erklärt.</p>
+
+                        <h2>Schema für Tierheime: Besonderheiten beachten</h2>
+                        <p>Tierheime sind häufig als gemeinnützige Vereine (e.V.) organisiert. Das Schema.org-Markup bietet dafür das Feld <code>nonprofitStatus</code>, das du nutzen kannst. Außerdem ist es empfehlenswert, das Feld <code>foundingDate</code> anzugeben — es signalisiert Beständigkeit und Vertrauen.</p>
+
+                        <p>Ein weiterer Unterschied zu Tierhandlungen: Tierheime haben oft unregelmäßigere Öffnungszeiten und sind an Feiertagen geschlossen. Nutze dafür das <code>specialOpeningHoursSpecification</code>-Feld für Ausnahmen:</p>
+
+<pre><code>"specialOpeningHoursSpecification": [
+  {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": "PublicHolidays",
+    "opens": "10:00",
+    "closes": "13:00"
+  }
+]</code></pre>
+
+                        <h2>Tier-Kategorien als additionalType angeben</h2>
+                        <p>Wenn dein Tiergeschäft auf bestimmte Tierarten spezialisiert ist — zum Beispiel ausschließlich Aquaristik-Bedarf oder nur exotische Reptilien — kannst du das über <code>additionalType</code> kommunizieren:</p>
+
+<pre><code>"additionalType": "https://schema.org/Store",
+"keywords": "Aquaristik, Aquarium, Fischfutter, Wasserpflanzen, Garnelen"</code></pre>
+
+                        <p>Alternativ kannst du im <code>description</code>-Feld explizit auf die Spezialisierung hinweisen. Google wertet diesen Text aus und kann deine Seite für spezifischere Suchanfragen ranken.</p>
+
+                        <h2>Schema testen und validieren</h2>
+                        <p>Bevor du dein Schema live schaltest, solltest du es testen. Google stellt zwei offizielle Tools bereit:</p>
+
+                        <ul>
+                            <li><strong>Rich Results Test</strong> (search.google.com/test/rich-results) — prüft, ob Google das Schema als gültig erkennt und ob Rich Snippets möglich sind</li>
+                            <li><strong>Schema.org Validator</strong> (validator.schema.org) — prüft die technische Korrektheit des JSON-LD</li>
+                        </ul>
+
+                        <p>Häufige Fehler, auf die du achten solltest:</p>
+                        <ul>
+                            <li>Fehlende Anführungszeichen bei String-Werten</li>
+                            <li>Ungültige Datums- oder Zeitformate (ISO 8601 erforderlich)</li>
+                            <li>Telefonnummern ohne internationales Präfix (+49)</li>
+                            <li>Fehlende <code>@context</code> oder <code>@type</code> Angaben</li>
+                            <li>Zu hohe oder nicht reale Bewertungswerte bei <code>aggregateRating</code></li>
+                        </ul>
+
+                        <p>Unsere <a href="/tools/local-business-schema-generator.html">kostenlose Schema-Generator für lokale Unternehmen</a> nimmt dir die manuelle Arbeit ab und erstellt valides JSON-LD auf Knopfdruck.</p>
+
+                        <h2>Schema Markup in den Blog-Index einbinden</h2>
+                        <p>Wenn du mehrere Seiten für verschiedene Tierarten oder Standorte hast, lohnt sich ein übergeordnetes <code>ItemList</code>-Schema auf der Hauptseite. Das strukturierte Daten-Markup signalisiert Google dabei die Hierarchie deiner Website und kann die Sichtbarkeit der Unterseiten ebenfalls verbessern.</p>
+
+                        <p>Das Prinzip gilt auch für andere Branchentypen: Mehr dazu findest du in unserem Artikel über <a href="/blog/childcare-daycare-schema-markup.html">ChildCare und DayCare Schema Markup</a>, der ähnliche Muster für Kinderbetreuung zeigt.</p>
+
+                        <h2>Checkliste: PetStore & AnimalShelter Schema richtig implementieren</h2>
+                        <p>Zum Abschluss die wichtigsten Punkte auf einen Blick:</p>
+                        <ol>
+                            <li>Richtigen Schema-Typ wählen: <code>PetStore</code> für Tierhandlungen, <code>AnimalShelter</code> für Tierheime</li>
+                            <li>Name, Adresse, Telefon und URL vollständig angeben</li>
+                            <li>Öffnungszeiten mit englischen Wochentag-Namen im ISO-Format</li>
+                            <li>Bild-URL einbinden (reales Foto, nicht Placeholder)</li>
+                            <li>Bewertungen nur einbinden, wenn sie aus echten Quellen stammen</li>
+                            <li>GPS-Koordinaten für präzises Map-Mapping hinzufügen</li>
+                            <li>Schema mit Google's Rich Results Test validieren</li>
+                            <li>Konsistenz mit Google My Business sicherstellen</li>
+                        </ol>
+
+                        <p>Mit diesem vollständigen PetStore und AnimalShelter Schema Markup machst du deine Tierhandlung oder dein Tierheim für Google lesbar — und legst damit eine wichtige Grundlage für bessere Sichtbarkeit in den lokalen Suchergebnissen. Starte jetzt mit unserer <a href="/">kostenlosen SEO-Analyse</a> und prüfe, welche weiteren SEO-Verbesserungen auf deiner Website möglich sind.</p>
+
+                    </div>
+
+                    <!-- Share / Back -->
+                    <div class="mt-12 pt-8 border-t border-white/10 flex items-center justify-between">
+                        <a href="/blog/" class="text-blue-400 hover:text-blue-300 flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+                            Zurück zum Blog
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Sidebar -->
+                <aside class="lg:w-1/3 space-y-8">
+                    <!-- CTA Box -->
+                    <div class="bg-gradient-to-br from-blue-600/20 to-indigo-600/20 border border-blue-500/30 rounded-2xl p-6 text-center">
+                        <h3 class="text-lg font-bold text-white mb-3">Kostenlose SEO-Analyse</h3>
+                        <p class="text-gray-400 text-sm mb-5">Finde heraus, wie gut deine Website für Suchmaschinen optimiert ist.</p>
+                        <a href="/" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-6 py-3 rounded-lg font-medium transition-all inline-block w-full">Jetzt testen</a>
+                    </div>
+
+                    <!-- Schema Generator CTA -->
+                    <div class="bg-slate-800/50 border border-white/10 rounded-2xl p-6">
+                        <h3 class="text-lg font-bold text-white mb-3">Schema-Generator</h3>
+                        <p class="text-gray-400 text-sm mb-4">Erstelle valides JSON-LD für dein Unternehmen ohne Programmierung.</p>
+                        <a href="/tools/local-business-schema-generator.html" class="text-blue-400 hover:text-blue-300 text-sm font-medium">Zum Schema-Generator →</a>
+                    </div>
+
+                    <!-- Related Articles -->
+                    <div class="bg-slate-800/50 border border-white/10 rounded-2xl p-6">
+                        <h3 class="text-lg font-bold text-white mb-4">Verwandte Artikel</h3>
+                        <div class="space-y-4">
+                            <a href="/blog/foodestablishment-schema-markup.html" class="block group">
+                                <p class="text-sm text-gray-300 group-hover:text-blue-400 transition-colors font-medium">FoodEstablishment Schema Markup</p>
+                                <p class="text-xs text-gray-500 mt-1">Schema Markup</p>
+                            </a>
+                            <a href="/blog/childcare-daycare-schema-markup.html" class="block group">
+                                <p class="text-sm text-gray-300 group-hover:text-blue-400 transition-colors font-medium">ChildCare & DayCare Schema Markup</p>
+                                <p class="text-xs text-gray-500 mt-1">Schema Markup</p>
+                            </a>
+                            <a href="/blog/aggregaterating-schema-markup-vertieft.html" class="block group">
+                                <p class="text-sm text-gray-300 group-hover:text-blue-400 transition-colors font-medium">AggregateRating Schema Markup vertieft</p>
+                                <p class="text-xs text-gray-500 mt-1">Schema Markup</p>
+                            </a>
+                            <a href="/blog/beautysalon-spa-schema-markup.html" class="block group">
+                                <p class="text-sm text-gray-300 group-hover:text-blue-400 transition-colors font-medium">BeautySalon & Spa Schema Markup</p>
+                                <p class="text-xs text-gray-500 mt-1">Schema Markup</p>
+                            </a>
+                        </div>
+                    </div>
+                </aside>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer CTA -->
+    <section class="py-16 px-4 bg-gradient-to-r from-blue-900/30 to-indigo-900/30 border-t border-b border-white/5">
+        <div class="max-w-3xl mx-auto text-center">
+            <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">Teste deine Website jetzt kostenlos</h2>
+            <p class="text-gray-400 mb-8">Erhalte eine vollständige SEO-Analyse mit konkreten Verbesserungsvorschlägen.</p>
+            <form action="/" method="get" class="flex flex-col sm:flex-row gap-3 max-w-xl mx-auto">
+                <input type="url" placeholder="https://deine-website.de" class="flex-1 bg-slate-800 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-blue-500">
+                <a href="/" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-8 py-3 rounded-lg font-medium transition-all whitespace-nowrap">Analyse starten</a>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/10 bg-slate-900/50 py-12 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="flex items-center gap-2">
+                    <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                    <span class="text-lg font-bold text-white">Shift07</span>
+                </div>
+                <div class="flex items-center space-x-6 text-sm text-gray-400">
+                    <a href="/impressum.html" class="hover:text-white transition-colors">Impressum</a>
+                    <a href="/datenschutz.html" class="hover:text-white transition-colors">Datenschutz</a>
+                    <a href="/agb.html" class="hover:text-white transition-colors">AGB</a>
+                </div>
+                <p class="text-sm text-gray-500">&copy; 2026 Thümmler AI GmbH</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
