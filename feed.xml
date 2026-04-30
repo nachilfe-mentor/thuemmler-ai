@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Thu, 30 Apr 2026 04:33:54 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 30 Apr 2026 06:10:11 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>MobilePhoneStore &amp;amp; TireShop Schema Markup: JSON-LD für Handyläden und Reifenhandel</title>
+      <link>https://shift07.ai/blog/mobilephonestore-tireShop-schema-markup.html</link>
+      <guid>https://shift07.ai/blog/mobilephonestore-tireShop-schema-markup.html</guid>
+      <pubDate>Thu, 30 Apr 2026 06:09:45 +0000</pubDate>
+      <description>MobilePhoneStore und TireShop Schema Markup richtig einsetzen: JSON-LD Beispiele, alle Properties erklärt und häufige Fehler für Handygeschäfte und Reifenhändler.</description>
+      <category>Schema Markup</category>
+    </item>
     <item>
       <title>JewelryStore &amp;amp; ShoeStore Schema Markup: JSON-LD für Juweliere und Schuhgeschäfte</title>
       <link>https://shift07.ai/blog/jewelrystore-shoestore-schema-markup.html</link>
@@ -157,14 +165,6 @@
       <guid>https://shift07.ai/blog/autorental-taxiservice-schema-markup.html</guid>
       <pubDate>Mon, 27 Apr 2026 05:50:12 +0000</pubDate>
       <description>AutoRental und TaxiService Schema Markup richtig implementieren: JSON-LD Beispiele, alle Properties und Schritt-für-Schritt-Anleitung für Mietwagenunternehmen und Taxibetriebe.</description>
-      <category>Schema Markup</category>
-    </item>
-    <item>
-      <title>SportingGoodsStore Schema Markup: Sportartikelgeschäft für Google optimieren</title>
-      <link>https://shift07.ai/blog/sportinggoods-store-schema-markup.html</link>
-      <guid>https://shift07.ai/blog/sportinggoods-store-schema-markup.html</guid>
-      <pubDate>Mon, 27 Apr 2026 04:09:52 +0000</pubDate>
-      <description>So implementierst du SportingGoodsStore Schema Markup als JSON-LD für dein Sportartikelgeschäft – mit vollständiger Schritt-für-Schritt-Anleitung, Code-Beispielen und allen wichtigen Properties.</description>
       <category>Schema Markup</category>
     </item>
   </channel>
