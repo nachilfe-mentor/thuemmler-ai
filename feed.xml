@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Fri, 01 May 2026 00:18:03 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 01 May 2026 01:53:41 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>DepositoryInstitution &amp;amp; EntertainmentBusiness Schema Markup: Bank und Unterhaltung für Google</title>
+      <link>https://shift07.ai/blog/depositoryinstitution-entertainmentbusiness-schema-markup.html</link>
+      <guid>https://shift07.ai/blog/depositoryinstitution-entertainmentbusiness-schema-markup.html</guid>
+      <pubDate>Fri, 01 May 2026 01:53:13 +0000</pubDate>
+      <description>DepositoryInstitution und EntertainmentBusiness Schema Markup: JSON-LD für Banken, Kreditinstitute, Kinos, Clubs und Unterhaltungsbetriebe. Mit vollständigen Codebeispielen für 2026.</description>
+      <category>Schema Markup</category>
+    </item>
     <item>
       <title>OutletStore Schema Markup: JSON-LD für Outlet-Geschäfte und Factory Outlets</title>
       <link>https://shift07.ai/blog/outletstore-schema-markup.html</link>
@@ -157,14 +165,6 @@
       <guid>https://shift07.ai/blog/optiker-hoergeraeteakustiker-schema-markup.html</guid>
       <pubDate>Tue, 28 Apr 2026 03:31:59 +0000</pubDate>
       <description>Optician Schema Markup für Optiker und Hörgeräteakustiker: vollständige JSON-LD Anleitung mit Beispiel-Code, allen wichtigen Properties und Schritt-für-Schritt-Implementierung.</description>
-      <category>SEO</category>
-    </item>
-    <item>
-      <title>HobbyShop &amp; CraftStore Schema Markup: Bastelbedarf für Google optimieren</title>
-      <link>https://shift07.ai/blog/hobbyshop-craftstore-schema-markup.html</link>
-      <guid>https://shift07.ai/blog/hobbyshop-craftstore-schema-markup.html</guid>
-      <pubDate>Tue, 28 Apr 2026 01:31:00 +0000</pubDate>
-      <description>HobbyShop und CraftStore Schema Markup richtig implementieren: JSON-LD für Bastlerläden, Modellbaugeschäfte und Kreativläden. Mit vollständigem Beispiel-Code und Schritt-für-Schritt-Anleitung.</description>
       <category>SEO</category>
     </item>
   </channel>
