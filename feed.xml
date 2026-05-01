@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Thu, 30 Apr 2026 06:10:11 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 01 May 2026 00:11:39 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>PawnShop &amp;amp; WholesaleStore Schema Markup: JSON-LD für Pfandleihhäuser und Großhandel</title>
+      <link>https://shift07.ai/blog/pawnshop-wholesalestore-schema-markup.html</link>
+      <guid>https://shift07.ai/blog/pawnshop-wholesalestore-schema-markup.html</guid>
+      <pubDate>Fri, 01 May 2026 00:11:06 +0000</pubDate>
+      <description>Lerne, wie du PawnShop und WholesaleStore Schema Markup korrekt implementierst. Mit JSON-LD Beispielen, allen Properties und Fehlervermeidung für Pfandleihhäuser und Großhandelsbetriebe.</description>
+      <category>Schema Markup</category>
+    </item>
     <item>
       <title>MobilePhoneStore &amp;amp; TireShop Schema Markup: JSON-LD für Handyläden und Reifenhandel</title>
       <link>https://shift07.ai/blog/mobilephonestore-tireShop-schema-markup.html</link>
@@ -157,14 +165,6 @@
       <guid>https://shift07.ai/blog/gardenstore-petstore-schema-markup.html</guid>
       <pubDate>Mon, 27 Apr 2026 05:54:03 +0000</pubDate>
       <description>GardenStore und PetStore Schema Markup als JSON-LD implementieren: vollständige Anleitung mit Code-Beispielen, allen Properties und häufigen Fehlern für Gartencenter und Tierhandlungen.</description>
-      <category>Schema Markup</category>
-    </item>
-    <item>
-      <title>AutoRental &amp;amp; TaxiService Schema Markup: Mietwagen und Taxi für Google optimieren</title>
-      <link>https://shift07.ai/blog/autorental-taxiservice-schema-markup.html</link>
-      <guid>https://shift07.ai/blog/autorental-taxiservice-schema-markup.html</guid>
-      <pubDate>Mon, 27 Apr 2026 05:50:12 +0000</pubDate>
-      <description>AutoRental und TaxiService Schema Markup richtig implementieren: JSON-LD Beispiele, alle Properties und Schritt-für-Schritt-Anleitung für Mietwagenunternehmen und Taxibetriebe.</description>
       <category>Schema Markup</category>
     </item>
   </channel>
