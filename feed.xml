@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Fri, 01 May 2026 01:56:59 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 01 May 2026 02:00:32 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>HealthClub &amp;amp; CivicStructure Schema Markup: Fitnessstudio und öffentliche Einrichtungen für Google</title>
+      <link>https://shift07.ai/blog/healthclub-civicstructure-schema-markup.html</link>
+      <guid>https://shift07.ai/blog/healthclub-civicstructure-schema-markup.html</guid>
+      <pubDate>Fri, 01 May 2026 02:00:04 +0000</pubDate>
+      <description>HealthClub und CivicStructure Schema Markup: JSON-LD für Fitnessstudios, Gesundheitsclubs, Stadthallen, Bibliotheken und öffentliche Gebäude. Mit vollständigen Codebeispielen 2026.</description>
+      <category>Schema Markup</category>
+    </item>
     <item>
       <title>DepositoryInstitution &amp;amp; EntertainmentBusiness Schema Markup: Bank und Unterhaltung für Google</title>
       <link>https://shift07.ai/blog/depositoryinstitution-entertainmentbusiness-schema-markup.html</link>
@@ -157,14 +165,6 @@
       <guid>https://shift07.ai/blog/bookstore-officesupplies-schema-markup.html</guid>
       <pubDate>Tue, 28 Apr 2026 03:39:23 +0000</pubDate>
       <description>BookStore und OfficeEquipmentStore Schema Markup: vollständige JSON-LD Anleitung für Buchhandlungen, Antiquariate und Bürobedarfsgeschäfte. Mit Beispiel-Code und Schritt-für-Schritt-Implementierung.</description>
-      <category>SEO</category>
-    </item>
-    <item>
-      <title>Optiker &amp;amp; Hörgeräteakustiker Schema Markup: JSON-LD für Augenoptiker und Hörakustiker</title>
-      <link>https://shift07.ai/blog/optiker-hoergeraeteakustiker-schema-markup.html</link>
-      <guid>https://shift07.ai/blog/optiker-hoergeraeteakustiker-schema-markup.html</guid>
-      <pubDate>Tue, 28 Apr 2026 03:31:59 +0000</pubDate>
-      <description>Optician Schema Markup für Optiker und Hörgeräteakustiker: vollständige JSON-LD Anleitung mit Beispiel-Code, allen wichtigen Properties und Schritt-für-Schritt-Implementierung.</description>
       <category>SEO</category>
     </item>
   </channel>
