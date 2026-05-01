@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Fri, 01 May 2026 02:00:32 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 01 May 2026 03:36:50 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>SpecialtyStore Schema Markup vertieft: Spezialgeschäfte optimal für Google</title>
+      <link>https://shift07.ai/blog/specialtystore-schema-markup-vertieft.html</link>
+      <guid>https://shift07.ai/blog/specialtystore-schema-markup-vertieft.html</guid>
+      <pubDate>Fri, 01 May 2026 03:36:21 +0000</pubDate>
+      <description>SpecialtyStore Schema Markup vertieft: JSON-LD für Antiquitäten, Kunstgalerien, Weinhandlungen, Buchläden und alle Spezialgeschäfte. Vollständige Codebeispiele und Profi-Tipps 2026.</description>
+      <category>Schema Markup</category>
+    </item>
     <item>
       <title>HealthClub &amp;amp; CivicStructure Schema Markup: Fitnessstudio und öffentliche Einrichtungen für Google</title>
       <link>https://shift07.ai/blog/healthclub-civicstructure-schema-markup.html</link>
@@ -157,14 +165,6 @@
       <guid>https://shift07.ai/blog/musicstore-videostore-schema-markup.html</guid>
       <pubDate>Tue, 28 Apr 2026 05:20:14 +0000</pubDate>
       <description>MusicStore und VideoStore Schema Markup: vollständige JSON-LD Anleitung für Musikfachhandel, Plattenshops und Videotheken. Mit Beispiel-Code, Properties-Tabelle und Implementierungs-Checkliste.</description>
-      <category>SEO</category>
-    </item>
-    <item>
-      <title>BookStore &amp;amp; OfficeEquipmentStore Schema Markup: JSON-LD für Buchhandlungen und Bürobedarf</title>
-      <link>https://shift07.ai/blog/bookstore-officesupplies-schema-markup.html</link>
-      <guid>https://shift07.ai/blog/bookstore-officesupplies-schema-markup.html</guid>
-      <pubDate>Tue, 28 Apr 2026 03:39:23 +0000</pubDate>
-      <description>BookStore und OfficeEquipmentStore Schema Markup: vollständige JSON-LD Anleitung für Buchhandlungen, Antiquariate und Bürobedarfsgeschäfte. Mit Beispiel-Code und Schritt-für-Schritt-Implementierung.</description>
       <category>SEO</category>
     </item>
   </channel>
