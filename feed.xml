@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Fri, 01 May 2026 03:36:50 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 01 May 2026 03:40:36 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>GroceryStore Schema Markup vertieft: Supermarkt, Bio-Markt und Discounter für Google</title>
+      <link>https://shift07.ai/blog/grocerystore-schema-markup-vertieft.html</link>
+      <guid>https://shift07.ai/blog/grocerystore-schema-markup-vertieft.html</guid>
+      <pubDate>Fri, 01 May 2026 03:40:14 +0000</pubDate>
+      <description>GroceryStore Schema Markup vertieft: JSON-LD für Supermärkte, Bio-Läden, Discounter, Wochenmärkte und Lebensmittelhändler. Unterschiede, vollständige Codebeispiele und Profi-Tipps 2026.</description>
+      <category>Schema Markup</category>
+    </item>
     <item>
       <title>SpecialtyStore Schema Markup vertieft: Spezialgeschäfte optimal für Google</title>
       <link>https://shift07.ai/blog/specialtystore-schema-markup-vertieft.html</link>
@@ -157,14 +165,6 @@
       <guid>https://shift07.ai/blog/computerstore-schema-markup.html</guid>
       <pubDate>Tue, 28 Apr 2026 06:56:42 +0000</pubDate>
       <description>ComputerStore Schema Markup: vollständige JSON-LD Anleitung für Computerfachgeschäfte, IT-Händler und Technikläden. Mit Beispiel-Code, Properties-Übersicht und Kombination mit ElectronicsStore.</description>
-      <category>SEO</category>
-    </item>
-    <item>
-      <title>MusicStore &amp;amp; VideoStore Schema Markup: Musikhandel und Videotheken für Google</title>
-      <link>https://shift07.ai/blog/musicstore-videostore-schema-markup.html</link>
-      <guid>https://shift07.ai/blog/musicstore-videostore-schema-markup.html</guid>
-      <pubDate>Tue, 28 Apr 2026 05:20:14 +0000</pubDate>
-      <description>MusicStore und VideoStore Schema Markup: vollständige JSON-LD Anleitung für Musikfachhandel, Plattenshops und Videotheken. Mit Beispiel-Code, Properties-Tabelle und Implementierungs-Checkliste.</description>
       <category>SEO</category>
     </item>
   </channel>
