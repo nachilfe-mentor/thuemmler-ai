@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Fri, 01 May 2026 00:14:43 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 01 May 2026 00:18:03 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>OutletStore Schema Markup: JSON-LD für Outlet-Geschäfte und Factory Outlets</title>
+      <link>https://shift07.ai/blog/outletstore-schema-markup.html</link>
+      <guid>https://shift07.ai/blog/outletstore-schema-markup.html</guid>
+      <pubDate>Fri, 01 May 2026 00:17:41 +0000</pubDate>
+      <description>OutletStore Schema Markup korrekt implementieren: JSON-LD Beispiele für Outlet-Center, Factory Outlets und Fabrikverkäufe mit allen Properties und Validierungs-Tipps für Google Rich Results.</description>
+      <category>Schema Markup</category>
+    </item>
     <item>
       <title>PawnShop &amp;amp; WholesaleStore Schema Markup: JSON-LD für Pfandleihhäuser und Großhandel</title>
       <link>https://shift07.ai/blog/pawnshop-wholesalestore-schema-markup.html</link>
@@ -158,14 +166,6 @@
       <pubDate>Tue, 28 Apr 2026 01:31:00 +0000</pubDate>
       <description>HobbyShop und CraftStore Schema Markup richtig implementieren: JSON-LD für Bastlerläden, Modellbaugeschäfte und Kreativläden. Mit vollständigem Beispiel-Code und Schritt-für-Schritt-Anleitung.</description>
       <category>SEO</category>
-    </item>
-    <item>
-      <title>GardenStore &amp;amp; PetStore Schema Markup: Gartencenter und Tierhandlung für Google optimieren</title>
-      <link>https://shift07.ai/blog/gardenstore-petstore-schema-markup.html</link>
-      <guid>https://shift07.ai/blog/gardenstore-petstore-schema-markup.html</guid>
-      <pubDate>Mon, 27 Apr 2026 05:54:03 +0000</pubDate>
-      <description>GardenStore und PetStore Schema Markup als JSON-LD implementieren: vollständige Anleitung mit Code-Beispielen, allen Properties und häufigen Fehlern für Gartencenter und Tierhandlungen.</description>
-      <category>Schema Markup</category>
     </item>
   </channel>
 </rss>
