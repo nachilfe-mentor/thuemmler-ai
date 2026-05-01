@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpecialtyStore Schema Markup vertieft: Spezialgeschäfte optimal für Google | Shift07 Blog</title>
+    <meta name="description" content="SpecialtyStore Schema Markup vertieft: JSON-LD für Antiquitäten, Kunstgalerien, Weinhandlungen, Buchläden und alle Spezialgeschäfte. Vollständige Codebeispiele und Profi-Tipps 2026.">
+    <meta name="author" content="Thümmler AI GmbH">
+    <link rel="icon" type="image/png" href="/logo.png">
+    <link rel="canonical" href="https://shift07.ai/blog/specialtystore-schema-markup-vertieft.html">
+    <link rel="alternate" type="application/rss+xml" title="Shift07 Blog" href="https://shift07.ai/feed.xml">
+    <!-- Open Graph -->
+    <meta property="og:title" content="SpecialtyStore Schema Markup vertieft: Spezialgeschäfte optimal für Google | Shift07 Blog">
+    <meta property="og:description" content="SpecialtyStore Schema Markup vertieft: JSON-LD für Antiquitäten, Kunstgalerien, Weinhandlungen und alle Spezialgeschäfte. Mit vollständigen Codebeispielen 2026.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://shift07.ai/blog/specialtystore-schema-markup-vertieft.html">
+    <meta property="og:image" content="https://shift07.ai/blog/images/specialtystore-schema-markup-vertieft.png">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="Shift07">
+    <meta property="article:published_time" content="2026-05-01T14:00:00+02:00">
+    <meta property="article:section" content="Schema Markup">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SpecialtyStore Schema Markup vertieft: Spezialgeschäfte optimal für Google">
+    <meta name="twitter:description" content="SpecialtyStore Schema Markup vertieft: JSON-LD für Spezialgeschäfte aller Art. Mit vollständigen Codebeispielen 2026.">
+    <meta name="twitter:image" content="https://shift07.ai/blog/images/specialtystore-schema-markup-vertieft.png">
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "SpecialtyStore Schema Markup vertieft: Spezialgeschäfte optimal für Google",
+      "description": "SpecialtyStore Schema Markup vertieft: JSON-LD für Antiquitäten, Kunstgalerien, Weinhandlungen und alle Spezialgeschäfte. Mit vollständigen Codebeispielen 2026.",
+      "image": "https://shift07.ai/blog/images/specialtystore-schema-markup-vertieft.png",
+      "datePublished": "2026-05-01T14:00:00+02:00",
+      "dateModified": "2026-05-01T14:00:00+02:00",
+      "author": {
+        "@type": "Organization",
+        "name": "Shift07",
+        "url": "https://shift07.ai"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Shift07",
+        "url": "https://shift07.ai",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://shift07.ai/assets/logo.png"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://shift07.ai/blog/specialtystore-schema-markup-vertieft.html"
+      }
+    }
+    </script>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K1S1RXBDS8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K1S1RXBDS8');
+    </script>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8475857002943858" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: rgba(15, 23, 42, 0.5); }
+        ::-webkit-scrollbar-thumb { background: rgba(59, 130, 246, 0.5); border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: rgba(59, 130, 246, 0.7); }
+        html { scroll-behavior: smooth; }
+        .article-content h2 { font-size: 1.5rem; font-weight: 700; color: #fff; margin-top: 2.5rem; margin-bottom: 1rem; }
+        .article-content h3 { font-size: 1.25rem; font-weight: 600; color: #e2e8f0; margin-top: 2rem; margin-bottom: 0.75rem; }
+        .article-content p { color: #cbd5e1; line-height: 1.8; margin-bottom: 1.25rem; }
+        .article-content ul, .article-content ol { color: #cbd5e1; margin-bottom: 1.25rem; padding-left: 1.5rem; }
+        .article-content li { margin-bottom: 0.5rem; line-height: 1.7; }
+        .article-content ul li { list-style-type: disc; }
+        .article-content ol li { list-style-type: decimal; }
+        .article-content a { color: #60a5fa; text-decoration: underline; text-underline-offset: 2px; }
+        .article-content a:hover { color: #93bbfc; }
+        .article-content blockquote { border-left: 4px solid #3b82f6; padding-left: 1.25rem; margin: 1.5rem 0; color: #94a3b8; font-style: italic; }
+        .article-content code { background: rgba(59, 130, 246, 0.15); color: #93c5fd; padding: 0.15rem 0.4rem; border-radius: 0.25rem; font-size: 0.9em; }
+        .article-content pre { background: rgba(15, 23, 42, 0.8); border: 1px solid rgba(255,255,255,0.1); border-radius: 0.75rem; padding: 1.25rem; overflow-x: auto; margin-bottom: 1.5rem; }
+        .article-content pre code { background: none; color: #e2e8f0; padding: 0; font-size: 0.875rem; }
+        .article-content table { width: 100%; border-collapse: collapse; margin-bottom: 1.5rem; }
+        .article-content th { background: rgba(59,130,246,0.2); color: #e2e8f0; padding: 0.75rem 1rem; text-align: left; font-weight: 600; border: 1px solid rgba(255,255,255,0.1); }
+        .article-content td { color: #cbd5e1; padding: 0.75rem 1rem; border: 1px solid rgba(255,255,255,0.08); }
+        .article-content tr:nth-child(even) td { background: rgba(255,255,255,0.03); }
+    </style>
+</head>
+<body class="bg-slate-950 text-white min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="border-b border-white/10 bg-slate-950/80 backdrop-blur-sm sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+            <a href="/" class="flex items-center gap-2">
+                <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                <span class="font-bold text-lg">Shift07</span>
+            </a>
+            <div class="flex items-center gap-6 text-sm">
+                <a href="/blog/" class="text-slate-400 hover:text-white transition-colors">Blog</a>
+                <a href="/tools/" class="text-slate-400 hover:text-white transition-colors">Tools</a>
+                <a href="/" class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg font-medium transition-colors">Kostenlos analysieren</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <div class="max-w-4xl mx-auto px-4 pt-12 pb-8">
+        <div class="mb-6">
+            <a href="/blog/" class="text-blue-400 hover:text-blue-300 text-sm flex items-center gap-1">
+                ← Zurück zum Blog
+            </a>
+        </div>
+        <div class="mb-4">
+            <span class="bg-blue-600/20 text-blue-400 border border-blue-500/30 px-3 py-1 rounded-full text-xs font-medium">Schema Markup</span>
+        </div>
+        <h1 class="text-3xl md:text-4xl font-bold text-white mb-6 leading-tight">
+            SpecialtyStore Schema Markup vertieft: Spezialgeschäfte optimal für Google strukturieren
+        </h1>
+        <p class="text-xl text-slate-400 mb-8 leading-relaxed">
+            SpecialtyStore ist der vielseitigste Typ im Schema.org-Handelssystem. Er deckt alle Nischengeschäfte ab, die keinem spezielleren Untertyp entsprechen. Hier erfährst du, wie du JSON-LD für Antiquitätenhändler, Kunstgalerien, Brautmodengeschäfte, Tabakläden und Dutzende weiterer Spezialgeschäfte korrekt implementierst — inklusive fortgeschrittener Techniken für mehrere Standorte und kombinierte Schema-Typen.
+        </p>
+        <!-- Headerbild -->
+        <div class="rounded-2xl overflow-hidden mb-10 border border-white/10">
+            <img src="/blog/images/specialtystore-schema-markup-vertieft.png"
+                 alt="SpecialtyStore Schema Markup vertieft für Spezialgeschäfte"
+                 class="w-full object-cover">
+        </div>
+    </div>
+
+    <!-- Article Content -->
+    <div class="max-w-4xl mx-auto px-4 pb-16">
+        <div class="article-content">
+
+            <h2>Was ist SpecialtyStore in schema.org?</h2>
+            <p>
+                <code>SpecialtyStore</code> ist ein Untertyp von <code>Store</code>, der wiederum unter <code>LocalBusiness</code> und <code>Organization</code> eingeordnet ist. In der schema.org-Hierarchie sieht das so aus:
+            </p>
+            <pre><code>Thing → Organization → LocalBusiness → Store → SpecialtyStore</code></pre>
+            <p>
+                Während schema.org für viele häufige Ladentypen spezifischere Untertypen bereitstellt — <code>ClothingStore</code> für Bekleidung, <code>BookStore</code> für Bücher, <code>ElectronicsStore</code> für Elektronik — gibt es unzählige Nischengeschäfte ohne eigenen Typ. Für all diese Fälle ist <code>SpecialtyStore</code> die richtige Wahl.
+            </p>
+            <p>
+                Typische Beispiele für Geschäfte, die <code>SpecialtyStore</code> verwenden sollten:
+            </p>
+            <ul>
+                <li><strong>Antiquitätenhändler</strong> und Trödelmärkte</li>
+                <li><strong>Kunstgalerien</strong> und Kunsthandlungen</li>
+                <li><strong>Brautmodengeschäfte</strong> und Abendmodensalons</li>
+                <li><strong>Tabakläden</strong> und Zigarrengeschäfte</li>
+                <li><strong>Briefmarken- und Münzhandlungen</strong></li>
+                <li><strong>Kostümverleihe</strong> und Theaterausstatter</li>
+                <li><strong>Angelgeschäfte</strong> und Jagdausrüster</li>
+                <li><strong>Teeläden</strong> und Feinkosthandlungen</li>
+                <li><strong>Kartenverlage und Souvenirläden</strong></li>
+                <li><strong>Kerzenfachgeschäfte</strong>, Duftläden und Aromatherapie-Shops</li>
+            </ul>
+            <p>
+                Der Vorteil von <code>SpecialtyStore</code>: Google versteht, dass es sich um einen spezialisierten Einzelhandel handelt, und kann das Geschäft in lokalen Suchergebnissen entsprechend einordnen — auch wenn kein spezifischerer Schema-Typ existiert.
+            </p>
+
+            <h2>Minimales SpecialtyStore JSON-LD Grundgerüst</h2>
+            <p>
+                Hier ist das Mindestmaß an Informationen, das Google benötigt, um ein Spezialgeschäft zu verstehen und in lokalen Suchen anzuzeigen:
+            </p>
+            <pre><code>{
+  "@context": "https://schema.org",
+  "@type": "SpecialtyStore",
+  "name": "Antiquitäten am Marktplatz",
+  "url": "https://www.antiquitaeten-marktplatz.de",
+  "telephone": "+49 511 123456",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Marktplatz 7",
+    "addressLocality": "Hannover",
+    "postalCode": "30159",
+    "addressCountry": "DE"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "10:00",
+      "closes": "18:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "10:00",
+      "closes": "15:00"
+    }
+  ]
+}</code></pre>
+            <p>
+                Das reicht für einen soliden Start. Aber für maximale Sichtbarkeit in Google und potenzielle Rich Results brauchst du deutlich mehr Felder.
+            </p>
+
+            <h2>Vollständiges SpecialtyStore Beispiel: Antiquitätenhändler</h2>
+            <p>
+                Ein Antiquitätenhändler hat besondere Anforderungen: Er verkauft einzigartige Stücke, hat oft spezielle Ankauf-Dienstleistungen und spricht ein spezifisches Publikum an. Hier ist ein vollständig ausgefülltes Beispiel:
+            </p>
+            <pre><code>{
+  "@context": "https://schema.org",
+  "@type": "SpecialtyStore",
+  "name": "Antiquitäten am Marktplatz",
+  "alternateName": "Antik Hannover",
+  "description": "Ihr Antiquitätenfachgeschäft in Hannover. Wir kaufen und verkaufen Möbel, Porzellan, Schmuck und Kunstgegenstände aus dem 18.–20. Jahrhundert. Kostenlose Schätzungen.",
+  "url": "https://www.antiquitaeten-marktplatz.de",
+  "logo": "https://www.antiquitaeten-marktplatz.de/logo.png",
+  "image": "https://www.antiquitaeten-marktplatz.de/laden.jpg",
+  "telephone": "+49 511 123456",
+  "email": "info@antiquitaeten-marktplatz.de",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Marktplatz 7",
+    "addressLocality": "Hannover",
+    "postalCode": "30159",
+    "addressCountry": "DE"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 52.3744,
+    "longitude": 9.7386
+  },
+  "hasMap": "https://maps.google.com/?cid=...",
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "10:00",
+      "closes": "18:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "10:00",
+      "closes": "15:00"
+    }
+  ],
+  "priceRange": "€€–€€€",
+  "currenciesAccepted": "EUR",
+  "paymentAccepted": "Barzahlung, Überweisung",
+  "sameAs": [
+    "https://www.facebook.com/antiquitaeten.marktplatz",
+    "https://www.instagram.com/antik_hannover"
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "reviewCount": "47",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Antiquitäten-Sortiment",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Ankauf von Antiquitäten",
+          "description": "Wir schätzen und kaufen Möbel, Porzellan, Schmuck und Gemälde"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Kostenlose Schätzung",
+          "description": "Unverbindliche Wertschätzung Ihrer Antiquitäten vor Ort oder per Foto"
+        }
+      }
+    ]
+  }
+}</code></pre>
+
+            <h2>SpecialtyStore für eine Kunstgalerie</h2>
+            <p>
+                Kunstgalerien haben eine Besonderheit: Sie sind oft sowohl Ausstellungsraum als auch Verkaufsstätte. Das lässt sich elegant mit Schema.org abbilden:
+            </p>
+            <pre><code>{
+  "@context": "https://schema.org",
+  "@type": ["SpecialtyStore", "ArtGallery"],
+  "name": "Galerie Blau — Zeitgenössische Kunst Hamburg",
+  "description": "Zeitgenössische Malerei, Skulptur und Druckgrafik. Wir vertreten 23 internationale Künstlerinnen und Künstler. Kostenloser Eintritt.",
+  "url": "https://galerie-blau.de",
+  "telephone": "+49 40 987654",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Elbchaussee 42",
+    "addressLocality": "Hamburg",
+    "postalCode": "22763",
+    "addressCountry": "DE"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "11:00",
+      "closes": "19:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "11:00",
+      "closes": "17:00"
+    }
+  ],
+  "isAccessibleForFree": true,
+  "event": {
+    "@type": "ExhibitionEvent",
+    "name": "Frühjahrsausstellung 2026",
+    "startDate": "2026-04-01",
+    "endDate": "2026-06-30",
+    "description": "Neue Werke unserer Galeriekünstler zum Thema Licht und Schatten"
+  }
+}</code></pre>
+            <p>
+                Beachte den Trick mit dem Array-Typ <code>["SpecialtyStore", "ArtGallery"]</code>: Du kannst mehrere schema.org-Typen gleichzeitig angeben. <code>ArtGallery</code> ist ein Untertyp von <code>CivicStructure</code> — es ist also korrekt, beide Typen für eine kommerzielle Galerie zu nutzen.
+            </p>
+
+            <h2>Brautmodengeschäft: Besondere Eigenschaften</h2>
+            <p>
+                Ein Brautmodengeschäft profitiert besonders von detaillierten Angebotsinformationen, da Bräute früh mit der Suche beginnen und sehr spezifische Anfragen stellen:
+            </p>
+            <pre><code>{
+  "@context": "https://schema.org",
+  "@type": "SpecialtyStore",
+  "name": "La Sposa — Brautmoden Stuttgart",
+  "description": "Exklusive Brautkleider, Abendkleider und Brautaccessoires in Stuttgart. Individuelle Beratung auf Termin, Änderungsatelier im Haus.",
+  "url": "https://lasposa-stuttgart.de",
+  "telephone": "+49 711 445566",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Königstraße 18",
+    "addressLocality": "Stuttgart",
+    "postalCode": "70173",
+    "addressCountry": "DE"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "10:00",
+      "closes": "19:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "10:00",
+      "closes": "17:00"
+    }
+  ],
+  "priceRange": "€€€",
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Dienstleistungen und Sortiment",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Brautkleid-Beratung",
+          "description": "Persönliche Stilberatung und Anprobe nach Terminvereinbarung"
+        },
+        "price": "0",
+        "priceCurrency": "EUR"
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Änderungsatelier",
+          "description": "Professionelle Änderungsschneiderei für Brautkleider aller Marken"
+        }
+      }
+    ]
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "Terminvereinbarung",
+    "telephone": "+49 711 445566",
+    "availableLanguage": ["German", "Italian", "English"]
+  }
+}</code></pre>
+
+            <h2>Tabak- und Zigarrengeschäft: Altersverifizierung im Schema</h2>
+            <p>
+                Für altersgebundene Produkte gibt es in schema.org die Property <code>purchaseType</code> und <code>eligibleCustomerType</code> — allerdings noch ohne direkte Altersangabe. Am sinnvollsten ist hier die Nutzung von <code>audience</code>:
+            </p>
+            <pre><code>{
+  "@context": "https://schema.org",
+  "@type": "SpecialtyStore",
+  "name": "Casa del Habano Frankfurt",
+  "description": "Ihr Zigarren-Fachgeschäft in Frankfurt. Kubanische Zigarren, Zigarillos, Pfeifen und Tabakzubehör. Humidor-Service und Beratung.",
+  "url": "https://casadelhabano-frankfurt.de",
+  "telephone": "+49 69 112233",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Kaiserstraße 55",
+    "addressLocality": "Frankfurt am Main",
+    "postalCode": "60329",
+    "addressCountry": "DE"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      "opens": "09:00",
+      "closes": "19:00"
+    }
+  ],
+  "priceRange": "€€–€€€€",
+  "audience": {
+    "@type": "PeopleAudience",
+    "requiredMinAge": 18
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Sortiment",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Product",
+          "name": "Kubanische Zigarren",
+          "description": "Originale Habanos aus Kuba — Cohiba, Montecristo, Romeo y Julieta"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Humidor-Service",
+          "description": "Professionelle Lagerung und Pflege Ihrer Zigarren"
+        }
+      }
+    ]
+  }
+}</code></pre>
+
+            <h2>Feinkosthandlung mit Lieferservice</h2>
+            <p>
+                Ein Tee- oder Feinkostladen, der auch online verkauft oder liefert, kombiniert <code>SpecialtyStore</code> ideal mit <code>shippingDetails</code> und <code>areaServed</code>:
+            </p>
+            <pre><code>{
+  "@context": "https://schema.org",
+  "@type": "SpecialtyStore",
+  "name": "Teehaus Bergkräuter München",
+  "description": "Bio-Tees, Kräuter und Gewürze aus aller Welt. Eigene Mischungen, Probiersets und Geschenkkörbe. Auch online bestellbar.",
+  "url": "https://teehaus-bergkraeuter.de",
+  "telephone": "+49 89 778899",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Viktualienmarkt 3",
+    "addressLocality": "München",
+    "postalCode": "80331",
+    "addressCountry": "DE"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "09:00",
+      "closes": "18:30"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "09:00",
+      "closes": "16:00"
+    }
+  ],
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "München"
+    },
+    {
+      "@type": "AdministrativeArea",
+      "name": "Deutschland"
+    }
+  ],
+  "potentialAction": {
+    "@type": "OrderAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "https://teehaus-bergkraeuter.de/shop",
+      "actionPlatform": ["http://schema.org/DesktopWebPlatform", "http://schema.org/MobileWebPlatform"]
+    },
+    "deliveryMethod": ["http://schema.org/DeliveryModePickUp", "http://schema.org/DeliveryModeMail"]
+  }
+}</code></pre>
+
+            <h2>Mehrere Standorte: SpecialtyStore-Kette</h2>
+            <p>
+                Hat dein Spezialgeschäft mehrere Standorte, empfiehlt sich eine <code>Organization</code> als Dachentität mit einzelnen <code>SpecialtyStore</code>-Einträgen pro Filiale. Auf der Hauptseite:
+            </p>
+            <pre><code>{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Briefmarken Kaiser — Fachgeschäfte für Philatelie",
+  "url": "https://briefmarken-kaiser.de",
+  "description": "Deutschlands führende Briefmarken-Fachgeschäfte. 3 Standorte in Berlin, Hamburg und Köln.",
+  "logo": "https://briefmarken-kaiser.de/logo.png",
+  "sameAs": ["https://www.facebook.com/briefmarkenkaiser"],
+  "subOrganization": [
+    {
+      "@type": "SpecialtyStore",
+      "name": "Briefmarken Kaiser Berlin",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Unter den Linden 77",
+        "addressLocality": "Berlin",
+        "postalCode": "10117",
+        "addressCountry": "DE"
+      },
+      "telephone": "+49 30 112233",
+      "url": "https://briefmarken-kaiser.de/berlin"
+    },
+    {
+      "@type": "SpecialtyStore",
+      "name": "Briefmarken Kaiser Hamburg",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Mönckebergstraße 5",
+        "addressLocality": "Hamburg",
+        "postalCode": "20095",
+        "addressCountry": "DE"
+      },
+      "telephone": "+49 40 445566",
+      "url": "https://briefmarken-kaiser.de/hamburg"
+    }
+  ]
+}</code></pre>
+            <p>
+                Für jede Filiale erstellst du zusätzlich eine eigene Seite mit einem vollständigen <code>SpecialtyStore</code>-Schema-Markup inklusive aller Details. Die Hauptseite verwendet das <code>Organization</code>-Schema mit <code>subOrganization</code>-Verweisen.
+            </p>
+
+            <h2>SpecialtyStore vs. andere Store-Typen: Die richtige Wahl</h2>
+            <p>
+                Eine häufige Frage ist, wann <code>SpecialtyStore</code> und wann ein spezifischerer Typ besser passt. Als Faustregel gilt: Wenn schema.org einen spezifischeren Typ anbietet, verwende ihn. <code>SpecialtyStore</code> ist die Auffanglösung.
+            </p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Geschäftstyp</th>
+                        <th>Empfohlener Schema-Typ</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Kleidung, Mode, Accessoires</td>
+                        <td><code>ClothingStore</code></td>
+                    </tr>
+                    <tr>
+                        <td>Schuhe</td>
+                        <td><code>ShoeStore</code></td>
+                    </tr>
+                    <tr>
+                        <td>Schmuck, Uhren</td>
+                        <td><code>JewelryStore</code></td>
+                    </tr>
+                    <tr>
+                        <td>Bücher, Comics</td>
+                        <td><code>BookStore</code></td>
+                    </tr>
+                    <tr>
+                        <td>Elektronik, Computer</td>
+                        <td><code>ElectronicsStore</code></td>
+                    </tr>
+                    <tr>
+                        <td>Baumarkt, Werkzeug</td>
+                        <td><code>HardwareStore</code></td>
+                    </tr>
+                    <tr>
+                        <td>Sportartikel</td>
+                        <td><code>SportingGoodsStore</code></td>
+                    </tr>
+                    <tr>
+                        <td>Spielzeug</td>
+                        <td><code>ToyStore</code></td>
+                    </tr>
+                    <tr>
+                        <td>Musik, Instrumente</td>
+                        <td><code>MusicStore</code></td>
+                    </tr>
+                    <tr>
+                        <td>Antiquitäten, Kunst, Briefmarken</td>
+                        <td><code>SpecialtyStore</code></td>
+                    </tr>
+                    <tr>
+                        <td>Tabak, Zigarren</td>
+                        <td><code>SpecialtyStore</code></td>
+                    </tr>
+                    <tr>
+                        <td>Brautmoden, Kostüme</td>
+                        <td><code>SpecialtyStore</code></td>
+                    </tr>
+                    <tr>
+                        <td>Teeläden, Feinkost</td>
+                        <td><code>SpecialtyStore</code></td>
+                    </tr>
+                    <tr>
+                        <td>Angelgeschäfte, Jagdbedarf</td>
+                        <td><code>SpecialtyStore</code></td>
+                    </tr>
+                    <tr>
+                        <td>Kerzen, Duftprodukte</td>
+                        <td><code>SpecialtyStore</code></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2>Häufige Fehler bei SpecialtyStore und wie du sie vermeidest</h2>
+
+            <h3>Fehler 1: Zu generisch bleiben</h3>
+            <p>
+                Der häufigste Fehler ist, nur das Minimum auszufüllen und die <code>description</code>-Property wegzulassen oder zu generisch zu formulieren. Google und Nutzer brauchen eine klare Erklärung, was das Besondere an diesem Geschäft ist. Nenn deine Spezialität, deine Zielgruppe und deinen geografischen Schwerpunkt.
+            </p>
+            <p>
+                <strong>Schlecht:</strong> <code>"description": "Wir sind ein Fachgeschäft."</code><br>
+                <strong>Gut:</strong> <code>"description": "Ihr Antiquitätenfachgeschäft in Hannover seit 1987. Wir kaufen und verkaufen Möbel, Porzellan und Gemälde aus dem 18.–20. Jahrhundert."</code>
+            </p>
+
+            <h3>Fehler 2: Falsche Öffnungszeiten</h3>
+            <p>
+                Viele Spezialgeschäfte haben unregelmäßige Öffnungszeiten, arbeiten nach Terminvereinbarung oder haben saisonale Schließzeiten. Nutze <code>OpeningHoursSpecification</code> mit genauen Zeitangaben — und ergänze ggf. eine <code>ContactPoint</code>-Property für Terminbuchungen.
+            </p>
+
+            <h3>Fehler 3: Fehlende Bewertungen</h3>
+            <p>
+                <code>AggregateRating</code> ist für lokale Geschäfte besonders wertvoll, weil Google damit Sternebewertungen direkt in den Suchergebnissen anzeigen kann. Nutze das <a href="/blog/aggregaterating-schema-markup-vertieft.html">AggregateRating Schema Markup</a>, sobald du mindestens 5 echte Bewertungen hast. Nicht erst bei 50.
+            </p>
+
+            <h3>Fehler 4: Geo-Koordinaten vergessen</h3>
+            <p>
+                Für lokale Suchen sind <code>geo</code>-Koordinaten äußerst wertvoll. Google kann dadurch die geografische Relevanz einer Website präziser bestimmen — gerade in dicht besiedelten Stadtvierteln, wo viele ähnliche Geschäfte nahe beieinander liegen.
+            </p>
+
+            <h3>Fehler 5: Keine Verlinkung zu Produktseiten</h3>
+            <p>
+                Wenn du einzelne Produkte oder Kollektionen auf deiner Website hast, verlinke sie über <code>hasOfferCatalog</code> oder <code>makesOffer</code> mit dem Store-Eintrag. Das gibt Google ein vollständigeres Bild deines Sortiments.
+            </p>
+
+            <h2>Integration mit anderen Schema-Typen</h2>
+            <p>
+                <code>SpecialtyStore</code> lässt sich hervorragend mit weiteren Schema-Typen kombinieren:
+            </p>
+            <ul>
+                <li><strong><a href="/blog/openinghours-schema-markup-seo.html">OpeningHoursSpecification</a>:</strong> Detaillierte Öffnungszeiten inklusive Feiertage</li>
+                <li><strong><a href="/blog/aggregaterating-schema-markup-vertieft.html">AggregateRating</a>:</strong> Kundenbewertungen für Rich Snippets</li>
+                <li><strong><a href="/blog/event-schema-markup-seo.html">Event</a>:</strong> Ausstellungen, Messen oder Sonderverkäufe ankündigen</li>
+                <li><strong><a href="/blog/offercatalog-schema-markup-seo.html">OfferCatalog</a>:</strong> Dienstleistungen und Produkte strukturiert darstellen</li>
+                <li><strong><a href="/blog/servicearea-schema-markup-seo.html">ServiceArea</a>:</strong> Liefergebiet oder Einzugsgebiet definieren</li>
+                <li><strong><a href="/blog/geoshape-schema-markup-seo.html">GeoShape</a>:</strong> Genaues Servicegebiet kartografisch festlegen</li>
+            </ul>
+
+            <h2>SpecialtyStore in den Google-Suchergebnissen: Was ist möglich?</h2>
+            <p>
+                Mit vollständigem <code>SpecialtyStore</code>-Schema kann dein Geschäft in folgenden Google-Formaten auftauchen:
+            </p>
+            <ul>
+                <li><strong>Local Pack (Karte + 3 Ergebnisse):</strong> Die wertvollste Platzierung für lokale Suchen wie "Antiquitäten in der Nähe"</li>
+                <li><strong>Knowledge Panel:</strong> Infobox rechts mit Öffnungszeiten, Telefon, Adresse und Fotos</li>
+                <li><strong>Rich Results mit Bewertungssternen:</strong> Wenn <code>AggregateRating</code> eingebunden ist</li>
+                <li><strong>FAQ-Snippet:</strong> Bei kombinierten FAQPage-Markup</li>
+            </ul>
+            <p>
+                Überprüfe dein fertig implementiertes Markup mit dem <a href="https://search.google.com/test/rich-results" rel="noopener noreferrer" target="_blank">Google Rich Results Test</a>. Nutze außerdem unseren <a href="/tools/json-ld-structured-data-validator.html">JSON-LD Structured Data Validator</a>, um JSON-Fehler vorab zu finden.
+            </p>
+
+            <h2>Checkliste: SpecialtyStore Schema Markup vollständig implementieren</h2>
+            <p>
+                Gehe diese Punkte durch, bevor du dein Markup live schaltest:
+            </p>
+            <ol>
+                <li>✅ <code>@type: "SpecialtyStore"</code> gesetzt (ggf. kombiniert mit zweitem Typ)</li>
+                <li>✅ <code>name</code> entspricht dem offiziellen Firmennamen</li>
+                <li>✅ <code>description</code> mit Spezialität, Standort und Alleinstellungsmerkmal</li>
+                <li>✅ <code>address</code> mit vollständiger <code>PostalAddress</code></li>
+                <li>✅ <code>telephone</code> im internationalen Format (+49…)</li>
+                <li>✅ <code>openingHoursSpecification</code> für alle Wochentage</li>
+                <li>✅ <code>geo</code> mit Latitude und Longitude</li>
+                <li>✅ <code>url</code> mit kanonischer URL der Hauptseite</li>
+                <li>✅ <code>image</code> mit hochwertigem Außen- oder Innenaufnahme</li>
+                <li>✅ <code>priceRange</code> (€, €€, €€€, €€€€)</li>
+                <li>✅ <code>aggregateRating</code> (sobald Bewertungen vorhanden)</li>
+                <li>✅ <code>sameAs</code> mit Social-Media-Profilen und Google-My-Business-Link</li>
+                <li>✅ Markup im Google Rich Results Test validiert</li>
+            </ol>
+
+            <h2>Fazit: SpecialtyStore — der universelle Typ für Nischengeschäfte</h2>
+            <p>
+                <code>SpecialtyStore</code> ist die perfekte Lösung für alle Spezialgeschäfte, die keinem spezifischeren schema.org-Typ entsprechen. Mit vollständig ausgefülltem JSON-LD — insbesondere <code>description</code>, <code>geo</code>, <code>openingHoursSpecification</code> und <code>aggregateRating</code> — schaffst du die Grundlage für lokale Rich Results und ein gut sichtbares Knowledge Panel.
+            </p>
+            <p>
+                Der entscheidende Unterschied zu schlechtem Schema Markup liegt in den Details: Nutze die <code>hasOfferCatalog</code>-Property, um Google dein Sortiment oder deine Dienstleistungen zu erklären. Verlinke auf Social-Media-Profile über <code>sameAs</code>. Und pflege deine Öffnungszeiten regelmäßig — veraltete Öffnungszeiten im Markup schaden dem Vertrauen der Nutzer.
+            </p>
+            <p>
+                Prüfe zunächst alle deine bestehenden Seiten mit unserer <a href="/">kostenlosen SEO-Analyse auf shift07.ai</a> — wir zeigen dir sofort, ob das Schema Markup deiner Website korrekt und vollständig ist.
+            </p>
+
+            <!-- Interne Verlinkung -->
+            <div class="mt-12 pt-8 border-t border-white/10">
+                <h3 class="text-lg font-semibold text-white mb-4">Weiterführende Artikel</h3>
+                <div class="grid md:grid-cols-2 gap-4">
+                    <a href="/blog/localbusiness-schema-markup-anleitung.html" class="block p-4 bg-white/5 rounded-xl hover:bg-white/10 transition-colors border border-white/10 no-underline">
+                        <div class="text-blue-400 font-medium mb-1">LocalBusiness Schema Markup</div>
+                        <div class="text-slate-400 text-sm">Die vollständige Anleitung für lokale Unternehmen</div>
+                    </a>
+                    <a href="/blog/outletstore-schema-markup.html" class="block p-4 bg-white/5 rounded-xl hover:bg-white/10 transition-colors border border-white/10 no-underline">
+                        <div class="text-blue-400 font-medium mb-1">OutletStore Schema Markup</div>
+                        <div class="text-slate-400 text-sm">JSON-LD für Outlet-Geschäfte und Factory Outlets</div>
+                    </a>
+                    <a href="/blog/aggregaterating-schema-markup-vertieft.html" class="block p-4 bg-white/5 rounded-xl hover:bg-white/10 transition-colors border border-white/10 no-underline">
+                        <div class="text-blue-400 font-medium mb-1">AggregateRating Schema vertieft</div>
+                        <div class="text-slate-400 text-sm">Bewertungssterne richtig implementieren</div>
+                    </a>
+                    <a href="/tools/schema-markup-generator.html" class="block p-4 bg-white/5 rounded-xl hover:bg-white/10 transition-colors border border-white/10 no-underline">
+                        <div class="text-blue-400 font-medium mb-1">Schema-Markup-Generator</div>
+                        <div class="text-slate-400 text-sm">LocalBusiness JSON-LD kostenlos erstellen</div>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/10 bg-slate-950 py-12">
+        <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-3 gap-8">
+            <div>
+                <div class="flex items-center gap-2 mb-4">
+                    <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                    <span class="font-bold text-lg">Shift07</span>
+                </div>
+                <p class="text-slate-400 text-sm">Kostenlose SEO-Analyse für deine Website. Finde heraus, was dein Google-Ranking zurückhält.</p>
+            </div>
+            <div>
+                <h4 class="font-semibold mb-4">Links</h4>
+                <ul class="space-y-2 text-slate-400 text-sm">
+                    <li><a href="/" class="hover:text-white transition-colors">SEO-Analyse starten</a></li>
+                    <li><a href="/blog/" class="hover:text-white transition-colors">Blog</a></li>
+                    <li><a href="/tools/" class="hover:text-white transition-colors">SEO-Tools</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-semibold mb-4">Rechtliches</h4>
+                <ul class="space-y-2 text-slate-400 text-sm">
+                    <li><a href="/impressum.html" class="hover:text-white transition-colors">Impressum</a></li>
+                    <li><a href="/datenschutz.html" class="hover:text-white transition-colors">Datenschutz</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="max-w-6xl mx-auto px-4 mt-8 pt-8 border-t border-white/10 text-center text-slate-500 text-sm">
+            © 2026 Thümmler AI GmbH · Potsdam · <a href="mailto:team@shift07.ai" class="hover:text-white transition-colors">team@shift07.ai</a>
+        </div>
+    </footer>
+
+</body>
+</html>
