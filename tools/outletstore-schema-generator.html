@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K1S1RXBDS8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K1S1RXBDS8');
+    </script>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8475857002943858" crossorigin="anonymous"></script>
+    <title>OutletStore Schema Generator – JSON-LD für Outlet-Geschäfte kostenlos erstellen | Shift07</title>
+    <meta name="description" content="OutletStore Schema Markup kostenlos generieren. JSON-LD für Factory Outlets, Outlet-Center und Markenoutlets — mit Öffnungszeiten, Preis-Range und Bewertungen.">
+    <meta name="keywords" content="OutletStore Schema Generator, Factory Outlet JSON-LD, Outlet-Center Schema Markup, OutletStore Schema, Outlet JSON-LD Generator">
+    <meta name="author" content="Thümmler AI GmbH">
+    <link rel="icon" type="image/png" href="/logo.png">
+    <link rel="canonical" href="https://shift07.ai/tools/outletstore-schema-generator.html">
+    <!-- Open Graph -->
+    <meta property="og:title" content="OutletStore Schema Generator – JSON-LD für Outlet-Geschäfte kostenlos erstellen">
+    <meta property="og:description" content="OutletStore Schema Markup kostenlos generieren. JSON-LD für Factory Outlets, Outlet-Center und Markenoutlets.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://shift07.ai/tools/outletstore-schema-generator.html">
+    <meta property="og:image" content="https://shift07.ai/tools/images/outletstore-schema-generator.png">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="Shift07">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="OutletStore Schema Generator – JSON-LD kostenlos erstellen">
+    <meta name="twitter:description" content="JSON-LD für Outlet-Geschäfte und Factory Outlets kostenlos generieren.">
+    <meta name="twitter:image" content="https://shift07.ai/tools/images/outletstore-schema-generator.png">
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "OutletStore Schema Generator",
+      "description": "OutletStore Schema Markup kostenlos generieren. JSON-LD für Factory Outlets, Outlet-Center und Markenoutlets.",
+      "url": "https://shift07.ai/tools/outletstore-schema-generator.html",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR"
+      },
+      "provider": {
+        "@type": "Organization",
+        "name": "Thümmler AI GmbH",
+        "url": "https://shift07.ai"
+      }
+    }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: rgba(15, 23, 42, 0.5); }
+        ::-webkit-scrollbar-thumb { background: rgba(59, 130, 246, 0.5); border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: rgba(59, 130, 246, 0.7); }
+        html { scroll-behavior: smooth; }
+        .glass {
+            background: rgba(255, 255, 255, 0.06);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .code-block {
+            background: rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 0.5rem;
+            overflow-x: auto;
+        }
+        .form-input {
+            background: rgba(255,255,255,0.07);
+            border: 1px solid rgba(255,255,255,0.15);
+            border-radius: 0.5rem;
+            color: white;
+            width: 100%;
+            padding: 0.6rem 0.9rem;
+            font-size: 0.95rem;
+            transition: border-color 0.2s;
+        }
+        .form-input:focus { outline: none; border-color: rgba(168,85,247,0.7); }
+        .form-input option { background: #1e293b; color: white; }
+        .form-label { color: rgba(255,255,255,0.75); font-size: 0.85rem; font-weight: 500; margin-bottom: 0.3rem; display: block; }
+        .section-divider { border-color: rgba(255,255,255,0.1); margin: 1.25rem 0; }
+        .day-row { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; }
+        .day-label { width: 65px; font-size: 0.82rem; color: rgba(255,255,255,0.6); flex-shrink: 0; }
+        .time-input { background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.15); border-radius: 0.4rem; color: white; padding: 0.35rem 0.5rem; font-size: 0.82rem; width: 80px; }
+        .time-input:focus { outline: none; border-color: rgba(168,85,247,0.7); }
+        .closed-check { accent-color: #a855f7; }
+    </style>
+</head>
+<body class="antialiased">
+    <div class="min-h-screen bg-gradient-to-br from-slate-900 via-purple-950 to-violet-900">
+        <!-- Navigation -->
+        <nav class="bg-black/20 backdrop-blur-md border-b border-white/10">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center h-16">
+                    <a href="/" class="flex items-center gap-2">
+                        <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                        <span class="text-xl font-bold text-white">Shift07</span>
+                    </a>
+                    <div class="flex items-center gap-4">
+                        <a href="/tools/" class="text-slate-300 hover:text-white text-sm transition-colors">Alle Tools</a>
+                        <a href="/blog/" class="text-slate-300 hover:text-white text-sm transition-colors">Blog</a>
+                        <a href="/" class="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors">Kostenlose SEO-Analyse</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-6">
+            <div class="text-center mb-8">
+                <div class="inline-flex items-center gap-2 bg-purple-500/20 border border-purple-400/30 rounded-full px-4 py-1.5 text-purple-300 text-sm font-medium mb-4">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"/></svg>
+                    Schema Markup Generator
+                </div>
+                <h1 class="text-3xl md:text-4xl font-bold text-white mb-4">
+                    OutletStore Schema Generator
+                </h1>
+                <p class="text-lg text-slate-300 max-w-2xl mx-auto">
+                    Erstelle in Sekunden vollständiges JSON-LD Schema Markup für dein Outlet-Geschäft, Factory Outlet oder Markenoutlet — 100% kostenlos, ohne Anmeldung.
+                </p>
+            </div>
+        </div>
+
+        <!-- Main Tool -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+            <div class="grid lg:grid-cols-2 gap-8">
+
+                <!-- Formular -->
+                <div class="glass rounded-2xl p-6">
+                    <h2 class="text-lg font-bold text-white mb-5 flex items-center gap-2">
+                        <span class="bg-purple-500/30 p-1.5 rounded-lg">
+                            <svg class="w-4 h-4 text-purple-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
+                        </span>
+                        Daten eingeben
+                    </h2>
+
+                    <!-- Typ-Auswahl -->
+                    <div class="mb-4">
+                        <label class="form-label">Geschäftstyp</label>
+                        <select id="storeType" class="form-input" onchange="generateSchema()">
+                            <option value="OutletStore">OutletStore (Outlet-Geschäft allgemein)</option>
+                            <option value="FactoryOutlet">OutletStore — Factory Outlet (Herstellerverkauf)</option>
+                        </select>
+                    </div>
+
+                    <hr class="section-divider">
+
+                    <!-- Basis -->
+                    <div class="grid grid-cols-1 gap-3 mb-4">
+                        <div>
+                            <label class="form-label">Geschäftsname *</label>
+                            <input type="text" id="name" class="form-input" placeholder="z. B. Nike Factory Outlet Frankfurt" oninput="generateSchema()">
+                        </div>
+                        <div>
+                            <label class="form-label">Alternativname / Spitzname</label>
+                            <input type="text" id="altName" class="form-input" placeholder="z. B. Nike Outlet FFM" oninput="generateSchema()">
+                        </div>
+                        <div>
+                            <label class="form-label">Beschreibung (für Google)</label>
+                            <textarea id="description" class="form-input" rows="3" placeholder="z. B. Originalware direkt vom Hersteller zu reduzierten Preisen. Schuhe, Sportbekleidung und Accessoires aus Vorjahreskollektion." oninput="generateSchema()"></textarea>
+                        </div>
+                        <div>
+                            <label class="form-label">Website URL</label>
+                            <input type="url" id="url" class="form-input" placeholder="https://www.mein-outlet.de" oninput="generateSchema()">
+                        </div>
+                        <div>
+                            <label class="form-label">Logo URL</label>
+                            <input type="url" id="logo" class="form-input" placeholder="https://www.mein-outlet.de/logo.png" oninput="generateSchema()">
+                        </div>
+                    </div>
+
+                    <hr class="section-divider">
+
+                    <!-- Adresse -->
+                    <div class="mb-1 text-xs font-semibold text-purple-300 uppercase tracking-wider">Adresse</div>
+                    <div class="grid grid-cols-1 gap-3 mb-4">
+                        <div>
+                            <label class="form-label">Straße und Hausnummer *</label>
+                            <input type="text" id="street" class="form-input" placeholder="z. B. Outletring 1" oninput="generateSchema()">
+                        </div>
+                        <div class="grid grid-cols-2 gap-3">
+                            <div>
+                                <label class="form-label">PLZ *</label>
+                                <input type="text" id="postalCode" class="form-input" placeholder="60311" oninput="generateSchema()">
+                            </div>
+                            <div>
+                                <label class="form-label">Stadt *</label>
+                                <input type="text" id="city" class="form-input" placeholder="Frankfurt am Main" oninput="generateSchema()">
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr class="section-divider">
+
+                    <!-- Kontakt -->
+                    <div class="mb-1 text-xs font-semibold text-purple-300 uppercase tracking-wider">Kontakt</div>
+                    <div class="grid grid-cols-1 gap-3 mb-4">
+                        <div>
+                            <label class="form-label">Telefon</label>
+                            <input type="text" id="telephone" class="form-input" placeholder="+49 69 123456" oninput="generateSchema()">
+                        </div>
+                        <div>
+                            <label class="form-label">E-Mail</label>
+                            <input type="email" id="email" class="form-input" placeholder="info@mein-outlet.de" oninput="generateSchema()">
+                        </div>
+                    </div>
+
+                    <hr class="section-divider">
+
+                    <!-- Geo -->
+                    <div class="mb-1 text-xs font-semibold text-purple-300 uppercase tracking-wider">Geo-Koordinaten (optional, aber empfohlen)</div>
+                    <div class="grid grid-cols-2 gap-3 mb-4">
+                        <div>
+                            <label class="form-label">Latitude (Breitengrad)</label>
+                            <input type="number" id="lat" class="form-input" placeholder="50.1109" step="any" oninput="generateSchema()">
+                        </div>
+                        <div>
+                            <label class="form-label">Longitude (Längengrad)</label>
+                            <input type="number" id="lng" class="form-input" placeholder="8.6821" step="any" oninput="generateSchema()">
+                        </div>
+                    </div>
+
+                    <hr class="section-divider">
+
+                    <!-- Bewertungen -->
+                    <div class="mb-1 text-xs font-semibold text-purple-300 uppercase tracking-wider">Bewertungen (optional)</div>
+                    <div class="grid grid-cols-3 gap-3 mb-4">
+                        <div>
+                            <label class="form-label">Ø Bewertung</label>
+                            <input type="number" id="ratingValue" class="form-input" placeholder="4.3" min="1" max="5" step="0.1" oninput="generateSchema()">
+                        </div>
+                        <div>
+                            <label class="form-label">Anzahl Bewertungen</label>
+                            <input type="number" id="reviewCount" class="form-input" placeholder="156" min="1" oninput="generateSchema()">
+                        </div>
+                        <div>
+                            <label class="form-label">Preis-Range</label>
+                            <select id="priceRange" class="form-input" onchange="generateSchema()">
+                                <option value="">– keine –</option>
+                                <option value="€">€ (günstig)</option>
+                                <option value="€€" selected>€€ (mittel)</option>
+                                <option value="€€€">€€€ (gehoben)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <hr class="section-divider">
+
+                    <!-- Öffnungszeiten -->
+                    <div class="mb-2 text-xs font-semibold text-purple-300 uppercase tracking-wider">Öffnungszeiten</div>
+                    <div id="hoursContainer">
+                        <div class="day-row">
+                            <span class="day-label">Mo</span>
+                            <input type="time" class="time-input open-time" value="10:00" oninput="generateSchema()">
+                            <span class="text-slate-400 text-xs">–</span>
+                            <input type="time" class="time-input close-time" value="20:00" oninput="generateSchema()">
+                            <label class="flex items-center gap-1 ml-1 text-xs text-slate-400 cursor-pointer">
+                                <input type="checkbox" class="closed-check closed-day" onchange="generateSchema()"> Geschl.
+                            </label>
+                        </div>
+                        <div class="day-row">
+                            <span class="day-label">Di</span>
+                            <input type="time" class="time-input open-time" value="10:00" oninput="generateSchema()">
+                            <span class="text-slate-400 text-xs">–</span>
+                            <input type="time" class="time-input close-time" value="20:00" oninput="generateSchema()">
+                            <label class="flex items-center gap-1 ml-1 text-xs text-slate-400 cursor-pointer">
+                                <input type="checkbox" class="closed-check closed-day" onchange="generateSchema()"> Geschl.
+                            </label>
+                        </div>
+                        <div class="day-row">
+                            <span class="day-label">Mi</span>
+                            <input type="time" class="time-input open-time" value="10:00" oninput="generateSchema()">
+                            <span class="text-slate-400 text-xs">–</span>
+                            <input type="time" class="time-input close-time" value="20:00" oninput="generateSchema()">
+                            <label class="flex items-center gap-1 ml-1 text-xs text-slate-400 cursor-pointer">
+                                <input type="checkbox" class="closed-check closed-day" onchange="generateSchema()"> Geschl.
+                            </label>
+                        </div>
+                        <div class="day-row">
+                            <span class="day-label">Do</span>
+                            <input type="time" class="time-input open-time" value="10:00" oninput="generateSchema()">
+                            <span class="text-slate-400 text-xs">–</span>
+                            <input type="time" class="time-input close-time" value="20:00" oninput="generateSchema()">
+                            <label class="flex items-center gap-1 ml-1 text-xs text-slate-400 cursor-pointer">
+                                <input type="checkbox" class="closed-check closed-day" onchange="generateSchema()"> Geschl.
+                            </label>
+                        </div>
+                        <div class="day-row">
+                            <span class="day-label">Fr</span>
+                            <input type="time" class="time-input open-time" value="10:00" oninput="generateSchema()">
+                            <span class="text-slate-400 text-xs">–</span>
+                            <input type="time" class="time-input close-time" value="20:00" oninput="generateSchema()">
+                            <label class="flex items-center gap-1 ml-1 text-xs text-slate-400 cursor-pointer">
+                                <input type="checkbox" class="closed-check closed-day" onchange="generateSchema()"> Geschl.
+                            </label>
+                        </div>
+                        <div class="day-row">
+                            <span class="day-label">Sa</span>
+                            <input type="time" class="time-input open-time" value="10:00" oninput="generateSchema()">
+                            <span class="text-slate-400 text-xs">–</span>
+                            <input type="time" class="time-input close-time" value="20:00" oninput="generateSchema()">
+                            <label class="flex items-center gap-1 ml-1 text-xs text-slate-400 cursor-pointer">
+                                <input type="checkbox" class="closed-check closed-day" onchange="generateSchema()"> Geschl.
+                            </label>
+                        </div>
+                        <div class="day-row">
+                            <span class="day-label">So</span>
+                            <input type="time" class="time-input open-time" value="12:00" oninput="generateSchema()">
+                            <span class="text-slate-400 text-xs">–</span>
+                            <input type="time" class="time-input close-time" value="18:00" oninput="generateSchema()">
+                            <label class="flex items-center gap-1 ml-1 text-xs text-slate-400 cursor-pointer">
+                                <input type="checkbox" class="closed-check closed-day" onchange="generateSchema()"> Geschl.
+                            </label>
+                        </div>
+                    </div>
+
+                    <hr class="section-divider">
+
+                    <!-- Sonstiges -->
+                    <div class="mb-1 text-xs font-semibold text-purple-300 uppercase tracking-wider">Weitere Angaben</div>
+                    <div class="grid grid-cols-1 gap-3 mb-4">
+                        <div>
+                            <label class="form-label">Muttermarke / Herstellername (bei Factory Outlet)</label>
+                            <input type="text" id="parentBrand" class="form-input" placeholder="z. B. Nike, Adidas, Tommy Hilfiger" oninput="generateSchema()">
+                        </div>
+                        <div>
+                            <label class="form-label">Zahlungsmethoden</label>
+                            <input type="text" id="payment" class="form-input" placeholder="Barzahlung, EC-Karte, Kreditkarte" oninput="generateSchema()">
+                        </div>
+                        <div>
+                            <label class="form-label">Social-Media-Profil(e) (URLs, kommagetrennt)</label>
+                            <input type="text" id="sameAs" class="form-input" placeholder="https://facebook.com/..., https://instagram.com/..." oninput="generateSchema()">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Output -->
+                <div class="space-y-4 lg:sticky lg:top-20 lg:self-start">
+                    <div class="glass rounded-2xl p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <h2 class="text-lg font-bold text-white flex items-center gap-2">
+                                <span class="bg-purple-500/30 p-1.5 rounded-lg">
+                                    <svg class="w-4 h-4 text-purple-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+                                </span>
+                                Generiertes JSON-LD
+                            </h2>
+                            <button onclick="copySchema()" class="bg-purple-600 hover:bg-purple-700 text-white text-xs font-medium px-4 py-2 rounded-lg transition-colors flex items-center gap-1">
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                                Kopieren
+                            </button>
+                        </div>
+                        <div class="code-block">
+                            <pre id="schemaOutput" class="text-green-300 text-xs p-4 leading-relaxed min-h-64 whitespace-pre-wrap"></pre>
+                        </div>
+                        <p id="copyMsg" class="text-green-400 text-xs mt-2 hidden">✓ In Zwischenablage kopiert!</p>
+                    </div>
+
+                    <!-- Hinweis Einbindung -->
+                    <div class="glass rounded-2xl p-5">
+                        <h3 class="font-semibold text-white mb-2 text-sm">Einbindung im HTML</h3>
+                        <p class="text-slate-400 text-xs mb-2">Kopiere das JSON-LD und füge es in den <code class="text-purple-300">&lt;head&gt;</code>-Bereich deiner Website ein:</p>
+                        <div class="code-block">
+                            <pre class="text-slate-300 text-xs p-3">&lt;script type="application/ld+json"&gt;
+{ ... dein generiertes JSON-LD ... }
+&lt;/script&gt;</pre>
+                        </div>
+                        <p class="text-slate-400 text-xs mt-2">Danach mit dem <a href="https://search.google.com/test/rich-results" target="_blank" rel="noopener" class="text-purple-400 hover:underline">Google Rich Results Test</a> prüfen.</p>
+                    </div>
+
+                    <!-- Links -->
+                    <div class="glass rounded-2xl p-5">
+                        <h3 class="font-semibold text-white mb-3 text-sm">Verwandte Tools & Artikel</h3>
+                        <ul class="space-y-2">
+                            <li><a href="/tools/schema-markup-generator.html" class="text-purple-400 hover:text-purple-300 text-xs transition-colors">→ LocalBusiness Schema Generator</a></li>
+                            <li><a href="/tools/openinghours-schema-generator.html" class="text-purple-400 hover:text-purple-300 text-xs transition-colors">→ OpeningHours Schema Generator</a></li>
+                            <li><a href="/tools/review-schema-generator.html" class="text-purple-400 hover:text-purple-300 text-xs transition-colors">→ AggregateRating Schema Generator</a></li>
+                            <li><a href="/blog/outletstore-schema-markup.html" class="text-purple-400 hover:text-purple-300 text-xs transition-colors">→ OutletStore Schema Markup Anleitung</a></li>
+                            <li><a href="/blog/specialtystore-schema-markup-vertieft.html" class="text-purple-400 hover:text-purple-300 text-xs transition-colors">→ SpecialtyStore Schema vertieft</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Erklärung unten -->
+            <div class="mt-12 glass rounded-2xl p-8">
+                <h2 class="text-2xl font-bold text-white mb-4">Was ist OutletStore Schema Markup?</h2>
+                <p class="text-slate-300 mb-4">
+                    <code class="bg-purple-500/20 text-purple-300 px-1.5 py-0.5 rounded">OutletStore</code> ist ein spezieller schema.org-Typ für Outlet-Geschäfte — also Läden, die Markenware zu reduzierten Preisen verkaufen, oft direkt vom Hersteller (Factory Outlet) oder aus Vorjahres-Kollektionen.
+                </p>
+                <div class="grid md:grid-cols-3 gap-6 mt-6">
+                    <div class="bg-white/5 rounded-xl p-4">
+                        <div class="text-purple-300 font-semibold mb-2 text-sm">Factory Outlet</div>
+                        <p class="text-slate-400 text-xs">Herstellerverkauf direkt an Endkunden. Beispiel: Nike Factory Store, Adidas Outlet. Nutze <code>parentOrganization</code> um auf die Marke zu verweisen.</p>
+                    </div>
+                    <div class="bg-white/5 rounded-xl p-4">
+                        <div class="text-purple-300 font-semibold mb-2 text-sm">Outlet-Center</div>
+                        <p class="text-slate-400 text-xs">Ein Gebäude mit mehreren Outlet-Filialen (wie Designer Outlets Roermond). Nutze <code>Organization</code> mit mehreren <code>OutletStore</code> als <code>department</code>.</p>
+                    </div>
+                    <div class="bg-white/5 rounded-xl p-4">
+                        <div class="text-purple-300 font-semibold mb-2 text-sm">Markenoutlet</div>
+                        <p class="text-slate-400 text-xs">Einzelnes Outlet-Geschäft einer Marke. Nutze <code>priceRange</code> mit "€" oder "€€" und betone das Preisargument in der <code>description</code>.</p>
+                    </div>
+                </div>
+                <div class="mt-6">
+                    <h3 class="text-lg font-semibold text-white mb-3">Warum ist OutletStore Schema wichtig für SEO?</h3>
+                    <ul class="space-y-2 text-slate-300 text-sm">
+                        <li class="flex items-start gap-2"><span class="text-purple-400 mt-0.5">✓</span> Google zeigt Outlet-Geschäfte prominent in lokalen Suchen wie "Outlet Store in der Nähe" oder "Nike Outlet Frankfurt"</li>
+                        <li class="flex items-start gap-2"><span class="text-purple-400 mt-0.5">✓</span> Korrekte Öffnungszeiten im Schema verhindern Kundenfrust und verbessern die Google-Bewertungen</li>
+                        <li class="flex items-start gap-2"><span class="text-purple-400 mt-0.5">✓</span> <code>priceRange</code>-Property macht dein Geschäft für "günstige Markenwaren"-Suchen sichtbarer</li>
+                        <li class="flex items-start gap-2"><span class="text-purple-400 mt-0.5">✓</span> Bewertungen (AggregateRating) erscheinen als Sterne in den Google-Suchergebnissen</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    const DAYS = ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'];
+    const DAY_LABELS = ['Montag','Dienstag','Mittwoch','Donnerstag','Freitag','Samstag','Sonntag'];
+
+    function generateSchema() {
+        const storeType = document.getElementById('storeType').value;
+        const name = document.getElementById('name').value.trim();
+        const altName = document.getElementById('altName').value.trim();
+        const description = document.getElementById('description').value.trim();
+        const url = document.getElementById('url').value.trim();
+        const logo = document.getElementById('logo').value.trim();
+        const street = document.getElementById('street').value.trim();
+        const postalCode = document.getElementById('postalCode').value.trim();
+        const city = document.getElementById('city').value.trim();
+        const telephone = document.getElementById('telephone').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const lat = document.getElementById('lat').value.trim();
+        const lng = document.getElementById('lng').value.trim();
+        const ratingValue = document.getElementById('ratingValue').value.trim();
+        const reviewCount = document.getElementById('reviewCount').value.trim();
+        const priceRange = document.getElementById('priceRange').value;
+        const parentBrand = document.getElementById('parentBrand').value.trim();
+        const payment = document.getElementById('payment').value.trim();
+        const sameAsRaw = document.getElementById('sameAs').value.trim();
+
+        const schema = {
+            "@context": "https://schema.org",
+            "@type": "OutletStore"
+        };
+
+        if (name) schema.name = name;
+        else schema.name = "Mein Outlet";
+
+        if (altName) schema.alternateName = altName;
+        if (description) schema.description = description;
+        if (url) schema.url = url;
+        if (logo) schema.logo = logo;
+        if (priceRange) schema.priceRange = priceRange;
+        if (payment) schema.paymentAccepted = payment;
+
+        // Adresse
+        const address = { "@type": "PostalAddress", "addressCountry": "DE" };
+        if (street) address.streetAddress = street;
+        if (postalCode) address.postalCode = postalCode;
+        if (city) address.addressLocality = city;
+        if (street || postalCode || city) schema.address = address;
+
+        // Kontakt
+        if (telephone) schema.telephone = telephone;
+        if (email) schema.email = email;
+
+        // Geo
+        if (lat && lng) {
+            schema.geo = {
+                "@type": "GeoCoordinates",
+                "latitude": parseFloat(lat),
+                "longitude": parseFloat(lng)
+            };
+        }
+
+        // Öffnungszeiten
+        const rows = document.querySelectorAll('#hoursContainer .day-row');
+        const hours = [];
+        rows.forEach((row, i) => {
+            const closed = row.querySelector('.closed-day').checked;
+            if (!closed) {
+                const open = row.querySelector('.open-time').value;
+                const close = row.querySelector('.close-time').value;
+                if (open && close) {
+                    hours.push({
+                        "@type": "OpeningHoursSpecification",
+                        "dayOfWeek": DAYS[i],
+                        "opens": open,
+                        "closes": close
+                    });
+                }
+            }
+        });
+        if (hours.length > 0) schema.openingHoursSpecification = hours;
+
+        // Bewertungen
+        if (ratingValue && reviewCount) {
+            schema.aggregateRating = {
+                "@type": "AggregateRating",
+                "ratingValue": parseFloat(ratingValue).toFixed(1),
+                "reviewCount": parseInt(reviewCount),
+                "bestRating": "5",
+                "worstRating": "1"
+            };
+        }
+
+        // Muttermarke bei Factory Outlet
+        if (parentBrand) {
+            schema.parentOrganization = {
+                "@type": "Organization",
+                "name": parentBrand
+            };
+        }
+
+        // SameAs
+        if (sameAsRaw) {
+            const links = sameAsRaw.split(',').map(s => s.trim()).filter(s => s.length > 0);
+            if (links.length === 1) schema.sameAs = links[0];
+            else if (links.length > 1) schema.sameAs = links;
+        }
+
+        const output = JSON.stringify(schema, null, 2);
+        document.getElementById('schemaOutput').textContent = output;
+    }
+
+    function copySchema() {
+        const text = document.getElementById('schemaOutput').textContent;
+        if (!text) return;
+        navigator.clipboard.writeText(
+            '<script type="application/ld+json">\n' + text + '\n<\/script>'
+        ).then(() => {
+            const msg = document.getElementById('copyMsg');
+            msg.classList.remove('hidden');
+            setTimeout(() => msg.classList.add('hidden'), 3000);
+        });
+    }
+
+    // Initial generate
+    generateSchema();
+    </script>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/10 bg-black/20 py-8">
+        <div class="max-w-7xl mx-auto px-4 text-center text-slate-500 text-sm">
+            <p>© 2026 Thümmler AI GmbH · Potsdam · <a href="mailto:team@shift07.ai" class="hover:text-white transition-colors">team@shift07.ai</a></p>
+            <p class="mt-2">
+                <a href="/impressum.html" class="hover:text-white transition-colors mr-4">Impressum</a>
+                <a href="/datenschutz.html" class="hover:text-white transition-colors mr-4">Datenschutz</a>
+                <a href="/tools/" class="hover:text-white transition-colors">Alle Tools</a>
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
