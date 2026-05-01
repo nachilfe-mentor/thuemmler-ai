@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GroceryStore Schema Markup vertieft: Supermarkt, Bio-Markt und Discounter für Google | Shift07 Blog</title>
+    <meta name="description" content="GroceryStore Schema Markup vertieft: JSON-LD für Supermärkte, Bio-Läden, Discounter, Wochenmärkte und Lebensmittelhändler. Unterschiede, vollständige Codebeispiele und Profi-Tipps 2026.">
+    <meta name="author" content="Thümmler AI GmbH">
+    <link rel="icon" type="image/png" href="/logo.png">
+    <link rel="canonical" href="https://shift07.ai/blog/grocerystore-schema-markup-vertieft.html">
+    <link rel="alternate" type="application/rss+xml" title="Shift07 Blog" href="https://shift07.ai/feed.xml">
+    <!-- Open Graph -->
+    <meta property="og:title" content="GroceryStore Schema Markup vertieft: Supermarkt, Bio-Markt und Discounter für Google | Shift07 Blog">
+    <meta property="og:description" content="GroceryStore Schema Markup vertieft: JSON-LD für Supermärkte, Bio-Märkte, Discounter und Wochenmärkte. Vollständige Codebeispiele 2026.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://shift07.ai/blog/grocerystore-schema-markup-vertieft.html">
+    <meta property="og:image" content="https://shift07.ai/blog/images/grocerystore-schema-markup-vertieft.png">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="Shift07">
+    <meta property="article:published_time" content="2026-05-01T15:30:00+02:00">
+    <meta property="article:section" content="Schema Markup">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="GroceryStore Schema Markup vertieft: Supermarkt, Bio-Markt und Discounter für Google">
+    <meta name="twitter:description" content="GroceryStore Schema Markup vertieft: JSON-LD für alle Lebensmittelhändler. Vollständige Codebeispiele 2026.">
+    <meta name="twitter:image" content="https://shift07.ai/blog/images/grocerystore-schema-markup-vertieft.png">
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "GroceryStore Schema Markup vertieft: Supermarkt, Bio-Markt und Discounter für Google",
+      "description": "GroceryStore Schema Markup vertieft: JSON-LD für Supermärkte, Bio-Märkte, Discounter und Wochenmärkte. Vollständige Codebeispiele 2026.",
+      "image": "https://shift07.ai/blog/images/grocerystore-schema-markup-vertieft.png",
+      "datePublished": "2026-05-01T15:30:00+02:00",
+      "dateModified": "2026-05-01T15:30:00+02:00",
+      "author": {
+        "@type": "Organization",
+        "name": "Shift07",
+        "url": "https://shift07.ai"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Shift07",
+        "url": "https://shift07.ai",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://shift07.ai/assets/logo.png"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://shift07.ai/blog/grocerystore-schema-markup-vertieft.html"
+      }
+    }
+    </script>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K1S1RXBDS8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K1S1RXBDS8');
+    </script>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8475857002943858" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: rgba(15, 23, 42, 0.5); }
+        ::-webkit-scrollbar-thumb { background: rgba(59, 130, 246, 0.5); border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: rgba(59, 130, 246, 0.7); }
+        html { scroll-behavior: smooth; }
+        .article-content h2 { font-size: 1.5rem; font-weight: 700; color: #fff; margin-top: 2.5rem; margin-bottom: 1rem; }
+        .article-content h3 { font-size: 1.25rem; font-weight: 600; color: #e2e8f0; margin-top: 2rem; margin-bottom: 0.75rem; }
+        .article-content p { color: #cbd5e1; line-height: 1.8; margin-bottom: 1.25rem; }
+        .article-content ul, .article-content ol { color: #cbd5e1; margin-bottom: 1.25rem; padding-left: 1.5rem; }
+        .article-content li { margin-bottom: 0.5rem; line-height: 1.7; }
+        .article-content ul li { list-style-type: disc; }
+        .article-content ol li { list-style-type: decimal; }
+        .article-content a { color: #60a5fa; text-decoration: underline; text-underline-offset: 2px; }
+        .article-content a:hover { color: #93bbfc; }
+        .article-content blockquote { border-left: 4px solid #3b82f6; padding-left: 1.25rem; margin: 1.5rem 0; color: #94a3b8; font-style: italic; }
+        .article-content code { background: rgba(59, 130, 246, 0.15); color: #93c5fd; padding: 0.15rem 0.4rem; border-radius: 0.25rem; font-size: 0.9em; }
+        .article-content pre { background: rgba(15, 23, 42, 0.8); border: 1px solid rgba(255,255,255,0.1); border-radius: 0.75rem; padding: 1.25rem; overflow-x: auto; margin-bottom: 1.5rem; }
+        .article-content pre code { background: none; color: #e2e8f0; padding: 0; font-size: 0.875rem; }
+        .article-content table { width: 100%; border-collapse: collapse; margin-bottom: 1.5rem; }
+        .article-content th { background: rgba(59,130,246,0.2); color: #e2e8f0; padding: 0.75rem 1rem; text-align: left; font-weight: 600; border: 1px solid rgba(255,255,255,0.1); }
+        .article-content td { color: #cbd5e1; padding: 0.75rem 1rem; border: 1px solid rgba(255,255,255,0.08); }
+        .article-content tr:nth-child(even) td { background: rgba(255,255,255,0.03); }
+    </style>
+</head>
+<body class="bg-slate-950 text-white min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="border-b border-white/10 bg-slate-950/80 backdrop-blur-sm sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+            <a href="/" class="flex items-center gap-2">
+                <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                <span class="font-bold text-lg">Shift07</span>
+            </a>
+            <div class="flex items-center gap-6 text-sm">
+                <a href="/blog/" class="text-slate-400 hover:text-white transition-colors">Blog</a>
+                <a href="/tools/" class="text-slate-400 hover:text-white transition-colors">Tools</a>
+                <a href="/" class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg font-medium transition-colors">Kostenlos analysieren</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <div class="max-w-4xl mx-auto px-4 pt-12 pb-8">
+        <div class="mb-6">
+            <a href="/blog/" class="text-blue-400 hover:text-blue-300 text-sm flex items-center gap-1">
+                ← Zurück zum Blog
+            </a>
+        </div>
+        <div class="mb-4">
+            <span class="bg-green-600/20 text-green-400 border border-green-500/30 px-3 py-1 rounded-full text-xs font-medium">Schema Markup</span>
+        </div>
+        <h1 class="text-3xl md:text-4xl font-bold text-white mb-6 leading-tight">
+            GroceryStore Schema Markup vertieft: Supermarkt, Bio-Markt und Discounter für Google
+        </h1>
+        <p class="text-xl text-slate-400 mb-8 leading-relaxed">
+            Ob klassischer Supermarkt, Bio-Laden, Discounter oder regionaler Wochenmarkt — alle profitieren von korrektem <code>GroceryStore</code> Schema Markup. Dieser Artikel zeigt die Unterschiede in der Implementierung, erklärt Sonderfälle wie Lieferdienste und Marktbeschicker und gibt vollständige JSON-LD-Codebeispiele für 2026.
+        </p>
+        <!-- Headerbild -->
+        <div class="rounded-2xl overflow-hidden mb-10 border border-white/10">
+            <img src="/blog/images/grocerystore-schema-markup-vertieft.png"
+                 alt="GroceryStore Schema Markup vertieft für Supermärkte, Bio-Märkte und Discounter"
+                 class="w-full object-cover">
+        </div>
+    </div>
+
+    <!-- Article Content -->
+    <div class="max-w-4xl mx-auto px-4 pb-16">
+        <div class="article-content">
+
+            <h2>GroceryStore in der schema.org-Hierarchie</h2>
+            <p>
+                <code>GroceryStore</code> ist ein direkter Untertyp von <code>Store</code>:
+            </p>
+            <pre><code>Thing → Organization → LocalBusiness → Store → GroceryStore</code></pre>
+            <p>
+                In unserem Einführungsartikel <a href="/blog/conveniencestore-grocerystore-schema-markup.html">ConvenienceStore &amp; GroceryStore Schema Markup</a> haben wir die Grundlagen beider Typen erläutert. Dieser Vertiefungsartikel geht darüber hinaus und erklärt, wie verschiedene Lebensmittelhändler-Typen optimal mit Schema.org strukturiert werden:
+            </p>
+            <ul>
+                <li><strong>Klassischer Supermarkt</strong> (Vollsortimenter, z. B. REWE-Einzelbetrieb, selbstständige Supermärkte)</li>
+                <li><strong>Bio-Laden / Bio-Markt</strong> (organic grocery, Naturkost)</li>
+                <li><strong>Discounter</strong> (Netto-Franchise, regionale Discounter)</li>
+                <li><strong>Wochenmarkt-Stand / Marktbeschicker</strong></li>
+                <li><strong>Online-Lebensmittelhandel mit Abholung oder Lieferung</strong></li>
+                <li><strong>Speziallebensmittler</strong> (türkischer Supermarkt, polnischer Laden, asiatischer Supermarkt)</li>
+            </ul>
+            <p>
+                Für Ketten wie REWE oder Edeka als Ganzes ist das Schema in der Regel auf Konzernebene definiert. Wenn du aber eine einzelne Filiale oder ein unabhängiges Geschäft betreibst, erstellst du ein <code>GroceryStore</code>-Schema für genau diese eine Einheit.
+            </p>
+
+            <h2>Vollständiges JSON-LD: Klassischer Supermarkt</h2>
+            <p>
+                Ein selbstständiger Supermarkt mit Vollsortiment profitiert von einem möglichst vollständigen Schema, das Öffnungszeiten, Kontaktdaten, Bewertungen und Angebote vereint:
+            </p>
+            <pre><code>{
+  "@context": "https://schema.org",
+  "@type": "GroceryStore",
+  "name": "Frische-Markt Heinen",
+  "alternateName": "Heinen Supermarkt Münster",
+  "description": "Ihr lokaler Supermarkt in Münster-Hiltrup mit großem Frischwaren-Angebot, Metzgerei, Bäckereifrische und regionalen Produkten. Parkplätze direkt am Laden.",
+  "url": "https://frischemarkt-heinen.de",
+  "logo": "https://frischemarkt-heinen.de/logo.png",
+  "image": "https://frischemarkt-heinen.de/markt-aussen.jpg",
+  "telephone": "+49 251 771234",
+  "email": "info@frischemarkt-heinen.de",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Am Markt 12",
+    "addressLocality": "Münster",
+    "postalCode": "48165",
+    "addressCountry": "DE"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 51.9181,
+    "longitude": 7.6533
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "07:00",
+      "closes": "20:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "07:00",
+      "closes": "18:00"
+    }
+  ],
+  "specialOpeningHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "validFrom": "2026-12-24",
+      "validThrough": "2026-12-24",
+      "opens": "07:00",
+      "closes": "14:00",
+      "name": "Heiligabend"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "validFrom": "2026-12-25",
+      "validThrough": "2026-12-26",
+      "opens": "00:00",
+      "closes": "00:00",
+      "name": "Weihnachten — geschlossen"
+    }
+  ],
+  "priceRange": "€€",
+  "currenciesAccepted": "EUR",
+  "paymentAccepted": "Barzahlung, EC-Karte, Kreditkarte",
+  "amenityFeature": [
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Parkplatz",
+      "value": true
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Rollstuhlzugang",
+      "value": true
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Metzgereitheke",
+      "value": true
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Bäckereifrische",
+      "value": true
+    }
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.5",
+    "reviewCount": "132",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "sameAs": [
+    "https://www.google.com/maps?cid=...",
+    "https://www.facebook.com/frischemarkt.heinen"
+  ]
+}</code></pre>
+            <p>
+                Besonders wertvoll ist hier die <code>specialOpeningHoursSpecification</code>-Property für Feiertage. Supermärkte haben an Feiertagen und zu besonderen Zeiten (Heiligabend, Silvester) abweichende Öffnungszeiten — und Kunden suchen genau diese Information.
+            </p>
+
+            <h2>Bio-Laden / Bio-Markt: Nachhaltigkeit im Schema abbilden</h2>
+            <p>
+                Bio-Läden haben spezifische Stärken, die sie von konventionellen Supermärkten unterscheiden: Zertifizierungen, regionale Lieferanten, nachhaltige Verpackungen. Mit <code>hasOfferCatalog</code> und <code>award</code> lässt sich das elegant abbilden:
+            </p>
+            <pre><code>{
+  "@context": "https://schema.org",
+  "@type": "GroceryStore",
+  "name": "Naturkost Grüne Welt",
+  "description": "Ihr zertifizierter Bio-Supermarkt in Freiburg. 100% Bio-Produkte, viele regionale Direktlieferanten, Unverpackt-Ecke und Lieferservice für Freiburg und Umgebung.",
+  "url": "https://gruene-welt-freiburg.de",
+  "telephone": "+49 761 334455",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Kaiserstuhlstraße 7",
+    "addressLocality": "Freiburg im Breisgau",
+    "postalCode": "79111",
+    "addressCountry": "DE"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 47.9896,
+    "longitude": 7.8421
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "08:00",
+      "closes": "19:30"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "08:00",
+      "closes": "17:00"
+    }
+  ],
+  "award": ["Naturland-Partner 2025", "Bio-Siegel DEÖ-007-12345"],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Dienstleistungen",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Bio-Kisten-Abo",
+          "description": "Wöchentliche Gemüse- und Obstkisten aus regionaler Biolandwirtschaft — direkt nach Hause geliefert"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Unverpackt-Einkauf",
+          "description": "Getreide, Hülsenfrüchte, Nüsse und Trockenfrüchte lose einkaufen — mit eigenem Behälter"
+        }
+      }
+    ]
+  },
+  "areaServed": {
+    "@type": "City",
+    "name": "Freiburg im Breisgau"
+  },
+  "potentialAction": {
+    "@type": "OrderAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "https://gruene-welt-freiburg.de/abo"
+    },
+    "deliveryMethod": "http://schema.org/DeliveryModeMail"
+  }
+}</code></pre>
+            <p>
+                Der <code>award</code>-Wert ist eine einfache Zeichenkette oder ein Array von Zeichenketten. Zertifizierungen wie Naturland, Bioland oder das EU-Bio-Siegel können hier aufgeführt werden — das stärkt das Vertrauen sowohl bei Google als auch bei potenziellen Kunden, die aktiv nach Bio-Zertifizierungen suchen.
+            </p>
+
+            <h2>Discounter: Wenn Preis das Argument ist</h2>
+            <p>
+                Regionale Discounter oder Franchise-Nehmer von Discounter-Ketten (Netto, Penny, Norma) betreiben oft eine eigene Filial-Website oder zumindest eine Google-My-Business-Seite. Das Schema für eine einzelne Discounter-Filiale:
+            </p>
+            <pre><code>{
+  "@context": "https://schema.org",
+  "@type": "GroceryStore",
+  "name": "Netto Marken-Discount — Filiale Dortmund-Eving",
+  "description": "Ihr Netto Discounter in Dortmund-Eving. Täglich frische Waren, Aktionsangebote und ausgewählte Bio-Produkte zu günstigen Preisen.",
+  "url": "https://www.netto-online.de/service/filialen/dortmund-eving",
+  "telephone": "+49 231 998877",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Evinger Straße 145",
+    "addressLocality": "Dortmund",
+    "postalCode": "44339",
+    "addressCountry": "DE"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 51.5541,
+    "longitude": 7.4636
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "07:00",
+      "closes": "21:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "07:00",
+      "closes": "21:00"
+    }
+  ],
+  "priceRange": "€",
+  "parentOrganization": {
+    "@type": "Organization",
+    "name": "Netto Marken-Discount AG & Co. KG",
+    "url": "https://www.netto-online.de"
+  }
+}</code></pre>
+            <p>
+                Das <code>parentOrganization</code>-Feld stellt die Verbindung zur übergeordneten Kette her. Google versteht dadurch, dass es sich um eine Filiale handelt, und kann die Markenbekanntheit der Kette in die lokale Bewertung einfließen lassen.
+            </p>
+
+            <h2>Wochenmarkt-Stand: Mobile Händler mit flexiblem Standort</h2>
+            <p>
+                Marktbeschicker stehen vor einer besonderen Herausforderung: Sie haben keinen festen Standort, sondern wechseln wöchentlich den Markt. Schema.org bietet dafür keine Standardlösung — aber mit kreativer Nutzung der Properties funktioniert es trotzdem:
+            </p>
+            <pre><code>{
+  "@context": "https://schema.org",
+  "@type": "GroceryStore",
+  "name": "Bauer Schmidts Hofladen — Wochenmarkt",
+  "description": "Frisches Gemüse und Obst vom eigenen Hof. Jeden Dienstag auf dem Wochenmarkt Karlsruhe und jeden Samstag auf dem Marktplatz Bruchsal.",
+  "url": "https://bauer-schmidts-hofladen.de",
+  "telephone": "+49 721 445566",
+  "email": "info@bauer-schmidts-hofladen.de",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Hofstraße 12 (Betriebsanschrift)",
+    "addressLocality": "Karlsruhe",
+    "postalCode": "76228",
+    "addressCountry": "DE"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Tuesday",
+      "opens": "07:00",
+      "closes": "13:00",
+      "description": "Wochenmarkt Karlsruhe, Marktplatz"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "07:00",
+      "closes": "13:00",
+      "description": "Wochenmarkt Bruchsal, Marktplatz"
+    }
+  ],
+  "areaServed": [
+    { "@type": "City", "name": "Karlsruhe" },
+    { "@type": "City", "name": "Bruchsal" }
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Saisonales Angebot",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Product",
+          "name": "Frühlingszwiebeln",
+          "description": "Frisch geerntet vom eigenen Feld"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Product",
+          "name": "Saison-Gemüsekiste",
+          "description": "Saisonales Gemüse direkt vom Feld — nach Verfügbarkeit"
+        }
+      }
+    ]
+  }
+}</code></pre>
+            <p>
+                Für mobile Marktbeschicker empfiehlt es sich, auf der Website für jeden Marktstandort eine eigene Unterseite zu erstellen — mit jeweils eigenem Schema für den jeweiligen Standort. Das verbessert die lokale Auffindbarkeit erheblich.
+            </p>
+
+            <h2>Speziallebensmittler: Ethnische Supermärkte korrekt kategorisieren</h2>
+            <p>
+                Türkische Supermärkte, polnische Lebensmittelläden, asiatische Supermärkte — all das ist <code>GroceryStore</code>. Diese Händler können ihre Besonderheit über <code>description</code> und <code>servesCuisine</code> (auch wenn letzteres eigentlich für Restaurants gedacht ist) hervorheben. Der sauberere Weg ist die <code>hasOfferCatalog</code>-Property:
+            </p>
+            <pre><code>{
+  "@context": "https://schema.org",
+  "@type": "GroceryStore",
+  "name": "Asia-Markt Saigon Express",
+  "description": "Ihr asiatischer Supermarkt in Düsseldorf. Vietnamesische, chinesische, japanische, koreanische und thailändische Lebensmittel. Frische Kräuter, Tofu, Miso und Spezialzutaten.",
+  "url": "https://saigon-express-duesseldorf.de",
+  "telephone": "+49 211 334455",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Immermannstraße 22",
+    "addressLocality": "Düsseldorf",
+    "postalCode": "40210",
+    "addressCountry": "DE"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      "opens": "09:00",
+      "closes": "20:00"
+    }
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Sortiment",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Product",
+          "name": "Frische asiatische Kräuter",
+          "description": "Thai-Basilikum, Zitronengras, Galangal, Kaffir-Limettenblätter"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Product",
+          "name": "Asiatische Nudeln und Reisvarianten",
+          "description": "Reisnudeln, Glasnudeln, Udon, Soba, Jasminreis, Klebreis"
+        }
+      }
+    ]
+  },
+  "availableLanguage": ["German", "Vietnamese", "Chinese", "English"]
+}</code></pre>
+            <p>
+                Die Property <code>availableLanguage</code> ist besonders nützlich für ethnische Geschäfte: Google und Nutzer wissen dann, in welcher Sprache sie bedient werden — das steigert die Conversion-Rate für sprachspezifische Suchanfragen.
+            </p>
+
+            <h2>Online-Lebensmittelhandel und Click-&amp;-Collect</h2>
+            <p>
+                Supermärkte mit Lieferdienst oder Abholservice kombinieren <code>GroceryStore</code> mit einer <code>OrderAction</code>:
+            </p>
+            <pre><code>{
+  "@context": "https://schema.org",
+  "@type": "GroceryStore",
+  "name": "Vollwert-Markt Neustadt — Online-Shop und Abholung",
+  "description": "Lebensmittel online bestellen und im Markt abholen oder liefern lassen. Vollsortiment plus Bio-Ecke. Lieferung in Neustadt und 15-km-Umkreis.",
+  "url": "https://vollwert-markt-neustadt.de",
+  "telephone": "+49 7631 112233",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Bahnhofstraße 3",
+    "addressLocality": "Neustadt an der Weinstraße",
+    "postalCode": "67433",
+    "addressCountry": "DE"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "07:30",
+      "closes": "19:30"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "07:30",
+      "closes": "16:00"
+    }
+  ],
+  "areaServed": {
+    "@type": "GeoCircle",
+    "geoMidpoint": {
+      "@type": "GeoCoordinates",
+      "latitude": 49.3535,
+      "longitude": 8.1343
+    },
+    "geoRadius": "15000"
+  },
+  "potentialAction": [
+    {
+      "@type": "OrderAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://vollwert-markt-neustadt.de/bestellen",
+        "actionPlatform": ["http://schema.org/DesktopWebPlatform", "http://schema.org/MobileWebPlatform"]
+      },
+      "deliveryMethod": "http://schema.org/DeliveryModePickUp",
+      "name": "Click & Collect"
+    },
+    {
+      "@type": "OrderAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://vollwert-markt-neustadt.de/lieferung"
+      },
+      "deliveryMethod": "http://schema.org/DeliveryModeMail",
+      "name": "Lieferung nach Hause"
+    }
+  ]
+}</code></pre>
+
+            <h2>Häufige Fehler und Optimierungspotenziale</h2>
+
+            <h3>Fehler 1: Keine Sonderöffnungszeiten für Feiertage</h3>
+            <p>
+                Supermärkte werden an Feiertagen besonders häufig gesucht — "Öffnungszeiten Supermarkt Weihnachten" ist eine klassische Suche. Nutze <code>specialOpeningHoursSpecification</code> mit <code>validFrom</code> und <code>validThrough</code> für alle gesetzlichen Feiertage. Veraltete Öffnungszeiten im Schema führen zu Frustration und schlechten Bewertungen.
+            </p>
+
+            <h3>Fehler 2: priceRange vergessen</h3>
+            <p>
+                <code>priceRange</code> (€, €€, €€€) ist für Verbraucher ein wichtiges Signal. Discounter sollten immer "€" angeben, Bio-Läden können "€€" oder "€€€" setzen. Google nutzt diesen Wert, um Suchanfragen mit Preis-Intent besser zu bedienen ("günstiger Supermarkt in der Nähe").
+            </p>
+
+            <h3>Fehler 3: amenityFeature nicht nutzen</h3>
+            <p>
+                Parkplätze, Rollstuhlrampe, Pfandautomat, Metzgerei, Bäckereifrische — all das lässt sich über <code>amenityFeature</code> als <code>LocationFeatureSpecification</code> abbilden. Viele Kunden filtern gezielt nach solchen Features. In Google Maps werden diese Informationen sichtbar, sobald sie in der Unternehmens-Datenbank hinterlegt sind — strukturierte Daten beschleunigen das.
+            </p>
+
+            <h3>Fehler 4: GroceryStore statt ConvenienceStore verwenden</h3>
+            <p>
+                Kleinstladungen, Kioske und Spätis fallen eher unter <code>ConvenienceStore</code>. Die Grenze ist fließend: Ein Shop mit weniger als 400 m² Verkaufsfläche, begrenztem Sortiment und langen Öffnungszeiten ist typischerweise ein <code>ConvenienceStore</code>. Vollsortimenter ab ~500 m² sind <code>GroceryStore</code>. Wähle den Typ, der am besten zur Realität deines Geschäfts passt — Google kann beides richtig einordnen.
+            </p>
+
+            <h2>Vergleich: Wie unterscheiden sich die Typen im Schema?</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Händlertyp</th>
+                        <th>Schema-Typ</th>
+                        <th>Besondere Properties</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Supermarkt (Vollsortiment)</td>
+                        <td><code>GroceryStore</code></td>
+                        <td><code>amenityFeature</code>, <code>specialOpeningHours</code></td>
+                    </tr>
+                    <tr>
+                        <td>Bio-Laden</td>
+                        <td><code>GroceryStore</code></td>
+                        <td><code>award</code>, <code>potentialAction: OrderAction</code></td>
+                    </tr>
+                    <tr>
+                        <td>Discounter-Filiale</td>
+                        <td><code>GroceryStore</code></td>
+                        <td><code>parentOrganization</code>, <code>priceRange: "€"</code></td>
+                    </tr>
+                    <tr>
+                        <td>Spätkauf / Kiosk</td>
+                        <td><code>ConvenienceStore</code></td>
+                        <td><code>openingHours</code> (oft 24h)</td>
+                    </tr>
+                    <tr>
+                        <td>Marktstand</td>
+                        <td><code>GroceryStore</code></td>
+                        <td><code>areaServed</code>, saisonale <code>openingHours</code></td>
+                    </tr>
+                    <tr>
+                        <td>Ethnischer Supermarkt</td>
+                        <td><code>GroceryStore</code></td>
+                        <td><code>availableLanguage</code>, <code>hasOfferCatalog</code></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2>GroceryStore mit Produkten verknüpfen: Wochenaktion-Markup</h2>
+            <p>
+                Eine fortgeschrittene Technik für Supermärkte: Wochenangebote als <code>Offer</code> mit Gültigkeitsdatum ins Schema einbinden. Das ermöglicht potenzielle Rich Results für Angebote:
+            </p>
+            <pre><code>{
+  "@context": "https://schema.org",
+  "@type": "GroceryStore",
+  "name": "Frische-Markt Heinen",
+  "url": "https://frischemarkt-heinen.de",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Münster",
+    "addressCountry": "DE"
+  },
+  "makesOffer": [
+    {
+      "@type": "Offer",
+      "name": "Bio-Erdbeeren aus der Region",
+      "price": "2.99",
+      "priceCurrency": "EUR",
+      "validFrom": "2026-05-01",
+      "validThrough": "2026-05-07",
+      "itemOffered": {
+        "@type": "Product",
+        "name": "Bio-Erdbeeren 500g",
+        "description": "Frisch geerntete Bio-Erdbeeren aus regionalem Anbau"
+      }
+    }
+  ]
+}</code></pre>
+            <p>
+                Beachte: Das Wochenangebot-Markup funktioniert nur, wenn die Angebote auch auf der Website selbst sichtbar und in den Produktseiten eingebunden sind. Ohne entsprechende HTML-Präsenz wertet Google das Markup als spam-verdächtig ab.
+            </p>
+
+            <h2>Checkliste: GroceryStore Schema vollständig implementieren</h2>
+            <ol>
+                <li>✅ <code>@type: "GroceryStore"</code> korrekt gesetzt</li>
+                <li>✅ <code>name</code> mit offiziellem Firmennamen (inkl. Filialbezeichnung wenn nötig)</li>
+                <li>✅ <code>description</code> mit Sortimentsschwerpunkt und Standortvorteil</li>
+                <li>✅ <code>address</code> vollständig mit <code>PostalAddress</code></li>
+                <li>✅ <code>geo</code> mit Koordinaten für lokale Suchen</li>
+                <li>✅ <code>openingHoursSpecification</code> für alle Tage inkl. Samstag</li>
+                <li>✅ <code>specialOpeningHoursSpecification</code> für Feiertage</li>
+                <li>✅ <code>priceRange</code> (€ bis €€€) passend zum Geschäftsmodell</li>
+                <li>✅ <code>amenityFeature</code> für Parkplatz, Rollstuhlzugang, Metzgerei etc.</li>
+                <li>✅ <code>aggregateRating</code> sobald Bewertungen vorhanden</li>
+                <li>✅ <code>paymentAccepted</code> und <code>currenciesAccepted</code></li>
+                <li>✅ <code>sameAs</code> mit Google Maps und Social-Media-Profilen</li>
+                <li>✅ Für Bio-Läden: <code>award</code> mit Zertifizierungen</li>
+                <li>✅ Für Ketten-Filialen: <code>parentOrganization</code></li>
+                <li>✅ Für Händler mit Lieferung: <code>potentialAction: OrderAction</code></li>
+            </ol>
+
+            <h2>GroceryStore in Google-Suchergebnissen</h2>
+            <p>
+                Mit vollständigem <code>GroceryStore</code>-Schema erreicht dein Geschäft:
+            </p>
+            <ul>
+                <li><strong>Local Pack:</strong> Erscheinen im 3er-Pack bei Suchen wie "Supermarkt in der Nähe" oder "Bio-Laden [Stadt]"</li>
+                <li><strong>Knowledge Panel:</strong> Mit Öffnungszeiten, Telefon, Bewertungen, Fotos und direkten Buttons (Anrufen, Route)</li>
+                <li><strong>Sternebewertungen:</strong> Wenn <code>AggregateRating</code> eingebunden ist</li>
+                <li><strong>Angebots-Rich-Results:</strong> Bei korrekter Implementierung von <code>makesOffer</code> mit gültigen Produkten</li>
+            </ul>
+
+            <h2>Fazit: GroceryStore-Schema ist keine Einheitslösung</h2>
+            <p>
+                Die richtige Umsetzung von <code>GroceryStore</code>-Schema hängt stark vom Geschäftsmodell ab. Ein Discounter betont den Preis (<code>priceRange: "€"</code>, <code>parentOrganization</code>), ein Bio-Laden seine Zertifizierungen (<code>award</code>), ein mobiler Marktstand sein Einzugsgebiet (<code>areaServed</code>). Gemeinsam ist allen: Öffnungszeiten und Adresse müssen immer vollständig und aktuell sein — das sind die meistgesuchten Informationen.
+            </p>
+            <p>
+                Überprüfe die SEO-Grundlagen deiner Website mit unserer <a href="/">kostenlosen Analyse auf shift07.ai</a> — wir zeigen dir in Sekunden, welche Schema-Properties fehlen und wo dein größtes Potenzial steckt. Nutze außerdem unseren <a href="/tools/conveniencestore-grocerystore-schema-generator.html">GroceryStore Schema Generator</a>, um JSON-LD schnell und fehlerfrei zu erstellen.
+            </p>
+
+            <!-- Interne Verlinkung -->
+            <div class="mt-12 pt-8 border-t border-white/10">
+                <h3 class="text-lg font-semibold text-white mb-4">Weiterführende Artikel</h3>
+                <div class="grid md:grid-cols-2 gap-4">
+                    <a href="/blog/conveniencestore-grocerystore-schema-markup.html" class="block p-4 bg-white/5 rounded-xl hover:bg-white/10 transition-colors border border-white/10 no-underline">
+                        <div class="text-blue-400 font-medium mb-1">ConvenienceStore &amp; GroceryStore Grundlagen</div>
+                        <div class="text-slate-400 text-sm">JSON-LD für Lebensmittelgeschäfte — die Einführung</div>
+                    </a>
+                    <a href="/blog/openinghours-schema-markup-seo.html" class="block p-4 bg-white/5 rounded-xl hover:bg-white/10 transition-colors border border-white/10 no-underline">
+                        <div class="text-blue-400 font-medium mb-1">OpeningHoursSpecification Schema</div>
+                        <div class="text-slate-400 text-sm">Öffnungszeiten für Google richtig einbinden</div>
+                    </a>
+                    <a href="/blog/localbusiness-schema-markup-anleitung.html" class="block p-4 bg-white/5 rounded-xl hover:bg-white/10 transition-colors border border-white/10 no-underline">
+                        <div class="text-blue-400 font-medium mb-1">LocalBusiness Schema Markup</div>
+                        <div class="text-slate-400 text-sm">Vollständige Anleitung für lokale Unternehmen</div>
+                    </a>
+                    <a href="/tools/conveniencestore-grocerystore-schema-generator.html" class="block p-4 bg-white/5 rounded-xl hover:bg-white/10 transition-colors border border-white/10 no-underline">
+                        <div class="text-blue-400 font-medium mb-1">GroceryStore Schema Generator</div>
+                        <div class="text-slate-400 text-sm">JSON-LD für Supermärkte kostenlos erstellen</div>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/10 bg-slate-950 py-12">
+        <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-3 gap-8">
+            <div>
+                <div class="flex items-center gap-2 mb-4">
+                    <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                    <span class="font-bold text-lg">Shift07</span>
+                </div>
+                <p class="text-slate-400 text-sm">Kostenlose SEO-Analyse für deine Website. Finde heraus, was dein Google-Ranking zurückhält.</p>
+            </div>
+            <div>
+                <h4 class="font-semibold mb-4">Links</h4>
+                <ul class="space-y-2 text-slate-400 text-sm">
+                    <li><a href="/" class="hover:text-white transition-colors">SEO-Analyse starten</a></li>
+                    <li><a href="/blog/" class="hover:text-white transition-colors">Blog</a></li>
+                    <li><a href="/tools/" class="hover:text-white transition-colors">SEO-Tools</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-semibold mb-4">Rechtliches</h4>
+                <ul class="space-y-2 text-slate-400 text-sm">
+                    <li><a href="/impressum.html" class="hover:text-white transition-colors">Impressum</a></li>
+                    <li><a href="/datenschutz.html" class="hover:text-white transition-colors">Datenschutz</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="max-w-6xl mx-auto px-4 mt-8 pt-8 border-t border-white/10 text-center text-slate-500 text-sm">
+            © 2026 Thümmler AI GmbH · Potsdam · <a href="mailto:team@shift07.ai" class="hover:text-white transition-colors">team@shift07.ai</a>
+        </div>
+    </footer>
+
+</body>
+</html>
