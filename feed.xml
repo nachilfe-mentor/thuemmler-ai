@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Sat, 02 May 2026 02:30:17 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 02 May 2026 02:34:10 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>FoodEvent, DanceEvent, SaleEvent &amp;amp; ScreeningEvent Schema Markup – Alle Untertypen vertieft</title>
+      <link>https://shift07.ai/blog/foodevent-danceevent-saleevent-screeningevent-schema.html</link>
+      <guid>https://shift07.ai/blog/foodevent-danceevent-saleevent-screeningevent-schema.html</guid>
+      <pubDate>Sat, 02 May 2026 02:33:31 +0000</pubDate>
+      <description>FoodEvent, DanceEvent, SaleEvent und ScreeningEvent: Lerne alle spezialisierten Event-Untertypen aus Schema.org kennen. Vollständige JSON-LD Beispiele, Best Practices und häufige Fehler 2026.</description>
+      <category>SEO</category>
+    </item>
     <item>
       <title>CivicStructure Schema Markup vertieft: Museum, Library, Stadium und alle Untertypen für Google</title>
       <link>https://shift07.ai/blog/civicstructure-schema-markup-untertypen-vertieft.html</link>
@@ -158,14 +166,6 @@
       <pubDate>Wed, 29 Apr 2026 02:56:05 +0000</pubDate>
       <description>Mit HomeGoodsStore und FurnitureStore Schema Markup machst du dein Möbelgeschäft oder Einrichtungshaus bei Google sichtbarer. Vollständige JSON-LD Anleitung mit Beispielen für 2026.</description>
       <category>Schema Markup</category>
-    </item>
-    <item>
-      <title>ClothingStore Schema Markup: JSON-LD für Modeboutiquen und Bekleidungsgeschäfte</title>
-      <link>https://shift07.ai/blog/clothingstore-schema-markup.html</link>
-      <guid>https://shift07.ai/blog/clothingstore-schema-markup.html</guid>
-      <pubDate>Wed, 29 Apr 2026 01:06:16 +0000</pubDate>
-      <description>ClothingStore Schema Markup richtig implementieren: JSON-LD für Modeboutiquen, Bekleidungsgeschäfte und Accessoire-Shops. Mit Code-Beispielen, Checkliste und Tipps für Rich Snippets.</description>
-      <category>SEO</category>
     </item>
   </channel>
 </rss>
