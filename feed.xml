@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Sat, 02 May 2026 02:34:10 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 02 May 2026 04:09:34 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>SoftwareApplication Schema Markup vertieft: WebApplication, MobileApplication, Game &amp;amp; VideoGame</title>
+      <link>https://shift07.ai/blog/softwareapplication-schema-markup-vertieft.html</link>
+      <guid>https://shift07.ai/blog/softwareapplication-schema-markup-vertieft.html</guid>
+      <pubDate>Sat, 02 May 2026 04:09:07 +0000</pubDate>
+      <description>SoftwareApplication Schema Markup vollständig erklärt: WebApplication, MobileApplication, Game und VideoGame richtig implementieren und Google Rich Results gewinnen.</description>
+      <category>Schema Markup</category>
+    </item>
     <item>
       <title>FoodEvent, DanceEvent, SaleEvent &amp;amp; ScreeningEvent Schema Markup – Alle Untertypen vertieft</title>
       <link>https://shift07.ai/blog/foodevent-danceevent-saleevent-screeningevent-schema.html</link>
@@ -157,14 +165,6 @@
       <guid>https://shift07.ai/blog/hardwarestore-schema-markup.html</guid>
       <pubDate>Wed, 29 Apr 2026 04:55:01 +0000</pubDate>
       <description>HardwareStore Schema Markup richtig implementieren: Vollständige Anleitung mit JSON-LD für Baumärkte, Werkzeughandel und Heimwerkerbedarf — inkl. Produktdaten und Öffnungszeiten.</description>
-      <category>Schema Markup</category>
-    </item>
-    <item>
-      <title>HomeGoodsStore &amp; FurnitureStore Schema Markup: JSON-LD für Einrichtungshäuser</title>
-      <link>https://shift07.ai/blog/homegoodsstore-furniturestore-schema-markup.html</link>
-      <guid>https://shift07.ai/blog/homegoodsstore-furniturestore-schema-markup.html</guid>
-      <pubDate>Wed, 29 Apr 2026 02:56:05 +0000</pubDate>
-      <description>Mit HomeGoodsStore und FurnitureStore Schema Markup machst du dein Möbelgeschäft oder Einrichtungshaus bei Google sichtbarer. Vollständige JSON-LD Anleitung mit Beispielen für 2026.</description>
       <category>Schema Markup</category>
     </item>
   </channel>
