@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CivicStructure Schema Markup vertieft: Museum, Library, Stadium und alle Untertypen für Google | Shift07 Blog</title>
+    <meta name="description" content="CivicStructure Untertypen vollständig erklärt: Museum, Library, Stadium, Airport, PlaceOfWorship, Aquarium, Zoo und mehr. JSON-LD Beispiele für öffentliche Einrichtungen.">
+    <meta name="author" content="Thümmler AI GmbH">
+    <link rel="icon" type="image/png" href="/logo.png">
+    <link rel="canonical" href="https://shift07.ai/blog/civicstructure-schema-markup-untertypen-vertieft.html">
+    <link rel="alternate" type="application/rss+xml" title="Shift07 Blog" href="https://shift07.ai/feed.xml">
+    <!-- Open Graph -->
+    <meta property="og:title" content="CivicStructure Schema Markup vertieft: Museum, Library, Stadium für Google | Shift07 Blog">
+    <meta property="og:description" content="CivicStructure Untertypen vollständig erklärt: Museum, Library, Stadium, Airport, PlaceOfWorship, Aquarium, Zoo und mehr. JSON-LD für öffentliche Einrichtungen.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://shift07.ai/blog/civicstructure-schema-markup-untertypen-vertieft.html">
+    <meta property="og:image" content="https://shift07.ai/blog/images/civicstructure-schema-markup-untertypen-vertieft.png">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="Shift07">
+    <meta property="article:published_time" content="2026-05-02T09:30:00+02:00">
+    <meta property="article:section" content="Schema Markup">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="CivicStructure Schema Markup vertieft: Museum, Library, Stadium für Google">
+    <meta name="twitter:description" content="Alle CivicStructure-Untertypen mit JSON-LD Beispielen: Museum, Library, Stadium, Airport, PlaceOfWorship und mehr.">
+    <meta name="twitter:image" content="https://shift07.ai/blog/images/civicstructure-schema-markup-untertypen-vertieft.png">
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "CivicStructure Schema Markup vertieft: Museum, Library, Stadium und alle Untertypen für Google",
+      "description": "CivicStructure Untertypen vollständig erklärt: Museum, Library, Stadium, Airport, PlaceOfWorship, Aquarium, Zoo. JSON-LD für öffentliche Einrichtungen.",
+      "image": "https://shift07.ai/blog/images/civicstructure-schema-markup-untertypen-vertieft.png",
+      "datePublished": "2026-05-02T09:30:00+02:00",
+      "dateModified": "2026-05-02T09:30:00+02:00",
+      "author": {
+        "@type": "Organization",
+        "name": "Shift07",
+        "url": "https://shift07.ai"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Shift07",
+        "url": "https://shift07.ai",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://shift07.ai/assets/logo.png"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://shift07.ai/blog/civicstructure-schema-markup-untertypen-vertieft.html"
+      }
+    }
+    </script>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K1S1RXBDS8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K1S1RXBDS8');
+    </script>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8475857002943858" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { 'inter': ['Inter', 'system-ui', '-apple-system', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-inter bg-gray-50 text-gray-900">
+
+    <!-- Navigation -->
+    <nav class="bg-white border-b border-gray-200 sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="/" class="flex items-center space-x-2">
+                    <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                    <span class="text-xl font-bold text-gray-900">Shift07</span>
+                </a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="/" class="text-gray-600 hover:text-gray-900 font-medium">Home</a>
+                    <a href="/blog/" class="text-gray-600 hover:text-gray-900 font-medium">Blog</a>
+                    <a href="/tools/" class="text-gray-600 hover:text-gray-900 font-medium">Tools</a>
+                    <a href="/#pricing" class="bg-blue-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-blue-700 transition-colors">Kostenlos analysieren</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <div class="bg-gradient-to-br from-teal-50 to-cyan-100 py-12">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center space-x-2 text-sm text-teal-600 font-medium mb-4">
+                <a href="/blog/" class="hover:underline">Blog</a>
+                <span>›</span>
+                <span>Schema Markup</span>
+            </div>
+            <h1 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4 leading-tight">
+                CivicStructure Schema Markup vertieft: Museum, Library, Stadium und alle Untertypen für Google
+            </h1>
+            <p class="text-xl text-gray-600 mb-6">
+                Die vollständige Übersicht aller <code>CivicStructure</code>-Untertypen in Schema.org — von Aquarium bis Zoo. Mit JSON-LD-Beispielen, den wichtigsten Properties und häufigen Fehlern für öffentliche Einrichtungen.
+            </p>
+            <div class="flex items-center space-x-4 text-sm text-gray-500">
+                <span>2. Mai 2026</span>
+                <span>•</span>
+                <span>15 min Lesezeit</span>
+                <span>•</span>
+                <span>Shift07 Redaktion</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-12">
+
+            <!-- Article -->
+            <article class="lg:col-span-3 prose prose-lg max-w-none">
+
+                <img src="/blog/images/civicstructure-schema-markup-untertypen-vertieft.png"
+                     alt="CivicStructure Schema Markup vertieft — Museum, Library, Stadium für Google"
+                     class="w-full rounded-xl shadow-md mb-8">
+
+                <!-- Inhaltsverzeichnis -->
+                <div class="bg-teal-50 border border-teal-200 rounded-xl p-6 mb-8">
+                    <h2 class="text-lg font-bold text-teal-900 mb-3 mt-0">Inhaltsverzeichnis</h2>
+                    <ol class="list-decimal list-inside space-y-1 text-teal-800 text-sm">
+                        <li><a href="#civicstructure-hierarchie" class="hover:underline">CivicStructure in der Schema.org-Hierarchie</a></li>
+                        <li><a href="#alle-untertypen" class="hover:underline">Alle CivicStructure-Untertypen im Überblick</a></li>
+                        <li><a href="#museum-library" class="hover:underline">Museum und Library: Kultureinrichtungen</a></li>
+                        <li><a href="#stadium-arena" class="hover:underline">Stadium und CivicStructure für Sport</a></li>
+                        <li><a href="#placeofworship" class="hover:underline">PlaceOfWorship: Kirchen, Moscheen, Synagogen</a></li>
+                        <li><a href="#aquarium-zoo" class="hover:underline">Aquarium, Zoo und TouristAttraction</a></li>
+                        <li><a href="#airport-bus" class="hover:underline">Airport und öffentlicher Nahverkehr</a></li>
+                        <li><a href="#json-ld-beispiele" class="hover:underline">Vollständige JSON-LD-Beispiele</a></li>
+                        <li><a href="#seo-tipps" class="hover:underline">SEO-Tipps für öffentliche Einrichtungen</a></li>
+                    </ol>
+                </div>
+
+                <h2 id="civicstructure-hierarchie">1. CivicStructure in der Schema.org-Hierarchie</h2>
+                <p>
+                    <code>CivicStructure</code> ist ein Untertyp von <code>Place</code> in Schema.org und beschreibt Orte, die dem öffentlichen Interesse dienen — Kultur, Bildung, Sport, Verkehr und Religion. Die vollständige Vererbungskette lautet:
+                </p>
+
+                <pre class="bg-gray-100 rounded-lg p-4 text-sm text-gray-800 my-4">Thing → Place → CivicStructure → [Untertypen]</pre>
+
+                <p>
+                    Als Untertyp von <code>Place</code> erbt <code>CivicStructure</code> alle geografischen Properties wie <code>geo</code>, <code>address</code>, <code>hasMap</code>, <code>containedInPlace</code> und <code>openingHoursSpecification</code>. Das macht es besonders wertvoll für lokale Suchen.
+                </p>
+                <p>
+                    Im Unterschied zu <code>LocalBusiness</code> stehen bei <code>CivicStructure</code> nicht kommerzielle Aspekte im Vordergrund — weshalb Properties wie <code>priceRange</code> zwar technisch nutzbar, aber semantisch weniger passend sind. Für öffentliche Einrichtungen mit Eintrittsgebühren empfiehlt sich stattdessen <code>Offer</code> oder ein direkter Eintrag im <code>description</code>-Feld.
+                </p>
+                <p>
+                    In unserem Überblicksartikel zu <a href="/blog/healthclub-civicstructure-schema-markup.html" class="text-teal-600 hover:underline">HealthClub & CivicStructure Schema Markup</a> haben wir den Einstieg beschrieben. Dieser Artikel vertieft die spezifischen Untertypen.
+                </p>
+
+                <h2 id="alle-untertypen">2. Alle CivicStructure-Untertypen im Überblick</h2>
+                <p>Schema.org definiert eine umfangreiche Taxonomie unter <code>CivicStructure</code>. Hier die vollständige Übersicht:</p>
+
+                <div class="overflow-x-auto my-6">
+                    <table class="w-full text-sm border-collapse border border-gray-300 rounded-lg">
+                        <thead>
+                            <tr class="bg-gray-100">
+                                <th class="border border-gray-300 px-4 py-2 text-left">Typ</th>
+                                <th class="border border-gray-300 px-4 py-2 text-left">Beschreibung</th>
+                                <th class="border border-gray-300 px-4 py-2 text-left">Beispiele</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="bg-white"><td class="border border-gray-300 px-4 py-2 font-mono text-teal-700">Museum</td><td class="border border-gray-300 px-4 py-2">Kultur- und Kunstmuseen</td><td class="border border-gray-300 px-4 py-2">Stadtmuseum, Kunsthalle, Naturkundemuseum</td></tr>
+                            <tr class="bg-gray-50"><td class="border border-gray-300 px-4 py-2 font-mono text-teal-700">Library</td><td class="border border-gray-300 px-4 py-2">Bibliotheken, Büchereien</td><td class="border border-gray-300 px-4 py-2">Stadtbibliothek, Hochschulbibliothek</td></tr>
+                            <tr class="bg-white"><td class="border border-gray-300 px-4 py-2 font-mono text-teal-700">StadiumOrArena</td><td class="border border-gray-300 px-4 py-2">Stadien, Arenen, Spielstätten</td><td class="border border-gray-300 px-4 py-2">Fußballstadion, Konzerthalle, Eishalle</td></tr>
+                            <tr class="bg-gray-50"><td class="border border-gray-300 px-4 py-2 font-mono text-teal-700">PlaceOfWorship</td><td class="border border-gray-300 px-4 py-2">Gotteshäuser</td><td class="border border-gray-300 px-4 py-2">Kirche, Moschee, Synagoge, Tempel</td></tr>
+                            <tr class="bg-white"><td class="border border-gray-300 px-4 py-2 font-mono text-teal-700">Aquarium</td><td class="border border-gray-300 px-4 py-2">Aquarien, Meeresaquarien</td><td class="border border-gray-300 px-4 py-2">Sea Life, Stadtaquarium</td></tr>
+                            <tr class="bg-gray-50"><td class="border border-gray-300 px-4 py-2 font-mono text-teal-700">Zoo</td><td class="border border-gray-300 px-4 py-2">Zoos, Tierparks, Safariparks</td><td class="border border-gray-300 px-4 py-2">Zoologischer Garten, Wildpark</td></tr>
+                            <tr class="bg-white"><td class="border border-gray-300 px-4 py-2 font-mono text-teal-700">Airport</td><td class="border border-gray-300 px-4 py-2">Flughäfen, Flugplätze</td><td class="border border-gray-300 px-4 py-2">Internationaler Flughafen, Regionalflughafen</td></tr>
+                            <tr class="bg-gray-50"><td class="border border-gray-300 px-4 py-2 font-mono text-teal-700">BusStation</td><td class="border border-gray-300 px-4 py-2">Busbahnhöfe, Busumsteigepunkte</td><td class="border border-gray-300 px-4 py-2">ZOB, Fernbusbahnhof</td></tr>
+                            <tr class="bg-white"><td class="border border-gray-300 px-4 py-2 font-mono text-teal-700">BusStop</td><td class="border border-gray-300 px-4 py-2">Bushaltestellen</td><td class="border border-gray-300 px-4 py-2">Einzelne ÖPNV-Haltestellen</td></tr>
+                            <tr class="bg-gray-50"><td class="border border-gray-300 px-4 py-2 font-mono text-teal-700">TrainStation</td><td class="border border-gray-300 px-4 py-2">Bahnhöfe</td><td class="border border-gray-300 px-4 py-2">Hauptbahnhof, S-Bahn-Station</td></tr>
+                            <tr class="bg-white"><td class="border border-gray-300 px-4 py-2 font-mono text-teal-700">SubwayStation</td><td class="border border-gray-300 px-4 py-2">U-Bahn-Stationen</td><td class="border border-gray-300 px-4 py-2">U-Bahn-Haltestellen</td></tr>
+                            <tr class="bg-gray-50"><td class="border border-gray-300 px-4 py-2 font-mono text-teal-700">TaxiStand</td><td class="border border-gray-300 px-4 py-2">Taxistände</td><td class="border border-gray-300 px-4 py-2">Taxistand am Bahnhof</td></tr>
+                            <tr class="bg-white"><td class="border border-gray-300 px-4 py-2 font-mono text-teal-700">ParkingFacility</td><td class="border border-gray-300 px-4 py-2">Parkhäuser, Parkplätze</td><td class="border border-gray-300 px-4 py-2">P+R-Anlage, Tiefgarage</td></tr>
+                            <tr class="bg-gray-50"><td class="border border-gray-300 px-4 py-2 font-mono text-teal-700">GovernmentBuilding</td><td class="border border-gray-300 px-4 py-2">Regierungsgebäude, Behörden</td><td class="border border-gray-300 px-4 py-2">Rathaus, Finanzamt, Amtsgericht</td></tr>
+                            <tr class="bg-white"><td class="border border-gray-300 px-4 py-2 font-mono text-teal-700">Courthouse</td><td class="border border-gray-300 px-4 py-2">Gerichtsgebäude</td><td class="border border-gray-300 px-4 py-2">Amtsgericht, Landgericht, OLG</td></tr>
+                            <tr class="bg-gray-50"><td class="border border-gray-300 px-4 py-2 font-mono text-teal-700">DefenceEstablishment</td><td class="border border-gray-300 px-4 py-2">Militärische Einrichtungen</td><td class="border border-gray-300 px-4 py-2">Kaserne, Militärstützpunkt</td></tr>
+                            <tr class="bg-white"><td class="border border-gray-300 px-4 py-2 font-mono text-teal-700">Embassy</td><td class="border border-gray-300 px-4 py-2">Botschaften, Konsulate</td><td class="border border-gray-300 px-4 py-2">Deutsche Botschaft, Konsulat</td></tr>
+                            <tr class="bg-gray-50"><td class="border border-gray-300 px-4 py-2 font-mono text-teal-700">CrematoriumOrCemetery</td><td class="border border-gray-300 px-4 py-2">Friedhöfe, Krematorien</td><td class="border border-gray-300 px-4 py-2">Städtischer Friedhof, Krematorium</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h2 id="museum-library">3. Museum und Library: Kultureinrichtungen</h2>
+
+                <h3>Museum: Mehr als nur ein Ort</h3>
+                <p>
+                    Museen profitieren besonders von strukturierten Daten, weil Besucher oft nach Öffnungszeiten, Eintrittspreisen und aktuellen Ausstellungen suchen. Der Typ <code>Museum</code> hat keine eigenen Untertypen, kann aber mit <code>Event</code>-Schema für Sonderausstellungen kombiniert werden.
+                </p>
+                <p>
+                    Besondere Properties für Museen:
+                </p>
+                <ul>
+                    <li><code>event</code>: Verlinkt auf aktuelle Ausstellungen (als <code>ExhibitionEvent</code>)</li>
+                    <li><code>amenityFeature</code>: Ausstattungsmerkmale (Rollstuhlzugang, Café, Shop, Audioguide)</li>
+                    <li><code>publicAccess</code>: true/false — ist das Gebäude öffentlich zugänglich?</li>
+                    <li><code>touristType</code>: Welche Besuchergruppen werden angesprochen?</li>
+                    <li><code>isAccessibleForFree</code>: true wenn Eintritt frei</li>
+                </ul>
+
+                <div class="bg-teal-50 border-l-4 border-teal-400 p-4 my-6 rounded-r-lg">
+                    <p class="font-semibold text-teal-900 mb-1">Tipp: ExhibitionEvent für Ausstellungen</p>
+                    <p class="text-teal-800 text-sm">
+                        Temporäre Ausstellungen können mit <code>ExhibitionEvent</code> (einem Untertyp von <code>Event</code>) verknüpft werden. Das erlaubt Google, Ausstellungsdaten direkt in den Suchergebnissen anzuzeigen — mit Startdatum, Enddatum und Ticket-Link.
+                    </p>
+                </div>
+
+                <h3>Library: Öffentliche Bibliotheken richtig auszeichnen</h3>
+                <p>
+                    Bibliotheken haben oft komplexe Öffnungszeiten (verschiedene Bereiche, Ferienzeiten) und spezifische Services (Ausleihe, Internet-Arbeitsplätze, Kinderbibliothek). Für Bibliotheken besonders relevant:
+                </p>
+                <ul>
+                    <li><code>hasMap</code>: Direktlink zu Google Maps oder Lageplan</li>
+                    <li><code>amenityFeature</code>: Leseplätzchen, Internet-PCs, Kopiergeräte, Kinderbibliothek</li>
+                    <li><code>isAccessibleForFree</code>: true (in Deutschland meist Gebührenpflichtig für Ausleihe, aber Betreten ist frei)</li>
+                    <li><code>knowsAbout</code>: Thematische Schwerpunkte der Bibliothek</li>
+                </ul>
+
+                <h2 id="stadium-arena">4. StadiumOrArena: Sportstätten und Multifunktionshallen</h2>
+                <p>
+                    <code>StadiumOrArena</code> ist der Schema.org-Typ für alle großen Sportanlagen und Veranstaltungshallen. Er gilt für Fußballstadien genauso wie für Eishallen, Konzertarenen und Basketballhallen.
+                </p>
+
+                <h3>Wichtige Unterscheidung: SportsActivityLocation vs. StadiumOrArena</h3>
+                <p>
+                    Das führt häufig zu Verwirrung:
+                </p>
+                <ul>
+                    <li><code>StadiumOrArena</code> (unter <code>CivicStructure</code>): Für <em>große</em> Zuschauer-Sportstätten — Stadien, Arenen, Sporthallen für Profisport und Konzerte</li>
+                    <li><code>SportsActivityLocation</code> (unter <code>LocalBusiness</code>): Für Orte, an denen Menschen <em>selbst</em> Sport treiben — Fitnessstudio, Schwimmbad, Tennisclub, Golfplatz</li>
+                </ul>
+                <p>
+                    Ein kommunales Schwimmbad ist also <code>SportsActivityLocation</code>, während die Allianz Arena in München <code>StadiumOrArena</code> ist. Unser Artikel zu <a href="/blog/sportsactivitylocation-schema-markup-vertieft.html" class="text-teal-600 hover:underline">SportsActivityLocation Schema Markup vertieft</a> erklärt die aktiven Sportorte.
+                </p>
+
+                <h3>StadiumOrArena mit Events verknüpfen</h3>
+                <p>
+                    Der größte SEO-Mehrwert für Stadien entsteht durch die Verknüpfung mit <code>Event</code>-Schema. Wenn Besucher nach einem Konzert oder Spiel suchen, kann Google das Datum, die Veranstaltung und den Ort direkt anzeigen:
+                </p>
+                <pre class="bg-gray-900 text-green-400 p-4 rounded-lg overflow-x-auto text-sm my-6"><code>"event": [
+  {
+    "@type": "SportsEvent",
+    "name": "FC Musterstadt vs. TSV Beispiel",
+    "startDate": "2026-05-15T19:30:00+02:00",
+    "location": {
+      "@type": "StadiumOrArena",
+      "@id": "https://www.beispiel-stadion.de/#stadion"
+    }
+  }
+]</code></pre>
+
+                <h2 id="placeofworship">5. PlaceOfWorship: Kirchen, Moscheen, Synagogen</h2>
+                <p>
+                    <code>PlaceOfWorship</code> hat mehrere Untertypen für verschiedene Religionen:
+                </p>
+
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-3 my-6">
+                    <div class="bg-gray-50 rounded-lg p-3 text-center">
+                        <p class="font-mono text-teal-700 text-sm font-bold">BuddhistTemple</p>
+                        <p class="text-gray-600 text-xs mt-1">Buddhistische Tempel</p>
+                    </div>
+                    <div class="bg-gray-50 rounded-lg p-3 text-center">
+                        <p class="font-mono text-teal-700 text-sm font-bold">CatholicChurch</p>
+                        <p class="text-gray-600 text-xs mt-1">Katholische Kirchen</p>
+                    </div>
+                    <div class="bg-gray-50 rounded-lg p-3 text-center">
+                        <p class="font-mono text-teal-700 text-sm font-bold">Church</p>
+                        <p class="text-gray-600 text-xs mt-1">Kirchen allgemein</p>
+                    </div>
+                    <div class="bg-gray-50 rounded-lg p-3 text-center">
+                        <p class="font-mono text-teal-700 text-sm font-bold">HinduTemple</p>
+                        <p class="text-gray-600 text-xs mt-1">Hinduistische Tempel</p>
+                    </div>
+                    <div class="bg-gray-50 rounded-lg p-3 text-center">
+                        <p class="font-mono text-teal-700 text-sm font-bold">Mosque</p>
+                        <p class="text-gray-600 text-xs mt-1">Moscheen</p>
+                    </div>
+                    <div class="bg-gray-50 rounded-lg p-3 text-center">
+                        <p class="font-mono text-teal-700 text-sm font-bold">Synagogue</p>
+                        <p class="text-gray-600 text-xs mt-1">Synagogen</p>
+                    </div>
+                </div>
+
+                <p>
+                    Für Gotteshäuser sind folgende Properties besonders relevant:
+                </p>
+                <ul>
+                    <li><code>openingHoursSpecification</code>: Gottesdienstzeiten (als Öffnungszeiten oder als <code>event</code>)</li>
+                    <li><code>publicAccess</code>: true — Gotteshäuser sind meist öffentlich zugänglich</li>
+                    <li><code>amenityFeature</code>: Rollstuhlzugang, Parkplätze, Toiletten</li>
+                    <li><code>slogan</code>: Konfession oder kurzer Beschreibungstext</li>
+                    <li><code>hasMap</code>: Standort für Touristen und Besucher</li>
+                </ul>
+
+                <h2 id="aquarium-zoo">6. Aquarium, Zoo und TouristAttraction</h2>
+
+                <h3>Aquarium und Zoo: Attraktionen mit Besucherführung</h3>
+                <p>
+                    <code>Aquarium</code> und <code>Zoo</code> sind direkte Untertypen von <code>CivicStructure</code> und können gleichzeitig als <code>TouristAttraction</code> ausgezeichnet werden — da sie beides sind.
+                </p>
+                <p>
+                    Für diese Einrichtungen empfehlen sich zusätzlich:
+                </p>
+                <ul>
+                    <li><code>TouristAttraction</code> als zweiter Typ: <code>"@type": ["Zoo", "TouristAttraction"]</code></li>
+                    <li><code>tourBookingPage</code>: URL für Ticket-Buchungen</li>
+                    <li><code>isAccessibleForFree</code>: false (mit Eintrittspreis-Info im <code>Offer</code>)</li>
+                    <li><code>amenityFeature</code>: Kinderwagentauglichkeit, Gastronomie, Spielplatz, Shop</li>
+                </ul>
+
+                <h3>Tipp: TouristAttraction als Ergänzungstyp</h3>
+                <p>
+                    <code>TouristAttraction</code> ist kein direkter Untertyp von <code>CivicStructure</code>, kann aber in Kombination verwendet werden. Er signalisiert Google, dass der Ort für Touristen von Interesse ist und erhöht die Chance, in touristischen Suchergebnissen zu erscheinen.
+                </p>
+
+                <h2 id="airport-bus">7. Verkehrsinfrastruktur: Airport, TrainStation, BusStation</h2>
+                <p>
+                    Für Verkehrsknoten sind strukturierte Daten besonders wertvoll, da Reisende häufig nach Öffnungszeiten, Standort und Services suchen:
+                </p>
+
+                <h3>Airport</h3>
+                <ul>
+                    <li><code>iataCode</code>: IATA-Flughafencode (z.B. "MUC" für München)</li>
+                    <li><code>icaoCode</code>: ICAO-Code</li>
+                    <li><code>openingHoursSpecification</code>: Terminalöffnungszeiten</li>
+                </ul>
+
+                <h3>TrainStation und BusStation</h3>
+                <ul>
+                    <li><code>containedInPlace</code>: In welcher Stadt oder welchem Bahnhof liegt die Station?</li>
+                    <li><code>containsPlace</code>: Welche Einrichtungen befinden sich im Bahnhof (Geschäfte, Gastronomie)?</li>
+                    <li><code>amenityFeature</code>: Aufzüge, Barrierefreiheit, Schließfächer, Wartebereiche</li>
+                </ul>
+
+                <h2 id="json-ld-beispiele">8. Vollständige JSON-LD-Beispiele</h2>
+
+                <h3>Beispiel: Stadtmuseum</h3>
+                <pre class="bg-gray-900 text-green-400 p-4 rounded-lg overflow-x-auto text-sm my-6"><code>{
+  "@context": "https://schema.org",
+  "@type": "Museum",
+  "name": "Stadtmuseum Musterstadt",
+  "url": "https://www.stadtmuseum-musterstadt.de",
+  "image": "https://www.stadtmuseum-musterstadt.de/images/museum.jpg",
+  "description": "Das Stadtmuseum Musterstadt präsentiert die Geschichte der Region von der Antike bis heute.",
+  "telephone": "+49 221 123456",
+  "isAccessibleForFree": false,
+  "publicAccess": true,
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Marktplatz 1",
+    "addressLocality": "Musterstadt",
+    "postalCode": "12345",
+    "addressCountry": "DE"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 51.5074,
+    "longitude": 7.4654
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday"],
+      "opens": "10:00",
+      "closes": "18:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Saturday","Sunday"],
+      "opens": "10:00",
+      "closes": "20:00"
+    }
+  ],
+  "amenityFeature": [
+    {"@type": "LocationFeatureSpecification", "name": "Rollstuhlzugang", "value": true},
+    {"@type": "LocationFeatureSpecification", "name": "Museumscafé", "value": true},
+    {"@type": "LocationFeatureSpecification", "name": "Museumsshop", "value": true}
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.5",
+    "reviewCount": "892",
+    "bestRating": "5"
+  },
+  "sameAs": [
+    "https://www.tripadvisor.de/Attraction_Review-...",
+    "https://www.facebook.com/stadtmuseum-musterstadt"
+  ]
+}</code></pre>
+
+                <h3>Beispiel: Öffentliche Bibliothek</h3>
+                <pre class="bg-gray-900 text-green-400 p-4 rounded-lg overflow-x-auto text-sm my-6"><code>{
+  "@context": "https://schema.org",
+  "@type": "Library",
+  "name": "Stadtbibliothek Musterstadt — Zentralbibliothek",
+  "url": "https://www.stadtbibliothek-musterstadt.de",
+  "description": "Über 200.000 Medien, 50 Internet-Arbeitsplätze und Kinderbibliothek.",
+  "telephone": "+49 221 654321",
+  "isAccessibleForFree": true,
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Bibliotheksweg 5",
+    "addressLocality": "Musterstadt",
+    "postalCode": "12345",
+    "addressCountry": "DE"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+      "opens": "09:00",
+      "closes": "20:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "10:00",
+      "closes": "16:00"
+    }
+  ],
+  "amenityFeature": [
+    {"@type": "LocationFeatureSpecification", "name": "Internet-Arbeitsplätze", "value": true},
+    {"@type": "LocationFeatureSpecification", "name": "Kinderbibliothek", "value": true},
+    {"@type": "LocationFeatureSpecification", "name": "Barrierefreiheit", "value": true}
+  ]
+}</code></pre>
+
+                <h3>Beispiel: Kirche als CatholicChurch</h3>
+                <pre class="bg-gray-900 text-green-400 p-4 rounded-lg overflow-x-auto text-sm my-6"><code>{
+  "@context": "https://schema.org",
+  "@type": "CatholicChurch",
+  "name": "St. Maria Himmelfahrt",
+  "url": "https://www.st-maria-musterstadt.de",
+  "description": "Katholische Pfarrkirche im Herzen von Musterstadt. Gottesdienste täglich.",
+  "telephone": "+49 221 112233",
+  "isAccessibleForFree": true,
+  "publicAccess": true,
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Kirchplatz 3",
+    "addressLocality": "Musterstadt",
+    "postalCode": "12345",
+    "addressCountry": "DE"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+      "opens": "07:00",
+      "closes": "20:00"
+    }
+  ]
+}</code></pre>
+
+                <h2 id="seo-tipps">9. SEO-Tipps für öffentliche Einrichtungen</h2>
+
+                <h3>1. Google Knowledge Panel aktiv gestalten</h3>
+                <p>
+                    Öffentliche Einrichtungen erscheinen häufig in Google Knowledge Panels. Strukturierte Daten helfen Google, das Panel mit korrekten Informationen zu befüllen. Besonders wichtig: <code>sameAs</code> mit Links zu Wikipedia, Wikidata und offiziellen Verzeichnissen.
+                </p>
+
+                <h3>2. Eintrittspreise strukturiert angeben</h3>
+                <p>
+                    Für Museen, Zoos und ähnliche Einrichtungen mit Eintrittsgeld empfiehlt sich die Angabe über <code>makesOffer</code>:
+                </p>
+                <pre class="bg-gray-900 text-green-400 p-4 rounded-lg overflow-x-auto text-sm my-6"><code>"makesOffer": [
+  {
+    "@type": "Offer",
+    "name": "Erwachsene",
+    "price": "12.00",
+    "priceCurrency": "EUR"
+  },
+  {
+    "@type": "Offer",
+    "name": "Kinder (6–16 Jahre)",
+    "price": "6.00",
+    "priceCurrency": "EUR"
+  },
+  {
+    "@type": "Offer",
+    "name": "Familienkarte",
+    "price": "28.00",
+    "priceCurrency": "EUR"
+  }
+]</code></pre>
+
+                <h3>3. Barrierefreiheit als SEO-Signal</h3>
+                <p>
+                    Google bewertet Barrierefreiheitsinformationen zunehmend positiv. Nutze <code>amenityFeature</code> mit <code>LocationFeatureSpecification</code> um Rollstuhlzugang, Hörschleifen, Blindenleitsysteme und ähnliches zu kommunizieren.
+                </p>
+
+                <h3>4. Saisonale Öffnungszeiten</h3>
+                <p>
+                    Viele öffentliche Einrichtungen haben saisonale Öffnungszeiten (Sommer vs. Winter). Nutze <code>validFrom</code> und <code>validThrough</code> in <code>OpeningHoursSpecification</code>:
+                </p>
+                <pre class="bg-gray-900 text-green-400 p-4 rounded-lg overflow-x-auto text-sm my-6"><code>{
+  "@type": "OpeningHoursSpecification",
+  "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+  "opens": "09:00",
+  "closes": "20:00",
+  "validFrom": "2026-04-01",
+  "validThrough": "2026-10-31"
+}</code></pre>
+
+                <h3>5. Interne Verlinkung zwischen verwandten Einrichtungen</h3>
+                <p>
+                    Nutze <code>containedInPlace</code> und <code>containsPlace</code> um Beziehungen zwischen Orten zu beschreiben. Ein Stadtmuseum, das Teil eines Kulturbezirks ist, kann auf die übergeordnete Einrichtung verlinken.
+                </p>
+
+                <p>
+                    Für die technische Validierung deines Schema Markups empfehlen wir unseren <a href="/tools/json-ld-structured-data-validator.html" class="text-teal-600 hover:underline">JSON-LD Validator</a>. Grundlegende Informationen zu strukturierten Daten findest du in unserem <a href="/blog/strukturierte-daten-seo-schema-markup.html" class="text-teal-600 hover:underline">Einsteiger-Leitfaden zu strukturierten Daten</a>.
+                </p>
+
+                <!-- Fazit -->
+                <div class="bg-teal-50 border border-teal-200 rounded-xl p-6 my-8">
+                    <h3 class="font-bold text-teal-900 text-lg mb-3 mt-0">Fazit: CivicStructure richtig einsetzen</h3>
+                    <ul class="space-y-2 text-teal-800 text-sm">
+                        <li>🏛️ <strong>Museum / Library</strong>: Kultureinrichtungen — mit Event-Verknüpfung für Ausstellungen und Veranstaltungen</li>
+                        <li>🏟️ <strong>StadiumOrArena</strong>: Große Sportstätten — mit SportsEvent verknüpfen</li>
+                        <li>⛪ <strong>PlaceOfWorship</strong>: Gotteshäuser — spezifischen Untertyp wählen (Church, Mosque, Synagogue)</li>
+                        <li>🐠 <strong>Aquarium / Zoo</strong>: Tiergärten — mit TouristAttraction kombinieren</li>
+                        <li>✈️ <strong>Airport</strong>: iataCode und icaoCode angeben</li>
+                        <li>♿ Barrierefreiheit über <code>amenityFeature</code> kommunizieren</li>
+                        <li>💰 Eintrittspreise über <code>makesOffer</code> strukturieren</li>
+                    </ul>
+                </div>
+
+            </article>
+
+            <!-- Sidebar -->
+            <aside class="lg:col-span-1">
+                <div class="sticky top-24 space-y-6">
+                    <!-- CTA -->
+                    <div class="bg-gradient-to-br from-teal-600 to-cyan-700 rounded-xl p-6 text-white">
+                        <h3 class="font-bold text-lg mb-2">Schema validieren</h3>
+                        <p class="text-teal-100 text-sm mb-4">Prüfe dein JSON-LD kostenlos auf Fehler.</p>
+                        <a href="/tools/json-ld-structured-data-validator.html"
+                           class="block bg-white text-teal-700 font-semibold px-4 py-2 rounded-lg text-center hover:bg-teal-50 transition-colors text-sm">
+                            Jetzt validieren →
+                        </a>
+                    </div>
+                    <!-- Schema Generator -->
+                    <div class="bg-gray-50 border border-gray-200 rounded-xl p-6">
+                        <h3 class="font-bold text-gray-900 mb-2">LocalBusiness Schema</h3>
+                        <p class="text-gray-600 text-sm mb-4">Erstelle JSON-LD für dein Unternehmen oder deine Einrichtung.</p>
+                        <a href="/tools/schema-markup-generator.html"
+                           class="block bg-teal-600 text-white font-semibold px-4 py-2 rounded-lg text-center hover:bg-teal-700 transition-colors text-sm">
+                            Schema Generator →
+                        </a>
+                    </div>
+                    <!-- Related Articles -->
+                    <div class="bg-white border border-gray-200 rounded-xl p-6">
+                        <h3 class="font-bold text-gray-900 mb-3">Verwandte Artikel</h3>
+                        <ul class="space-y-3">
+                            <li><a href="/blog/healthclub-civicstructure-schema-markup.html" class="text-teal-600 hover:underline text-sm">HealthClub & CivicStructure Basis</a></li>
+                            <li><a href="/blog/sportsactivitylocation-schema-markup-vertieft.html" class="text-teal-600 hover:underline text-sm">SportsActivityLocation vertieft</a></li>
+                            <li><a href="/blog/event-schema-markup-vertieft.html" class="text-teal-600 hover:underline text-sm">Event Schema vertieft</a></li>
+                            <li><a href="/blog/localbusiness-schema-markup-anleitung.html" class="text-teal-600 hover:underline text-sm">LocalBusiness Schema Anleitung</a></li>
+                            <li><a href="/blog/strukturierte-daten-seo-schema-markup.html" class="text-teal-600 hover:underline text-sm">Strukturierte Daten für SEO</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-12 mt-16">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div class="col-span-2">
+                    <div class="flex items-center space-x-2 mb-4">
+                        <img src="/logo.png" alt="Shift07" class="h-8 w-8">
+                        <span class="text-white font-bold text-xl">Shift07</span>
+                    </div>
+                    <p class="text-sm leading-relaxed">KI-gestütztes SEO-Analyse-Tool für kleine und mittelständische Unternehmen in Deutschland.</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-3">Tools</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="/tools/schema-markup-generator.html" class="hover:text-white transition-colors">Schema Generator</a></li>
+                        <li><a href="/tools/json-ld-structured-data-validator.html" class="hover:text-white transition-colors">JSON-LD Validator</a></li>
+                        <li><a href="/tools/sitemap-validator.html" class="hover:text-white transition-colors">Sitemap Validator</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-3">Blog</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="/blog/strukturierte-daten-seo-schema-markup.html" class="hover:text-white transition-colors">Schema Markup Grundlagen</a></li>
+                        <li><a href="/blog/lokales-seo-kleine-unternehmen.html" class="hover:text-white transition-colors">Lokales SEO</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm">
+                <p>© 2026 Thümmler AI GmbH · <a href="/impressum.html" class="hover:text-white">Impressum</a> · <a href="/datenschutz.html" class="hover:text-white">Datenschutz</a></p>
+                <p class="mt-2 md:mt-0">Leonardo-da-Vinci-Straße 15, 14467 Potsdam</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
