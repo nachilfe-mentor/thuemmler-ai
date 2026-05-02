@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Sat, 02 May 2026 04:16:09 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 02 May 2026 05:51:53 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>TouristAttraction &amp; LandmarksOrHistoricalBuildings Schema Markup: Sehenswürdigkeiten für Google</title>
+      <link>https://shift07.ai/blog/touristattraction-landmarkshistoricalbuildings-schema-markup.html</link>
+      <guid>https://shift07.ai/blog/touristattraction-landmarkshistoricalbuildings-schema-markup.html</guid>
+      <pubDate>Sat, 02 May 2026 05:51:22 +0000</pubDate>
+      <description>TouristAttraction und LandmarksOrHistoricalBuildings Schema Markup: Vollständige Anleitung mit JSON-LD-Beispielen für Sehenswürdigkeiten, Denkmäler und historische Stätten 2026.</description>
+      <category>Schema Markup</category>
+    </item>
     <item>
       <title>JobPosting Schema Markup: Stellenanzeigen als Rich Snippets in Google</title>
       <link>https://shift07.ai/blog/jobposting-schema-markup-seo.html</link>
@@ -157,14 +165,6 @@
       <guid>https://shift07.ai/blog/pharmacystore-drugstore-schema-markup.html</guid>
       <pubDate>Wed, 29 Apr 2026 06:36:05 +0000</pubDate>
       <description>PharmacyStore und DrugStore Schema Markup korrekt implementieren: Vollständige JSON-LD Anleitung für Apotheken, Drogerien und Gesundheitsgeschäfte — inkl. Notdienst, Botendienst und Produktdaten.</description>
-      <category>Schema Markup</category>
-    </item>
-    <item>
-      <title>ToyStore &amp; GameStore Schema Markup: JSON-LD für Spielzeugläden und Spielegeschäfte</title>
-      <link>https://shift07.ai/blog/toystore-gamestore-schema-markup.html</link>
-      <guid>https://shift07.ai/blog/toystore-gamestore-schema-markup.html</guid>
-      <pubDate>Wed, 29 Apr 2026 05:00:55 +0000</pubDate>
-      <description>ToyStore und GameStore Schema Markup richtig implementieren: Vollständige JSON-LD Anleitung für Spielzeugläden, Brettspielgeschäfte und Videospiel-Stores — inkl. Altersempfehlungen und Produktdaten.</description>
       <category>Schema Markup</category>
     </item>
   </channel>
