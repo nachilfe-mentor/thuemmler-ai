@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Sun, 03 May 2026 01:33:06 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 03 May 2026 03:08:17 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Course Schema Markup vertieft: EducationalCourse, CourseInstance und Zertifikate</title>
+      <link>https://shift07.ai/blog/course-educationalcourse-schema-markup-vertieft.html</link>
+      <guid>https://shift07.ai/blog/course-educationalcourse-schema-markup-vertieft.html</guid>
+      <pubDate>Sun, 03 May 2026 03:07:34 +0000</pubDate>
+      <description>Course Schema Markup vertieft: EducationalCourse, CourseInstance, Zertifikate und hasCourseInstance richtig einsetzen. Vollständige JSON-LD-Beispiele für Google Rich Snippets 2026.</description>
+      <category>Schema Markup</category>
+    </item>
     <item>
       <title>Occupation Schema Markup: Berufsbilder für Google strukturieren</title>
       <link>https://shift07.ai/blog/occupation-schema-markup-seo.html</link>
@@ -157,14 +165,6 @@
       <guid>https://shift07.ai/blog/conveniencestore-grocerystore-schema-markup.html</guid>
       <pubDate>Thu, 30 Apr 2026 02:44:59 +0000</pubDate>
       <description>ConvenienceStore und GroceryStore Schema Markup richtig implementieren – mit vollständigen JSON-LD Beispielen, allen wichtigen Properties und Praxis-Tipps für Supermärkte, Kioske und Lebensmittelhändler.</description>
-      <category>Schema Markup</category>
-    </item>
-    <item>
-      <title>PetStore &amp;amp; AnimalShelter Schema Markup: Tierhandlungen und Tierheime für Google</title>
-      <link>https://shift07.ai/blog/petstore-animalshelter-schema-markup.html</link>
-      <guid>https://shift07.ai/blog/petstore-animalshelter-schema-markup.html</guid>
-      <pubDate>Thu, 30 Apr 2026 00:42:25 +0000</pubDate>
-      <description>Lerne, wie du PetStore und AnimalShelter Schema Markup als JSON-LD implementierst — mit vollständigen Code-Beispielen für Tierhandlungen, Zoogeschäfte und Tierheime.</description>
       <category>Schema Markup</category>
     </item>
   </channel>
