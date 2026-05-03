@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Occupation Schema Markup: Berufsbilder für Google strukturieren | Shift07 Blog</title>
+    <meta name="description" content="Occupation Schema Markup erklärt: JSON-LD für Berufsbilder, OccupationalExperienceRequirements und Qualifikationsanforderungen – mit vollständigen Praxisbeispielen für Karriereportale und Unternehmensseiten.">
+    <meta name="author" content="Thümmler AI GmbH">
+    <link rel="icon" type="image/png" href="/logo.png">
+    <link rel="canonical" href="https://shift07.ai/blog/occupation-schema-markup-seo.html">
+    <link rel="alternate" type="application/rss+xml" title="Shift07 Blog" href="https://shift07.ai/feed.xml">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Occupation Schema Markup: Berufsbilder für Google strukturieren | Shift07 Blog">
+    <meta property="og:description" content="Occupation Schema Markup erklärt: JSON-LD für Berufsbilder, OccupationalExperienceRequirements und Qualifikationsanforderungen – mit Praxisbeispielen für Karriereportale.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://shift07.ai/blog/occupation-schema-markup-seo.html">
+    <meta property="og:image" content="https://shift07.ai/blog/images/occupation-schema-markup-seo.png">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="Shift07">
+    <meta property="article:published_time" content="2026-05-03T10:00:00+02:00">
+    <meta property="article:section" content="Schema Markup">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Occupation Schema Markup: Berufsbilder für Google strukturieren">
+    <meta name="twitter:description" content="JSON-LD für Berufsbilder und OccupationalExperienceRequirements – mit vollständigen Praxisbeispielen.">
+    <meta name="twitter:image" content="https://shift07.ai/blog/images/occupation-schema-markup-seo.png">
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Occupation Schema Markup: Berufsbilder für Google strukturieren",
+      "description": "Occupation Schema Markup erklärt: JSON-LD für Berufsbilder, OccupationalExperienceRequirements und Qualifikationsanforderungen – mit vollständigen Praxisbeispielen.",
+      "image": "https://shift07.ai/blog/images/occupation-schema-markup-seo.png",
+      "datePublished": "2026-05-03T10:00:00+02:00",
+      "dateModified": "2026-05-03T10:00:00+02:00",
+      "author": {
+        "@type": "Organization",
+        "name": "Shift07",
+        "url": "https://shift07.ai"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Shift07",
+        "url": "https://shift07.ai",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://shift07.ai/assets/logo.png"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://shift07.ai/blog/occupation-schema-markup-seo.html"
+      }
+    }
+    </script>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K1S1RXBDS8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K1S1RXBDS8');
+    </script>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8475857002943858" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-inter bg-gray-50 text-gray-900">
+
+<!-- Navigation -->
+<nav class="bg-white border-b border-gray-200 sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+            <a href="/" class="flex items-center space-x-2">
+                <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-auto">
+                <span class="text-xl font-bold text-gray-900">Shift07</span>
+            </a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="/" class="text-gray-600 hover:text-blue-600 font-medium transition-colors">Home</a>
+                <a href="/blog/" class="text-gray-600 hover:text-blue-600 font-medium transition-colors">Blog</a>
+                <a href="/tools/" class="text-gray-600 hover:text-blue-600 font-medium transition-colors">Tools</a>
+                <a href="/#analyse" class="bg-blue-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-blue-700 transition-colors">Kostenlose Analyse</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- Article Header -->
+<header class="bg-white border-b border-gray-100">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="mb-4">
+            <span class="bg-indigo-100 text-indigo-800 text-sm font-medium px-3 py-1 rounded-full">Schema Markup</span>
+        </div>
+        <h1 class="text-3xl sm:text-4xl font-bold text-gray-900 leading-tight mb-4">
+            Occupation Schema Markup: Berufsbilder, OccupationalExperienceRequirements &amp; Qualifikationen für Google
+        </h1>
+        <p class="text-xl text-gray-600 leading-relaxed mb-6">
+            Wie du mit JSON-LD Berufsbilder, Erfahrungsanforderungen und Qualifikationen strukturiert für Google aufbereitest — inklusive aller Properties, vollständiger Praxisbeispiele und Einsatzmöglichkeiten für Karriereportale, Weiterbildungsanbieter und Unternehmensseiten.
+        </p>
+        <div class="flex items-center space-x-4 text-sm text-gray-500">
+            <span>Von <strong class="text-gray-700">Shift07 Redaktion</strong></span>
+            <span>•</span>
+            <time datetime="2026-05-03">3. Mai 2026</time>
+            <span>•</span>
+            <span>13 Min. Lesezeit</span>
+        </div>
+    </div>
+</header>
+
+<!-- Featured Image -->
+<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <img src="images/occupation-schema-markup-seo.png"
+         alt="Occupation Schema Markup für Berufsbilder und OccupationalExperienceRequirements – JSON-LD Implementierung"
+         class="w-full rounded-2xl shadow-lg">
+</div>
+
+<!-- Article Content -->
+<main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+    <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 sm:p-12">
+
+        <!-- Intro -->
+        <p class="text-lg text-gray-700 leading-relaxed mb-6">
+            Karriereportale und Unternehmenssseiten beschreiben nicht nur einzelne Stellen — sie beschreiben auch Berufsbilder, Karrierewege und Qualifikationsprofile. Das Schema.org-Vokabular bietet dafür den Typ <code class="bg-gray-100 px-1 rounded">Occupation</code>, der weit über das bekannte <a href="/blog/jobposting-schema-markup-seo.html" class="text-blue-600 hover:underline">JobPosting Schema Markup</a> hinausgeht.
+        </p>
+        <p class="text-gray-700 leading-relaxed mb-8">
+            Während <code class="bg-gray-100 px-1 rounded">JobPosting</code> eine konkrete, zeitlich begrenzte Stellenausschreibung beschreibt, ermöglicht <code class="bg-gray-100 px-1 rounded">Occupation</code> die Beschreibung eines Berufsbilds als solches — inklusive typischer Gehaltsspannen, Erfahrungsanforderungen, Ausbildungsvoraussetzungen und Tätigkeitsschwerpunkte. Suchmaschinen können diese Daten für Berufsinfo-Seiten im Knowledge Panel nutzen.
+        </p>
+
+        <!-- TOC -->
+        <div class="bg-indigo-50 border border-indigo-100 rounded-xl p-6 mb-10">
+            <h2 class="text-lg font-bold text-indigo-900 mb-3">Inhaltsverzeichnis</h2>
+            <ol class="list-decimal list-inside space-y-1 text-indigo-800 text-sm">
+                <li><a href="#was-ist-occupation" class="hover:underline">Was ist Occupation Schema?</a></li>
+                <li><a href="#occupation-properties" class="hover:underline">Alle Properties im Überblick</a></li>
+                <li><a href="#occupational-experience" class="hover:underline">OccupationalExperienceRequirements im Detail</a></li>
+                <li><a href="#educationalrequirements" class="hover:underline">EducationalOccupationalCredential: Ausbildungsanforderungen</a></li>
+                <li><a href="#praxisbeispiel" class="hover:underline">Vollständiges Praxisbeispiel: Softwareentwickler</a></li>
+                <li><a href="#einsatzszenarien" class="hover:underline">Wo und wie du Occupation einsetzt</a></li>
+                <li><a href="#occupation-vs-jobposting" class="hover:underline">Occupation vs. JobPosting: Was wann?</a></li>
+                <li><a href="#fazit" class="hover:underline">Fazit und Checkliste</a></li>
+            </ol>
+        </div>
+
+        <!-- Section 1 -->
+        <h2 id="was-ist-occupation" class="text-2xl font-bold text-gray-900 mt-10 mb-4">1. Was ist Occupation Schema?</h2>
+        <p class="text-gray-700 leading-relaxed mb-4">
+            <code class="bg-gray-100 px-1 rounded">Occupation</code> ist ein Schema.org-Typ, der ein <strong>Berufsbild oder eine Berufsbezeichnung</strong> beschreibt — unabhängig von einer konkreten Stelle. Er gehört zur Gruppe der Intangible-Typen und wird häufig in Kombination mit <code class="bg-gray-100 px-1 rounded">JobPosting</code> verwendet, aber auch eigenständig auf Berufsinformationsseiten eingesetzt.
+        </p>
+        <p class="text-gray-700 leading-relaxed mb-4">
+            Typische Anwendungsfälle:
+        </p>
+        <ul class="list-disc list-inside space-y-2 text-gray-700 mb-6 ml-4">
+            <li><strong>Karriereportale</strong> (Berufsprofile mit Gehalts- und Anforderungsinfos)</li>
+            <li><strong>Weiterbildungsanbieter</strong> (Zielberufe für Umschulungen und Kurse)</li>
+            <li><strong>Hochschulen und Ausbildungsstätten</strong> (Berufsperspektiven nach dem Abschluss)</li>
+            <li><strong>Bundesagentur-ähnliche Portale</strong> (offizielle Berufsinfos)</li>
+            <li><strong>Unternehmensseiten</strong> (Berufsbild-Seiten für Employer Branding)</li>
+        </ul>
+        <p class="text-gray-700 leading-relaxed mb-6">
+            Google nutzt Occupation-Schema-Daten möglicherweise für das <strong>Knowledge Panel</strong> bei Berufsbild-Anfragen und für strukturierte Darstellungen im Karriere-Bereich der Suche. Das Markup ist noch relativ selten implementiert — ein klarer Wettbewerbsvorteil für frühe Adopter.
+        </p>
+
+        <!-- Section 2 -->
+        <h2 id="occupation-properties" class="text-2xl font-bold text-gray-900 mt-10 mb-4">2. Alle Properties im Überblick</h2>
+        <div class="overflow-x-auto mb-6">
+            <table class="w-full text-sm border-collapse">
+                <thead>
+                    <tr class="bg-gray-50">
+                        <th class="border border-gray-200 px-4 py-2 text-left font-semibold text-gray-700">Property</th>
+                        <th class="border border-gray-200 px-4 py-2 text-left font-semibold text-gray-700">Typ</th>
+                        <th class="border border-gray-200 px-4 py-2 text-left font-semibold text-gray-700">Beschreibung</th>
+                    </tr>
+                </thead>
+                <tbody class="text-gray-700">
+                    <tr><td class="border border-gray-200 px-4 py-2 font-mono text-indigo-700">name</td><td class="border border-gray-200 px-4 py-2">Text</td><td class="border border-gray-200 px-4 py-2">Berufsbezeichnung, z. B. "Softwareentwickler" (Pflicht)</td></tr>
+                    <tr class="bg-gray-50"><td class="border border-gray-200 px-4 py-2 font-mono text-indigo-700">description</td><td class="border border-gray-200 px-4 py-2">Text</td><td class="border border-gray-200 px-4 py-2">Beschreibung des Berufsbilds</td></tr>
+                    <tr><td class="border border-gray-200 px-4 py-2 font-mono text-indigo-700">estimatedSalary</td><td class="border border-gray-200 px-4 py-2">MonetaryAmountDistribution</td><td class="border border-gray-200 px-4 py-2">Typische Gehaltsspanne (sehr wertvoll für Nutzer)</td></tr>
+                    <tr class="bg-gray-50"><td class="border border-gray-200 px-4 py-2 font-mono text-indigo-700">experienceRequirements</td><td class="border border-gray-200 px-4 py-2">OccupationalExperienceRequirements / Text</td><td class="border border-gray-200 px-4 py-2">Erfahrungsanforderungen für den Beruf</td></tr>
+                    <tr><td class="border border-gray-200 px-4 py-2 font-mono text-indigo-700">educationRequirements</td><td class="border border-gray-200 px-4 py-2">EducationalOccupationalCredential / Text</td><td class="border border-gray-200 px-4 py-2">Ausbildungsvoraussetzungen</td></tr>
+                    <tr class="bg-gray-50"><td class="border border-gray-200 px-4 py-2 font-mono text-indigo-700">qualifications</td><td class="border border-gray-200 px-4 py-2">EducationalOccupationalCredential / Text</td><td class="border border-gray-200 px-4 py-2">Qualifikationen und Zertifikate</td></tr>
+                    <tr><td class="border border-gray-200 px-4 py-2 font-mono text-indigo-700">skills</td><td class="border border-gray-200 px-4 py-2">DefinedTerm / Text</td><td class="border border-gray-200 px-4 py-2">Benötigte Fähigkeiten und Kenntnisse</td></tr>
+                    <tr class="bg-gray-50"><td class="border border-gray-200 px-4 py-2 font-mono text-indigo-700">responsibilities</td><td class="border border-gray-200 px-4 py-2">Text</td><td class="border border-gray-200 px-4 py-2">Typische Aufgaben und Verantwortlichkeiten</td></tr>
+                    <tr><td class="border border-gray-200 px-4 py-2 font-mono text-indigo-700">occupationLocation</td><td class="border border-gray-200 px-4 py-2">AdministrativeArea</td><td class="border border-gray-200 px-4 py-2">Geografischer Bezug (Land, Region)</td></tr>
+                    <tr class="bg-gray-50"><td class="border border-gray-200 px-4 py-2 font-mono text-indigo-700">occupationalCategory</td><td class="border border-gray-200 px-4 py-2">CategoryCode / Text</td><td class="border border-gray-200 px-4 py-2">Berufskategorie (z. B. ISCO-Code)</td></tr>
+                    <tr><td class="border border-gray-200 px-4 py-2 font-mono text-indigo-700">mainEntityOfPage</td><td class="border border-gray-200 px-4 py-2">WebPage</td><td class="border border-gray-200 px-4 py-2">URL der Berufsbild-Seite</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="bg-blue-50 border border-blue-100 rounded-xl p-5 mb-8">
+            <p class="text-blue-900 text-sm font-semibold mb-1">Hinweis: estimatedSalary</p>
+            <p class="text-blue-800 text-sm">Das <code class="bg-blue-100 px-1 rounded">estimatedSalary</code>-Feld ist das nützlichste für Nutzer — Gehaltsinfos werden bei Berufssuche stark nachgefragt. Verwende <code class="bg-blue-100 px-1 rounded">MonetaryAmountDistribution</code> mit <code class="bg-blue-100 px-1 rounded">percentile10</code>, <code class="bg-blue-100 px-1 rounded">median</code> und <code class="bg-blue-100 px-1 rounded">percentile90</code> für eine realistische Gehaltsspanne.</p>
+        </div>
+
+        <!-- Section 3 -->
+        <h2 id="occupational-experience" class="text-2xl font-bold text-gray-900 mt-10 mb-4">3. OccupationalExperienceRequirements im Detail</h2>
+        <p class="text-gray-700 leading-relaxed mb-4">
+            <code class="bg-gray-100 px-1 rounded">OccupationalExperienceRequirements</code> ist ein eigenständiger Schema.org-Typ, der die Berufserfahrungsanforderungen für eine Stelle oder ein Berufsbild präzisiert. Er wird sowohl in <code class="bg-gray-100 px-1 rounded">Occupation</code> als auch in <code class="bg-gray-100 px-1 rounded">JobPosting</code> verwendet.
+        </p>
+        <p class="text-gray-700 leading-relaxed mb-4">
+            Die wichtigste Property ist <code class="bg-gray-100 px-1 rounded">monthsOfExperience</code> — sie gibt die minimale Berufserfahrung in Monaten an. Das ermöglicht Suchmaschinen und Job-Plattformen, Stellen nach Erfahrungsniveau zu filtern.
+        </p>
+
+        <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-3">Properties von OccupationalExperienceRequirements</h3>
+        <div class="overflow-x-auto mb-6">
+            <table class="w-full text-sm border-collapse">
+                <thead>
+                    <tr class="bg-gray-50">
+                        <th class="border border-gray-200 px-4 py-2 text-left font-semibold text-gray-700">Property</th>
+                        <th class="border border-gray-200 px-4 py-2 text-left font-semibold text-gray-700">Typ</th>
+                        <th class="border border-gray-200 px-4 py-2 text-left font-semibold text-gray-700">Beschreibung</th>
+                    </tr>
+                </thead>
+                <tbody class="text-gray-700">
+                    <tr><td class="border border-gray-200 px-4 py-2 font-mono text-indigo-700">monthsOfExperience</td><td class="border border-gray-200 px-4 py-2">Number</td><td class="border border-gray-200 px-4 py-2">Minimale Berufserfahrung in Monaten (z. B. 24 = 2 Jahre)</td></tr>
+                    <tr class="bg-gray-50"><td class="border border-gray-200 px-4 py-2 font-mono text-indigo-700">description</td><td class="border border-gray-200 px-4 py-2">Text</td><td class="border border-gray-200 px-4 py-2">Freitext-Beschreibung der Erfahrungsanforderung</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-3">Beispiel für verschiedene Erfahrungsniveaus</h3>
+        <pre class="bg-gray-900 text-green-400 rounded-xl p-6 overflow-x-auto text-sm mb-6"><code>// Berufseinsteiger (keine Erfahrung erforderlich)
+"experienceRequirements": {
+  "@type": "OccupationalExperienceRequirements",
+  "monthsOfExperience": 0,
+  "description": "Geeignet für Berufseinsteiger und Absolventen"
+}
+
+// Junior (1-2 Jahre Erfahrung)
+"experienceRequirements": {
+  "@type": "OccupationalExperienceRequirements",
+  "monthsOfExperience": 12,
+  "description": "Mindestens 1 Jahr Berufserfahrung im relevanten Bereich"
+}
+
+// Senior (5+ Jahre Erfahrung)
+"experienceRequirements": {
+  "@type": "OccupationalExperienceRequirements",
+  "monthsOfExperience": 60,
+  "description": "Mindestens 5 Jahre Berufserfahrung in der Softwareentwicklung"
+}</code></pre>
+
+        <!-- Section 4 -->
+        <h2 id="educationalrequirements" class="text-2xl font-bold text-gray-900 mt-10 mb-4">4. EducationalOccupationalCredential: Ausbildungsanforderungen</h2>
+        <p class="text-gray-700 leading-relaxed mb-4">
+            <code class="bg-gray-100 px-1 rounded">EducationalOccupationalCredential</code> beschreibt Bildungsabschlüsse, Zertifikate und Lizenzen, die für einen Beruf erforderlich oder empfohlen sind. Er wird bei <code class="bg-gray-100 px-1 rounded">Occupation</code> in den Feldern <code class="bg-gray-100 px-1 rounded">educationRequirements</code> und <code class="bg-gray-100 px-1 rounded">qualifications</code> verwendet.
+        </p>
+
+        <div class="overflow-x-auto mb-6">
+            <table class="w-full text-sm border-collapse">
+                <thead>
+                    <tr class="bg-gray-50">
+                        <th class="border border-gray-200 px-4 py-2 text-left font-semibold text-gray-700">Property</th>
+                        <th class="border border-gray-200 px-4 py-2 text-left font-semibold text-gray-700">Typ</th>
+                        <th class="border border-gray-200 px-4 py-2 text-left font-semibold text-gray-700">Beschreibung</th>
+                    </tr>
+                </thead>
+                <tbody class="text-gray-700">
+                    <tr><td class="border border-gray-200 px-4 py-2 font-mono text-indigo-700">name</td><td class="border border-gray-200 px-4 py-2">Text</td><td class="border border-gray-200 px-4 py-2">Name des Abschlusses oder Zertifikats</td></tr>
+                    <tr class="bg-gray-50"><td class="border border-gray-200 px-4 py-2 font-mono text-indigo-700">credentialCategory</td><td class="border border-gray-200 px-4 py-2">Text / DefinedTerm</td><td class="border border-gray-200 px-4 py-2">Kategorie: degree, diploma, certificate, badge</td></tr>
+                    <tr><td class="border border-gray-200 px-4 py-2 font-mono text-indigo-700">educationalLevel</td><td class="border border-gray-200 px-4 py-2">Text / DefinedTerm</td><td class="border border-gray-200 px-4 py-2">Bildungsniveau: Bachelor, Master, Berufsausbildung</td></tr>
+                    <tr class="bg-gray-50"><td class="border border-gray-200 px-4 py-2 font-mono text-indigo-700">recognizedBy</td><td class="border border-gray-200 px-4 py-2">Organization</td><td class="border border-gray-200 px-4 py-2">Ausstellende oder anerkennende Organisation</td></tr>
+                    <tr><td class="border border-gray-200 px-4 py-2 font-mono text-indigo-700">url</td><td class="border border-gray-200 px-4 py-2">URL</td><td class="border border-gray-200 px-4 py-2">URL zur offiziellen Beschreibung des Abschlusses</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-3">Beispiel: Verschiedene Qualifikationen</h3>
+        <pre class="bg-gray-900 text-green-400 rounded-xl p-6 overflow-x-auto text-sm mb-6"><code>// Berufsausbildung als Mindestanforderung
+"educationRequirements": {
+  "@type": "EducationalOccupationalCredential",
+  "name": "Abgeschlossene Berufsausbildung in Informatik oder verwandtem Bereich",
+  "credentialCategory": "diploma",
+  "educationalLevel": "Berufsausbildung (IHK)"
+}
+
+// Bachelor-Abschluss bevorzugt
+"qualifications": {
+  "@type": "EducationalOccupationalCredential",
+  "name": "Bachelor of Science Informatik oder Wirtschaftsinformatik",
+  "credentialCategory": "degree",
+  "educationalLevel": "Bachelor",
+  "recognizedBy": {
+    "@type": "Organization",
+    "name": "Hochschulrektorenkonferenz (HRK)",
+    "url": "https://www.hrk.de"
+  }
+}
+
+// Zertifikat als bevorzugte Qualifikation
+"qualifications": {
+  "@type": "EducationalOccupationalCredential",
+  "name": "AWS Certified Solutions Architect",
+  "credentialCategory": "certificate",
+  "recognizedBy": {
+    "@type": "Organization",
+    "name": "Amazon Web Services",
+    "url": "https://aws.amazon.com/certification/"
+  }
+}</code></pre>
+
+        <!-- Section 5 -->
+        <h2 id="praxisbeispiel" class="text-2xl font-bold text-gray-900 mt-10 mb-4">5. Vollständiges Praxisbeispiel: Softwareentwickler</h2>
+        <p class="text-gray-700 leading-relaxed mb-4">
+            Das folgende Beispiel zeigt ein vollständig ausgefülltes Occupation-Schema für das Berufsbild "Softwareentwickler" — wie es auf einem deutschen Karriereportal eingesetzt werden könnte.
+        </p>
+        <pre class="bg-gray-900 text-green-400 rounded-xl p-6 overflow-x-auto text-sm mb-6"><code>&lt;script type="application/ld+json"&gt;
+{
+  "@context": "https://schema.org",
+  "@type": "Occupation",
+  "name": "Softwareentwickler / Softwareentwicklerin",
+  "alternateName": ["Software Engineer", "Programmierer", "Entwickler"],
+  "description": "Softwareentwickler entwerfen, programmieren und testen Software-Applikationen und -Systeme. Sie arbeiten mit Programmiersprachen wie Java, Python oder JavaScript und setzen Anforderungen in funktionsfähigen Code um.",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.karriereportal.de/berufe/softwareentwickler"
+  },
+  "occupationLocation": {
+    "@type": "Country",
+    "name": "Deutschland",
+    "sameAs": "https://www.wikidata.org/wiki/Q183"
+  },
+  "occupationalCategory": "2512",
+  "estimatedSalary": {
+    "@type": "MonetaryAmountDistribution",
+    "name": "Jahresgehalt Softwareentwickler Deutschland",
+    "currency": "EUR",
+    "duration": "P1Y",
+    "percentile10": 42000,
+    "median": 65000,
+    "percentile90": 95000
+  },
+  "experienceRequirements": {
+    "@type": "OccupationalExperienceRequirements",
+    "monthsOfExperience": 24,
+    "description": "Typischerweise 2+ Jahre Berufserfahrung für Einstiegspositionen, 5+ Jahre für Senior-Rollen"
+  },
+  "educationRequirements": {
+    "@type": "EducationalOccupationalCredential",
+    "name": "Studium der Informatik, Wirtschaftsinformatik oder verwandter Fachrichtung",
+    "credentialCategory": "degree",
+    "educationalLevel": "Bachelor"
+  },
+  "qualifications": [
+    {
+      "@type": "EducationalOccupationalCredential",
+      "name": "Kenntnisse in objektorientierter Programmierung (OOP)",
+      "credentialCategory": "certificate"
+    },
+    {
+      "@type": "EducationalOccupationalCredential",
+      "name": "Erfahrung mit agilen Entwicklungsmethoden (Scrum, Kanban)",
+      "credentialCategory": "certificate"
+    }
+  ],
+  "skills": [
+    "Java", "Python", "JavaScript", "TypeScript", "SQL",
+    "Git", "REST-APIs", "Docker", "Cloud Computing", "Agile Methoden"
+  ],
+  "responsibilities": "Analyse und Design von Software-Architekturen; Implementierung und Testen von Backend- und Frontend-Komponenten; Code-Reviews und Pair Programming; technische Dokumentation; Zusammenarbeit mit Product Ownern und UX-Designern",
+  "url": "https://www.karriereportal.de/berufe/softwareentwickler"
+}
+&lt;/script&gt;</code></pre>
+
+        <!-- Section 6 -->
+        <h2 id="einsatzszenarien" class="text-2xl font-bold text-gray-900 mt-10 mb-4">6. Wo und wie du Occupation einsetzt</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+            <div class="bg-gray-50 rounded-xl p-5 border border-gray-200">
+                <h4 class="font-semibold text-gray-900 mb-3">Karriereportale</h4>
+                <p class="text-gray-600 text-sm leading-relaxed">Jede Berufsbild-Übersichtsseite kann mit Occupation-Schema ausgezeichnet werden. Ideal für Seiten mit Gehaltsdaten, Anforderungsprofilen und Karrierepfaden. Kombiniere es mit Verlinkungen zu passenden JobPosting-Seiten.</p>
+            </div>
+            <div class="bg-gray-50 rounded-xl p-5 border border-gray-200">
+                <h4 class="font-semibold text-gray-900 mb-3">Weiterbildungsanbieter</h4>
+                <p class="text-gray-600 text-sm leading-relaxed">Zeige auf Kurs-Seiten, für welche Zielberufe ein Kurs vorbereitet. Verknüpfe das <code class="bg-gray-100 px-1 rounded text-xs">Course</code>-Schema über <code class="bg-gray-100 px-1 rounded text-xs">occupationalCredentialAwarded</code> mit dem Occupation-Berufsbild.</p>
+            </div>
+            <div class="bg-gray-50 rounded-xl p-5 border border-gray-200">
+                <h4 class="font-semibold text-gray-900 mb-3">Employer Branding</h4>
+                <p class="text-gray-600 text-sm leading-relaxed">Unternehmen können auf Team- und Karriereseiten Berufsbilder auszeichnen. Das erhöht die Sichtbarkeit bei Talenten, die nach dem Berufsbild suchen — nicht nur nach einer konkreten Stelle.</p>
+            </div>
+            <div class="bg-gray-50 rounded-xl p-5 border border-gray-200">
+                <h4 class="font-semibold text-gray-900 mb-3">Bildungseinrichtungen</h4>
+                <p class="text-gray-600 text-sm leading-relaxed">Studiengänge und Ausbildungsprogramme können zeigen, welche Berufsbilder die Absolventen typischerweise anstreben. Verknüpfe mit <code class="bg-gray-100 px-1 rounded text-xs">EducationalOccupationalProgram</code>-Schema.</p>
+            </div>
+        </div>
+
+        <!-- Section 7 -->
+        <h2 id="occupation-vs-jobposting" class="text-2xl font-bold text-gray-900 mt-10 mb-4">7. Occupation vs. JobPosting: Was wann?</h2>
+
+        <div class="overflow-x-auto mb-8">
+            <table class="w-full text-sm border-collapse">
+                <thead>
+                    <tr class="bg-gray-50">
+                        <th class="border border-gray-200 px-4 py-2 text-left font-semibold text-gray-700">Kriterium</th>
+                        <th class="border border-gray-200 px-4 py-2 text-left font-semibold text-gray-700">Occupation</th>
+                        <th class="border border-gray-200 px-4 py-2 text-left font-semibold text-gray-700">JobPosting</th>
+                    </tr>
+                </thead>
+                <tbody class="text-gray-700">
+                    <tr><td class="border border-gray-200 px-4 py-2 font-medium">Zweck</td><td class="border border-gray-200 px-4 py-2">Allgemeines Berufsbild beschreiben</td><td class="border border-gray-200 px-4 py-2">Konkrete offene Stelle ausschreiben</td></tr>
+                    <tr class="bg-gray-50"><td class="border border-gray-200 px-4 py-2 font-medium">Zeitbezug</td><td class="border border-gray-200 px-4 py-2">Dauerhaft gültig</td><td class="border border-gray-200 px-4 py-2">Zeitlich begrenzt (validThrough)</td></tr>
+                    <tr><td class="border border-gray-200 px-4 py-2 font-medium">Arbeitgeber</td><td class="border border-gray-200 px-4 py-2">Kein spezifischer Arbeitgeber</td><td class="border border-gray-200 px-4 py-2">Konkreter Arbeitgeber (hiringOrganization)</td></tr>
+                    <tr class="bg-gray-50"><td class="border border-gray-200 px-4 py-2 font-medium">Gehalt</td><td class="border border-gray-200 px-4 py-2">Branchenübliche Spanne (MonetaryAmountDistribution)</td><td class="border border-gray-200 px-4 py-2">Konkretes Gehaltsangebot</td></tr>
+                    <tr><td class="border border-gray-200 px-4 py-2 font-medium">Google-Darstellung</td><td class="border border-gray-200 px-4 py-2">Knowledge Panel (möglicherweise)</td><td class="border border-gray-200 px-4 py-2">Google Jobs Rich Snippet</td></tr>
+                    <tr class="bg-gray-50"><td class="border border-gray-200 px-4 py-2 font-medium">Kombination</td><td class="border border-gray-200 px-4 py-2">Mit JobPosting über sameAs kombinierbar</td><td class="border border-gray-200 px-4 py-2">Kann Occupation-Objekt referenzieren</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <p class="text-gray-700 leading-relaxed mb-4">
+            Du kannst beide Typen auf derselben Website einsetzen: Die Berufsbild-Seite erhält <code class="bg-gray-100 px-1 rounded">Occupation</code>-Schema, die Stellenanzeige erhält <code class="bg-gray-100 px-1 rounded">JobPosting</code>-Schema. Verlinke die Stellenanzeige über <code class="bg-gray-100 px-1 rounded">baseSalary</code> und <code class="bg-gray-100 px-1 rounded">experienceRequirements</code> mit dem Berufsbild — das schafft eine kohärente semantische Struktur.
+        </p>
+        <p class="text-gray-700 leading-relaxed mb-6">
+            Mehr zur JobPosting-Implementierung findest du in unserem Artikel über <a href="/blog/jobposting-schema-markup-seo.html" class="text-blue-600 hover:underline">JobPosting Schema Markup: Stellenanzeigen als Rich Snippets</a>.
+        </p>
+
+        <!-- Section 8 -->
+        <h2 id="fazit" class="text-2xl font-bold text-gray-900 mt-10 mb-4">8. Fazit und Checkliste</h2>
+        <p class="text-gray-700 leading-relaxed mb-4">
+            Occupation Schema ist ein kraftvolles, aber noch unterschätztes Werkzeug für alle, die Karriere- und Berufsbilder-Inhalte publizieren. Mit <code class="bg-gray-100 px-1 rounded">OccupationalExperienceRequirements</code> und <code class="bg-gray-100 px-1 rounded">EducationalOccupationalCredential</code> kannst du maschinenlesbar beschreiben, was ein Beruf erfordert — und damit Google helfen, deine Seite als maßgebliche Quelle für Berufsinformationen zu verstehen.
+        </p>
+
+        <div class="bg-indigo-50 border border-indigo-100 rounded-xl p-6 mb-8">
+            <h3 class="text-lg font-bold text-indigo-900 mb-4">Implementierungs-Checkliste</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                <div class="space-y-2">
+                    <p class="font-semibold text-indigo-800 text-sm">Pflichtfelder</p>
+                    <label class="flex items-center space-x-2 text-indigo-700 text-sm"><input type="checkbox" class="rounded"> <span><code>name</code> der Berufsbezeichnung angegeben</span></label>
+                    <label class="flex items-center space-x-2 text-indigo-700 text-sm"><input type="checkbox" class="rounded"> <span><code>description</code> mit Berufsbeschreibung</span></label>
+                    <label class="flex items-center space-x-2 text-indigo-700 text-sm"><input type="checkbox" class="rounded"> <span><code>occupationLocation</code> auf Country oder Region</span></label>
+                </div>
+                <div class="space-y-2">
+                    <p class="font-semibold text-indigo-800 text-sm">Empfehlenswert</p>
+                    <label class="flex items-center space-x-2 text-indigo-700 text-sm"><input type="checkbox" class="rounded"> <span><code>estimatedSalary</code> mit Gehaltsspanne</span></label>
+                    <label class="flex items-center space-x-2 text-indigo-700 text-sm"><input type="checkbox" class="rounded"> <span><code>experienceRequirements</code> mit monthsOfExperience</span></label>
+                    <label class="flex items-center space-x-2 text-indigo-700 text-sm"><input type="checkbox" class="rounded"> <span><code>educationRequirements</code> mit CredentialCategory</span></label>
+                    <label class="flex items-center space-x-2 text-indigo-700 text-sm"><input type="checkbox" class="rounded"> <span><code>skills</code> als Array von Fähigkeiten</span></label>
+                    <label class="flex items-center space-x-2 text-indigo-700 text-sm"><input type="checkbox" class="rounded"> <span>Mit JobPosting-Seiten intern verlinkt</span></label>
+                </div>
+            </div>
+        </div>
+
+        <p class="text-gray-700 leading-relaxed mb-4">
+            Überprüfe dein Occupation-Schema anschließend mit dem <a href="/tools/json-ld-structured-data-validator.html" class="text-blue-600 hover:underline">JSON-LD Structured Data Validator</a> auf Shift07. Für die übergeordneten Grundlagen zu strukturierten Daten empfiehlt sich unser Einsteiger-Artikel zu <a href="/blog/strukturierte-daten-seo-schema-markup.html" class="text-blue-600 hover:underline">Strukturierte Daten und Schema Markup für SEO</a>.
+        </p>
+
+        <!-- CTA -->
+        <div class="bg-gradient-to-r from-indigo-600 to-blue-700 rounded-2xl p-8 text-center mt-10">
+            <h3 class="text-2xl font-bold text-white mb-3">Deine Website kostenlos analysieren</h3>
+            <p class="text-indigo-100 mb-6">Prüfe in Sekunden, welche SEO-Probleme deine Website hat — inklusive fehlender strukturierter Daten.</p>
+            <a href="/#analyse" class="bg-white text-indigo-600 px-8 py-3 rounded-xl font-bold hover:bg-indigo-50 transition-colors inline-block">Jetzt kostenlos analysieren →</a>
+        </div>
+
+    </div>
+</main>
+
+<!-- Footer -->
+<footer class="bg-gray-900 text-gray-400 py-12 mt-16">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+            <div class="md:col-span-2">
+                <div class="flex items-center space-x-2 mb-4">
+                    <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-auto">
+                    <span class="text-white font-bold text-lg">Shift07</span>
+                </div>
+                <p class="text-gray-400 text-sm leading-relaxed">KI-gestütztes SEO-Analyse-Tool für kleine und mittlere Unternehmen.</p>
+            </div>
+            <div>
+                <h4 class="text-white font-semibold mb-4">Ähnliche Artikel</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="/blog/jobposting-schema-markup-seo.html" class="hover:text-white transition-colors">JobPosting Schema</a></li>
+                    <li><a href="/blog/person-schema-markup-seo.html" class="hover:text-white transition-colors">Person Schema</a></li>
+                    <li><a href="/blog/strukturierte-daten-seo-schema-markup.html" class="hover:text-white transition-colors">Structured Data Grundlagen</a></li>
+                    <li><a href="/blog/" class="hover:text-white transition-colors">Alle Artikel →</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-semibold mb-4">Rechtliches</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="/impressum.html" class="hover:text-white transition-colors">Impressum</a></li>
+                    <li><a href="/datenschutz.html" class="hover:text-white transition-colors">Datenschutz</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="border-t border-gray-800 pt-8 text-center text-sm">
+            <p>© 2026 Thümmler AI GmbH · Leonardo-da-Vinci-Straße 15, 14467 Potsdam</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
