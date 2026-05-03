@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Sun, 03 May 2026 01:29:53 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 03 May 2026 01:33:06 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Occupation Schema Markup: Berufsbilder für Google strukturieren</title>
+      <link>https://shift07.ai/blog/occupation-schema-markup-seo.html</link>
+      <guid>https://shift07.ai/blog/occupation-schema-markup-seo.html</guid>
+      <pubDate>Sun, 03 May 2026 01:32:41 +0000</pubDate>
+      <description>Occupation Schema Markup erklärt: JSON-LD für Berufsbilder, OccupationalExperienceRequirements und Qualifikationsanforderungen – mit vollständigen Praxisbeispielen für Karriereportale und Unternehmensseiten.</description>
+      <category>Schema Markup</category>
+    </item>
     <item>
       <title>MedicalEntity Schema Markup: Drug, DietarySupplement &amp; MedicalCondition für Google</title>
       <link>https://shift07.ai/blog/medicalentity-drug-dietarysupplement-schema-markup.html</link>
@@ -157,14 +165,6 @@
       <guid>https://shift07.ai/blog/petstore-animalshelter-schema-markup.html</guid>
       <pubDate>Thu, 30 Apr 2026 00:42:25 +0000</pubDate>
       <description>Lerne, wie du PetStore und AnimalShelter Schema Markup als JSON-LD implementierst — mit vollständigen Code-Beispielen für Tierhandlungen, Zoogeschäfte und Tierheime.</description>
-      <category>Schema Markup</category>
-    </item>
-    <item>
-      <title>AutoPartsStore &amp; AutomotiveBusiness Schema Markup: JSON-LD für KFZ-Zubehör</title>
-      <link>https://shift07.ai/blog/autopartsstore-automotivebusiness-schema-markup.html</link>
-      <guid>https://shift07.ai/blog/autopartsstore-automotivebusiness-schema-markup.html</guid>
-      <pubDate>Wed, 29 Apr 2026 06:39:19 +0000</pubDate>
-      <description>AutoPartsStore und AutomotiveBusiness Schema Markup korrekt implementieren: JSON-LD Anleitung für Autoteilehändler, KFZ-Zubehörgeschäfte und Kfz-Betriebe — inkl. Produktdaten und Serviceleistungen.</description>
       <category>Schema Markup</category>
     </item>
   </channel>
