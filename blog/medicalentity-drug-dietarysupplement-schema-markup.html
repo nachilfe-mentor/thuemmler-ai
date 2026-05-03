@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedicalEntity Schema Markup: Drug, DietarySupplement & MedicalCondition für Google | Shift07 Blog</title>
+    <meta name="description" content="MedicalEntity Schema Markup vollständig erklärt: JSON-LD für Drug, DietarySupplement und MedicalCondition – mit Beispielen, Pflichtfeldern und SEO-Tipps für Apotheken, Hersteller und Gesundheitsportale.">
+    <meta name="author" content="Thümmler AI GmbH">
+    <link rel="icon" type="image/png" href="/logo.png">
+    <link rel="canonical" href="https://shift07.ai/blog/medicalentity-drug-dietarysupplement-schema-markup.html">
+    <link rel="alternate" type="application/rss+xml" title="Shift07 Blog" href="https://shift07.ai/feed.xml">
+    <!-- Open Graph -->
+    <meta property="og:title" content="MedicalEntity Schema Markup: Drug, DietarySupplement & MedicalCondition für Google | Shift07 Blog">
+    <meta property="og:description" content="MedicalEntity Schema Markup vollständig erklärt: JSON-LD für Drug, DietarySupplement und MedicalCondition – mit Beispielen, Pflichtfeldern und SEO-Tipps für Apotheken, Hersteller und Gesundheitsportale.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://shift07.ai/blog/medicalentity-drug-dietarysupplement-schema-markup.html">
+    <meta property="og:image" content="https://shift07.ai/blog/images/medicalentity-drug-dietarysupplement-schema-markup.png">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="Shift07">
+    <meta property="article:published_time" content="2026-05-03T08:00:00+02:00">
+    <meta property="article:section" content="Schema Markup">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="MedicalEntity Schema Markup: Drug, DietarySupplement & MedicalCondition für Google">
+    <meta name="twitter:description" content="MedicalEntity Schema Markup vollständig erklärt: JSON-LD für Drug, DietarySupplement und MedicalCondition – mit Beispielen und SEO-Tipps.">
+    <meta name="twitter:image" content="https://shift07.ai/blog/images/medicalentity-drug-dietarysupplement-schema-markup.png">
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "MedicalEntity Schema Markup: Drug, DietarySupplement & MedicalCondition für Google",
+      "description": "MedicalEntity Schema Markup vollständig erklärt: JSON-LD für Drug, DietarySupplement und MedicalCondition – mit Beispielen, Pflichtfeldern und SEO-Tipps für Apotheken, Hersteller und Gesundheitsportale.",
+      "image": "https://shift07.ai/blog/images/medicalentity-drug-dietarysupplement-schema-markup.png",
+      "datePublished": "2026-05-03T08:00:00+02:00",
+      "dateModified": "2026-05-03T08:00:00+02:00",
+      "author": {
+        "@type": "Organization",
+        "name": "Shift07",
+        "url": "https://shift07.ai"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Shift07",
+        "url": "https://shift07.ai",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://shift07.ai/assets/logo.png"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://shift07.ai/blog/medicalentity-drug-dietarysupplement-schema-markup.html"
+      }
+    }
+    </script>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K1S1RXBDS8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K1S1RXBDS8');
+    </script>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8475857002943858" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-inter bg-gray-50 text-gray-900">
+
+<!-- Navigation -->
+<nav class="bg-white border-b border-gray-200 sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+            <a href="/" class="flex items-center space-x-2">
+                <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-auto">
+                <span class="text-xl font-bold text-gray-900">Shift07</span>
+            </a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="/" class="text-gray-600 hover:text-blue-600 font-medium transition-colors">Home</a>
+                <a href="/blog/" class="text-gray-600 hover:text-blue-600 font-medium transition-colors">Blog</a>
+                <a href="/tools/" class="text-gray-600 hover:text-blue-600 font-medium transition-colors">Tools</a>
+                <a href="/#analyse" class="bg-blue-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-blue-700 transition-colors">Kostenlose Analyse</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- Article Header -->
+<header class="bg-white border-b border-gray-100">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="mb-4">
+            <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">Schema Markup</span>
+        </div>
+        <h1 class="text-3xl sm:text-4xl font-bold text-gray-900 leading-tight mb-4">
+            MedicalEntity Schema Markup: Drug, DietarySupplement &amp; MedicalCondition für Google
+        </h1>
+        <p class="text-xl text-gray-600 leading-relaxed mb-6">
+            Wie du mit JSON-LD strukturierte Daten für Medikamente, Nahrungsergänzungsmittel und Krankheitsbilder implementierst — inklusive aller Pflichtfelder, Praxisbeispiele und E‑E‑A‑T-Tipps für Gesundheitsseiten.
+        </p>
+        <div class="flex items-center space-x-4 text-sm text-gray-500">
+            <span>Von <strong class="text-gray-700">Shift07 Redaktion</strong></span>
+            <span>•</span>
+            <time datetime="2026-05-03">3. Mai 2026</time>
+            <span>•</span>
+            <span>14 Min. Lesezeit</span>
+        </div>
+    </div>
+</header>
+
+<!-- Featured Image -->
+<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <img src="images/medicalentity-drug-dietarysupplement-schema-markup.png"
+         alt="MedicalEntity Schema Markup für Drug, DietarySupplement und MedicalCondition – JSON-LD Implementierung"
+         class="w-full rounded-2xl shadow-lg">
+</div>
+
+<!-- Article Content -->
+<main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+    <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 sm:p-12">
+
+        <!-- Intro -->
+        <p class="text-lg text-gray-700 leading-relaxed mb-6">
+            Gesundheitsseiten, Apotheken-Shops und Nahrungsergänzungsmittel-Hersteller stehen vor einer besonderen SEO-Herausforderung: Google bewertet medizinische Inhalte nach dem <strong>YMYL-Prinzip</strong> (Your Money or Your Life) besonders kritisch. Strukturierte Daten mit <code class="bg-gray-100 px-1 rounded">MedicalEntity</code>-Schema helfen dir, Google und Nutzern zu signalisieren, dass dein Content seriös, vollständig und korrekt ist.
+        </p>
+        <p class="text-gray-700 leading-relaxed mb-8">
+            In diesem Artikel lernst du, wie du <code class="bg-gray-100 px-1 rounded">Drug</code>, <code class="bg-gray-100 px-1 rounded">DietarySupplement</code> und <code class="bg-gray-100 px-1 rounded">MedicalCondition</code> als JSON-LD implementierst — drei der wichtigsten Untertypen von <code class="bg-gray-100 px-1 rounded">MedicalEntity</code> im Schema.org-Vokabular.
+        </p>
+
+        <!-- TOC -->
+        <div class="bg-blue-50 border border-blue-100 rounded-xl p-6 mb-10">
+            <h2 class="text-lg font-bold text-blue-900 mb-3">Inhaltsverzeichnis</h2>
+            <ol class="list-decimal list-inside space-y-1 text-blue-800 text-sm">
+                <li><a href="#was-ist-medicalentity" class="hover:underline">Was ist MedicalEntity in Schema.org?</a></li>
+                <li><a href="#drug-schema" class="hover:underline">Drug Schema Markup: Medikamente strukturieren</a></li>
+                <li><a href="#dietarysupplement-schema" class="hover:underline">DietarySupplement Schema: Nahrungsergänzungsmittel für Google</a></li>
+                <li><a href="#medicalcondition-schema" class="hover:underline">MedicalCondition Schema: Krankheitsbilder strukturieren</a></li>
+                <li><a href="#eeat-medizin" class="hover:underline">E-E-A-T für medizinische Seiten: Was Google wirklich will</a></li>
+                <li><a href="#haeufige-fehler" class="hover:underline">Häufige Fehler und wie du sie vermeidest</a></li>
+                <li><a href="#fazit" class="hover:underline">Fazit und Checkliste</a></li>
+            </ol>
+        </div>
+
+        <!-- Section 1 -->
+        <h2 id="was-ist-medicalentity" class="text-2xl font-bold text-gray-900 mt-10 mb-4">1. Was ist MedicalEntity in Schema.org?</h2>
+        <p class="text-gray-700 leading-relaxed mb-4">
+            <code class="bg-gray-100 px-1 rounded">MedicalEntity</code> ist die Basisklasse für alle medizinischen Konzepte im Schema.org-Vokabular. Sie liegt unter <code class="bg-gray-100 px-1 rounded">Thing</code> und ist Elternklasse für eine Vielzahl spezialisierter Typen:
+        </p>
+        <ul class="list-disc list-inside space-y-2 text-gray-700 mb-6 ml-4">
+            <li><strong>Drug</strong> — verschreibungspflichtige und rezeptfreie Medikamente</li>
+            <li><strong>DietarySupplement</strong> — Nahrungsergänzungsmittel, Vitamine, Mineralien</li>
+            <li><strong>MedicalCondition</strong> — Erkrankungen, Syndrome, Symptombilder</li>
+            <li><strong>MedicalProcedure</strong> — medizinische Eingriffe und Behandlungen</li>
+            <li><strong>MedicalTest</strong> — diagnostische Tests und Untersuchungen</li>
+            <li><strong>MedicalTherapy</strong> — therapeutische Maßnahmen</li>
+        </ul>
+        <p class="text-gray-700 leading-relaxed mb-4">
+            Google nutzt diese Daten nicht primär für klassische Rich Snippets wie Sterne oder Preisangaben, sondern für das <strong>Knowledge Panel</strong> und die strukturierte Darstellung im Health-Bereich der Suche. Für Apotheken und Gesundheitsportale sind korrekte Auszeichnungen ein wichtiges E‑E‑A‑T-Signal.
+        </p>
+        <p class="text-gray-700 leading-relaxed mb-6">
+            Beachte: Alle Untertypen von MedicalEntity können die gemeinsamen Basis-Properties verwenden — <code class="bg-gray-100 px-1 rounded">name</code>, <code class="bg-gray-100 px-1 rounded">description</code>, <code class="bg-gray-100 px-1 rounded">url</code>, <code class="bg-gray-100 px-1 rounded">alternateName</code>, <code class="bg-gray-100 px-1 rounded">code</code> (MedicalCode), <code class="bg-gray-100 px-1 rounded">guideline</code>, <code class="bg-gray-100 px-1 rounded">recognizingAuthority</code> und <code class="bg-gray-100 px-1 rounded">study</code>.
+        </p>
+
+        <!-- Infobox -->
+        <div class="bg-amber-50 border border-amber-200 rounded-xl p-5 mb-8">
+            <p class="text-amber-900 text-sm font-semibold mb-1">Wichtiger Hinweis</p>
+            <p class="text-amber-800 text-sm">Schema.org-MedicalEntity-Markup ist kein Ersatz für medizinische Fachberatung. Google wertet strukturierte Daten nur dann positiv, wenn der zugehörige Content von echten Experten verfasst oder geprüft wurde. Implementiere Schema.org stets in Verbindung mit solider E‑E‑A‑T-Strategie.</p>
+        </div>
+
+        <!-- Section 2 -->
+        <h2 id="drug-schema" class="text-2xl font-bold text-gray-900 mt-10 mb-4">2. Drug Schema Markup: Medikamente strukturieren</h2>
+        <p class="text-gray-700 leading-relaxed mb-4">
+            Der Typ <code class="bg-gray-100 px-1 rounded">Drug</code> eignet sich für Seiten, die einzelne Wirkstoffe oder Handelspräparate beschreiben — zum Beispiel auf Apotheken-Informationsseiten, in Pharma-Produktdatenbanken oder auf Patienteninformations-Portalen.
+        </p>
+
+        <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-3">Die wichtigsten Properties für Drug</h3>
+        <div class="overflow-x-auto mb-6">
+            <table class="w-full text-sm border-collapse">
+                <thead>
+                    <tr class="bg-gray-50">
+                        <th class="border border-gray-200 px-4 py-2 text-left font-semibold text-gray-700">Property</th>
+                        <th class="border border-gray-200 px-4 py-2 text-left font-semibold text-gray-700">Typ</th>
+                        <th class="border border-gray-200 px-4 py-2 text-left font-semibold text-gray-700">Beschreibung</th>
+                    </tr>
+                </thead>
+                <tbody class="text-gray-700">
+                    <tr><td class="border border-gray-200 px-4 py-2 font-mono text-blue-700">name</td><td class="border border-gray-200 px-4 py-2">Text</td><td class="border border-gray-200 px-4 py-2">Handelsname oder Wirkstoffname (Pflicht)</td></tr>
+                    <tr class="bg-gray-50"><td class="border border-gray-200 px-4 py-2 font-mono text-blue-700">description</td><td class="border border-gray-200 px-4 py-2">Text</td><td class="border border-gray-200 px-4 py-2">Kurze Beschreibung des Medikaments</td></tr>
+                    <tr><td class="border border-gray-200 px-4 py-2 font-mono text-blue-700">activeIngredient</td><td class="border border-gray-200 px-4 py-2">Text</td><td class="border border-gray-200 px-4 py-2">Wirkstoff(e), z. B. "Ibuprofen"</td></tr>
+                    <tr class="bg-gray-50"><td class="border border-gray-200 px-4 py-2 font-mono text-blue-700">administrationRoute</td><td class="border border-gray-200 px-4 py-2">Text</td><td class="border border-gray-200 px-4 py-2">Verabreichungsweg: oral, intravenös, topisch</td></tr>
+                    <tr><td class="border border-gray-200 px-4 py-2 font-mono text-blue-700">dosageForm</td><td class="border border-gray-200 px-4 py-2">Text</td><td class="border border-gray-200 px-4 py-2">Darreichungsform: Tablette, Kapsel, Salbe</td></tr>
+                    <tr class="bg-gray-50"><td class="border border-gray-200 px-4 py-2 font-mono text-blue-700">drugClass</td><td class="border border-gray-200 px-4 py-2">DrugClass</td><td class="border border-gray-200 px-4 py-2">Arzneimittelklasse (z. B. NSAID)</td></tr>
+                    <tr><td class="border border-gray-200 px-4 py-2 font-mono text-blue-700">isProprietary</td><td class="border border-gray-200 px-4 py-2">Boolean</td><td class="border border-gray-200 px-4 py-2">Handelsname (true) oder Generikum (false)</td></tr>
+                    <tr class="bg-gray-50"><td class="border border-gray-200 px-4 py-2 font-mono text-blue-700">prescriptionStatus</td><td class="border border-gray-200 px-4 py-2">DrugPrescriptionStatus</td><td class="border border-gray-200 px-4 py-2">OTC oder PrescriptionOnly</td></tr>
+                    <tr><td class="border border-gray-200 px-4 py-2 font-mono text-blue-700">availableStrength</td><td class="border border-gray-200 px-4 py-2">DrugStrength</td><td class="border border-gray-200 px-4 py-2">Verfügbare Dosierungen</td></tr>
+                    <tr class="bg-gray-50"><td class="border border-gray-200 px-4 py-2 font-mono text-blue-700">interactingDrug</td><td class="border border-gray-200 px-4 py-2">Drug</td><td class="border border-gray-200 px-4 py-2">Wechselwirkungen mit anderen Medikamenten</td></tr>
+                    <tr><td class="border border-gray-200 px-4 py-2 font-mono text-blue-700">warning</td><td class="border border-gray-200 px-4 py-2">Text / URL</td><td class="border border-gray-200 px-4 py-2">Warnhinweise und Gegenanzeigen</td></tr>
+                    <tr class="bg-gray-50"><td class="border border-gray-200 px-4 py-2 font-mono text-blue-700">manufacturer</td><td class="border border-gray-200 px-4 py-2">Organization</td><td class="border border-gray-200 px-4 py-2">Hersteller des Medikaments</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-3">Vollständiges Drug-Beispiel (JSON-LD)</h3>
+        <pre class="bg-gray-900 text-green-400 rounded-xl p-6 overflow-x-auto text-sm mb-6"><code>&lt;script type="application/ld+json"&gt;
+{
+  "@context": "https://schema.org",
+  "@type": "Drug",
+  "name": "Ibuprofen 400 mg Filmtabletten",
+  "alternateName": "Ibuprofen",
+  "description": "Ibuprofen 400 mg ist ein rezeptfreies Schmerzmittel aus der Gruppe der NSAID. Es wirkt entzündungshemmend, fiebersenkend und schmerzlindernd.",
+  "url": "https://www.apotheke-beispiel.de/medikamente/ibuprofen-400",
+  "activeIngredient": "Ibuprofen",
+  "administrationRoute": "oral",
+  "dosageForm": "Filmtablette",
+  "drugClass": {
+    "@type": "DrugClass",
+    "name": "Nichtsteroidale Antirheumatika (NSAID)"
+  },
+  "isProprietary": false,
+  "prescriptionStatus": "https://schema.org/OTC",
+  "availableStrength": {
+    "@type": "DrugStrength",
+    "activeIngredient": "Ibuprofen",
+    "strengthValue": 400,
+    "strengthUnit": "mg"
+  },
+  "warning": "Nicht bei Magengeschwüren, schwerer Nieren- oder Leberinsuffizienz anwenden. Maximaldosis für Erwachsene: 1200 mg/Tag ohne ärztliche Aufsicht.",
+  "manufacturer": {
+    "@type": "Organization",
+    "name": "Musterpharm GmbH",
+    "url": "https://www.musterpharm.de"
+  },
+  "code": {
+    "@type": "MedicalCode",
+    "codeValue": "M01AE01",
+    "codingSystem": "ATC"
+  }
+}
+&lt;/script&gt;</code></pre>
+
+        <p class="text-gray-700 leading-relaxed mb-6">
+            Für Apotheken-Websites ist es sinnvoll, das Drug-Schema mit dem <code class="bg-gray-100 px-1 rounded">Product</code>-Schema zu kombinieren, wenn das Medikament auch kaufbar ist. Weitere Details zur Produktauszeichnung findest du in unserem Artikel über <a href="/blog/product-schema-markup-seo.html" class="text-blue-600 hover:underline">Product Schema Markup für Rich Snippets</a>.
+        </p>
+
+        <!-- Section 3 -->
+        <h2 id="dietarysupplement-schema" class="text-2xl font-bold text-gray-900 mt-10 mb-4">3. DietarySupplement Schema: Nahrungsergänzungsmittel für Google</h2>
+        <p class="text-gray-700 leading-relaxed mb-4">
+            <code class="bg-gray-100 px-1 rounded">DietarySupplement</code> ist ein Untertyp von <code class="bg-gray-100 px-1 rounded">Substance</code> und <code class="bg-gray-100 px-1 rounded">MedicalEntity</code>. Er deckt Vitamine, Mineralien, Proteinpulver, pflanzliche Extrakte und andere Nahrungsergänzungsmittel ab.
+        </p>
+        <p class="text-gray-700 leading-relaxed mb-4">
+            Dieser Typ ist besonders relevant für Online-Shops, die Nahrungsergänzungsmittel verkaufen, sowie für Gesundheitsportale und Ernährungsberatungs-Websites. Google kann diese Auszeichnungen nutzen, um Informationen im Health-Knowledge-Panel anzureichern.
+        </p>
+
+        <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-3">Spezifische Properties für DietarySupplement</h3>
+        <div class="overflow-x-auto mb-6">
+            <table class="w-full text-sm border-collapse">
+                <thead>
+                    <tr class="bg-gray-50">
+                        <th class="border border-gray-200 px-4 py-2 text-left font-semibold text-gray-700">Property</th>
+                        <th class="border border-gray-200 px-4 py-2 text-left font-semibold text-gray-700">Typ</th>
+                        <th class="border border-gray-200 px-4 py-2 text-left font-semibold text-gray-700">Beschreibung</th>
+                    </tr>
+                </thead>
+                <tbody class="text-gray-700">
+                    <tr><td class="border border-gray-200 px-4 py-2 font-mono text-blue-700">activeIngredient</td><td class="border border-gray-200 px-4 py-2">Text</td><td class="border border-gray-200 px-4 py-2">Aktiver Wirkstoff, z. B. "Vitamin D3"</td></tr>
+                    <tr class="bg-gray-50"><td class="border border-gray-200 px-4 py-2 font-mono text-blue-700">recommendedIntake</td><td class="border border-gray-200 px-4 py-2">RecommendedDoseSchedule</td><td class="border border-gray-200 px-4 py-2">Empfohlene Tagesdosis</td></tr>
+                    <tr><td class="border border-gray-200 px-4 py-2 font-mono text-blue-700">maximumIntake</td><td class="border border-gray-200 px-4 py-2">MaximumDoseSchedule</td><td class="border border-gray-200 px-4 py-2">Maximale Tagesdosis (Toleranzgrenze)</td></tr>
+                    <tr class="bg-gray-50"><td class="border border-gray-200 px-4 py-2 font-mono text-blue-700">targetPopulation</td><td class="border border-gray-200 px-4 py-2">Text</td><td class="border border-gray-200 px-4 py-2">Zielgruppe: Sportler, Senioren, Schwangere</td></tr>
+                    <tr><td class="border border-gray-200 px-4 py-2 font-mono text-blue-700">isProprietary</td><td class="border border-gray-200 px-4 py-2">Boolean</td><td class="border border-gray-200 px-4 py-2">Markenpräparat oder Generikum</td></tr>
+                    <tr class="bg-gray-50"><td class="border border-gray-200 px-4 py-2 font-mono text-blue-700">legalStatus</td><td class="border border-gray-200 px-4 py-2">Text / DrugLegalStatus</td><td class="border border-gray-200 px-4 py-2">Rechtlicher Status in verschiedenen Ländern</td></tr>
+                    <tr><td class="border border-gray-200 px-4 py-2 font-mono text-blue-700">mechanismOfAction</td><td class="border border-gray-200 px-4 py-2">Text</td><td class="border border-gray-200 px-4 py-2">Wie wirkt der Stoff im Körper?</td></tr>
+                    <tr class="bg-gray-50"><td class="border border-gray-200 px-4 py-2 font-mono text-blue-700">safetyConsideration</td><td class="border border-gray-200 px-4 py-2">Text</td><td class="border border-gray-200 px-4 py-2">Sicherheitshinweise und Kontraindikationen</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-3">DietarySupplement-Beispiel: Vitamin D3</h3>
+        <pre class="bg-gray-900 text-green-400 rounded-xl p-6 overflow-x-auto text-sm mb-6"><code>&lt;script type="application/ld+json"&gt;
+{
+  "@context": "https://schema.org",
+  "@type": "DietarySupplement",
+  "name": "Vitamin D3 2000 IE Kapseln",
+  "alternateName": "Cholecalciferol",
+  "description": "Vitamin D3 (Cholecalciferol) in einer Dosierung von 2000 IE pro Kapsel. Unterstützt die Kalziumaufnahme und trägt zur Erhaltung normaler Knochen bei.",
+  "url": "https://www.ernaehrungsshop.de/vitamin-d3-2000ie",
+  "activeIngredient": "Cholecalciferol (Vitamin D3)",
+  "targetPopulation": "Erwachsene ab 18 Jahren, besonders empfohlen bei Vitamin-D-Mangel in den Wintermonaten",
+  "recommendedIntake": {
+    "@type": "RecommendedDoseSchedule",
+    "doseValue": 1,
+    "doseUnit": "Kapsel pro Tag",
+    "frequency": "täglich"
+  },
+  "maximumIntake": {
+    "@type": "MaximumDoseSchedule",
+    "doseValue": 4000,
+    "doseUnit": "IE/Tag",
+    "frequency": "täglich"
+  },
+  "mechanismOfAction": "Cholecalciferol wird in der Leber zu 25-Hydroxyvitamin D und in der Niere zur aktiven Form Calcitriol umgewandelt. Calcitriol reguliert die Kalzium- und Phosphataufnahme im Darm.",
+  "safetyConsideration": "Nicht bei Hyperkalzämie oder Nierensteinen anwenden. Bei Einnahme anderer Vitamin-D-haltiger Präparate Gesamtmenge beachten.",
+  "isProprietary": false,
+  "legalStatus": "Nahrungsergänzungsmittel (DE)",
+  "manufacturer": {
+    "@type": "Organization",
+    "name": "Vitamin Direkt GmbH"
+  }
+}
+&lt;/script&gt;</code></pre>
+
+        <!-- Section 4 -->
+        <h2 id="medicalcondition-schema" class="text-2xl font-bold text-gray-900 mt-10 mb-4">4. MedicalCondition Schema: Krankheitsbilder strukturieren</h2>
+        <p class="text-gray-700 leading-relaxed mb-4">
+            <code class="bg-gray-100 px-1 rounded">MedicalCondition</code> ist für Seiten geeignet, die Erkrankungen, Syndrome oder Symptomkomplexe beschreiben. Typische Anwendungsfälle sind Gesundheitsportale, Arzt-Informationsseiten oder Klinik-Websites mit Informationsseiten zu spezifischen Erkrankungen.
+        </p>
+        <p class="text-gray-700 leading-relaxed mb-4">
+            Zu MedicalCondition gehören auch spezifischere Untertypen wie <code class="bg-gray-100 px-1 rounded">InfectiousDisease</code>, <code class="bg-gray-100 px-1 rounded">MedicalSign</code>, <code class="bg-gray-100 px-1 rounded">MedicalSymptom</code> und <code class="bg-gray-100 px-1 rounded">MedicalRiskFactor</code>.
+        </p>
+
+        <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-3">Wichtige Properties für MedicalCondition</h3>
+        <div class="overflow-x-auto mb-6">
+            <table class="w-full text-sm border-collapse">
+                <thead>
+                    <tr class="bg-gray-50">
+                        <th class="border border-gray-200 px-4 py-2 text-left font-semibold text-gray-700">Property</th>
+                        <th class="border border-gray-200 px-4 py-2 text-left font-semibold text-gray-700">Typ</th>
+                        <th class="border border-gray-200 px-4 py-2 text-left font-semibold text-gray-700">Beschreibung</th>
+                    </tr>
+                </thead>
+                <tbody class="text-gray-700">
+                    <tr><td class="border border-gray-200 px-4 py-2 font-mono text-blue-700">name</td><td class="border border-gray-200 px-4 py-2">Text</td><td class="border border-gray-200 px-4 py-2">Name der Erkrankung (Pflicht)</td></tr>
+                    <tr class="bg-gray-50"><td class="border border-gray-200 px-4 py-2 font-mono text-blue-700">code</td><td class="border border-gray-200 px-4 py-2">MedicalCode</td><td class="border border-gray-200 px-4 py-2">ICD-10 oder SNOMED-Code</td></tr>
+                    <tr><td class="border border-gray-200 px-4 py-2 font-mono text-blue-700">possibleTreatment</td><td class="border border-gray-200 px-4 py-2">MedicalTherapy</td><td class="border border-gray-200 px-4 py-2">Behandlungsmöglichkeiten</td></tr>
+                    <tr class="bg-gray-50"><td class="border border-gray-200 px-4 py-2 font-mono text-blue-700">signOrSymptom</td><td class="border border-gray-200 px-4 py-2">MedicalSignOrSymptom</td><td class="border border-gray-200 px-4 py-2">Symptome und klinische Zeichen</td></tr>
+                    <tr><td class="border border-gray-200 px-4 py-2 font-mono text-blue-700">possibleComplication</td><td class="border border-gray-200 px-4 py-2">Text</td><td class="border border-gray-200 px-4 py-2">Mögliche Komplikationen</td></tr>
+                    <tr class="bg-gray-50"><td class="border border-gray-200 px-4 py-2 font-mono text-blue-700">riskFactor</td><td class="border border-gray-200 px-4 py-2">MedicalRiskFactor</td><td class="border border-gray-200 px-4 py-2">Risikofaktoren</td></tr>
+                    <tr><td class="border border-gray-200 px-4 py-2 font-mono text-blue-700">typicalTest</td><td class="border border-gray-200 px-4 py-2">MedicalTest</td><td class="border border-gray-200 px-4 py-2">Typische Diagnosemethoden</td></tr>
+                    <tr class="bg-gray-50"><td class="border border-gray-200 px-4 py-2 font-mono text-blue-700">epidemiology</td><td class="border border-gray-200 px-4 py-2">Text</td><td class="border border-gray-200 px-4 py-2">Häufigkeit und Verbreitung</td></tr>
+                    <tr><td class="border border-gray-200 px-4 py-2 font-mono text-blue-700">expectedPrognosis</td><td class="border border-gray-200 px-4 py-2">Text</td><td class="border border-gray-200 px-4 py-2">Erwarteter Krankheitsverlauf</td></tr>
+                    <tr class="bg-gray-50"><td class="border border-gray-200 px-4 py-2 font-mono text-blue-700">associatedAnatomy</td><td class="border border-gray-200 px-4 py-2">AnatomicalStructure</td><td class="border border-gray-200 px-4 py-2">Betroffene Körperregion</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-3">MedicalCondition-Beispiel: Typ-2-Diabetes</h3>
+        <pre class="bg-gray-900 text-green-400 rounded-xl p-6 overflow-x-auto text-sm mb-6"><code>&lt;script type="application/ld+json"&gt;
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalCondition",
+  "name": "Typ-2-Diabetes mellitus",
+  "alternateName": ["Diabetes Typ 2", "Nicht-insulinabhängiger Diabetes"],
+  "description": "Typ-2-Diabetes ist eine chronische Stoffwechselerkrankung, bei der der Körper Insulin nicht mehr effektiv nutzen kann (Insulinresistenz). Der Blutzuckerspiegel steigt dauerhaft an.",
+  "url": "https://www.gesundheitsportal.de/erkrankungen/diabetes-typ-2",
+  "code": {
+    "@type": "MedicalCode",
+    "codeValue": "E11",
+    "codingSystem": "ICD-10"
+  },
+  "signOrSymptom": [
+    {
+      "@type": "MedicalSymptom",
+      "name": "Erhöhter Blutzucker (Hyperglykämie)"
+    },
+    {
+      "@type": "MedicalSymptom",
+      "name": "Starker Durst und häufiges Wasserlassen"
+    },
+    {
+      "@type": "MedicalSymptom",
+      "name": "Müdigkeit und Abgeschlagenheit"
+    }
+  ],
+  "possibleTreatment": [
+    {
+      "@type": "MedicalTherapy",
+      "name": "Metformin (orale Antidiabetika)"
+    },
+    {
+      "@type": "MedicalTherapy",
+      "name": "Lebensstiländerung: Ernährungsumstellung und Bewegung"
+    }
+  ],
+  "riskFactor": [
+    {
+      "@type": "MedicalRiskFactor",
+      "name": "Übergewicht und Adipositas"
+    },
+    {
+      "@type": "MedicalRiskFactor",
+      "name": "Genetische Veranlagung"
+    },
+    {
+      "@type": "MedicalRiskFactor",
+      "name": "Bewegungsmangel"
+    }
+  ],
+  "possibleComplication": [
+    "Diabetische Retinopathie",
+    "Diabetische Nephropathie",
+    "Kardiovaskuläre Erkrankungen"
+  ],
+  "epidemiology": "Weltweit sind ca. 537 Millionen Menschen an Diabetes erkrankt, davon leiden etwa 90-95 % an Typ 2. In Deutschland sind es ca. 8 Millionen Betroffene.",
+  "recognizingAuthority": {
+    "@type": "Organization",
+    "name": "Deutsche Diabetes Gesellschaft (DDG)",
+    "url": "https://www.deutsche-diabetes-gesellschaft.de"
+  }
+}
+&lt;/script&gt;</code></pre>
+
+        <p class="text-gray-700 leading-relaxed mb-6">
+            Das <code class="bg-gray-100 px-1 rounded">recognizingAuthority</code>-Feld ist besonders wertvoll: Es signalisiert Google, dass die medizinische Fachgesellschaft hinter dem Inhalt steht — ein starkes E‑E‑A‑T-Signal. Mehr zur E‑E‑A‑T-Strategie findest du in unserem Artikel über <a href="/blog/eat-google-qualitaetssignale.html" class="text-blue-600 hover:underline">E-A-T als Google-Qualitätssignale</a>.
+        </p>
+
+        <!-- Section 5 -->
+        <h2 id="eeat-medizin" class="text-2xl font-bold text-gray-900 mt-10 mb-4">5. E-E-A-T für medizinische Seiten: Was Google wirklich will</h2>
+        <p class="text-gray-700 leading-relaxed mb-4">
+            Medizinische Inhalte gehören zu den YMYL-Themen (Your Money or Your Life), bei denen Google besonders hohe Anforderungen an <strong>Erfahrung, Expertise, Autorität und Vertrauenswürdigkeit</strong> stellt. Schema Markup allein reicht nicht — er muss von echter inhaltlicher Qualität flankiert werden.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+            <div class="bg-green-50 border border-green-200 rounded-xl p-5">
+                <h4 class="font-semibold text-green-900 mb-3">✅ Was Google positiv wertet</h4>
+                <ul class="text-green-800 text-sm space-y-2">
+                    <li>Autoren mit medizinischem Hintergrund (Arzt, Apotheker, Heilpraktiker)</li>
+                    <li><code>recognizingAuthority</code> auf offizielle Fachgesellschaften</li>
+                    <li>Quellenangaben und Studienlinks im Text</li>
+                    <li>Aktualisierungsdatum sichtbar angeben</li>
+                    <li>Medizinischen Review-Prozess dokumentieren</li>
+                    <li>Person-Schema mit Credential-Angaben für Autoren</li>
+                </ul>
+            </div>
+            <div class="bg-red-50 border border-red-200 rounded-xl p-5">
+                <h4 class="font-semibold text-red-900 mb-3">❌ Was Google abwertet</h4>
+                <ul class="text-red-800 text-sm space-y-2">
+                    <li>Anonym veröffentlichte medizinische Inhalte</li>
+                    <li>Fehlende oder veraltete Quellenangaben</li>
+                    <li>Schema.org-Markup ohne inhaltliche Substanz</li>
+                    <li>Übertriebene Heilversprechen ohne Belege</li>
+                    <li>Schema-Markup ohne passende Seiteninhalte</li>
+                    <li>ICD-Codes ohne erklärenden Text</li>
+                </ul>
+            </div>
+        </div>
+
+        <p class="text-gray-700 leading-relaxed mb-6">
+            Kombiniere das MedicalEntity-Schema immer mit einem <strong>Person-Schema</strong> für den Autor, das dessen medizinische Qualifikation enthält. Weitere Details zur Autorenauszeichnung findest du in unserem Artikel über <a href="/blog/person-schema-markup-seo.html" class="text-blue-600 hover:underline">Person Schema Markup für E-E-A-T</a>.
+        </p>
+
+        <!-- Section 6 -->
+        <h2 id="haeufige-fehler" class="text-2xl font-bold text-gray-900 mt-10 mb-4">6. Häufige Fehler und wie du sie vermeidest</h2>
+
+        <div class="space-y-4 mb-8">
+            <div class="border border-gray-200 rounded-xl p-5">
+                <h4 class="font-semibold text-gray-900 mb-2">Fehler 1: falscher Typ für Nahrungsergänzungsmittel</h4>
+                <p class="text-gray-700 text-sm">Viele Shops verwenden <code class="bg-gray-100 px-1 rounded">Drug</code> für Vitaminpräparate. Korrekt ist <code class="bg-gray-100 px-1 rounded">DietarySupplement</code>, da Nahrungsergänzungsmittel keine Arzneimittel sind. Falscher Typ kann zur Ablehnung im Rich-Results-Test führen.</p>
+            </div>
+            <div class="border border-gray-200 rounded-xl p-5">
+                <h4 class="font-semibold text-gray-900 mb-2">Fehler 2: prescriptionStatus fehlt bei Drug</h4>
+                <p class="text-gray-700 text-sm">Google erwartet bei <code class="bg-gray-100 px-1 rounded">Drug</code>-Markup die Angabe des Verschreibungsstatus. Nutze <code class="bg-gray-100 px-1 rounded">https://schema.org/OTC</code> für rezeptfreie oder <code class="bg-gray-100 px-1 rounded">https://schema.org/PrescriptionOnly</code> für verschreibungspflichtige Mittel.</p>
+            </div>
+            <div class="border border-gray-200 rounded-xl p-5">
+                <h4 class="font-semibold text-gray-900 mb-2">Fehler 3: Keine MedicalCode-Angabe</h4>
+                <p class="text-gray-700 text-sm">Ohne ATC-Code (Drug) oder ICD-10-Code (MedicalCondition) ist die maschinelle Verarbeitung deutlich eingeschränkt. Das <code class="bg-gray-100 px-1 rounded">code</code>-Property ist technisch optional, aber faktisch wichtig für den Nutzen des Markups.</p>
+            </div>
+            <div class="border border-gray-200 rounded-xl p-5">
+                <h4 class="font-semibold text-gray-900 mb-2">Fehler 4: Schema ohne inhaltliche Entsprechung</h4>
+                <p class="text-gray-700 text-sm">Wenn du im JSON-LD umfangreiche <code class="bg-gray-100 px-1 rounded">signOrSymptom</code>-Angaben machst, müssen diese auch im sichtbaren Seitentext vorhanden sein. Schema.org-Markup der sichtbaren Seite widersprechend zu befüllen kann als Spam gewertet werden.</p>
+            </div>
+            <div class="border border-gray-200 rounded-xl p-5">
+                <h4 class="font-semibold text-gray-900 mb-2">Fehler 5: Kein Warning-Hinweis bei Arzneimitteln</h4>
+                <p class="text-gray-700 text-sm">Das <code class="bg-gray-100 px-1 rounded">warning</code>-Property ist bei <code class="bg-gray-100 px-1 rounded">Drug</code> nicht optional aus Googles Sicht. Fehlende Warnhinweise bei Medikamenten sind auch aus rechtlicher Sicht (Heilmittelwerbegesetz) problematisch.</p>
+            </div>
+        </div>
+
+        <!-- Section 7 -->
+        <h2 id="fazit" class="text-2xl font-bold text-gray-900 mt-10 mb-4">7. Fazit und Checkliste</h2>
+        <p class="text-gray-700 leading-relaxed mb-4">
+            MedicalEntity-Schema ist eine der anspruchsvollsten Bereiche in Schema.org — aber auch einer der wirkungsvollsten für Gesundheitsseiten. Die Implementierung von <code class="bg-gray-100 px-1 rounded">Drug</code>, <code class="bg-gray-100 px-1 rounded">DietarySupplement</code> und <code class="bg-gray-100 px-1 rounded">MedicalCondition</code> signalisiert Google, dass du strukturierte, vollständige und vertrauenswürdige medizinische Informationen lieferst.
+        </p>
+
+        <div class="bg-blue-50 border border-blue-100 rounded-xl p-6 mb-8">
+            <h3 class="text-lg font-bold text-blue-900 mb-4">Implementierungs-Checkliste</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                <div class="space-y-2">
+                    <p class="font-semibold text-blue-800 text-sm">Drug</p>
+                    <label class="flex items-center space-x-2 text-blue-700 text-sm"><input type="checkbox" class="rounded"> <span><code>name</code> und <code>activeIngredient</code> angegeben</span></label>
+                    <label class="flex items-center space-x-2 text-blue-700 text-sm"><input type="checkbox" class="rounded"> <span><code>prescriptionStatus</code> gesetzt (OTC / PrescriptionOnly)</span></label>
+                    <label class="flex items-center space-x-2 text-blue-700 text-sm"><input type="checkbox" class="rounded"> <span><code>dosageForm</code> und <code>administrationRoute</code> ausgefüllt</span></label>
+                    <label class="flex items-center space-x-2 text-blue-700 text-sm"><input type="checkbox" class="rounded"> <span><code>warning</code>-Hinweis vorhanden</span></label>
+                    <label class="flex items-center space-x-2 text-blue-700 text-sm"><input type="checkbox" class="rounded"> <span>ATC-Code als <code>MedicalCode</code></span></label>
+                </div>
+                <div class="space-y-2">
+                    <p class="font-semibold text-blue-800 text-sm">DietarySupplement & MedicalCondition</p>
+                    <label class="flex items-center space-x-2 text-blue-700 text-sm"><input type="checkbox" class="rounded"> <span><code>targetPopulation</code> oder <code>epidemiology</code> beschrieben</span></label>
+                    <label class="flex items-center space-x-2 text-blue-700 text-sm"><input type="checkbox" class="rounded"> <span><code>recommendedIntake</code> bei Supplements angegeben</span></label>
+                    <label class="flex items-center space-x-2 text-blue-700 text-sm"><input type="checkbox" class="rounded"> <span>ICD-10-Code bei MedicalCondition</span></label>
+                    <label class="flex items-center space-x-2 text-blue-700 text-sm"><input type="checkbox" class="rounded"> <span><code>recognizingAuthority</code> auf Fachgesellschaft</span></label>
+                    <label class="flex items-center space-x-2 text-blue-700 text-sm"><input type="checkbox" class="rounded"> <span>Autor-Schema mit Qualifikation verknüpft</span></label>
+                </div>
+            </div>
+        </div>
+
+        <p class="text-gray-700 leading-relaxed mb-4">
+            Für die vollständige Arztpraxis- und Klinik-Auszeichnung empfiehlt sich die Kombination mit dem <a href="/blog/medicalclinic-hospital-schema-markup.html" class="text-blue-600 hover:underline">MedicalClinic und Hospital Schema Markup</a> sowie dem <a href="/blog/medicalwebpage-healthtopiccontent-schema-markup.html" class="text-blue-600 hover:underline">MedicalWebPage und HealthTopicContent Schema</a>.
+        </p>
+        <p class="text-gray-700 leading-relaxed mb-6">
+            Zur Überprüfung deines Markups nutze den <a href="/tools/json-ld-structured-data-validator.html" class="text-blue-600 hover:underline">JSON-LD Structured Data Validator</a> auf Shift07 — er prüft dein Schema kostenlos auf Syntax-Fehler und fehlende Pflichtfelder.
+        </p>
+
+        <!-- CTA -->
+        <div class="bg-gradient-to-r from-blue-600 to-blue-700 rounded-2xl p-8 text-center mt-10">
+            <h3 class="text-2xl font-bold text-white mb-3">Deine Website kostenlos analysieren</h3>
+            <p class="text-blue-100 mb-6">Prüfe in Sekunden, ob dein Schema Markup korrekt implementiert ist und welche SEO-Probleme deine Website hat.</p>
+            <a href="/#analyse" class="bg-white text-blue-600 px-8 py-3 rounded-xl font-bold hover:bg-blue-50 transition-colors inline-block">Jetzt kostenlos analysieren →</a>
+        </div>
+
+    </div>
+</main>
+
+<!-- Footer -->
+<footer class="bg-gray-900 text-gray-400 py-12 mt-16">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+            <div class="md:col-span-2">
+                <div class="flex items-center space-x-2 mb-4">
+                    <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-auto">
+                    <span class="text-white font-bold text-lg">Shift07</span>
+                </div>
+                <p class="text-gray-400 text-sm leading-relaxed">KI-gestütztes SEO-Analyse-Tool für kleine und mittlere Unternehmen. Sofort verstehen, was Google von deiner Website hält.</p>
+            </div>
+            <div>
+                <h4 class="text-white font-semibold mb-4">Tools</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="/tools/json-ld-structured-data-validator.html" class="hover:text-white transition-colors">JSON-LD Validator</a></li>
+                    <li><a href="/tools/medical-organization-schema-generator.html" class="hover:text-white transition-colors">Medical Schema Generator</a></li>
+                    <li><a href="/tools/meta-tag-generator.html" class="hover:text-white transition-colors">Meta Tag Generator</a></li>
+                    <li><a href="/tools/" class="hover:text-white transition-colors">Alle Tools →</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-semibold mb-4">Rechtliches</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="/impressum.html" class="hover:text-white transition-colors">Impressum</a></li>
+                    <li><a href="/datenschutz.html" class="hover:text-white transition-colors">Datenschutz</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="border-t border-gray-800 pt-8 text-center text-sm">
+            <p>© 2026 Thümmler AI GmbH · Leonardo-da-Vinci-Straße 15, 14467 Potsdam</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
