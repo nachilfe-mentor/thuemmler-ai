@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Sun, 03 May 2026 04:49:44 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 03 May 2026 04:53:15 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>MedicalProcedure &amp;amp; MedicalTherapy Schema Markup: Medizinische Eingriffe für Google</title>
+      <link>https://shift07.ai/blog/medicalprocedure-schema-markup.html</link>
+      <guid>https://shift07.ai/blog/medicalprocedure-schema-markup.html</guid>
+      <pubDate>Sun, 03 May 2026 04:52:43 +0000</pubDate>
+      <description>MedicalProcedure und MedicalTherapy Schema Markup: Wie du medizinische Eingriffe, Therapien und Behandlungen mit JSON-LD für Google strukturierst. Mit vollständigen Beispielen.</description>
+      <category>SEO</category>
+    </item>
     <item>
       <title>TaxiReservation Schema Markup: Buchbare Taxifahrten für Google Rich Results</title>
       <link>https://shift07.ai/blog/taxireservation-schema-markup-seo.html</link>
@@ -158,14 +166,6 @@
       <pubDate>Thu, 30 Apr 2026 04:29:56 +0000</pubDate>
       <description>LiquorStore und WineStore Schema Markup korrekt implementieren. JSON-LD für Spirituosengeschäfte, Weinhandlungen und Getränkemärkte — mit vollständigen Codebeispielen für Google Rich Results.</description>
       <category>SEO</category>
-    </item>
-    <item>
-      <title>BicycleStore &amp;amp; Florist Schema Markup: JSON-LD für Fahrradgeschäfte und Blumenläden</title>
-      <link>https://shift07.ai/blog/bicyclestore-florist-schema-markup.html</link>
-      <guid>https://shift07.ai/blog/bicyclestore-florist-schema-markup.html</guid>
-      <pubDate>Thu, 30 Apr 2026 02:50:51 +0000</pubDate>
-      <description>BicycleStore und Florist Schema Markup korrekt implementieren – vollständige JSON-LD Beispiele für Fahrradläden, Fahrradwerkstätten und Blumenläden mit Öffnungszeiten und Bewertungen.</description>
-      <category>Schema Markup</category>
     </item>
   </channel>
 </rss>
