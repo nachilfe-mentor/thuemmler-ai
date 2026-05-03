@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K1S1RXBDS8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K1S1RXBDS8');
+    </script>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8475857002943858" crossorigin="anonymous"></script>
+    <title>TouristAttraction Schema Generator – JSON-LD für Sehenswürdigkeiten kostenlos erstellen | Shift07</title>
+    <meta name="description" content="TouristAttraction Schema Generator: JSON-LD für Sehenswürdigkeiten, Denkmäler und historische Gebäude kostenlos erstellen. Mit Öffnungszeiten, Geo-Koordinaten und Bewertungen.">
+    <meta name="keywords" content="TouristAttraction Schema Generator, JSON-LD Sehenswürdigkeiten, Schema Markup Denkmal, LandmarksOrHistoricalBuildings JSON-LD, touristattraction structured data">
+    <meta name="author" content="Thümmler AI GmbH">
+    <link rel="icon" type="image/png" href="/logo.png">
+    <link rel="canonical" href="https://shift07.ai/tools/touristattraction-schema-generator.html">
+    <!-- Open Graph -->
+    <meta property="og:title" content="TouristAttraction Schema Generator – JSON-LD für Sehenswürdigkeiten kostenlos erstellen">
+    <meta property="og:description" content="JSON-LD für TouristAttraction und LandmarksOrHistoricalBuildings kostenlos generieren. Mit Öffnungszeiten, Geo-Koordinaten, Bewertungen und Eintrittspreisen.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://shift07.ai/tools/touristattraction-schema-generator.html">
+    <meta property="og:image" content="https://shift07.ai/tools/images/touristattraction-schema-generator.png">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="Shift07">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="TouristAttraction Schema Generator – JSON-LD kostenlos erstellen">
+    <meta name="twitter:description" content="JSON-LD für Sehenswürdigkeiten, Denkmäler und historische Gebäude kostenlos generieren.">
+    <meta name="twitter:image" content="https://shift07.ai/tools/images/touristattraction-schema-generator.png">
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "TouristAttraction Schema Generator",
+      "description": "JSON-LD für TouristAttraction und LandmarksOrHistoricalBuildings kostenlos generieren. Mit Öffnungszeiten, Geo-Koordinaten, Bewertungen und Eintrittspreisen.",
+      "url": "https://shift07.ai/tools/touristattraction-schema-generator.html",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR"
+      },
+      "provider": {
+        "@type": "Organization",
+        "name": "Thümmler AI GmbH",
+        "url": "https://shift07.ai"
+      }
+    }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: { extend: { fontFamily: { 'inter': ['Inter', 'system-ui', 'sans-serif'] } } }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', system-ui, sans-serif; }
+        .form-label { display: block; font-size: 0.875rem; font-weight: 500; color: #94a3b8; margin-bottom: 0.375rem; }
+        .form-input { width: 100%; background: rgba(30,41,59,0.8); border: 1px solid rgba(255,255,255,0.1); border-radius: 0.5rem; padding: 0.625rem 0.875rem; color: #f1f5f9; font-size: 0.875rem; outline: none; transition: border-color 0.15s; }
+        .form-input:focus { border-color: rgba(59,130,246,0.6); box-shadow: 0 0 0 2px rgba(59,130,246,0.15); }
+        .form-select { width: 100%; background: rgba(30,41,59,0.8); border: 1px solid rgba(255,255,255,0.1); border-radius: 0.5rem; padding: 0.625rem 0.875rem; color: #f1f5f9; font-size: 0.875rem; outline: none; }
+        .form-select:focus { border-color: rgba(59,130,246,0.6); }
+        .section-card { background: rgba(30,41,59,0.6); border: 1px solid rgba(255,255,255,0.08); border-radius: 1rem; padding: 1.5rem; margin-bottom: 1.25rem; }
+        .section-title { font-size: 1rem; font-weight: 700; color: #f1f5f9; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem; }
+        pre { white-space: pre-wrap; word-break: break-all; }
+        .badge { display: inline-flex; align-items: center; gap: 0.25rem; font-size: 0.75rem; font-weight: 600; padding: 0.2rem 0.6rem; border-radius: 9999px; }
+        .opening-row { display: grid; grid-template-columns: 1fr 1fr 1fr 32px; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem; }
+    </style>
+</head>
+<body class="bg-slate-900 text-white min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-slate-900/80 backdrop-blur-xl border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <a href="/" class="flex items-center gap-2">
+                    <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                    <span class="text-xl font-bold text-white">Shift07</span>
+                </a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="/" class="text-gray-300 hover:text-white transition-colors">SEO-Tool</a>
+                    <a href="/blog/" class="text-gray-300 hover:text-white transition-colors">Blog</a>
+                    <a href="/tools/" class="text-white font-medium border-b-2 border-blue-500 pb-0.5">Tools</a>
+                    <a href="/app/#/login" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-5 py-2 rounded-lg font-medium transition-all">Anmelden</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-gray-300 hover:text-white">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900/95 border-b border-white/10">
+            <div class="px-4 py-3 space-y-2">
+                <a href="/" class="block py-2 text-gray-300">SEO-Tool</a>
+                <a href="/blog/" class="block py-2 text-gray-300">Blog</a>
+                <a href="/tools/" class="block py-2 text-white font-medium">Tools</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="pt-24 pb-10 px-4">
+        <div class="max-w-4xl mx-auto text-center">
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 bg-blue-500/10 border border-blue-500/20 rounded-full text-blue-400 text-sm font-medium mb-6">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                Schema Markup Generator
+            </div>
+            <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-4">TouristAttraction Schema Generator</h1>
+            <p class="text-xl text-gray-400 max-w-2xl mx-auto">JSON-LD für Sehenswürdigkeiten, Denkmäler und historische Gebäude kostenlos erstellen — für Google Rich Results optimiert.</p>
+        </div>
+    </section>
+
+    <!-- Main Tool -->
+    <section class="pb-16 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid lg:grid-cols-2 gap-8">
+
+                <!-- Input Form -->
+                <div>
+                    <!-- Typ-Auswahl -->
+                    <div class="section-card">
+                        <div class="section-title">
+                            <svg class="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"/></svg>
+                            Schema-Typ
+                        </div>
+                        <div>
+                            <label class="form-label">Schema-Typ wählen</label>
+                            <select id="schemaType" class="form-select" onchange="generateSchema()">
+                                <option value="TouristAttraction">TouristAttraction (Sehenswürdigkeit)</option>
+                                <option value="LandmarksOrHistoricalBuildings">LandmarksOrHistoricalBuildings (Denkmal / hist. Gebäude)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Basisinformationen -->
+                    <div class="section-card">
+                        <div class="section-title">
+                            <svg class="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                            Basisinformationen
+                        </div>
+                        <div class="space-y-4">
+                            <div>
+                                <label class="form-label">Name der Sehenswürdigkeit *</label>
+                                <input type="text" id="name" class="form-input" placeholder="z. B. Brandenburger Tor" oninput="generateSchema()">
+                            </div>
+                            <div>
+                                <label class="form-label">Beschreibung</label>
+                                <textarea id="description" class="form-input" rows="3" placeholder="Kurze Beschreibung der Sehenswürdigkeit" oninput="generateSchema()"></textarea>
+                            </div>
+                            <div>
+                                <label class="form-label">Website-URL</label>
+                                <input type="url" id="url" class="form-input" placeholder="https://example.de/sehenswuerdigkeit" oninput="generateSchema()">
+                            </div>
+                            <div>
+                                <label class="form-label">Bild-URL</label>
+                                <input type="url" id="image" class="form-input" placeholder="https://example.de/images/sehenswuerdigkeit.jpg" oninput="generateSchema()">
+                            </div>
+                            <div>
+                                <label class="form-label">Telefonnummer</label>
+                                <input type="tel" id="telephone" class="form-input" placeholder="+49 30 12345678" oninput="generateSchema()">
+                            </div>
+                            <div>
+                                <label class="form-label">Google Maps URL (hasMap)</label>
+                                <input type="url" id="hasMap" class="form-input" placeholder="https://maps.google.com/maps?q=..." oninput="generateSchema()">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Adresse -->
+                    <div class="section-card">
+                        <div class="section-title">
+                            <svg class="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/></svg>
+                            Adresse
+                        </div>
+                        <div class="space-y-4">
+                            <div>
+                                <label class="form-label">Straße und Hausnummer</label>
+                                <input type="text" id="street" class="form-input" placeholder="z. B. Pariser Platz" oninput="generateSchema()">
+                            </div>
+                            <div class="grid grid-cols-3 gap-3">
+                                <div>
+                                    <label class="form-label">PLZ</label>
+                                    <input type="text" id="postalCode" class="form-input" placeholder="10117" oninput="generateSchema()">
+                                </div>
+                                <div class="col-span-2">
+                                    <label class="form-label">Ort</label>
+                                    <input type="text" id="city" class="form-input" placeholder="Berlin" oninput="generateSchema()">
+                                </div>
+                            </div>
+                            <div>
+                                <label class="form-label">Land</label>
+                                <select id="country" class="form-select" onchange="generateSchema()">
+                                    <option value="DE">Deutschland</option>
+                                    <option value="AT">Österreich</option>
+                                    <option value="CH">Schweiz</option>
+                                    <option value="LU">Luxemburg</option>
+                                    <option value="LI">Liechtenstein</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Geo-Koordinaten -->
+                    <div class="section-card">
+                        <div class="section-title">
+                            <svg class="w-5 h-5 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/></svg>
+                            Geo-Koordinaten
+                        </div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <label class="form-label">Breitengrad (Latitude)</label>
+                                <input type="text" id="latitude" class="form-input" placeholder="52.5163" oninput="generateSchema()">
+                            </div>
+                            <div>
+                                <label class="form-label">Längengrad (Longitude)</label>
+                                <input type="text" id="longitude" class="form-input" placeholder="13.3777" oninput="generateSchema()">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Eintritt & Zugänglichkeit -->
+                    <div class="section-card">
+                        <div class="section-title">
+                            <svg class="w-5 h-5 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 5v2m0 4v2m0 4v2M5 5a2 2 0 00-2 2v3a2 2 0 110 4v3a2 2 0 002 2h14a2 2 0 002-2v-3a2 2 0 110-4V7a2 2 0 00-2-2H5z"/></svg>
+                            Eintritt &amp; Zugänglichkeit
+                        </div>
+                        <div class="space-y-4">
+                            <div>
+                                <label class="form-label">Kostenloser Eintritt?</label>
+                                <select id="isAccessibleForFree" class="form-select" onchange="generateSchema()">
+                                    <option value="">– Keine Angabe –</option>
+                                    <option value="true">Ja, kostenloser Eintritt</option>
+                                    <option value="false">Nein, Eintritt kostenpflichtig</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="form-label">Preisbereich (priceRange)</label>
+                                <input type="text" id="priceRange" class="form-input" placeholder="z. B. € oder 5–15 EUR" oninput="generateSchema()">
+                            </div>
+                            <div>
+                                <label class="form-label">Öffentlich zugänglich? (publicAccess)</label>
+                                <select id="publicAccess" class="form-select" onchange="generateSchema()">
+                                    <option value="">– Keine Angabe –</option>
+                                    <option value="true">Ja</option>
+                                    <option value="false">Nein (Privatgelände)</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="form-label">Maximale Besucherkapazität</label>
+                                <input type="number" id="maxCapacity" class="form-input" placeholder="z. B. 500" oninput="generateSchema()">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Öffnungszeiten -->
+                    <div class="section-card">
+                        <div class="section-title">
+                            <svg class="w-5 h-5 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                            Öffnungszeiten
+                        </div>
+                        <div id="opening-hours-container">
+                            <!-- JS-rendered -->
+                        </div>
+                        <button type="button" onclick="addOpeningHoursRow()" class="mt-2 text-blue-400 hover:text-blue-300 text-sm font-medium flex items-center gap-1">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
+                            Zeile hinzufügen
+                        </button>
+                    </div>
+
+                    <!-- Bewertung -->
+                    <div class="section-card">
+                        <div class="section-title">
+                            <svg class="w-5 h-5 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/></svg>
+                            Bewertung (AggregateRating)
+                        </div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <label class="form-label">Durchschnittsbewertung (1–5)</label>
+                                <input type="number" id="ratingValue" min="1" max="5" step="0.1" class="form-input" placeholder="4.5" oninput="generateSchema()">
+                            </div>
+                            <div>
+                                <label class="form-label">Anzahl Bewertungen</label>
+                                <input type="number" id="reviewCount" class="form-input" placeholder="128" oninput="generateSchema()">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SameAs / Externe Verlinkungen -->
+                    <div class="section-card">
+                        <div class="section-title">
+                            <svg class="w-5 h-5 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
+                            Externe Verlinkungen (sameAs)
+                        </div>
+                        <div class="space-y-3">
+                            <div>
+                                <label class="form-label">Wikipedia-URL</label>
+                                <input type="url" id="sameAsWikipedia" class="form-input" placeholder="https://de.wikipedia.org/wiki/..." oninput="generateSchema()">
+                            </div>
+                            <div>
+                                <label class="form-label">Wikidata-URL</label>
+                                <input type="url" id="sameAsWikidata" class="form-input" placeholder="https://www.wikidata.org/wiki/Q..." oninput="generateSchema()">
+                            </div>
+                            <div>
+                                <label class="form-label">Weitere URL (z. B. Google Knowledge Graph)</label>
+                                <input type="url" id="sameAsOther" class="form-input" placeholder="https://..." oninput="generateSchema()">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sprache -->
+                    <div class="section-card">
+                        <div class="section-title">
+                            <svg class="w-5 h-5 text-teal-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"/></svg>
+                            Verfügbare Sprachen
+                        </div>
+                        <div>
+                            <label class="form-label">Sprachen (availableLanguage, kommagetrennt)</label>
+                            <input type="text" id="availableLanguage" class="form-input" placeholder="de, en, fr" oninput="generateSchema()">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Output -->
+                <div class="lg:sticky lg:top-20 self-start space-y-4">
+                    <div class="bg-slate-800/80 border border-white/10 rounded-2xl overflow-hidden">
+                        <div class="flex items-center justify-between px-5 py-4 border-b border-white/10">
+                            <div class="flex items-center gap-3">
+                                <div class="w-2.5 h-2.5 rounded-full bg-green-400 animate-pulse"></div>
+                                <span class="text-sm font-semibold text-white">JSON-LD Output</span>
+                            </div>
+                            <button onclick="copySchema()" id="copyBtn" class="flex items-center gap-2 text-xs font-medium bg-blue-600/20 hover:bg-blue-600/40 text-blue-400 px-3 py-1.5 rounded-lg transition-all">
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                                Kopieren
+                            </button>
+                        </div>
+                        <div class="p-5">
+                            <pre id="schemaOutput" class="text-xs text-green-300 leading-relaxed max-h-[70vh] overflow-y-auto"></pre>
+                        </div>
+                    </div>
+
+                    <!-- Validierungs-Hinweise -->
+                    <div id="validationHints" class="bg-slate-800/50 border border-white/10 rounded-xl p-4 space-y-2">
+                    </div>
+
+                    <!-- Info-Box -->
+                    <div class="bg-blue-500/10 border border-blue-500/20 rounded-xl p-4">
+                        <p class="text-blue-300 text-xs font-semibold mb-2">Pflichtfelder für Google</p>
+                        <ul class="text-gray-400 text-xs space-y-1">
+                            <li>• <strong class="text-gray-300">name</strong>: Name der Sehenswürdigkeit</li>
+                            <li>• <strong class="text-gray-300">description</strong>: Beschreibung</li>
+                            <li>• <strong class="text-gray-300">url</strong>: Kanonische URL</li>
+                            <li>• <strong class="text-gray-300">geo</strong>: Koordinaten für lokale Suche</li>
+                        </ul>
+                    </div>
+
+                    <!-- Related Links -->
+                    <div class="bg-slate-800/50 border border-white/10 rounded-xl p-4">
+                        <p class="text-sm font-semibold text-white mb-3">Weiterführende Artikel</p>
+                        <div class="space-y-2">
+                            <a href="/blog/touristattraction-landmarkshistoricalbuildings-schema-markup.html" class="block text-blue-400 hover:text-blue-300 text-xs">TouristAttraction &amp; Landmarks Schema Markup Anleitung →</a>
+                            <a href="/blog/lokales-seo-kleine-unternehmen.html" class="block text-blue-400 hover:text-blue-300 text-xs">Lokales SEO für Sehenswürdigkeiten →</a>
+                            <a href="/tools/json-ld-structured-data-validator.html" class="block text-blue-400 hover:text-blue-300 text-xs">JSON-LD Structured Data Validator →</a>
+                            <a href="/tools/openinghours-schema-generator.html" class="block text-blue-400 hover:text-blue-300 text-xs">OpeningHours Schema Generator →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEO-Infoblock -->
+    <section class="py-12 px-4 border-t border-white/10">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-2xl font-bold text-white mb-6">TouristAttraction Schema Markup: Was du wissen musst</h2>
+            <div class="prose prose-invert max-w-none text-gray-400 space-y-4 text-sm leading-relaxed">
+                <p>Das <strong class="text-white">TouristAttraction Schema Markup</strong> ist ein Schema.org-Typ, der Sehenswürdigkeiten, Freizeitattraktionen und touristische Ziele für Suchmaschinen strukturiert beschreibt. Google nutzt diese Daten, um Standortinformationen, Öffnungszeiten und Bewertungen direkt in den Suchergebnissen anzuzeigen — besonders relevant für die lokale Suche und Google Maps.</p>
+                <p>Der verwandte Typ <strong class="text-white">LandmarksOrHistoricalBuildings</strong> ist ein direkter Untertyp von TouristAttraction und spezifisch für historische Gebäude, Denkmäler und Wahrzeichen gedacht. Beide Typen unterstützen die gleichen Properties — der Unterschied liegt ausschließlich im <code class="bg-slate-800 px-1 rounded text-blue-300">@type</code>-Wert.</p>
+                <p>Für die besten Rich-Result-Chancen solltest du Geo-Koordinaten (<strong class="text-white">latitude/longitude</strong>) immer angeben — sie sind der Schlüssel dafür, dass deine Attraktion in "In der Nähe"-Suchen und Google Maps-Ergebnissen erscheint. Lies mehr dazu im Artikel über <a href="/blog/touristattraction-landmarkshistoricalbuildings-schema-markup.html" class="text-blue-400 hover:text-blue-300">TouristAttraction &amp; LandmarksOrHistoricalBuildings Schema Markup</a>.</p>
+                <p>Nach der Implementierung kannst du dein Markup mit dem <a href="/tools/json-ld-structured-data-validator.html" class="text-blue-400 hover:text-blue-300">JSON-LD Structured Data Validator</a> auf Fehler prüfen.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/10 py-12 px-4">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="flex items-center gap-2">
+                <img src="/logo.png" alt="Shift07" class="h-8 w-8">
+                <span class="text-white font-bold">Shift07</span>
+            </div>
+            <div class="flex flex-wrap justify-center gap-6 text-sm text-gray-400">
+                <a href="/blog/" class="hover:text-white">Blog</a>
+                <a href="/tools/" class="hover:text-white">Tools</a>
+                <a href="/impressum.html" class="hover:text-white">Impressum</a>
+                <a href="/datenschutz.html" class="hover:text-white">Datenschutz</a>
+            </div>
+            <p class="text-gray-500 text-sm">© 2026 Thümmler AI GmbH</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        const DAYS = [
+            { value: 'Monday', label: 'Mo' },
+            { value: 'Tuesday', label: 'Di' },
+            { value: 'Wednesday', label: 'Mi' },
+            { value: 'Thursday', label: 'Do' },
+            { value: 'Friday', label: 'Fr' },
+            { value: 'Saturday', label: 'Sa' },
+            { value: 'Sunday', label: 'So' }
+        ];
+
+        let openingRows = [
+            { days: ['Monday','Tuesday','Wednesday','Thursday','Friday'], opens: '09:00', closes: '18:00' }
+        ];
+
+        function renderOpeningHours() {
+            const container = document.getElementById('opening-hours-container');
+            container.innerHTML = openingRows.map((row, idx) => `
+                <div class="mb-3 bg-slate-700/40 rounded-lg p-3">
+                    <div class="flex flex-wrap gap-1.5 mb-2">
+                        ${DAYS.map(d => `
+                            <button type="button" onclick="toggleDay(${idx},'${d.value}')"
+                                class="text-xs px-2 py-1 rounded font-medium transition-all ${row.days.includes(d.value) ? 'bg-blue-600 text-white' : 'bg-slate-700 text-gray-400 hover:bg-slate-600'}">
+                                ${d.label}
+                            </button>
+                        `).join('')}
+                    </div>
+                    <div class="grid grid-cols-2 gap-3">
+                        <div>
+                            <label class="form-label text-xs">Öffnet</label>
+                            <input type="time" value="${row.opens}" onchange="updateRow(${idx},'opens',this.value)" class="form-input text-sm">
+                        </div>
+                        <div>
+                            <label class="form-label text-xs">Schließt</label>
+                            <input type="time" value="${row.closes}" onchange="updateRow(${idx},'closes',this.value)" class="form-input text-sm">
+                        </div>
+                    </div>
+                    ${openingRows.length > 1 ? `<button type="button" onclick="removeRow(${idx})" class="mt-2 text-red-400 hover:text-red-300 text-xs">Zeile entfernen</button>` : ''}
+                </div>
+            `).join('');
+            generateSchema();
+        }
+
+        function toggleDay(idx, day) {
+            if (openingRows[idx].days.includes(day)) {
+                openingRows[idx].days = openingRows[idx].days.filter(d => d !== day);
+            } else {
+                openingRows[idx].days.push(day);
+            }
+            renderOpeningHours();
+        }
+
+        function updateRow(idx, field, value) {
+            openingRows[idx][field] = value;
+            generateSchema();
+        }
+
+        function removeRow(idx) {
+            openingRows.splice(idx, 1);
+            renderOpeningHours();
+        }
+
+        function addOpeningHoursRow() {
+            openingRows.push({ days: [], opens: '09:00', closes: '18:00' });
+            renderOpeningHours();
+        }
+
+        function gv(id) { return document.getElementById(id)?.value?.trim() || ''; }
+
+        function generateSchema() {
+            const type = gv('schemaType') || 'TouristAttraction';
+            const name = gv('name');
+            const description = gv('description');
+            const url = gv('url');
+            const image = gv('image');
+            const telephone = gv('telephone');
+            const hasMap = gv('hasMap');
+            const street = gv('street');
+            const postalCode = gv('postalCode');
+            const city = gv('city');
+            const country = gv('country') || 'DE';
+            const latitude = gv('latitude');
+            const longitude = gv('longitude');
+            const isAccessibleForFree = gv('isAccessibleForFree');
+            const priceRange = gv('priceRange');
+            const publicAccess = gv('publicAccess');
+            const maxCapacity = gv('maxCapacity');
+            const ratingValue = gv('ratingValue');
+            const reviewCount = gv('reviewCount');
+            const sameAsWikipedia = gv('sameAsWikipedia');
+            const sameAsWikidata = gv('sameAsWikidata');
+            const sameAsOther = gv('sameAsOther');
+            const availableLanguage = gv('availableLanguage');
+
+            const schema = { "@context": "https://schema.org", "@type": type };
+
+            if (name) schema.name = name;
+            if (description) schema.description = description;
+            if (url) schema.url = url;
+            if (image) schema.image = image;
+            if (telephone) schema.telephone = telephone;
+            if (hasMap) schema.hasMap = hasMap;
+
+            const hasAddress = street || postalCode || city;
+            if (hasAddress) {
+                schema.address = { "@type": "PostalAddress" };
+                if (street) schema.address.streetAddress = street;
+                if (postalCode) schema.address.postalCode = postalCode;
+                if (city) schema.address.addressLocality = city;
+                schema.address.addressCountry = country;
+            }
+
+            if (latitude && longitude) {
+                schema.geo = {
+                    "@type": "GeoCoordinates",
+                    "latitude": parseFloat(latitude),
+                    "longitude": parseFloat(longitude)
+                };
+            }
+
+            if (isAccessibleForFree !== '') schema.isAccessibleForFree = isAccessibleForFree === 'true';
+            if (priceRange) schema.priceRange = priceRange;
+            if (publicAccess !== '') schema.publicAccess = publicAccess === 'true';
+            if (maxCapacity) schema.maximumAttendeeCapacity = parseInt(maxCapacity);
+
+            const validRows = openingRows.filter(r => r.days.length > 0 && r.opens && r.closes);
+            if (validRows.length > 0) {
+                schema.openingHoursSpecification = validRows.map(r => ({
+                    "@type": "OpeningHoursSpecification",
+                    "dayOfWeek": r.days.map(d => `https://schema.org/${d}`),
+                    "opens": r.opens + ':00',
+                    "closes": r.closes + ':00'
+                }));
+            }
+
+            if (ratingValue && reviewCount) {
+                schema.aggregateRating = {
+                    "@type": "AggregateRating",
+                    "ratingValue": parseFloat(ratingValue),
+                    "bestRating": 5,
+                    "worstRating": 1,
+                    "reviewCount": parseInt(reviewCount)
+                };
+            }
+
+            const sameAsArr = [sameAsWikipedia, sameAsWikidata, sameAsOther].filter(Boolean);
+            if (sameAsArr.length === 1) schema.sameAs = sameAsArr[0];
+            else if (sameAsArr.length > 1) schema.sameAs = sameAsArr;
+
+            if (availableLanguage) {
+                const langs = availableLanguage.split(',').map(l => l.trim()).filter(Boolean);
+                if (langs.length === 1) schema.availableLanguage = langs[0];
+                else if (langs.length > 1) schema.availableLanguage = langs;
+            }
+
+            const jsonStr = JSON.stringify(schema, null, 2);
+            const wrapped = `<script type="application/ld+json">\n${jsonStr}\n<\/script>`;
+            document.getElementById('schemaOutput').textContent = wrapped;
+
+            renderValidation(schema);
+        }
+
+        function renderValidation(schema) {
+            const hints = [];
+            if (!schema.name) hints.push({ type: 'error', msg: 'name fehlt — Pflichtfeld für Google' });
+            if (!schema.description) hints.push({ type: 'warn', msg: 'description fehlt — empfohlen für Rich Results' });
+            if (!schema.url) hints.push({ type: 'warn', msg: 'url fehlt — empfohlen für kanonische Verlinkung' });
+            if (!schema.geo) hints.push({ type: 'info', msg: 'geo fehlt — Koordinaten für lokale Suche wichtig' });
+            if (!schema.openingHoursSpecification) hints.push({ type: 'info', msg: 'Öffnungszeiten fehlen — für Knowledge Panel relevant' });
+            if (!schema.aggregateRating) hints.push({ type: 'info', msg: 'AggregateRating fehlt — steigert Klickrate in Suchergebnissen' });
+
+            const colors = { error: 'text-red-400 bg-red-500/10', warn: 'text-yellow-400 bg-yellow-500/10', info: 'text-blue-400 bg-blue-500/10' };
+            const icons = { error: '✗', warn: '⚠', info: 'ℹ' };
+
+            document.getElementById('validationHints').innerHTML = hints.length === 0
+                ? '<p class="text-green-400 text-sm font-medium">✓ Alle Pflichtfelder ausgefüllt</p>'
+                : hints.map(h => `<div class="text-xs px-3 py-2 rounded-lg ${colors[h.type]} flex items-start gap-2"><span class="font-bold mt-0.5">${icons[h.type]}</span><span>${h.msg}</span></div>`).join('');
+        }
+
+        function copySchema() {
+            const text = document.getElementById('schemaOutput').textContent;
+            navigator.clipboard.writeText(text).then(() => {
+                const btn = document.getElementById('copyBtn');
+                btn.textContent = '✓ Kopiert!';
+                btn.classList.add('bg-green-600/20', 'text-green-400');
+                setTimeout(() => {
+                    btn.innerHTML = '<svg class="w-3.5 h-3.5 inline mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>Kopieren';
+                    btn.classList.remove('bg-green-600/20', 'text-green-400');
+                }, 2000);
+            });
+        }
+
+        // Init
+        renderOpeningHours();
+        generateSchema();
+    </script>
+</body>
+</html>
