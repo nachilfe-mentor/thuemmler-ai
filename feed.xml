@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Tue, 05 May 2026 04:24:41 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 05 May 2026 06:13:25 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>SEO-Fehler bei deutschen Friseursalons: Auswertung von 79 Salon-Websites</title>
+      <link>https://shift07.ai/blog/seo-fehler-friseursalons-deutsche-salons.html</link>
+      <guid>https://shift07.ai/blog/seo-fehler-friseursalons-deutsche-salons.html</guid>
+      <pubDate>Tue, 05 May 2026 06:12:55 +0000</pubDate>
+      <description>Wir haben 79 Friseursalon-Websites in Deutschland analysiert. Ergebnis: 75% leiden unter JavaScript-Überladung, 68% haben kein Schema Markup, 38% fehlt eine Meta-Description. Die vollständige Auswertung mit konkreten Tipps.</description>
+      <category>Datenanalyse</category>
+    </item>
     <item>
       <title>MedicalStudy &amp; MedicalTrial Schema Markup: Klinische Studien für Google strukturieren</title>
       <link>https://shift07.ai/blog/medicalstudy-medicaltrial-schema-markup.html</link>
@@ -157,14 +165,6 @@
       <guid>https://shift07.ai/blog/depositoryinstitution-entertainmentbusiness-schema-markup.html</guid>
       <pubDate>Fri, 01 May 2026 01:53:13 +0000</pubDate>
       <description>DepositoryInstitution und EntertainmentBusiness Schema Markup: JSON-LD für Banken, Kreditinstitute, Kinos, Clubs und Unterhaltungsbetriebe. Mit vollständigen Codebeispielen für 2026.</description>
-      <category>Schema Markup</category>
-    </item>
-    <item>
-      <title>OutletStore Schema Markup: JSON-LD für Outlet-Geschäfte und Factory Outlets</title>
-      <link>https://shift07.ai/blog/outletstore-schema-markup.html</link>
-      <guid>https://shift07.ai/blog/outletstore-schema-markup.html</guid>
-      <pubDate>Fri, 01 May 2026 00:17:41 +0000</pubDate>
-      <description>OutletStore Schema Markup korrekt implementieren: JSON-LD Beispiele für Outlet-Center, Factory Outlets und Fabrikverkäufe mit allen Properties und Validierungs-Tipps für Google Rich Results.</description>
       <category>Schema Markup</category>
     </item>
   </channel>
