@@ -14,7 +14,7 @@
   </url>
   <url>
     <loc>https://shift07.ai/tools/</loc>
-    <lastmod>2026-05-03</lastmod>
+    <lastmod>2026-05-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1473,6 +1473,12 @@
   <url>
     <loc>https://shift07.ai/tools/medicalclinic-hospital-schema-generator.html</loc>
     <lastmod>2026-04-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://shift07.ai/tools/medicalprocedure-schema-generator.html</loc>
+    <lastmod>2026-05-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
