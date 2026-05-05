@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Tue, 05 May 2026 02:33:09 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 05 May 2026 04:21:36 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>MedicalStudy &amp; MedicalTrial Schema Markup: Klinische Studien für Google strukturieren</title>
+      <link>https://shift07.ai/blog/medicalstudy-medicaltrial-schema-markup.html</link>
+      <guid>https://shift07.ai/blog/medicalstudy-medicaltrial-schema-markup.html</guid>
+      <pubDate>Tue, 05 May 2026 04:20:46 +0000</pubDate>
+      <description>MedicalStudy und MedicalTrial Schema Markup vollständig erklärt: JSON-LD-Implementierung für klinische Studien, Beobachtungsstudien und medizinische Versuche mit Praxisbeispielen.</description>
+      <category>Schema Markup</category>
+    </item>
     <item>
       <title>Action Schema Markup: SearchAction, BuyAction und OrderAction für Google</title>
       <link>https://shift07.ai/blog/action-schema-markup-searchaction-buyaction-orderaction.html</link>
@@ -157,14 +165,6 @@
       <guid>https://shift07.ai/blog/outletstore-schema-markup.html</guid>
       <pubDate>Fri, 01 May 2026 00:17:41 +0000</pubDate>
       <description>OutletStore Schema Markup korrekt implementieren: JSON-LD Beispiele für Outlet-Center, Factory Outlets und Fabrikverkäufe mit allen Properties und Validierungs-Tipps für Google Rich Results.</description>
-      <category>Schema Markup</category>
-    </item>
-    <item>
-      <title>PawnShop &amp;amp; WholesaleStore Schema Markup: JSON-LD für Pfandleihhäuser und Großhandel</title>
-      <link>https://shift07.ai/blog/pawnshop-wholesalestore-schema-markup.html</link>
-      <guid>https://shift07.ai/blog/pawnshop-wholesalestore-schema-markup.html</guid>
-      <pubDate>Fri, 01 May 2026 00:11:06 +0000</pubDate>
-      <description>Lerne, wie du PawnShop und WholesaleStore Schema Markup korrekt implementierst. Mit JSON-LD Beispielen, allen Properties und Fehlervermeidung für Pfandleihhäuser und Großhandelsbetriebe.</description>
       <category>Schema Markup</category>
     </item>
   </channel>
