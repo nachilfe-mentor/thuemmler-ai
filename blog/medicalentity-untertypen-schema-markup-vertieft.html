@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedicalEntity Untertypen vertieft: Drug, MedicalCondition, MedicalProcedure und alle Sub-Typen für Google | Shift07 Blog</title>
+    <meta name="description" content="MedicalEntity Schema Markup vertieft: Alle Untertypen von Drug über MedicalCondition bis MedicalDevice richtig in JSON-LD implementieren. Mit Codebeispielen und Validierungs-Checkliste.">
+    <meta name="author" content="Thümmler AI GmbH">
+    <link rel="icon" type="image/png" href="/logo.png">
+    <link rel="canonical" href="https://shift07.ai/blog/medicalentity-untertypen-schema-markup-vertieft.html">
+    <link rel="alternate" type="application/rss+xml" title="Shift07 Blog" href="https://shift07.ai/feed.xml">
+    <!-- Open Graph -->
+    <meta property="og:title" content="MedicalEntity Untertypen vertieft: Drug, MedicalCondition, MedicalProcedure und alle Sub-Typen für Google | Shift07 Blog">
+    <meta property="og:description" content="MedicalEntity Schema Markup vertieft: Alle Untertypen von Drug über MedicalCondition bis MedicalDevice richtig in JSON-LD implementieren. Mit Codebeispielen und Validierungs-Checkliste.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://shift07.ai/blog/medicalentity-untertypen-schema-markup-vertieft.html">
+    <meta property="og:image" content="https://shift07.ai/blog/images/medicalentity-untertypen-vertieft.png">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="Shift07">
+    <meta property="article:published_time" content="2026-05-05T10:30:00+02:00">
+    <meta property="article:section" content="Schema Markup">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="MedicalEntity Untertypen vertieft: Drug, MedicalCondition, MedicalProcedure für Google">
+    <meta name="twitter:description" content="MedicalEntity Schema Markup vertieft: Alle Untertypen richtig in JSON-LD implementieren. Mit Codebeispielen und Validierungs-Checkliste.">
+    <meta name="twitter:image" content="https://shift07.ai/blog/images/medicalentity-untertypen-vertieft.png">
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "MedicalEntity Untertypen vertieft: Drug, MedicalCondition, MedicalProcedure und alle Sub-Typen für Google",
+      "description": "MedicalEntity Schema Markup vertieft: Alle Untertypen von Drug über MedicalCondition bis MedicalDevice richtig in JSON-LD implementieren. Mit Codebeispielen und Validierungs-Checkliste.",
+      "image": "https://shift07.ai/blog/images/medicalentity-untertypen-vertieft.png",
+      "datePublished": "2026-05-05T10:30:00+02:00",
+      "dateModified": "2026-05-05T10:30:00+02:00",
+      "author": {
+        "@type": "Organization",
+        "name": "Shift07",
+        "url": "https://shift07.ai"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Shift07",
+        "url": "https://shift07.ai",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://shift07.ai/assets/logo.png"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://shift07.ai/blog/medicalentity-untertypen-schema-markup-vertieft.html"
+      }
+    }
+    </script>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K1S1RXBDS8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K1S1RXBDS8');
+    </script>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8475857002943858" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-inter bg-white text-gray-900">
+
+    <!-- Navigation -->
+    <nav class="border-b border-gray-100 sticky top-0 bg-white z-50">
+        <div class="max-w-4xl mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="/" class="flex items-center gap-2 text-xl font-bold text-gray-900 hover:text-blue-600 transition-colors">
+                <img src="/logo.png" alt="Shift07" class="h-8 w-8">
+                Shift07
+            </a>
+            <div class="flex items-center gap-6 text-sm font-medium text-gray-600">
+                <a href="/blog" class="hover:text-blue-600 transition-colors">Blog</a>
+                <a href="/tools" class="hover:text-blue-600 transition-colors">Tools</a>
+                <a href="https://shift07.ai" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">SEO-Analyse</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Article Header -->
+    <header class="max-w-4xl mx-auto px-6 pt-12 pb-8">
+        <div class="flex items-center gap-2 text-sm text-blue-600 font-medium mb-4">
+            <a href="/blog" class="hover:underline">Blog</a>
+            <span class="text-gray-400">/</span>
+            <span>Schema Markup</span>
+        </div>
+        <h1 class="text-4xl font-extrabold text-gray-900 leading-tight mb-6">
+            MedicalEntity Untertypen vertieft: Drug, MedicalCondition, MedicalProcedure und alle Sub-Typen für Google
+        </h1>
+        <p class="text-xl text-gray-600 leading-relaxed mb-8">
+            <a href="/blog/medicalentity-drug-dietarysupplement-schema-markup.html" class="text-blue-600 hover:underline">MedicalEntity Schema Markup</a> hat eine umfangreiche Typhierarchie. Dieser vertiefte Leitfaden erklärt alle wichtigen Untertypen — von <strong>Drug</strong> über <strong>MedicalCondition</strong> bis <strong>MedicalDevice</strong> — mit JSON-LD-Beispielen und praktischen Implementierungshinweisen für Gesundheitswebsites.
+        </p>
+        <div class="flex items-center gap-4 text-sm text-gray-500 border-t border-gray-100 pt-6">
+            <span>von <strong class="text-gray-700">Shift07-Redaktion</strong></span>
+            <span>•</span>
+            <time datetime="2026-05-05">5. Mai 2026</time>
+            <span>•</span>
+            <span>15 Min. Lesezeit</span>
+        </div>
+    </header>
+
+    <!-- Hero Image -->
+    <div class="max-w-4xl mx-auto px-6 mb-10">
+        <img src="/blog/images/medicalentity-untertypen-vertieft.png"
+             alt="MedicalEntity Untertypen Schema Markup vertieft: Drug, MedicalCondition und alle Sub-Typen für Google"
+             class="w-full rounded-2xl shadow-md">
+    </div>
+
+    <!-- Article Content -->
+    <article class="max-w-4xl mx-auto px-6 pb-16">
+
+        <!-- Inhaltsverzeichnis -->
+        <div class="bg-blue-50 rounded-xl p-6 mb-10">
+            <h2 class="text-lg font-bold text-gray-900 mb-4">Inhaltsverzeichnis</h2>
+            <ol class="space-y-2 text-blue-700 text-sm font-medium">
+                <li><a href="#medicalentity-hierarchie" class="hover:underline">1. Die MedicalEntity-Typhierarchie im Überblick</a></li>
+                <li><a href="#drug" class="hover:underline">2. Drug: Arzneimittel strukturiert beschreiben</a></li>
+                <li><a href="#medicalcondition" class="hover:underline">3. MedicalCondition: Krankheitsbilder für Google</a></li>
+                <li><a href="#medicalprocedure-vertieft" class="hover:underline">4. MedicalProcedure: Eingriffe und Therapien</a></li>
+                <li><a href="#medicaldevice" class="hover:underline">5. MedicalDevice: Medizinische Geräte</a></li>
+                <li><a href="#medicaltest" class="hover:underline">6. MedicalTest: Diagnosen und Tests</a></li>
+                <li><a href="#anatomicalstructure" class="hover:underline">7. AnatomicalStructure: Körperteile und Systeme</a></li>
+                <li><a href="#kombination" class="hover:underline">8. Untertypen kombinieren: vollständige Gesundheitsseite</a></li>
+                <li><a href="#google-anforderungen" class="hover:underline">9. Google-spezifische Anforderungen für Medical Content</a></li>
+                <li><a href="#fazit" class="hover:underline">10. Fazit und Checkliste</a></li>
+            </ol>
+        </div>
+
+        <!-- 1. Hierarchie -->
+        <section id="medicalentity-hierarchie" class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-900 mb-4">1. Die MedicalEntity-Typhierarchie im Überblick</h2>
+            <p class="text-gray-700 leading-relaxed mb-4">
+                <strong>MedicalEntity</strong> ist der übergeordnete Schema.org-Typ für alle medizinischen Entitäten. Er ist der Basistyp für eine breite Hierarchie von Untertypen, die spezifische Aspekte des Gesundheitswesens beschreiben. Im Gegensatz zu allgemeinen <a href="/blog/strukturierte-daten-seo-schema-markup.html" class="text-blue-600 hover:underline">strukturierten Daten</a> sind MedicalEntity-Typen ausschließlich für medizinische Inhalte gedacht.
+            </p>
+            <div class="bg-gray-50 rounded-xl p-6 mb-6 font-mono text-sm">
+                <div class="text-gray-700">
+                    <div class="font-bold text-gray-900 mb-2">MedicalEntity</div>
+                    <div class="ml-4 space-y-1">
+                        <div>├── <span class="text-blue-700 font-medium">Drug</span> (Arzneimittel)</div>
+                        <div>│   ├── DietarySupplement (Nahrungsergänzung)</div>
+                        <div>│   └── PrescriptionOnly ← Property</div>
+                        <div>├── <span class="text-blue-700 font-medium">MedicalCondition</span> (Erkrankungen)</div>
+                        <div>│   ├── InfectiousDisease</div>
+                        <div>│   ├── MedicalSign / MedicalSymptom</div>
+                        <div>│   └── MedicalIndication</div>
+                        <div>├── <span class="text-blue-700 font-medium">MedicalProcedure</span> (Eingriffe)</div>
+                        <div>│   ├── DiagnosticProcedure</div>
+                        <div>│   ├── SurgicalProcedure</div>
+                        <div>│   ├── TherapeuticProcedure</div>
+                        <div>│   └── PhysicalActivity ← Untertyp</div>
+                        <div>├── <span class="text-blue-700 font-medium">MedicalDevice</span> (Medizingeräte)</div>
+                        <div>├── <span class="text-blue-700 font-medium">MedicalTest</span> (Diagnose-Tests)</div>
+                        <div>│   ├── BloodTest</div>
+                        <div>│   ├── ImagingTest</div>
+                        <div>│   ├── PathologyTest</div>
+                        <div>│   └── PhysicalExam</div>
+                        <div>└── <span class="text-blue-700 font-medium">AnatomicalStructure</span> (Anatomie)</div>
+                        <div>    ├── Bone, Muscle, Nerve, ...</div>
+                        <div>    └── AnatomicalSystem</div>
+                    </div>
+                </div>
+            </div>
+            <p class="text-gray-700 leading-relaxed mb-4">
+                Alle MedicalEntity-Untertypen teilen gemeinsame Properties:
+            </p>
+            <ul class="list-disc pl-6 space-y-2 text-gray-700 mb-6">
+                <li><code class="bg-gray-100 px-2 py-0.5 rounded text-sm">code</code>: Medizinische Klassifikationscodes (ICD-10, SNOMED CT, etc.)</li>
+                <li><code class="bg-gray-100 px-2 py-0.5 rounded text-sm">guideline</code>: Medizinische Leitlinien, die diesen Typ behandeln</li>
+                <li><code class="bg-gray-100 px-2 py-0.5 rounded text-sm">legalStatus</code>: Rechtlicher Status (z. B. verschreibungspflichtig)</li>
+                <li><code class="bg-gray-100 px-2 py-0.5 rounded text-sm">medicineSystem</code>: Medizinsystem (Allopathie, Homöopathie, etc.)</li>
+                <li><code class="bg-gray-100 px-2 py-0.5 rounded text-sm">recognizingAuthority</code>: Anerkennende Behörde (z. B. EMA, BfArM)</li>
+                <li><code class="bg-gray-100 px-2 py-0.5 rounded text-sm">relevantSpecialty</code>: Medizinische Fachrichtung</li>
+                <li><code class="bg-gray-100 px-2 py-0.5 rounded text-sm">study</code>: Verweis auf klinische Studien</li>
+            </ul>
+        </section>
+
+        <!-- 2. Drug -->
+        <section id="drug" class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-900 mb-4">2. Drug: Arzneimittel strukturiert beschreiben</h2>
+            <p class="text-gray-700 leading-relaxed mb-4">
+                Der Typ <strong>Drug</strong> beschreibt Arzneimittel, Medikamente und Wirkstoffe. Er eignet sich für Apotheken-Websites, Beipackzettel-Portale und pharmazeutische Fachinformationen.
+            </p>
+
+            <h3 class="text-xl font-semibold text-gray-900 mb-3">Drug-spezifische Properties</h3>
+            <div class="overflow-x-auto mb-6">
+                <table class="w-full border-collapse">
+                    <thead>
+                        <tr class="bg-gray-100">
+                            <th class="text-left px-4 py-3 text-sm font-semibold text-gray-700 border border-gray-200">Property</th>
+                            <th class="text-left px-4 py-3 text-sm font-semibold text-gray-700 border border-gray-200">Beschreibung</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="px-4 py-3 text-sm border border-gray-200"><code class="bg-gray-100 px-1 rounded">activeIngredient</code></td><td class="px-4 py-3 text-sm text-gray-700 border border-gray-200">Aktiver Wirkstoff des Medikaments</td></tr>
+                        <tr class="bg-gray-50"><td class="px-4 py-3 text-sm border border-gray-200"><code class="bg-gray-100 px-1 rounded">administrationRoute</code></td><td class="px-4 py-3 text-sm text-gray-700 border border-gray-200">Verabreichungsweg (oral, intravenös, topisch, etc.)</td></tr>
+                        <tr><td class="px-4 py-3 text-sm border border-gray-200"><code class="bg-gray-100 px-1 rounded">availableStrength</code></td><td class="px-4 py-3 text-sm text-gray-700 border border-gray-200">Verfügbare Wirkstärken (DrugStrength-Objekt)</td></tr>
+                        <tr class="bg-gray-50"><td class="px-4 py-3 text-sm border border-gray-200"><code class="bg-gray-100 px-1 rounded">clinicalPharmacology</code></td><td class="px-4 py-3 text-sm text-gray-700 border border-gray-200">Klinisch-pharmakologische Beschreibung</td></tr>
+                        <tr><td class="px-4 py-3 text-sm border border-gray-200"><code class="bg-gray-100 px-1 rounded">dosageForm</code></td><td class="px-4 py-3 text-sm text-gray-700 border border-gray-200">Darreichungsform (Tablette, Kapsel, Lösung, etc.)</td></tr>
+                        <tr class="bg-gray-50"><td class="px-4 py-3 text-sm border border-gray-200"><code class="bg-gray-100 px-1 rounded">drugClass</code></td><td class="px-4 py-3 text-sm text-gray-700 border border-gray-200">Wirkstoffklasse (z. B. Betablocker, SSRI)</td></tr>
+                        <tr><td class="px-4 py-3 text-sm border border-gray-200"><code class="bg-gray-100 px-1 rounded">drugUnit</code></td><td class="px-4 py-3 text-sm text-gray-700 border border-gray-200">Einheit der Wirkstärke (mg, ml, etc.)</td></tr>
+                        <tr class="bg-gray-50"><td class="px-4 py-3 text-sm border border-gray-200"><code class="bg-gray-100 px-1 rounded">foodWarning</code></td><td class="px-4 py-3 text-sm text-gray-700 border border-gray-200">Warnhinweise zu Lebensmittelwechselwirkungen</td></tr>
+                        <tr><td class="px-4 py-3 text-sm border border-gray-200"><code class="bg-gray-100 px-1 rounded">interactingDrug</code></td><td class="px-4 py-3 text-sm text-gray-700 border border-gray-200">Wechselwirkungen mit anderen Medikamenten</td></tr>
+                        <tr class="bg-gray-50"><td class="px-4 py-3 text-sm border border-gray-200"><code class="bg-gray-100 px-1 rounded">isProprietary</code></td><td class="px-4 py-3 text-sm text-gray-700 border border-gray-200">Ist es ein Markenmedikament? (true/false)</td></tr>
+                        <tr><td class="px-4 py-3 text-sm border border-gray-200"><code class="bg-gray-100 px-1 rounded">prescriptionStatus</code></td><td class="px-4 py-3 text-sm text-gray-700 border border-gray-200">PrescriptionStatus: OTC oder verschreibungspflichtig</td></tr>
+                        <tr class="bg-gray-50"><td class="px-4 py-3 text-sm border border-gray-200"><code class="bg-gray-100 px-1 rounded">warning</code></td><td class="px-4 py-3 text-sm text-gray-700 border border-gray-200">Allgemeine Warnhinweise</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3 class="text-xl font-semibold text-gray-900 mb-3">JSON-LD Beispiel: Arzneimittel</h3>
+            <pre class="bg-gray-900 text-green-300 p-6 rounded-xl text-sm overflow-x-auto mb-6"><code>&lt;script type="application/ld+json"&gt;
+{
+  "@context": "https://schema.org",
+  "@type": "Drug",
+  "name": "Ibuprofen 400 mg",
+  "description": "Ibuprofen ist ein nicht-steroidales Antirheumatikum (NSAR) zur Behandlung von leichten bis moderaten Schmerzen, Entzündungen und Fieber.",
+  "activeIngredient": "Ibuprofen",
+  "dosageForm": "Filmtablette",
+  "drugUnit": "mg",
+  "availableStrength": {
+    "@type": "DrugStrength",
+    "activeIngredient": "Ibuprofen",
+    "strengthValue": 400,
+    "strengthUnit": "mg"
+  },
+  "administrationRoute": "oral",
+  "prescriptionStatus": "OTC",
+  "isProprietary": false,
+  "drugClass": {
+    "@type": "DrugClass",
+    "name": "Nicht-steroidales Antirheumatikum (NSAR)"
+  },
+  "warning": "Nicht für Kinder unter 12 Jahren ohne ärztlichen Rat. Nicht bei bekannter Überempfindlichkeit gegen Ibuprofen.",
+  "foodWarning": "Einnahme mit Mahlzeiten empfohlen, um Magenreizungen zu vermeiden.",
+  "code": {
+    "@type": "MedicalCode",
+    "codeValue": "M01AE01",
+    "codingSystem": "ATC"
+  },
+  "legalStatus": {
+    "@type": "DrugLegalStatus",
+    "applicableLocation": "DE",
+    "legalStatus": "OTC"
+  }
+}
+&lt;/script&gt;</code></pre>
+        </section>
+
+        <!-- 3. MedicalCondition -->
+        <section id="medicalcondition" class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-900 mb-4">3. MedicalCondition: Krankheitsbilder für Google</h2>
+            <p class="text-gray-700 leading-relaxed mb-4">
+                <strong>MedicalCondition</strong> beschreibt Erkrankungen, Syndrome und medizinische Zustände. Gesundheitsportale, Kliniken und Arztpraxen nutzen diesen Typ für Patienteninformationsseiten. Wir haben die Grundlagen bereits im Artikel <a href="/blog/medicalentity-drug-dietarysupplement-schema-markup.html" class="text-blue-600 hover:underline">MedicalEntity Schema Markup</a> behandelt — hier gehen wir in die Tiefe.
+            </p>
+
+            <h3 class="text-xl font-semibold text-gray-900 mb-3">MedicalCondition-spezifische Properties</h3>
+            <div class="overflow-x-auto mb-6">
+                <table class="w-full border-collapse">
+                    <thead>
+                        <tr class="bg-gray-100">
+                            <th class="text-left px-4 py-3 text-sm font-semibold text-gray-700 border border-gray-200">Property</th>
+                            <th class="text-left px-4 py-3 text-sm font-semibold text-gray-700 border border-gray-200">Beschreibung</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="px-4 py-3 text-sm border border-gray-200"><code class="bg-gray-100 px-1 rounded">associatedAnatomy</code></td><td class="px-4 py-3 text-sm text-gray-700 border border-gray-200">Betroffene Körperregion oder anatomische Struktur</td></tr>
+                        <tr class="bg-gray-50"><td class="px-4 py-3 text-sm border border-gray-200"><code class="bg-gray-100 px-1 rounded">cause</code></td><td class="px-4 py-3 text-sm text-gray-700 border border-gray-200">Ursache(n) der Erkrankung (MedicalCause)</td></tr>
+                        <tr><td class="px-4 py-3 text-sm border border-gray-200"><code class="bg-gray-100 px-1 rounded">differentialDiagnosis</code></td><td class="px-4 py-3 text-sm text-gray-700 border border-gray-200">Differenzialdiagnosen (DDxElement)</td></tr>
+                        <tr class="bg-gray-50"><td class="px-4 py-3 text-sm border border-gray-200"><code class="bg-gray-100 px-1 rounded">epidemiology</code></td><td class="px-4 py-3 text-sm text-gray-700 border border-gray-200">Epidemiologische Angaben (Häufigkeit, Risikofaktoren)</td></tr>
+                        <tr><td class="px-4 py-3 text-sm border border-gray-200"><code class="bg-gray-100 px-1 rounded">expectedPrognosis</code></td><td class="px-4 py-3 text-sm text-gray-700 border border-gray-200">Erwartete Prognose bei typischem Verlauf</td></tr>
+                        <tr class="bg-gray-50"><td class="px-4 py-3 text-sm border border-gray-200"><code class="bg-gray-100 px-1 rounded">naturalProgression</code></td><td class="px-4 py-3 text-sm text-gray-700 border border-gray-200">Natürlicher Verlauf ohne Behandlung</td></tr>
+                        <tr><td class="px-4 py-3 text-sm border border-gray-200"><code class="bg-gray-100 px-1 rounded">pathophysiology</code></td><td class="px-4 py-3 text-sm text-gray-700 border border-gray-200">Pathophysiologische Beschreibung</td></tr>
+                        <tr class="bg-gray-50"><td class="px-4 py-3 text-sm border border-gray-200"><code class="bg-gray-100 px-1 rounded">possibleTreatment</code></td><td class="px-4 py-3 text-sm text-gray-700 border border-gray-200">Mögliche Behandlungen (MedicalTherapy)</td></tr>
+                        <tr><td class="px-4 py-3 text-sm border border-gray-200"><code class="bg-gray-100 px-1 rounded">primaryPrevention</code></td><td class="px-4 py-3 text-sm text-gray-700 border border-gray-200">Primärprävention (Vorbeugung vor Erkrankung)</td></tr>
+                        <tr class="bg-gray-50"><td class="px-4 py-3 text-sm border border-gray-200"><code class="bg-gray-100 px-1 rounded">riskFactor</code></td><td class="px-4 py-3 text-sm text-gray-700 border border-gray-200">Risikofaktoren (MedicalRiskFactor)</td></tr>
+                        <tr><td class="px-4 py-3 text-sm border border-gray-200"><code class="bg-gray-100 px-1 rounded">secondaryPrevention</code></td><td class="px-4 py-3 text-sm text-gray-700 border border-gray-200">Sekundärprävention (nach Diagnose)</td></tr>
+                        <tr class="bg-gray-50"><td class="px-4 py-3 text-sm border border-gray-200"><code class="bg-gray-100 px-1 rounded">signOrSymptom</code></td><td class="px-4 py-3 text-sm text-gray-700 border border-gray-200">Symptome und klinische Zeichen</td></tr>
+                        <tr><td class="px-4 py-3 text-sm border border-gray-200"><code class="bg-gray-100 px-1 rounded">stage</code></td><td class="px-4 py-3 text-sm text-gray-700 border border-gray-200">Krankheitsstadien (MedicalConditionStage)</td></tr>
+                        <tr class="bg-gray-50"><td class="px-4 py-3 text-sm border border-gray-200"><code class="bg-gray-100 px-1 rounded">typicalTest</code></td><td class="px-4 py-3 text-sm text-gray-700 border border-gray-200">Typische Diagnosetests für diese Erkrankung</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3 class="text-xl font-semibold text-gray-900 mb-3">JSON-LD Beispiel: Erkrankung mit Untertypen</h3>
+            <pre class="bg-gray-900 text-green-300 p-6 rounded-xl text-sm overflow-x-auto mb-6"><code>&lt;script type="application/ld+json"&gt;
+{
+  "@context": "https://schema.org",
+  "@type": "InfectiousDisease",
+  "name": "Influenza (Grippe)",
+  "alternateName": ["Virusgrippe", "Echte Grippe"],
+  "description": "Influenza ist eine hochansteckende Viruserkrankung der Atemwege, die durch Influenzaviren (Typ A, B, C) verursacht wird.",
+  "infectiousAgent": "Influenza-Virus (Typ A, B)",
+  "infectiousAgentClass": "Virus",
+  "transmissionMethod": "Tröpfcheninfektion, Schmierinfektion",
+  "signOrSymptom": [
+    {
+      "@type": "MedicalSymptom",
+      "name": "Plötzliches hohes Fieber (38–41 °C)"
+    },
+    {
+      "@type": "MedicalSymptom",
+      "name": "Starke Gliederschmerzen"
+    },
+    {
+      "@type": "MedicalSymptom",
+      "name": "Trockener Husten"
+    }
+  ],
+  "riskFactor": [
+    {
+      "@type": "MedicalRiskFactor",
+      "name": "Ältere Menschen (>65 Jahre)"
+    },
+    {
+      "@type": "MedicalRiskFactor",
+      "name": "Immungeschwächte Personen"
+    }
+  ],
+  "primaryPrevention": {
+    "@type": "MedicalTherapy",
+    "name": "Influenza-Schutzimpfung (jährlich empfohlen)"
+  },
+  "code": {
+    "@type": "MedicalCode",
+    "codeValue": "J10",
+    "codingSystem": "ICD-10"
+  },
+  "relevantSpecialty": {
+    "@type": "MedicalSpecialty",
+    "name": "Infektiologie"
+  }
+}
+&lt;/script&gt;</code></pre>
+
+            <h3 class="text-xl font-semibold text-gray-900 mb-3">Untertypen von MedicalCondition</h3>
+            <div class="grid md:grid-cols-2 gap-4 mb-6">
+                <div class="bg-blue-50 rounded-xl p-4">
+                    <h4 class="font-bold text-blue-900 mb-2">InfectiousDisease</h4>
+                    <p class="text-sm text-blue-700">Für Infektionskrankheiten. Zusätzliche Properties: <code>infectiousAgent</code>, <code>infectiousAgentClass</code>, <code>transmissionMethod</code></p>
+                </div>
+                <div class="bg-blue-50 rounded-xl p-4">
+                    <h4 class="font-bold text-blue-900 mb-2">MedicalSign / MedicalSymptom</h4>
+                    <p class="text-sm text-blue-700">Für einzelne Krankheitssymptome oder klinische Zeichen als eigenständige Schema-Objekte</p>
+                </div>
+                <div class="bg-blue-50 rounded-xl p-4">
+                    <h4 class="font-bold text-blue-900 mb-2">MedicalIndication</h4>
+                    <p class="text-sm text-blue-700">Medizinische Indikation für eine Behandlung (z. B. "Hypertonie als Indikation für Betablocker")</p>
+                </div>
+                <div class="bg-blue-50 rounded-xl p-4">
+                    <h4 class="font-bold text-blue-900 mb-2">MedicalContraindication</h4>
+                    <p class="text-sm text-blue-700">Kontraindikationen — wird häufig als Property bei Drug oder MedicalProcedure eingesetzt</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. MedicalProcedure vertieft -->
+        <section id="medicalprocedure-vertieft" class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-900 mb-4">4. MedicalProcedure: Eingriffe und Therapien vertieft</h2>
+            <p class="text-gray-700 leading-relaxed mb-4">
+                Den Typ <a href="/blog/medicalprocedure-schema-markup.html" class="text-blue-600 hover:underline">MedicalProcedure und MedicalTherapy</a> haben wir bereits im Grundlagenartikel behandelt. Hier vertiefen wir die wichtigsten Untertypen:
+            </p>
+
+            <div class="space-y-6 mb-6">
+                <div class="border border-gray-200 rounded-xl p-5">
+                    <h4 class="font-bold text-gray-900 mb-2">DiagnosticProcedure</h4>
+                    <p class="text-sm text-gray-700 mb-3">Für diagnostische Maßnahmen wie Blutabnahme, MRT oder Endoskopie. Enthält die Property <code>usedToDiagnose</code> für die zugehörige Erkrankung.</p>
+                    <pre class="bg-gray-900 text-green-300 p-4 rounded-lg text-xs overflow-x-auto"><code>{
+  "@type": "DiagnosticProcedure",
+  "name": "Magnetresonanztomographie (MRT) des Kniegelenks",
+  "usedToDiagnose": {
+    "@type": "MedicalCondition",
+    "name": "Meniskusriss"
+  },
+  "bodyLocation": "Kniegelenk",
+  "preparation": "Keine metallischen Implantate oder Herzschrittmacher"
+}</code></pre>
+                </div>
+
+                <div class="border border-gray-200 rounded-xl p-5">
+                    <h4 class="font-bold text-gray-900 mb-2">SurgicalProcedure</h4>
+                    <p class="text-sm text-gray-700 mb-3">Für chirurgische Eingriffe. Eignet sich ideal für Kliniken und Chirurgie-Praxen.</p>
+                    <pre class="bg-gray-900 text-green-300 p-4 rounded-lg text-xs overflow-x-auto"><code>{
+  "@type": "SurgicalProcedure",
+  "name": "Arthroskopische Meniskusresektion",
+  "bodyLocation": "Kniegelenk",
+  "followup": "Physiotherapie für 6-8 Wochen nach dem Eingriff",
+  "howPerformed": "Minimalinvasiver Eingriff unter Vollnarkose oder Spinalanästhesie"
+}</code></pre>
+                </div>
+
+                <div class="border border-gray-200 rounded-xl p-5">
+                    <h4 class="font-bold text-gray-900 mb-2">TherapeuticProcedure</h4>
+                    <p class="text-sm text-gray-700 mb-3">Für therapeutische Maßnahmen wie Physiotherapie, Strahlentherapie oder medikamentöse Therapien.</p>
+                    <pre class="bg-gray-900 text-green-300 p-4 rounded-lg text-xs overflow-x-auto"><code>{
+  "@type": "TherapeuticProcedure",
+  "name": "Manuelle Therapie bei Rückenschmerzen",
+  "indication": {
+    "@type": "MedicalIndication",
+    "name": "Chronische lumbale Rückenschmerzen"
+  },
+  "drug": {
+    "@type": "Drug",
+    "name": "Keine Medikamente erforderlich"
+  }
+}</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. MedicalDevice -->
+        <section id="medicaldevice" class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-900 mb-4">5. MedicalDevice: Medizinische Geräte</h2>
+            <p class="text-gray-700 leading-relaxed mb-4">
+                <strong>MedicalDevice</strong> beschreibt medizinische Geräte und Hilfsmittel — von Blutdruckmessgeräten über Prothesen bis hin zu Herzschrittmachern. Besonders nützlich für Medizintechnik-Hersteller und Sanitätshäuser.
+            </p>
+
+            <div class="overflow-x-auto mb-6">
+                <table class="w-full border-collapse">
+                    <thead>
+                        <tr class="bg-gray-100">
+                            <th class="text-left px-4 py-3 text-sm font-semibold text-gray-700 border border-gray-200">Property</th>
+                            <th class="text-left px-4 py-3 text-sm font-semibold text-gray-700 border border-gray-200">Beschreibung</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="px-4 py-3 text-sm border border-gray-200"><code class="bg-gray-100 px-1 rounded">adverseOutcome</code></td><td class="px-4 py-3 text-sm text-gray-700 border border-gray-200">Mögliche Nebenwirkungen oder Risiken bei der Anwendung</td></tr>
+                        <tr class="bg-gray-50"><td class="px-4 py-3 text-sm border border-gray-200"><code class="bg-gray-100 px-1 rounded">contraindication</code></td><td class="px-4 py-3 text-sm text-gray-700 border border-gray-200">Kontraindikationen für das Gerät</td></tr>
+                        <tr><td class="px-4 py-3 text-sm border border-gray-200"><code class="bg-gray-100 px-1 rounded">indication</code></td><td class="px-4 py-3 text-sm text-gray-700 border border-gray-200">Medizinische Indikation für die Anwendung</td></tr>
+                        <tr class="bg-gray-50"><td class="px-4 py-3 text-sm border border-gray-200"><code class="bg-gray-100 px-1 rounded">postOp</code></td><td class="px-4 py-3 text-sm text-gray-700 border border-gray-200">Postoperative Pflege nach Geräteeinsatz</td></tr>
+                        <tr><td class="px-4 py-3 text-sm border border-gray-200"><code class="bg-gray-100 px-1 rounded">preOp</code></td><td class="px-4 py-3 text-sm text-gray-700 border border-gray-200">Präoperative Vorbereitung</td></tr>
+                        <tr class="bg-gray-50"><td class="px-4 py-3 text-sm border border-gray-200"><code class="bg-gray-100 px-1 rounded">purpose</code></td><td class="px-4 py-3 text-sm text-gray-700 border border-gray-200">Medizinischer Zweck des Geräts</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3 class="text-xl font-semibold text-gray-900 mb-3">JSON-LD Beispiel: Medizinisches Gerät</h3>
+            <pre class="bg-gray-900 text-green-300 p-6 rounded-xl text-sm overflow-x-auto mb-6"><code>&lt;script type="application/ld+json"&gt;
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalDevice",
+  "name": "Kontinuierliches Glukose-Monitoring-System (CGM)",
+  "description": "Ein kleines Gerät, das unter die Haut platziert wird und kontinuierlich den Blutzuckerspiegel misst und auf einem Empfänger anzeigt.",
+  "indication": {
+    "@type": "MedicalIndication",
+    "name": "Diabetes mellitus Typ 1 und Typ 2"
+  },
+  "contraindication": "Nicht für Patienten mit Nickel-Allergie empfohlen",
+  "purpose": {
+    "@type": "MedicalTherapy",
+    "name": "Kontinuierliche Blutzuckerüberwachung zur verbesserten Diabeteskontrolle"
+  },
+  "recognizingAuthority": {
+    "@type": "Organization",
+    "name": "FDA / CE-Kennzeichnung"
+  }
+}
+&lt;/script&gt;</code></pre>
+        </section>
+
+        <!-- 6. MedicalTest -->
+        <section id="medicaltest" class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-900 mb-4">6. MedicalTest: Diagnosen und Tests</h2>
+            <p class="text-gray-700 leading-relaxed mb-4">
+                <strong>MedicalTest</strong> ist ein eigenständiger Typ (neben DiagnosticProcedure) für standardisierte medizinische Tests. Die Untertypen decken unterschiedliche Diagnoseverfahren ab:
+            </p>
+
+            <div class="grid md:grid-cols-2 gap-4 mb-6">
+                <div class="bg-gray-50 rounded-xl p-4">
+                    <h4 class="font-bold text-gray-900 mb-2">BloodTest</h4>
+                    <p class="text-sm text-gray-700">Blutuntersuchungen wie Blutbild, Cholesterin, HbA1c. Properties: <code>normalRange</code>, <code>usedToDiagnose</code></p>
+                </div>
+                <div class="bg-gray-50 rounded-xl p-4">
+                    <h4 class="font-bold text-gray-900 mb-2">ImagingTest</h4>
+                    <p class="text-sm text-gray-700">Bildgebende Verfahren: Röntgen, MRT, CT, Ultraschall. Enthält <code>imagingTechnique</code></p>
+                </div>
+                <div class="bg-gray-50 rounded-xl p-4">
+                    <h4 class="font-bold text-gray-900 mb-2">PathologyTest</h4>
+                    <p class="text-sm text-gray-700">Gewebeuntersuchungen und Biopsien für histologische Diagnosen</p>
+                </div>
+                <div class="bg-gray-50 rounded-xl p-4">
+                    <h4 class="font-bold text-gray-900 mb-2">PhysicalExam</h4>
+                    <p class="text-sm text-gray-700">Körperliche Untersuchungsmethoden wie Palpation, Auskultation, Reflexprüfung</p>
+                </div>
+            </div>
+
+            <pre class="bg-gray-900 text-green-300 p-6 rounded-xl text-sm overflow-x-auto mb-6"><code>&lt;script type="application/ld+json"&gt;
+{
+  "@context": "https://schema.org",
+  "@type": "BloodTest",
+  "name": "HbA1c-Test (Langzeit-Blutzucker)",
+  "description": "Der HbA1c-Wert zeigt den durchschnittlichen Blutzucker der letzten 2-3 Monate. Wichtiger Kontrollparameter bei Diabetes mellitus.",
+  "normalRange": "Unter 5,7 % = normal; 5,7–6,4 % = Prädiabetes; ≥ 6,5 % = Diabetes",
+  "usedToDiagnose": {
+    "@type": "MedicalCondition",
+    "name": "Diabetes mellitus"
+  },
+  "relevantSpecialty": {
+    "@type": "MedicalSpecialty",
+    "name": "Diabetologie"
+  }
+}
+&lt;/script&gt;</code></pre>
+        </section>
+
+        <!-- 7. AnatomicalStructure -->
+        <section id="anatomicalstructure" class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-900 mb-4">7. AnatomicalStructure: Körperteile und Systeme</h2>
+            <p class="text-gray-700 leading-relaxed mb-4">
+                <strong>AnatomicalStructure</strong> beschreibt Körperteile, Organe und anatomische Systeme. Dieser Typ eignet sich für medizinische Enzyklopädien, Anatomie-Websites und Klinik-Portale, die Körperstrukturen erklären.
+            </p>
+
+            <div class="overflow-x-auto mb-6">
+                <table class="w-full border-collapse">
+                    <thead>
+                        <tr class="bg-gray-100">
+                            <th class="text-left px-4 py-3 text-sm font-semibold text-gray-700 border border-gray-200">Property</th>
+                            <th class="text-left px-4 py-3 text-sm font-semibold text-gray-700 border border-gray-200">Beschreibung</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="px-4 py-3 text-sm border border-gray-200"><code class="bg-gray-100 px-1 rounded">associatedPathophysiology</code></td><td class="px-4 py-3 text-sm text-gray-700 border border-gray-200">Pathophysiologische Zusammenhänge dieser Struktur</td></tr>
+                        <tr class="bg-gray-50"><td class="px-4 py-3 text-sm border border-gray-200"><code class="bg-gray-100 px-1 rounded">bodyLocation</code></td><td class="px-4 py-3 text-sm text-gray-700 border border-gray-200">Lage im Körper (z. B. "Oberschenkel", "Thorax")</td></tr>
+                        <tr><td class="px-4 py-3 text-sm border border-gray-200"><code class="bg-gray-100 px-1 rounded">connectedTo</code></td><td class="px-4 py-3 text-sm text-gray-700 border border-gray-200">Verbundene Strukturen (andere AnatomicalStructure)</td></tr>
+                        <tr class="bg-gray-50"><td class="px-4 py-3 text-sm border border-gray-200"><code class="bg-gray-100 px-1 rounded">diagram</code></td><td class="px-4 py-3 text-sm text-gray-700 border border-gray-200">Anatomische Darstellung / Diagramm (ImageObject)</td></tr>
+                        <tr><td class="px-4 py-3 text-sm border border-gray-200"><code class="bg-gray-100 px-1 rounded">function</code></td><td class="px-4 py-3 text-sm text-gray-700 border border-gray-200">Biologische Funktion der Struktur</td></tr>
+                        <tr class="bg-gray-50"><td class="px-4 py-3 text-sm border border-gray-200"><code class="bg-gray-100 px-1 rounded">partOfSystem</code></td><td class="px-4 py-3 text-sm text-gray-700 border border-gray-200">Anatomisches System (AnatomicalSystem)</td></tr>
+                        <tr><td class="px-4 py-3 text-sm border border-gray-200"><code class="bg-gray-100 px-1 rounded">relatedCondition</code></td><td class="px-4 py-3 text-sm text-gray-700 border border-gray-200">Verwandte Erkrankungen dieser Struktur</td></tr>
+                        <tr class="bg-gray-50"><td class="px-4 py-3 text-sm border border-gray-200"><code class="bg-gray-100 px-1 rounded">relatedTherapy</code></td><td class="px-4 py-3 text-sm text-gray-700 border border-gray-200">Therapien die diese Struktur betreffen</td></tr>
+                        <tr><td class="px-4 py-3 text-sm border border-gray-200"><code class="bg-gray-100 px-1 rounded">subStructure</code></td><td class="px-4 py-3 text-sm text-gray-700 border border-gray-200">Unterstrukturen (z. B. Kammern des Herzens)</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <pre class="bg-gray-900 text-green-300 p-6 rounded-xl text-sm overflow-x-auto mb-4"><code>&lt;script type="application/ld+json"&gt;
+{
+  "@context": "https://schema.org",
+  "@type": "Ligament",
+  "name": "Vorderes Kreuzband (VKB)",
+  "description": "Das vordere Kreuzband ist ein wichtiges Stabilisierungsband des Kniegelenks, das das Schienbein an einem Vorwärtsrutschen gegenüber dem Oberschenkelknochen hindert.",
+  "bodyLocation": "Kniegelenk",
+  "function": "Stabilisierung des Kniegelenks, Verhinderung von Tibia-Vorwärtsverschiebung",
+  "partOfSystem": {
+    "@type": "AnatomicalSystem",
+    "name": "Muskuloskeletales System"
+  },
+  "relatedCondition": {
+    "@type": "MedicalCondition",
+    "name": "Vorderes Kreuzbandriss (VKB-Ruptur)"
+  }
+}
+&lt;/script&gt;</code></pre>
+        </section>
+
+        <!-- 8. Kombination -->
+        <section id="kombination" class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-900 mb-4">8. Untertypen kombinieren: vollständige Gesundheitsseite</h2>
+            <p class="text-gray-700 leading-relaxed mb-4">
+                Für eine umfassende medizinische Informationsseite (z. B. eine Erkrankungsseite auf einem Klinikportal) lassen sich mehrere MedicalEntity-Untertypen sinnvoll kombinieren:
+            </p>
+            <pre class="bg-gray-900 text-green-300 p-6 rounded-xl text-sm overflow-x-auto mb-6"><code>&lt;script type="application/ld+json"&gt;
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "MedicalCondition",
+    "name": "Typ-2-Diabetes",
+    "description": "Chronische Stoffwechselerkrankung mit Insulinresistenz und relativem Insulinmangel.",
+    "code": { "@type": "MedicalCode", "codeValue": "E11", "codingSystem": "ICD-10" },
+    "typicalTest": { "@type": "BloodTest", "name": "Nüchternblutzucker" },
+    "possibleTreatment": { "@type": "Drug", "name": "Metformin" }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "MedicalWebPage",
+    "name": "Typ-2-Diabetes: Ursachen, Symptome und Behandlung",
+    "url": "https://www.klinik-beispiel.de/erkrankungen/typ-2-diabetes",
+    "lastReviewed": "2026-03-01",
+    "reviewedBy": {
+      "@type": "Person",
+      "name": "Dr. med. M. Müller",
+      "hasCredential": "Facharzt für Innere Medizin, Diabetologie"
+    },
+    "about": {
+      "@type": "MedicalCondition",
+      "name": "Typ-2-Diabetes"
+    },
+    "audience": {
+      "@type": "MedicalAudience",
+      "audienceType": "Patient"
+    }
+  }
+]
+&lt;/script&gt;</code></pre>
+            <p class="text-gray-700 leading-relaxed mb-4">
+                Der Typ <strong>MedicalWebPage</strong> ist hier besonders wichtig: Er signalisiert Google, dass es sich um eine medizinische Informationsseite handelt, und ermöglicht zusätzliche Properties wie <code>lastReviewed</code> und <code>reviewedBy</code> — für die E-E-A-T-Signale, die für Gesundheitsinhalte besonders relevant sind.
+            </p>
+        </section>
+
+        <!-- 9. Google Anforderungen -->
+        <section id="google-anforderungen" class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-900 mb-4">9. Google-spezifische Anforderungen für Medical Content</h2>
+            <p class="text-gray-700 leading-relaxed mb-4">
+                Google hat für medizinische Inhalte besonders strenge Qualitätsrichtlinien (YMYL — Your Money or Your Life). Beim Einsatz von MedicalEntity-Markup beachte:
+            </p>
+
+            <div class="space-y-4 mb-6">
+                <div class="bg-yellow-50 border border-yellow-200 rounded-xl p-5">
+                    <h4 class="font-bold text-yellow-900 mb-2">⚠️ Medizinische Genauigkeit</h4>
+                    <p class="text-sm text-yellow-800">Google prüft medizinische Inhalte auf Genauigkeit und Aktualität. Schema Markup kann keine inhaltlichen Qualitätsmängel ausgleichen. Der Inhalt muss von ausgewiesenen Experten verfasst oder geprüft sein.</p>
+                </div>
+
+                <div class="bg-yellow-50 border border-yellow-200 rounded-xl p-5">
+                    <h4 class="font-bold text-yellow-900 mb-2">⚠️ E-E-A-T für Gesundheitsinhalte</h4>
+                    <p class="text-sm text-yellow-800">Experience, Expertise, Authoritativeness, Trustworthiness sind für YMYL-Seiten entscheidend. Nutze <code>MedicalWebPage.reviewedBy</code> mit einem echten Arzt und gib dessen Qualifikationen an.</p>
+                </div>
+
+                <div class="bg-green-50 border border-green-200 rounded-xl p-5">
+                    <h4 class="font-bold text-green-900 mb-2">✓ Empfohlene Kombination: MedicalWebPage + MedicalCondition</h4>
+                    <p class="text-sm text-green-700">Die Kombination von <code>MedicalWebPage</code> (Seiten-Metadaten) mit dem inhaltlichen Typ (z. B. <code>MedicalCondition</code>) ist die beste Praxis für Gesundheitsseiten. Nutze <code>about</code>, um beide zu verknüpfen.</p>
+                </div>
+
+                <div class="bg-green-50 border border-green-200 rounded-xl p-5">
+                    <h4 class="font-bold text-green-900 mb-2">✓ ICD-10 Codes angeben</h4>
+                    <p class="text-sm text-green-700">Wenn du <code>code</code> mit dem ICD-10-Code (z. B. "E11" für Typ-2-Diabetes) angibst, ermöglicht das Google eine präzisere Klassifikation. Das stärkt die Topical Authority für medizinische Suchbegriffe.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 10. Fazit -->
+        <section id="fazit" class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-900 mb-4">10. Fazit und Checkliste</h2>
+            <p class="text-gray-700 leading-relaxed mb-4">
+                Die MedicalEntity-Typhierarchie ist umfangreich, aber logisch aufgebaut. Mit dem richtigen Untertyp und den passenden Properties kannst du Google präzise mitteilen, welche Art von medizinischer Information deine Seite enthält — und damit für relevante Gesundheitssuchanfragen besser ranken.
+            </p>
+
+            <div class="bg-gray-50 rounded-xl p-6 mb-6">
+                <h4 class="font-semibold text-gray-900 mb-4">Checkliste: MedicalEntity Schema richtig implementieren</h4>
+                <ul class="space-y-2 text-sm text-gray-700">
+                    <li class="flex items-start gap-2"><span class="text-green-500 mt-0.5">✓</span> <span>Richtigen Untertyp wählen (Drug, MedicalCondition, MedicalProcedure, MedicalDevice, MedicalTest, AnatomicalStructure)</span></li>
+                    <li class="flex items-start gap-2"><span class="text-green-500 mt-0.5">✓</span> <span>ICD-10 oder andere Klassifikationscodes bei <code>code</code> angeben</span></li>
+                    <li class="flex items-start gap-2"><span class="text-green-500 mt-0.5">✓</span> <span><code>relevantSpecialty</code> angeben für die medizinische Fachrichtung</span></li>
+                    <li class="flex items-start gap-2"><span class="text-green-500 mt-0.5">✓</span> <span><code>MedicalWebPage</code> mit <code>reviewedBy</code> für E-E-A-T kombinieren</span></li>
+                    <li class="flex items-start gap-2"><span class="text-green-500 mt-0.5">✓</span> <span>Alle Schema-Angaben stimmen mit sichtbarem Inhalt überein</span></li>
+                    <li class="flex items-start gap-2"><span class="text-green-500 mt-0.5">✓</span> <span>Inhalte von medizinischen Experten verfasst oder geprüft</span></li>
+                    <li class="flex items-start gap-2"><span class="text-green-500 mt-0.5">✓</span> <span>Validierung mit dem <a href="/tools/json-ld-structured-data-validator" class="text-blue-600 hover:underline">JSON-LD Validator</a> und Google Rich Results Test</span></li>
+                </ul>
+            </div>
+
+            <p class="text-gray-700 leading-relaxed">
+                Wenn du prüfen möchtest, ob deine Gesundheitswebsite alle relevanten <a href="/blog/strukturierte-daten-seo-schema-markup.html" class="text-blue-600 hover:underline">strukturierten Daten</a> und SEO-Elemente korrekt implementiert hat, empfehle ich eine kostenlose Analyse auf <a href="https://shift07.ai" class="text-blue-600 hover:underline font-medium">shift07.ai</a>.
+            </p>
+        </section>
+
+        <!-- AdSense -->
+        <div class="my-8">
+            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8475857002943858" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        </div>
+
+        <!-- Related Articles -->
+        <div class="bg-gray-50 rounded-2xl p-8 mt-12">
+            <h3 class="text-xl font-bold text-gray-900 mb-6">Weiterführende Artikel</h3>
+            <div class="grid md:grid-cols-2 gap-4">
+                <a href="/blog/medicalentity-drug-dietarysupplement-schema-markup.html" class="block p-4 bg-white rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-sm transition-all">
+                    <div class="text-xs text-blue-600 font-medium mb-1">Schema Markup</div>
+                    <div class="font-semibold text-gray-900 text-sm">MedicalEntity Schema Markup: Drug, DietarySupplement & MedicalCondition</div>
+                </a>
+                <a href="/blog/medicalprocedure-schema-markup.html" class="block p-4 bg-white rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-sm transition-all">
+                    <div class="text-xs text-blue-600 font-medium mb-1">Schema Markup</div>
+                    <div class="font-semibold text-gray-900 text-sm">MedicalProcedure & MedicalTherapy Schema Markup: Medizinische Eingriffe für Google</div>
+                </a>
+                <a href="/blog/medicalclinic-hospital-schema-markup.html" class="block p-4 bg-white rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-sm transition-all">
+                    <div class="text-xs text-blue-600 font-medium mb-1">Schema Markup</div>
+                    <div class="font-semibold text-gray-900 text-sm">MedicalClinic & Hospital Schema Markup: Arztpraxis und Krankenhaus für Google</div>
+                </a>
+                <a href="/blog/medicalstudy-medicaltrial-schema-markup.html" class="block p-4 bg-white rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-sm transition-all">
+                    <div class="text-xs text-blue-600 font-medium mb-1">Schema Markup</div>
+                    <div class="font-semibold text-gray-900 text-sm">MedicalStudy & MedicalTrial Schema Markup: Klinische Studien für Google</div>
+                </a>
+            </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="mt-12 bg-gradient-to-r from-blue-600 to-blue-700 rounded-2xl p-8 text-center text-white">
+            <h3 class="text-2xl font-bold mb-3">Kostenlose SEO-Analyse für deine Website</h3>
+            <p class="text-blue-100 mb-6">Prüfe in Sekunden, welche strukturierten Daten und SEO-Elemente auf deiner Website fehlen.</p>
+            <a href="https://shift07.ai" class="inline-block bg-white text-blue-700 font-bold px-8 py-3 rounded-xl hover:bg-blue-50 transition-colors">
+                Jetzt kostenlos analysieren →
+            </a>
+        </div>
+
+    </article>
+
+    <!-- Footer -->
+    <footer class="border-t border-gray-100 py-10 mt-8">
+        <div class="max-w-4xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-gray-500">
+            <div class="flex items-center gap-2">
+                <img src="/logo.png" alt="Shift07" class="h-6 w-6">
+                <span>© 2026 Shift07 – Thümmler AI GmbH</span>
+            </div>
+            <div class="flex gap-6">
+                <a href="/blog" class="hover:text-blue-600 transition-colors">Blog</a>
+                <a href="/tools" class="hover:text-blue-600 transition-colors">Tools</a>
+                <a href="/impressum.html" class="hover:text-blue-600 transition-colors">Impressum</a>
+                <a href="/datenschutz.html" class="hover:text-blue-600 transition-colors">Datenschutz</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
