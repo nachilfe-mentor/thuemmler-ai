@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Sun, 03 May 2026 04:56:37 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 05 May 2026 00:46:05 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>EmployerAggregateRating Schema Markup: Arbeitgeberbewertungen für Google</title>
+      <link>https://shift07.ai/blog/employeraggregate-rating-schema-markup.html</link>
+      <guid>https://shift07.ai/blog/employeraggregate-rating-schema-markup.html</guid>
+      <pubDate>Tue, 05 May 2026 00:45:34 +0000</pubDate>
+      <description>EmployerAggregateRating Schema Markup erklärt: JSON-LD für Arbeitgeberbewertungen auf Kununu, Glassdoor &amp; Co. Mit vollständigem Codebeispiel und Best Practices für 2026.</description>
+      <category>Schema Markup</category>
+    </item>
     <item>
       <title>GovernmentService Schema Markup: Behörden und öffentliche Dienste für Google</title>
       <link>https://shift07.ai/blog/governmentservice-schema-markup.html</link>
@@ -158,14 +166,6 @@
       <pubDate>Thu, 30 Apr 2026 06:09:45 +0000</pubDate>
       <description>MobilePhoneStore und TireShop Schema Markup richtig einsetzen: JSON-LD Beispiele, alle Properties erklärt und häufige Fehler für Handygeschäfte und Reifenhändler.</description>
       <category>Schema Markup</category>
-    </item>
-    <item>
-      <title>JewelryStore &amp;amp; ShoeStore Schema Markup: JSON-LD für Juweliere und Schuhgeschäfte</title>
-      <link>https://shift07.ai/blog/jewelrystore-shoestore-schema-markup.html</link>
-      <guid>https://shift07.ai/blog/jewelrystore-shoestore-schema-markup.html</guid>
-      <pubDate>Thu, 30 Apr 2026 04:33:29 +0000</pubDate>
-      <description>JewelryStore und ShoeStore Schema Markup korrekt einsetzen. JSON-LD für Juweliergeschäfte, Uhrenhandlungen und Schuhgeschäfte — mit vollständigen Codebeispielen und Praxis-Tipps für Google Rich Results.</description>
-      <category>SEO</category>
     </item>
   </channel>
 </rss>
