@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Tue, 05 May 2026 08:05:44 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 05 May 2026 08:10:26 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>MedicalEntity Untertypen vertieft: Drug, MedicalCondition, MedicalProcedure und alle Sub-Typen für Google</title>
+      <link>https://shift07.ai/blog/medicalentity-untertypen-schema-markup-vertieft.html</link>
+      <guid>https://shift07.ai/blog/medicalentity-untertypen-schema-markup-vertieft.html</guid>
+      <pubDate>Tue, 05 May 2026 08:09:51 +0000</pubDate>
+      <description>MedicalEntity Schema Markup vertieft: Alle Untertypen von Drug über MedicalCondition bis MedicalDevice richtig in JSON-LD implementieren. Mit Codebeispielen und Validierungs-Checkliste.</description>
+      <category>Schema Markup</category>
+    </item>
     <item>
       <title>EmployerReview Schema Markup: Einzelbewertungen als Rich Snippets</title>
       <link>https://shift07.ai/blog/employerreview-schema-markup-einzelbewertungen.html</link>
@@ -157,14 +165,6 @@
       <guid>https://shift07.ai/blog/specialtystore-schema-markup-vertieft.html</guid>
       <pubDate>Fri, 01 May 2026 03:36:21 +0000</pubDate>
       <description>SpecialtyStore Schema Markup vertieft: JSON-LD für Antiquitäten, Kunstgalerien, Weinhandlungen, Buchläden und alle Spezialgeschäfte. Vollständige Codebeispiele und Profi-Tipps 2026.</description>
-      <category>Schema Markup</category>
-    </item>
-    <item>
-      <title>HealthClub &amp;amp; CivicStructure Schema Markup: Fitnessstudio und öffentliche Einrichtungen für Google</title>
-      <link>https://shift07.ai/blog/healthclub-civicstructure-schema-markup.html</link>
-      <guid>https://shift07.ai/blog/healthclub-civicstructure-schema-markup.html</guid>
-      <pubDate>Fri, 01 May 2026 02:00:04 +0000</pubDate>
-      <description>HealthClub und CivicStructure Schema Markup: JSON-LD für Fitnessstudios, Gesundheitsclubs, Stadthallen, Bibliotheken und öffentliche Gebäude. Mit vollständigen Codebeispielen 2026.</description>
       <category>Schema Markup</category>
     </item>
   </channel>
