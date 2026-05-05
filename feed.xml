@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Tue, 05 May 2026 06:16:26 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 05 May 2026 08:05:44 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>EmployerReview Schema Markup: Einzelbewertungen als Rich Snippets</title>
+      <link>https://shift07.ai/blog/employerreview-schema-markup-einzelbewertungen.html</link>
+      <guid>https://shift07.ai/blog/employerreview-schema-markup-einzelbewertungen.html</guid>
+      <pubDate>Tue, 05 May 2026 08:04:29 +0000</pubDate>
+      <description>EmployerReview Schema Markup richtig implementieren: Wie du einzelne Arbeitgeberbewertungen als strukturierte Daten auszeichnest und Recruitment-SEO verbesserst.</description>
+      <category>Schema Markup</category>
+    </item>
     <item>
       <title>SEO-Fehler bei deutschen Friseursalons: Auswertung von 79 Salon-Websites</title>
       <link>https://shift07.ai/blog/seo-fehler-friseursalons-deutsche-salons.html</link>
@@ -157,14 +165,6 @@
       <guid>https://shift07.ai/blog/healthclub-civicstructure-schema-markup.html</guid>
       <pubDate>Fri, 01 May 2026 02:00:04 +0000</pubDate>
       <description>HealthClub und CivicStructure Schema Markup: JSON-LD für Fitnessstudios, Gesundheitsclubs, Stadthallen, Bibliotheken und öffentliche Gebäude. Mit vollständigen Codebeispielen 2026.</description>
-      <category>Schema Markup</category>
-    </item>
-    <item>
-      <title>DepositoryInstitution &amp;amp; EntertainmentBusiness Schema Markup: Bank und Unterhaltung für Google</title>
-      <link>https://shift07.ai/blog/depositoryinstitution-entertainmentbusiness-schema-markup.html</link>
-      <guid>https://shift07.ai/blog/depositoryinstitution-entertainmentbusiness-schema-markup.html</guid>
-      <pubDate>Fri, 01 May 2026 01:53:13 +0000</pubDate>
-      <description>DepositoryInstitution und EntertainmentBusiness Schema Markup: JSON-LD für Banken, Kreditinstitute, Kinos, Clubs und Unterhaltungsbetriebe. Mit vollständigen Codebeispielen für 2026.</description>
       <category>Schema Markup</category>
     </item>
   </channel>
