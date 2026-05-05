@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K1S1RXBDS8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K1S1RXBDS8');
+    </script>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8475857002943858" crossorigin="anonymous"></script>
+    <title>GovernmentService Schema Generator – JSON-LD für Behörden kostenlos erstellen | Shift07</title>
+    <meta name="description" content="GovernmentService Schema Generator: Erstelle kostenlos JSON-LD für Behörden, Ämter und öffentliche Dienste. ServiceChannel, areaServed und hoursAvailable für Google strukturieren.">
+    <meta name="keywords" content="GovernmentService Schema Generator, GovernmentService JSON-LD, Behörden structured data, öffentliche Dienste Schema Markup, Government Schema SEO">
+    <meta name="author" content="Thümmler AI GmbH">
+    <link rel="icon" type="image/png" href="/logo.png">
+    <link rel="canonical" href="https://shift07.ai/tools/governmentservice-schema-generator.html">
+    <!-- Open Graph -->
+    <meta property="og:title" content="GovernmentService Schema Generator – JSON-LD für Behörden kostenlos erstellen">
+    <meta property="og:description" content="Erstelle kostenlos JSON-LD GovernmentService Schema Markup für Ämter, Verwaltungen und öffentliche Einrichtungen. ServiceChannel, Öffnungszeiten und areaServed für Google.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://shift07.ai/tools/governmentservice-schema-generator.html">
+    <meta property="og:image" content="https://shift07.ai/tools/images/governmentservice-schema-generator.png">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="Shift07">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="GovernmentService Schema Generator – JSON-LD für Behörden kostenlos">
+    <meta name="twitter:description" content="GovernmentService JSON-LD kostenlos generieren für Ämter, Behörden und öffentliche Dienste.">
+    <meta name="twitter:image" content="https://shift07.ai/tools/images/governmentservice-schema-generator.png">
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "GovernmentService Schema Generator",
+      "description": "Kostenloser Generator für GovernmentService JSON-LD Schema Markup für Behörden und öffentliche Dienste.",
+      "url": "https://shift07.ai/tools/governmentservice-schema-generator.html",
+      "applicationCategory": "SEOApplication",
+      "operatingSystem": "Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR"
+      }
+    }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: { extend: { fontFamily: { 'inter': ['Inter', 'system-ui', '-apple-system', 'sans-serif'] } } }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: rgba(15, 23, 42, 0.5); }
+        ::-webkit-scrollbar-thumb { background: rgba(59, 130, 246, 0.5); border-radius: 4px; }
+        html { scroll-behavior: smooth; }
+        .form-input { background: rgba(30, 41, 59, 0.8); border: 1px solid rgba(255,255,255,0.1); border-radius: 0.5rem; padding: 0.6rem 0.9rem; color: #e2e8f0; width: 100%; font-size: 0.9rem; transition: border-color 0.2s; }
+        .form-input:focus { outline: none; border-color: rgba(59,130,246,0.6); }
+        .form-input option { background: #1e293b; }
+        .form-label { display: block; font-size: 0.8rem; font-weight: 600; color: #94a3b8; margin-bottom: 0.3rem; text-transform: uppercase; letter-spacing: 0.05em; }
+        .output-box { background: rgba(15, 23, 42, 0.9); border: 1px solid rgba(255,255,255,0.1); border-radius: 0.75rem; padding: 1.25rem; font-family: 'Courier New', monospace; font-size: 0.82rem; color: #e2e8f0; white-space: pre-wrap; word-break: break-word; min-height: 200px; max-height: 600px; overflow-y: auto; }
+        .section-card { background: rgba(30, 41, 59, 0.6); border: 1px solid rgba(255,255,255,0.08); border-radius: 1rem; padding: 1.5rem; margin-bottom: 1rem; }
+    </style>
+</head>
+<body class="bg-slate-900 text-white min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-slate-900/80 backdrop-blur-xl border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <a href="/" class="flex items-center gap-2">
+                    <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                    <span class="text-xl font-bold text-white">Shift07</span>
+                </a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="/" class="text-gray-300 hover:text-white transition-colors">SEO-Tool</a>
+                    <a href="/blog/" class="text-gray-300 hover:text-white transition-colors">Blog</a>
+                    <a href="/tools/" class="text-white font-medium border-b-2 border-blue-500 pb-0.5">Tools</a>
+                    <a href="/app/#/login" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-5 py-2 rounded-lg font-medium transition-all">Anmelden</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-gray-300 hover:text-white">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900/95 border-b border-white/10">
+            <div class="px-4 py-3 space-y-2">
+                <a href="/" class="block py-2 text-gray-300 hover:text-white">SEO-Tool</a>
+                <a href="/blog/" class="block py-2 text-gray-300 hover:text-white">Blog</a>
+                <a href="/tools/" class="block py-2 text-white font-medium">Tools</a>
+                <a href="/app/#/login" class="block py-2 text-blue-400 hover:text-blue-300">Anmelden</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="pt-24 pb-12 px-4 bg-gradient-to-br from-slate-900 via-blue-950/30 to-slate-900">
+        <div class="max-w-4xl mx-auto text-center">
+            <div class="inline-flex items-center gap-2 px-4 py-2 bg-blue-500/10 border border-blue-500/20 rounded-full text-blue-400 text-sm font-medium mb-6">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-2 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+                Kostenloses SEO-Tool
+            </div>
+            <h1 class="text-3xl md:text-5xl font-extrabold text-white mb-4">GovernmentService Schema Generator</h1>
+            <p class="text-lg text-gray-400 max-w-2xl mx-auto">JSON-LD für Behörden, Ämter und öffentliche Dienste kostenlos erstellen. ServiceChannel, Öffnungszeiten und Einzugsgebiet für Google strukturieren.</p>
+        </div>
+    </section>
+
+    <!-- Tool -->
+    <section class="py-8 px-4">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+                <!-- Input -->
+                <div>
+                    <h2 class="text-xl font-bold text-white mb-4">Angaben zur Dienstleistung</h2>
+
+                    <div class="section-card">
+                        <h3 class="text-sm font-semibold text-blue-400 uppercase tracking-wider mb-4">Grundangaben</h3>
+
+                        <div class="space-y-4">
+                            <div>
+                                <label class="form-label">Name der Dienstleistung *</label>
+                                <input id="serviceName" type="text" class="form-input" placeholder="z.B. Baugenehmigung beantragen" value="Baugenehmigung beantragen">
+                            </div>
+                            <div>
+                                <label class="form-label">Dienstleistungstyp (serviceType)</label>
+                                <input id="serviceType" type="text" class="form-input" placeholder="z.B. PermitApplication, Registration" value="PermitApplication">
+                            </div>
+                            <div>
+                                <label class="form-label">URL der Dienstleistungsseite *</label>
+                                <input id="serviceUrl" type="url" class="form-input" placeholder="https://www.stadt-musterstadt.de/service/baugenehmigung" value="https://www.stadt-musterstadt.de/service/baugenehmigung">
+                            </div>
+                            <div>
+                                <label class="form-label">Kurzbeschreibung</label>
+                                <textarea id="serviceDesc" class="form-input" rows="3" placeholder="Beantragung einer Baugenehmigung für Wohn- und Gewerbebau...">Beantragung einer Baugenehmigung für Neubau, Umbau und Erweiterungen von Gebäuden im Stadtgebiet Musterstadt.</textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="section-card">
+                        <h3 class="text-sm font-semibold text-blue-400 uppercase tracking-wider mb-4">Anbieter (Behörde)</h3>
+                        <div class="space-y-4">
+                            <div>
+                                <label class="form-label">Name der Behörde *</label>
+                                <input id="providerName" type="text" class="form-input" placeholder="Stadtverwaltung Musterstadt" value="Stadtverwaltung Musterstadt">
+                            </div>
+                            <div>
+                                <label class="form-label">Website der Behörde</label>
+                                <input id="providerUrl" type="url" class="form-input" placeholder="https://www.stadt-musterstadt.de" value="https://www.stadt-musterstadt.de">
+                            </div>
+                            <div>
+                                <label class="form-label">Straße und Hausnummer</label>
+                                <input id="streetAddress" type="text" class="form-input" placeholder="Rathausplatz 1" value="Rathausplatz 1">
+                            </div>
+                            <div class="grid grid-cols-2 gap-3">
+                                <div>
+                                    <label class="form-label">PLZ</label>
+                                    <input id="postalCode" type="text" class="form-input" placeholder="12345" value="12345">
+                                </div>
+                                <div>
+                                    <label class="form-label">Stadt</label>
+                                    <input id="addressLocality" type="text" class="form-input" placeholder="Musterstadt" value="Musterstadt">
+                                </div>
+                            </div>
+                            <div>
+                                <label class="form-label">Telefon</label>
+                                <input id="telephone" type="text" class="form-input" placeholder="+49 1234 56789" value="+49 1234 56789">
+                            </div>
+                            <div>
+                                <label class="form-label">E-Mail</label>
+                                <input id="email" type="email" class="form-input" placeholder="baugenehmigung@stadt-musterstadt.de" value="baugenehmigung@stadt-musterstadt.de">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="section-card">
+                        <h3 class="text-sm font-semibold text-blue-400 uppercase tracking-wider mb-4">Einzugsgebiet &amp; Zielgruppe</h3>
+                        <div class="space-y-4">
+                            <div>
+                                <label class="form-label">Einzugsgebiet (areaServed)</label>
+                                <input id="areaServed" type="text" class="form-input" placeholder="Musterstadt, Landkreis Muster" value="Musterstadt">
+                            </div>
+                            <div>
+                                <label class="form-label">Zielgruppe (audience)</label>
+                                <select id="audienceType" class="form-input">
+                                    <option value="">— nicht angeben —</option>
+                                    <option value="Resident" selected>Einwohner (Resident)</option>
+                                    <option value="BusinessOwner">Gewerbetreibende (BusinessOwner)</option>
+                                    <option value="Citizen">Bürger (Citizen)</option>
+                                    <option value="Patient">Patient</option>
+                                    <option value="Student">Student</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="section-card">
+                        <h3 class="text-sm font-semibold text-blue-400 uppercase tracking-wider mb-4">Verfügbare Kanäle</h3>
+                        <div class="space-y-3">
+                            <div class="flex items-center gap-3">
+                                <input type="checkbox" id="chOnline" checked class="w-4 h-4 rounded">
+                                <label for="chOnline" class="text-sm text-gray-300">Online-Service verfügbar</label>
+                            </div>
+                            <div id="onlineUrlWrap">
+                                <label class="form-label">URL Online-Service</label>
+                                <input id="onlineUrl" type="url" class="form-input" placeholder="https://www.stadt-musterstadt.de/online/baugenehmigung" value="https://www.stadt-musterstadt.de/online/baugenehmigung">
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <input type="checkbox" id="chPersonal" checked class="w-4 h-4 rounded">
+                                <label for="chPersonal" class="text-sm text-gray-300">Persönliche Vorsprache möglich</label>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <input type="checkbox" id="chPhone" class="w-4 h-4 rounded">
+                                <label for="chPhone" class="text-sm text-gray-300">Telefonisch verfügbar</label>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <input type="checkbox" id="chPost" class="w-4 h-4 rounded">
+                                <label for="chPost" class="text-sm text-gray-300">Postalisch verfügbar</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="section-card">
+                        <h3 class="text-sm font-semibold text-blue-400 uppercase tracking-wider mb-4">Öffnungszeiten (optional)</h3>
+                        <div class="space-y-3">
+                            <div class="grid grid-cols-3 gap-2 text-xs text-gray-400 font-semibold mb-1">
+                                <span>Tag</span><span>Öffnet</span><span>Schließt</span>
+                            </div>
+                            <div id="openingHoursRows" class="space-y-2">
+                                <div class="grid grid-cols-3 gap-2">
+                                    <select class="form-input oh-day text-sm"><option value="">—</option><option value="Mo" selected>Montag</option><option value="Tu">Dienstag</option><option value="We">Mittwoch</option><option value="Th">Donnerstag</option><option value="Fr">Freitag</option><option value="Sa">Samstag</option><option value="Su">Sonntag</option><option value="Mo-Fr">Mo–Fr</option><option value="Mo-Th">Mo–Do</option></select>
+                                    <input type="time" class="form-input oh-opens" value="08:00">
+                                    <input type="time" class="form-input oh-closes" value="12:00">
+                                </div>
+                                <div class="grid grid-cols-3 gap-2">
+                                    <select class="form-input oh-day text-sm"><option value="">—</option><option value="Mo">Montag</option><option value="Tu" selected>Dienstag</option><option value="We">Mittwoch</option><option value="Th">Donnerstag</option><option value="Fr">Freitag</option><option value="Sa">Samstag</option><option value="Su">Sonntag</option><option value="Mo-Fr">Mo–Fr</option><option value="Mo-Th">Mo–Do</option></select>
+                                    <input type="time" class="form-input oh-opens" value="08:00">
+                                    <input type="time" class="form-input oh-closes" value="16:00">
+                                </div>
+                                <div class="grid grid-cols-3 gap-2">
+                                    <select class="form-input oh-day text-sm"><option value="">—</option><option value="Mo">Montag</option><option value="Tu">Dienstag</option><option value="We" selected>Mittwoch</option><option value="Th">Donnerstag</option><option value="Fr">Freitag</option><option value="Sa">Samstag</option><option value="Su">Sonntag</option><option value="Mo-Fr">Mo–Fr</option><option value="Mo-Th">Mo–Do</option></select>
+                                    <input type="time" class="form-input oh-opens" value="08:00">
+                                    <input type="time" class="form-input oh-closes" value="12:00">
+                                </div>
+                            </div>
+                            <button type="button" onclick="addOHRow()" class="text-xs text-blue-400 hover:text-blue-300 mt-1">+ Zeile hinzufügen</button>
+                        </div>
+                    </div>
+
+                    <button onclick="generateSchema()" class="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white py-3 rounded-xl font-semibold text-base transition-all mt-2">
+                        JSON-LD generieren
+                    </button>
+                </div>
+
+                <!-- Output -->
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <h2 class="text-xl font-bold text-white">Generiertes JSON-LD</h2>
+                        <button onclick="copySchema()" id="copyBtn" class="flex items-center gap-2 px-4 py-2 bg-slate-700 hover:bg-slate-600 text-white rounded-lg text-sm font-medium transition-all">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                            Kopieren
+                        </button>
+                    </div>
+
+                    <div id="output" class="output-box">Klicke auf "JSON-LD generieren" um das Schema Markup zu erstellen.</div>
+
+                    <div class="mt-4 p-4 bg-blue-500/10 border border-blue-500/20 rounded-xl">
+                        <p class="text-sm text-blue-300 font-medium mb-2">So verwendest du den Code:</p>
+                        <ol class="text-sm text-gray-400 space-y-1 list-decimal list-inside">
+                            <li>JSON-LD generieren und kopieren</li>
+                            <li>Code zwischen <code class="text-blue-300">&lt;head&gt;</code> und <code class="text-blue-300">&lt;/head&gt;</code> einfügen</li>
+                            <li>Mit dem <a href="/tools/json-ld-structured-data-validator.html" class="text-blue-400 underline">JSON-LD Validator</a> prüfen</li>
+                        </ol>
+                    </div>
+
+                    <!-- Info Box -->
+                    <div class="mt-6 p-5 bg-slate-800/60 border border-white/10 rounded-xl">
+                        <h3 class="font-bold text-white mb-3">Was ist GovernmentService?</h3>
+                        <p class="text-sm text-gray-400 mb-3">
+                            <code class="text-blue-300">GovernmentService</code> ist ein Schema.org-Typ für Dienstleistungen, die von staatlichen oder öffentlichen Stellen angeboten werden — von der Baugenehmigung über die Kfz-Zulassung bis zum Kindergeldbescheid.
+                        </p>
+                        <p class="text-sm text-gray-400 mb-3">
+                            Das Markup hilft Google, Behördenleistungen in strukturierten Suchergebnissen darzustellen und verbessert die Auffindbarkeit für Bürger, die online nach Verwaltungsdienstleistungen suchen.
+                        </p>
+                        <p class="text-sm text-gray-400">
+                            Weitere Infos: <a href="/blog/governmentservice-schema-markup.html" class="text-blue-400 underline">GovernmentService Schema Markup erklärt</a>.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/10 bg-slate-900/50 py-12 px-4 mt-12">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="flex items-center gap-2">
+                    <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                    <span class="text-lg font-bold text-white">Shift07</span>
+                </div>
+                <div class="flex items-center space-x-6 text-sm text-gray-400">
+                    <a href="/impressum.html" class="hover:text-white transition-colors">Impressum</a>
+                    <a href="/datenschutz.html" class="hover:text-white transition-colors">Datenschutz</a>
+                    <a href="/agb.html" class="hover:text-white transition-colors">AGB</a>
+                </div>
+                <p class="text-sm text-gray-500">&copy; 2026 Thümmler AI GmbH</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        document.getElementById('chOnline').addEventListener('change', function() {
+            document.getElementById('onlineUrlWrap').style.display = this.checked ? 'block' : 'none';
+        });
+
+        function addOHRow() {
+            const container = document.getElementById('openingHoursRows');
+            const row = document.createElement('div');
+            row.className = 'grid grid-cols-3 gap-2';
+            row.innerHTML = `
+                <select class="form-input oh-day text-sm">
+                    <option value="">—</option>
+                    <option value="Mo">Montag</option>
+                    <option value="Tu">Dienstag</option>
+                    <option value="We">Mittwoch</option>
+                    <option value="Th">Donnerstag</option>
+                    <option value="Fr">Freitag</option>
+                    <option value="Sa">Samstag</option>
+                    <option value="Su">Sonntag</option>
+                    <option value="Mo-Fr">Mo–Fr</option>
+                    <option value="Mo-Th">Mo–Do</option>
+                </select>
+                <input type="time" class="form-input oh-opens" value="08:00">
+                <input type="time" class="form-input oh-closes" value="12:00">
+            `;
+            container.appendChild(row);
+        }
+
+        function generateSchema() {
+            const name = document.getElementById('serviceName').value.trim();
+            const serviceType = document.getElementById('serviceType').value.trim();
+            const url = document.getElementById('serviceUrl').value.trim();
+            const desc = document.getElementById('serviceDesc').value.trim();
+            const providerName = document.getElementById('providerName').value.trim();
+            const providerUrl = document.getElementById('providerUrl').value.trim();
+            const street = document.getElementById('streetAddress').value.trim();
+            const postal = document.getElementById('postalCode').value.trim();
+            const city = document.getElementById('addressLocality').value.trim();
+            const tel = document.getElementById('telephone').value.trim();
+            const emailVal = document.getElementById('email').value.trim();
+            const areaServed = document.getElementById('areaServed').value.trim();
+            const audienceType = document.getElementById('audienceType').value;
+            const hasOnline = document.getElementById('chOnline').checked;
+            const onlineUrl = document.getElementById('onlineUrl').value.trim();
+            const hasPersonal = document.getElementById('chPersonal').checked;
+            const hasPhone = document.getElementById('chPhone').checked;
+            const hasPost = document.getElementById('chPost').checked;
+
+            if (!name || !providerName) {
+                alert('Bitte mindestens den Dienstleistungsnamen und die Behörde ausfüllen.');
+                return;
+            }
+
+            const schema = { "@context": "https://schema.org", "@type": "GovernmentService" };
+            schema.name = name;
+            if (desc) schema.description = desc;
+            if (url) schema.url = url;
+            if (serviceType) schema.serviceType = serviceType;
+
+            // Provider
+            const provider = { "@type": "GovernmentOrganization", "name": providerName };
+            if (providerUrl) provider.url = providerUrl;
+            if (street || city) {
+                provider.address = { "@type": "PostalAddress" };
+                if (street) provider.address.streetAddress = street;
+                if (postal) provider.address.postalCode = postal;
+                if (city) provider.address.addressLocality = city;
+                provider.address.addressCountry = "DE";
+            }
+            if (tel) provider.telephone = tel;
+            if (emailVal) provider.email = emailVal;
+            schema.provider = provider;
+
+            // Area
+            if (areaServed) {
+                schema.areaServed = { "@type": "AdministrativeArea", "name": areaServed };
+            }
+
+            // Audience
+            if (audienceType) {
+                schema.audience = { "@type": "Audience", "audienceType": audienceType };
+            }
+
+            // Service Channels
+            const channels = [];
+            if (hasOnline && onlineUrl) {
+                channels.push({
+                    "@type": "ServiceChannel",
+                    "name": "Online-Service",
+                    "serviceUrl": onlineUrl,
+                    "availableLanguage": { "@type": "Language", "name": "Deutsch" },
+                    "serviceType": "Online"
+                });
+            }
+            if (hasPersonal) {
+                const ch = { "@type": "ServiceChannel", "name": "Persönliche Vorsprache", "serviceType": "InPerson" };
+                if (providerName) ch.serviceLocation = { "@type": "GovernmentOffice", "name": providerName };
+                channels.push(ch);
+            }
+            if (hasPhone && tel) {
+                channels.push({
+                    "@type": "ServiceChannel",
+                    "name": "Telefonische Beratung",
+                    "servicePhone": { "@type": "ContactPoint", "telephone": tel, "contactType": "customer service" },
+                    "serviceType": "ByPhone"
+                });
+            }
+            if (hasPost) {
+                channels.push({ "@type": "ServiceChannel", "name": "Postalische Einreichung", "serviceType": "ByMail" });
+            }
+            if (channels.length > 0) schema.availableChannel = channels.length === 1 ? channels[0] : channels;
+
+            // Opening Hours
+            const days = document.querySelectorAll('.oh-day');
+            const opens = document.querySelectorAll('.oh-opens');
+            const closes = document.querySelectorAll('.oh-closes');
+            const ohSpecs = [];
+            for (let i = 0; i < days.length; i++) {
+                const day = days[i].value;
+                const o = opens[i].value;
+                const c = closes[i].value;
+                if (day && o && c) {
+                    const spec = { "@type": "OpeningHoursSpecification", "opens": o, "closes": c };
+                    if (day.includes('-')) {
+                        const parts = day.split('-');
+                        spec.dayOfWeek = expandDayRange(parts[0], parts[1]);
+                    } else {
+                        spec.dayOfWeek = `https://schema.org/${expandDay(day)}`;
+                    }
+                    ohSpecs.push(spec);
+                }
+            }
+            if (ohSpecs.length > 0) schema.hoursAvailable = ohSpecs;
+
+            document.getElementById('output').textContent = JSON.stringify(schema, null, 2);
+        }
+
+        function expandDay(d) {
+            const map = { Mo: 'Monday', Tu: 'Tuesday', We: 'Wednesday', Th: 'Thursday', Fr: 'Friday', Sa: 'Saturday', Su: 'Sunday' };
+            return map[d] || d;
+        }
+
+        function expandDayRange(from, to) {
+            const order = ['Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa', 'Su'];
+            const result = [];
+            let collecting = false;
+            for (const d of order) {
+                if (d === from) collecting = true;
+                if (collecting) result.push('https://schema.org/' + expandDay(d));
+                if (d === to) break;
+            }
+            return result;
+        }
+
+        function copySchema() {
+            const text = document.getElementById('output').textContent;
+            if (text && text !== 'Klicke auf "JSON-LD generieren" um das Schema Markup zu erstellen.') {
+                navigator.clipboard.writeText(`<script type="application/ld+json">\n${text}\n<\/script>`).then(() => {
+                    const btn = document.getElementById('copyBtn');
+                    btn.textContent = '✓ Kopiert!';
+                    setTimeout(() => btn.innerHTML = '<svg class="w-4 h-4 inline mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/>  </svg>Kopieren', 2000);
+                });
+            }
+        }
+
+        // Auto-generate on load
+        window.addEventListener('load', generateSchema);
+    </script>
+</body>
+</html>
