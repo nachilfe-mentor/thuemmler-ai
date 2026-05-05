@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Tue, 05 May 2026 00:46:05 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 05 May 2026 02:33:09 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Action Schema Markup: SearchAction, BuyAction und OrderAction für Google</title>
+      <link>https://shift07.ai/blog/action-schema-markup-searchaction-buyaction-orderaction.html</link>
+      <guid>https://shift07.ai/blog/action-schema-markup-searchaction-buyaction-orderaction.html</guid>
+      <pubDate>Tue, 05 May 2026 02:32:41 +0000</pubDate>
+      <description>Action-Typen in Schema.org erklärt: So implementierst du SearchAction (Sitelinks-Suchfeld), BuyAction, OrderAction und BookAction als JSON-LD für bessere Google-Ergebnisse.</description>
+      <category>Schema Markup</category>
+    </item>
     <item>
       <title>EmployerAggregateRating Schema Markup: Arbeitgeberbewertungen für Google</title>
       <link>https://shift07.ai/blog/employeraggregate-rating-schema-markup.html</link>
@@ -157,14 +165,6 @@
       <guid>https://shift07.ai/blog/pawnshop-wholesalestore-schema-markup.html</guid>
       <pubDate>Fri, 01 May 2026 00:11:06 +0000</pubDate>
       <description>Lerne, wie du PawnShop und WholesaleStore Schema Markup korrekt implementierst. Mit JSON-LD Beispielen, allen Properties und Fehlervermeidung für Pfandleihhäuser und Großhandelsbetriebe.</description>
-      <category>Schema Markup</category>
-    </item>
-    <item>
-      <title>MobilePhoneStore &amp;amp; TireShop Schema Markup: JSON-LD für Handyläden und Reifenhandel</title>
-      <link>https://shift07.ai/blog/mobilephonestore-tireShop-schema-markup.html</link>
-      <guid>https://shift07.ai/blog/mobilephonestore-tireShop-schema-markup.html</guid>
-      <pubDate>Thu, 30 Apr 2026 06:09:45 +0000</pubDate>
-      <description>MobilePhoneStore und TireShop Schema Markup richtig einsetzen: JSON-LD Beispiele, alle Properties erklärt und häufige Fehler für Handygeschäfte und Reifenhändler.</description>
       <category>Schema Markup</category>
     </item>
   </channel>
