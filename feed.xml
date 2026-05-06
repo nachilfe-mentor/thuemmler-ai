@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Wed, 06 May 2026 12:08:05 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 06 May 2026 13:55:07 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Movie &amp; TVSeries Schema Markup: Filme und Serien für Google optimieren</title>
+      <link>https://shift07.ai/blog/movie-tvseries-schema-markup.html</link>
+      <guid>https://shift07.ai/blog/movie-tvseries-schema-markup.html</guid>
+      <pubDate>Wed, 06 May 2026 13:54:33 +0000</pubDate>
+      <description>Movie und TVSeries Schema Markup richtig einsetzen: JSON-LD für Filme, Serien und Episoden mit AggregateRating für Rich Snippets in Google. Schritt-für-Schritt-Anleitung 2026.</description>
+      <category>Schema Markup</category>
+    </item>
     <item>
       <title>Podcast Schema Markup: PodcastSeries und PodcastEpisode JSON-LD für Google</title>
       <link>https://shift07.ai/blog/podcast-schema-markup-seo.html</link>
@@ -157,14 +165,6 @@
       <guid>https://shift07.ai/blog/course-educationalcourse-schema-markup-vertieft.html</guid>
       <pubDate>Sun, 03 May 2026 03:07:34 +0000</pubDate>
       <description>Course Schema Markup vertieft: EducationalCourse, CourseInstance, Zertifikate und hasCourseInstance richtig einsetzen. Vollständige JSON-LD-Beispiele für Google Rich Snippets 2026.</description>
-      <category>Schema Markup</category>
-    </item>
-    <item>
-      <title>Occupation Schema Markup: Berufsbilder für Google strukturieren</title>
-      <link>https://shift07.ai/blog/occupation-schema-markup-seo.html</link>
-      <guid>https://shift07.ai/blog/occupation-schema-markup-seo.html</guid>
-      <pubDate>Sun, 03 May 2026 01:32:41 +0000</pubDate>
-      <description>Occupation Schema Markup erklärt: JSON-LD für Berufsbilder, OccupationalExperienceRequirements und Qualifikationsanforderungen – mit vollständigen Praxisbeispielen für Karriereportale und Unternehmensseiten.</description>
       <category>Schema Markup</category>
     </item>
   </channel>
