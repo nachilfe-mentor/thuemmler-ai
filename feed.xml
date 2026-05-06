@@ -5,8 +5,24 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Wed, 06 May 2026 01:02:27 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 06 May 2026 02:38:17 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>SpecialAnnouncement Schema Markup: Sonderankündigungen als Rich Results in Google</title>
+      <link>https://shift07.ai/blog/specialannouncement-schema-markup-seo.html</link>
+      <guid>https://shift07.ai/blog/specialannouncement-schema-markup-seo.html</guid>
+      <pubDate>Wed, 06 May 2026 02:38:06 +0000</pubDate>
+      <description>SpecialAnnouncement Schema Markup erklärt: Wie du Notfall-Ankündigungen, geänderte Öffnungszeiten und behördliche Meldungen als JSON-LD strukturierst und als Rich Results in Google darstellst.</description>
+      <category>Schema Markup</category>
+    </item>
+    <item>
+      <title>SpecialAnnouncement Schema Markup vertieft: COVID-Properties, Behörden und Multi-Location</title>
+      <link>https://shift07.ai/blog/specialannouncement-schema-markup-vertieft.html</link>
+      <guid>https://shift07.ai/blog/specialannouncement-schema-markup-vertieft.html</guid>
+      <pubDate>Wed, 06 May 2026 02:37:37 +0000</pubDate>
+      <description>SpecialAnnouncement Schema Markup vertieft: COVID-spezifische Properties, Behörden-Use-Cases, Multi-Location-Ankündigungen und FAQ-Integration — mit vollständigen JSON-LD-Beispielen 2026.</description>
+      <category>Schema Markup</category>
+    </item>
     <item>
       <title>Occupation Schema Markup vertieft: Berufe, Gehälter und Qualifikationen für Google</title>
       <link>https://shift07.ai/blog/occupation-schema-markup-vertieft.html</link>
@@ -149,22 +165,6 @@
       <guid>https://shift07.ai/blog/civicstructure-schema-markup-untertypen-vertieft.html</guid>
       <pubDate>Sat, 02 May 2026 00:55:04 +0000</pubDate>
       <description>CivicStructure Untertypen vollständig erklärt: Museum, Library, Stadium, Airport, PlaceOfWorship, Aquarium, Zoo und mehr. JSON-LD Beispiele für öffentliche Einrichtungen.</description>
-      <category>Schema Markup</category>
-    </item>
-    <item>
-      <title>HomeGoodsStore &amp; FurnitureStore Schema Markup vertieft: Möbelhaus, Dekomarkt und Haushaltswarengeschäft</title>
-      <link>https://shift07.ai/blog/homegoodsstore-furniturestore-schema-markup-vertieft.html</link>
-      <guid>https://shift07.ai/blog/homegoodsstore-furniturestore-schema-markup-vertieft.html</guid>
-      <pubDate>Sat, 02 May 2026 00:48:56 +0000</pubDate>
-      <description>HomeGoodsStore vs. FurnitureStore vs. HomeAndConstructionBusiness: Welches Schema passt zu deinem Einrichtungsgeschäft? Vollständige JSON-LD-Anleitung mit Beispielen für Möbelhäuser, Dekormärkte und Haushaltswaren.</description>
-      <category>Schema Markup</category>
-    </item>
-    <item>
-      <title>GroceryStore Schema Markup vertieft: Supermarkt, Bio-Markt und Discounter für Google</title>
-      <link>https://shift07.ai/blog/grocerystore-schema-markup-vertieft.html</link>
-      <guid>https://shift07.ai/blog/grocerystore-schema-markup-vertieft.html</guid>
-      <pubDate>Fri, 01 May 2026 03:40:14 +0000</pubDate>
-      <description>GroceryStore Schema Markup vertieft: JSON-LD für Supermärkte, Bio-Läden, Discounter, Wochenmärkte und Lebensmittelhändler. Unterschiede, vollständige Codebeispiele und Profi-Tipps 2026.</description>
       <category>Schema Markup</category>
     </item>
   </channel>
