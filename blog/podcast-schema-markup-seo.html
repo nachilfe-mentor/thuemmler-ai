@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Podcast Schema Markup: PodcastSeries und PodcastEpisode JSON-LD für Google | Shift07 Blog</title>
+    <meta name="description" content="Podcast Schema Markup richtig implementieren: Mit PodcastSeries und PodcastEpisode JSON-LD Ihren Podcast in Google-Rich-Results sichtbar machen. Schritt-für-Schritt-Anleitung 2026.">
+    <meta name="author" content="Thümmler AI GmbH">
+    <link rel="icon" type="image/png" href="/logo.png">
+    <link rel="canonical" href="https://shift07.ai/blog/podcast-schema-markup-seo.html">
+    <link rel="alternate" type="application/rss+xml" title="Shift07 Blog" href="https://shift07.ai/feed.xml">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Podcast Schema Markup: PodcastSeries und PodcastEpisode JSON-LD für Google | Shift07 Blog">
+    <meta property="og:description" content="Podcast Schema Markup richtig implementieren: Mit PodcastSeries und PodcastEpisode JSON-LD Ihren Podcast in Google-Rich-Results sichtbar machen. Schritt-für-Schritt-Anleitung 2026.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://shift07.ai/blog/podcast-schema-markup-seo.html">
+    <meta property="og:image" content="https://shift07.ai/blog/images/podcast-schema-markup-seo.png">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="Shift07">
+    <meta property="article:published_time" content="2026-05-06T12:00:00+02:00">
+    <meta property="article:section" content="Schema Markup">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Podcast Schema Markup: PodcastSeries und PodcastEpisode JSON-LD">
+    <meta name="twitter:description" content="Podcast Schema Markup richtig implementieren: PodcastSeries und PodcastEpisode JSON-LD für Google-Rich-Results 2026.">
+    <meta name="twitter:image" content="https://shift07.ai/blog/images/podcast-schema-markup-seo.png">
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Podcast Schema Markup: PodcastSeries und PodcastEpisode JSON-LD für Google",
+      "description": "Podcast Schema Markup richtig implementieren: Mit PodcastSeries und PodcastEpisode JSON-LD Ihren Podcast in Google-Rich-Results sichtbar machen. Schritt-für-Schritt-Anleitung 2026.",
+      "image": "https://shift07.ai/blog/images/podcast-schema-markup-seo.png",
+      "datePublished": "2026-05-06T12:00:00+02:00",
+      "dateModified": "2026-05-06T12:00:00+02:00",
+      "author": {
+        "@type": "Organization",
+        "name": "Shift07",
+        "url": "https://shift07.ai"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Shift07",
+        "url": "https://shift07.ai",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://shift07.ai/assets/logo.png"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://shift07.ai/blog/podcast-schema-markup-seo.html"
+      }
+    }
+    </script>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K1S1RXBDS8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K1S1RXBDS8');
+    </script>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8475857002943858" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: rgba(15, 23, 42, 0.5); }
+        ::-webkit-scrollbar-thumb { background: rgba(59, 130, 246, 0.5); border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: rgba(59, 130, 246, 0.7); }
+        html { scroll-behavior: smooth; }
+        .article-content h2 { font-size: 1.5rem; font-weight: 700; color: #fff; margin-top: 2.5rem; margin-bottom: 1rem; }
+        .article-content h3 { font-size: 1.25rem; font-weight: 600; color: #e2e8f0; margin-top: 2rem; margin-bottom: 0.75rem; }
+        .article-content p { color: #cbd5e1; line-height: 1.8; margin-bottom: 1.25rem; }
+        .article-content ul, .article-content ol { color: #cbd5e1; margin-bottom: 1.25rem; padding-left: 1.5rem; }
+        .article-content li { margin-bottom: 0.5rem; line-height: 1.7; }
+        .article-content ul li { list-style-type: disc; }
+        .article-content ol li { list-style-type: decimal; }
+        .article-content a { color: #60a5fa; text-decoration: underline; text-underline-offset: 2px; }
+        .article-content a:hover { color: #93bbfc; }
+        .article-content blockquote { border-left: 4px solid #3b82f6; padding-left: 1.25rem; margin: 1.5rem 0; color: #94a3b8; font-style: italic; }
+        .article-content code { background: rgba(59, 130, 246, 0.15); color: #93c5fd; padding: 0.15rem 0.4rem; border-radius: 0.25rem; font-size: 0.9em; }
+        .article-content pre { background: rgba(15, 23, 42, 0.8); border: 1px solid rgba(255,255,255,0.1); border-radius: 0.75rem; padding: 1.25rem; overflow-x: auto; margin-bottom: 1.5rem; }
+        .article-content pre code { background: none; padding: 0; color: #e2e8f0; }
+        .article-content strong { color: #f1f5f9; }
+        .info-box { background: rgba(59, 130, 246, 0.1); border: 1px solid rgba(59, 130, 246, 0.3); border-radius: 0.75rem; padding: 1.25rem; margin-bottom: 1.5rem; }
+        .warning-box { background: rgba(245, 158, 11, 0.1); border: 1px solid rgba(245, 158, 11, 0.3); border-radius: 0.75rem; padding: 1.25rem; margin-bottom: 1.5rem; }
+    </style>
+</head>
+<body class="bg-slate-900 text-white min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-slate-900/80 backdrop-blur-xl border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <a href="/" class="flex items-center gap-2">
+                    <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                    <span class="text-xl font-bold text-white">Shift07</span>
+                </a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="/" class="text-gray-300 hover:text-white transition-colors">SEO-Tool</a>
+                    <a href="/blog/" class="text-white font-medium border-b-2 border-blue-500 pb-0.5">Blog</a>
+                    <a href="/tools/" class="text-gray-300 hover:text-white transition-colors">Tools</a>
+                    <a href="/app/#/login" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-5 py-2 rounded-lg font-medium transition-all">Anmelden</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-gray-300 hover:text-white">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900/95 border-b border-white/10">
+            <div class="px-4 py-3 space-y-2">
+                <a href="/" class="block py-2 text-gray-300 hover:text-white">SEO-Tool</a>
+                <a href="/blog/" class="block py-2 text-white font-medium">Blog</a>
+                <a href="/tools/" class="block py-2 text-gray-300 hover:text-white">Tools</a>
+                <a href="/app/#/login" class="block py-2 text-blue-400 hover:text-blue-300">Anmelden</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Image -->
+    <section class="pt-16 relative">
+        <div class="h-[400px] bg-gradient-to-br from-purple-700 via-indigo-700 to-blue-800 relative overflow-hidden">
+            <div class="absolute inset-0 bg-black/40"></div>
+            <img src="/blog/images/podcast-schema-markup-seo.png" alt="Podcast Schema Markup für SEO: PodcastSeries und PodcastEpisode JSON-LD" class="absolute inset-0 w-full h-full object-cover opacity-30">
+            <div class="absolute inset-0 flex items-center justify-center">
+                <div class="text-center px-4 max-w-4xl">
+                    <span class="inline-block text-sm font-semibold px-4 py-1.5 bg-white/10 text-white/90 rounded-full mb-6">Schema Markup</span>
+                    <h1 class="text-3xl md:text-5xl font-extrabold text-white leading-tight">Podcast Schema Markup: PodcastSeries und PodcastEpisode JSON-LD für Google</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Article Content -->
+    <section class="py-12 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col lg:flex-row gap-12">
+
+                <!-- Main Content -->
+                <article class="lg:w-2/3">
+                    <!-- Meta -->
+                    <div class="flex flex-wrap items-center gap-4 text-sm text-gray-400 mb-10 pb-6 border-b border-white/10">
+                        <div class="flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+                            Shift07 Team
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                            6. Mai 2026
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                            12 Min. Lesezeit
+                        </div>
+                        <span class="text-xs font-semibold px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full">Schema Markup</span>
+                    </div>
+
+                    <!-- Article Body -->
+                    <div class="article-content">
+
+                        <p>Podcasts sind längst aus dem Nischenformat herausgewachsen. Millionen Deutsche hören wöchentlich Podcasts — und suchen dabei auch über Google nach Folgen, Hosts und Themen. Mit dem richtigen <strong>Podcast Schema Markup</strong> signalisieren Sie Google, dass Ihre Website einen Podcast enthält, und ermöglichen damit eine deutlich bessere Sichtbarkeit in den Suchergebnissen.</p>
+
+                        <p>In diesem Artikel erkläre ich, wie Sie <code>PodcastSeries</code> und <code>PodcastEpisode</code> als JSON-LD implementieren, welche Properties Google tatsächlich auswertet, und welche Fehler Sie vermeiden sollten.</p>
+
+                        <img src="/blog/images/podcast-schema-markup-seo.png" alt="Podcast Schema Markup für SEO: PodcastSeries und PodcastEpisode JSON-LD richtig implementieren" class="rounded-xl w-full mb-8 mt-4">
+
+                        <h2>Was ist Podcast Schema Markup?</h2>
+
+                        <p>Podcast Schema Markup ist <a href="/blog/strukturierte-daten-seo-schema-markup.html">strukturiertes Datenschema (Schema.org)</a>, das Suchmaschinen maschinenlesbar mitteilt: „Diese Seite repräsentiert einen Podcast oder eine Podcast-Episode." Google nutzt diese Informationen, um Podcasts in speziellen Rich-Result-Formaten anzuzeigen — etwa als Podcast-Karussell, mit Episoden-Snippets oder in der Google-Suche mit direkten Abspiel-Buttons.</p>
+
+                        <p>Schema.org definiert zwei zentrale Typen für Podcasts:</p>
+                        <ul>
+                            <li><strong>PodcastSeries</strong> — Die übergeordnete Sendung (der gesamte Podcast mit Titel, Beschreibung, RSS-Feed)</li>
+                            <li><strong>PodcastEpisode</strong> — Eine einzelne Episode (mit Titel, Dauer, Veröffentlichungsdatum, Audiodatei)</li>
+                        </ul>
+
+                        <p>Beide Typen sind Untertypen von <a href="/blog/creativework-schema-markup-seo.html">CreativeWork</a> und erben daher viele allgemeine Properties wie <code>name</code>, <code>description</code>, <code>author</code>, <code>image</code> oder <code>url</code>.</p>
+
+                        <h2>Warum Podcast Schema Markup für SEO wichtig ist</h2>
+
+                        <p>Google hat die Podcast-Unterstützung in den letzten Jahren massiv ausgebaut. Seit 2019 indexiert Google Podcasts aktiv und zeigt sie direkt in der Suche an. Wer strukturierte Daten korrekt implementiert, kann von folgenden Vorteilen profitieren:</p>
+
+                        <ul>
+                            <li><strong>Rich Results:</strong> Podcast-Episoden können als Rich Snippets mit Abspiel-Button erscheinen</li>
+                            <li><strong>Podcast-Karussell:</strong> Mehrere Episoden werden als horizontales Karussell dargestellt</li>
+                            <li><strong>Verbesserte Indexierung:</strong> Google versteht die Inhaltsstruktur und kann Episoden besser crawlen</li>
+                            <li><strong>Sprachsuche:</strong> Google Assistant und andere Sprachassistenten können Episoden direkt abspielen</li>
+                            <li><strong>Google Podcasts-Integration:</strong> Bessere Sichtbarkeit in Podcast-spezifischen Suchanfragen</li>
+                        </ul>
+
+                        <div class="info-box">
+                            <p class="text-blue-300 font-semibold mb-1">Wichtig für 2026</p>
+                            <p class="text-gray-300 text-sm">Google wertet den RSS-Feed (<code>webFeed</code>) als stärkstes Signal für Podcast-Inhalte. Ohne einen validen RSS-Feed wird Ihr Podcast-Schema deutlich weniger stark berücksichtigt. Stellen Sie sicher, dass Ihr RSS-Feed alle Episoden mit vollständigen Metadaten enthält.</p>
+                        </div>
+
+                        <h2>PodcastSeries Schema Markup implementieren</h2>
+
+                        <p>Das <code>PodcastSeries</code>-Markup gehört auf die Hauptseite Ihres Podcasts (z.B. <code>/podcast/</code> oder <code>/show/mein-podcast/</code>). Es beschreibt den Podcast als Ganzes.</p>
+
+                        <h3>Vollständiges PodcastSeries JSON-LD Beispiel</h3>
+
+<pre><code>{
+  "@context": "https://schema.org",
+  "@type": "PodcastSeries",
+  "name": "Der Unternehmens-SEO Podcast",
+  "description": "Praxisnahe SEO-Tipps für kleine und mittlere Unternehmen. Jede Woche neue Strategien für mehr organischen Traffic und bessere Google-Rankings.",
+  "url": "https://example.de/podcast/",
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://example.de/podcast/cover.jpg",
+    "width": 3000,
+    "height": 3000
+  },
+  "webFeed": "https://example.de/podcast/feed.xml",
+  "inLanguage": "de",
+  "author": {
+    "@type": "Person",
+    "name": "Max Mustermann",
+    "url": "https://example.de/ueber-uns/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Muster GmbH",
+    "url": "https://example.de",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://example.de/logo.png"
+    }
+  },
+  "numberOfEpisodes": 52,
+  "genre": "Business",
+  "startDate": "2024-01-15"
+}</code></pre>
+
+                        <h3>Die wichtigsten PodcastSeries Properties</h3>
+
+                        <ul>
+                            <li><strong>name</strong> (Pflicht): Der vollständige Podcast-Titel</li>
+                            <li><strong>description</strong> (Pflicht): Eine detaillierte Beschreibung des Podcast-Formats</li>
+                            <li><strong>url</strong> (Pflicht): Die kanonische URL der Podcast-Hauptseite</li>
+                            <li><strong>image</strong> (Pflicht): Das Podcast-Cover — mindestens 1400×1400 px, am besten 3000×3000 px (Podcast-Standard)</li>
+                            <li><strong>webFeed</strong> (sehr empfohlen): Die RSS-Feed-URL — das wichtigste Signal für Google</li>
+                            <li><strong>inLanguage</strong> (empfohlen): Sprache als BCP 47 Code, z.B. <code>de</code>, <code>de-AT</code></li>
+                            <li><strong>author</strong> oder <strong>creator</strong>: Die Person oder Organisation hinter dem Podcast</li>
+                            <li><strong>publisher</strong>: Das Unternehmen oder Netzwerk, das den Podcast veröffentlicht</li>
+                            <li><strong>numberOfEpisodes</strong>: Aktuelle Gesamtzahl der Episoden</li>
+                            <li><strong>genre</strong>: Kategorie (z.B. "Technology", "Business", "Health")</li>
+                            <li><strong>startDate</strong>: Datum der ersten Folge im ISO-8601-Format</li>
+                        </ul>
+
+                        <h2>PodcastEpisode Schema Markup implementieren</h2>
+
+                        <p>Das <code>PodcastEpisode</code>-Markup gehört auf die individuelle Episodenseite. Es beschreibt eine einzelne Folge mit allen relevanten Details.</p>
+
+                        <h3>Vollständiges PodcastEpisode JSON-LD Beispiel</h3>
+
+<pre><code>{
+  "@context": "https://schema.org",
+  "@type": "PodcastEpisode",
+  "name": "Folge 47: Meta-Tags richtig einsetzen — die komplette Anleitung",
+  "description": "In dieser Folge erkläre ich, welche Meta-Tags Google wirklich beachtet, wie Sie Title-Tags und Meta-Descriptions optimieren, und warum viele Unternehmen hier grundlegende Fehler machen.",
+  "url": "https://example.de/podcast/folge-47-meta-tags/",
+  "datePublished": "2026-04-15",
+  "duration": "PT42M30S",
+  "episodeNumber": 47,
+  "partOfSeries": {
+    "@type": "PodcastSeries",
+    "name": "Der Unternehmens-SEO Podcast",
+    "url": "https://example.de/podcast/"
+  },
+  "audio": {
+    "@type": "AudioObject",
+    "contentUrl": "https://media.example.de/podcast/folge-47.mp3",
+    "encodingFormat": "audio/mpeg",
+    "duration": "PT42M30S"
+  },
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://example.de/podcast/folge-47-cover.jpg",
+    "width": 1400,
+    "height": 1400
+  },
+  "author": {
+    "@type": "Person",
+    "name": "Max Mustermann"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Muster GmbH",
+    "url": "https://example.de"
+  },
+  "inLanguage": "de",
+  "keywords": "meta tags, seo, title tag, meta description",
+  "identifier": {
+    "@type": "PropertyValue",
+    "propertyID": "spotify:episode",
+    "value": "5rA3hXqLGTVnPqZ8MEcKox"
+  }
+}</code></pre>
+
+                        <h3>Die wichtigsten PodcastEpisode Properties</h3>
+
+                        <ul>
+                            <li><strong>name</strong> (Pflicht): Der vollständige Episodentitel</li>
+                            <li><strong>description</strong> (Pflicht): Eine aussagekräftige Zusammenfassung der Episode</li>
+                            <li><strong>url</strong> (Pflicht): Die kanonische URL der Episodenseite</li>
+                            <li><strong>datePublished</strong> (Pflicht): Veröffentlichungsdatum im ISO-8601-Format</li>
+                            <li><strong>duration</strong> (Pflicht): Länge der Episode im ISO-8601-Dauerformat (z.B. <code>PT42M30S</code> = 42 Minuten, 30 Sekunden)</li>
+                            <li><strong>episodeNumber</strong> (empfohlen): Die Episodennummer als Integer</li>
+                            <li><strong>partOfSeries</strong> (empfohlen): Verweis auf die übergeordnete PodcastSeries</li>
+                            <li><strong>audio</strong> (sehr empfohlen): Das AudioObject mit der tatsächlichen MP3-URL</li>
+                            <li><strong>identifier</strong> (empfohlen): Externe IDs (Spotify, Apple Podcasts) für bessere Vernetzung</li>
+                            <li><strong>keywords</strong>: Relevante Schlagwörter zur Episode</li>
+                        </ul>
+
+                        <h2>Das ISO-8601-Dauerformat richtig verwenden</h2>
+
+                        <p>Das Dauerformat für <code>duration</code> bereitet häufig Probleme. Es folgt dem Muster <code>PT[Stunden]H[Minuten]M[Sekunden]S</code>:</p>
+
+                        <ul>
+                            <li><code>PT30M</code> = 30 Minuten</li>
+                            <li><code>PT1H15M</code> = 1 Stunde, 15 Minuten</li>
+                            <li><code>PT42M30S</code> = 42 Minuten, 30 Sekunden</li>
+                            <li><code>PT2H</code> = 2 Stunden</li>
+                        </ul>
+
+                        <p>Nutzen Sie unseren <a href="/tools/iso8601-dauer-konverter.html">ISO 8601 Dauer-Konverter</a>, um Zeiten einfach umzurechnen — besonders nützlich, wenn Sie viele Episoden auf einmal auszeichnen möchten.</p>
+
+                        <h2>Kombination von PodcastSeries und PodcastEpisode</h2>
+
+                        <p>In der Praxis empfiehlt es sich, beide Typen miteinander zu verknüpfen. Auf der Episodenseite zeigen Sie mit <code>partOfSeries</code> auf die Serie, und auf der Serienhauptseite können Sie mit dem <code>hasPart</code>-Property auf einzelne Episoden verweisen:</p>
+
+<pre><code>{
+  "@context": "https://schema.org",
+  "@type": "PodcastSeries",
+  "name": "Der Unternehmens-SEO Podcast",
+  "url": "https://example.de/podcast/",
+  "webFeed": "https://example.de/podcast/feed.xml",
+  "hasPart": [
+    {
+      "@type": "PodcastEpisode",
+      "name": "Folge 47: Meta-Tags richtig einsetzen",
+      "url": "https://example.de/podcast/folge-47/",
+      "datePublished": "2026-04-15",
+      "episodeNumber": 47,
+      "duration": "PT42M30S"
+    },
+    {
+      "@type": "PodcastEpisode",
+      "name": "Folge 46: Backlinks aufbauen ohne Budget",
+      "url": "https://example.de/podcast/folge-46/",
+      "datePublished": "2026-04-08",
+      "episodeNumber": 46,
+      "duration": "PT38M15S"
+    }
+  ]
+}</code></pre>
+
+                        <p>Für eine vollständige Listenansicht mehrerer Episoden empfiehlt sich zusätzlich ein <a href="/blog/itemlist-schema-markup-seo.html">ItemList Schema Markup</a>, das Google bei Karussell-Darstellungen besonders gut auswertet.</p>
+
+                        <h2>RSS-Feed als primäres Podcast-Signal</h2>
+
+                        <p>Google liest Podcasts primär über RSS-Feeds. Der <code>webFeed</code>-Property im PodcastSeries-Markup verweist auf diesen Feed und ermöglicht es Google, alle Episoden automatisch zu entdecken. Ein valider RSS-Feed sollte folgende Elemente für jede Episode enthalten:</p>
+
+                        <ul>
+                            <li><code>&lt;title&gt;</code>: Episodentitel</li>
+                            <li><code>&lt;itunes:title&gt;</code>: Apple Podcasts-kompatibler Titel</li>
+                            <li><code>&lt;description&gt;</code> oder <code>&lt;itunes:summary&gt;</code>: Beschreibung</li>
+                            <li><code>&lt;enclosure&gt;</code>: Die Audiodatei mit URL, Typ und Dateigröße</li>
+                            <li><code>&lt;pubDate&gt;</code>: Veröffentlichungsdatum</li>
+                            <li><code>&lt;itunes:duration&gt;</code>: Dauer im Format HH:MM:SS</li>
+                            <li><code>&lt;guid&gt;</code>: Eindeutige Episode-ID (wichtig für Stabilität!)</li>
+                        </ul>
+
+                        <div class="warning-box">
+                            <p class="text-yellow-300 font-semibold mb-1">Häufiger Fehler: Fehlende oder instabile GUIDs</p>
+                            <p class="text-gray-300 text-sm">Die <code>&lt;guid&gt;</code> im RSS-Feed muss dauerhaft stabil bleiben. Wenn Sie GUIDs ändern, erkennt Google die Episoden als neu und verliert alle gesammelten Signale. Verwenden Sie eine permanente URL oder eine UUID als GUID — und setzen Sie <code>isPermaLink="false"</code> wenn Sie eine eigene ID-Struktur nutzen.</p>
+                        </div>
+
+                        <h2>Podcast Schema Markup für verschiedene Plattformen</h2>
+
+                        <p>Neben Google indexieren auch andere Plattformen Podcast-Daten. Hier lohnt sich ein Blick auf plattformspezifische Ergänzungen:</p>
+
+                        <h3>Spotify Podcast Markup</h3>
+
+                        <p>Für Spotify-Verlinkungen nutzen Sie das <code>identifier</code>-Property mit der Spotify-Episoden-ID:</p>
+
+<pre><code>"identifier": {
+  "@type": "PropertyValue",
+  "propertyID": "spotify:episode",
+  "value": "5rA3hXqLGTVnPqZ8MEcKox"
+}</code></pre>
+
+                        <h3>Apple Podcasts</h3>
+
+                        <p>Apple Podcasts liest ebenfalls RSS-Feeds und unterstützt spezifische iTunes-Namespace-Tags. Für Apple Podcasts relevante RSS-Elemente sind <code>itunes:category</code>, <code>itunes:explicit</code>, <code>itunes:type</code> (episodic/serial) und <code>itunes:season</code> für serielle Podcasts.</p>
+
+                        <h2>Mehrere Podcast-Formate: Episodisch vs. Seriell</h2>
+
+                        <p>Schema.org unterscheidet zwar nicht explizit zwischen episodischen und seriellen Podcasts, aber der RSS-Feed-Standard tut es. Google wertet das RSS-Tag <code>&lt;itunes:type&gt;</code> aus:</p>
+
+                        <ul>
+                            <li><strong>episodic</strong> (Standard): Jede Folge ist unabhängig hörbar — typisch für Nachrichten- oder Interview-Podcasts</li>
+                            <li><strong>serial</strong>: Die Folgen bauen aufeinander auf — typisch für Story-Podcasts oder Serien</li>
+                        </ul>
+
+                        <p>Bei seriellen Podcasts empfiehlt sich zusätzlich das <code>seasonNumber</code>-Property in <code>PodcastEpisode</code>, um Staffeln zu strukturieren.</p>
+
+                        <h2>Häufige Fehler beim Podcast Schema Markup</h2>
+
+                        <h3>1. Kein webFeed-Property</h3>
+                        <p>Der RSS-Feed ist das Herzstück der Podcast-Indexierung. Ohne <code>webFeed</code> kann Google den Podcast kaum automatisch abonnieren und aktualisieren.</p>
+
+                        <h3>2. Falsche Bildgröße</h3>
+                        <p>Podcast-Cover müssen quadratisch sein (1:1-Verhältnis). Empfohlen: mindestens 1400×1400 px, optimal 3000×3000 px. Nicht-quadratische Bilder werden von Apple Podcasts und anderen Plattformen abgelehnt.</p>
+
+                        <h3>3. Fehlende AudioObject-URL</h3>
+                        <p>Das <code>audio</code>-Property mit <code>contentUrl</code> ist entscheidend, damit Google die Audiodatei direkt verlinken kann. Ohne direkte MP3-URL können manche Rich Results nicht ausgeliefert werden.</p>
+
+                        <h3>4. Falsch formatierte Duration</h3>
+                        <p>Eine häufig falsch verwendete Angabe. <code>42:30</code> ist kein gültiges ISO-8601-Format — korrekt ist <code>PT42M30S</code>. Überprüfen Sie Ihre Angaben im <a href="/tools/iso8601-dauer-konverter.html">Dauer-Konverter</a>.</p>
+
+                        <h3>5. PodcastEpisode ohne partOfSeries</h3>
+                        <p>Ohne den Verweis auf die übergeordnete Serie kann Google die Episode nicht dem richtigen Podcast zuordnen. Das <code>partOfSeries</code>-Property ist in der Praxis unverzichtbar.</p>
+
+                        <h3>6. Unvollständige Beschreibungen</h3>
+                        <p>Viele Podcast-Betreiber verwenden für <code>description</code> nur einen kurzen Satz. Für SEO-Zwecke sollte die Beschreibung mindestens 50, besser 150–300 Zeichen haben und die wichtigsten Themen der Episode benennen.</p>
+
+                        <h2>Podcast Schema Markup validieren</h2>
+
+                        <p>Nach der Implementierung sollten Sie Ihr Markup unbedingt validieren. Google stellt dafür zwei Tools bereit:</p>
+
+                        <ol>
+                            <li><strong>Rich Results Test:</strong> Prüft, ob Ihre Seite für Rich Results qualifiziert ist — geben Sie einfach die URL Ihrer Episodenseite ein</li>
+                            <li><strong>Search Console → Rich Results-Status:</strong> Zeigt nach der Indexierung, wie viele Episoden korrekt ausgezeichnet wurden und ob Fehler vorliegen</li>
+                        </ol>
+
+                        <p>Alternativ können Sie Ihr JSON-LD auch mit unserem <a href="/tools/json-ld-structured-data-validator.html">JSON-LD Structured Data Validator</a> auf syntaktische Korrektheit prüfen, bevor Sie den Code live schalten.</p>
+
+                        <h2>Podcast Schema Markup mit VideoObject kombinieren</h2>
+
+                        <p>Wenn Sie Ihren Podcast auch als Video-Podcast (z.B. auf YouTube) veröffentlichen, können Sie <code>PodcastEpisode</code> mit einem <a href="/blog/videoobject-schema-markup-seo.html">VideoObject Schema Markup</a> kombinieren. Verwenden Sie dafür das <code>video</code>-Property:</p>
+
+<pre><code>{
+  "@context": "https://schema.org",
+  "@type": "PodcastEpisode",
+  "name": "Folge 47: Meta-Tags richtig einsetzen",
+  "audio": {
+    "@type": "AudioObject",
+    "contentUrl": "https://media.example.de/podcast/folge-47.mp3"
+  },
+  "video": {
+    "@type": "VideoObject",
+    "name": "Folge 47: Meta-Tags richtig einsetzen (Video)",
+    "description": "Die Video-Version dieser Podcast-Episode auf YouTube.",
+    "thumbnailUrl": "https://example.de/podcast/folge-47-thumbnail.jpg",
+    "uploadDate": "2026-04-15",
+    "contentUrl": "https://www.youtube.com/watch?v=EXAMPLE",
+    "embedUrl": "https://www.youtube.com/embed/EXAMPLE"
+  }
+}</code></pre>
+
+                        <h2>Checkliste: Podcast Schema Markup korrekt implementieren</h2>
+
+                        <ul>
+                            <li>PodcastSeries-Markup auf der Podcast-Hauptseite implementiert</li>
+                            <li><code>webFeed</code> mit gültiger RSS-Feed-URL angegeben</li>
+                            <li>Podcast-Cover quadratisch (mindestens 1400×1400 px)</li>
+                            <li>PodcastEpisode-Markup auf jeder einzelnen Episodenseite</li>
+                            <li><code>partOfSeries</code> verweist auf die PodcastSeries</li>
+                            <li><code>audio.contentUrl</code> verweist auf die direkte MP3-Datei</li>
+                            <li><code>duration</code> im ISO-8601-Format (<code>PT42M30S</code>)</li>
+                            <li>RSS-Feed enthält stabile GUIDs für alle Episoden</li>
+                            <li>Markup mit Rich Results Test validiert</li>
+                            <li>Search Console auf Fehler im Rich-Results-Status überprüft</li>
+                        </ul>
+
+                        <h2>Fazit: Podcast Schema Markup lohnt sich</h2>
+
+                        <p>Die Implementierung von Podcast Schema Markup ist für Podcast-Betreiber eine der effektivsten Maßnahmen, um bei Google sichtbarer zu werden. Der Aufwand ist überschaubar — ein JSON-LD-Block pro Seite — aber der potenzielle Gewinn erheblich: Rich Results, Karussell-Darstellungen und bessere Integration in sprachbasierte Suchen können die Reichweite Ihres Podcasts deutlich steigern.</p>
+
+                        <p>Beginnen Sie mit dem PodcastSeries-Markup auf Ihrer Podcast-Hauptseite und dem <code>webFeed</code>-Property. Ergänzen Sie dann schrittweise die einzelnen Episodenseiten mit PodcastEpisode-Markup. Bereits nach wenigen Wochen sollten Sie in der Search Console sehen, ob Google die strukturierten Daten korrekt liest.</p>
+
+                        <p>Für andere Medienformate lohnt sich auch ein Blick auf <a href="/blog/videoobject-schema-markup-vertieft.html">VideoObject Schema Markup vertieft</a> — viele der hier beschriebenen Konzepte gelten analog auch für Video-Inhalte.</p>
+
+                    </div>
+
+                    <!-- Share / Back -->
+                    <div class="mt-12 pt-8 border-t border-white/10 flex items-center justify-between">
+                        <a href="/blog/" class="text-blue-400 hover:text-blue-300 flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+                            Zurück zum Blog
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Sidebar -->
+                <aside class="lg:w-1/3 space-y-8">
+                    <!-- CTA Box -->
+                    <div class="bg-gradient-to-br from-blue-600/20 to-indigo-600/20 border border-blue-500/30 rounded-2xl p-6 text-center">
+                        <h3 class="text-lg font-bold text-white mb-3">Kostenlose SEO-Analyse</h3>
+                        <p class="text-gray-400 text-sm mb-5">Finde heraus, wie gut deine Website für Suchmaschinen optimiert ist.</p>
+                        <a href="/" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-6 py-3 rounded-lg font-medium transition-all inline-block w-full">Jetzt testen</a>
+                    </div>
+
+                    <!-- Related Articles -->
+                    <div class="bg-slate-800/50 border border-white/10 rounded-2xl p-6">
+                        <h3 class="text-lg font-bold text-white mb-4">Verwandte Artikel</h3>
+                        <div class="space-y-4">
+                            <a href="/blog/videoobject-schema-markup-seo.html" class="block group">
+                                <p class="text-sm text-gray-300 group-hover:text-blue-400 transition-colors font-medium">VideoObject Schema Markup: Videos in Google Rich Results</p>
+                                <p class="text-xs text-gray-500 mt-1">Schema Markup</p>
+                            </a>
+                            <a href="/blog/creativework-schema-markup-seo.html" class="block group">
+                                <p class="text-sm text-gray-300 group-hover:text-blue-400 transition-colors font-medium">CreativeWork Schema Markup: Bücher, Artikel und Kreativwerke</p>
+                                <p class="text-xs text-gray-500 mt-1">Schema Markup</p>
+                            </a>
+                            <a href="/blog/itemlist-schema-markup-seo.html" class="block group">
+                                <p class="text-sm text-gray-300 group-hover:text-blue-400 transition-colors font-medium">ItemList Schema Markup: Karussells und Listen für Google</p>
+                                <p class="text-xs text-gray-500 mt-1">Schema Markup</p>
+                            </a>
+                            <a href="/blog/speakable-property-schema-markup.html" class="block group">
+                                <p class="text-sm text-gray-300 group-hover:text-blue-400 transition-colors font-medium">speakable Property: Schema Markup für Sprachassistenten</p>
+                                <p class="text-xs text-gray-500 mt-1">Schema Markup</p>
+                            </a>
+                            <a href="/blog/strukturierte-daten-seo-schema-markup.html" class="block group">
+                                <p class="text-sm text-gray-300 group-hover:text-blue-400 transition-colors font-medium">Strukturierte Daten für SEO: Schema Markup einfach erklärt</p>
+                                <p class="text-xs text-gray-500 mt-1">Tech-SEO</p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Tools Box -->
+                    <div class="bg-slate-800/50 border border-white/10 rounded-2xl p-6">
+                        <h3 class="text-lg font-bold text-white mb-4">Passende Tools</h3>
+                        <div class="space-y-3">
+                            <a href="/tools/json-ld-structured-data-validator.html" class="block group">
+                                <p class="text-sm text-gray-300 group-hover:text-blue-400 transition-colors font-medium">JSON-LD Validator</p>
+                                <p class="text-xs text-gray-500 mt-0.5">Schema Markup prüfen</p>
+                            </a>
+                            <a href="/tools/iso8601-dauer-konverter.html" class="block group">
+                                <p class="text-sm text-gray-300 group-hover:text-blue-400 transition-colors font-medium">ISO 8601 Dauer-Konverter</p>
+                                <p class="text-xs text-gray-500 mt-0.5">Episodendauer berechnen</p>
+                            </a>
+                        </div>
+                    </div>
+                </aside>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer CTA -->
+    <section class="py-16 px-4 bg-gradient-to-r from-blue-900/30 to-indigo-900/30 border-t border-b border-white/5">
+        <div class="max-w-3xl mx-auto text-center">
+            <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">Teste deine Website jetzt kostenlos</h2>
+            <p class="text-gray-400 mb-8">Erhalte eine vollständige SEO-Analyse mit konkreten Verbesserungsvorschlägen.</p>
+            <form action="/" method="get" class="flex flex-col sm:flex-row gap-3 max-w-xl mx-auto">
+                <input type="url" placeholder="https://deine-website.de" class="flex-1 bg-slate-800 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-blue-500">
+                <a href="/" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-8 py-3 rounded-lg font-medium transition-all whitespace-nowrap">Analyse starten</a>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/10 bg-slate-900/50 py-12 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="flex items-center gap-2">
+                    <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                    <span class="text-lg font-bold text-white">Shift07</span>
+                </div>
+                <div class="flex items-center space-x-6 text-sm text-gray-400">
+                    <a href="/impressum.html" class="hover:text-white transition-colors">Impressum</a>
+                    <a href="/datenschutz.html" class="hover:text-white transition-colors">Datenschutz</a>
+                    <a href="/agb.html" class="hover:text-white transition-colors">AGB</a>
+                </div>
+                <p class="text-sm text-gray-500">&copy; 2026 Thümmler AI GmbH</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
