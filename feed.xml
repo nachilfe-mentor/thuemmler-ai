@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Wed, 06 May 2026 10:12:30 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 06 May 2026 12:04:07 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Podcast Schema Markup: PodcastSeries und PodcastEpisode JSON-LD für Google</title>
+      <link>https://shift07.ai/blog/podcast-schema-markup-seo.html</link>
+      <guid>https://shift07.ai/blog/podcast-schema-markup-seo.html</guid>
+      <pubDate>Wed, 06 May 2026 12:03:05 +0000</pubDate>
+      <description>Podcast Schema Markup richtig implementieren: Mit PodcastSeries und PodcastEpisode JSON-LD Ihren Podcast in Google-Rich-Results sichtbar machen. Schritt-für-Schritt-Anleitung 2026.</description>
+      <category>Schema Markup</category>
+    </item>
     <item>
       <title>ClaimReview Schema Markup: Faktencheck-Markup für Google News richtig implementieren</title>
       <link>https://shift07.ai/blog/claimreview-schema-markup-seo.html</link>
@@ -157,14 +165,6 @@
       <guid>https://shift07.ai/blog/occupation-schema-markup-seo.html</guid>
       <pubDate>Sun, 03 May 2026 01:32:41 +0000</pubDate>
       <description>Occupation Schema Markup erklärt: JSON-LD für Berufsbilder, OccupationalExperienceRequirements und Qualifikationsanforderungen – mit vollständigen Praxisbeispielen für Karriereportale und Unternehmensseiten.</description>
-      <category>Schema Markup</category>
-    </item>
-    <item>
-      <title>MedicalEntity Schema Markup: Drug, DietarySupplement &amp; MedicalCondition für Google</title>
-      <link>https://shift07.ai/blog/medicalentity-drug-dietarysupplement-schema-markup.html</link>
-      <guid>https://shift07.ai/blog/medicalentity-drug-dietarysupplement-schema-markup.html</guid>
-      <pubDate>Sun, 03 May 2026 01:26:43 +0000</pubDate>
-      <description>MedicalEntity Schema Markup vollständig erklärt: JSON-LD für Drug, DietarySupplement und MedicalCondition – mit Beispielen, Pflichtfeldern und SEO-Tipps für Apotheken, Hersteller und Gesundheitsportale.</description>
       <category>Schema Markup</category>
     </item>
   </channel>
