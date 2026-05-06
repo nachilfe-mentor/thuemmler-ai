@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Tue, 05 May 2026 08:10:26 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 06 May 2026 00:59:14 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Occupation Schema Markup vertieft: Berufe, Gehälter und Qualifikationen für Google</title>
+      <link>https://shift07.ai/blog/occupation-schema-markup-vertieft.html</link>
+      <guid>https://shift07.ai/blog/occupation-schema-markup-vertieft.html</guid>
+      <pubDate>Wed, 06 May 2026 00:58:25 +0000</pubDate>
+      <description>Occupation Schema Markup vertieft: OccupationAggregateRating, Gehaltsdaten, Qualifikationen und Erfahrungsanforderungen richtig implementieren — mit vollständigen JSON-LD-Beispielen für 2026.</description>
+      <category>Schema Markup</category>
+    </item>
     <item>
       <title>MedicalEntity Untertypen vertieft: Drug, MedicalCondition, MedicalProcedure und alle Sub-Typen für Google</title>
       <link>https://shift07.ai/blog/medicalentity-untertypen-schema-markup-vertieft.html</link>
@@ -157,14 +165,6 @@
       <guid>https://shift07.ai/blog/grocerystore-schema-markup-vertieft.html</guid>
       <pubDate>Fri, 01 May 2026 03:40:14 +0000</pubDate>
       <description>GroceryStore Schema Markup vertieft: JSON-LD für Supermärkte, Bio-Läden, Discounter, Wochenmärkte und Lebensmittelhändler. Unterschiede, vollständige Codebeispiele und Profi-Tipps 2026.</description>
-      <category>Schema Markup</category>
-    </item>
-    <item>
-      <title>SpecialtyStore Schema Markup vertieft: Spezialgeschäfte optimal für Google</title>
-      <link>https://shift07.ai/blog/specialtystore-schema-markup-vertieft.html</link>
-      <guid>https://shift07.ai/blog/specialtystore-schema-markup-vertieft.html</guid>
-      <pubDate>Fri, 01 May 2026 03:36:21 +0000</pubDate>
-      <description>SpecialtyStore Schema Markup vertieft: JSON-LD für Antiquitäten, Kunstgalerien, Weinhandlungen, Buchläden und alle Spezialgeschäfte. Vollständige Codebeispiele und Profi-Tipps 2026.</description>
       <category>Schema Markup</category>
     </item>
   </channel>
