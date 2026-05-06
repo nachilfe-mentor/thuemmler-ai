@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie & TVSeries Schema Markup: Filme und Serien für Google optimieren | Shift07 Blog</title>
+    <meta name="description" content="Movie und TVSeries Schema Markup richtig einsetzen: JSON-LD für Filme, Serien und Episoden mit AggregateRating für Rich Snippets in Google. Schritt-für-Schritt-Anleitung 2026.">
+    <meta name="author" content="Thümmler AI GmbH">
+    <link rel="icon" type="image/png" href="/logo.png">
+    <link rel="canonical" href="https://shift07.ai/blog/movie-tvseries-schema-markup.html">
+    <link rel="alternate" type="application/rss+xml" title="Shift07 Blog" href="https://shift07.ai/feed.xml">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Movie & TVSeries Schema Markup: Filme und Serien für Google optimieren | Shift07 Blog">
+    <meta property="og:description" content="Movie und TVSeries Schema Markup richtig einsetzen: JSON-LD für Filme, Serien und Episoden mit AggregateRating für Rich Snippets in Google.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://shift07.ai/blog/movie-tvseries-schema-markup.html">
+    <meta property="og:image" content="https://shift07.ai/blog/images/movie-tvseries-schema-markup.png">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="Shift07">
+    <meta property="article:published_time" content="2026-05-06T16:00:00+02:00">
+    <meta property="article:section" content="Schema Markup">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Movie & TVSeries Schema Markup: Filme und Serien für Google">
+    <meta name="twitter:description" content="Movie und TVSeries Schema Markup: JSON-LD für Filme, Serien und Episoden mit AggregateRating 2026.">
+    <meta name="twitter:image" content="https://shift07.ai/blog/images/movie-tvseries-schema-markup.png">
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Movie & TVSeries Schema Markup: Filme und Serien für Google optimieren",
+      "description": "Movie und TVSeries Schema Markup richtig einsetzen: JSON-LD für Filme, Serien und Episoden mit AggregateRating für Rich Snippets in Google.",
+      "image": "https://shift07.ai/blog/images/movie-tvseries-schema-markup.png",
+      "datePublished": "2026-05-06T16:00:00+02:00",
+      "dateModified": "2026-05-06T16:00:00+02:00",
+      "author": {
+        "@type": "Organization",
+        "name": "Shift07",
+        "url": "https://shift07.ai"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Shift07",
+        "url": "https://shift07.ai",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://shift07.ai/assets/logo.png"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://shift07.ai/blog/movie-tvseries-schema-markup.html"
+      },
+      "keywords": "Movie Schema Markup, TVSeries Schema Markup, JSON-LD Filme, Schema.org Film, TVEpisode Schema",
+      "inLanguage": "de"
+    }
+    </script>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXX" crossorigin="anonymous"></script>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: #1a1a1a; background: #fff; line-height: 1.7; }
+        header { background: #0f172a; padding: 16px 24px; display: flex; align-items: center; gap: 12px; }
+        header a { color: #fff; text-decoration: none; font-weight: 700; font-size: 1.2rem; }
+        header span { color: #94a3b8; font-size: 0.9rem; }
+        nav { background: #1e293b; padding: 10px 24px; }
+        nav a { color: #cbd5e1; text-decoration: none; font-size: 0.9rem; margin-right: 20px; }
+        nav a:hover { color: #fff; }
+        .container { max-width: 820px; margin: 0 auto; padding: 40px 24px 80px; }
+        h1 { font-size: 2rem; font-weight: 800; line-height: 1.25; margin-bottom: 16px; color: #0f172a; }
+        .meta { color: #64748b; font-size: 0.9rem; margin-bottom: 28px; }
+        .hero-img { width: 100%; border-radius: 12px; margin-bottom: 36px; }
+        h2 { font-size: 1.5rem; font-weight: 700; margin: 40px 0 16px; color: #0f172a; }
+        h3 { font-size: 1.15rem; font-weight: 700; margin: 28px 0 12px; color: #1e293b; }
+        p { margin-bottom: 18px; }
+        ul, ol { margin: 0 0 18px 24px; }
+        li { margin-bottom: 8px; }
+        pre { background: #0f172a; color: #e2e8f0; padding: 20px; border-radius: 8px; overflow-x: auto; font-size: 0.85rem; line-height: 1.6; margin: 20px 0; }
+        code { font-family: 'Courier New', monospace; }
+        .inline-code { background: #f1f5f9; padding: 2px 6px; border-radius: 4px; font-family: 'Courier New', monospace; font-size: 0.88em; color: #0f172a; }
+        .info-box { background: #eff6ff; border-left: 4px solid #3b82f6; padding: 16px 20px; border-radius: 0 8px 8px 0; margin: 24px 0; }
+        .warning-box { background: #fefce8; border-left: 4px solid #eab308; padding: 16px 20px; border-radius: 0 8px 8px 0; margin: 24px 0; }
+        .success-box { background: #f0fdf4; border-left: 4px solid #22c55e; padding: 16px 20px; border-radius: 0 8px 8px 0; margin: 24px 0; }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.9rem; }
+        th { background: #0f172a; color: #fff; padding: 10px 14px; text-align: left; }
+        td { padding: 10px 14px; border-bottom: 1px solid #e2e8f0; }
+        tr:nth-child(even) td { background: #f8fafc; }
+        .cta-box { background: linear-gradient(135deg, #0f172a 0%, #1e40af 100%); color: #fff; padding: 32px; border-radius: 12px; margin: 40px 0; text-align: center; }
+        .cta-box h3 { color: #fff; margin: 0 0 12px; font-size: 1.3rem; }
+        .cta-box p { color: #bfdbfe; margin-bottom: 20px; }
+        .cta-btn { display: inline-block; background: #fff; color: #1e40af; padding: 12px 28px; border-radius: 8px; font-weight: 700; text-decoration: none; font-size: 1rem; }
+        .related { border-top: 2px solid #e2e8f0; margin-top: 56px; padding-top: 32px; }
+        .related h3 { font-size: 1.15rem; margin-bottom: 16px; }
+        .related ul { list-style: none; margin: 0; padding: 0; }
+        .related li { margin-bottom: 10px; }
+        .related a { color: #2563eb; text-decoration: none; font-size: 0.95rem; }
+        .related a:hover { text-decoration: underline; }
+        footer { background: #0f172a; color: #94a3b8; text-align: center; padding: 24px; font-size: 0.85rem; }
+        footer a { color: #cbd5e1; text-decoration: none; }
+    </style>
+</head>
+<body>
+
+<header>
+    <a href="/">Shift07</a>
+    <span>›</span>
+    <a href="/blog/" style="color:#94a3b8; font-weight:400; font-size:0.95rem;">Blog</a>
+</header>
+<nav>
+    <a href="/">Start</a>
+    <a href="/blog/">Blog</a>
+    <a href="/tools/">Tools</a>
+    <a href="https://shift07.ai" target="_blank">Zur Analyse</a>
+</nav>
+
+<div class="container">
+
+    <h1>Movie &amp; TVSeries Schema Markup: Filme und Serien für Google optimieren</h1>
+    <p class="meta">Von Shift07 · 6. Mai 2026 · Schema Markup · 8 Min. Lesezeit</p>
+
+    <img src="/blog/images/movie-tvseries-schema-markup.png"
+         alt="Movie und TVSeries Schema Markup JSON-LD für Google Rich Snippets"
+         class="hero-img" width="820" height="461" loading="lazy">
+
+    <p>Wer Inhalte über Filme, TV-Serien oder Episoden auf seiner Website veröffentlicht — sei es ein Filmkritik-Blog, ein Streaming-Dienst, ein Mediathek-Anbieter oder eine Fan-Seite — hat mit <strong>Movie</strong> und <strong>TVSeries Schema Markup</strong> die Möglichkeit, bei Google deutlich sichtbarer zu werden. Strukturierte Daten nach Schema.org ermöglichen es Suchmaschinen, Inhalte besser zu verstehen und als Rich Snippets mit Bewertungssternen, Metadaten und weiteren Details anzuzeigen.</p>
+
+    <p>In diesem Artikel zeigen wir dir, wie du <span class="inline-code">Movie</span>, <span class="inline-code">TVSeries</span> und <span class="inline-code">TVEpisode</span> Schema Markup korrekt implementierst — mit vollständigen JSON-LD-Beispielen, allen wichtigen Properties und konkreten Tipps zur Fehlerdiagnose.</p>
+
+    <h2>Was ist Movie Schema Markup?</h2>
+
+    <p>Das Schema.org-Typ <span class="inline-code">Movie</span> beschreibt einen Spielfilm oder Kurzfilm. Google nutzt diese strukturierten Daten, um in den Suchergebnissen zusätzliche Informationen anzuzeigen: Bewertungssterne, Regisseur, Erscheinungsjahr, Laufzeit und Genre. Besonders für Filmkritik-Seiten und Mediatheken sind diese Rich Snippets wertvoll, weil sie die Klickrate (CTR) deutlich erhöhen können.</p>
+
+    <div class="info-box">
+        <strong>Wichtig:</strong> Google zeigt Movie Rich Snippets nur dann an, wenn die Seite auch tatsächlich inhaltlich über den Film berichtet — eine reine technische Implementierung ohne passenden Content wird nicht belohnt.
+    </div>
+
+    <h3>Die wichtigsten Properties für Movie</h3>
+
+    <table>
+        <tr>
+            <th>Property</th>
+            <th>Typ</th>
+            <th>Beschreibung</th>
+            <th>Pflicht?</th>
+        </tr>
+        <tr>
+            <td><code>name</code></td>
+            <td>Text</td>
+            <td>Offizieller Filmtitel</td>
+            <td>Ja</td>
+        </tr>
+        <tr>
+            <td><code>description</code></td>
+            <td>Text</td>
+            <td>Kurzbeschreibung des Films</td>
+            <td>Empfohlen</td>
+        </tr>
+        <tr>
+            <td><code>image</code></td>
+            <td>URL</td>
+            <td>Filmposter oder Thumbnail-URL</td>
+            <td>Empfohlen</td>
+        </tr>
+        <tr>
+            <td><code>datePublished</code></td>
+            <td>Date</td>
+            <td>Erscheinungsdatum (ISO 8601)</td>
+            <td>Empfohlen</td>
+        </tr>
+        <tr>
+            <td><code>director</code></td>
+            <td>Person</td>
+            <td>Regisseur/in</td>
+            <td>Empfohlen</td>
+        </tr>
+        <tr>
+            <td><code>actor</code></td>
+            <td>Person</td>
+            <td>Hauptdarsteller (Array)</td>
+            <td>Optional</td>
+        </tr>
+        <tr>
+            <td><code>genre</code></td>
+            <td>Text</td>
+            <td>Genre (z.B. "Thriller", "Komödie")</td>
+            <td>Empfohlen</td>
+        </tr>
+        <tr>
+            <td><code>duration</code></td>
+            <td>Duration</td>
+            <td>Laufzeit im ISO 8601 Format (z.B. PT2H15M)</td>
+            <td>Optional</td>
+        </tr>
+        <tr>
+            <td><code>aggregateRating</code></td>
+            <td>AggregateRating</td>
+            <td>Durchschnittsbewertung + Anzahl Stimmen</td>
+            <td>Für Rich Snippets</td>
+        </tr>
+        <tr>
+            <td><code>url</code></td>
+            <td>URL</td>
+            <td>Canonical-URL der Film-Seite</td>
+            <td>Empfohlen</td>
+        </tr>
+        <tr>
+            <td><code>countryOfOrigin</code></td>
+            <td>Country</td>
+            <td>Produktionsland</td>
+            <td>Optional</td>
+        </tr>
+        <tr>
+            <td><code>inLanguage</code></td>
+            <td>Text</td>
+            <td>Originalsprache</td>
+            <td>Optional</td>
+        </tr>
+    </table>
+
+    <h2>Vollständiges Movie Schema JSON-LD Beispiel</h2>
+
+    <p>Hier ist ein vollständiges und valides JSON-LD-Beispiel für einen Film mit Bewertungen:</p>
+
+<pre><code>{
+  "@context": "https://schema.org",
+  "@type": "Movie",
+  "name": "Interstellar",
+  "description": "Ein Astronauten-Team reist durch ein Wurmloch im Weltraum, um das Überleben der Menschheit zu sichern.",
+  "url": "https://example.de/filme/interstellar",
+  "image": "https://example.de/images/interstellar-poster.jpg",
+  "datePublished": "2014-11-06",
+  "genre": ["Science-Fiction", "Drama", "Abenteuer"],
+  "duration": "PT2H49M",
+  "inLanguage": "en",
+  "countryOfOrigin": {
+    "@type": "Country",
+    "name": "USA"
+  },
+  "director": {
+    "@type": "Person",
+    "name": "Christopher Nolan"
+  },
+  "actor": [
+    {
+      "@type": "Person",
+      "name": "Matthew McConaughey"
+    },
+    {
+      "@type": "Person",
+      "name": "Anne Hathaway"
+    },
+    {
+      "@type": "Person",
+      "name": "Jessica Chastain"
+    }
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "8.7",
+    "bestRating": "10",
+    "worstRating": "1",
+    "ratingCount": "1950000"
+  }
+}</code></pre>
+
+    <div class="warning-box">
+        <strong>Hinweis zum <code>aggregateRating</code>:</strong> Die Werte müssen auf deiner Seite auch tatsächlich sichtbar sein — d.h. Nutzer müssen die Bewertung auch auf der Seite lesen können. Versteckte oder anderweitig nicht dargestellte Bewertungen können zur Ablehnung durch Google führen.
+    </div>
+
+    <h2>TVSeries Schema Markup</h2>
+
+    <p>Für Fernsehserien und Streaming-Serien verwendet Schema.org den Typ <span class="inline-code">TVSeries</span>. Dieser Typ ist speziell dafür konzipiert, mehrstaffelige Inhalte mit Episoden und Staffeln zu beschreiben. Große Mediatheken wie Filmkritik-Plattformen oder Streaming-Aggregatoren profitieren besonders von TVSeries Markup.</p>
+
+    <h3>Die wichtigsten Properties für TVSeries</h3>
+
+    <table>
+        <tr>
+            <th>Property</th>
+            <th>Typ</th>
+            <th>Beschreibung</th>
+            <th>Pflicht?</th>
+        </tr>
+        <tr>
+            <td><code>name</code></td>
+            <td>Text</td>
+            <td>Serientitel</td>
+            <td>Ja</td>
+        </tr>
+        <tr>
+            <td><code>description</code></td>
+            <td>Text</td>
+            <td>Serienbeschreibung</td>
+            <td>Empfohlen</td>
+        </tr>
+        <tr>
+            <td><code>image</code></td>
+            <td>URL</td>
+            <td>Cover-Bild der Serie</td>
+            <td>Empfohlen</td>
+        </tr>
+        <tr>
+            <td><code>startDate</code></td>
+            <td>Date</td>
+            <td>Erstausstrahlung</td>
+            <td>Empfohlen</td>
+        </tr>
+        <tr>
+            <td><code>endDate</code></td>
+            <td>Date</td>
+            <td>Datum der letzten Folge (falls abgeschlossen)</td>
+            <td>Optional</td>
+        </tr>
+        <tr>
+            <td><code>numberOfSeasons</code></td>
+            <td>Integer</td>
+            <td>Anzahl der Staffeln</td>
+            <td>Empfohlen</td>
+        </tr>
+        <tr>
+            <td><code>numberOfEpisodes</code></td>
+            <td>Integer</td>
+            <td>Gesamtanzahl der Episoden</td>
+            <td>Empfohlen</td>
+        </tr>
+        <tr>
+            <td><code>genre</code></td>
+            <td>Text</td>
+            <td>Genre der Serie</td>
+            <td>Empfohlen</td>
+        </tr>
+        <tr>
+            <td><code>actor</code></td>
+            <td>Person</td>
+            <td>Hauptdarsteller</td>
+            <td>Optional</td>
+        </tr>
+        <tr>
+            <td><code>creator</code></td>
+            <td>Person/Organization</td>
+            <td>Erschaffer/Showrunner</td>
+            <td>Optional</td>
+        </tr>
+        <tr>
+            <td><code>containsSeason</code></td>
+            <td>TVSeason</td>
+            <td>Einzelne Staffeln mit Episoden</td>
+            <td>Optional</td>
+        </tr>
+        <tr>
+            <td><code>aggregateRating</code></td>
+            <td>AggregateRating</td>
+            <td>Durchschnittsbewertung</td>
+            <td>Für Rich Snippets</td>
+        </tr>
+    </table>
+
+    <h2>Vollständiges TVSeries JSON-LD Beispiel</h2>
+
+    <p>Ein vollständiges Beispiel für eine TV-Serie mit Staffel-Struktur und Bewertung:</p>
+
+<pre><code>{
+  "@context": "https://schema.org",
+  "@type": "TVSeries",
+  "name": "Breaking Bad",
+  "description": "Ein Chemielehrer mit Lungenkrebs beginnt, Crystal Meth herzustellen, um seine Familie finanziell abzusichern — und stürzt dabei in eine Welt aus Kriminalität und Gewalt.",
+  "url": "https://example.de/serien/breaking-bad",
+  "image": "https://example.de/images/breaking-bad-cover.jpg",
+  "startDate": "2008-01-20",
+  "endDate": "2013-09-29",
+  "numberOfSeasons": 5,
+  "numberOfEpisodes": 62,
+  "genre": ["Drama", "Thriller", "Krimi"],
+  "inLanguage": "en",
+  "countryOfOrigin": {
+    "@type": "Country",
+    "name": "USA"
+  },
+  "creator": {
+    "@type": "Person",
+    "name": "Vince Gilligan"
+  },
+  "actor": [
+    {
+      "@type": "Person",
+      "name": "Bryan Cranston"
+    },
+    {
+      "@type": "Person",
+      "name": "Aaron Paul"
+    }
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "9.5",
+    "bestRating": "10",
+    "worstRating": "1",
+    "ratingCount": "2100000"
+  },
+  "containsSeason": [
+    {
+      "@type": "TVSeason",
+      "name": "Breaking Bad Staffel 1",
+      "seasonNumber": 1,
+      "numberOfEpisodes": 7,
+      "startDate": "2008-01-20",
+      "endDate": "2008-03-09"
+    },
+    {
+      "@type": "TVSeason",
+      "name": "Breaking Bad Staffel 5",
+      "seasonNumber": 5,
+      "numberOfEpisodes": 16,
+      "startDate": "2012-07-15",
+      "endDate": "2013-09-29"
+    }
+  ]
+}</code></pre>
+
+    <h2>TVEpisode Schema Markup</h2>
+
+    <p>Für einzelne Folgen einer Serie gibt es den Typ <span class="inline-code">TVEpisode</span>. Dieser ist besonders sinnvoll für Seiten, die jede Episode separat beschreiben oder rezensieren. TVEpisode wird üblicherweise innerhalb einer <span class="inline-code">TVSeries</span> oder <span class="inline-code">TVSeason</span> referenziert, kann aber auch eigenständig eingesetzt werden.</p>
+
+    <h3>TVEpisode JSON-LD Beispiel</h3>
+
+<pre><code>{
+  "@context": "https://schema.org",
+  "@type": "TVEpisode",
+  "name": "Ozymandias",
+  "episodeNumber": 14,
+  "partOfSeason": {
+    "@type": "TVSeason",
+    "seasonNumber": 5
+  },
+  "partOfSeries": {
+    "@type": "TVSeries",
+    "name": "Breaking Bad",
+    "url": "https://example.de/serien/breaking-bad"
+  },
+  "description": "Walt sieht sich mit den Konsequenzen all seiner Handlungen konfrontiert — die emotionalste Folge der Serie.",
+  "datePublished": "2013-09-15",
+  "duration": "PT48M",
+  "director": {
+    "@type": "Person",
+    "name": "Rian Johnson"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "10",
+    "bestRating": "10",
+    "worstRating": "1",
+    "ratingCount": "250000"
+  }
+}</code></pre>
+
+    <h2>AggregateRating: Bewertungssterne für Rich Snippets</h2>
+
+    <p>Das <span class="inline-code">aggregateRating</span>-Property ist das entscheidende Element, um Bewertungssterne in den Google-Suchergebnissen zu erhalten. Ohne es wird das Schema zwar verarbeitet, aber keine visuellen Rich Snippets angezeigt. Ausführlich beschreiben wir das Thema in unserem Artikel zu <a href="/blog/aggregaterating-schema-markup-vertieft.html">AggregateRating Schema Markup vertieft</a>.</p>
+
+    <div class="info-box">
+        <strong>Google-Regeln für AggregateRating:</strong>
+        <ul style="margin: 10px 0 0 20px;">
+            <li>Die Bewertung muss auf der Seite für Nutzer sichtbar dargestellt sein</li>
+            <li><code>ratingCount</code> oder <code>reviewCount</code> ist Pflicht</li>
+            <li>Keine erfundenen oder manipulierten Bewertungen</li>
+            <li>Plattformfremde Bewertungen (z.B. IMDb-Werte auf eigener Seite) können zu Richtlinien-Verletzungen führen</li>
+        </ul>
+    </div>
+
+    <h2>Häufige Fehler und wie du sie vermeidest</h2>
+
+    <h3>1. Fehlende Pflichtfelder</h3>
+    <p>Der häufigste Fehler ist ein unvollständiger <span class="inline-code">name</span>. Ohne diesen Property akzeptiert Google das Schema nicht. Stelle sicher, dass der Filmtitel exakt mit dem offiziellen Titel übereinstimmt.</p>
+
+    <h3>2. Falsches Datumsformat</h3>
+    <p>Alle Datumsangaben müssen dem ISO 8601 Format entsprechen: <span class="inline-code">YYYY-MM-DD</span>. Falsche Formate wie „06. Mai 2026" werden von Google nicht erkannt und können das gesamte Schema ungültig machen.</p>
+
+    <h3>3. Laufzeit falsch kodiert</h3>
+    <p>Die <span class="inline-code">duration</span> muss im ISO 8601 Duration Format angegeben werden. Eine Laufzeit von 2 Stunden 49 Minuten lautet: <span class="inline-code">PT2H49M</span>. Nur Minuten: <span class="inline-code">PT90M</span>.</p>
+
+    <h3>4. Bewertungen nicht auf der Seite sichtbar</h3>
+    <p>Google vergleicht die Schema-Daten mit dem tatsächlichen Seiteninhalt. Wenn eine Bewertung im JSON-LD steht, aber nicht im HTML sichtbar ist, kann Google das Snippet ablehnen oder die Seite mit einer Richtlinienwarnung versehen.</p>
+
+    <h3>5. Plagiat fremder Bewertungsdaten</h3>
+    <p>IMDb-Ratings, Rotten-Tomatoes-Werte oder Metacritic-Scores dürfen nicht einfach als eigene Bewertungen übernommen werden. Entweder sammelst du eigene Nutzerbewertungen ein, oder du verwendest das Schema ohne <span class="inline-code">aggregateRating</span>.</p>
+
+    <h2>Movie &amp; TVSeries Schema testen</h2>
+
+    <p>Nachdem du das JSON-LD implementiert hast, stehen dir zwei Möglichkeiten zur Validierung zur Verfügung:</p>
+
+    <ol>
+        <li><strong>Google Rich Results Test:</strong> Gibt an, ob deine Seite für Rich Snippets qualifiziert ist</li>
+        <li><strong>Schema.org Validator:</strong> Prüft die technische Korrektheit des JSON-LD</li>
+    </ol>
+
+    <p>Außerdem empfiehlt es sich, mit unserem <a href="/tools/review-schema-generator.html">Review &amp; AggregateRating Schema Generator</a> das Bewertungs-Markup zu erstellen und zu testen — das spart Zeit und verhindert Tippfehler.</p>
+
+    <h2>Movie vs. TVSeries: Wann welchen Typ verwenden?</h2>
+
+    <table>
+        <tr>
+            <th>Inhaltstyp</th>
+            <th>Schema-Typ</th>
+            <th>Typische Plattform</th>
+        </tr>
+        <tr>
+            <td>Kinofilm, Kurzfilm, Dokumentarfilm</td>
+            <td><code>Movie</code></td>
+            <td>Filmkritik-Blog, Kinoseite</td>
+        </tr>
+        <tr>
+            <td>TV-Serie, Webserie, Streaming-Serie</td>
+            <td><code>TVSeries</code></td>
+            <td>Serienkritik-Portal, Mediathek</td>
+        </tr>
+        <tr>
+            <td>Einzelne Folge einer Serie</td>
+            <td><code>TVEpisode</code></td>
+            <td>Episode-Rezension, Mediathek</td>
+        </tr>
+        <tr>
+            <td>Staffel einer TV-Serie</td>
+            <td><code>TVSeason</code></td>
+            <td>Staffelübersicht innerhalb TVSeries</td>
+        </tr>
+    </table>
+
+    <h2>Verwandte Schema Markup Typen</h2>
+
+    <p>Movie und TVSeries Schema stehen nicht allein — sie können mit anderen Schema-Typen kombiniert werden:</p>
+
+    <ul>
+        <li><strong>BroadcastEvent:</strong> Für Live-Ausstrahlungen im Fernsehen</li>
+        <li><strong>VideoObject:</strong> Wenn ein Trailer oder ein Film-Clip direkt eingebettet ist</li>
+        <li><strong>Review:</strong> Für einzelne Rezensionen zu einem Film (nicht aggregiert)</li>
+        <li><strong>Event:</strong> Für Filmpremieren oder Kinovorstellungen — beschrieben in unserem Artikel zu <a href="/blog/podcast-schema-markup-seo.html">verwandten Kreativformaten wie Podcast Schema</a></li>
+    </ul>
+
+    <p>Wer mehrere Schema-Typen kombiniert, sollte dabei auf korrekte Verschachtelung und Konsistenz achten. Detailliert erklären wir das in unserem Artikel zu <a href="/blog/article-schema-markup-seo.html">Article Schema Markup und strukturierten Daten für Kreativinhalte</a>.</p>
+
+    <h2>Schema Markup in der Praxis: Wo im HTML einfügen?</h2>
+
+    <p>JSON-LD wird als <span class="inline-code">&lt;script type="application/ld+json"&gt;</span> im <span class="inline-code">&lt;head&gt;</span> oder am Ende des <span class="inline-code">&lt;body&gt;</span> eingefügt. Beides wird von Google akzeptiert. Wichtig ist, dass das JSON syntaktisch korrekt ist — ein einzelnes fehlendes Komma macht das gesamte Schema ungültig.</p>
+
+<pre><code>&lt;!-- Im &lt;head&gt; oder am Ende von &lt;body&gt; --&gt;
+&lt;script type="application/ld+json"&gt;
+{
+  "@context": "https://schema.org",
+  "@type": "Movie",
+  "name": "Mein Film",
+  ...
+}
+&lt;/script&gt;</code></pre>
+
+    <h2>Fazit: Movie und TVSeries Schema lohnt sich</h2>
+
+    <p>Wer Inhalte über Filme und Serien veröffentlicht, sollte Movie und TVSeries Schema Markup nicht ignorieren. Die Bewertungssterne im Suchergebnis sind ein direkter Konversionstreiber — sie erhöhen die Klickrate und signalisieren Nutzern auf einen Blick die Qualität des Inhalts. Mit vollständigen JSON-LD-Implementierungen, korrekt eingebundenen <span class="inline-code">aggregateRating</span>-Werten und konsistenten Datumsangaben legst du eine solide SEO-Grundlage für filmbasierte Inhalte.</p>
+
+    <p>Wenn du wissen möchtest, welche SEO-Probleme deine Website insgesamt hat, nutze unsere <a href="https://shift07.ai" target="_blank">kostenlose SEO-Analyse auf shift07.ai</a>. Du erhältst in wenigen Sekunden eine vollständige Übersicht über technische SEO-Probleme — inklusive fehlender strukturierter Daten.</p>
+
+    <div class="cta-box">
+        <h3>Deine Website kostenlos analysieren</h3>
+        <p>Shift07 findet fehlende Schema Markup, langsame Ladezeiten und technische SEO-Probleme in Sekunden.</p>
+        <a href="https://shift07.ai" class="cta-btn" target="_blank">Jetzt kostenlos analysieren →</a>
+    </div>
+
+    <div class="related">
+        <h3>Weiterführende Artikel</h3>
+        <ul>
+            <li><a href="/blog/podcast-schema-markup-seo.html">Podcast Schema Markup: PodcastSeries und PodcastEpisode JSON-LD für Google</a></li>
+            <li><a href="/blog/aggregaterating-schema-markup-vertieft.html">AggregateRating Schema Markup vertieft: Bewertungssterne richtig implementieren 2026</a></li>
+            <li><a href="/blog/article-schema-markup-seo.html">Article Schema Markup: Blog-Artikel für Rich Snippets optimieren</a></li>
+            <li><a href="/blog/claimreview-schema-markup-seo.html">ClaimReview Schema Markup: Faktencheck-Markup für Google News</a></li>
+            <li><a href="/blog/dataset-schema-markup-praxisleitfaden.html">Dataset Schema Markup: Forschungsdaten für Google Dataset Search</a></li>
+        </ul>
+    </div>
+
+</div>
+
+<footer>
+    <p>&copy; 2026 Shift07 · <a href="/impressum.html">Impressum</a> · <a href="/datenschutz.html">Datenschutz</a></p>
+</footer>
+
+</body>
+</html>
