@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Wed, 06 May 2026 02:47:40 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 06 May 2026 04:22:43 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>ItemList Schema Markup vertieft: Listen, Karussells und Sammlungen für Google</title>
+      <link>https://shift07.ai/blog/itemlist-schema-markup-vertieft.html</link>
+      <guid>https://shift07.ai/blog/itemlist-schema-markup-vertieft.html</guid>
+      <pubDate>Wed, 06 May 2026 04:22:07 +0000</pubDate>
+      <description>ItemList Schema Markup vertieft: Wie du Produktlisten, Blog-Karussells, Rezeptsammlungen und Nachrichtenlisten mit JSON-LD für Google Rich Results optimierst — inkl. aller ListItem-Properties und Praxisbeispielen.</description>
+      <category>Schema Markup</category>
+    </item>
     <item>
       <title>MedicalStudy Schema Markup in der Praxis: Klinische Studien für Google sichtbar machen</title>
       <link>https://shift07.ai/blog/medicalstudy-schema-markup-praxisleitfaden.html</link>
@@ -158,14 +166,6 @@
       <pubDate>Sat, 02 May 2026 04:09:07 +0000</pubDate>
       <description>SoftwareApplication Schema Markup vollständig erklärt: WebApplication, MobileApplication, Game und VideoGame richtig implementieren und Google Rich Results gewinnen.</description>
       <category>Schema Markup</category>
-    </item>
-    <item>
-      <title>FoodEvent, DanceEvent, SaleEvent &amp;amp; ScreeningEvent Schema Markup – Alle Untertypen vertieft</title>
-      <link>https://shift07.ai/blog/foodevent-danceevent-saleevent-screeningevent-schema.html</link>
-      <guid>https://shift07.ai/blog/foodevent-danceevent-saleevent-screeningevent-schema.html</guid>
-      <pubDate>Sat, 02 May 2026 02:33:31 +0000</pubDate>
-      <description>FoodEvent, DanceEvent, SaleEvent und ScreeningEvent: Lerne alle spezialisierten Event-Untertypen aus Schema.org kennen. Vollständige JSON-LD Beispiele, Best Practices und häufige Fehler 2026.</description>
-      <category>SEO</category>
     </item>
   </channel>
 </rss>
