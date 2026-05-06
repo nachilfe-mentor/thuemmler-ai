@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Wed, 06 May 2026 06:06:28 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 06 May 2026 10:12:30 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>ClaimReview Schema Markup: Faktencheck-Markup für Google News richtig implementieren</title>
+      <link>https://shift07.ai/blog/claimreview-schema-markup-seo.html</link>
+      <guid>https://shift07.ai/blog/claimreview-schema-markup-seo.html</guid>
+      <pubDate>Wed, 06 May 2026 10:11:41 +0000</pubDate>
+      <description>ClaimReview Schema Markup erklärt: So zeichnest du Faktencheck-Artikel mit JSON-LD aus, erfüllst Googles Richtlinien und erscheinst in Google News Rich Results. Mit vollständigem Beispiel.</description>
+      <category>Schema Markup</category>
+    </item>
     <item>
       <title>Dataset Schema Markup: Forschungsdaten für Google Dataset Search optimieren</title>
       <link>https://shift07.ai/blog/dataset-schema-markup-praxisleitfaden.html</link>
@@ -157,14 +165,6 @@
       <guid>https://shift07.ai/blog/medicalentity-drug-dietarysupplement-schema-markup.html</guid>
       <pubDate>Sun, 03 May 2026 01:26:43 +0000</pubDate>
       <description>MedicalEntity Schema Markup vollständig erklärt: JSON-LD für Drug, DietarySupplement und MedicalCondition – mit Beispielen, Pflichtfeldern und SEO-Tipps für Apotheken, Hersteller und Gesundheitsportale.</description>
-      <category>Schema Markup</category>
-    </item>
-    <item>
-      <title>TouristAttraction &amp; LandmarksOrHistoricalBuildings Schema Markup: Sehenswürdigkeiten für Google</title>
-      <link>https://shift07.ai/blog/touristattraction-landmarkshistoricalbuildings-schema-markup.html</link>
-      <guid>https://shift07.ai/blog/touristattraction-landmarkshistoricalbuildings-schema-markup.html</guid>
-      <pubDate>Sat, 02 May 2026 05:51:22 +0000</pubDate>
-      <description>TouristAttraction und LandmarksOrHistoricalBuildings Schema Markup: Vollständige Anleitung mit JSON-LD-Beispielen für Sehenswürdigkeiten, Denkmäler und historische Stätten 2026.</description>
       <category>Schema Markup</category>
     </item>
   </channel>
