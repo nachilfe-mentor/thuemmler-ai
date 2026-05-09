@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Sat, 09 May 2026 12:46:35 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 09 May 2026 12:49:29 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>NAP-Konsistenz-Checker: Lokales SEO mit einheitlichem Name, Adresse, Telefon stärken</title>
+      <link>https://shift07.ai/blog/nap-konsistenz-checker-tool.html</link>
+      <guid>https://shift07.ai/blog/nap-konsistenz-checker-tool.html</guid>
+      <pubDate>Sat, 09 May 2026 12:48:58 +0000</pubDate>
+      <description>Der NAP-Konsistenz-Checker prüft, ob Name, Adresse und Telefon deines Unternehmens auf Website, Google Business und Verzeichnissen übereinstimmen. Anleitung und Hintergründe.</description>
+      <category>Lokal-SEO</category>
+    </item>
     <item>
       <title>Movie &amp;amp; TVSeries Schema Generator: JSON-LD für Filme und Serien kostenlos erstellen</title>
       <link>https://shift07.ai/blog/movie-tvseries-schema-generator.html</link>
@@ -158,14 +166,6 @@
       <pubDate>Tue, 05 May 2026 06:12:55 +0000</pubDate>
       <description>Wir haben 79 Friseursalon-Websites in Deutschland analysiert. Ergebnis: 75% leiden unter JavaScript-Überladung, 68% haben kein Schema Markup, 38% fehlt eine Meta-Description. Die vollständige Auswertung mit konkreten Tipps.</description>
       <category>Datenanalyse</category>
-    </item>
-    <item>
-      <title>MedicalStudy &amp; MedicalTrial Schema Markup: Klinische Studien für Google strukturieren</title>
-      <link>https://shift07.ai/blog/medicalstudy-medicaltrial-schema-markup.html</link>
-      <guid>https://shift07.ai/blog/medicalstudy-medicaltrial-schema-markup.html</guid>
-      <pubDate>Tue, 05 May 2026 04:20:46 +0000</pubDate>
-      <description>MedicalStudy und MedicalTrial Schema Markup vollständig erklärt: JSON-LD-Implementierung für klinische Studien, Beobachtungsstudien und medizinische Versuche mit Praxisbeispielen.</description>
-      <category>Schema Markup</category>
     </item>
   </channel>
 </rss>
