@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Sat, 09 May 2026 11:05:42 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 09 May 2026 12:43:01 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Movie &amp;amp; TVSeries Schema Generator: JSON-LD für Filme und Serien kostenlos erstellen</title>
+      <link>https://shift07.ai/blog/movie-tvseries-schema-generator.html</link>
+      <guid>https://shift07.ai/blog/movie-tvseries-schema-generator.html</guid>
+      <pubDate>Sat, 09 May 2026 12:42:10 +0000</pubDate>
+      <description>Mit dem Movie &amp;amp; TVSeries Schema Generator erstellst du JSON-LD für Filme, Serien, Staffeln und Episoden – kostenlos, ohne Coding-Kenntnisse. Anleitung mit Beispielen.</description>
+      <category>Schema Markup</category>
+    </item>
     <item>
       <title>ClaimReview Schema Generator: Faktencheck JSON-LD kostenlos erstellen</title>
       <link>https://shift07.ai/blog/claimreview-schema-generator.html</link>
@@ -157,14 +165,6 @@
       <guid>https://shift07.ai/blog/medicalstudy-medicaltrial-schema-markup.html</guid>
       <pubDate>Tue, 05 May 2026 04:20:46 +0000</pubDate>
       <description>MedicalStudy und MedicalTrial Schema Markup vollständig erklärt: JSON-LD-Implementierung für klinische Studien, Beobachtungsstudien und medizinische Versuche mit Praxisbeispielen.</description>
-      <category>Schema Markup</category>
-    </item>
-    <item>
-      <title>Action Schema Markup: SearchAction, BuyAction und OrderAction für Google</title>
-      <link>https://shift07.ai/blog/action-schema-markup-searchaction-buyaction-orderaction.html</link>
-      <guid>https://shift07.ai/blog/action-schema-markup-searchaction-buyaction-orderaction.html</guid>
-      <pubDate>Tue, 05 May 2026 02:32:41 +0000</pubDate>
-      <description>Action-Typen in Schema.org erklärt: So implementierst du SearchAction (Sitelinks-Suchfeld), BuyAction, OrderAction und BookAction als JSON-LD für bessere Google-Ergebnisse.</description>
       <category>Schema Markup</category>
     </item>
   </channel>
