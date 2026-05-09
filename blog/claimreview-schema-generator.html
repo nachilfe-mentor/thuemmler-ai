@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClaimReview Schema Generator: Faktencheck JSON-LD kostenlos erstellen | Shift07 Blog</title>
+    <meta name="description" content="Mit dem kostenlosen ClaimReview Schema Generator von Shift07 erstellst du Faktencheck-Markup für Google News in Sekunden. Anleitung, Beispiele und Tipps zur Validierung.">
+    <meta name="author" content="Thümmler AI GmbH">
+    <link rel="icon" type="image/png" href="/logo.png">
+    <link rel="canonical" href="https://shift07.ai/blog/claimreview-schema-generator.html">
+    <link rel="alternate" type="application/rss+xml" title="Shift07 Blog" href="https://shift07.ai/feed.xml">
+    <!-- Open Graph -->
+    <meta property="og:title" content="ClaimReview Schema Generator: Faktencheck JSON-LD kostenlos erstellen | Shift07 Blog">
+    <meta property="og:description" content="Mit dem kostenlosen ClaimReview Schema Generator von Shift07 erstellst du Faktencheck-Markup für Google News in Sekunden. Anleitung, Beispiele und Tipps zur Validierung.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://shift07.ai/blog/claimreview-schema-generator.html">
+    <meta property="og:image" content="https://shift07.ai/blog/images/claimreview-schema-generator.png">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="Shift07">
+    <meta property="article:published_time" content="2026-05-09T11:00:00+02:00">
+    <meta property="article:section" content="Schema Markup">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ClaimReview Schema Generator: Faktencheck JSON-LD kostenlos erstellen">
+    <meta name="twitter:description" content="Mit dem kostenlosen ClaimReview Schema Generator von Shift07 erstellst du Faktencheck-Markup für Google News in Sekunden. Anleitung, Beispiele und Tipps zur Validierung.">
+    <meta name="twitter:image" content="https://shift07.ai/blog/images/claimreview-schema-generator.png">
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "ClaimReview Schema Generator: Faktencheck JSON-LD kostenlos erstellen",
+      "description": "Mit dem kostenlosen ClaimReview Schema Generator von Shift07 erstellst du Faktencheck-Markup für Google News in Sekunden. Anleitung, Beispiele und Tipps zur Validierung.",
+      "image": "https://shift07.ai/blog/images/claimreview-schema-generator.png",
+      "datePublished": "2026-05-09T11:00:00+02:00",
+      "dateModified": "2026-05-09T11:00:00+02:00",
+      "author": {
+        "@type": "Organization",
+        "name": "Shift07",
+        "url": "https://shift07.ai"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Shift07",
+        "url": "https://shift07.ai",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://shift07.ai/assets/logo.png"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://shift07.ai/blog/claimreview-schema-generator.html"
+      }
+    }
+    </script>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K1S1RXBDS8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K1S1RXBDS8');
+    </script>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8475857002943858" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: rgba(15, 23, 42, 0.5); }
+        ::-webkit-scrollbar-thumb { background: rgba(59, 130, 246, 0.5); border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: rgba(59, 130, 246, 0.7); }
+        html { scroll-behavior: smooth; }
+        .article-content h2 { font-size: 1.5rem; font-weight: 700; color: #fff; margin-top: 2.5rem; margin-bottom: 1rem; }
+        .article-content h3 { font-size: 1.25rem; font-weight: 600; color: #e2e8f0; margin-top: 2rem; margin-bottom: 0.75rem; }
+        .article-content p { color: #cbd5e1; line-height: 1.8; margin-bottom: 1.25rem; }
+        .article-content ul, .article-content ol { color: #cbd5e1; margin-bottom: 1.25rem; padding-left: 1.5rem; }
+        .article-content li { margin-bottom: 0.5rem; line-height: 1.7; }
+        .article-content ul li { list-style-type: disc; }
+        .article-content ol li { list-style-type: decimal; }
+        .article-content a { color: #60a5fa; text-decoration: underline; text-underline-offset: 2px; }
+        .article-content a:hover { color: #93bbfc; }
+        .article-content blockquote { border-left: 4px solid #3b82f6; padding-left: 1.25rem; margin: 1.5rem 0; color: #94a3b8; font-style: italic; }
+        .article-content code { background: rgba(59, 130, 246, 0.15); color: #93c5fd; padding: 0.15rem 0.4rem; border-radius: 0.25rem; font-size: 0.9em; }
+        .article-content pre { background: rgba(15, 23, 42, 0.8); border: 1px solid rgba(255,255,255,0.1); border-radius: 0.75rem; padding: 1.25rem; overflow-x: auto; margin-bottom: 1.5rem; }
+        .article-content pre code { background: none; padding: 0; color: #e2e8f0; }
+        .article-content strong { color: #f1f5f9; }
+    </style>
+</head>
+<body class="bg-slate-900 text-white min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-slate-900/80 backdrop-blur-xl border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <a href="/" class="flex items-center gap-2">
+                    <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                    <span class="text-xl font-bold text-white">Shift07</span>
+                </a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="/" class="text-gray-300 hover:text-white transition-colors">SEO-Tool</a>
+                    <a href="/blog/" class="text-white font-medium border-b-2 border-blue-500 pb-0.5">Blog</a>
+                    <a href="/tools/" class="text-gray-300 hover:text-white transition-colors">Tools</a>
+                    <a href="/app/#/login" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-5 py-2 rounded-lg font-medium transition-all">Anmelden</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-gray-300 hover:text-white">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900/95 border-b border-white/10">
+            <div class="px-4 py-3 space-y-2">
+                <a href="/" class="block py-2 text-gray-300 hover:text-white">SEO-Tool</a>
+                <a href="/blog/" class="block py-2 text-white font-medium">Blog</a>
+                <a href="/tools/" class="block py-2 text-gray-300 hover:text-white">Tools</a>
+                <a href="/app/#/login" class="block py-2 text-blue-400 hover:text-blue-300">Anmelden</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Image -->
+    <section class="pt-16 relative">
+        <div class="h-[400px] bg-gradient-to-br from-blue-600 via-indigo-700 to-purple-800 relative overflow-hidden">
+            <img src="/blog/images/claimreview-schema-generator.png" alt="ClaimReview Schema Generator: Faktencheck JSON-LD kostenlos erstellen" class="absolute inset-0 w-full h-full object-cover opacity-40">
+            <div class="absolute inset-0 bg-black/40"></div>
+            <div class="absolute inset-0 flex items-center justify-center">
+                <div class="text-center px-4 max-w-4xl">
+                    <span class="inline-block text-sm font-semibold px-4 py-1.5 bg-white/10 text-white/90 rounded-full mb-6">Schema Markup</span>
+                    <h1 class="text-3xl md:text-5xl font-extrabold text-white leading-tight">ClaimReview Schema Generator: Faktencheck JSON-LD kostenlos erstellen</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Article Content -->
+    <section class="py-12 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col lg:flex-row gap-12">
+
+                <!-- Main Content -->
+                <article class="lg:w-2/3">
+                    <!-- Meta -->
+                    <div class="flex flex-wrap items-center gap-4 text-sm text-gray-400 mb-10 pb-6 border-b border-white/10">
+                        <div class="flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+                            Shift07 Team
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                            9. Mai 2026
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                            10 Min. Lesezeit
+                        </div>
+                        <span class="text-xs font-semibold px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full">Schema Markup</span>
+                    </div>
+
+                    <!-- Article Body -->
+                    <div class="article-content">
+
+                        <p>Faktencheck-Artikel auf Nachrichtenportalen und Fact-Checking-Websites können in Google News mit einem speziellen Etikett auftauchen — wenn das ClaimReview Schema Markup korrekt implementiert ist. Das manuelle Schreiben von <code>ClaimReview</code>-JSON-LD ist fehleranfällig: Die Struktur mit verschachtelten <code>itemReviewed</code>- und <code>reviewRating</code>-Objekten verlangt präzise Property-Namen und korrekte Verdict-Werte. Unser <a href="/tools/claimreview-schema-generator.html">ClaimReview Schema Generator</a> nimmt dir diese Arbeit ab und erstellt das fertige JSON-LD in Sekunden.</p>
+
+                        <h2>Was ist der ClaimReview Schema Generator?</h2>
+
+                        <p>Der <strong>ClaimReview Schema Generator</strong> von Shift07 ist ein kostenloses, browserbasiertes Tool, das vollständiges ClaimReview JSON-LD für deine Faktencheck-Artikel generiert. Du musst nichts installieren, keine API-Schlüssel beschaffen und keinen Code schreiben — du füllst ein Formular aus und kopierst das fertige Markup in deinen HTML-Code.</p>
+
+                        <p>Das Tool unterstützt alle sieben offiziellen Google-Verdict-Typen mit farblicher Vorschau und generiert eine realistische Darstellung, wie dein Faktencheck-Artikel in den Google-Suchergebnissen erscheinen könnte. So siehst du direkt, ob das Markup dem entspricht, was du publizieren möchtest.</p>
+
+                        <h2>Wer sollte ClaimReview Markup nutzen?</h2>
+
+                        <p>ClaimReview ist ausschließlich für <strong>Fact-Checking-Organisationen und seriöse Newsrooms</strong> gedacht. Google akzeptiert das Markup nur von Websites, die:</p>
+
+                        <ul>
+                            <li>Journalistische Fact-Checking-Standards einhalten (z.B. die Principles of the International Fact-Checking Network)</li>
+                            <li>Redaktionell unabhängig arbeiten und ihre Methodik transparent darlegen</li>
+                            <li>Den zu prüfenden Claim klar benennen und nicht verändern</li>
+                            <li>Quellen und Belege für ihr Urteil angeben</li>
+                        </ul>
+
+                        <p>Wer ClaimReview verwendet, um eigene Aussagen zu "verifizieren" oder Konkurrenten zu diskreditieren, riskiert manuelle Maßnahmen durch Google und den Ausschluss aus Google News. Das Markup ist ein Vertrauens-Signal — und Vertrauen muss verdient werden.</p>
+
+                        <p>Für den theoretischen Hintergrund zu ClaimReview und Googles Anforderungen empfehle ich unseren detaillierten Artikel <a href="/blog/claimreview-schema-markup-seo.html">ClaimReview Schema Markup: Faktencheck-Markup für Google News richtig implementieren</a>.</p>
+
+                        <h2>Schritt-für-Schritt-Anleitung: So nutzt du den Generator</h2>
+
+                        <h3>Schritt 1: Den Tool öffnen</h3>
+
+                        <p>Rufe den <a href="/tools/claimreview-schema-generator.html">ClaimReview Schema Generator</a> auf. Das Tool läuft vollständig in deinem Browser — es werden keine Daten an externe Server gesendet.</p>
+
+                        <h3>Schritt 2: URL deines Faktencheck-Artikels eingeben</h3>
+
+                        <p>Im ersten Feld gibst du die URL deines Faktencheck-Artikels ein. Diese URL erscheint später als <code>url</code> im ClaimReview-Objekt und teilt Google mit, auf welcher Seite das Urteil veröffentlicht ist. Nutze die vollständige, kanonische URL — also die URL, die auch im Canonical-Tag deiner Seite steht.</p>
+
+                        <h3>Schritt 3: Behauptung (Claim) eingeben</h3>
+
+                        <p>Im Feld "Behauptung" trägst du die exakte Aussage ein, die du überprüft hast. Wichtig: Gib die Behauptung <strong>wörtlich wieder</strong>, so wie sie ursprünglich geäußert wurde — ohne Umformulierung oder Wertung. Wenn die ursprüngliche Aussage zu lang ist, kannst du einen repräsentativen Ausschnitt verwenden.</p>
+
+                        <p>Beispiel für eine korrekte Behauptung: <em>"Deutschland hat 2024 mehr CO2 ausgestoßen als 1990."</em></p>
+
+                        <h3>Schritt 4: Datum der Behauptung eintragen</h3>
+
+                        <p>Das Datum, an dem die überprüfte Behauptung ursprünglich gemacht wurde — nicht das Datum deines Faktencheck-Artikels. Wenn das Datum unbekannt ist, kannst du das Feld leer lassen.</p>
+
+                        <h3>Schritt 5: Urheber der Behauptung angeben</h3>
+
+                        <p>Wer hat die Behauptung ursprünglich geäußert? Das kann eine Person, eine Organisation oder ein Medium sein. Der Generator erstellt daraus das <code>itemReviewed.author</code>-Objekt. Wenn der Urheber eine Website hat, trage auch die URL ein — das verbessert die Maschinenlesbarkeit des Markups.</p>
+
+                        <h3>Schritt 6: Verdict (Urteil) auswählen</h3>
+
+                        <p>Das Verdict ist das Herzstück von ClaimReview. Der Generator bietet alle sieben offiziell von Google unterstützten Verdict-Typen an — mit farblicher Kennzeichnung:</p>
+
+                        <ul>
+                            <li><strong style="color: #22c55e;">True</strong> — Die Behauptung ist wahr</li>
+                            <li><strong style="color: #84cc16;">Mostly True</strong> — Die Behauptung ist überwiegend wahr, mit kleinen Einschränkungen</li>
+                            <li><strong style="color: #eab308;">Half True</strong> — Die Behauptung ist halb wahr, halb falsch</li>
+                            <li><strong style="color: #f97316;">Mostly False</strong> — Die Behauptung ist überwiegend falsch</li>
+                            <li><strong style="color: #ef4444;">False</strong> — Die Behauptung ist falsch</li>
+                            <li><strong style="color: #8b5cf6;">Misleading</strong> — Die Behauptung ist irreführend (auch wenn technisch korrekt)</li>
+                            <li><strong style="color: #6b7280;">Unverified</strong> — Die Behauptung konnte nicht überprüft werden</li>
+                        </ul>
+
+                        <p>Wähle das Verdict, das deinem redaktionellen Urteil am besten entspricht. Die Farbvorschau gibt dir sofort ein Gefühl dafür, wie das Markup in den Suchergebnissen wirkt.</p>
+
+                        <h3>Schritt 7: Namen deiner Fact-Checking-Organisation eingeben</h3>
+
+                        <p>Hier trägst du den Namen deiner Redaktion oder Organisation ein sowie die URL deiner Website. Diese Information erscheint als <code>author</code> im ClaimReview-Objekt — also als die Organisation, die den Faktencheck durchgeführt hat.</p>
+
+                        <h3>Schritt 8: JSON-LD generieren und kopieren</h3>
+
+                        <p>Klicke auf "JSON-LD generieren". Das Tool erstellt sofort das vollständige, valide ClaimReview-Markup. Du kannst es per Klick in die Zwischenablage kopieren. Das generierte JSON-LD ist bereit zur direkten Einbindung in deine HTML-Seite.</p>
+
+                        <h2>Das generierte JSON-LD: Ein Beispiel</h2>
+
+                        <p>So sieht ein typisches Output des Generators aus:</p>
+
+                        <pre><code>{
+  "@context": "https://schema.org",
+  "@type": "ClaimReview",
+  "url": "https://mein-faktencheck.de/artikel/co2-emissionen-deutschland-2024",
+  "claimReviewed": "Deutschland hat 2024 mehr CO2 ausgestoßen als 1990.",
+  "itemReviewed": {
+    "@type": "Claim",
+    "datePublished": "2024-12-15",
+    "author": {
+      "@type": "Person",
+      "name": "Max Mustermann",
+      "url": "https://beispiel-politiker.de"
+    }
+  },
+  "author": {
+    "@type": "Organization",
+    "name": "Faktencheck Redaktion",
+    "url": "https://mein-faktencheck.de"
+  },
+  "reviewRating": {
+    "@type": "Rating",
+    "ratingValue": "5",
+    "bestRating": "7",
+    "worstRating": "1",
+    "alternateName": "Mostly False",
+    "ratingExplanation": "Die Behauptung ist falsch. Laut Umweltbundesamt sanken die CO2-Emissionen 2024 auf den niedrigsten Stand seit 1990."
+  }
+}</code></pre>
+
+                        <h2>Das Markup in deine Website einbinden</h2>
+
+                        <p>Das generierte JSON-LD bindest du direkt im <code>&lt;head&gt;</code>-Bereich deiner Faktencheck-Artikel-Seite ein — innerhalb eines <code>&lt;script type="application/ld+json"&gt;</code>-Tags:</p>
+
+                        <pre><code>&lt;head&gt;
+  &lt;!-- ...andere Meta-Tags... --&gt;
+  &lt;script type="application/ld+json"&gt;
+  {
+    "@context": "https://schema.org",
+    "@type": "ClaimReview",
+    "url": "https://mein-faktencheck.de/...",
+    ...
+  }
+  &lt;/script&gt;
+&lt;/head&gt;</code></pre>
+
+                        <p>Das Markup muss auf <strong>jeder einzelnen Faktencheck-Seite individuell</strong> eingebunden sein — mit den spezifischen Daten für genau diese Seite. Ein einziger ClaimReview-Block in einer globalen Template-Datei reicht nicht aus.</p>
+
+                        <h2>Wichtige Regeln für valides ClaimReview Markup</h2>
+
+                        <h3>Regel 1: Eine Behauptung pro Seite</h3>
+
+                        <p>Google empfiehlt, maximal eine Behauptung pro Seite zu überprüfen. Wenn du mehrere Claims auf einer Seite hast, kannst du mehrere ClaimReview-Blöcke einbinden — aber jede Seite sollte inhaltlich auf eine zentrale Behauptung fokussiert sein.</p>
+
+                        <h3>Regel 2: Die URL muss zur Seite passen</h3>
+
+                        <p>Die <code>url</code>-Property im ClaimReview-Objekt muss auf die aktuelle Seite zeigen — nicht auf eine andere Seite deiner Website. Verwende die kanonische URL der Seite.</p>
+
+                        <h3>Regel 3: ratingValue und die Skala</h3>
+
+                        <p>Der Generator verwendet intern eine Skala von 1 (True) bis 7 (Unverified). Google wertet den <code>alternateName</code> des Ratings aus — der tatsächlich angezeigte Text in den Suchergebnissen. Der numerische <code>ratingValue</code> ist maschinenlesbar, aber nicht für Nutzer sichtbar.</p>
+
+                        <h3>Regel 4: ratingExplanation nutzen</h3>
+
+                        <p>Die <code>ratingExplanation</code>-Property ist optional, aber sehr empfehlenswert. Hier erklärst du kurz, warum du zu diesem Urteil gekommen bist. Google kann diese Erklärung in erweiterten Suchergebnissen anzeigen — und sie stärkt die Glaubwürdigkeit deines Faktenchecks.</p>
+
+                        <h2>Validierung des generierten Markups</h2>
+
+                        <p>Nach der Einbindung solltest du das Markup mit dem <strong>Rich Results Test</strong> von Google validieren. Das Tool zeigt dir, ob Google dein ClaimReview erkennt und für Rich Results qualifiziert. Typische Fehler die dort auftauchen:</p>
+
+                        <ul>
+                            <li><code>url</code> fehlt oder stimmt nicht mit der aktuellen Seite überein</li>
+                            <li><code>claimReviewed</code> ist leer oder zu kurz</li>
+                            <li><code>reviewRating.alternateName</code> fehlt</li>
+                            <li>Die <code>author</code>-Property fehlt auf der ClaimReview- oder itemReviewed-Ebene</li>
+                        </ul>
+
+                        <p>Für eine ganzheitliche technische SEO-Prüfung deiner Website — nicht nur für Schema Markup — empfehle ich die <a href="/">kostenlose SEO-Analyse von Shift07</a>. Sie prüft Meta-Tags, Core Web Vitals, strukturierte Daten und weitere SEO-Faktoren auf einen Blick.</p>
+
+                        <h2>ClaimReview und Google News: Was du wissen musst</h2>
+
+                        <p>Google News zeigt Faktencheck-Labels neben Suchergebnissen an — aber nur für Websites, die im Google News Publisher Center als Fact-Checker akkreditiert sind. Das Schema Markup allein reicht nicht aus; du musst dich aktiv als Fact-Checking-Organisation bei Google anmelden.</p>
+
+                        <p>Wichtige Voraussetzungen für Google News Fact-Check Labels:</p>
+
+                        <ul>
+                            <li>Deine Website muss in Google News indiziert sein</li>
+                            <li>Du musst die <a href="/blog/claimreview-schema-markup-seo.html">Richtlinien von Google für ClaimReview</a> einhalten</li>
+                            <li>Deine Organisation muss journalistische Fact-Checking-Standards belegen können</li>
+                            <li>Die Methodenseite deiner Redaktion muss öffentlich zugänglich sein</li>
+                        </ul>
+
+                        <p>Selbst ohne Google News Publisher-Status lohnt sich ClaimReview Markup: Es verbessert die Maschinenlesbarkeit deiner Seiten, hilft Knowledge-Graph-Systemen beim Verstehen deiner Inhalte und kann in anderen Google-Produkten wie Google Discover angezeigt werden.</p>
+
+                        <h2>Checkliste: ClaimReview Markup richtig einbinden</h2>
+
+                        <ul>
+                            <li>Generator-URL: <a href="/tools/claimreview-schema-generator.html">shift07.ai/tools/claimreview-schema-generator</a> aufrufen</li>
+                            <li>URL des Faktencheck-Artikels (kanonisch, vollständig) eingeben</li>
+                            <li>Behauptung wörtlich und unverändert eintragen</li>
+                            <li>Datum der Behauptung (falls bekannt) angeben</li>
+                            <li>Urheber der Behauptung mit Name und URL</li>
+                            <li>Korrektes Verdict aus den 7 Optionen auswählen</li>
+                            <li>ratingExplanation mit kurzer Begründung ausfüllen</li>
+                            <li>Eigene Organisation mit Name und URL eintragen</li>
+                            <li>JSON-LD kopieren und im &lt;head&gt; der Seite einbinden</li>
+                            <li>Rich Results Test ausführen und Fehler beheben</li>
+                        </ul>
+
+                        <h2>Fazit</h2>
+
+                        <p>ClaimReview Schema Markup ist ein mächtiges Tool für Fact-Checker und Nachrichtenredaktionen — aber es muss präzise implementiert sein, damit Google es akzeptiert. Unser <a href="/tools/claimreview-schema-generator.html">ClaimReview Schema Generator</a> nimmt dir die fehleranfällige manuelle Arbeit ab: Du beschreibst deinen Faktencheck in einem Formular, das Tool erstellt das korrekte JSON-LD. In weniger als zwei Minuten hast du valides ClaimReview-Markup, das direkt in deine Faktencheck-Seite eingebunden werden kann.</p>
+
+                        <p>Für das tiefere Verständnis der ClaimReview-Eigenschaften und Googles Anforderungen an Fact-Checker lohnt sich außerdem unser vollständiger Leitfaden <a href="/blog/claimreview-schema-markup-seo.html">ClaimReview Schema Markup: Faktencheck-Markup für Google News richtig implementieren</a>. Wer auch andere Schema-Typen für seine Website generieren möchte, findet in unserem <a href="/tools/">Tool-Verzeichnis</a> weitere kostenlose Schema Markup Generatoren.</p>
+
+                    </div>
+
+                    <!-- Share / Back -->
+                    <div class="mt-12 pt-8 border-t border-white/10 flex items-center justify-between">
+                        <a href="/blog/" class="text-blue-400 hover:text-blue-300 flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+                            Zurück zum Blog
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Sidebar -->
+                <aside class="lg:w-1/3 space-y-8">
+                    <!-- CTA Box -->
+                    <div class="bg-gradient-to-br from-blue-600/20 to-indigo-600/20 border border-blue-500/30 rounded-2xl p-6 text-center">
+                        <h3 class="text-lg font-bold text-white mb-3">ClaimReview Generator</h3>
+                        <p class="text-gray-400 text-sm mb-5">Erstelle valides Faktencheck-Markup in Sekunden — kostenlos und ohne Installation.</p>
+                        <a href="/tools/claimreview-schema-generator.html" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-6 py-3 rounded-lg font-medium transition-all inline-block w-full">Generator öffnen</a>
+                    </div>
+
+                    <!-- Related Articles -->
+                    <div class="bg-slate-800/50 border border-white/10 rounded-2xl p-6">
+                        <h3 class="text-lg font-bold text-white mb-4">Weitere Artikel</h3>
+                        <div class="space-y-4">
+                            <a href="/blog/claimreview-schema-markup-seo.html" class="block group">
+                                <p class="text-sm text-gray-300 group-hover:text-blue-400 transition-colors font-medium">ClaimReview Schema Markup: Faktencheck-Markup für Google News richtig implementieren</p>
+                                <p class="text-xs text-gray-500 mt-1">Schema Markup</p>
+                            </a>
+                            <a href="/blog/article-schema-markup-seo.html" class="block group">
+                                <p class="text-sm text-gray-300 group-hover:text-blue-400 transition-colors font-medium">Article Schema Markup: Blog-Artikel für Rich Snippets optimieren</p>
+                                <p class="text-xs text-gray-500 mt-1">Schema Markup</p>
+                            </a>
+                            <a href="/blog/aggregaterating-schema-markup-vertieft.html" class="block group">
+                                <p class="text-sm text-gray-300 group-hover:text-blue-400 transition-colors font-medium">AggregateRating Schema Markup vertieft: Bewertungssterne richtig implementieren</p>
+                                <p class="text-xs text-gray-500 mt-1">Schema Markup</p>
+                            </a>
+                            <a href="/blog/podcastseries-schema-markup-generator.html" class="block group">
+                                <p class="text-sm text-gray-300 group-hover:text-blue-400 transition-colors font-medium">PodcastSeries Schema Markup Generator: JSON-LD für Podcasts in Google</p>
+                                <p class="text-xs text-gray-500 mt-1">Schema Markup</p>
+                            </a>
+                            <a href="/tools/claimreview-schema-generator.html" class="block group">
+                                <p class="text-sm text-gray-300 group-hover:text-blue-400 transition-colors font-medium">ClaimReview Schema Generator — Kostenloser Faktencheck-Generator</p>
+                                <p class="text-xs text-gray-500 mt-1">Tool</p>
+                            </a>
+                        </div>
+                    </div>
+                </aside>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer CTA -->
+    <section class="py-16 px-4 bg-gradient-to-r from-blue-900/30 to-indigo-900/30 border-t border-b border-white/5">
+        <div class="max-w-3xl mx-auto text-center">
+            <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">Teste deine Website jetzt kostenlos</h2>
+            <p class="text-gray-400 mb-8">Erhalte eine vollständige SEO-Analyse mit konkreten Verbesserungsvorschlägen.</p>
+            <form action="/" method="get" class="flex flex-col sm:flex-row gap-3 max-w-xl mx-auto">
+                <input type="url" placeholder="https://deine-website.de" class="flex-1 bg-slate-800 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-blue-500">
+                <a href="/" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-8 py-3 rounded-lg font-medium transition-all whitespace-nowrap">Analyse starten</a>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/10 bg-slate-900/50 py-12 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="flex items-center gap-2">
+                    <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                    <span class="text-lg font-bold text-white">Shift07</span>
+                </div>
+                <div class="flex items-center space-x-6 text-sm text-gray-400">
+                    <a href="/impressum.html" class="hover:text-white transition-colors">Impressum</a>
+                    <a href="/datenschutz.html" class="hover:text-white transition-colors">Datenschutz</a>
+                    <a href="/agb.html" class="hover:text-white transition-colors">AGB</a>
+                </div>
+                <p class="text-sm text-gray-500">&copy; 2026 Thümmler AI GmbH</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
