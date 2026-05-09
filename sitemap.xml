@@ -8,7 +8,7 @@
   </url>
   <url>
     <loc>https://shift07.ai/blog/</loc>
-    <lastmod>2026-05-06</lastmod>
+    <lastmod>2026-05-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
@@ -723,6 +723,12 @@
   <url>
     <loc>https://shift07.ai/blog/medicalclinic-hospital-schema-markup.html</loc>
     <lastmod>2026-04-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://shift07.ai/blog/medicalcondition-schema-markup-vertieft.html</loc>
+    <lastmod>2026-05-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
