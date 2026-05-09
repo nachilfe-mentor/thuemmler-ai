@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Sat, 09 May 2026 10:48:29 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 09 May 2026 10:58:51 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Movie &amp;amp; TVSeries Schema Markup vertieft: MovieSeries, TVEpisode, Trailer und Knowledge Panel</title>
+      <link>https://shift07.ai/blog/movie-tvseries-schema-markup-vertieft.html</link>
+      <guid>https://shift07.ai/blog/movie-tvseries-schema-markup-vertieft.html</guid>
+      <pubDate>Sat, 09 May 2026 10:58:19 +0000</pubDate>
+      <description>Movie und TVSeries Schema Markup vertieft: MovieSeries-Hierarchie, TVSeason, TVEpisode, Trailer als VideoObject, aggregateRating und Google Knowledge Panel richtig implementieren.</description>
+      <category>Schema Markup</category>
+    </item>
     <item>
       <title>PodcastSeries Schema Markup Generator: JSON-LD für Podcasts in Google</title>
       <link>https://shift07.ai/blog/podcastseries-schema-markup-generator.html</link>
@@ -157,14 +165,6 @@
       <guid>https://shift07.ai/blog/governmentservice-schema-markup.html</guid>
       <pubDate>Sun, 03 May 2026 04:56:13 +0000</pubDate>
       <description>GovernmentService Schema Markup erklärt: JSON-LD für Behörden, Ämter und öffentliche Dienste. Wie du Bürgerdienste mit serviceType, areaServed und Kontaktdaten für Google strukturierst.</description>
-      <category>SEO</category>
-    </item>
-    <item>
-      <title>MedicalProcedure &amp;amp; MedicalTherapy Schema Markup: Medizinische Eingriffe für Google</title>
-      <link>https://shift07.ai/blog/medicalprocedure-schema-markup.html</link>
-      <guid>https://shift07.ai/blog/medicalprocedure-schema-markup.html</guid>
-      <pubDate>Sun, 03 May 2026 04:52:43 +0000</pubDate>
-      <description>MedicalProcedure und MedicalTherapy Schema Markup: Wie du medizinische Eingriffe, Therapien und Behandlungen mit JSON-LD für Google strukturierst. Mit vollständigen Beispielen.</description>
       <category>SEO</category>
     </item>
   </channel>
