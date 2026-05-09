@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Sat, 09 May 2026 10:45:12 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 09 May 2026 10:48:29 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>PodcastSeries Schema Markup Generator: JSON-LD für Podcasts in Google</title>
+      <link>https://shift07.ai/blog/podcastseries-schema-markup-generator.html</link>
+      <guid>https://shift07.ai/blog/podcastseries-schema-markup-generator.html</guid>
+      <pubDate>Sat, 09 May 2026 10:48:05 +0000</pubDate>
+      <description>PodcastSeries und PodcastEpisode Schema Markup vollständig erklärt: wie du mit unserem kostenlosen Generator JSON-LD erstellst, Podcast-Rich-Results aktivierst und Spotify, Apple Podcasts verknüpfst.</description>
+      <category>Schema Markup</category>
+    </item>
     <item>
       <title>MedicalCondition Schema Markup vertieft: Krankheiten und Beschwerden für Google richtig strukturieren</title>
       <link>https://shift07.ai/blog/medicalcondition-schema-markup-vertieft.html</link>
@@ -158,14 +166,6 @@
       <pubDate>Sun, 03 May 2026 04:52:43 +0000</pubDate>
       <description>MedicalProcedure und MedicalTherapy Schema Markup: Wie du medizinische Eingriffe, Therapien und Behandlungen mit JSON-LD für Google strukturierst. Mit vollständigen Beispielen.</description>
       <category>SEO</category>
-    </item>
-    <item>
-      <title>TaxiReservation Schema Markup: Buchbare Taxifahrten für Google Rich Results</title>
-      <link>https://shift07.ai/blog/taxireservation-schema-markup-seo.html</link>
-      <guid>https://shift07.ai/blog/taxireservation-schema-markup-seo.html</guid>
-      <pubDate>Sun, 03 May 2026 03:15:10 +0000</pubDate>
-      <description>TaxiReservation Schema Markup: JSON-LD für buchbare Taxifahrten und Transferreservierungen richtig implementieren. Mit vollständigen Beispielen und Pflichtfeldern für Google 2026.</description>
-      <category>Schema Markup</category>
     </item>
   </channel>
 </rss>
