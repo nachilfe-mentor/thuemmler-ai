@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedicalCondition Schema Markup vertieft: Krankheiten und Beschwerden für Google richtig strukturieren | Shift07 Blog</title>
+    <meta name="description" content="MedicalCondition Schema Markup vollständig erklärt: alle Properties, JSON-LD-Beispiele für Diagnosen, Symptome und Behandlungen – und was Google bei YMYL-Inhalten wirklich bewertet.">
+    <meta name="author" content="Thümmler AI GmbH">
+    <link rel="icon" type="image/png" href="/logo.png">
+    <link rel="canonical" href="https://shift07.ai/blog/medicalcondition-schema-markup-vertieft.html">
+    <link rel="alternate" type="application/rss+xml" title="Shift07 Blog" href="https://shift07.ai/feed.xml">
+    <!-- Open Graph -->
+    <meta property="og:title" content="MedicalCondition Schema Markup vertieft: Krankheiten und Beschwerden für Google richtig strukturieren | Shift07 Blog">
+    <meta property="og:description" content="MedicalCondition Schema Markup vollständig erklärt: alle Properties, JSON-LD-Beispiele für Diagnosen, Symptome und Behandlungen – und was Google bei YMYL-Inhalten wirklich bewertet.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://shift07.ai/blog/medicalcondition-schema-markup-vertieft.html">
+    <meta property="og:image" content="https://shift07.ai/blog/images/medicalcondition-schema-markup.png">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="Shift07">
+    <meta property="article:published_time" content="2026-05-09T08:00:00+02:00">
+    <meta property="article:section" content="Schema Markup">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="MedicalCondition Schema Markup vertieft: Krankheiten und Beschwerden für Google richtig strukturieren">
+    <meta name="twitter:description" content="MedicalCondition Schema Markup vollständig erklärt: alle Properties, JSON-LD-Beispiele für Diagnosen, Symptome und Behandlungen – und was Google bei YMYL-Inhalten wirklich bewertet.">
+    <meta name="twitter:image" content="https://shift07.ai/blog/images/medicalcondition-schema-markup.png">
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "MedicalCondition Schema Markup vertieft: Krankheiten und Beschwerden für Google richtig strukturieren",
+      "description": "MedicalCondition Schema Markup vollständig erklärt: alle Properties, JSON-LD-Beispiele für Diagnosen, Symptome und Behandlungen – und was Google bei YMYL-Inhalten wirklich bewertet.",
+      "image": "https://shift07.ai/blog/images/medicalcondition-schema-markup.png",
+      "datePublished": "2026-05-09T08:00:00+02:00",
+      "dateModified": "2026-05-09T08:00:00+02:00",
+      "author": {
+        "@type": "Organization",
+        "name": "Shift07",
+        "url": "https://shift07.ai"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Shift07",
+        "url": "https://shift07.ai",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://shift07.ai/assets/logo.png"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://shift07.ai/blog/medicalcondition-schema-markup-vertieft.html"
+      }
+    }
+    </script>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K1S1RXBDS8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K1S1RXBDS8');
+    </script>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8475857002943858" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: rgba(15, 23, 42, 0.5); }
+        ::-webkit-scrollbar-thumb { background: rgba(59, 130, 246, 0.5); border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: rgba(59, 130, 246, 0.7); }
+        html { scroll-behavior: smooth; }
+        .article-content h2 { font-size: 1.5rem; font-weight: 700; color: #fff; margin-top: 2.5rem; margin-bottom: 1rem; }
+        .article-content h3 { font-size: 1.25rem; font-weight: 600; color: #e2e8f0; margin-top: 2rem; margin-bottom: 0.75rem; }
+        .article-content p { color: #cbd5e1; line-height: 1.8; margin-bottom: 1.25rem; }
+        .article-content ul, .article-content ol { color: #cbd5e1; margin-bottom: 1.25rem; padding-left: 1.5rem; }
+        .article-content li { margin-bottom: 0.5rem; line-height: 1.7; }
+        .article-content ul li { list-style-type: disc; }
+        .article-content ol li { list-style-type: decimal; }
+        .article-content a { color: #60a5fa; text-decoration: underline; text-underline-offset: 2px; }
+        .article-content a:hover { color: #93bbfc; }
+        .article-content blockquote { border-left: 4px solid #3b82f6; padding-left: 1.25rem; margin: 1.5rem 0; color: #94a3b8; font-style: italic; }
+        .article-content code { background: rgba(59, 130, 246, 0.15); color: #93c5fd; padding: 0.15rem 0.4rem; border-radius: 0.25rem; font-size: 0.9em; }
+        .article-content pre { background: rgba(15, 23, 42, 0.8); border: 1px solid rgba(255,255,255,0.1); border-radius: 0.75rem; padding: 1.25rem; overflow-x: auto; margin-bottom: 1.5rem; }
+        .article-content pre code { background: none; padding: 0; color: #e2e8f0; }
+        .article-content strong { color: #f1f5f9; }
+    </style>
+</head>
+<body class="bg-slate-900 text-white min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-slate-900/80 backdrop-blur-xl border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <a href="/" class="flex items-center gap-2">
+                    <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                    <span class="text-xl font-bold text-white">Shift07</span>
+                </a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="/" class="text-gray-300 hover:text-white transition-colors">SEO-Tool</a>
+                    <a href="/blog/" class="text-white font-medium border-b-2 border-blue-500 pb-0.5">Blog</a>
+                    <a href="/tools/" class="text-gray-300 hover:text-white transition-colors">Tools</a>
+                    <a href="/app/#/login" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-5 py-2 rounded-lg font-medium transition-all">Anmelden</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-gray-300 hover:text-white">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900/95 border-b border-white/10">
+            <div class="px-4 py-3 space-y-2">
+                <a href="/" class="block py-2 text-gray-300 hover:text-white">SEO-Tool</a>
+                <a href="/blog/" class="block py-2 text-white font-medium">Blog</a>
+                <a href="/tools/" class="block py-2 text-gray-300 hover:text-white">Tools</a>
+                <a href="/app/#/login" class="block py-2 text-blue-400 hover:text-blue-300">Anmelden</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Image -->
+    <section class="pt-16 relative">
+        <div class="h-[400px] bg-gradient-to-br from-blue-600 via-indigo-700 to-purple-800 relative overflow-hidden">
+            <div class="absolute inset-0 bg-black/40"></div>
+            <img src="/blog/images/medicalcondition-schema-markup.png" alt="MedicalCondition Schema Markup für Google richtig implementieren" class="absolute inset-0 w-full h-full object-cover opacity-30">
+            <div class="absolute inset-0 flex items-center justify-center">
+                <div class="text-center px-4 max-w-4xl">
+                    <span class="inline-block text-sm font-semibold px-4 py-1.5 bg-white/10 text-white/90 rounded-full mb-6">Schema Markup</span>
+                    <h1 class="text-3xl md:text-5xl font-extrabold text-white leading-tight">MedicalCondition Schema Markup vertieft: Krankheiten und Beschwerden für Google richtig strukturieren</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Article Content -->
+    <section class="py-12 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col lg:flex-row gap-12">
+
+                <!-- Main Content -->
+                <article class="lg:w-2/3">
+                    <!-- Meta -->
+                    <div class="flex flex-wrap items-center gap-4 text-sm text-gray-400 mb-10 pb-6 border-b border-white/10">
+                        <div class="flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+                            Shift07 Team
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                            9. Mai 2026
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                            12 Min. Lesezeit
+                        </div>
+                        <span class="text-xs font-semibold px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full">Schema Markup</span>
+                    </div>
+
+                    <!-- Article Body -->
+                    <div class="article-content">
+
+                        <p>Medizinische Inhalte gehören zu den sensibelsten Bereichen im Web. Google behandelt sie als <strong>YMYL-Inhalte</strong> (Your Money or Your Life) und legt die Messlatte für Qualität, Autorität und Vertrauenswürdigkeit besonders hoch. <code>MedicalCondition</code> Schema Markup ist das strukturierte Datenvokabular, mit dem du Google präzise mitteilst, um welche Erkrankung, welches Symptom oder welchen Gesundheitszustand es auf deiner Seite geht. Dieser Artikel erklärt alle relevanten Properties, zeigt dir vollständige JSON-LD-Beispiele und gibt dir konkrete Hinweise, wie du das Markup korrekt in YMYL-Kontexten einsetzt.</p>
+
+                        <h2>Was ist MedicalCondition Schema Markup?</h2>
+                        <p><code>MedicalCondition</code> ist ein Untertyp von <code>MedicalEntity</code> im Schema.org-Vokabular und beschreibt medizinische Zustände, Erkrankungen, Syndrome oder Beschwerdebilder. Es bildet den Kern eines semantischen Netzes, das Google nutzt, um medizinische Informationen im Web miteinander zu verknüpfen. Direkte Untertypen sind:</p>
+                        <ul>
+                            <li><strong>InfectiousDisease</strong> – Infektionskrankheiten mit Übertragungsweg und Infektionsagent</li>
+                            <li><strong>MedicalSignOrSymptom</strong> – Zeichen und Symptome (z. B. Fieber, Schmerzen)</li>
+                        </ul>
+                        <p>Wenn du einen Artikel über Bluthochdruck, eine Patienteninformation zu Diabetes oder eine Praxisseite über Rückenschmerzen mit strukturierten Daten versehen willst, ist <code>MedicalCondition</code> das richtige Schema-Objekt. Im Zusammenspiel mit <a href="/blog/medicalclinic-hospital-schema-markup.html">MedicalClinic und Hospital Schema Markup</a> ermöglicht es Google, eine vollständige semantische Verbindung zwischen Einrichtung, Leistung und Krankheitsbild herzustellen.</p>
+
+                        <h2>Die wichtigsten Properties im Überblick</h2>
+                        <p>MedicalCondition erbt alle Properties von <code>MedicalEntity</code> und <code>Thing</code>. Die praxisrelevantesten sind:</p>
+
+                        <h3>Identifikation und Kodierung</h3>
+                        <ul>
+                            <li><code>name</code> – offizieller Name der Erkrankung (z. B. „Hypertonie")</li>
+                            <li><code>alternateName</code> – Synonyme und Umgangssprache (z. B. „Bluthochdruck")</li>
+                            <li><code>code</code> – medizinischer Code, meist ICD-10 (via <code>MedicalCode</code>)</li>
+                            <li><code>url</code> – kanonische URL der Seite</li>
+                            <li><code>description</code> – kurze, verständliche Beschreibung</li>
+                            <li><code>image</code> – beschreibendes Bild (optional, aber nützlich)</li>
+                        </ul>
+
+                        <h3>Symptome und Zeichen</h3>
+                        <ul>
+                            <li><code>signOrSymptom</code> – Array von <code>MedicalSignOrSymptom</code>-Objekten</li>
+                            <li><code>possibleComplication</code> – mögliche Komplikationen als Text oder verlinktes Schema-Objekt</li>
+                        </ul>
+
+                        <h3>Ursachen und Risikofaktoren</h3>
+                        <ul>
+                            <li><code>cause</code> – Ursachen der Erkrankung (<code>MedicalCause</code>)</li>
+                            <li><code>riskFactor</code> – Risikofaktoren (<code>MedicalRiskFactor</code>)</li>
+                            <li><code>associatedAnatomy</code> – betroffene Körperstelle (<code>AnatomicalStructure</code> oder <code>AnatomicalSystem</code>)</li>
+                        </ul>
+
+                        <h3>Behandlung und Prävention</h3>
+                        <ul>
+                            <li><code>drug</code> – medikamentöse Behandlung (<code>Drug</code>-Objekt)</li>
+                            <li><code>possibleTreatment</code> – mögliche Therapien (<code>MedicalTherapy</code>)</li>
+                            <li><code>primaryPrevention</code> – Primärprävention (<code>MedicalTherapy</code>)</li>
+                            <li><code>secondaryPrevention</code> – Sekundärprävention</li>
+                            <li><code>typicalTest</code> – diagnostische Tests (<code>MedicalTest</code>)</li>
+                        </ul>
+
+                        <h3>Stadium und Verlauf</h3>
+                        <ul>
+                            <li><code>stage</code> – Erkrankungsstadium (<code>MedicalConditionStage</code>), nützlich etwa bei Krebs (TNM-Stadium)</li>
+                            <li><code>epidemiology</code> – epidemiologische Daten (Text)</li>
+                            <li><code>naturalProgression</code> – natürlicher Verlauf ohne Behandlung</li>
+                            <li><code>expectedPrognosis</code> – Prognose mit Behandlung</li>
+                            <li><code>pathophysiology</code> – Pathophysiologie (für Fachpublikum)</li>
+                        </ul>
+
+                        <h3>Leitlinien und Quellen</h3>
+                        <ul>
+                            <li><code>guideline</code> – medizinische Leitlinien (<code>MedicalGuideline</code>), referenziert Fachgesellschaften</li>
+                            <li><code>recognizingAuthority</code> – anerkennende Behörde oder Organisation</li>
+                            <li><code>relevantSpecialty</code> – zuständige medizinische Fachrichtung (<code>MedicalSpecialty</code>)</li>
+                            <li><code>study</code> – verlinkende Studien (<code>MedicalStudy</code>)</li>
+                            <li><code>medicineSystem</code> – Medizinsystem (z. B. <code>Homeopathic</code>, <code>WesternConventional</code>)</li>
+                        </ul>
+
+                        <h2>Vollständiges JSON-LD-Beispiel: Hypertonie</h2>
+                        <p>Das folgende Beispiel zeigt ein praxisnahes <code>MedicalCondition</code>-Markup für Hypertonie mit ICD-10-Code, Symptomen, Risikofaktoren und Behandlungshinweisen:</p>
+
+<pre><code>&lt;script type="application/ld+json"&gt;
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalCondition",
+  "name": "Hypertonie",
+  "alternateName": ["Bluthochdruck", "Arterielle Hypertonie"],
+  "description": "Chronisch erhöhter Blutdruck mit systolischen Werten ab 140 mmHg oder diastolischen Werten ab 90 mmHg.",
+  "url": "https://beispiel-praxis.de/bluthochdruck",
+  "image": "https://beispiel-praxis.de/images/hypertonie.jpg",
+  "code": {
+    "@type": "MedicalCode",
+    "codeValue": "I10",
+    "codingSystem": "ICD-10"
+  },
+  "associatedAnatomy": {
+    "@type": "AnatomicalSystem",
+    "name": "Herz-Kreislauf-System"
+  },
+  "signOrSymptom": [
+    {
+      "@type": "MedicalSymptom",
+      "name": "Kopfschmerzen",
+      "description": "Häufig occipital, besonders morgens"
+    },
+    {
+      "@type": "MedicalSymptom",
+      "name": "Schwindel"
+    },
+    {
+      "@type": "MedicalSymptom",
+      "name": "Sehstörungen"
+    }
+  ],
+  "riskFactor": [
+    {
+      "@type": "MedicalRiskFactor",
+      "name": "Übergewicht"
+    },
+    {
+      "@type": "MedicalRiskFactor",
+      "name": "Bewegungsmangel"
+    },
+    {
+      "@type": "MedicalRiskFactor",
+      "name": "Rauchen"
+    },
+    {
+      "@type": "MedicalRiskFactor",
+      "name": "Erhöhter Salzkonsum"
+    }
+  ],
+  "possibleComplication": [
+    "Herzinfarkt",
+    "Schlaganfall",
+    "Herzinsuffizienz",
+    "Niereninsuffizienz"
+  ],
+  "possibleTreatment": [
+    {
+      "@type": "MedicalTherapy",
+      "name": "Lebensstiländerung",
+      "description": "Gewichtsreduktion, Bewegung, salzarme Ernährung, Rauchstopp"
+    },
+    {
+      "@type": "MedicalTherapy",
+      "name": "Medikamentöse Therapie",
+      "description": "ACE-Hemmer, Sartane, Betablocker, Kalziumantagonisten, Diuretika"
+    }
+  ],
+  "primaryPrevention": {
+    "@type": "MedicalTherapy",
+    "name": "Gesunder Lebensstil",
+    "description": "Regelmäßige Bewegung, ausgewogene Ernährung, Stressreduktion"
+  },
+  "typicalTest": {
+    "@type": "MedicalTest",
+    "name": "Blutdruckmessung",
+    "description": "Mehrfachmessung an beiden Armen unter standardisierten Bedingungen"
+  },
+  "epidemiology": "In Deutschland leiden etwa 30 Millionen Menschen an Bluthochdruck. Prävalenz steigt mit dem Alter auf über 60 % bei Über-65-Jährigen.",
+  "relevantSpecialty": {
+    "@type": "MedicalSpecialty",
+    "name": "Kardiologie"
+  },
+  "guideline": {
+    "@type": "MedicalGuideline",
+    "guidelineSubject": {
+      "@type": "MedicalCondition",
+      "name": "Arterielle Hypertonie"
+    },
+    "guidelineDate": "2023",
+    "evidenceLevel": "A",
+    "recommendationStrength": "Stark"
+  },
+  "recognizingAuthority": {
+    "@type": "Organization",
+    "name": "Deutsche Hochdruckliga (DHL)"
+  }
+}
+&lt;/script&gt;</code></pre>
+
+                        <h2>InfectiousDisease: Erweitertes Markup für Infektionskrankheiten</h2>
+                        <p>Für Infektionskrankheiten wie Influenza, COVID-19 oder Borreliose gibt es den Untertyp <code>InfectiousDisease</code>, der drei zusätzliche Properties mitbringt:</p>
+                        <ul>
+                            <li><code>infectiousAgent</code> – Erreger (z. B. „SARS-CoV-2", „Influenzavirus Typ A")</li>
+                            <li><code>infectiousAgentClass</code> – Erregerklasse (<code>Virus</code>, <code>Bacteria</code>, <code>Fungus</code>, <code>Parasite</code>, <code>Prion</code>)</li>
+                            <li><code>transmissionMethod</code> – Übertragungsweg (z. B. „Tröpfcheninfektion", „Kontaktinfektion")</li>
+                        </ul>
+
+<pre><code>&lt;script type="application/ld+json"&gt;
+{
+  "@context": "https://schema.org",
+  "@type": "InfectiousDisease",
+  "name": "Influenza",
+  "alternateName": ["Grippe", "Echte Grippe"],
+  "description": "Akute Infektionskrankheit der Atemwege durch Influenzaviren mit plötzlichem Beginn, hohem Fieber und ausgeprägtem Krankheitsgefühl.",
+  "code": {
+    "@type": "MedicalCode",
+    "codeValue": "J10",
+    "codingSystem": "ICD-10"
+  },
+  "infectiousAgent": "Influenzavirus Typ A und B",
+  "infectiousAgentClass": "https://schema.org/Virus",
+  "transmissionMethod": "Tröpfcheninfektion, Kontaktinfektion über kontaminierte Oberflächen",
+  "signOrSymptom": [
+    { "@type": "MedicalSymptom", "name": "Plötzlich einsetzendes hohes Fieber (über 38,5 °C)" },
+    { "@type": "MedicalSymptom", "name": "Schweres Krankheitsgefühl" },
+    { "@type": "MedicalSymptom", "name": "Husten" },
+    { "@type": "MedicalSymptom", "name": "Muskel- und Gliederschmerzen" }
+  ],
+  "possibleTreatment": {
+    "@type": "MedicalTherapy",
+    "name": "Neuraminidase-Hemmer",
+    "description": "Oseltamivir oder Zanamivir innerhalb von 48 Stunden nach Symptombeginn"
+  },
+  "primaryPrevention": {
+    "@type": "MedicalTherapy",
+    "name": "Grippeimpfung",
+    "description": "Jährliche Impfung, besonders empfohlen für Risikogruppen ab Oktober"
+  }
+}
+&lt;/script&gt;</code></pre>
+
+                        <h2>MedicalCondition und YMYL: Was Google wirklich bewertet</h2>
+                        <p>Schema Markup allein reicht nicht aus, um medizinische Inhalte bei Google gut zu ranken. Google wertet YMYL-Seiten nach besonders strengen E-E-A-T-Kriterien (Experience, Expertise, Authoritativeness, Trustworthiness) aus. Das Markup unterstützt diese Signale — ersetzt sie aber nicht. Konkret bedeutet das:</p>
+
+                        <h3>Autorschaft sichtbar machen</h3>
+                        <p>Ergänze das <code>MedicalCondition</code>-Markup mit einem <code>author</code>-Property, das auf einen echten Arzt oder eine medizinische Fachkraft verweist. Verknüpfe es mit dessen <code>Person</code>-Schema mit <code>hasCredential</code>- und <code>knowsAbout</code>-Angaben. Patienten-Informationsseiten ohne klare ärztliche Verantwortung werden in den Search Quality Rater Guidelines explizit als qualitätsschwach eingestuft.</p>
+
+                        <h3>Quellen und Leitlinien verlinken</h3>
+                        <p>Nutze das <code>guideline</code>-Property, um auf aktuelle Leitlinien (z. B. AWMF, DHL, DGK) zu verweisen. Das <code>recognizingAuthority</code>-Property signalisiert Google, dass eine anerkannte Institution hinter den Inhalten steht. Diese Links müssen nicht nur im Schema, sondern auch im sichtbaren Seiteninhalt erscheinen.</p>
+
+                        <h3>Aktualität der Inhalte sicherstellen</h3>
+                        <p>Medizinisches Wissen veraltet schnell. Google bewertet das <code>dateModified</code>-Property im umgebenden <code>Article</code>-Schema und vergleicht es mit dem Seiteninhalt. Regelmäßige Überarbeitung — mindestens jährlich bei statischen Informationsseiten — ist für medizinische YMYL-Inhalte Pflicht.</p>
+
+                        <h2>MedicalCondition mit MedicalWebPage verknüpfen</h2>
+                        <p>Wenn du eine vollständige Gesundheitsseite auszeichnest, kombiniere <code>MedicalCondition</code> mit <a href="/blog/medicalwebpage-healthtopiccontent-schema-markup.html">MedicalWebPage Schema Markup</a>. Das <code>MedicalWebPage</code>-Objekt beschreibt die Seite selbst und verweist über <code>about</code> auf das <code>MedicalCondition</code>-Objekt:</p>
+
+<pre><code>&lt;script type="application/ld+json"&gt;
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "MedicalWebPage",
+    "name": "Bluthochdruck (Hypertonie) — Patienteninformation",
+    "url": "https://beispiel-praxis.de/bluthochdruck",
+    "datePublished": "2025-03-01",
+    "dateModified": "2026-05-01",
+    "about": {
+      "@id": "https://beispiel-praxis.de/bluthochdruck#condition"
+    },
+    "reviewedBy": {
+      "@type": "Person",
+      "name": "Dr. med. Sandra Kühn",
+      "hasCredential": "Fachärztin für Innere Medizin und Kardiologie"
+    },
+    "audience": {
+      "@type": "PatientsAudience",
+      "audienceType": "Patienten"
+    },
+    "lastReviewed": "2026-04-15"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "MedicalCondition",
+    "@id": "https://beispiel-praxis.de/bluthochdruck#condition",
+    "name": "Hypertonie",
+    "alternateName": "Bluthochdruck"
+  }
+]
+&lt;/script&gt;</code></pre>
+
+                        <h2>MedicalConditionStage: Krebsstadien und Verlaufsstufen</h2>
+                        <p>Für Erkrankungen mit klinischen Stadien — vor allem Krebserkrankungen — bietet Schema.org das <code>MedicalConditionStage</code>-Objekt. Es lässt sich über die <code>stage</code>-Property einbinden und hat folgende relevante Properties:</p>
+                        <ul>
+                            <li><code>stageAsNumber</code> – numerisches Stadium (z. B. <code>3</code> für Stadium III)</li>
+                            <li><code>subStageSuffix</code> – Unterstufe (z. B. „a", „b", „c")</li>
+                            <li><code>hasDefined</code> – verlinkter Standard oder Klassifikation</li>
+                        </ul>
+
+<pre><code>{
+  "@type": "MedicalCondition",
+  "name": "Brustkrebs",
+  "alternateName": "Mammakarzinom",
+  "code": {
+    "@type": "MedicalCode",
+    "codeValue": "C50",
+    "codingSystem": "ICD-10"
+  },
+  "stage": {
+    "@type": "MedicalConditionStage",
+    "stageAsNumber": 2,
+    "subStageSuffix": "b",
+    "description": "Tumor 2–5 cm, axilläre Lymphknoten befallen, keine Fernmetastasen (T2 N1 M0)"
+  },
+  "relevantSpecialty": {
+    "@type": "MedicalSpecialty",
+    "name": "Gynäkologie"
+  }
+}</code></pre>
+
+                        <h2>Integration mit MedicalProcedure und Drug</h2>
+                        <p>Ein vollständiges medizinisches Schema-Netz verbindet <code>MedicalCondition</code> mit Behandlungen und Medikamenten. Dazu dienen die Properties <code>possibleTreatment</code> (verweist auf <a href="/blog/medicalprocedure-schema-markup.html">MedicalProcedure oder MedicalTherapy</a>) und <code>drug</code> (verweist auf ein <code>Drug</code>-Objekt). Für Arztpraxen und Kliniken empfiehlt sich das direkte Verknüpfen beider Entitäten über <code>@id</code>-Referenzen statt einfacher Text-Strings:</p>
+
+<pre><code>{
+  "@type": "MedicalCondition",
+  "name": "Typ-2-Diabetes",
+  "possibleTreatment": [
+    {
+      "@type": "MedicalTherapy",
+      "name": "Metformin",
+      "@id": "https://beispiel-praxis.de/medikamente/metformin"
+    },
+    {
+      "@type": "MedicalTherapy",
+      "name": "Insulintherapie"
+    }
+  ],
+  "typicalTest": {
+    "@type": "MedicalTest",
+    "name": "HbA1c-Messung",
+    "description": "Langzeitblutzucker der letzten 2–3 Monate, Zielwert unter 7 %"
+  }
+}</code></pre>
+
+                        <h2>Häufige Fehler beim MedicalCondition Markup</h2>
+                        <p>Aus der Praxis-Analyse von Arztpraxis-Websites ergeben sich typische Implementierungsfehler:</p>
+                        <ul>
+                            <li><strong>ICD-Code fehlt:</strong> Der <code>code</code>-Property mit korrektem ICD-10-Wert ist die wichtigste maschinenlesbare Identifikation. Ohne ihn kann Google die Entität nicht eindeutig zuordnen.</li>
+                            <li><strong>Nur <code>name</code> angegeben:</strong> Ein <code>MedicalCondition</code>-Objekt mit ausschließlich <code>name</code>-Property ist nutzlos. Mindestens <code>code</code>, <code>description</code> und <code>signOrSymptom</code> sollten befüllt sein.</li>
+                            <li><strong>Veraltete Inhalte:</strong> Schema Markup auf Seiten, deren <code>dateModified</code> drei oder mehr Jahre zurückliegt, verliert Vertrauen. Google deutet fehlende Aktualisierung bei YMYL als Qualitätsproblem.</li>
+                            <li><strong>Fehlende Fachaufsicht:</strong> <code>reviewedBy</code> im umgebenden <code>MedicalWebPage</code>-Objekt fehlt bei den meisten Praxisseiten. Das ist einer der wichtigsten E-A-T-Signalgeber für Google.</li>
+                            <li><strong>Symptome als einfache Strings:</strong> <code>signOrSymptom</code> sollte <code>MedicalSymptom</code>-Objekte enthalten, nicht nur Textlisten.</li>
+                        </ul>
+
+                        <h2>MedicalCondition in der Praxis: Wer profitiert davon?</h2>
+                        <p>Folgende Seitentypen sollten <code>MedicalCondition</code> Markup einsetzen:</p>
+                        <ul>
+                            <li><strong>Arztpraxen und Kliniken:</strong> Leistungsseiten zu behandelten Erkrankungen verknüpft mit <a href="/blog/medicalclinic-hospital-schema-markup.html">MedicalClinic-Schema</a></li>
+                            <li><strong>Patientenportale und Gesundheitsratgeber:</strong> Informationsseiten zu Erkrankungen mit vollständigem MedicalWebPage + MedicalCondition</li>
+                            <li><strong>Apotheken-Websites:</strong> Indikationsseiten zu Medikamenten verknüpft mit <code>Drug</code>-Schema</li>
+                            <li><strong>Physiotherapie und Rehabilitation:</strong> Krankheitsbilder, für die Behandlungen angeboten werden, kombiniert mit MedicalProcedure</li>
+                        </ul>
+
+                        <h2>Testing und Validierung</h2>
+                        <p>Validiere dein <code>MedicalCondition</code>-Markup mit folgenden Tools:</p>
+                        <ul>
+                            <li><strong>Google Rich Results Test:</strong> schema.org/MedicalCondition ist kein Rich-Result-Typ — das Markup erzeugt also keine visuell hervorgehobenen Ergebnisse. Trotzdem ist Korrektheit wichtig für das Wissensgraphen-Parsing.</li>
+                            <li><strong>Schema Markup Validator</strong> (validator.schema.org): Überprüft die Property-Struktur und gibt Warnungen bei fehlenden empfohlenen Properties.</li>
+                            <li><strong>Google Search Console:</strong> Zeigt Strukturierte-Daten-Fehler nach dem Crawling an.</li>
+                        </ul>
+                        <p>Nutze auch <a href="/tools/structured-data-validator.html">unseren kostenlosen Structured Data Validator</a>, um dein Markup direkt im Browser zu testen.</p>
+
+                        <h2>Checkliste: MedicalCondition Markup korrekt implementieren</h2>
+                        <ul>
+                            <li>✅ <code>name</code> mit offiziellem medizinischen Fachbegriff</li>
+                            <li>✅ <code>alternateName</code> mit umgangssprachlichen Synonymen</li>
+                            <li>✅ <code>code</code> mit ICD-10-Code und <code>codingSystem: "ICD-10"</code></li>
+                            <li>✅ <code>description</code> als kurze, präzise Erklärung</li>
+                            <li>✅ <code>signOrSymptom</code> als Array von <code>MedicalSymptom</code>-Objekten</li>
+                            <li>✅ <code>possibleTreatment</code> als <code>MedicalTherapy</code></li>
+                            <li>✅ <code>riskFactor</code> mit konkreten Risikofaktoren</li>
+                            <li>✅ <code>relevantSpecialty</code> für die zuständige Fachrichtung</li>
+                            <li>✅ Umgebendes <code>MedicalWebPage</code>-Markup mit <code>reviewedBy</code></li>
+                            <li>✅ Regelmäßige Aktualisierung: <code>dateModified</code> auf aktuellem Stand</li>
+                        </ul>
+
+                        <p>Strukturierte Daten für medizinische Inhalte sind kein Selbstzweck. Sie sind ein Teil einer umfassenderen E-E-A-T-Strategie. Wer seinen Arztpraxis-Patienten korrekte, aktuelle und ärztlich geprüfte Informationen bietet und dies mit präzisem Schema Markup begleitet, gibt Google alle nötigen Signale, um die Seite als vertrauenswürdig einzustufen. Die Analyse von über tausend deutschen Arzt- und Klinikwebsites zeigt: Weniger als 3 % nutzen überhaupt strukturierte Daten für Erkrankungen — ein erheblicher Wettbewerbsvorteil für alle, die es konsequent umsetzen.</p>
+
+                    </div>
+
+                    <!-- Share / Back -->
+                    <div class="mt-12 pt-8 border-t border-white/10 flex items-center justify-between">
+                        <a href="/blog/" class="text-blue-400 hover:text-blue-300 flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+                            Zurück zum Blog
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Sidebar -->
+                <aside class="lg:w-1/3 space-y-8">
+                    <!-- CTA Box -->
+                    <div class="bg-gradient-to-br from-blue-600/20 to-indigo-600/20 border border-blue-500/30 rounded-2xl p-6 text-center">
+                        <h3 class="text-lg font-bold text-white mb-3">Kostenlose SEO-Analyse</h3>
+                        <p class="text-gray-400 text-sm mb-5">Finde heraus, wie gut deine Website für Suchmaschinen optimiert ist.</p>
+                        <a href="/" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-6 py-3 rounded-lg font-medium transition-all inline-block w-full">Jetzt testen</a>
+                    </div>
+
+                    <!-- Related Articles -->
+                    <div class="bg-slate-800/50 border border-white/10 rounded-2xl p-6">
+                        <h3 class="text-lg font-bold text-white mb-4">Verwandte Artikel</h3>
+                        <div class="space-y-4">
+                            <a href="/blog/medicalclinic-hospital-schema-markup.html" class="block group">
+                                <p class="text-sm text-gray-300 group-hover:text-blue-400 transition-colors font-medium">MedicalClinic &amp; Hospital Schema Markup: Arztpraxis und Krankenhaus für Google</p>
+                                <p class="text-xs text-gray-500 mt-1">Schema Markup</p>
+                            </a>
+                            <a href="/blog/medicalprocedure-schema-markup.html" class="block group">
+                                <p class="text-sm text-gray-300 group-hover:text-blue-400 transition-colors font-medium">MedicalProcedure &amp; MedicalTherapy Schema Markup: Medizinische Eingriffe</p>
+                                <p class="text-xs text-gray-500 mt-1">Schema Markup</p>
+                            </a>
+                            <a href="/blog/medicalwebpage-healthtopiccontent-schema-markup.html" class="block group">
+                                <p class="text-sm text-gray-300 group-hover:text-blue-400 transition-colors font-medium">MedicalWebPage und HealthTopicContent Schema Markup</p>
+                                <p class="text-xs text-gray-500 mt-1">Schema Markup</p>
+                            </a>
+                            <a href="/blog/medicalentity-untertypen-schema-markup-vertieft.html" class="block group">
+                                <p class="text-sm text-gray-300 group-hover:text-blue-400 transition-colors font-medium">MedicalEntity Untertypen vertieft: Drug, MedicalCondition, MedicalProcedure</p>
+                                <p class="text-xs text-gray-500 mt-1">Schema Markup</p>
+                            </a>
+                            <a href="/blog/medicalstudy-medicaltrial-schema-markup.html" class="block group">
+                                <p class="text-sm text-gray-300 group-hover:text-blue-400 transition-colors font-medium">MedicalStudy &amp; MedicalTrial Schema Markup: Klinische Studien</p>
+                                <p class="text-xs text-gray-500 mt-1">Schema Markup</p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Tool CTA -->
+                    <div class="bg-slate-800/50 border border-white/10 rounded-2xl p-6">
+                        <h3 class="text-lg font-bold text-white mb-3">Schema Markup Tools</h3>
+                        <div class="space-y-3">
+                            <a href="/tools/medicalclinic-hospital-schema-generator.html" class="block text-sm text-blue-400 hover:text-blue-300 transition-colors">→ MedicalClinic Schema Generator</a>
+                            <a href="/tools/medicalprocedure-schema-generator.html" class="block text-sm text-blue-400 hover:text-blue-300 transition-colors">→ MedicalProcedure Schema Generator</a>
+                            <a href="/tools/medical-organization-schema-generator.html" class="block text-sm text-blue-400 hover:text-blue-300 transition-colors">→ MedicalOrganization Schema Generator</a>
+                        </div>
+                    </div>
+                </aside>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer CTA -->
+    <section class="py-16 px-4 bg-gradient-to-r from-blue-900/30 to-indigo-900/30 border-t border-b border-white/5">
+        <div class="max-w-3xl mx-auto text-center">
+            <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">Teste deine Website jetzt kostenlos</h2>
+            <p class="text-gray-400 mb-8">Erhalte eine vollständige SEO-Analyse mit konkreten Verbesserungsvorschlägen.</p>
+            <form action="/" method="get" class="flex flex-col sm:flex-row gap-3 max-w-xl mx-auto">
+                <input type="url" placeholder="https://deine-website.de" class="flex-1 bg-slate-800 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-blue-500">
+                <a href="/" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-8 py-3 rounded-lg font-medium transition-all whitespace-nowrap">Analyse starten</a>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/10 bg-slate-900/50 py-12 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="flex items-center gap-2">
+                    <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                    <span class="text-lg font-bold text-white">Shift07</span>
+                </div>
+                <div class="flex items-center space-x-6 text-sm text-gray-400">
+                    <a href="/impressum.html" class="hover:text-white transition-colors">Impressum</a>
+                    <a href="/datenschutz.html" class="hover:text-white transition-colors">Datenschutz</a>
+                    <a href="/agb.html" class="hover:text-white transition-colors">AGB</a>
+                </div>
+                <p class="text-sm text-gray-500">&copy; 2026 Thümmler AI GmbH</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
