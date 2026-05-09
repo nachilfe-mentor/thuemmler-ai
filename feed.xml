@@ -5,8 +5,24 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Sat, 09 May 2026 10:58:51 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 09 May 2026 11:02:13 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>ClaimReview Schema Generator: Faktencheck JSON-LD kostenlos erstellen</title>
+      <link>https://shift07.ai/blog/claimreview-schema-generator.html</link>
+      <guid>https://shift07.ai/blog/claimreview-schema-generator.html</guid>
+      <pubDate>Sat, 09 May 2026 11:01:41 +0000</pubDate>
+      <description>Mit dem kostenlosen ClaimReview Schema Generator von Shift07 erstellst du Faktencheck-Markup für Google News in Sekunden. Anleitung, Beispiele und Tipps zur Validierung.</description>
+      <category>Schema Markup</category>
+    </item>
+    <item>
+      <title>SEO-Fehler bei deutschen Steuerberatern: Auswertung von 58 Kanzlei-Websites</title>
+      <link>https://shift07.ai/blog/seo-fehler-steuerberater-kanzlei-analyse.html</link>
+      <guid>https://shift07.ai/blog/seo-fehler-steuerberater-kanzlei-analyse.html</guid>
+      <pubDate>Sat, 09 May 2026 10:59:37 +0000</pubDate>
+      <description>Shift07 hat 58 Steuerberater-Websites in Deutschland analysiert. Ergebnis: 50% fehlen strukturierte Daten, 42% sind JavaScript-überladen, 33% riskieren Duplicate Content. Die vollständige Auswertung.</description>
+      <category>SEO-Analyse</category>
+    </item>
     <item>
       <title>Movie &amp;amp; TVSeries Schema Markup vertieft: MovieSeries, TVEpisode, Trailer und Knowledge Panel</title>
       <link>https://shift07.ai/blog/movie-tvseries-schema-markup-vertieft.html</link>
@@ -150,22 +166,6 @@
       <pubDate>Tue, 05 May 2026 02:32:41 +0000</pubDate>
       <description>Action-Typen in Schema.org erklärt: So implementierst du SearchAction (Sitelinks-Suchfeld), BuyAction, OrderAction und BookAction als JSON-LD für bessere Google-Ergebnisse.</description>
       <category>Schema Markup</category>
-    </item>
-    <item>
-      <title>EmployerAggregateRating Schema Markup: Arbeitgeberbewertungen für Google</title>
-      <link>https://shift07.ai/blog/employeraggregate-rating-schema-markup.html</link>
-      <guid>https://shift07.ai/blog/employeraggregate-rating-schema-markup.html</guid>
-      <pubDate>Tue, 05 May 2026 00:45:34 +0000</pubDate>
-      <description>EmployerAggregateRating Schema Markup erklärt: JSON-LD für Arbeitgeberbewertungen auf Kununu, Glassdoor &amp; Co. Mit vollständigem Codebeispiel und Best Practices für 2026.</description>
-      <category>Schema Markup</category>
-    </item>
-    <item>
-      <title>GovernmentService Schema Markup: Behörden und öffentliche Dienste für Google</title>
-      <link>https://shift07.ai/blog/governmentservice-schema-markup.html</link>
-      <guid>https://shift07.ai/blog/governmentservice-schema-markup.html</guid>
-      <pubDate>Sun, 03 May 2026 04:56:13 +0000</pubDate>
-      <description>GovernmentService Schema Markup erklärt: JSON-LD für Behörden, Ämter und öffentliche Dienste. Wie du Bürgerdienste mit serviceType, areaServed und Kontaktdaten für Google strukturierst.</description>
-      <category>SEO</category>
     </item>
   </channel>
 </rss>
