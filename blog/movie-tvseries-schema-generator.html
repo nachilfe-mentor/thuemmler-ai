@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie &amp; TVSeries Schema Generator: JSON-LD für Filme und Serien kostenlos erstellen | Shift07 Blog</title>
+    <meta name="description" content="Mit dem Movie &amp; TVSeries Schema Generator erstellst du JSON-LD für Filme, Serien, Staffeln und Episoden – kostenlos, ohne Coding-Kenntnisse. Anleitung mit Beispielen.">
+    <meta name="author" content="Thümmler AI GmbH">
+    <link rel="icon" type="image/png" href="/logo.png">
+    <link rel="canonical" href="https://shift07.ai/blog/movie-tvseries-schema-generator.html">
+    <link rel="alternate" type="application/rss+xml" title="Shift07 Blog" href="https://shift07.ai/feed.xml">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Movie &amp; TVSeries Schema Generator: JSON-LD für Filme und Serien kostenlos erstellen | Shift07 Blog">
+    <meta property="og:description" content="Mit dem Movie &amp; TVSeries Schema Generator erstellst du JSON-LD für Filme, Serien, Staffeln und Episoden – kostenlos, ohne Coding-Kenntnisse.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://shift07.ai/blog/movie-tvseries-schema-generator.html">
+    <meta property="og:image" content="https://shift07.ai/blog/images/movie-tvseries-schema-generator.png">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="Shift07">
+    <meta property="article:published_time" content="2026-05-09T12:00:00+02:00">
+    <meta property="article:section" content="Schema Markup">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Movie &amp; TVSeries Schema Generator: JSON-LD für Filme und Serien erstellen">
+    <meta name="twitter:description" content="Kostenloser Schema Generator für Movie, TVSeries, TVEpisode und MovieSeries – mit Live-Vorschau und Validierung.">
+    <meta name="twitter:image" content="https://shift07.ai/blog/images/movie-tvseries-schema-generator.png">
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Movie & TVSeries Schema Generator: JSON-LD für Filme und Serien kostenlos erstellen",
+      "description": "Mit dem Movie & TVSeries Schema Generator erstellst du JSON-LD für Filme, Serien, Staffeln und Episoden – kostenlos, ohne Coding-Kenntnisse. Anleitung mit Beispielen.",
+      "image": "https://shift07.ai/blog/images/movie-tvseries-schema-generator.png",
+      "datePublished": "2026-05-09T12:00:00+02:00",
+      "dateModified": "2026-05-09T12:00:00+02:00",
+      "author": {
+        "@type": "Organization",
+        "name": "Shift07",
+        "url": "https://shift07.ai"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Shift07",
+        "url": "https://shift07.ai",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://shift07.ai/assets/logo.png"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://shift07.ai/blog/movie-tvseries-schema-generator.html"
+      }
+    }
+    </script>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K1S1RXBDS8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K1S1RXBDS8');
+    </script>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8475857002943858" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: rgba(15, 23, 42, 0.5); }
+        ::-webkit-scrollbar-thumb { background: rgba(59, 130, 246, 0.5); border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: rgba(59, 130, 246, 0.7); }
+        html { scroll-behavior: smooth; }
+        .article-content h2 { font-size: 1.5rem; font-weight: 700; color: #fff; margin-top: 2.5rem; margin-bottom: 1rem; }
+        .article-content h3 { font-size: 1.25rem; font-weight: 600; color: #e2e8f0; margin-top: 2rem; margin-bottom: 0.75rem; }
+        .article-content p { color: #cbd5e1; line-height: 1.8; margin-bottom: 1.25rem; }
+        .article-content ul, .article-content ol { color: #cbd5e1; margin-bottom: 1.25rem; padding-left: 1.5rem; }
+        .article-content li { margin-bottom: 0.5rem; line-height: 1.7; }
+        .article-content ul li { list-style-type: disc; }
+        .article-content ol li { list-style-type: decimal; }
+        .article-content a { color: #60a5fa; text-decoration: underline; text-underline-offset: 2px; }
+        .article-content a:hover { color: #93bbfc; }
+        .article-content blockquote { border-left: 4px solid #3b82f6; padding-left: 1.25rem; margin: 1.5rem 0; color: #94a3b8; font-style: italic; }
+        .article-content code { background: rgba(59, 130, 246, 0.15); color: #93c5fd; padding: 0.15rem 0.4rem; border-radius: 0.25rem; font-size: 0.9em; }
+        .article-content pre { background: rgba(15, 23, 42, 0.8); border: 1px solid rgba(255,255,255,0.1); border-radius: 0.75rem; padding: 1.25rem; overflow-x: auto; margin-bottom: 1.5rem; }
+        .article-content pre code { background: none; padding: 0; color: #e2e8f0; }
+        .article-content strong { color: #f1f5f9; }
+    </style>
+</head>
+<body class="bg-slate-900 text-white min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-slate-900/80 backdrop-blur-xl border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <a href="/" class="flex items-center gap-2">
+                    <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                    <span class="text-xl font-bold text-white">Shift07</span>
+                </a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="/" class="text-gray-300 hover:text-white transition-colors">SEO-Tool</a>
+                    <a href="/blog/" class="text-white font-medium border-b-2 border-blue-500 pb-0.5">Blog</a>
+                    <a href="/tools/" class="text-gray-300 hover:text-white transition-colors">Tools</a>
+                    <a href="/app/#/login" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-5 py-2 rounded-lg font-medium transition-all">Anmelden</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Article Header -->
+    <section class="pt-28 pb-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto">
+            <div class="flex items-center gap-2 text-sm text-blue-400 mb-4">
+                <a href="/blog/" class="hover:text-blue-300 transition-colors">Blog</a>
+                <span class="text-gray-600">›</span>
+                <span>Schema Markup</span>
+            </div>
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight mb-6">
+                Movie &amp; TVSeries Schema Generator: JSON-LD für Filme und Serien kostenlos erstellen
+            </h1>
+            <p class="text-xl text-gray-400 leading-relaxed mb-8">
+                Film- und Seriendatenbanken, Streamingportale und Mediatheken können mit strukturierten Daten ihre Einträge in den Google-Suchergebnissen deutlich aufwerten. Der kostenlose Movie &amp; TVSeries Schema Generator von Shift07 erstellt in wenigen Klicks valides JSON-LD – für Movie, TVSeries, TVEpisode und MovieSeries.
+            </p>
+            <div class="flex items-center gap-4 text-sm text-gray-500 mb-8">
+                <span>09. Mai 2026</span>
+                <span>•</span>
+                <span>Shift07 Redaktion</span>
+                <span>•</span>
+                <span>10 Min. Lesezeit</span>
+            </div>
+            <img src="/blog/images/movie-tvseries-schema-generator.png"
+                 alt="Movie &amp; TVSeries Schema Generator JSON-LD kostenlos erstellen"
+                 class="w-full rounded-2xl object-cover mb-8" style="max-height:420px;">
+        </div>
+    </section>
+
+    <!-- Article Content -->
+    <article class="px-4 sm:px-6 lg:px-8 pb-20">
+        <div class="max-w-4xl mx-auto article-content">
+
+            <h2>Warum Movie- und TVSeries-Schema für deine Website?</h2>
+            <p>
+                Wer Inhalte rund um Filme, Serien oder Podcasts veröffentlicht – ob als Kritiker, Datenbank, Streamingplattform oder Fanblog – hat durch strukturierte Daten erhebliche Vorteile gegenüber der Konkurrenz. Google zeigt für korrekt ausgezeichnete Film- und Serieninhalte sogenannte <strong>Rich Results</strong> an: Sternebewertungen, Laufzeit, Genre und Trailerverlinkungen direkt in der Suchergebnisseite (SERP).
+            </p>
+            <p>
+                Das bedeutet: Mehr Klicks, mehr Sichtbarkeit und ein direkter Eintrag im <strong>Google Knowledge Panel</strong>, wenn dein Inhalt häufig genug referenziert wird. Die Grundlage dafür ist korrektes JSON-LD nach Schema.org-Standard – genau das erstellt unser <a href="/tools/movie-tvseries-schema-generator.html">Movie &amp; TVSeries Schema Generator</a> automatisch.
+            </p>
+            <p>
+                Für eine Einführung in das Thema empfehlen wir zunächst unseren Artikel <a href="/blog/movie-tvseries-schema-markup.html">Movie &amp; TVSeries Schema Markup: Filme und Serien für Google optimieren</a> sowie die vertiefte Version <a href="/blog/movie-tvseries-schema-markup-vertieft.html">Movie &amp; TVSeries Schema Markup vertieft: MovieSeries, TVEpisode, Trailer und Knowledge Panel</a>.
+            </p>
+
+            <h2>Was kann der Movie &amp; TVSeries Schema Generator?</h2>
+            <p>
+                Unser Generator deckt vier verschiedene Schema-Typen in einem einzigen Tool ab – jeweils als eigener Tab. Du wechselst einfach zwischen den Tabs, füllst die Felder aus und erhältst sofort valides JSON-LD, das du direkt in deinen <code>&lt;head&gt;</code>-Bereich einbinden kannst.
+            </p>
+            <ul>
+                <li><strong>Movie</strong> – Für einzelne Kinofilme: Titel, Regisseur, Erscheinungsjahr, Laufzeit, Genre, IMDb-ID, Trailer-URL und AggregateRating</li>
+                <li><strong>TVSeries</strong> – Für Fernsehserien: alle relevanten Properties inkl. Staffelanzahl, Sendedaten, Netzwerk und episodische Struktur</li>
+                <li><strong>TVEpisode</strong> – Für einzelne Episoden: Staffel- und Episodennummer, Ausstrahlung, Dauer, Regisseur, Produktion</li>
+                <li><strong>MovieSeries</strong> – Für Filmreihen wie Franchises (z. B. James-Bond-, Star-Wars-, Marvel-Reihen)</li>
+            </ul>
+
+            <div class="my-8 p-6 bg-blue-900/20 border border-blue-700/30 rounded-xl">
+                <p class="text-blue-200 font-semibold mb-2">🎬 Direkt zum Tool</p>
+                <p class="text-gray-300 mb-4">Erstelle sofort JSON-LD für deine Film- oder Serieninhalte:</p>
+                <a href="/tools/movie-tvseries-schema-generator.html"
+                   class="inline-block bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-6 py-3 rounded-lg font-semibold transition-all">
+                    Movie &amp; TVSeries Schema Generator öffnen →
+                </a>
+            </div>
+
+            <h2>Tab 1: Movie – JSON-LD für einzelne Filme</h2>
+            <p>
+                Im ersten Tab erstellst du Markup für einen einzelnen Film (<code>@type: "Movie"</code>). Die wichtigsten Felder sind:
+            </p>
+            <ul>
+                <li><strong>Filmtitel</strong> – exakt wie er offiziell heißt</li>
+                <li><strong>Erscheinungsjahr</strong> – im Format YYYY (z. B. <code>2024</code>)</li>
+                <li><strong>Regisseur</strong> – Name der Person, optional mit sameAs-Link zur IMDb-Seite</li>
+                <li><strong>Laufzeit</strong> – in ISO 8601-Notation, z. B. <code>PT2H15M</code> für 2 Stunden 15 Minuten</li>
+                <li><strong>Genre</strong> – kommagetrennt, z. B. "Action, Sci-Fi"</li>
+                <li><strong>Trailer-URL</strong> – direkter Link zum offiziellen Trailer (YouTube o. ä.)</li>
+                <li><strong>AggregateRating</strong> – Bewertungsdurchschnitt, Anzahl der Stimmen, Min/Max-Wert</li>
+                <li><strong>IMDb-ID</strong> – für die <code>sameAs</code>-Property (z. B. <code>https://www.imdb.com/title/tt12345678/</code>)</li>
+            </ul>
+            <p>
+                Das resultierende JSON-LD sieht für einen Film beispielhaft so aus:
+            </p>
+            <pre><code>{
+  "@context": "https://schema.org",
+  "@type": "Movie",
+  "name": "Inception",
+  "dateCreated": "2010",
+  "director": {
+    "@type": "Person",
+    "name": "Christopher Nolan"
+  },
+  "duration": "PT2H28M",
+  "genre": ["Sci-Fi", "Thriller", "Action"],
+  "trailer": {
+    "@type": "VideoObject",
+    "name": "Inception – offizieller Trailer",
+    "embedUrl": "https://www.youtube.com/embed/YoHD9XEInc0",
+    "thumbnailUrl": "https://img.youtube.com/vi/YoHD9XEInc0/hqdefault.jpg",
+    "uploadDate": "2010-05-10"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "8.8",
+    "ratingCount": "2400000",
+    "bestRating": "10",
+    "worstRating": "1"
+  },
+  "sameAs": "https://www.imdb.com/title/tt1375666/"
+}</code></pre>
+            <p>
+                Für die <code>duration</code>-Property nutze unseren <a href="/tools/iso8601-dauer-konverter.html">ISO 8601 Dauer-Konverter</a>, um Stunden und Minuten korrekt zu formatieren.
+            </p>
+
+            <h2>Tab 2: TVSeries – JSON-LD für Fernsehserien</h2>
+            <p>
+                Fernsehserien haben eine komplexere Struktur als einzelne Filme: Sie umfassen mehrere Staffeln, laufen über Jahre und haben oft wechselnde Regie- und Autorenteams. Der Generator berücksichtigt alle relevanten Properties:
+            </p>
+            <ul>
+                <li><strong>Serientitel</strong> – vollständiger Name, exakt wie in offiziellen Quellen</li>
+                <li><strong>Startdatum</strong> und <strong>Enddatum</strong> – ISO 8601 (YYYY-MM-DD), Enddatum leer lassen wenn die Serie noch läuft</li>
+                <li><strong>Anzahl der Staffeln</strong> (<code>numberOfSeasons</code>)</li>
+                <li><strong>Anzahl der Episoden</strong> (<code>numberOfEpisodes</code>)</li>
+                <li><strong>Sender / Netzwerk</strong> (<code>productionCompany</code> / <code>broadcastChannel</code>)</li>
+                <li><strong>Ersteller</strong> (<code>creator</code>) – Name des Showrunners oder Produzenten</li>
+                <li><strong>AggregateRating</strong> – besonders wichtig für Rich Results</li>
+                <li><strong>Trailer</strong> und <strong>Thumbnail</strong></li>
+            </ul>
+            <p>
+                Google wertet <code>TVSeries</code>-Markup für die Darstellung im Knowledge Graph aus – insbesondere dann, wenn die Serie bereits bekannt ist und deine Seite als vertrauenswürdige Quelle gilt. Wichtig: Kombiniere TVSeries niemals mit MovieSeries in einem einzigen JSON-LD-Block. Filmreihen (z. B. Bond, Marvel) gehören zu <code>MovieSeries</code>, nicht zu <code>TVSeries</code>.
+            </p>
+
+            <h2>Tab 3: TVEpisode – einzelne Folgen auszeichnen</h2>
+            <p>
+                Wenn deine Website einzelne Episoden beschreibt – sei es als Rezension, Zusammenfassung oder als Mediathek –, kannst du jede Episode mit eigenem Markup versehen. Das <code>TVEpisode</code>-Schema erfordert eine Verknüpfung zur übergeordneten Serie über <code>partOfTVSeries</code>:
+            </p>
+            <pre><code>{
+  "@context": "https://schema.org",
+  "@type": "TVEpisode",
+  "name": "Der Rote Hochzeitstag",
+  "episodeNumber": 9,
+  "partOfSeason": {
+    "@type": "TVSeason",
+    "seasonNumber": 3
+  },
+  "partOfTVSeries": {
+    "@type": "TVSeries",
+    "name": "Game of Thrones",
+    "sameAs": "https://www.imdb.com/title/tt0944947/"
+  },
+  "datePublished": "2013-06-02",
+  "duration": "PT52M",
+  "director": {
+    "@type": "Person",
+    "name": "David Nutter"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "9.9",
+    "ratingCount": "285000",
+    "bestRating": "10",
+    "worstRating": "1"
+  }
+}</code></pre>
+            <p>
+                Episodenbewertungen sind besonders wertvoll, weil sie granulare Rich Results ermöglichen – Google kann für einzelne, besonders hochbewertete Episoden eigene Snippets anzeigen. Mehr dazu in unserem Artikel über <a href="/blog/videoobject-schema-markup-seo.html">VideoObject Schema Markup: Videos in Google Rich Results und Key Moments</a>.
+            </p>
+
+            <h2>Tab 4: MovieSeries – Filmreihen korrekt strukturieren</h2>
+            <p>
+                Filmreihen wie die James-Bond-Reihe, das Marvel Cinematic Universe oder die Fast-&amp;-Furious-Franchise bestehen aus mehreren Einzelfilmen, die zusammen eine Serie bilden. Dafür gibt es in Schema.org den Typ <code>MovieSeries</code>:
+            </p>
+            <ul>
+                <li><code>name</code> – Name der Reihe (z. B. "James Bond")</li>
+                <li><code>numberOfItems</code> – Anzahl der Einzelfilme in der Reihe</li>
+                <li><code>hasPart</code> – Array der enthaltenen Filme (optional, aber empfohlen für die ersten 2-3 Filme)</li>
+                <li><code>director</code> und <code>creator</code> – Hauptverantwortliche der Reihe</li>
+                <li><code>sameAs</code> – Link zur IMDb-Seite der Reihe</li>
+            </ul>
+            <p>
+                <strong>Wichtiger Unterschied:</strong> <code>MovieSeries</code> für Filmreihen, <code>TVSeries</code> für Fernsehserien. Manche Reihen haben sowohl eine Film- als auch eine Serienlinie (z. B. Star Wars) – hier gilt: für jede Linie ein separates Markup-Block.
+            </p>
+
+            <h2>Schritt-für-Schritt: So nutzt du den Generator</h2>
+            <ol>
+                <li><strong>Tool öffnen:</strong> Gehe zu <a href="/tools/movie-tvseries-schema-generator.html">shift07.ai/tools/movie-tvseries-schema-generator</a></li>
+                <li><strong>Tab wählen:</strong> Wähle den passenden Typ (Movie, TVSeries, TVEpisode oder MovieSeries)</li>
+                <li><strong>Felder ausfüllen:</strong> Trage alle verfügbaren Informationen ein. Pflichtfelder sind markiert, optionale Felder kannst du leer lassen.</li>
+                <li><strong>JSON-LD kopieren:</strong> Klicke auf "JSON-LD generieren" und kopiere den Code aus dem Ausgabefeld</li>
+                <li><strong>Einbinden:</strong> Füge das Markup in den <code>&lt;head&gt;</code>-Bereich deiner Seite ein – innerhalb eines <code>&lt;script type="application/ld+json"&gt;</code>-Tags</li>
+                <li><strong>Validieren:</strong> Prüfe das Markup mit unserem <a href="/tools/json-ld-structured-data-validator.html">JSON-LD Structured Data Validator</a></li>
+            </ol>
+
+            <h2>AggregateRating: Die wichtigste Property für Rich Results</h2>
+            <p>
+                Die <strong>AggregateRating</strong>-Property ist bei Movie- und TVSeries-Schema das entscheidende Element für Rich Results – also für die Darstellung von Sternebewertungen direkt in der Google-Suche. Ohne sie gibt es in der Regel keine visuellen Hervorhebungen.
+            </p>
+            <p>
+                Wichtige Regeln für AggregateRating:
+            </p>
+            <ul>
+                <li><code>ratingValue</code> muss eine Zahl zwischen <code>worstRating</code> und <code>bestRating</code> sein</li>
+                <li><code>ratingCount</code> oder <code>reviewCount</code> muss angegeben sein (Google akzeptiert mindestens 1)</li>
+                <li>Die Bewertung muss von echten Nutzern stammen – manipulierte Ratings verstoßen gegen Googles Richtlinien</li>
+                <li>Für <code>bestRating</code> gilt in der Regel 10, für <code>worstRating</code> 1 – bei anderen Skalen entsprechend anpassen</li>
+            </ul>
+            <p>
+                Für alle Details zu Bewertungsschemas lies unseren Leitfaden <a href="/blog/aggregaterating-schema-markup-vertieft.html">AggregateRating Schema Markup vertieft: Bewertungssterne richtig implementieren 2026</a>.
+            </p>
+
+            <h2>Trailer einbinden: VideoObject als verschachteltes Objekt</h2>
+            <p>
+                Die <code>trailer</code>-Property verweist auf ein <code>VideoObject</code> – das ist ein verschachteltes Objekt mit eigenen Properties wie <code>embedUrl</code>, <code>thumbnailUrl</code> und <code>uploadDate</code>. Der Generator erstellt das korrekte verschachtelte JSON-LD automatisch, wenn du eine Trailer-URL eingibst.
+            </p>
+            <p>
+                Für YouTube-Trailer gilt folgende Konvention: Die <code>embedUrl</code> sollte im Format <code>https://www.youtube.com/embed/[VIDEO_ID]</code> angegeben werden, die <code>thumbnailUrl</code> im Format <code>https://img.youtube.com/vi/[VIDEO_ID]/hqdefault.jpg</code>. Mehr zu VideoObject-Markup im Artikel <a href="/blog/videoobject-schema-markup-vertieft.html">VideoObject Schema Markup vertieft: Key Moments, Clips, transcript und seekToAction</a>.
+            </p>
+
+            <h2>Häufige Fehler beim Movie &amp; TVSeries Schema</h2>
+            <p>
+                Unsere Analyse von Filmdatenbank-Websites zeigt immer wieder dieselben Fehler im Movie-Schema:
+            </p>
+            <ul>
+                <li><strong>Falscher @type:</strong> Eine Fernsehserie als "Movie" auszeichnen (oder umgekehrt) sorgt dafür, dass Google das Markup ignoriert</li>
+                <li><strong>Fehlende dateCreated/datePublished:</strong> Google benötigt ein Datum, um den Inhalt zeitlich einzuordnen</li>
+                <li><strong>ISO 8601-Fehler bei duration:</strong> "2h 28min" ist kein valides Format – korrekt ist <code>PT2H28M</code></li>
+                <li><strong>AggregateRating ohne ratingCount:</strong> Ohne Anzahl der Bewertungen akzeptiert Google das Markup nicht für Rich Results</li>
+                <li><strong>sameAs mit falscher URL:</strong> IMDb-Links müssen mit <code>https://www.imdb.com/title/</code> beginnen und eine gültige tt-ID enthalten</li>
+                <li><strong>TVEpisode ohne partOfTVSeries:</strong> Ohne die Verknüpfung zur übergeordneten Serie versteht Google den Episodenkontext nicht</li>
+            </ul>
+
+            <h2>Wer sollte Movie- und TVSeries-Schema einsetzen?</h2>
+            <p>
+                Movie- und TVSeries-Schema ist besonders relevant für:
+            </p>
+            <ul>
+                <li><strong>Filmkritik-Websites und Blogs</strong> – Rezensionen mit Bewertungen als Rich Results</li>
+                <li><strong>Streamingportale und Mediatheken</strong> – Katalogseiten mit strukturierten Filmdaten</li>
+                <li><strong>Filmdatenbanken</strong> – ähnlich IMDb oder Letterboxd, aber spezialisiert</li>
+                <li><strong>Fanseiten und Wikis</strong> – Episodenübersichten mit detailliertem Markup</li>
+                <li><strong>Kinowebsites</strong> – Spielpläne mit Filminformationen und Trailern</li>
+                <li><strong>Podcast- und Serienverzeichnisse</strong> – wenn auch TVSeries-Content enthalten ist</li>
+            </ul>
+            <p>
+                Wer noch keinen Podcast ausgezeichnet hat, findet ebenfalls einen passenden Generator: <a href="/tools/podcast-schema-generator.html">PodcastSeries &amp; PodcastEpisode Schema Generator</a>.
+            </p>
+
+            <h2>JSON-LD nach dem Generieren validieren</h2>
+            <p>
+                Jedes generierte JSON-LD sollte vor der Veröffentlichung validiert werden. Nutze dafür unseren kostenlosen <a href="/tools/json-ld-structured-data-validator.html">JSON-LD Structured Data Validator</a>, der prüft:
+            </p>
+            <ul>
+                <li>Ist das JSON syntaktisch korrekt?</li>
+                <li>Sind alle Pflichtfelder für den gewählten @type vorhanden?</li>
+                <li>Entsprechen die Werte dem Schema.org-Standard?</li>
+                <li>Gibt es verschachtelte Objekte, die fehlen oder falsch strukturiert sind?</li>
+            </ul>
+            <p>
+                Zusätzlich empfehlen wir den Test im Google Rich Results Test (Rich Results Testing Tool) – direkt über die Google Search Console zugänglich. Dort siehst du, ob dein Markup für Rich Results qualifiziert.
+            </p>
+
+            <h2>Fazit: Mehr Sichtbarkeit für Filminhalte durch korrektes Schema</h2>
+            <p>
+                Strukturierte Daten nach Schema.org sind für Film- und Serienwebsites kein optionales Extra, sondern ein entscheidender Wettbewerbsvorteil. Mit dem richtigen Movie- oder TVSeries-Markup erscheinen deine Inhalte mit Sternebewertungen, Laufzeiten und Trailern direkt in der Google-Suche – was die Klickrate signifikant steigert.
+            </p>
+            <p>
+                Unser <a href="/tools/movie-tvseries-schema-generator.html">Movie &amp; TVSeries Schema Generator</a> macht den Einstieg einfach: kein Coding nötig, vier Typen in einem Tool, sofortige Ausgabe als valides JSON-LD. Probiere es aus und prüfe das Ergebnis anschließend mit unserem <a href="/tools/json-ld-structured-data-validator.html">JSON-LD Validator</a>.
+            </p>
+            <p>
+                Für alle weiteren Schema-Typen rund um Medieninhalte lies auch unsere Artikel zu <a href="/blog/videoobject-schema-markup-seo.html">VideoObject Schema Markup</a>, <a href="/blog/podcast-schema-markup-seo.html">Podcast Schema Markup</a> und <a href="/blog/article-schema-markup-seo.html">Article Schema Markup</a>. Und wenn du wissen möchtest, welche strukturierten Daten Google grundsätzlich unterstützt, ist unser <a href="/blog/strukturierte-daten-seo-schema-markup.html">Einstiegsartikel zu strukturierten Daten</a> der richtige Ausgangspunkt.
+            </p>
+
+            <!-- CTA Box -->
+            <div class="mt-12 p-8 bg-gradient-to-r from-blue-900/40 to-indigo-900/40 border border-blue-700/30 rounded-2xl text-center">
+                <h3 class="text-2xl font-bold text-white mb-3">Movie &amp; TVSeries Schema Generator</h3>
+                <p class="text-gray-300 mb-6">Erstelle in wenigen Sekunden valides JSON-LD für Filme, Serien, Episoden und Filmreihen – kostenlos und ohne Anmeldung.</p>
+                <a href="/tools/movie-tvseries-schema-generator.html"
+                   class="inline-block bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all shadow-lg">
+                    Jetzt JSON-LD generieren →
+                </a>
+            </div>
+
+        </div>
+    </article>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 border-t border-white/10 py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center gap-2 mb-4">
+                        <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                        <span class="text-xl font-bold text-white">Shift07</span>
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed max-w-md">
+                        Shift07 ist dein KI-gestütztes SEO-Analyse-Tool für Websites. Finde technische Fehler, verbessere dein Ranking und gewinne mehr organischen Traffic.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Tools</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="/tools/" class="hover:text-white transition-colors">Alle Tools</a></li>
+                        <li><a href="/tools/movie-tvseries-schema-generator.html" class="hover:text-white transition-colors">Movie Schema Generator</a></li>
+                        <li><a href="/tools/json-ld-structured-data-validator.html" class="hover:text-white transition-colors">JSON-LD Validator</a></li>
+                        <li><a href="/tools/schema-markup-generator.html" class="hover:text-white transition-colors">Schema Generator</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Rechtliches</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="/impressum.html" class="hover:text-white transition-colors">Impressum</a></li>
+                        <li><a href="/datenschutz.html" class="hover:text-white transition-colors">Datenschutz</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-white/10 pt-8 text-center text-sm text-gray-500">
+                <p>&copy; 2026 Thümmler AI GmbH · Leonardo-da-Vinci-Straße 15 · 14467 Potsdam</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
