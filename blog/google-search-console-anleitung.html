@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Search Console: Vollständige Anleitung 2026 | Shift07 Blog</title>
+    <meta name="description" content="Google Search Console richtig nutzen: Einrichtung, Berichte verstehen, Indexierung prüfen, Fehler beheben und Rankings verbessern. Die vollständige Anleitung für 2026.">
+    <meta name="author" content="Thümmler AI GmbH">
+    <link rel="icon" type="image/png" href="/logo.png">
+    <link rel="canonical" href="https://shift07.ai/blog/google-search-console-anleitung.html">
+    <link rel="alternate" type="application/rss+xml" title="Shift07 Blog" href="https://shift07.ai/feed.xml">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Google Search Console: Vollständige Anleitung 2026 | Shift07 Blog">
+    <meta property="og:description" content="Google Search Console richtig nutzen: Einrichtung, Berichte verstehen, Indexierung prüfen, Fehler beheben und Rankings verbessern. Die vollständige Anleitung für 2026.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://shift07.ai/blog/google-search-console-anleitung.html">
+    <meta property="og:image" content="https://shift07.ai/blog/images/google-search-console-anleitung.png">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="Shift07">
+    <meta property="article:published_time" content="2026-05-10T08:00:00+02:00">
+    <meta property="article:section" content="Tech-SEO">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Google Search Console: Vollständige Anleitung 2026">
+    <meta name="twitter:description" content="Google Search Console richtig nutzen: Einrichtung, Berichte verstehen, Indexierung prüfen, Fehler beheben und Rankings verbessern.">
+    <meta name="twitter:image" content="https://shift07.ai/blog/images/google-search-console-anleitung.png">
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Google Search Console: Vollständige Anleitung 2026",
+      "description": "Google Search Console richtig nutzen: Einrichtung, Berichte verstehen, Indexierung prüfen, Fehler beheben und Rankings verbessern. Die vollständige Anleitung für 2026.",
+      "image": "https://shift07.ai/blog/images/google-search-console-anleitung.png",
+      "datePublished": "2026-05-10T08:00:00+02:00",
+      "dateModified": "2026-05-10T08:00:00+02:00",
+      "author": {
+        "@type": "Organization",
+        "name": "Shift07",
+        "url": "https://shift07.ai"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Shift07",
+        "url": "https://shift07.ai",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://shift07.ai/assets/logo.png"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://shift07.ai/blog/google-search-console-anleitung.html"
+      }
+    }
+    </script>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K1S1RXBDS8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K1S1RXBDS8');
+    </script>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8475857002943858" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#6C63FF',
+              secondary: '#F8F7FF'
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body { font-family: 'Inter', sans-serif; }
+      .prose h2 { font-size: 1.5rem; font-weight: 700; margin-top: 2rem; margin-bottom: 1rem; color: #1a1a2e; }
+      .prose h3 { font-size: 1.2rem; font-weight: 600; margin-top: 1.5rem; margin-bottom: 0.75rem; color: #1a1a2e; }
+      .prose p { margin-bottom: 1rem; line-height: 1.75; color: #374151; }
+      .prose ul { list-style-type: disc; padding-left: 1.5rem; margin-bottom: 1rem; }
+      .prose ol { list-style-type: decimal; padding-left: 1.5rem; margin-bottom: 1rem; }
+      .prose li { margin-bottom: 0.5rem; line-height: 1.75; color: #374151; }
+      .prose a { color: #6C63FF; text-decoration: underline; }
+      .prose strong { font-weight: 600; color: #1a1a2e; }
+      .prose code { background: #f3f4f6; padding: 0.125rem 0.375rem; border-radius: 0.25rem; font-size: 0.875rem; }
+      .prose table { width: 100%; border-collapse: collapse; margin-bottom: 1.5rem; }
+      .prose th { background: #6C63FF; color: white; padding: 0.75rem 1rem; text-align: left; font-weight: 600; }
+      .prose td { padding: 0.75rem 1rem; border-bottom: 1px solid #e5e7eb; }
+      .prose tr:nth-child(even) td { background: #f9fafb; }
+      .info-box { background: #EEF2FF; border-left: 4px solid #6C63FF; padding: 1rem 1.25rem; border-radius: 0.5rem; margin: 1.5rem 0; }
+      .tip-box { background: #F0FDF4; border-left: 4px solid #22c55e; padding: 1rem 1.25rem; border-radius: 0.5rem; margin: 1.5rem 0; }
+      .warning-box { background: #FFF7ED; border-left: 4px solid #f97316; padding: 1rem 1.25rem; border-radius: 0.5rem; margin: 1.5rem 0; }
+    </style>
+</head>
+<body class="bg-white text-gray-900">
+
+  <!-- Navigation -->
+  <nav class="bg-white border-b border-gray-200 sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+      <a href="/" class="flex items-center gap-2">
+        <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-8">
+        <span class="font-bold text-xl text-gray-900">Shift07</span>
+      </a>
+      <div class="flex items-center gap-6 text-sm font-medium text-gray-600">
+        <a href="/blog/" class="hover:text-primary transition-colors">Blog</a>
+        <a href="/tools/" class="hover:text-primary transition-colors">Tools</a>
+        <a href="/#analyze" class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-opacity-90 transition-all">Website analysieren</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="bg-gradient-to-br from-secondary via-white to-purple-50 py-12 px-4">
+    <div class="max-w-4xl mx-auto">
+      <div class="flex items-center gap-2 text-sm text-primary font-medium mb-4">
+        <a href="/blog/" class="hover:underline">Blog</a>
+        <span class="text-gray-400">/</span>
+        <span>Tech-SEO</span>
+      </div>
+      <h1 class="text-3xl md:text-4xl font-extrabold text-gray-900 leading-tight mb-4">
+        Google Search Console: Vollständige Anleitung 2026
+      </h1>
+      <p class="text-lg text-gray-600 mb-6">
+        Die Google Search Console (GSC) ist das mächtigste kostenlose SEO-Werkzeug, das Google selbst anbietet. In dieser Anleitung lernst du, wie du die GSC richtig einrichtest, alle wichtigen Berichte verstehst und konkrete Maßnahmen ableitest, um dein Google-Ranking zu verbessern.
+      </p>
+      <div class="flex flex-wrap items-center gap-4 text-sm text-gray-500">
+        <span>10. Mai 2026</span>
+        <span>·</span>
+        <span>18 Min. Lesezeit</span>
+        <span>·</span>
+        <span class="text-primary font-medium">Tech-SEO</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Artikel-Bild -->
+  <div class="max-w-4xl mx-auto px-4 mt-8">
+    <img src="/blog/images/google-search-console-anleitung.png"
+         alt="Google Search Console Anleitung 2026 – vollständiger Leitfaden"
+         class="w-full rounded-2xl shadow-lg object-cover" style="max-height:420px;">
+  </div>
+
+  <!-- Inhalt -->
+  <main class="max-w-4xl mx-auto px-4 py-10">
+    <div class="prose max-w-none">
+
+      <!-- Inhaltsverzeichnis -->
+      <div class="bg-gray-50 rounded-xl p-6 mb-8 border border-gray-200">
+        <p class="font-bold text-gray-900 mb-3">Inhaltsverzeichnis</p>
+        <ol class="space-y-1 text-sm">
+          <li><a href="#was-ist-gsc">1. Was ist die Google Search Console?</a></li>
+          <li><a href="#einrichten">2. Google Search Console einrichten</a></li>
+          <li><a href="#leistung">3. Leistungsbericht: Klicks, Impressionen und Rankings analysieren</a></li>
+          <li><a href="#indexierung">4. Indexierungsabdeckung: Fehler erkennen und beheben</a></li>
+          <li><a href="#sitemap">5. Sitemap einreichen</a></li>
+          <li><a href="#url-pruefung">6. URL-Prüfung: Einzelne Seiten analysieren</a></li>
+          <li><a href="#core-web-vitals">7. Core Web Vitals in der GSC</a></li>
+          <li><a href="#mobile-nutzbarkeit">8. Mobile Nutzbarkeit</a></li>
+          <li><a href="#links">9. Links-Bericht: Backlinks und interne Links</a></li>
+          <li><a href="#manuelle-massnahmen">10. Manuelle Maßnahmen und Sicherheitsprobleme</a></li>
+          <li><a href="#tipps">11. Profi-Tipps zur Nutzung der GSC</a></li>
+        </ol>
+      </div>
+
+      <h2 id="was-ist-gsc">1. Was ist die Google Search Console?</h2>
+      <p>
+        Die Google Search Console (früher: Google Webmaster Tools) ist ein kostenloser Dienst von Google, der Website-Betreibern und SEO-Experten ermöglicht, die Performance ihrer Website in der Google-Suche zu überwachen und zu optimieren. Anders als Google Analytics, das das Verhalten deiner Besucher <em>auf</em> der Website misst, zeigt die GSC, was in der Google-Suche passiert, <em>bevor</em> ein Nutzer auf deine Seite klickt.
+      </p>
+      <p>
+        Die wichtigsten Fragen, die die Search Console beantwortet:
+      </p>
+      <ul>
+        <li>Für welche Suchanfragen erscheint meine Website bei Google?</li>
+        <li>Wie viele Klicks und Impressionen bekomme ich?</li>
+        <li>Welche meiner Seiten sind von Google indexiert?</li>
+        <li>Gibt es technische Fehler, die mein Ranking blockieren?</li>
+        <li>Welche Websites verlinken auf meine Seite?</li>
+        <li>Gibt es Sicherheitsprobleme oder manuelle Abstrafungen?</li>
+      </ul>
+
+      <div class="info-box">
+        <strong>Wichtig:</strong> Die Google Search Console ist kein optionales Werkzeug — sie ist Pflicht für jeden, der ernsthaft SEO betreiben möchte. Nur hier siehst du direkte Signale von Google über deine Website.
+      </div>
+
+      <h2 id="einrichten">2. Google Search Console einrichten</h2>
+      <p>
+        Die Einrichtung der Google Search Console dauert nur wenige Minuten. Du benötigst ein Google-Konto (z.B. dein Gmail-Konto).
+      </p>
+
+      <h3>Schritt 1: Property hinzufügen</h3>
+      <p>
+        Gehe auf <strong>search.google.com/search-console</strong> und klicke auf "Property hinzufügen". Du hast zwei Möglichkeiten:
+      </p>
+      <ul>
+        <li><strong>Domain-Property</strong> (empfohlen): Erfasst alle Unterdomains (www, blog, shop) und alle Protokolle (http, https) in einer einzigen Ansicht. Voraussetzung: DNS-Zugang</li>
+        <li><strong>URL-Präfix-Property</strong>: Erfasst nur die exakt eingegebene URL (z.B. nur https://example.de). Einfacher zu verifizieren, aber weniger umfassend</li>
+      </ul>
+
+      <h3>Schritt 2: Eigentumsnachweis</h3>
+      <p>
+        Google muss verifizieren, dass du der Eigentümer der Website bist. Die empfohlenen Methoden:
+      </p>
+      <ul>
+        <li><strong>HTML-Datei hochladen</strong> (einfachste Methode): Du lädst eine von Google bereitgestellte Datei in das Stammverzeichnis deiner Website hoch</li>
+        <li><strong>HTML-Meta-Tag</strong>: Du fügst ein Meta-Tag in den <code>&lt;head&gt;</code>-Bereich deiner Homepage ein</li>
+        <li><strong>Google Analytics</strong>: Wenn du bereits GA eingebunden hast, ist die Verifikation automatisch möglich</li>
+        <li><strong>DNS-TXT-Eintrag</strong>: Für die Domain-Property musst du einen TXT-Eintrag in deinen DNS-Einstellungen hinzufügen</li>
+        <li><strong>Google Tag Manager</strong>: Wenn GTM bereits eingerichtet ist, kannst du damit verifizieren</li>
+      </ul>
+
+      <h3>Schritt 3: Erste Daten abwarten</h3>
+      <p>
+        Nach der Verifikation dauert es 1-3 Tage, bis die ersten Daten in der GSC erscheinen. Für historische Daten (bis zu 16 Monate) musst du länger warten — oder du nutzt die Daten einer bereits bestehenden Property.
+      </p>
+
+      <div class="tip-box">
+        <strong>Profi-Tipp:</strong> Richte die GSC unbedingt am ersten Tag nach dem Launch deiner Website ein. Je früher Google anfängt, Daten zu sammeln, desto besser kannst du langfristige Trends analysieren.
+      </div>
+
+      <h2 id="leistung">3. Leistungsbericht: Klicks, Impressionen und Rankings analysieren</h2>
+      <p>
+        Der Leistungsbericht ist das Herzstück der Google Search Console. Hier siehst du, wie deine Website in der Google-Suche performt. Die vier Hauptkennzahlen:
+      </p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Kennzahl</th>
+            <th>Definition</th>
+            <th>Was du daraus ableitest</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Klicks</strong></td>
+            <td>Wie oft Nutzer auf deinen Link in der Google-Suche geklickt haben</td>
+            <td>Echter Traffic aus organischer Suche</td>
+          </tr>
+          <tr>
+            <td><strong>Impressionen</strong></td>
+            <td>Wie oft deine Seite in den Suchergebnissen erschienen ist</td>
+            <td>Sichtbarkeit, auch ohne Klick</td>
+          </tr>
+          <tr>
+            <td><strong>CTR (Click-Through-Rate)</strong></td>
+            <td>Klicks geteilt durch Impressionen (in %)</td>
+            <td>Wie attraktiv dein Snippet ist</td>
+          </tr>
+          <tr>
+            <td><strong>Position</strong></td>
+            <td>Durchschnittliche Position in den Suchergebnissen</td>
+            <td>Ranking-Stärke für eine Suchanfrage</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>Suchanfragen analysieren</h3>
+      <p>
+        Im Tab "Abfragen" (Queries) siehst du, für welche Suchbegriffe deine Website erscheint. Sortiere nach Impressionen, um Keywords mit hohem Suchvolumen zu finden, für die du noch nicht gut rankst. Das sind deine größten Chancen:
+      </p>
+      <ul>
+        <li><strong>Viele Impressionen, wenige Klicks, schlechte CTR:</strong> Dein Title und deine Meta-Description sind nicht überzeugend genug. Optimiere dein <a href="/blog/title-tag-optimieren-seo.html">Title-Tag</a> und deine <a href="/blog/meta-description-optimieren-guide.html">Meta-Description</a>.</li>
+        <li><strong>Viele Impressionen, Position 11-20:</strong> Du bist fast auf Seite 1. Mit gezielter Optimierung könntest du in die Top 10 springen.</li>
+        <li><strong>Viele Impressionen, Position 4-10:</strong> Du rankst bereits gut, aber nicht optimal. Verbessere den Content, optimiere <a href="/blog/interne-verlinkung-seo-strategie.html">interne Verlinkung</a> und baue Backlinks auf.</li>
+      </ul>
+
+      <h3>Seiten analysieren</h3>
+      <p>
+        Im Tab "Seiten" siehst du, welche deiner Unterseiten den meisten Traffic generieren. Kombiniere die Ansicht mit dem Tab "Abfragen", um zu sehen, für welche Keywords eine bestimmte Seite rankt. So erkennst du auch <a href="/blog/keyword-kannibalisierung-erkennen-beheben.html">Keyword-Kannibalisierung</a>: Wenn zwei Seiten für dasselbe Keyword konkurrieren, musst du sie konsolidieren oder klarer differenzieren.
+      </p>
+
+      <h3>Zeitraum-Vergleich</h3>
+      <p>
+        Nutze die "Vergleich"-Funktion im Leistungsbericht, um zwei Zeiträume gegenüberzustellen. So erkennst du:
+      </p>
+      <ul>
+        <li>Saisonale Schwankungen (z.B. mehr Klicks im Dezember)</li>
+        <li>Auswirkungen von Google-Updates</li>
+        <li>Erfolge oder Misserfolge nach Content-Änderungen</li>
+      </ul>
+
+      <h2 id="indexierung">4. Indexierungsabdeckung: Fehler erkennen und beheben</h2>
+      <p>
+        Unter "Indexierung" → "Seiten" siehst du den Indexierungsstatus aller Seiten deiner Website. Google unterscheidet vier Status-Kategorien:
+      </p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Status</th>
+            <th>Bedeutung</th>
+            <th>Handlungsbedarf</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Gültig</strong></td>
+            <td>Seite ist indexiert und kann in der Suche erscheinen</td>
+            <td>Keiner — alles gut</td>
+          </tr>
+          <tr>
+            <td><strong>Ausgeschlossen</strong></td>
+            <td>Seite ist nicht indexiert, aber absichtlich (z.B. noindex, Duplicate)</td>
+            <td>Prüfe ob die Ausschlüsse korrekt sind</td>
+          </tr>
+          <tr>
+            <td><strong>Fehler</strong></td>
+            <td>Seite konnte nicht indexiert werden</td>
+            <td>Sofort beheben!</td>
+          </tr>
+          <tr>
+            <td><strong>Warnung</strong></td>
+            <td>Seite ist indexiert, aber es gibt Probleme</td>
+            <td>Baldmöglichst beheben</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>Häufige Fehler und Lösungen</h3>
+      <ul>
+        <li><strong>404-Fehler (Nicht gefunden):</strong> Die Seite existiert nicht mehr. Lösung: 301-Weiterleitung zur richtigen Seite einrichten oder die Seite wiederherstellen.</li>
+        <li><strong>Weitergeleitet:</strong> Eine URL leitet auf eine andere weiter. Überprüfe ob alle Weiterleitungen korrekt sind.</li>
+        <li><strong>Durch robots.txt blockiert:</strong> Die Seite darf von Google nicht gecrawlt werden. Prüfe deine <a href="/blog/robots-txt-konfigurieren.html">robots.txt</a> mit dem <a href="/tools/robots-txt-tester.html">robots.txt-Tester</a>.</li>
+        <li><strong>noindex-Tag:</strong> Die Seite hat ein <code>noindex</code>-Meta-Tag. Entferne es, wenn die Seite indexiert werden soll.</li>
+        <li><strong>Doppelter Content:</strong> Google hat eine ähnliche Seite als kanonisch gewählt. Setze <a href="/blog/canonical-tags-seo.html">Canonical-Tags</a> korrekt.</li>
+      </ul>
+
+      <div class="warning-box">
+        <strong>Achtung:</strong> Der Indexierungsbericht zeigt nur Seiten, die Google gefunden hat. Seiten, die komplett durch robots.txt blockiert sind oder keine eingehenden Links haben, erscheinen möglicherweise gar nicht in der Liste. Nutze die URL-Prüfung um einzelne Seiten zu überprüfen.
+      </div>
+
+      <h2 id="sitemap">5. Sitemap einreichen</h2>
+      <p>
+        Eine Sitemap teilt Google mit, welche Seiten deine Website hat und wie oft sie aktualisiert werden. Das beschleunigt die Indexierung erheblich. So reichst du deine Sitemap ein:
+      </p>
+      <ol>
+        <li>Gehe in der GSC zu "Indexierung" → "Sitemaps"</li>
+        <li>Gib die URL deiner Sitemap ein (meist <code>https://deine-domain.de/sitemap.xml</code>)</li>
+        <li>Klicke auf "Senden"</li>
+        <li>Google verarbeitet die Sitemap und zeigt dir Statusinformationen</li>
+      </ol>
+      <p>
+        Falls du noch keine Sitemap hast, kannst du sie mit unserem kostenlosen <a href="/tools/sitemap-generator.html">Sitemap-Generator</a> erstellen. Anschließend prüfe sie mit dem <a href="/tools/sitemap-validator.html">Sitemap-Validator</a>, bevor du sie einreichst. Mehr Details zur Erstellung findest du in unserem Artikel über <a href="/blog/sitemap-xml-erstellen-einreichen.html">Sitemap.xml erstellen und einreichen</a>.
+      </p>
+
+      <h2 id="url-pruefung">6. URL-Prüfung: Einzelne Seiten analysieren</h2>
+      <p>
+        Das URL-Prüfungs-Tool ist eines der nützlichsten Features der GSC. Gib eine beliebige URL deiner Website ein und sieh sofort:
+      </p>
+      <ul>
+        <li>Ist die Seite indexiert oder nicht?</li>
+        <li>Wann hat Google die Seite zuletzt gecrawlt?</li>
+        <li>Wie sieht die Seite für Googlebot aus (gerenderte Version)?</li>
+        <li>Gibt es Crawling- oder Indexierungsfehler?</li>
+        <li>Welche kanonische URL hat Google erkannt?</li>
+      </ul>
+      <p>
+        Besonders wertvoll: Nach Änderungen an einer wichtigen Seite kannst du unter "URL-Prüfung" auf "Indexierung anfordern" klicken. Google crawlt die Seite dann priorisiert — das beschleunigt die Aktualisierung im Index erheblich.
+      </p>
+
+      <div class="tip-box">
+        <strong>Profi-Tipp:</strong> Nutze die URL-Prüfung immer dann, wenn du wichtige Seiten verändert hast (z.B. Preisseite, Startseite, wichtige Landingpages). So stellst du sicher, dass Google die aktuelle Version schnell aufgreift.
+      </div>
+
+      <h2 id="core-web-vitals">7. Core Web Vitals in der GSC</h2>
+      <p>
+        Unter "Nutzererfahrung" → "Core Web Vitals" siehst du, wie gut deine Website bei den drei wichtigsten Performance-Metriken abschneidet:
+      </p>
+      <ul>
+        <li><strong>LCP (Largest Contentful Paint):</strong> Wie schnell lädt das größte sichtbare Element? Ziel: unter 2,5 Sekunden</li>
+        <li><strong>INP (Interaction to Next Paint):</strong> Wie schnell reagiert die Seite auf Nutzerinteraktionen? Ziel: unter 200 ms</li>
+        <li><strong>CLS (Cumulative Layout Shift):</strong> Wie stabil ist das Layout? Ziel: unter 0,1</li>
+      </ul>
+      <p>
+        Die GSC unterscheidet zwischen <strong>Desktop</strong>- und <strong>Mobil</strong>-Daten und zeigt dir konkrete URLs, die verbesserungsbedürftig sind. Klicke auf eine URL-Gruppe, um zu sehen, welche Seiten betroffen sind und welche Metrik das Problem verursacht.
+      </p>
+      <p>
+        Weitere Details zu den Core Web Vitals und wie du sie verbesserst, findest du in unseren Artikeln <a href="/blog/core-web-vitals-erklaert.html">Core Web Vitals erklärt</a> und <a href="/blog/core-web-vitals-verbessern-lcp-cls-inp.html">Core Web Vitals verbessern: LCP, CLS, INP</a>.
+      </p>
+
+      <h2 id="mobile-nutzbarkeit">8. Mobile Nutzbarkeit</h2>
+      <p>
+        Seit 2021 nutzt Google den Mobile-First-Index: Die mobile Version deiner Website ist die primäre Grundlage für die Indexierung und das Ranking. Unter "Nutzererfahrung" → "Mobile Nutzbarkeit" siehst du, ob Google Probleme mit der mobilen Version deiner Seiten erkennt.
+      </p>
+      <p>Häufige Probleme und Lösungen:</p>
+      <ul>
+        <li><strong>Inhalt breiter als Bildschirm:</strong> Nutze <code>max-width: 100%</code> für Bilder und Container</li>
+        <li><strong>Text zu klein zum Lesen:</strong> Mindestschriftgröße 16px für Fließtext</li>
+        <li><strong>Klickbare Elemente zu nahe beieinander:</strong> Mindestabstand von 48px zwischen Buttons und Links</li>
+        <li><strong>Viewport nicht konfiguriert:</strong> Füge <code>&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;</code> ein</li>
+      </ul>
+      <p>
+        Mehr zur mobilen Optimierung findest du in unserem <a href="/blog/mobile-seo-responsive-design.html">Leitfaden zu Mobile SEO</a>.
+      </p>
+
+      <h2 id="links">9. Links-Bericht: Backlinks und interne Links</h2>
+      <p>
+        Unter "Links" findest du zwei wichtige Berichte:
+      </p>
+
+      <h3>Externe Links (Backlinks)</h3>
+      <p>
+        Hier siehst du, welche externen Websites auf deine Website verlinken. Die GSC zeigt dir:
+      </p>
+      <ul>
+        <li><strong>Verknüpfte Seiten (externe Links):</strong> Welche deiner Seiten die meisten Backlinks haben</li>
+        <li><strong>Häufigste verlinkende Websites:</strong> Deine wichtigsten Linkquellen</li>
+        <li><strong>Häufigste Ankertexte:</strong> Mit welchem Text andere auf dich verlinken</li>
+      </ul>
+      <p>
+        Wichtig: Die GSC zeigt nur einen Teil der Backlinks (nicht alle). Für eine vollständige Backlink-Analyse brauchst du zusätzliche Tools wie Ahrefs oder SEMrush. Aber für eine erste Übersicht reicht die GSC völlig aus.
+      </p>
+
+      <h3>Interne Links</h3>
+      <p>
+        Der Bericht zu internen Links zeigt, welche deiner Seiten die meisten internen Verlinkungen erhalten. Seiten mit vielen internen Links gelten als wichtig und werden von Google stärker gewichtet. Prüfe, ob deine wichtigsten Seiten (z.B. Service-Seiten, Produkt-Seiten) auch die meisten internen Links erhalten. Mehr zur Strategie der internen Verlinkung: <a href="/blog/interne-verlinkung-seo-strategie.html">Interne Verlinkung: Strategie für bessere SEO-Rankings</a>.
+      </p>
+
+      <h2 id="manuelle-massnahmen">10. Manuelle Maßnahmen und Sicherheitsprobleme</h2>
+
+      <h3>Manuelle Maßnahmen</h3>
+      <p>
+        Unter "Sicherheit und manuelle Maßnahmen" → "Manuelle Maßnahmen" siehst du, ob Google-Mitarbeiter deine Website wegen Verstößen gegen die Richtlinien bestraft haben. Manuelle Maßnahmen sind ernst zu nehmen: Sie können dazu führen, dass einzelne Seiten oder die gesamte Website aus den Suchergebnissen entfernt wird.
+      </p>
+      <p>Häufige Gründe für manuelle Maßnahmen:</p>
+      <ul>
+        <li>Unnatürliche eingehende oder ausgehende Links (Link-Spam)</li>
+        <li>Thin Content oder Duplicate Content in großem Ausmaß</li>
+        <li>Cloaking (verschiedene Inhalte für Nutzer und Googlebot)</li>
+        <li>Gehackte Website mit schädlichem Code oder Spam</li>
+      </ul>
+      <p>
+        Falls du eine manuelle Maßnahme hast: Behebe das Problem, dokumentiere die Änderungen und stelle dann über die GSC einen Antrag auf Überprüfung.
+      </p>
+
+      <h3>Sicherheitsprobleme</h3>
+      <p>
+        Die GSC warnt dich, wenn Google Sicherheitsprobleme auf deiner Website erkennt — z.B. Malware, Phishing-Seiten oder unerwünschte Downloads. Diese Probleme schaden nicht nur deinem Ranking, sondern führen auch zu Warnmeldungen für Nutzer.
+      </p>
+
+      <h2 id="tipps">11. Profi-Tipps zur Nutzung der GSC</h2>
+
+      <h3>Regelmäßige Routine einrichten</h3>
+      <p>
+        Die GSC ist kein "einmal einrichten und vergessen"-Tool. Richte dir folgende Routine ein:
+      </p>
+      <ul>
+        <li><strong>Wöchentlich:</strong> Leistungsbericht checken — gibt es Einbrüche bei Klicks oder Rankings?</li>
+        <li><strong>Wöchentlich:</strong> Indexierungsbericht prüfen — neue Fehler vorhanden?</li>
+        <li><strong>Monatlich:</strong> Top-Seiten und Top-Keywords analysieren — wo gibt es Verbesserungspotenzial?</li>
+        <li><strong>Nach Content-Änderungen:</strong> URL-Prüfung nutzen und Indexierung anfordern</li>
+        <li><strong>Nach Google-Updates:</strong> Traffic-Verluste analysieren und betroffene Seiten identifizieren</li>
+      </ul>
+
+      <h3>GSC-Daten mit Google Analytics kombinieren</h3>
+      <p>
+        Verknüpfe deine GSC-Property mit Google Analytics 4 (GA4). Dann siehst du in GA4 nicht nur den Traffic, sondern auch die Suchanfragen, die ihn ausgelöst haben. Diese Kombination gibt dir ein vollständiges Bild von der Suchanfrage bis zur Conversion.
+      </p>
+
+      <h3>Auf Google-Updates reagieren</h3>
+      <p>
+        Wenn Google ein Core-Update veröffentlicht und dein Traffic einbricht, nutze die GSC um zu verstehen, welche Seiten betroffen sind. Filtere im Leistungsbericht nach den Wochen rund um das Update und vergleiche Rankings vor und nach dem Update.
+      </p>
+
+      <h3>Keywords mit niedrigem Position-Wert priorisieren</h3>
+      <p>
+        Filter im Abfragen-Tab: Position kleiner als 20 UND größer als 10 (Position 11-20 = Seite 2). Das sind deine besten Chancen: Keywords, für die du bereits fast auf Seite 1 bist. Mit gezielter Optimierung (besserer Content, mehr Backlinks, bessere <a href="/blog/interne-verlinkung-seo-strategie.html">interne Verlinkung</a>) kannst du diese in die Top 10 bringen.
+      </p>
+
+      <h3>GSC mit unserem kostenlosen SEO-Analyse-Tool kombinieren</h3>
+      <p>
+        Die GSC zeigt dir, wie Google deine Seiten bewertet. Unsere <a href="/#analyze">kostenlose Website-Analyse auf Shift07.ai</a> zeigt dir zusätzlich technische SEO-Fehler wie fehlende Structured Data, Performance-Probleme und On-Page-Schwächen, die du in der GSC nicht siehst. Beide Tools zusammen geben dir das vollständigste Bild.
+      </p>
+
+      <div class="info-box">
+        <strong>Zusammenfassung:</strong> Die Google Search Console ist das wichtigste kostenlose SEO-Tool überhaupt. Richte sie sofort ein, prüfe sie regelmäßig und leite konkrete Optimierungsmaßnahmen aus den Daten ab. In Kombination mit unserem <a href="/blog/technisches-seo-audit-anleitung.html">technischen SEO-Audit-Leitfaden</a> und dem Wissen über <a href="/blog/strukturierte-daten-seo-schema-markup.html">Strukturierte Daten</a> hast du alles, was du brauchst, um dein Google-Ranking systematisch zu verbessern.
+      </div>
+
+    </div>
+
+    <!-- AdSense Block -->
+    <div class="my-10">
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-8475857002943858"
+           data-ad-slot="auto"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <!-- Weiterführende Links -->
+    <div class="bg-gray-50 rounded-xl p-6 mb-8">
+      <h3 class="font-bold text-gray-900 mb-4">Weiterführende Artikel</h3>
+      <ul class="space-y-2">
+        <li><a href="/blog/technisches-seo-audit-anleitung.html" class="text-primary hover:underline font-medium">Technisches SEO Audit: Die vollständige Schritt-für-Schritt Anleitung</a></li>
+        <li><a href="/blog/indexierung-pruefen-google.html" class="text-primary hover:underline font-medium">Indexierung prüfen: Ist deine Website bei Google?</a></li>
+        <li><a href="/blog/core-web-vitals-verbessern-lcp-cls-inp.html" class="text-primary hover:underline font-medium">Core Web Vitals verbessern: LCP, CLS, INP optimieren</a></li>
+        <li><a href="/blog/sitemap-xml-erstellen-einreichen.html" class="text-primary hover:underline font-medium">Sitemap.xml erstellen und einreichen: Schritt-für-Schritt</a></li>
+        <li><a href="/blog/robots-txt-konfigurieren.html" class="text-primary hover:underline font-medium">robots.txt richtig konfigurieren: Die vollständige Anleitung</a></li>
+      </ul>
+    </div>
+
+    <!-- CTA -->
+    <div class="bg-gradient-to-r from-primary to-purple-600 rounded-2xl p-8 text-white text-center">
+      <h3 class="text-2xl font-bold mb-3">Kostenlose Website-Analyse</h3>
+      <p class="mb-6 text-purple-100">Finde heraus, welche technischen SEO-Fehler dein Google-Ranking blockieren — in wenigen Sekunden.</p>
+      <a href="/#analyze" class="bg-white text-primary font-bold px-8 py-3 rounded-xl hover:bg-purple-50 transition-colors inline-block">
+        Jetzt kostenlos analysieren
+      </a>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-400 py-10 mt-16">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex flex-wrap gap-6 justify-between items-start">
+        <div>
+          <div class="flex items-center gap-2 mb-2">
+            <img src="/logo.png" alt="Shift07 Logo" class="h-6 w-6">
+            <span class="font-bold text-white">Shift07</span>
+          </div>
+          <p class="text-sm">Thümmler AI GmbH · Leonardo-da-Vinci-Straße 15 · 14467 Potsdam</p>
+        </div>
+        <div class="flex gap-6 text-sm">
+          <a href="/blog/" class="hover:text-white transition-colors">Blog</a>
+          <a href="/tools/" class="hover:text-white transition-colors">Tools</a>
+          <a href="/datenschutz.html" class="hover:text-white transition-colors">Datenschutz</a>
+          <a href="/impressum.html" class="hover:text-white transition-colors">Impressum</a>
+        </div>
+      </div>
+      <div class="border-t border-gray-800 mt-6 pt-6 text-sm text-center">
+        © 2026 Thümmler AI GmbH. Alle Rechte vorbehalten.
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
