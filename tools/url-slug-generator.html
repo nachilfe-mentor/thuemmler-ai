@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K1S1RXBDS8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K1S1RXBDS8');
+    </script>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8475857002943858" crossorigin="anonymous"></script>
+    <title>URL-Slug-Generator für SEO – Kostenlos SEO-freundliche URLs erstellen | Shift07</title>
+    <meta name="description" content="URL-Slug-Generator für SEO: Titel sofort in SEO-freundliche URL-Slugs umwandeln. Deutsche Umlaute, Stop-Wörter entfernen, Länge begrenzen – kostenlos und ohne Anmeldung.">
+    <meta name="keywords" content="URL Slug Generator, SEO URL erstellen, SEO-freundliche URL, URL Slug Tool, Deutsche URL erstellen, Permalink Generator">
+    <meta name="author" content="Thümmler AI GmbH">
+    <link rel="icon" type="image/png" href="/logo.png">
+    <link rel="canonical" href="https://shift07.ai/tools/url-slug-generator.html">
+    <!-- Open Graph -->
+    <meta property="og:title" content="URL-Slug-Generator für SEO – SEO-freundliche URLs kostenlos erstellen">
+    <meta property="og:description" content="URL-Slug-Generator für SEO: Titel sofort in SEO-freundliche URL-Slugs umwandeln. Deutsche Umlaute, Stop-Wörter entfernen, Länge begrenzen – kostenlos.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://shift07.ai/tools/url-slug-generator.html">
+    <meta property="og:image" content="https://shift07.ai/tools/images/url-slug-generator-seo.png">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="Shift07">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="URL-Slug-Generator für SEO – SEO-freundliche URLs kostenlos erstellen">
+    <meta name="twitter:description" content="URL-Slug-Generator für SEO: Titel sofort in SEO-freundliche URL-Slugs umwandeln. Deutsche Umlaute und Stop-Wörter automatisch bereinigt.">
+    <meta name="twitter:image" content="https://shift07.ai/tools/images/url-slug-generator-seo.png">
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "URL-Slug-Generator für SEO",
+      "description": "URL-Slug-Generator für SEO: Titel sofort in SEO-freundliche URL-Slugs umwandeln. Deutsche Umlaute, Stop-Wörter entfernen, Länge begrenzen – kostenlos und ohne Anmeldung.",
+      "url": "https://shift07.ai/tools/url-slug-generator.html",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR"
+      },
+      "provider": {
+        "@type": "Organization",
+        "name": "Thümmler AI GmbH",
+        "url": "https://shift07.ai"
+      }
+    }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+        html { scroll-behavior: smooth; }
+        .glass { background: rgba(255,255,255,0.06); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.1); }
+        .slug-display { font-family: 'Courier New', monospace; word-break: break-all; }
+    </style>
+</head>
+<body class="bg-slate-900 text-white min-h-screen">
+
+<!-- Header -->
+<header class="border-b border-white/10 bg-slate-900/80 backdrop-blur-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+            <a href="/" class="flex items-center gap-2">
+                <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                <span class="font-bold text-xl">Shift07</span>
+            </a>
+            <nav class="hidden md:flex items-center gap-6">
+                <a href="/blog/" class="text-gray-400 hover:text-white transition-colors text-sm">Blog</a>
+                <a href="/tools/" class="text-gray-400 hover:text-white transition-colors text-sm">Tools</a>
+                <a href="/#analyse" class="bg-blue-600 hover:bg-blue-500 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors">Kostenlose Analyse</a>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<!-- Hero -->
+<div class="bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900 border-b border-white/10">
+    <div class="max-w-4xl mx-auto px-4 py-12 sm:py-16 text-center">
+        <div class="inline-flex items-center gap-2 bg-blue-500/10 border border-blue-500/20 rounded-full px-4 py-1.5 text-blue-400 text-sm font-medium mb-6">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
+            Kostenloses SEO-Tool
+        </div>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-4 leading-tight">
+            URL-Slug-Generator <span class="text-blue-400">für SEO</span>
+        </h1>
+        <p class="text-gray-400 text-lg max-w-2xl mx-auto">
+            Wandle Titel und Überschriften sofort in saubere, SEO-freundliche URL-Slugs um. Deutsche Umlaute werden korrekt konvertiert, Sonderzeichen entfernt.
+        </p>
+    </div>
+</div>
+
+<!-- Main Tool -->
+<main class="max-w-4xl mx-auto px-4 py-10">
+
+    <!-- Tool Card -->
+    <div class="glass rounded-2xl p-6 sm:p-8 mb-8">
+        <h2 class="text-xl font-bold mb-6 flex items-center gap-2">
+            <svg class="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
+            Titel eingeben
+        </h2>
+
+        <div class="mb-4">
+            <label for="titleInput" class="block text-sm font-medium text-gray-300 mb-2">Dein Titel oder deine Überschrift</label>
+            <textarea
+                id="titleInput"
+                rows="3"
+                class="w-full bg-slate-800 border border-slate-600 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 resize-none text-base"
+                placeholder="z.B. WordPress SEO optimieren: Die vollständige Anleitung 2026"
+            ></textarea>
+        </div>
+
+        <!-- Optionen -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
+            <div>
+                <label class="block text-sm font-medium text-gray-300 mb-2">Umlaut-Umwandlung</label>
+                <select id="umlautMode" class="w-full bg-slate-800 border border-slate-600 rounded-lg px-3 py-2 text-white text-sm focus:outline-none focus:border-blue-500">
+                    <option value="long">Lang (ü→ue, ä→ae, ö→oe)</option>
+                    <option value="short">Kurz (ü→u, ä→a, ö→o)</option>
+                    <option value="remove">Entfernen</option>
+                </select>
+            </div>
+            <div>
+                <label class="block text-sm font-medium text-gray-300 mb-2">Maximale Länge</label>
+                <select id="maxLength" class="w-full bg-slate-800 border border-slate-600 rounded-lg px-3 py-2 text-white text-sm focus:outline-none focus:border-blue-500">
+                    <option value="0">Keine Begrenzung</option>
+                    <option value="60" selected>60 Zeichen (empfohlen)</option>
+                    <option value="75">75 Zeichen</option>
+                    <option value="100">100 Zeichen</option>
+                </select>
+            </div>
+            <div>
+                <label class="block text-sm font-medium text-gray-300 mb-2">Stop-Wörter</label>
+                <select id="stopWords" class="w-full bg-slate-800 border border-slate-600 rounded-lg px-3 py-2 text-white text-sm focus:outline-none focus:border-blue-500">
+                    <option value="remove">Entfernen (SEO-optimal)</option>
+                    <option value="keep">Behalten</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="flex gap-3">
+            <button onclick="generateSlug()" class="flex-1 bg-blue-600 hover:bg-blue-500 text-white font-semibold py-3 px-6 rounded-xl transition-colors text-base">
+                Slug generieren
+            </button>
+            <button onclick="clearAll()" class="bg-slate-700 hover:bg-slate-600 text-gray-300 font-medium py-3 px-4 rounded-xl transition-colors text-sm">
+                Zurücksetzen
+            </button>
+        </div>
+    </div>
+
+    <!-- Ergebnis -->
+    <div id="resultSection" class="hidden mb-8">
+        <div class="glass rounded-2xl p-6 sm:p-8">
+            <h2 class="text-xl font-bold mb-6 flex items-center gap-2">
+                <svg class="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                Generierter URL-Slug
+            </h2>
+
+            <!-- Haupt-Slug -->
+            <div class="bg-slate-800 rounded-xl p-5 mb-5">
+                <div class="flex items-start justify-between gap-4 mb-3">
+                    <div class="flex-1">
+                        <span class="text-xs font-semibold text-gray-400 uppercase tracking-wider">URL-Slug</span>
+                        <div id="slugOutput" class="slug-display text-green-400 text-xl font-bold mt-1 break-all"></div>
+                    </div>
+                    <button onclick="copySlug('slugOutput')" class="flex-shrink-0 bg-blue-600/20 hover:bg-blue-600/40 border border-blue-500/30 text-blue-400 text-xs font-medium px-3 py-1.5 rounded-lg transition-colors whitespace-nowrap">
+                        Kopieren
+                    </button>
+                </div>
+                <div id="slugStats" class="flex gap-4 text-xs text-gray-500"></div>
+            </div>
+
+            <!-- Volle URL-Vorschau -->
+            <div class="mb-5">
+                <label class="block text-sm font-medium text-gray-300 mb-2">URL-Vorschau (Beispiel)</label>
+                <div class="bg-slate-800 rounded-xl p-4 flex items-center gap-3">
+                    <div class="flex gap-1.5 flex-shrink-0">
+                        <div class="w-3 h-3 rounded-full bg-red-500/60"></div>
+                        <div class="w-3 h-3 rounded-full bg-yellow-500/60"></div>
+                        <div class="w-3 h-3 rounded-full bg-green-500/60"></div>
+                    </div>
+                    <div id="urlPreview" class="slug-display text-gray-300 text-sm break-all flex-1"></div>
+                    <button onclick="copySlug('urlPreview')" class="flex-shrink-0 text-gray-500 hover:text-white transition-colors">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Varianten -->
+            <div>
+                <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3">Alternative Varianten</h3>
+                <div id="variants" class="space-y-2"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bewertung des Slugs -->
+    <div id="qualitySection" class="hidden mb-8">
+        <div class="glass rounded-2xl p-6 sm:p-8">
+            <h2 class="text-xl font-bold mb-5 flex items-center gap-2">
+                <svg class="w-5 h-5 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/></svg>
+                SEO-Qualitätsbewertung
+            </h2>
+            <div id="qualityChecks" class="space-y-3"></div>
+        </div>
+    </div>
+
+    <!-- Kopier-Benachrichtigung -->
+    <div id="copyNotice" class="hidden fixed bottom-6 right-6 bg-green-600 text-white px-5 py-3 rounded-xl shadow-lg font-medium z-50 transition-all">
+        ✓ In Zwischenablage kopiert!
+    </div>
+
+    <!-- Info-Sektion -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+        <div class="glass rounded-2xl p-6">
+            <h3 class="font-bold text-lg mb-4 flex items-center gap-2">
+                <span class="text-blue-400">📐</span>
+                Was ist ein guter URL-Slug?
+            </h3>
+            <ul class="text-gray-400 text-sm space-y-2">
+                <li class="flex items-start gap-2"><span class="text-green-400 mt-0.5 flex-shrink-0">✓</span> <span>Maximal 60 Zeichen – Google kürzt längere URLs in den SERPs</span></li>
+                <li class="flex items-start gap-2"><span class="text-green-400 mt-0.5 flex-shrink-0">✓</span> <span>Haupt-Keyword enthalten – am besten am Anfang des Slugs</span></li>
+                <li class="flex items-start gap-2"><span class="text-green-400 mt-0.5 flex-shrink-0">✓</span> <span>Nur Kleinbuchstaben und Bindestriche – keine Leerzeichen oder Unterstriche</span></li>
+                <li class="flex items-start gap-2"><span class="text-green-400 mt-0.5 flex-shrink-0">✓</span> <span>Keine Sonderzeichen oder Umlaute in der URL</span></li>
+                <li class="flex items-start gap-2"><span class="text-green-400 mt-0.5 flex-shrink-0">✓</span> <span>Stop-Wörter (der, die, das, und, für) weglassen</span></li>
+            </ul>
+        </div>
+        <div class="glass rounded-2xl p-6">
+            <h3 class="font-bold text-lg mb-4 flex items-center gap-2">
+                <span class="text-yellow-400">⚠️</span>
+                URL-Slug-Fehler vermeiden
+            </h3>
+            <ul class="text-gray-400 text-sm space-y-2">
+                <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5 flex-shrink-0">✗</span> <span><code class="bg-slate-800 px-1 rounded text-xs">/seite?id=123</code> – Parameter statt sprechende URLs</span></li>
+                <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5 flex-shrink-0">✗</span> <span><code class="bg-slate-800 px-1 rounded text-xs">/blog/post_1</code> – Unterstriche statt Bindestriche</span></li>
+                <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5 flex-shrink-0">✗</span> <span>URLs nach Veröffentlichung ändern – kaputte Links, verlorene Backlinks</span></li>
+                <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5 flex-shrink-0">✗</span> <span>Datum in der URL – veraltet schnell und erschwert Updates</span></li>
+                <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5 flex-shrink-0">✗</span> <span>Zu lange URLs mit 5+ Wörtern – schwer lesbar und unübersichtlich</span></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Beispiele -->
+    <div class="glass rounded-2xl p-6 sm:p-8 mb-8">
+        <h2 class="text-xl font-bold mb-6">Beispiele: Vorher & Nachher</h2>
+        <div class="overflow-x-auto">
+            <table class="w-full text-sm">
+                <thead>
+                    <tr class="border-b border-white/10">
+                        <th class="text-left py-3 px-4 text-gray-400 font-semibold">Originaltitel</th>
+                        <th class="text-left py-3 px-4 text-gray-400 font-semibold">Generierter Slug</th>
+                        <th class="text-left py-3 px-4 text-gray-400 font-semibold">Bewertung</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-white/5">
+                    <tr>
+                        <td class="py-3 px-4 text-gray-300">WordPress SEO optimieren: Die vollständige Anleitung 2026</td>
+                        <td class="py-3 px-4"><code class="text-green-400 bg-slate-800 px-2 py-0.5 rounded text-xs">/wordpress-seo-optimieren</code></td>
+                        <td class="py-3 px-4 text-green-400 text-xs font-medium">⭐ Sehr gut</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4 text-gray-300">Die besten kostenlosen SEO-Tools für Einsteiger 2026</td>
+                        <td class="py-3 px-4"><code class="text-green-400 bg-slate-800 px-2 py-0.5 rounded text-xs">/kostenlose-seo-tools-einsteiger</code></td>
+                        <td class="py-3 px-4 text-green-400 text-xs font-medium">⭐ Sehr gut</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4 text-gray-300">Wie kann ich meine Öffnungszeiten bei Google eintragen?</td>
+                        <td class="py-3 px-4"><code class="text-green-400 bg-slate-800 px-2 py-0.5 rounded text-xs">/oeffnungszeiten-google-eintragen</code></td>
+                        <td class="py-3 px-4 text-green-400 text-xs font-medium">⭐ Sehr gut</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4 text-gray-300">5 Tipps für bessere Backlinks ohne Budget</td>
+                        <td class="py-3 px-4"><code class="text-green-400 bg-slate-800 px-2 py-0.5 rounded text-xs">/tipps-bessere-backlinks-budget</code></td>
+                        <td class="py-3 px-4 text-yellow-400 text-xs font-medium">⚠ Gut</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p class="text-xs text-gray-500 mt-4">Klicke auf einen Beispieltitel um ihn direkt zu testen:</p>
+        <div class="flex flex-wrap gap-2 mt-3">
+            <button onclick="loadExample('WordPress SEO optimieren: Die vollständige Anleitung 2026')" class="bg-slate-700 hover:bg-slate-600 text-gray-300 text-xs px-3 py-1.5 rounded-lg transition-colors">WordPress SEO</button>
+            <button onclick="loadExample('Wie kann ich meine Öffnungszeiten bei Google eintragen?')" class="bg-slate-700 hover:bg-slate-600 text-gray-300 text-xs px-3 py-1.5 rounded-lg transition-colors">Öffnungszeiten Google</button>
+            <button onclick="loadExample('Schema Markup für lokale Unternehmen: JSON-LD richtig einsetzen')" class="bg-slate-700 hover:bg-slate-600 text-gray-300 text-xs px-3 py-1.5 rounded-lg transition-colors">Schema Markup</button>
+            <button onclick="loadExample('Die häufigsten SEO-Fehler bei deutschen KMU und wie man sie behebt')" class="bg-slate-700 hover:bg-slate-600 text-gray-300 text-xs px-3 py-1.5 rounded-lg transition-colors">SEO-Fehler KMU</button>
+        </div>
+    </div>
+
+    <!-- Interne Links -->
+    <div class="glass rounded-2xl p-6 mb-8">
+        <h2 class="text-xl font-bold mb-5">Weitere SEO-Tools</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <a href="/tools/title-tag-laengen-checker.html" class="flex items-center gap-3 p-3 bg-slate-800/60 hover:bg-slate-700/60 rounded-xl transition-colors group">
+                <div class="w-8 h-8 bg-blue-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <svg class="w-4 h-4 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16"/></svg>
+                </div>
+                <div>
+                    <div class="text-sm font-medium text-white group-hover:text-blue-400 transition-colors">Title-Tag-Längen-Checker</div>
+                    <div class="text-xs text-gray-500">Title & SERP-Vorschau prüfen</div>
+                </div>
+            </a>
+            <a href="/tools/serp-snippet-optimizer.html" class="flex items-center gap-3 p-3 bg-slate-800/60 hover:bg-slate-700/60 rounded-xl transition-colors group">
+                <div class="w-8 h-8 bg-purple-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <svg class="w-4 h-4 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+                </div>
+                <div>
+                    <div class="text-sm font-medium text-white group-hover:text-blue-400 transition-colors">SERP-Snippet-Optimizer</div>
+                    <div class="text-xs text-gray-500">Title & Meta-Description optimieren</div>
+                </div>
+            </a>
+            <a href="/tools/canonical-tag-checker.html" class="flex items-center gap-3 p-3 bg-slate-800/60 hover:bg-slate-700/60 rounded-xl transition-colors group">
+                <div class="w-8 h-8 bg-green-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
+                </div>
+                <div>
+                    <div class="text-sm font-medium text-white group-hover:text-blue-400 transition-colors">Canonical-Tag-Checker</div>
+                    <div class="text-xs text-gray-500">Canonical URLs prüfen</div>
+                </div>
+            </a>
+            <a href="/tools/redirect-ketten-tester.html" class="flex items-center gap-3 p-3 bg-slate-800/60 hover:bg-slate-700/60 rounded-xl transition-colors group">
+                <div class="w-8 h-8 bg-orange-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <svg class="w-4 h-4 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5l7 7-7 7M5 5l7 7-7 7"/></svg>
+                </div>
+                <div>
+                    <div class="text-sm font-medium text-white group-hover:text-blue-400 transition-colors">Redirect-Ketten-Tester</div>
+                    <div class="text-xs text-gray-500">Weiterleitungen kostenlos prüfen</div>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <!-- Blog-Links -->
+    <div class="glass rounded-2xl p-6 mb-8">
+        <h2 class="text-xl font-bold mb-4">Weiterführende Artikel zu URL-SEO</h2>
+        <ul class="space-y-3">
+            <li>
+                <a href="/blog/url-struktur-seo-freundlich.html" class="flex items-center gap-3 text-blue-400 hover:text-blue-300 transition-colors group">
+                    <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                    <span class="text-sm">URL-Struktur für SEO: SEO-freundliche URLs erstellen</span>
+                </a>
+            </li>
+            <li>
+                <a href="/blog/canonical-tags-seo.html" class="flex items-center gap-3 text-blue-400 hover:text-blue-300 transition-colors group">
+                    <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                    <span class="text-sm">Canonical-Tags erklärt: Duplicate Content verhindern</span>
+                </a>
+            </li>
+            <li>
+                <a href="/blog/meta-tags-richtig-einsetzen.html" class="flex items-center gap-3 text-blue-400 hover:text-blue-300 transition-colors group">
+                    <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                    <span class="text-sm">Meta-Tags richtig einsetzen: Die vollständige Anleitung</span>
+                </a>
+            </li>
+            <li>
+                <a href="/blog/shopify-seo-optimieren.html" class="flex items-center gap-3 text-blue-400 hover:text-blue-300 transition-colors group">
+                    <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                    <span class="text-sm">Shopify SEO optimieren: Schritt-für-Schritt-Anleitung 2026</span>
+                </a>
+            </li>
+            <li>
+                <a href="/blog/wordpress-seo-optimieren.html" class="flex items-center gap-3 text-blue-400 hover:text-blue-300 transition-colors group">
+                    <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                    <span class="text-sm">WordPress SEO optimieren: Schritt-für-Schritt-Anleitung 2026</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- CTA -->
+    <div class="bg-gradient-to-r from-blue-900/40 to-purple-900/40 border border-blue-500/20 rounded-2xl p-6 text-center">
+        <h3 class="text-xl font-bold mb-2">SEO-Analyse deiner Website</h3>
+        <p class="text-gray-400 text-sm mb-4">Finde alle SEO-Fehler auf deiner Website – kostenlos und in unter 60 Sekunden.</p>
+        <a href="/#analyse" class="inline-block bg-blue-600 hover:bg-blue-500 text-white font-semibold py-3 px-8 rounded-xl transition-colors">
+            Jetzt kostenlos analysieren
+        </a>
+    </div>
+
+</main>
+
+<footer class="border-t border-white/10 bg-slate-900/50 mt-16 py-8">
+    <div class="max-w-7xl mx-auto px-4 text-center text-gray-500 text-sm">
+        <p>&copy; 2026 Thümmler AI GmbH · <a href="/impressum.html" class="hover:text-gray-300 transition-colors">Impressum</a> · <a href="/datenschutz.html" class="hover:text-gray-300 transition-colors">Datenschutz</a></p>
+    </div>
+</footer>
+
+<script>
+    // Deutsche Stop-Wörter
+    const stopWordsDE = new Set([
+        'der', 'die', 'das', 'ein', 'eine', 'einen', 'einem', 'einer', 'eines',
+        'und', 'oder', 'aber', 'denn', 'weil', 'wenn', 'als', 'ob', 'dass',
+        'in', 'an', 'auf', 'bei', 'mit', 'nach', 'seit', 'von', 'vor', 'zu',
+        'aus', 'durch', 'für', 'gegen', 'ohne', 'um', 'bis', 'über', 'unter',
+        'hinter', 'neben', 'zwischen', 'innerhalb', 'außerhalb',
+        'ist', 'sind', 'war', 'waren', 'wird', 'werden', 'wurde', 'wurden',
+        'hat', 'haben', 'hatte', 'hatten', 'kann', 'können', 'konnte', 'konnten',
+        'muss', 'müssen', 'musste', 'mussten', 'soll', 'sollen', 'sollte',
+        'ich', 'du', 'er', 'sie', 'es', 'wir', 'ihr', 'man',
+        'mein', 'dein', 'sein', 'ihr', 'unser', 'euer',
+        'wie', 'was', 'wer', 'wo', 'wann', 'warum', 'welche', 'welcher',
+        'nicht', 'kein', 'keine', 'keiner', 'keines', 'keinem', 'keinen',
+        'auch', 'noch', 'schon', 'nur', 'eben', 'doch', 'ja', 'nein',
+        'so', 'dann', 'wann', 'nun', 'zwar', 'mehr', 'sehr',
+        'alle', 'alles', 'jeden', 'jede', 'jedes', 'jeder',
+        'dieser', 'diese', 'dieses', 'diesen', 'diesem',
+        'dem', 'den', 'des', 'vom',
+        'a', 'the', 'and', 'or', 'of', 'in', 'on', 'to', 'for', 'with'
+    ]);
+
+    function convertUmlauts(text, mode) {
+        const map = {
+            'ä': mode === 'long' ? 'ae' : (mode === 'short' ? 'a' : ''),
+            'ö': mode === 'long' ? 'oe' : (mode === 'short' ? 'o' : ''),
+            'ü': mode === 'long' ? 'ue' : (mode === 'short' ? 'u' : ''),
+            'Ä': mode === 'long' ? 'ae' : (mode === 'short' ? 'a' : ''),
+            'Ö': mode === 'long' ? 'oe' : (mode === 'short' ? 'o' : ''),
+            'Ü': mode === 'long' ? 'ue' : (mode === 'short' ? 'u' : ''),
+            'ß': mode === 'remove' ? '' : 'ss',
+            'é': 'e', 'è': 'e', 'ê': 'e', 'ë': 'e',
+            'à': 'a', 'á': 'a', 'â': 'a',
+            'î': 'i', 'ï': 'i', 'ì': 'i', 'í': 'i',
+            'ô': 'o', 'ò': 'o', 'ó': 'o',
+            'û': 'u', 'ù': 'u', 'ú': 'u',
+            'ñ': 'n', 'ç': 'c'
+        };
+        return text.replace(/[äöüÄÖÜßéèêëàáâîïìíôòóûùúñç]/g, m => map[m] !== undefined ? map[m] : m);
+    }
+
+    function createSlug(text, umlautMode, maxLen, removeStops) {
+        // 1. Umlaute konvertieren
+        let slug = convertUmlauts(text, umlautMode);
+        // 2. Kleinschreibung
+        slug = slug.toLowerCase();
+        // 3. Alles außer Buchstaben, Zahlen, Leerzeichen zu Bindestrich
+        slug = slug.replace(/[^a-z0-9\s-]/g, ' ');
+        // 4. Mehrfache Leerzeichen bereinigen
+        slug = slug.replace(/\s+/g, ' ').trim();
+        // 5. Stop-Wörter entfernen (optional)
+        if (removeStops === 'remove') {
+            const words = slug.split(' ');
+            const filtered = words.filter(w => !stopWordsDE.has(w) && w.length > 0);
+            slug = filtered.length > 0 ? filtered.join(' ') : words.join(' ');
+        }
+        // 6. Leerzeichen zu Bindestrich
+        slug = slug.replace(/\s+/g, '-');
+        // 7. Mehrfache Bindestriche
+        slug = slug.replace(/-+/g, '-');
+        // 8. Anfang/Ende bereinigen
+        slug = slug.replace(/^-+|-+$/g, '');
+        // 9. Länge begrenzen (am Wortende)
+        if (maxLen > 0 && slug.length > maxLen) {
+            slug = slug.substring(0, maxLen);
+            const lastDash = slug.lastIndexOf('-');
+            if (lastDash > maxLen * 0.6) {
+                slug = slug.substring(0, lastDash);
+            }
+        }
+        return slug;
+    }
+
+    function generateSlug() {
+        const input = document.getElementById('titleInput').value.trim();
+        if (!input) {
+            document.getElementById('titleInput').focus();
+            return;
+        }
+
+        const umlautMode = document.getElementById('umlautMode').value;
+        const maxLen = parseInt(document.getElementById('maxLength').value);
+        const stopWords = document.getElementById('stopWords').value;
+
+        const slug = createSlug(input, umlautMode, maxLen, stopWords);
+
+        // Anzeige
+        document.getElementById('slugOutput').textContent = slug;
+        document.getElementById('urlPreview').textContent = 'https://deineshop.de/blog/' + slug;
+
+        // Stats
+        const color = slug.length <= 60 ? 'text-green-400' : slug.length <= 80 ? 'text-yellow-400' : 'text-red-400';
+        document.getElementById('slugStats').innerHTML = `
+            <span class="${color}">${slug.length} Zeichen</span>
+            <span>·</span>
+            <span class="text-gray-500">${slug.split('-').length} Wörter</span>
+        `;
+
+        // Varianten
+        const variants = [];
+        if (umlautMode !== 'short') {
+            const short = createSlug(input, 'short', maxLen, stopWords);
+            if (short !== slug) variants.push({ label: 'Kurze Umlaute (ü→u)', slug: short });
+        }
+        if (stopWords !== 'keep') {
+            const withStops = createSlug(input, umlautMode, maxLen, 'keep');
+            if (withStops !== slug) variants.push({ label: 'Mit Stop-Wörtern', slug: withStops });
+        }
+        if (maxLen !== 0) {
+            const full = createSlug(input, umlautMode, 0, stopWords);
+            if (full !== slug) variants.push({ label: 'Volle Länge', slug: full });
+        }
+
+        const variantsEl = document.getElementById('variants');
+        if (variants.length > 0) {
+            variantsEl.innerHTML = variants.map(v => `
+                <div class="bg-slate-800/60 rounded-lg px-4 py-3 flex items-center justify-between gap-3">
+                    <div>
+                        <span class="text-xs text-gray-500 block mb-1">${v.label}</span>
+                        <code class="text-gray-300 text-sm slug-display">${v.slug}</code>
+                    </div>
+                    <button onclick="copyText('${v.slug}')" class="flex-shrink-0 text-gray-500 hover:text-blue-400 transition-colors text-xs">Kopieren</button>
+                </div>
+            `).join('');
+        } else {
+            variantsEl.innerHTML = '<p class="text-gray-500 text-sm">Keine weiteren Varianten verfügbar.</p>';
+        }
+
+        // Qualitätsbewertung
+        const checks = [];
+        const wordCount = slug.split('-').length;
+        checks.push({
+            ok: slug.length <= 60,
+            label: 'Länge optimal (≤ 60 Zeichen)',
+            detail: slug.length <= 60 ? `${slug.length} Zeichen – perfekt` : `${slug.length} Zeichen – kürzen empfohlen`
+        });
+        checks.push({
+            ok: wordCount >= 2 && wordCount <= 6,
+            label: 'Wortanzahl ideal (2–6 Wörter)',
+            detail: `${wordCount} Wörter${wordCount > 6 ? ' – zu lang, kürzen' : wordCount < 2 ? ' – zu kurz, mehr Keywords' : ' – gut'}`
+        });
+        checks.push({
+            ok: !slug.includes('_'),
+            label: 'Keine Unterstriche',
+            detail: slug.includes('_') ? 'Unterstriche gefunden – durch Bindestriche ersetzen' : 'Nur Bindestriche – korrekt'
+        });
+        checks.push({
+            ok: slug === slug.toLowerCase(),
+            label: 'Nur Kleinbuchstaben',
+            detail: slug === slug.toLowerCase() ? 'Alles klein geschrieben' : 'Großbuchstaben gefunden'
+        });
+        checks.push({
+            ok: !/\d{4}/.test(slug),
+            label: 'Kein Datum im Slug',
+            detail: /\d{4}/.test(slug) ? 'Jahreszahl gefunden – URL veraltet bei Updates' : 'Kein Datum – gut, Artikel bleibt aktuell'
+        });
+
+        document.getElementById('qualityChecks').innerHTML = checks.map(c => `
+            <div class="flex items-start gap-3 p-3 rounded-lg ${c.ok ? 'bg-green-900/20' : 'bg-yellow-900/20'}">
+                <span class="${c.ok ? 'text-green-400' : 'text-yellow-400'} text-lg flex-shrink-0">${c.ok ? '✓' : '⚠'}</span>
+                <div>
+                    <div class="${c.ok ? 'text-green-300' : 'text-yellow-300'} font-medium text-sm">${c.label}</div>
+                    <div class="text-gray-400 text-xs mt-0.5">${c.detail}</div>
+                </div>
+            </div>
+        `).join('');
+
+        document.getElementById('resultSection').classList.remove('hidden');
+        document.getElementById('qualitySection').classList.remove('hidden');
+        document.getElementById('resultSection').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+
+    function copySlug(elementId) {
+        const text = document.getElementById(elementId).textContent;
+        copyText(text);
+    }
+
+    function copyText(text) {
+        navigator.clipboard.writeText(text).then(() => {
+            const notice = document.getElementById('copyNotice');
+            notice.classList.remove('hidden');
+            setTimeout(() => notice.classList.add('hidden'), 2500);
+        });
+    }
+
+    function clearAll() {
+        document.getElementById('titleInput').value = '';
+        document.getElementById('resultSection').classList.add('hidden');
+        document.getElementById('qualitySection').classList.add('hidden');
+    }
+
+    function loadExample(text) {
+        document.getElementById('titleInput').value = text;
+        generateSlug();
+    }
+
+    // Enter-Taste
+    document.getElementById('titleInput').addEventListener('keydown', function(e) {
+        if (e.key === 'Enter' && e.ctrlKey) generateSlug();
+    });
+</script>
+
+</body>
+</html>
