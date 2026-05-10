@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TYPO3 SEO optimieren: Schritt-für-Schritt-Anleitung 2026 | Shift07 Blog</title>
+    <meta name="description" content="TYPO3 SEO optimieren: Extensions, TypoScript, sprechende URLs, Sitemaps und Schema Markup. Die vollständige Anleitung für bessere Google-Rankings mit TYPO3 CMS.">
+    <meta name="author" content="Thümmler AI GmbH">
+    <link rel="icon" type="image/png" href="/logo.png">
+    <link rel="canonical" href="https://shift07.ai/blog/typo3-seo-optimieren.html">
+    <link rel="alternate" type="application/rss+xml" title="Shift07 Blog" href="https://shift07.ai/feed.xml">
+    <!-- Open Graph -->
+    <meta property="og:title" content="TYPO3 SEO optimieren: Schritt-für-Schritt-Anleitung 2026 | Shift07 Blog">
+    <meta property="og:description" content="TYPO3 SEO optimieren: Extensions, TypoScript, sprechende URLs, Sitemaps und Schema Markup. Die vollständige Anleitung für bessere Google-Rankings mit TYPO3 CMS.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://shift07.ai/blog/typo3-seo-optimieren.html">
+    <meta property="og:image" content="https://shift07.ai/blog/images/typo3-seo-optimieren.png">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="Shift07">
+    <meta property="article:published_time" content="2026-05-10T10:00:00+02:00">
+    <meta property="article:section" content="CMS-SEO">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="TYPO3 SEO optimieren: Schritt-für-Schritt-Anleitung 2026">
+    <meta name="twitter:description" content="TYPO3 SEO optimieren: Extensions, TypoScript, sprechende URLs, Sitemaps und Schema Markup.">
+    <meta name="twitter:image" content="https://shift07.ai/blog/images/typo3-seo-optimieren.png">
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "TYPO3 SEO optimieren: Schritt-für-Schritt-Anleitung 2026",
+      "description": "TYPO3 SEO optimieren: Extensions, TypoScript, sprechende URLs, Sitemaps und Schema Markup. Die vollständige Anleitung für bessere Google-Rankings mit TYPO3 CMS.",
+      "image": "https://shift07.ai/blog/images/typo3-seo-optimieren.png",
+      "datePublished": "2026-05-10T10:00:00+02:00",
+      "dateModified": "2026-05-10T10:00:00+02:00",
+      "author": {
+        "@type": "Organization",
+        "name": "Shift07",
+        "url": "https://shift07.ai"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Shift07",
+        "url": "https://shift07.ai",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://shift07.ai/assets/logo.png"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://shift07.ai/blog/typo3-seo-optimieren.html"
+      }
+    }
+    </script>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K1S1RXBDS8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K1S1RXBDS8');
+    </script>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8475857002943858" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: rgba(15, 23, 42, 0.5); }
+        ::-webkit-scrollbar-thumb { background: rgba(59, 130, 246, 0.5); border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: rgba(59, 130, 246, 0.7); }
+        html { scroll-behavior: smooth; }
+        .article-content h2 { font-size: 1.5rem; font-weight: 700; color: #fff; margin-top: 2.5rem; margin-bottom: 1rem; }
+        .article-content h3 { font-size: 1.25rem; font-weight: 600; color: #e2e8f0; margin-top: 2rem; margin-bottom: 0.75rem; }
+        .article-content p { color: #cbd5e1; line-height: 1.8; margin-bottom: 1.25rem; }
+        .article-content ul, .article-content ol { color: #cbd5e1; margin-bottom: 1.25rem; padding-left: 1.5rem; }
+        .article-content li { margin-bottom: 0.5rem; line-height: 1.7; }
+        .article-content ul li { list-style-type: disc; }
+        .article-content ol li { list-style-type: decimal; }
+        .article-content a { color: #60a5fa; text-decoration: underline; text-underline-offset: 2px; }
+        .article-content a:hover { color: #93bbfc; }
+        .article-content blockquote { border-left: 4px solid #3b82f6; padding-left: 1.25rem; margin: 1.5rem 0; color: #94a3b8; font-style: italic; }
+        .article-content code { background: rgba(59, 130, 246, 0.15); color: #93c5fd; padding: 0.15rem 0.4rem; border-radius: 0.25rem; font-size: 0.9em; }
+        .article-content pre { background: rgba(15, 23, 42, 0.8); border: 1px solid rgba(255,255,255,0.1); border-radius: 0.75rem; padding: 1.25rem; overflow-x: auto; margin-bottom: 1.5rem; }
+        .article-content pre code { background: none; padding: 0; color: #e2e8f0; }
+        .article-content strong { color: #f1f5f9; }
+        .checklist-item { display: flex; align-items: flex-start; gap: 0.75rem; padding: 0.75rem 0; border-bottom: 1px solid rgba(255,255,255,0.05); }
+        .check-icon { width: 1.25rem; height: 1.25rem; color: #22c55e; flex-shrink: 0; margin-top: 0.15rem; }
+    </style>
+</head>
+<body class="bg-slate-900 text-white min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-slate-900/80 backdrop-blur-xl border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <a href="/" class="flex items-center gap-2">
+                    <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                    <span class="text-xl font-bold text-white">Shift07</span>
+                </a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="/" class="text-gray-300 hover:text-white transition-colors">SEO-Tool</a>
+                    <a href="/blog/" class="text-white font-medium border-b-2 border-blue-500 pb-0.5">Blog</a>
+                    <a href="/tools/" class="text-gray-300 hover:text-white transition-colors">Tools</a>
+                    <a href="/app/#/login" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-5 py-2 rounded-lg font-medium transition-all">Anmelden</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-gray-300 hover:text-white">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900/95 border-b border-white/10">
+            <div class="px-4 py-3 space-y-2">
+                <a href="/" class="block py-2 text-gray-300 hover:text-white">SEO-Tool</a>
+                <a href="/blog/" class="block py-2 text-white font-medium">Blog</a>
+                <a href="/tools/" class="block py-2 text-gray-300 hover:text-white">Tools</a>
+                <a href="/app/#/login" class="block py-2 text-blue-400 hover:text-blue-300">Anmelden</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Image -->
+    <section class="pt-16 relative">
+        <div class="h-[400px] relative overflow-hidden">
+            <img src="/blog/images/typo3-seo-optimieren.png" alt="TYPO3 SEO optimieren Anleitung 2026" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/50 to-transparent"></div>
+            <div class="absolute inset-0 flex items-center justify-center">
+                <div class="text-center px-4 max-w-4xl">
+                    <span class="inline-block text-sm font-semibold px-4 py-1.5 bg-white/10 text-white/90 rounded-full mb-6">CMS-SEO</span>
+                    <h1 class="text-3xl md:text-5xl font-extrabold text-white leading-tight">TYPO3 SEO optimieren: Schritt-für-Schritt-Anleitung 2026</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Article Content -->
+    <section class="py-12 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col lg:flex-row gap-12">
+
+                <!-- Main Content -->
+                <article class="lg:w-2/3">
+                    <!-- Meta -->
+                    <div class="flex flex-wrap items-center gap-4 text-sm text-gray-400 mb-10 pb-6 border-b border-white/10">
+                        <div class="flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+                            Shift07 Team
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                            10. Mai 2026
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                            12 Min. Lesezeit
+                        </div>
+                        <span class="text-xs font-semibold px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full">CMS-SEO</span>
+                    </div>
+
+                    <!-- Article Body -->
+                    <div class="article-content">
+
+                        <p>TYPO3 ist das bevorzugte Enterprise-CMS für Behörden, Universitäten und mittelständische Unternehmen im deutschsprachigen Raum. Doch trotz seiner technischen Stärke werden bei TYPO3-Websites häufig grundlegende SEO-Fehler gemacht: fehlende sprechende URLs, doppelte Seitentitel oder unvollständige Meta-Tags. Diese Anleitung zeigt dir, wie du TYPO3 SEO optimierst und systematisch für bessere Google-Rankings aufstellst.</p>
+
+                        <h2>Warum TYPO3 besondere SEO-Maßnahmen braucht</h2>
+                        <p>TYPO3 ist ein mächtiges CMS, das jedoch ohne gezieltes Setup SEO-Probleme erzeugt. Die häufigsten Ursachen sind:</p>
+                        <ul>
+                            <li><strong>Unstrukturierte URLs</strong>: Ohne Konfiguration generiert TYPO3 kryptische Parameter-URLs wie <code>?id=42</code></li>
+                            <li><strong>Fehlende oder doppelte Meta-Tags</strong>: Standardmäßig werden Seitenname und Sitename für den Title kombiniert — selten optimal</li>
+                            <li><strong>Kein automatisches Canonical-Tag</strong>: Bei mehrsprachigen Seiten und Varianten entstehen schnell Duplicate-Content-Probleme</li>
+                            <li><strong>Fehlende XML-Sitemap</strong>: Eine korrekte Sitemap muss explizit konfiguriert oder per Extension ergänzt werden</li>
+                        </ul>
+                        <p>Die gute Nachricht: Alle diese Punkte lassen sich mit den richtigen Erweiterungen und TypoScript-Konfigurationen beheben.</p>
+
+                        <h2>Die wichtigsten TYPO3-SEO-Extensions im Überblick</h2>
+
+                        <h3>1. EXT:seo — das offizielle SEO-Paket (ab TYPO3 9.5)</h3>
+                        <p>Seit TYPO3 9.5 ist das offizielle SEO-System-Extension <strong>EXT:seo</strong> im Core enthalten. Es liefert die wichtigsten Grundfunktionen:</p>
+                        <ul>
+                            <li>Individuelle Meta-Titles und Meta-Descriptions pro Seite im Backend</li>
+                            <li>Canonical-Tags automatisch oder manuell setzen</li>
+                            <li>Robots-Einstellungen pro Seite (noindex, nofollow)</li>
+                            <li>Open Graph und Twitter Card Felder</li>
+                            <li>XML-Sitemap-Generierung über einen Sitemap-Provider</li>
+                        </ul>
+                        <p>Das Extension muss aktiviert sein und die entsprechenden TypoScript-Snippets müssen eingebunden werden. In modernen TYPO3-Projekten (ab Version 12) ist EXT:seo standardmäßig aktiv.</p>
+
+                        <h3>2. Yoast SEO für TYPO3</h3>
+                        <p>Die Extension <strong>yoast_seo</strong> bringt das bekannte Yoast-Interface aus WordPress zu TYPO3. Redakteure erhalten eine Echtzeit-Analyse ihrer Inhalte mit Ampelfarben für:</p>
+                        <ul>
+                            <li>Keyword-Verwendung im Text, Titel und URL</li>
+                            <li>Lesbarkeits-Score (Flesch-Kincaid)</li>
+                            <li>Vorschau des Google-Snippets</li>
+                        </ul>
+                        <p>Die Extension eignet sich besonders für Redaktionsteams, die regelmäßig Inhalte pflegen und SEO-Feedback direkt beim Schreiben benötigen.</p>
+
+                        <h3>3. EXT:redirects — 301-Weiterleitungen verwalten</h3>
+                        <p>Wenn URLs geändert werden — etwa nach einem Relaunch — müssen 301-Weiterleitungen gesetzt werden. Die Core-Extension <strong>EXT:redirects</strong> ermöglicht die zentrale Verwaltung von Weiterleitungen direkt im TYPO3-Backend. Kombiniere sie mit dem automatischen Redirect-Vorschlag bei URL-Änderungen (ab TYPO3 10 verfügbar).</p>
+
+                        <h2>Sprechende URLs mit Site Routing konfigurieren</h2>
+                        <p>Seit TYPO3 9 wird das URL-Routing über die <strong>Site Configuration</strong> gesteuert. Die Konfiguration erfolgt in der Datei <code>config/sites/[site-identifier]/config.yaml</code>. Ein korrektes Routing erzeugt sprechende URLs wie <code>/leistungen/webentwicklung/</code> statt <code>?id=42</code>.</p>
+
+                        <p>Wichtige Einstellungen in der Site Configuration:</p>
+                        <pre><code>base: 'https://example.de/'
+languages:
+  - title: Deutsch
+    enabled: true
+    languageId: 0
+    base: '/'
+    locale: de_DE
+    navigationTitle: Deutsch
+    hreflang: de-DE
+    direction: ltr
+    flag: de
+    typo3Language: de</code></pre>
+
+                        <p>Für Erweiterungen wie News oder Blog-Einträge können eigene Routing-Enhancer definiert werden, die saubere, keyword-reiche URLs erzeugen:</p>
+                        <pre><code>routeEnhancers:
+  NewsPlugin:
+    type: Extbase
+    extension: News
+    plugin: Pi1
+    routes:
+      - routePath: '/{news-title}'
+        _controller: 'News::detail'
+        _arguments:
+          news-title: news
+    defaultController: 'News::list'
+    aspects:
+      news-title:
+        type: PersistedAliasMapper
+        tableName: tx_news_domain_model_news
+        routeFieldName: path_segment</code></pre>
+
+                        <h2>Meta-Tags und Seitentitel in TYPO3 richtig konfigurieren</h2>
+                        <p>Der Standard-Title-Tag in TYPO3 kombiniert Seitenname und Sitename. Für SEO-Optimierung solltest du folgende TypoScript-Konfiguration in deinem Setup ergänzen:</p>
+
+                        <pre><code>config {
+    pageTitleSeparator = |
+    pageTitleSeparator.noTrimWrap = | - | |
+}
+
+page.meta {
+    description.field = description
+    description.ifEmpty.data = page:subtitle
+    robots = index,follow
+    viewport = width=device-width, initial-scale=1.0
+}</code></pre>
+
+                        <p>Für jede Seite lassen sich im Backend unter <em>Seite bearbeiten &rarr; SEO</em> individuelle Angaben machen:</p>
+                        <ul>
+                            <li><strong>Seitentitel für SEO</strong>: Überschreibt den normalen Seitentitel für den Title-Tag</li>
+                            <li><strong>Meta-Description</strong>: Bis 160 Zeichen, keyword-reich formulieren</li>
+                            <li><strong>Robots</strong>: noindex/nofollow für interne Seiten, Login-Bereiche etc.</li>
+                            <li><strong>Canonical URL</strong>: Manuell setzen wenn nötig (z.&nbsp;B. bei Mehrfachzugriffen)</li>
+                        </ul>
+
+                        <h2>XML-Sitemap mit EXT:seo konfigurieren</h2>
+                        <p>EXT:seo liefert ab TYPO3 9 einen integrierten Sitemap-Provider. Die Sitemap wird automatisch unter <code>/sitemap.xml</code> bereitgestellt, wenn folgende TypoScript-Konfiguration aktiv ist:</p>
+
+                        <pre><code>plugin.tx_seo.config {
+    xmlSitemap {
+        sitemaps {
+            pages {
+                provider = TYPO3\CMS\Seo\XmlSitemap\PagesXmlSitemapDataProvider
+                config {
+                    rootPage = 1
+                    excludedDoktypes = 254, 255, 199
+                    additionalWhere = AND no_index = 0
+                    changeFreq = weekly
+                    priority = 0.5
+                }
+            }
+        }
+    }
+}</code></pre>
+
+                        <p>Nachdem die Sitemap generiert wurde, solltest du sie in der <a href="https://shift07.ai/blog/google-search-console-anleitung.html">Google Search Console</a> einreichen. Das beschleunigt die Indexierung neuer Seiten erheblich. Nutze dafür auch unseren <a href="https://shift07.ai/tools/sitemap-validator.html">kostenlosen Sitemap-Validator</a>, um die Sitemap vor dem Einreichen auf Fehler zu prüfen.</p>
+
+                        <h2>Canonical-Tags und Duplicate Content vermeiden</h2>
+                        <p>TYPO3-Websites haben häufig Duplicate-Content-Probleme, besonders bei:</p>
+                        <ul>
+                            <li>Mehrsprachigen Installationen ohne korrekte <code>hreflang</code>-Tags</li>
+                            <li>Paginierten Listenansichten (News, Produkte)</li>
+                            <li>Parametern wie <code>?tx_news_pi1[action]=detail</code> in der URL</li>
+                        </ul>
+                        <p>EXT:seo setzt automatisch einen Canonical-Tag, der auf die aktuelle Seiten-URL verweist. Bei paginierten Seiten solltest du zusätzlich im TypoScript <code>config.disablePaginationNextPrevLinks</code> korrekt konfigurieren oder <code>rel="next"</code> / <code>rel="prev"</code> manuell implementieren.</p>
+
+                        <p>Für mehrsprachige Seiten müssen Hreflang-Tags korrekt gesetzt sein. TYPO3 generiert diese automatisch, wenn die Site-Konfiguration alle Sprachvarianten mit korrekten <code>hreflang</code>-Werten enthält. Mit unserem <a href="https://shift07.ai/tools/hreflang-tag-validator.html">Hreflang-Validator</a> kannst du die korrekte Implementierung überprüfen.</p>
+
+                        <h2>Bildoptimierung und Alt-Texte in TYPO3</h2>
+                        <p>TYPO3 bietet hervorragende Möglichkeiten zur Bildoptimierung. Ab Version 11 wird WebP-Konvertierung nativ unterstützt. Die Konfiguration erfolgt im Install Tool oder per TypoScript:</p>
+
+                        <pre><code>TYPO3_CONF_VARS['GFX']['processor_effects'] = true;
+
+# TypoScript für automatische WebP-Generierung
+tt_content.image.20.1.file {
+    width = 800m
+    quality = 80
+}
+lib.contentElement.variables.responsiveimages = 1</code></pre>
+
+                        <p>Alt-Texte für Bilder sollten in der Datei-Verwaltung (FAL — File Abstraction Layer) direkt am Medienobjekt gepflegt werden. So stehen sie bei jeder Verwendung des Bildes automatisch zur Verfügung. Achte darauf, dass jedes inhaltstragende Bild einen beschreibenden Alt-Text mit dem relevanten Keyword erhält.</p>
+
+                        <h2>Schema Markup und Structured Data in TYPO3</h2>
+                        <p>Für <a href="https://shift07.ai/blog/strukturierte-daten-seo-schema-markup.html">strukturierte Daten</a> in TYPO3 gibt es zwei Wege:</p>
+
+                        <h3>Option 1: Manuelle JSON-LD per TypoScript</h3>
+                        <p>JSON-LD kann direkt per TypoScript in den <code>&lt;head&gt;</code>-Bereich eingefügt werden:</p>
+                        <pre><code>page.headerData.100 = TEXT
+page.headerData.100.value (
+  &lt;script type="application/ld+json"&gt;
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Mein Unternehmen",
+    "url": "https://example.de",
+    "logo": "https://example.de/logo.png"
+  }
+  &lt;/script&gt;
+)</code></pre>
+
+                        <h3>Option 2: EXT:schema (empfohlen)</h3>
+                        <p>Die Community-Extension <strong>EXT:schema</strong> von Brotkrueml bietet eine saubere PHP-API und Fluid ViewHelper für Schema.org-Markup. Sie ermöglicht typsichere Implementierung direkt im Code oder in Templates. Für LocalBusiness, Organization oder Article-Markup ist dies die empfohlene Lösung in professionellen TYPO3-Projekten.</p>
+
+                        <h2>Performance-Optimierung für bessere Core Web Vitals</h2>
+                        <p>Die <a href="https://shift07.ai/blog/core-web-vitals-verbessern-lcp-cls-inp.html">Core Web Vitals</a> — LCP, CLS und INP — sind direkte Ranking-Faktoren. TYPO3 bietet mehrere Optimierungsmöglichkeiten:</p>
+                        <ul>
+                            <li><strong>Caching</strong>: TYPO3 hat ein mehrstufiges Caching-System. Stelle sicher, dass alle Caches aktiv sind (Page Cache, Content Cache, Bootstrap Cache)</li>
+                            <li><strong>Asset-Komprimierung</strong>: CSS und JavaScript sollten per TypoScript komprimiert und zusammengefasst werden: <code>config.compressCss = 1</code> und <code>config.compressJs = 1</code></li>
+                            <li><strong>Lazy Loading</strong>: Ab TYPO3 11 unterstützt das native Image-Rendering automatisch <code>loading="lazy"</code></li>
+                            <li><strong>CDN-Integration</strong>: Statische Assets (Bilder, CSS, JS) über ein CDN ausliefern reduziert die Ladezeit erheblich</li>
+                        </ul>
+
+                        <h2>TYPO3 SEO-Checkliste auf einen Blick</h2>
+                        <div class="bg-slate-800/50 border border-white/10 rounded-xl p-6 my-6">
+                            <div class="checklist-item">
+                                <svg class="check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                                <span class="text-gray-300">EXT:seo aktiviert und TypoScript-Setup eingebunden</span>
+                            </div>
+                            <div class="checklist-item">
+                                <svg class="check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                                <span class="text-gray-300">Sprechende URLs per Site Routing konfiguriert</span>
+                            </div>
+                            <div class="checklist-item">
+                                <svg class="check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                                <span class="text-gray-300">Individuelle Meta-Titles und Descriptions pro Seite gepflegt</span>
+                            </div>
+                            <div class="checklist-item">
+                                <svg class="check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                                <span class="text-gray-300">XML-Sitemap generiert und in Google Search Console eingereicht</span>
+                            </div>
+                            <div class="checklist-item">
+                                <svg class="check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                                <span class="text-gray-300">Canonical-Tags für alle Seiten korrekt gesetzt</span>
+                            </div>
+                            <div class="checklist-item">
+                                <svg class="check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                                <span class="text-gray-300">Hreflang-Tags bei mehrsprachigen Installationen konfiguriert</span>
+                            </div>
+                            <div class="checklist-item">
+                                <svg class="check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                                <span class="text-gray-300">Bilder komprimiert, WebP aktiviert, Alt-Texte gepflegt</span>
+                            </div>
+                            <div class="checklist-item">
+                                <svg class="check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                                <span class="text-gray-300">CSS und JavaScript komprimiert und zusammengefasst</span>
+                            </div>
+                            <div class="checklist-item">
+                                <svg class="check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                                <span class="text-gray-300">Schema Markup für relevante Seitentypen implementiert</span>
+                            </div>
+                            <div class="checklist-item" style="border-bottom: none;">
+                                <svg class="check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                                <span class="text-gray-300">robots.txt korrekt konfiguriert — Backend und Dev-Systeme blockiert</span>
+                            </div>
+                        </div>
+
+                        <h2>TYPO3 SEO vs. WordPress, Shopify und Wix</h2>
+                        <p>Im Vergleich zu anderen CMS bietet TYPO3 mehr Kontrolle, erfordert aber auch mehr technisches Know-how. Während <a href="https://shift07.ai/blog/wordpress-seo-optimieren.html">WordPress SEO</a> über intuitive Plugins wie Yoast in wenigen Minuten konfigurierbar ist, braucht TYPO3 eine technisch versierte Person, die TypoScript versteht und Extensions richtig konfiguriert. Das zahlt sich für große, komplexe Websites aus — nicht für kleine Business-Sites.</p>
+                        <p><a href="https://shift07.ai/blog/shopify-seo-optimieren.html">Shopify</a> und <a href="https://shift07.ai/blog/wix-seo-optimieren.html">Wix</a> hingegen bieten SEO-Funktionen ohne technische Vorkenntnisse — dafür mit weniger Flexibilität für komplexe Anforderungen.</p>
+
+                        <h2>Fazit: TYPO3 SEO ist machbar — mit dem richtigen Setup</h2>
+                        <p>TYPO3 bietet eine solide SEO-Grundlage, die jedoch aktiv konfiguriert werden muss. Mit EXT:seo, korrekt eingerichtetem Site Routing, gepflegten Meta-Tags und einer validen XML-Sitemap bist du bereits besser aufgestellt als viele TYPO3-Websites im Netz. Die technische Stärke von TYPO3 wird im SEO erst dann zum Vorteil, wenn sie bewusst eingesetzt wird.</p>
+                        <p>Prüfe regelmäßig mit der <a href="https://shift07.ai/">kostenlosen SEO-Analyse von Shift07</a>, ob deine TYPO3-Website technische Fehler aufweist — und behebe sie systematisch.</p>
+
+                    </div>
+
+                    <!-- Share / Back -->
+                    <div class="mt-12 pt-8 border-t border-white/10 flex items-center justify-between">
+                        <a href="/blog/" class="text-blue-400 hover:text-blue-300 flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+                            Zurück zum Blog
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Sidebar -->
+                <aside class="lg:w-1/3 space-y-8">
+                    <!-- CTA Box -->
+                    <div class="bg-gradient-to-br from-blue-600/20 to-indigo-600/20 border border-blue-500/30 rounded-2xl p-6 text-center">
+                        <h3 class="text-lg font-bold text-white mb-3">Kostenlose SEO-Analyse</h3>
+                        <p class="text-gray-400 text-sm mb-5">Finde heraus, wie gut deine TYPO3-Website für Suchmaschinen optimiert ist.</p>
+                        <a href="/" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-6 py-3 rounded-lg font-medium transition-all inline-block w-full">Jetzt testen</a>
+                    </div>
+
+                    <!-- Related Articles -->
+                    <div class="bg-slate-800/50 border border-white/10 rounded-2xl p-6">
+                        <h3 class="text-lg font-bold text-white mb-4">CMS-SEO-Artikel</h3>
+                        <div class="space-y-4">
+                            <a href="/blog/wordpress-seo-optimieren.html" class="block group">
+                                <p class="text-sm text-gray-300 group-hover:text-blue-400 transition-colors font-medium">WordPress SEO optimieren: Schritt-für-Schritt-Anleitung 2026</p>
+                                <p class="text-xs text-gray-500 mt-1">CMS-SEO</p>
+                            </a>
+                            <a href="/blog/shopify-seo-optimieren.html" class="block group">
+                                <p class="text-sm text-gray-300 group-hover:text-blue-400 transition-colors font-medium">Shopify SEO optimieren: Schritt-für-Schritt-Anleitung 2026</p>
+                                <p class="text-xs text-gray-500 mt-1">CMS-SEO</p>
+                            </a>
+                            <a href="/blog/wix-seo-optimieren.html" class="block group">
+                                <p class="text-sm text-gray-300 group-hover:text-blue-400 transition-colors font-medium">Wix SEO optimieren: Schritt-für-Schritt-Anleitung 2026</p>
+                                <p class="text-xs text-gray-500 mt-1">CMS-SEO</p>
+                            </a>
+                            <a href="/blog/sitemap-xml-erstellen-einreichen.html" class="block group">
+                                <p class="text-sm text-gray-300 group-hover:text-blue-400 transition-colors font-medium">Sitemap.xml erstellen und einreichen: Schritt-für-Schritt</p>
+                                <p class="text-xs text-gray-500 mt-1">Tech-SEO</p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Tools -->
+                    <div class="bg-slate-800/50 border border-white/10 rounded-2xl p-6">
+                        <h3 class="text-lg font-bold text-white mb-4">Passende Tools</h3>
+                        <div class="space-y-3">
+                            <a href="/tools/sitemap-validator.html" class="flex items-center gap-3 group">
+                                <div class="w-8 h-8 bg-blue-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-4 h-4 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                                </div>
+                                <span class="text-sm text-gray-300 group-hover:text-blue-400 transition-colors">Sitemap-Validator</span>
+                            </a>
+                            <a href="/tools/hreflang-tag-validator.html" class="flex items-center gap-3 group">
+                                <div class="w-8 h-8 bg-blue-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-4 h-4 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                                </div>
+                                <span class="text-sm text-gray-300 group-hover:text-blue-400 transition-colors">Hreflang-Tag-Validator</span>
+                            </a>
+                            <a href="/tools/canonical-tag-checker.html" class="flex items-center gap-3 group">
+                                <div class="w-8 h-8 bg-blue-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-4 h-4 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                                </div>
+                                <span class="text-sm text-gray-300 group-hover:text-blue-400 transition-colors">Canonical-Tag-Checker</span>
+                            </a>
+                        </div>
+                    </div>
+                </aside>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer CTA -->
+    <section class="py-16 px-4 bg-gradient-to-r from-blue-900/30 to-indigo-900/30 border-t border-b border-white/5">
+        <div class="max-w-3xl mx-auto text-center">
+            <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">Teste deine TYPO3-Website jetzt kostenlos</h2>
+            <p class="text-gray-400 mb-8">Erhalte eine vollständige SEO-Analyse mit konkreten Verbesserungsvorschlägen.</p>
+            <a href="/" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-8 py-3 rounded-lg font-medium transition-all inline-block">Analyse starten</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/10 bg-slate-900/50 py-12 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="flex items-center gap-2">
+                    <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                    <span class="text-lg font-bold text-white">Shift07</span>
+                </div>
+                <div class="flex items-center space-x-6 text-sm text-gray-400">
+                    <a href="/impressum.html" class="hover:text-white transition-colors">Impressum</a>
+                    <a href="/datenschutz.html" class="hover:text-white transition-colors">Datenschutz</a>
+                    <a href="/agb.html" class="hover:text-white transition-colors">AGB</a>
+                </div>
+                <p class="text-sm text-gray-500">&copy; 2026 Thümmler AI GmbH</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
