@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Sun, 10 May 2026 04:24:22 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 10 May 2026 04:27:19 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Squarespace SEO optimieren: Schritt-für-Schritt-Anleitung 2026</title>
+      <link>https://shift07.ai/blog/squarespace-seo-optimieren.html</link>
+      <guid>https://shift07.ai/blog/squarespace-seo-optimieren.html</guid>
+      <pubDate>Sun, 10 May 2026 04:26:59 +0000</pubDate>
+      <description>Squarespace SEO optimieren: Seitentitel, Meta-Descriptions, URL-Slugs, Alt-Texte, Schema Markup und Analytics. Die vollständige Anleitung mit Checkliste.</description>
+      <category>CMS-SEO</category>
+    </item>
     <item>
       <title>TYPO3 SEO optimieren: Schritt-für-Schritt-Anleitung 2026</title>
       <link>https://shift07.ai/blog/typo3-seo-optimieren.html</link>
@@ -157,14 +165,6 @@
       <guid>https://shift07.ai/blog/medicalstudy-schema-markup-praxisleitfaden.html</guid>
       <pubDate>Wed, 06 May 2026 02:47:17 +0000</pubDate>
       <description>MedicalStudy Schema Markup Praxisleitfaden: Wie klinische Forschungseinrichtungen, Universitäten und Pharmaunternehmen ihre Studien mit JSON-LD für Google und wissenschaftliche Suchmaschinen optimieren.</description>
-      <category>Schema Markup</category>
-    </item>
-    <item>
-      <title>SpecialAnnouncement Schema Markup: Sonderankündigungen als Rich Results in Google</title>
-      <link>https://shift07.ai/blog/specialannouncement-schema-markup-seo.html</link>
-      <guid>https://shift07.ai/blog/specialannouncement-schema-markup-seo.html</guid>
-      <pubDate>Wed, 06 May 2026 02:38:06 +0000</pubDate>
-      <description>SpecialAnnouncement Schema Markup erklärt: Wie du Notfall-Ankündigungen, geänderte Öffnungszeiten und behördliche Meldungen als JSON-LD strukturierst und als Rich Results in Google darstellst.</description>
       <category>Schema Markup</category>
     </item>
   </channel>
