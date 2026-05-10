@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Sun, 10 May 2026 01:04:33 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 10 May 2026 02:40:02 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Shopify SEO optimieren: Schritt-für-Schritt-Anleitung 2026</title>
+      <link>https://shift07.ai/blog/shopify-seo-optimieren.html</link>
+      <guid>https://shift07.ai/blog/shopify-seo-optimieren.html</guid>
+      <pubDate>Sun, 10 May 2026 02:39:32 +0000</pubDate>
+      <description>Shopify SEO optimieren: So verbesserst du dein Ranking 2026. Meta-Tags, URL-Struktur, Schema Markup, Ladezeit, Backlinks – die komplette Shopify-SEO-Anleitung.</description>
+      <category>CMS-SEO</category>
+    </item>
     <item>
       <title>WordPress SEO optimieren: Schritt-für-Schritt-Anleitung 2026</title>
       <link>https://shift07.ai/blog/wordpress-seo-optimieren.html</link>
@@ -157,14 +165,6 @@
       <guid>https://shift07.ai/blog/occupation-schema-markup-vertieft.html</guid>
       <pubDate>Wed, 06 May 2026 00:58:25 +0000</pubDate>
       <description>Occupation Schema Markup vertieft: OccupationAggregateRating, Gehaltsdaten, Qualifikationen und Erfahrungsanforderungen richtig implementieren — mit vollständigen JSON-LD-Beispielen für 2026.</description>
-      <category>Schema Markup</category>
-    </item>
-    <item>
-      <title>MedicalEntity Untertypen vertieft: Drug, MedicalCondition, MedicalProcedure und alle Sub-Typen für Google</title>
-      <link>https://shift07.ai/blog/medicalentity-untertypen-schema-markup-vertieft.html</link>
-      <guid>https://shift07.ai/blog/medicalentity-untertypen-schema-markup-vertieft.html</guid>
-      <pubDate>Tue, 05 May 2026 08:09:51 +0000</pubDate>
-      <description>MedicalEntity Schema Markup vertieft: Alle Untertypen von Drug über MedicalCondition bis MedicalDevice richtig in JSON-LD implementieren. Mit Codebeispielen und Validierungs-Checkliste.</description>
       <category>Schema Markup</category>
     </item>
   </channel>
