@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Sun, 10 May 2026 02:46:43 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 10 May 2026 04:21:15 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>TYPO3 SEO optimieren: Schritt-für-Schritt-Anleitung 2026</title>
+      <link>https://shift07.ai/blog/typo3-seo-optimieren.html</link>
+      <guid>https://shift07.ai/blog/typo3-seo-optimieren.html</guid>
+      <pubDate>Sun, 10 May 2026 04:20:43 +0000</pubDate>
+      <description>TYPO3 SEO optimieren: Extensions, TypoScript, sprechende URLs, Sitemaps und Schema Markup. Die vollständige Anleitung für bessere Google-Rankings mit TYPO3 CMS.</description>
+      <category>CMS-SEO</category>
+    </item>
     <item>
       <title>Wix SEO optimieren: Schritt-für-Schritt-Anleitung 2026</title>
       <link>https://shift07.ai/blog/wix-seo-optimieren.html</link>
@@ -157,14 +165,6 @@
       <guid>https://shift07.ai/blog/specialannouncement-schema-markup-seo.html</guid>
       <pubDate>Wed, 06 May 2026 02:38:06 +0000</pubDate>
       <description>SpecialAnnouncement Schema Markup erklärt: Wie du Notfall-Ankündigungen, geänderte Öffnungszeiten und behördliche Meldungen als JSON-LD strukturierst und als Rich Results in Google darstellst.</description>
-      <category>Schema Markup</category>
-    </item>
-    <item>
-      <title>SpecialAnnouncement Schema Markup vertieft: COVID-Properties, Behörden und Multi-Location</title>
-      <link>https://shift07.ai/blog/specialannouncement-schema-markup-vertieft.html</link>
-      <guid>https://shift07.ai/blog/specialannouncement-schema-markup-vertieft.html</guid>
-      <pubDate>Wed, 06 May 2026 02:37:37 +0000</pubDate>
-      <description>SpecialAnnouncement Schema Markup vertieft: COVID-spezifische Properties, Behörden-Use-Cases, Multi-Location-Ankündigungen und FAQ-Integration — mit vollständigen JSON-LD-Beispielen 2026.</description>
       <category>Schema Markup</category>
     </item>
   </channel>
