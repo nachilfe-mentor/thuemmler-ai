@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K1S1RXBDS8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K1S1RXBDS8');
+    </script>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8475857002943858" crossorigin="anonymous"></script>
+    <title>Twitter Card Validator – X Cards kostenlos prüfen | Shift07</title>
+    <meta name="description" content="Prüfe kostenlos, ob deine Twitter Cards (X Cards) korrekt gesetzt sind. HTML einfügen und sofort sehen, welche twitter:-Tags fehlen – inklusive Live-Vorschau der X-Card.">
+    <meta name="keywords" content="Twitter Card Validator, X Card prüfen, twitter:card checker, twitter card tags, summary_large_image, X Card Vorschau kostenlos">
+    <meta name="author" content="Thümmler AI GmbH">
+    <link rel="icon" type="image/png" href="../logo.png">
+    <link rel="canonical" href="https://shift07.ai/tools/twitter-card-validator.html">
+    <link rel="alternate" type="application/rss+xml" title="Shift07 Blog" href="https://shift07.ai/feed.xml">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Twitter Card Validator – X Cards kostenlos prüfen">
+    <meta property="og:description" content="Prüfe kostenlos, ob deine Twitter Cards korrekt gesetzt sind. Sofortige Analyse mit Score, Live-Vorschau und Empfehlungen.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://shift07.ai/tools/twitter-card-validator.html">
+    <meta property="og:image" content="https://shift07.ai/tools/images/twitter-card-validator.png">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="Shift07">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Twitter Card Validator – X Cards kostenlos prüfen">
+    <meta name="twitter:description" content="Prüfe kostenlos, ob deine Twitter Cards korrekt gesetzt sind – mit Live-Vorschau der X-Card.">
+    <meta name="twitter:image" content="https://shift07.ai/tools/images/twitter-card-validator.png">
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Twitter Card Validator",
+      "description": "Kostenloser Validator für Twitter Cards (X Cards) - prüft Vollständigkeit und Qualität aller twitter:-Meta-Tags inklusive Live-Vorschau.",
+      "url": "https://shift07.ai/tools/twitter-card-validator.html",
+      "applicationCategory": "SEOApplication",
+      "operatingSystem": "All",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Shift07",
+        "url": "https://shift07.ai"
+      }
+    }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { 'inter': ['Inter', 'system-ui', '-apple-system', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: rgba(15, 23, 42, 0.5); }
+        ::-webkit-scrollbar-thumb { background: rgba(59, 130, 246, 0.5); border-radius: 4px; }
+        html { scroll-behavior: smooth; }
+        .tag-ok { border-left: 3px solid #22c55e; }
+        .tag-warn { border-left: 3px solid #eab308; }
+        .tag-miss { border-left: 3px solid #ef4444; }
+        .score-ring { transition: stroke-dashoffset 0.8s ease; }
+    </style>
+</head>
+<body class="bg-slate-900 text-white min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-slate-900/80 backdrop-blur-xl border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <a href="/" class="flex items-center gap-2">
+                    <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                    <span class="text-xl font-bold text-white">Shift07</span>
+                </a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="/" class="text-gray-300 hover:text-white transition-colors">SEO-Tool</a>
+                    <a href="/blog/" class="text-gray-300 hover:text-white transition-colors">Blog</a>
+                    <a href="/tools/" class="text-white font-medium border-b-2 border-blue-500 pb-0.5">Tools</a>
+                    <a href="/ueber-uns.html" class="text-white hover:text-blue-300 transition-colors">Über uns</a>
+                    <a href="/app/#/login" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-5 py-2 rounded-lg font-medium transition-all">Anmelden</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-gray-300 hover:text-white">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900/95 border-b border-white/10">
+            <div class="px-4 py-3 space-y-2">
+                <a href="/" class="block py-2 text-gray-300 hover:text-white">SEO-Tool</a>
+                <a href="/blog/" class="block py-2 text-gray-300 hover:text-white">Blog</a>
+                <a href="/tools/" class="block py-2 text-white font-medium">Tools</a>
+                <a href="/ueber-uns.html" class="block py-2 text-white hover:text-blue-300">Über uns</a>
+                <a href="/app/#/login" class="block py-2 text-blue-400 hover:text-blue-300">Anmelden</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="pt-24 pb-12 px-4">
+        <div class="max-w-4xl mx-auto text-center">
+            <span class="inline-block text-sm font-semibold px-4 py-1.5 bg-blue-500/10 text-blue-400 rounded-full mb-5 border border-blue-500/20">Social Media SEO</span>
+            <h1 class="text-3xl md:text-5xl font-extrabold mb-5 bg-gradient-to-r from-white via-blue-100 to-indigo-200 bg-clip-text text-transparent">Twitter Card Validator</h1>
+            <p class="text-lg text-gray-400 max-w-2xl mx-auto">Füge den HTML-Quellcode deiner Seite ein und prüfe sofort, ob deine Twitter Cards (X Cards) vollständig und korrekt sind – inklusive Live-Vorschau, wie dein Link auf X dargestellt wird.</p>
+        </div>
+    </section>
+
+    <!-- Tool -->
+    <section class="pb-16 px-4">
+        <div class="max-w-4xl mx-auto space-y-6">
+
+            <!-- Input -->
+            <div class="bg-slate-800/50 border border-white/10 rounded-2xl p-6">
+                <label class="block text-sm font-semibold text-gray-300 mb-3">HTML-Quellcode einfügen <span class="text-gray-500 font-normal">(mind. den &lt;head&gt;-Bereich)</span></label>
+                <textarea id="htmlInput" rows="10" placeholder="&lt;!DOCTYPE html&gt;&#10;&lt;html&gt;&#10;&lt;head&gt;&#10;  &lt;meta name=&quot;twitter:card&quot; content=&quot;summary_large_image&quot;&gt;&#10;  &lt;meta name=&quot;twitter:title&quot; content=&quot;Meine Seite&quot;&gt;&#10;  ...&#10;&lt;/head&gt;&#10;&lt;/html&gt;" class="w-full bg-slate-900/60 border border-white/10 rounded-xl px-4 py-3 text-sm text-gray-200 placeholder-gray-600 focus:outline-none focus:border-blue-500/60 resize-y font-mono"></textarea>
+                <p class="text-xs text-gray-500 mt-2">Tipp: Im Browser Rechtsklick → "Seitenquelltext anzeigen" → alles kopieren und hier einfügen.</p>
+                <div class="flex flex-wrap gap-3 mt-4">
+                    <button onclick="analyze()" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-8 py-3 rounded-xl font-semibold transition-all flex items-center gap-2">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                        Twitter Cards prüfen
+                    </button>
+                    <button onclick="loadExample()" class="border border-white/15 hover:border-blue-500/50 text-gray-300 hover:text-white px-5 py-3 rounded-xl font-medium transition-all text-sm">Beispiel laden</button>
+                    <button onclick="clearAll()" class="border border-white/10 hover:border-white/20 text-gray-500 hover:text-gray-300 px-5 py-3 rounded-xl font-medium transition-all text-sm">Leeren</button>
+                </div>
+            </div>
+
+            <!-- Results -->
+            <div id="results" class="hidden space-y-6">
+
+                <!-- Score -->
+                <div class="bg-slate-800/50 border border-white/10 rounded-2xl p-8">
+                    <div class="flex flex-col md:flex-row items-center gap-8">
+                        <!-- Ring -->
+                        <div class="flex-shrink-0 relative">
+                            <svg width="140" height="140" viewBox="0 0 140 140">
+                                <circle cx="70" cy="70" r="58" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="12"/>
+                                <circle id="scoreRing" cx="70" cy="70" r="58" fill="none" stroke="#3b82f6" stroke-width="12"
+                                    stroke-linecap="round" stroke-dasharray="364.4"
+                                    stroke-dashoffset="364.4" transform="rotate(-90 70 70)" class="score-ring"/>
+                            </svg>
+                            <div class="absolute inset-0 flex flex-col items-center justify-center">
+                                <span id="scoreNum" class="text-4xl font-extrabold text-white">0</span>
+                                <span class="text-xs text-gray-400">/ 100</span>
+                            </div>
+                        </div>
+                        <!-- Summary -->
+                        <div class="flex-1 text-center md:text-left">
+                            <h2 id="scoreLabel" class="text-2xl font-bold text-white mb-2">Analysiere...</h2>
+                            <p id="scoreDesc" class="text-gray-400 text-sm mb-4"></p>
+                            <div class="flex flex-wrap gap-4 justify-center md:justify-start">
+                                <div class="text-center">
+                                    <span id="countOk" class="text-2xl font-bold text-green-400">0</span>
+                                    <p class="text-xs text-gray-500 mt-0.5">Vorhanden</p>
+                                </div>
+                                <div class="text-center">
+                                    <span id="countWarn" class="text-2xl font-bold text-yellow-400">0</span>
+                                    <p class="text-xs text-gray-500 mt-0.5">Verbesserbar</p>
+                                </div>
+                                <div class="text-center">
+                                    <span id="countMiss" class="text-2xl font-bold text-red-400">0</span>
+                                    <p class="text-xs text-gray-500 mt-0.5">Fehlend</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card Preview -->
+                <div id="previewSection" class="bg-slate-800/50 border border-white/10 rounded-2xl p-6">
+                    <h3 class="font-bold text-white mb-1">X-Card-Vorschau</h3>
+                    <p id="previewType" class="text-xs text-gray-500 mb-4">Card-Typ: –</p>
+                    <!-- summary_large_image preview -->
+                    <div id="previewLarge" class="hidden bg-black rounded-2xl overflow-hidden border border-white/15 max-w-md">
+                        <div id="previewLargeImg" class="h-56 bg-gradient-to-br from-slate-700 to-slate-600 flex items-center justify-center text-gray-500 text-sm">Kein twitter:image gefunden</div>
+                        <div class="px-3 py-2 border-t border-white/10">
+                            <p id="previewLargeDomain" class="text-[13px] text-gray-500 mb-0.5">domain.de</p>
+                            <p id="previewLargeTitle" class="text-[15px] text-white leading-snug line-clamp-2">Kein twitter:title</p>
+                            <p id="previewLargeDesc" class="text-[13px] text-gray-500 mt-0.5 line-clamp-2">Keine twitter:description gefunden</p>
+                        </div>
+                    </div>
+                    <!-- summary preview -->
+                    <div id="previewSummary" class="hidden bg-black rounded-2xl overflow-hidden border border-white/15 max-w-md flex">
+                        <div id="previewSummaryImg" class="w-32 h-32 flex-shrink-0 bg-gradient-to-br from-slate-700 to-slate-600 flex items-center justify-center text-gray-600 text-[10px] text-center px-1">Kein Bild</div>
+                        <div class="px-3 py-2 flex flex-col justify-center min-w-0">
+                            <p id="previewSummaryDomain" class="text-[13px] text-gray-500 mb-0.5">domain.de</p>
+                            <p id="previewSummaryTitle" class="text-[15px] text-white leading-snug line-clamp-2">Kein twitter:title</p>
+                            <p id="previewSummaryDesc" class="text-[13px] text-gray-500 mt-0.5 line-clamp-2">Keine twitter:description gefunden</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tag Results -->
+                <div class="bg-slate-800/50 border border-white/10 rounded-2xl overflow-hidden">
+                    <div class="px-6 py-4 border-b border-white/10">
+                        <h3 class="font-bold text-white">Detaillierte Tag-Analyse</h3>
+                        <p class="text-xs text-gray-500 mt-1">X nutzt Open-Graph-Tags als Fallback – fehlende twitter:-Tags, die durch og:-Tags abgedeckt sind, werden als "Fallback" markiert.</p>
+                    </div>
+                    <div id="tagList" class="divide-y divide-white/5"></div>
+                </div>
+
+                <!-- Recommendations -->
+                <div id="recoSection" class="bg-slate-800/50 border border-white/10 rounded-2xl p-6 hidden">
+                    <h3 class="font-bold text-white mb-4">Empfehlungen</h3>
+                    <div id="recoList" class="space-y-3"></div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Info Section -->
+    <section class="py-14 px-4 border-t border-white/5">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-2xl font-bold text-white mb-6">Was sind Twitter Cards – und warum sind sie wichtig?</h2>
+            <p class="text-gray-400 mb-6">Twitter Cards (heute oft "X Cards" genannt) bestimmen, wie ein Link aussieht, wenn er auf X (ehemals Twitter) geteilt wird. Statt einer nackten URL erscheint eine Karte mit Bild, Titel und Beschreibung. Korrekte Twitter-Card-Tags erhöhen die Klickrate spürbar – und sorgen für einen professionellen Markenauftritt. Wenn keine twitter:-Tags gesetzt sind, greift X auf vorhandene <a href="/tools/open-graph-checker.html" class="text-blue-400 hover:text-blue-300 underline">Open-Graph-Tags</a> zurück.</p>
+            <div class="grid md:grid-cols-3 gap-6 mb-8">
+                <div class="bg-slate-800/40 border border-white/10 rounded-xl p-5">
+                    <div class="w-10 h-10 rounded-lg bg-blue-500/20 flex items-center justify-center mb-3">
+                        <svg class="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.069A1 1 0 0121 8.82v6.36a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                    </div>
+                    <h3 class="font-semibold text-white mb-2">Mehr Klicks auf X</h3>
+                    <p class="text-sm text-gray-400">Eine große Bild-Card (summary_large_image) hebt sich im Feed deutlich ab und wird messbar häufiger angeklickt als ein reiner Textlink.</p>
+                </div>
+                <div class="bg-slate-800/40 border border-white/10 rounded-xl p-5">
+                    <div class="w-10 h-10 rounded-lg bg-indigo-500/20 flex items-center justify-center mb-3">
+                        <svg class="w-5 h-5 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                    </div>
+                    <h3 class="font-semibold text-white mb-2">Kontrolle über die Vorschau</h3>
+                    <p class="text-sm text-gray-400">Du legst Bild, Titel und Text selbst fest, statt es X überlassen zu müssen, irgendetwas von der Seite zu greifen.</p>
+                </div>
+                <div class="bg-slate-800/40 border border-white/10 rounded-xl p-5">
+                    <div class="w-10 h-10 rounded-lg bg-purple-500/20 flex items-center justify-center mb-3">
+                        <svg class="w-5 h-5 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z"/></svg>
+                    </div>
+                    <h3 class="font-semibold text-white mb-2">Indirektes SEO-Signal</h3>
+                    <p class="text-sm text-gray-400">Mehr Social Shares und Klicks bedeuten mehr Traffic und Sichtbarkeit – ein positives Signal im gesamten SEO-Ökosystem.</p>
+                </div>
+            </div>
+            <div class="bg-slate-800/40 border border-white/10 rounded-xl p-6">
+                <h3 class="font-semibold text-white mb-3">Die wichtigsten Twitter-Card-Tags im Überblick</h3>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-sm">
+                        <thead>
+                            <tr class="border-b border-white/10">
+                                <th class="text-left py-2 pr-4 text-gray-400 font-medium">Tag</th>
+                                <th class="text-left py-2 pr-4 text-gray-400 font-medium">Priorität</th>
+                                <th class="text-left py-2 text-gray-400 font-medium">Zweck</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-white/5">
+                            <tr><td class="py-2 pr-4 font-mono text-blue-300 text-xs">twitter:card</td><td class="py-2 pr-4"><span class="px-2 py-0.5 bg-red-500/20 text-red-400 rounded text-xs">Pflicht</span></td><td class="py-2 text-gray-400">Card-Typ: summary oder summary_large_image</td></tr>
+                            <tr><td class="py-2 pr-4 font-mono text-blue-300 text-xs">twitter:title</td><td class="py-2 pr-4"><span class="px-2 py-0.5 bg-red-500/20 text-red-400 rounded text-xs">Pflicht</span></td><td class="py-2 text-gray-400">Titel der Card (Fallback: og:title)</td></tr>
+                            <tr><td class="py-2 pr-4 font-mono text-blue-300 text-xs">twitter:description</td><td class="py-2 pr-4"><span class="px-2 py-0.5 bg-red-500/20 text-red-400 rounded text-xs">Pflicht</span></td><td class="py-2 text-gray-400">Beschreibungstext (Fallback: og:description)</td></tr>
+                            <tr><td class="py-2 pr-4 font-mono text-blue-300 text-xs">twitter:image</td><td class="py-2 pr-4"><span class="px-2 py-0.5 bg-red-500/20 text-red-400 rounded text-xs">Pflicht</span></td><td class="py-2 text-gray-400">Vorschaubild (Fallback: og:image)</td></tr>
+                            <tr><td class="py-2 pr-4 font-mono text-blue-300 text-xs">twitter:image:alt</td><td class="py-2 pr-4"><span class="px-2 py-0.5 bg-yellow-500/20 text-yellow-400 rounded text-xs">Empfohlen</span></td><td class="py-2 text-gray-400">Alternativtext des Bildes (Barrierefreiheit)</td></tr>
+                            <tr><td class="py-2 pr-4 font-mono text-blue-300 text-xs">twitter:site</td><td class="py-2 pr-4"><span class="px-2 py-0.5 bg-yellow-500/20 text-yellow-400 rounded text-xs">Empfohlen</span></td><td class="py-2 text-gray-400">@handle des Website-Accounts</td></tr>
+                            <tr><td class="py-2 pr-4 font-mono text-blue-300 text-xs">twitter:creator</td><td class="py-2 pr-4"><span class="px-2 py-0.5 bg-blue-500/20 text-blue-400 rounded text-xs">Optional</span></td><td class="py-2 text-gray-400">@handle des Autors / Erstellers</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="bg-slate-800/40 border border-white/10 rounded-xl p-6 mt-6">
+                <h3 class="font-semibold text-white mb-3">Beispiel: Vollständige Twitter Card</h3>
+                <pre class="bg-slate-900/70 rounded-lg p-4 text-xs text-gray-300 overflow-x-auto"><code>&lt;meta name="twitter:card" content="summary_large_image"&gt;
+&lt;meta name="twitter:site" content="@deinhandle"&gt;
+&lt;meta name="twitter:title" content="Dein klickstarker Titel"&gt;
+&lt;meta name="twitter:description" content="Eine prägnante Beschreibung in 50–200 Zeichen."&gt;
+&lt;meta name="twitter:image" content="https://deinedomain.de/bild.jpg"&gt;
+&lt;meta name="twitter:image:alt" content="Beschreibung des Bildes"&gt;</code></pre>
+            </div>
+            <div class="mt-6 text-center">
+                <p class="text-gray-400 text-sm">Verwandte Tools: <a href="/tools/open-graph-checker.html" class="text-blue-400 hover:text-blue-300 underline">Open-Graph-Checker</a> · <a href="/tools/open-graph-vorschau.html" class="text-blue-400 hover:text-blue-300 underline">Open Graph Vorschau</a> · <a href="/tools/meta-tag-generator.html" class="text-blue-400 hover:text-blue-300 underline">Meta-Tag-Generator</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer CTA -->
+    <section class="py-16 px-4 bg-gradient-to-r from-blue-900/30 to-indigo-900/30 border-t border-b border-white/5">
+        <div class="max-w-3xl mx-auto text-center">
+            <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">Vollständige SEO-Analyse deiner Website</h2>
+            <p class="text-gray-400 mb-8">Twitter Cards sind nur ein Baustein. Entdecke alle SEO-Probleme deiner Website mit unserer kostenlosen Analyse.</p>
+            <a href="/" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-8 py-3 rounded-lg font-medium transition-all inline-block">Kostenlos analysieren</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/10 bg-slate-900/50 py-12 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="flex items-center gap-2">
+                    <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                    <span class="text-lg font-bold text-white">Shift07</span>
+                </div>
+                <div class="flex items-center space-x-6 text-sm text-gray-400">
+                    <a href="/impressum.html" class="hover:text-white transition-colors">Impressum</a>
+                    <a href="/datenschutz.html" class="hover:text-white transition-colors">Datenschutz</a>
+                    <a href="/agb.html" class="hover:text-white transition-colors">AGB</a>
+                    <a href="/ueber-uns.html" class="hover:text-white transition-colors">Über uns</a>
+                </div>
+                <p class="text-sm text-gray-500">&copy; 2026 Thümmler AI GmbH</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // Twitter Card tags. fallback = og-Tag, das X als Ersatz nutzt.
+        const TW_TAGS = [
+            { property: 'twitter:card',        label: 'twitter:card',        priority: 'required',    fallback: null,             desc: 'Card-Typ: summary oder summary_large_image', minLen: 4,  maxLen: 50,  tip: 'Setze "summary_large_image" für eine große Bild-Card oder "summary" für eine kompakte Card. Pflichtfeld – ohne diesen Tag rendert X keine Card.' },
+            { property: 'twitter:title',       label: 'twitter:title',       priority: 'required',    fallback: 'og:title',       desc: 'Titel der Card',                              minLen: 10, maxLen: 70,  tip: 'Formuliere einen klickstarken Titel (max. 70 Zeichen). Fehlt twitter:title, nutzt X og:title.' },
+            { property: 'twitter:description', label: 'twitter:description', priority: 'required',    fallback: 'og:description', desc: 'Beschreibungstext der Card',                   minLen: 50, maxLen: 200, tip: 'Beschreibe den Inhalt in 50–200 Zeichen. Fehlt twitter:description, nutzt X og:description.' },
+            { property: 'twitter:image',       label: 'twitter:image',       priority: 'required',    fallback: 'og:image',       desc: 'Vorschaubild (absolute URL)',                 minLen: 8,  maxLen: 999, tip: 'Verwende eine absolute https-URL. Für summary_large_image mind. 1200×628 px, für summary mind. 144×144 px.' },
+            { property: 'twitter:image:alt',   label: 'twitter:image:alt',   priority: 'recommended', fallback: 'og:image:alt',   desc: 'Alternativtext des Bildes',                   minLen: 5,  maxLen: 420, tip: 'Beschreibe das Bild für Screenreader-Nutzer. Gut für Barrierefreiheit und ein professionelles Signal.' },
+            { property: 'twitter:site',        label: 'twitter:site',        priority: 'recommended', fallback: null,             desc: '@handle des Website-Accounts',                minLen: 2,  maxLen: 16,  tip: 'Trage den @handle deines X-Accounts ein (z. B. @shift07ai). Verknüpft die Card mit deiner Marke.' },
+            { property: 'twitter:creator',     label: 'twitter:creator',     priority: 'optional',    fallback: null,             desc: '@handle des Autors',                          minLen: 2,  maxLen: 16,  tip: 'Optionaler @handle des Autors/Erstellers des Inhalts.' },
+        ];
+
+        const WEIGHTS = { required: 22, recommended: 8, optional: 4 };
+        const MAX_SCORE = TW_TAGS.reduce((s, t) => s + WEIGHTS[t.priority], 0);
+        const VALID_CARD_TYPES = ['summary', 'summary_large_image', 'app', 'player'];
+
+        function extractMeta(html) {
+            const found = {};
+            const re  = /<meta\s+(?:[^>]*?\s+)?(?:property|name)=["']([^"']+)["'][^>]*?\s+content=["']([^"']*)["'][^>]*?\/?>/gi;
+            const re2 = /<meta\s+(?:[^>]*?\s+)?content=["']([^"']*)["'][^>]*?\s+(?:property|name)=["']([^"']+)["'][^>]*?\/?>/gi;
+            let m;
+            while ((m = re.exec(html)) !== null)  found[m[1].toLowerCase()] = m[2];
+            while ((m = re2.exec(html)) !== null) found[m[2].toLowerCase()] = m[1];
+            return found;
+        }
+
+        function evaluate(tag, value, isFallback) {
+            if (!value || value.trim() === '') {
+                return { status: 'miss', msg: 'Fehlt – dieser Tag wurde nicht gefunden.' };
+            }
+            const v = value.trim();
+            const len = v.length;
+            if (tag.property === 'twitter:card') {
+                if (!VALID_CARD_TYPES.includes(v)) return { status: 'warn', msg: `Ungültiger Card-Typ "${v}". Erlaubt: ${VALID_CARD_TYPES.join(', ')}.` };
+                return { status: 'ok', msg: `Gültiger Card-Typ: ${v}` };
+            }
+            if ((tag.property === 'twitter:site' || tag.property === 'twitter:creator') && !v.startsWith('@')) {
+                return { status: 'warn', msg: 'Sollte mit @ beginnen (z. B. @deinhandle).' };
+            }
+            if (tag.property === 'twitter:image' && !v.startsWith('http')) {
+                return { status: 'warn', msg: 'Bild-URL sollte absolut sein (https://…).' };
+            }
+            if (len < tag.minLen) return { status: 'warn', msg: `Zu kurz (${len} Zeichen, min. ${tag.minLen}).` + (isFallback ? ' [über og: Fallback]' : '') };
+            if (tag.maxLen < 900 && len > tag.maxLen) return { status: 'warn', msg: `Zu lang (${len} Zeichen, max. ${tag.maxLen}).` + (isFallback ? ' [über og: Fallback]' : '') };
+            return { status: isFallback ? 'fallback' : 'ok', msg: isFallback ? `Über Fallback ${tag.fallback} abgedeckt (${len} Zeichen)` : `Vorhanden (${len} Zeichen)` };
+        }
+
+        function scoreColor(score) {
+            if (score >= 80) return '#22c55e';
+            if (score >= 50) return '#eab308';
+            return '#ef4444';
+        }
+
+        function scoreLabelText(score) {
+            if (score >= 80) return ['Gut optimiert', 'Deine Twitter Cards sind nahezu vollständig. Kleinere Lücken können noch geschlossen werden.'];
+            if (score >= 50) return ['Verbesserungsbedarf', 'Einige wichtige twitter:-Tags fehlen oder sind nicht optimal. Die X-Card wird möglicherweise unvollständig angezeigt.'];
+            return ['Kritische Lücken', 'Mehrere Pflicht-Tags fehlen – auch über den Open-Graph-Fallback. Links auf X werden ohne ansprechende Card geteilt, das kostet Klicks.'];
+        }
+
+        function getResolvedValue(tag, meta) {
+            // direct twitter tag has priority, then og fallback
+            if (meta[tag.property] && meta[tag.property].trim() !== '') return { value: meta[tag.property], isFallback: false };
+            if (tag.fallback && meta[tag.fallback] && meta[tag.fallback].trim() !== '') return { value: meta[tag.fallback], isFallback: true };
+            return { value: '', isFallback: false };
+        }
+
+        function analyze() {
+            const html = document.getElementById('htmlInput').value.trim();
+            if (!html) { alert('Bitte füge zuerst den HTML-Quellcode ein.'); return; }
+
+            const meta = extractMeta(html);
+            let score = 0, ok = 0, warn = 0, miss = 0;
+            const tagResults = [];
+            const recos = [];
+
+            for (const tag of TW_TAGS) {
+                const { value, isFallback } = getResolvedValue(tag, meta);
+                const ev = evaluate(tag, value, isFallback);
+                tagResults.push({ tag, value, ev, isFallback });
+                if (ev.status === 'ok')           { score += WEIGHTS[tag.priority]; ok++; }
+                else if (ev.status === 'fallback'){ score += Math.floor(WEIGHTS[tag.priority] * 0.7); ok++; recos.push({ tag, ev }); }
+                else if (ev.status === 'warn')    { score += Math.floor(WEIGHTS[tag.priority] * 0.4); warn++; recos.push({ tag, ev }); }
+                else                              { miss++; recos.push({ tag, ev }); }
+            }
+
+            const pct = Math.round((score / MAX_SCORE) * 100);
+
+            document.getElementById('results').classList.remove('hidden');
+
+            // Score ring
+            const ring = document.getElementById('scoreRing');
+            const circumference = 364.4;
+            ring.style.stroke = scoreColor(pct);
+            setTimeout(() => { ring.style.strokeDashoffset = circumference * (1 - pct / 100); }, 50);
+            document.getElementById('scoreNum').textContent = pct;
+            const [lbl, ldesc] = scoreLabelText(pct);
+            document.getElementById('scoreLabel').textContent = lbl;
+            document.getElementById('scoreDesc').textContent = ldesc;
+            document.getElementById('countOk').textContent = ok;
+            document.getElementById('countWarn').textContent = warn;
+            document.getElementById('countMiss').textContent = miss;
+
+            // Resolved card values
+            const cardType = (meta['twitter:card'] || '').trim();
+            const title = (meta['twitter:title'] || meta['og:title'] || '').trim();
+            const desc  = (meta['twitter:description'] || meta['og:description'] || '').trim();
+            const img   = (meta['twitter:image'] || meta['og:image'] || '').trim();
+            let domain = '';
+            try { const u = (meta['og:url'] || meta['twitter:url'] || ''); domain = new URL(u).hostname.replace(/^www\./, ''); } catch(e) {}
+
+            // Preview
+            const isLarge = cardType === 'summary_large_image' || (!cardType && true);
+            document.getElementById('previewType').textContent = 'Card-Typ: ' + (cardType || 'nicht gesetzt – Vorschau als summary_large_image angenommen');
+            const pLarge = document.getElementById('previewLarge');
+            const pSummary = document.getElementById('previewSummary');
+            if (isLarge) {
+                pLarge.classList.remove('hidden'); pSummary.classList.add('hidden');
+                document.getElementById('previewLargeTitle').textContent = title || 'Kein twitter:title';
+                document.getElementById('previewLargeDesc').textContent = desc || 'Keine twitter:description gefunden';
+                document.getElementById('previewLargeDomain').textContent = domain || 'domain.de';
+                const li = document.getElementById('previewLargeImg');
+                if (img && img.startsWith('http')) {
+                    li.innerHTML = `<img src="${img}" alt="Twitter Card Bild" class="w-full h-full object-cover" onerror="this.parentElement.innerHTML='<span class=\\'text-gray-500 text-sm\\'>Bild konnte nicht geladen werden</span>'">`;
+                } else {
+                    li.innerHTML = '<span class="text-gray-500 text-sm">Kein twitter:image (absolut) gefunden</span>';
+                }
+            } else {
+                pSummary.classList.remove('hidden'); pLarge.classList.add('hidden');
+                document.getElementById('previewSummaryTitle').textContent = title || 'Kein twitter:title';
+                document.getElementById('previewSummaryDesc').textContent = desc || 'Keine twitter:description gefunden';
+                document.getElementById('previewSummaryDomain').textContent = domain || 'domain.de';
+                const si = document.getElementById('previewSummaryImg');
+                if (img && img.startsWith('http')) {
+                    si.innerHTML = `<img src="${img}" alt="Twitter Card Bild" class="w-full h-full object-cover" onerror="this.parentElement.innerHTML='Kein Bild'">`;
+                } else {
+                    si.textContent = 'Kein Bild';
+                }
+            }
+
+            // Tag list
+            const tagList = document.getElementById('tagList');
+            tagList.innerHTML = '';
+            for (const { tag, value, ev, isFallback } of tagResults) {
+                const priorityColors = { required: 'text-red-400 bg-red-500/10', recommended: 'text-yellow-400 bg-yellow-500/10', optional: 'text-blue-400 bg-blue-500/10' };
+                const priorityLabels = { required: 'Pflicht', recommended: 'Empfohlen', optional: 'Optional' };
+                const statusIcon = (ev.status === 'ok' || ev.status === 'fallback')
+                    ? '<svg class="w-5 h-5 text-green-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>'
+                    : ev.status === 'warn'
+                    ? '<svg class="w-5 h-5 text-yellow-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>'
+                    : '<svg class="w-5 h-5 text-red-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>';
+
+                const borderClass = (ev.status === 'ok' || ev.status === 'fallback') ? 'tag-ok' : ev.status === 'warn' ? 'tag-warn' : 'tag-miss';
+                const msgColor = (ev.status === 'ok') ? 'text-green-400' : ev.status === 'fallback' ? 'text-blue-300' : ev.status === 'warn' ? 'text-yellow-400' : 'text-red-400';
+                const fallbackBadge = isFallback ? '<span class="text-xs px-2 py-0.5 rounded-full text-blue-300 bg-blue-500/10">Fallback</span>' : '';
+                tagList.innerHTML += `
+                  <div class="px-6 py-4 ${borderClass}">
+                    <div class="flex items-start gap-3">
+                      ${statusIcon}
+                      <div class="flex-1 min-w-0">
+                        <div class="flex flex-wrap items-center gap-2 mb-1">
+                          <code class="text-blue-300 text-sm font-semibold">${tag.label}</code>
+                          <span class="text-xs px-2 py-0.5 rounded-full ${priorityColors[tag.priority]}">${priorityLabels[tag.priority]}</span>
+                          ${fallbackBadge}
+                        </div>
+                        <p class="text-xs text-gray-500 mb-1">${tag.desc}</p>
+                        ${value ? `<p class="text-xs text-gray-300 font-mono truncate mb-1" title="${value.replace(/"/g,'&quot;')}">${value.replace(/</g,'&lt;')}</p>` : ''}
+                        <p class="text-xs ${msgColor}">${ev.msg}</p>
+                      </div>
+                    </div>
+                  </div>`;
+            }
+
+            // Recommendations
+            const recoSection = document.getElementById('recoSection');
+            const recoList = document.getElementById('recoList');
+            if (recos.length > 0) {
+                recoSection.classList.remove('hidden');
+                recoList.innerHTML = recos.map(({ tag, ev }) => {
+                    const stateLabel = ev.status === 'miss' ? 'Fehlend' : ev.status === 'fallback' ? 'Nur per Fallback' : 'Verbesserbar';
+                    const iconColor = ev.status === 'miss' ? 'text-red-400' : ev.status === 'fallback' ? 'text-blue-300' : 'text-yellow-400';
+                    return `
+                  <div class="flex gap-3 p-4 bg-slate-900/40 rounded-xl border border-white/5">
+                    <svg class="w-4 h-4 ${iconColor} flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                    <div>
+                      <p class="text-sm font-semibold text-white mb-0.5"><code class="text-blue-300">${tag.label}</code> – ${stateLabel}</p>
+                      <p class="text-xs text-gray-400">${tag.tip}</p>
+                    </div>
+                  </div>`;
+                }).join('');
+            } else {
+                recoSection.classList.add('hidden');
+            }
+
+            document.getElementById('results').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        function loadExample() {
+            document.getElementById('htmlInput').value = `<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Meine tolle Website - Startseite</title>
+  <meta name="description" content="Willkommen auf meiner Website.">
+  <meta property="og:title" content="Meine tolle Website">
+  <meta property="og:description" content="Hier finden Sie alles rund um unsere Produkte und Dienstleistungen für Privat- und Geschaeftskunden.">
+  <meta property="og:image" content="https://example.de/vorschau.jpg">
+  <meta property="og:url" content="https://example.de/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Meine tolle Website">
+</head>
+<body>
+  <h1>Willkommen</h1>
+</body>
+</html>`;
+        }
+
+        function clearAll() {
+            document.getElementById('htmlInput').value = '';
+            document.getElementById('results').classList.add('hidden');
+        }
+
+        document.getElementById('htmlInput').addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' && e.ctrlKey) analyze();
+        });
+    </script>
+</body>
+</html>
