@@ -794,7 +794,7 @@
   </url>
   <url>
     <loc>https://shift07.ai/blog/meta-tags-richtig-einsetzen.html</loc>
-    <lastmod>2026-04-20</lastmod>
+    <lastmod>2026-05-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -896,7 +896,7 @@
   </url>
   <url>
     <loc>https://shift07.ai/blog/open-graph-vorschau-social-media-preview.html</loc>
-    <lastmod>2026-04-20</lastmod>
+    <lastmod>2026-05-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1221,6 +1221,12 @@
   <url>
     <loc>https://shift07.ai/blog/ttfb-verbessern-server-antwortzeit.html</loc>
     <lastmod>2026-04-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://shift07.ai/blog/twitter-cards-richtig-einsetzen.html</loc>
+    <lastmod>2026-05-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
