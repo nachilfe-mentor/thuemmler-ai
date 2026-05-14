@@ -5,8 +5,32 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Thu, 14 May 2026 14:16:54 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 14 May 2026 14:21:22 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Mobile Optimierung für Websites: Die komplette Checkliste 2026</title>
+      <link>https://shift07.ai/blog/mobile-optimierung-website-checkliste.html</link>
+      <guid>https://shift07.ai/blog/mobile-optimierung-website-checkliste.html</guid>
+      <pubDate>Thu, 14 May 2026 14:21:07 +0000</pubDate>
+      <description>Mobile Optimierung für deine Website: Checkliste mit 15 konkreten Schritten für Responsive Design, Ladezeit, Touch-Bedienung und Mobile-First SEO.</description>
+      <category>SEO Grundlagen</category>
+    </item>
+    <item>
+      <title>Mobile SEO: Responsive Design und Mobile-First Index erklärt</title>
+      <link>https://shift07.ai/blog/mobile-seo-responsive-design.html</link>
+      <guid>https://shift07.ai/blog/mobile-seo-responsive-design.html</guid>
+      <pubDate>Thu, 14 May 2026 14:20:57 +0000</pubDate>
+      <description>Mobile SEO ist kein optionaler Bonus mehr - Google indexiert Websites zuerst auf dem Smartphone. Lerne, wie Responsive Design und der Mobile-First Index dein Ranking beeinflussen.</description>
+      <category>Mobile SEO</category>
+    </item>
+    <item>
+      <title>Viewport-Meta-Tag richtig setzen: Der Leitfaden für Mobile SEO</title>
+      <link>https://shift07.ai/blog/viewport-meta-tag-richtig-setzen.html</link>
+      <guid>https://shift07.ai/blog/viewport-meta-tag-richtig-setzen.html</guid>
+      <pubDate>Thu, 14 May 2026 14:20:06 +0000</pubDate>
+      <description>Der Viewport-Meta-Tag entscheidet, ob deine Seite mobilfreundlich ist. Erfahre, wie du width=device-width und initial-scale korrekt setzt – und welche Fehler Rankings kosten.</description>
+      <category>Mobile SEO</category>
+    </item>
     <item>
       <title>Meta-Tags richtig einsetzen: Die vollständige Anleitung</title>
       <link>https://shift07.ai/blog/meta-tags-richtig-einsetzen.html</link>
@@ -141,30 +165,6 @@
       <guid>https://shift07.ai/blog/medicalcondition-schema-markup-vertieft.html</guid>
       <pubDate>Sat, 09 May 2026 10:41:25 +0000</pubDate>
       <description>MedicalCondition Schema Markup vollständig erklärt: alle Properties, JSON-LD-Beispiele für Diagnosen, Symptome und Behandlungen – und was Google bei YMYL-Inhalten wirklich bewertet.</description>
-      <category>Schema Markup</category>
-    </item>
-    <item>
-      <title>Movie &amp; TVSeries Schema Markup: Filme und Serien für Google optimieren</title>
-      <link>https://shift07.ai/blog/movie-tvseries-schema-markup.html</link>
-      <guid>https://shift07.ai/blog/movie-tvseries-schema-markup.html</guid>
-      <pubDate>Wed, 06 May 2026 13:54:33 +0000</pubDate>
-      <description>Movie und TVSeries Schema Markup richtig einsetzen: JSON-LD für Filme, Serien und Episoden mit AggregateRating für Rich Snippets in Google. Schritt-für-Schritt-Anleitung 2026.</description>
-      <category>Schema Markup</category>
-    </item>
-    <item>
-      <title>Podcast Schema Markup: PodcastSeries und PodcastEpisode JSON-LD für Google</title>
-      <link>https://shift07.ai/blog/podcast-schema-markup-seo.html</link>
-      <guid>https://shift07.ai/blog/podcast-schema-markup-seo.html</guid>
-      <pubDate>Wed, 06 May 2026 12:03:05 +0000</pubDate>
-      <description>Podcast Schema Markup richtig implementieren: Mit PodcastSeries und PodcastEpisode JSON-LD Ihren Podcast in Google-Rich-Results sichtbar machen. Schritt-für-Schritt-Anleitung 2026.</description>
-      <category>Schema Markup</category>
-    </item>
-    <item>
-      <title>ClaimReview Schema Markup: Faktencheck-Markup für Google News richtig implementieren</title>
-      <link>https://shift07.ai/blog/claimreview-schema-markup-seo.html</link>
-      <guid>https://shift07.ai/blog/claimreview-schema-markup-seo.html</guid>
-      <pubDate>Wed, 06 May 2026 10:11:41 +0000</pubDate>
-      <description>ClaimReview Schema Markup erklärt: So zeichnest du Faktencheck-Artikel mit JSON-LD aus, erfüllst Googles Richtlinien und erscheinst in Google News Rich Results. Mit vollständigem Beispiel.</description>
       <category>Schema Markup</category>
     </item>
   </channel>
