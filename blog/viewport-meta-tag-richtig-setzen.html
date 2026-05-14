@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viewport-Meta-Tag richtig setzen: Der Leitfaden für Mobile SEO | Shift07 Blog</title>
+    <meta name="description" content="Der Viewport-Meta-Tag entscheidet, ob deine Seite mobilfreundlich ist. Erfahre, wie du width=device-width und initial-scale korrekt setzt – und welche Fehler Rankings kosten.">
+    <meta name="author" content="Thümmler AI GmbH">
+    <link rel="icon" type="image/png" href="/logo.png">
+    <link rel="canonical" href="https://shift07.ai/blog/viewport-meta-tag-richtig-setzen.html">
+    <link rel="alternate" type="application/rss+xml" title="Shift07 Blog" href="https://shift07.ai/feed.xml">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Viewport-Meta-Tag richtig setzen: Der Leitfaden für Mobile SEO | Shift07 Blog">
+    <meta property="og:description" content="Der Viewport-Meta-Tag entscheidet, ob deine Seite mobilfreundlich ist. So setzt du width=device-width und initial-scale korrekt.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://shift07.ai/blog/viewport-meta-tag-richtig-setzen.html">
+    <meta property="og:image" content="https://shift07.ai/blog/images/viewport-meta-tag-richtig-setzen.png">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="Shift07">
+    <meta property="article:published_time" content="2026-05-14">
+    <meta property="article:section" content="Mobile SEO">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Viewport-Meta-Tag richtig setzen: Der Leitfaden für Mobile SEO">
+    <meta name="twitter:description" content="So setzt du den Viewport-Meta-Tag korrekt für Mobile SEO – inklusive häufiger Fehler.">
+    <meta name="twitter:image" content="https://shift07.ai/blog/images/viewport-meta-tag-richtig-setzen.png">
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Viewport-Meta-Tag richtig setzen: Der Leitfaden für Mobile SEO",
+      "description": "Der Viewport-Meta-Tag entscheidet, ob deine Seite mobilfreundlich ist. Erfahre, wie du width=device-width und initial-scale korrekt setzt – und welche Fehler Rankings kosten.",
+      "image": "https://shift07.ai/blog/images/viewport-meta-tag-richtig-setzen.png",
+      "datePublished": "2026-05-14",
+      "dateModified": "2026-05-14",
+      "author": {
+        "@type": "Organization",
+        "name": "Shift07",
+        "url": "https://shift07.ai"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Shift07",
+        "url": "https://shift07.ai",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://shift07.ai/assets/logo.png"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://shift07.ai/blog/viewport-meta-tag-richtig-setzen.html"
+      }
+    }
+    </script>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K1S1RXBDS8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K1S1RXBDS8');
+    </script>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8475857002943858" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: rgba(15, 23, 42, 0.5); }
+        ::-webkit-scrollbar-thumb { background: rgba(59, 130, 246, 0.5); border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: rgba(59, 130, 246, 0.7); }
+        html { scroll-behavior: smooth; }
+        .article-content h2 { font-size: 1.5rem; font-weight: 700; color: #fff; margin-top: 2.5rem; margin-bottom: 1rem; }
+        .article-content h3 { font-size: 1.25rem; font-weight: 600; color: #e2e8f0; margin-top: 2rem; margin-bottom: 0.75rem; }
+        .article-content p { color: #cbd5e1; line-height: 1.8; margin-bottom: 1.25rem; }
+        .article-content ul, .article-content ol { color: #cbd5e1; margin-bottom: 1.25rem; padding-left: 1.5rem; }
+        .article-content li { margin-bottom: 0.5rem; line-height: 1.7; }
+        .article-content ul li { list-style-type: disc; }
+        .article-content ol li { list-style-type: decimal; }
+        .article-content a { color: #60a5fa; text-decoration: underline; text-underline-offset: 2px; }
+        .article-content a:hover { color: #93bbfc; }
+        .article-content blockquote { border-left: 4px solid #3b82f6; padding-left: 1.25rem; margin: 1.5rem 0; color: #94a3b8; font-style: italic; }
+        .article-content code { background: rgba(59, 130, 246, 0.15); color: #93c5fd; padding: 0.15rem 0.4rem; border-radius: 0.25rem; font-size: 0.9em; }
+        .article-content pre { background: rgba(15, 23, 42, 0.8); border: 1px solid rgba(255,255,255,0.1); border-radius: 0.75rem; padding: 1.25rem; overflow-x: auto; margin-bottom: 1.5rem; }
+        .article-content pre code { background: none; padding: 0; color: #e2e8f0; }
+        .article-content strong { color: #f1f5f9; }
+    </style>
+</head>
+<body class="bg-slate-900 text-white min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-slate-900/80 backdrop-blur-xl border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <a href="/" class="flex items-center gap-2">
+                    <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                    <span class="text-xl font-bold text-white">Shift07</span>
+                </a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="/" class="text-gray-300 hover:text-white transition-colors">SEO-Tool</a>
+                    <a href="/blog/" class="text-white font-medium border-b-2 border-blue-500 pb-0.5">Blog</a>
+                    <a href="/tools/" class="text-gray-300 hover:text-white transition-colors">Tools</a>
+                    <a href="/app/#/login" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-5 py-2 rounded-lg font-medium transition-all">Anmelden</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-gray-300 hover:text-white">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900/95 border-b border-white/10">
+            <div class="px-4 py-3 space-y-2">
+                <a href="/" class="block py-2 text-gray-300 hover:text-white">SEO-Tool</a>
+                <a href="/blog/" class="block py-2 text-white font-medium">Blog</a>
+                <a href="/tools/" class="block py-2 text-gray-300 hover:text-white">Tools</a>
+                <a href="/app/#/login" class="block py-2 text-blue-400 hover:text-blue-300">Anmelden</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Image -->
+    <section class="pt-16 relative">
+        <div class="h-[400px] bg-gradient-to-br from-blue-600 via-indigo-700 to-purple-800 relative overflow-hidden">
+            <img src="images/viewport-meta-tag-richtig-setzen.png" alt="Viewport-Meta-Tag richtig setzen für Mobile SEO" class="absolute inset-0 w-full h-full object-cover opacity-40">
+            <div class="absolute inset-0 bg-black/40"></div>
+            <div class="absolute inset-0 flex items-center justify-center">
+                <div class="text-center px-4 max-w-4xl">
+                    <span class="inline-block text-sm font-semibold px-4 py-1.5 bg-white/10 text-white/90 rounded-full mb-6">Mobile SEO</span>
+                    <h1 class="text-3xl md:text-5xl font-extrabold text-white leading-tight">Viewport-Meta-Tag richtig setzen: Der Leitfaden für Mobile SEO</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Article Content -->
+    <section class="py-12 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col lg:flex-row gap-12">
+
+                <!-- Main Content -->
+                <article class="lg:w-2/3">
+                    <!-- Meta -->
+                    <div class="flex flex-wrap items-center gap-4 text-sm text-gray-400 mb-10 pb-6 border-b border-white/10">
+                        <div class="flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+                            Shift07 Team
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                            14. Mai 2026
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                            7 Min. Lesezeit
+                        </div>
+                        <span class="text-xs font-semibold px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full">Mobile SEO</span>
+                    </div>
+
+                    <!-- Article Body -->
+                    <div class="article-content">
+                        <p>Es gibt eine einzige Zeile HTML, die darüber entscheidet, ob deine Website auf dem Smartphone benutzbar aussieht oder wie eine geschrumpfte Briefmarke wirkt: der <strong>Viewport-Meta-Tag</strong>. Er ist nur 60 Zeichen lang, wird oft kopiert ohne nachzudenken – und genau deshalb steckt in ihm einer der häufigsten und folgenreichsten Mobile-SEO-Fehler. Dieser Leitfaden erklärt, was der Tag macht, wie du ihn korrekt setzt und welche Konfigurationen dir Rankings kosten.</p>
+
+                        <h2>Was der Viewport-Meta-Tag überhaupt tut</h2>
+                        <p>Bevor es Smartphones gab, wurden Websites für Desktop-Bildschirme gebaut. Als die ersten mobilen Browser kamen, standen sie vor einem Problem: Wenn sie eine Desktop-Seite auf einem 360 Pixel breiten Display einfach 1:1 anzeigen würden, sähe der Nutzer nur die obere linke Ecke. Die Lösung der Browserhersteller: Sie tun so, als wäre das Display rund 980 Pixel breit (der sogenannte "Layout-Viewport"), rendern die Seite in dieser Breite und zoomen das Ergebnis dann herunter, damit alles auf den Schirm passt.</p>
+                        <p>Das Ergebnis kennst du: winzige Schrift, Buttons, die zu klein zum Antippen sind, ständiges Zoomen und horizontales Scrollen. Genau hier kommt der Viewport-Meta-Tag ins Spiel. Mit ihm sagst du dem Browser: "Behandle die Seite nicht als 980 Pixel breit, sondern nutze die echte Gerätebreite." Erst dann greift responsives Design wirklich, und Media Queries wie <code>@media (max-width: 600px)</code> reagieren auf die tatsächliche Bildschirmgröße statt auf eine fiktive Desktop-Breite.</p>
+
+                        <h2>Der korrekte Viewport-Tag</h2>
+                        <p>In den allermeisten Fällen brauchst du genau diese Zeile im <code>&lt;head&gt;</code>-Bereich jeder Seite:</p>
+                        <pre><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;</code></pre>
+                        <p>Mehr ist nicht nötig – und alles, was darüber hinausgeht, ist im Zweifel eher schädlich. Schauen wir die beiden zentralen Eigenschaften im Detail an.</p>
+
+                        <h3>width=device-width</h3>
+                        <p>Das ist die wichtigste Anweisung. Sie setzt die Breite des Layout-Viewports auf die echte Breite des Geräts in CSS-Pixeln. Auf einem typischen Smartphone sind das etwa 360 bis 430 Pixel statt der erfundenen 980. Erst dadurch "weiß" dein CSS, wie breit der Bildschirm wirklich ist, und kann das Layout passend stapeln, Spalten zusammenklappen und Schriftgrößen anpassen.</p>
+
+                        <h3>initial-scale=1</h3>
+                        <p>Diese Eigenschaft legt den Zoomfaktor beim Laden der Seite fest. Der Wert <code>1</code> bedeutet: keine Vergrößerung, keine Verkleinerung – ein CSS-Pixel entspricht einem Gerätepixel im Layout. Lässt du <code>initial-scale</code> weg, interpretieren manche Browser (vor allem ältere) die Seite anders, vor allem beim Wechsel zwischen Hoch- und Querformat. Mit <code>initial-scale=1</code> bist du auf der sicheren Seite.</p>
+
+                        <h2>Warum das ein echtes Ranking-Thema ist</h2>
+                        <p>Google indexiert Websites seit Jahren nach dem Prinzip des <strong>Mobile-First-Indexing</strong>: Bewertet wird vorrangig die mobile Version deiner Seite. Fehlt der Viewport-Tag oder ist er falsch gesetzt, stuft Google deine Seite als nicht mobilfreundlich ein. Konkret passiert dann Folgendes:</p>
+                        <ul>
+                            <li>In der Google Search Console tauchen Meldungen wie "Text ist zu klein zum Lesen" oder "Anklickbare Elemente liegen zu nah beieinander" auf.</li>
+                            <li>Die Seite verliert in der mobilen Suche an Sichtbarkeit – und der Großteil der Suchanfragen kommt heute von Mobilgeräten.</li>
+                            <li>Nutzer, die trotzdem auf dein Ergebnis klicken, springen schneller wieder ab, weil die Seite unbenutzbar wirkt. Diese schlechten Nutzersignale verstärken den Abwärtstrend.</li>
+                        </ul>
+                        <p>Der Viewport-Tag ist damit kein kosmetisches Detail, sondern eine Grundvoraussetzung. Mehr zum Zusammenspiel von Technik und Darstellung findest du in unserem Artikel zu <a href="/blog/mobile-seo-responsive-design.html">Mobile SEO und Responsive Design</a>.</p>
+
+                        <h2>Die fünf häufigsten Viewport-Fehler</h2>
+
+                        <h3>1. Der Tag fehlt komplett</h3>
+                        <p>Der klassische Fall bei alten Websites oder handgebauten Landingpages. Ohne Viewport-Tag rendert das Smartphone die Seite als verkleinerte Desktop-Version. Lösung: die eine Zeile von oben in den <code>&lt;head&gt;</code> einfügen.</p>
+
+                        <h3>2. user-scalable=no</h3>
+                        <p>Manche Entwickler sperren das Zoomen, damit das Layout "stabil" bleibt. Das ist ein Barrierefreiheits-Problem: Sehbehinderte Nutzer können Inhalte nicht mehr vergrößern. Google bewertet das negativ, und moderne Browser ignorieren die Einstellung ohnehin teilweise. Lass <code>user-scalable</code> einfach weg.</p>
+
+                        <h3>3. maximum-scale=1</h3>
+                        <p>Derselbe Denkfehler in anderer Form. Ein <code>maximum-scale</code> unter 2 verhindert, dass Nutzer sinnvoll hineinzoomen können. Auch das ist schlecht für die Barrierefreiheit. Verzichte auf die Eigenschaft.</p>
+
+                        <h3>4. Feste Pixelbreite statt device-width</h3>
+                        <p>Konstruktionen wie <code>width=1024</code> zwingen jedes Gerät in eine feste Layout-Breite. Auf kleinen Displays entsteht horizontales Scrollen, auf großen wird Platz verschwendet. Nur <code>width=device-width</code> passt sich an jedes Gerät an.</p>
+
+                        <h3>5. Mehrere Viewport-Tags</h3>
+                        <p>Bei CMS-Systemen passiert es schnell, dass das Theme und ein Plugin jeweils einen eigenen Viewport-Tag einfügen. Browser nutzen in der Regel den ersten – behalte genau einen Tag im <code>&lt;head&gt;</code> und entferne Dubletten.</p>
+
+                        <blockquote>Faustregel: Wenn dein Viewport-Tag mehr als <code>width=device-width, initial-scale=1</code> enthält, ist die Wahrscheinlichkeit hoch, dass das Extra mehr schadet als nützt.</blockquote>
+
+                        <h2>Den eigenen Viewport-Tag prüfen</h2>
+                        <p>Du musst nicht raten, ob dein Tag korrekt ist. Mit unserem <a href="/tools/viewport-meta-tag-checker.html">Viewport-Meta-Tag-Checker</a> fügst du den HTML-Quelltext deiner Seite ein und siehst sofort, ob <code>width</code>, <code>initial-scale</code>, <code>user-scalable</code> und <code>maximum-scale</code> sauber konfiguriert sind. Das Tool zeigt zusätzlich eine Geräte-Vorschau, die illustriert, wie sich deine aktuelle Einstellung auf einem Smartphone auswirkt – inklusive konkreter Empfehlungen.</p>
+                        <p>So gehst du vor:</p>
+                        <ol>
+                            <li>Öffne deine Website im Browser und lass dir mit Rechtsklick den Seitenquelltext anzeigen.</li>
+                            <li>Kopiere mindestens den <code>&lt;head&gt;</code>-Bereich.</li>
+                            <li>Füge ihn in den Viewport-Meta-Tag-Checker ein und starte die Analyse.</li>
+                            <li>Setze die Empfehlungen um und prüfe anschließend in der Google Search Console, ob die Mobilfreundlichkeits-Warnungen verschwinden.</li>
+                        </ol>
+
+                        <h2>Viewport ist nur der Anfang</h2>
+                        <p>Ein korrekter Viewport-Tag macht deine Seite technisch mobilfähig – aber nicht automatisch schnell oder angenehm bedienbar. Wenn der Tag sitzt, lohnt sich der Blick auf die nächsten Stufen der mobilen Optimierung: ausreichend große Tap-Ziele, lesbare Schriftgrößen, kein horizontales Scrollen und gute Ladezeiten. Eine kompakte Übersicht dazu bietet unsere <a href="/blog/mobile-optimierung-website-checkliste.html">Checkliste zur Mobile-Optimierung</a>. Und weil Google die mobile Performance besonders streng bewertet, solltest du parallel deine <a href="/blog/mobile-core-web-vitals-optimieren.html">mobilen Core Web Vitals optimieren</a> – LCP, CLS und INP fallen auf Smartphones oft deutlich schlechter aus als auf dem Desktop.</p>
+
+                        <h2>Fazit</h2>
+                        <p>Der Viewport-Meta-Tag ist eine der wenigen Stellen im SEO, an denen eine einzige korrekte Codezeile einen großen Unterschied macht. Setze in den <code>&lt;head&gt;</code> jeder Seite genau <code>&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;</code>, verzichte auf Zoom-Sperren und feste Breiten, und kontrolliere das Ergebnis mit dem <a href="/tools/viewport-meta-tag-checker.html">Viewport-Meta-Tag-Checker</a>. Damit hast du eine der grundlegendsten Mobile-SEO-Voraussetzungen abgehakt – und schaffst die Basis dafür, dass Google deine Seite als mobilfreundlich einstuft.</p>
+                    </div>
+
+                    <!-- Share / Back -->
+                    <div class="mt-12 pt-8 border-t border-white/10 flex items-center justify-between">
+                        <a href="/blog/" class="text-blue-400 hover:text-blue-300 flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+                            Zurück zum Blog
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Sidebar -->
+                <aside class="lg:w-1/3 space-y-8">
+                    <!-- CTA Box -->
+                    <div class="bg-gradient-to-br from-blue-600/20 to-indigo-600/20 border border-blue-500/30 rounded-2xl p-6 text-center">
+                        <h3 class="text-lg font-bold text-white mb-3">Kostenlose SEO-Analyse</h3>
+                        <p class="text-gray-400 text-sm mb-5">Finde heraus, wie gut deine Website für Suchmaschinen optimiert ist.</p>
+                        <a href="/" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-6 py-3 rounded-lg font-medium transition-all inline-block w-full">Jetzt testen</a>
+                    </div>
+
+                    <!-- Tool Box -->
+                    <div class="bg-slate-800/50 border border-white/10 rounded-2xl p-6">
+                        <h3 class="text-lg font-bold text-white mb-3">Passendes Tool</h3>
+                        <p class="text-gray-400 text-sm mb-4">Prüfe deinen Viewport-Tag in Sekunden – mit Geräte-Vorschau und Score.</p>
+                        <a href="/tools/viewport-meta-tag-checker.html" class="text-blue-400 hover:text-blue-300 text-sm font-medium flex items-center gap-1">
+                            Viewport-Meta-Tag-Checker öffnen
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                        </a>
+                    </div>
+
+                    <!-- Related Articles -->
+                    <div class="bg-slate-800/50 border border-white/10 rounded-2xl p-6">
+                        <h3 class="text-lg font-bold text-white mb-4">Weitere Artikel</h3>
+                        <div class="space-y-4">
+                            <a href="/blog/mobile-seo-responsive-design.html" class="block group">
+                                <p class="text-sm text-gray-300 group-hover:text-blue-400 transition-colors font-medium">Mobile SEO und Responsive Design</p>
+                                <p class="text-xs text-gray-500 mt-1">Mobile SEO</p>
+                            </a>
+                            <a href="/blog/mobile-optimierung-website-checkliste.html" class="block group">
+                                <p class="text-sm text-gray-300 group-hover:text-blue-400 transition-colors font-medium">Checkliste zur Mobile-Optimierung</p>
+                                <p class="text-xs text-gray-500 mt-1">Mobile SEO</p>
+                            </a>
+                            <a href="/blog/mobile-core-web-vitals-optimieren.html" class="block group">
+                                <p class="text-sm text-gray-300 group-hover:text-blue-400 transition-colors font-medium">Mobile Core Web Vitals optimieren</p>
+                                <p class="text-xs text-gray-500 mt-1">Performance</p>
+                            </a>
+                        </div>
+                    </div>
+
+                    </div>
+                </aside>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer CTA -->
+    <section class="py-16 px-4 bg-gradient-to-r from-blue-900/30 to-indigo-900/30 border-t border-b border-white/5">
+        <div class="max-w-3xl mx-auto text-center">
+            <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">Teste deine Website jetzt kostenlos</h2>
+            <p class="text-gray-400 mb-8">Erhalte eine vollständige SEO-Analyse mit konkreten Verbesserungsvorschlägen.</p>
+            <form action="/" method="get" class="flex flex-col sm:flex-row gap-3 max-w-xl mx-auto">
+                <input type="url" placeholder="https://deine-website.de" class="flex-1 bg-slate-800 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-blue-500">
+                <a href="/" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-8 py-3 rounded-lg font-medium transition-all whitespace-nowrap">Analyse starten</a>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/10 bg-slate-900/50 py-12 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="flex items-center gap-2">
+                    <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                    <span class="text-lg font-bold text-white">Shift07</span>
+                </div>
+                <div class="flex items-center space-x-6 text-sm text-gray-400">
+                    <a href="/impressum.html" class="hover:text-white transition-colors">Impressum</a>
+                    <a href="/datenschutz.html" class="hover:text-white transition-colors">Datenschutz</a>
+                    <a href="/agb.html" class="hover:text-white transition-colors">AGB</a>
+                </div>
+                <p class="text-sm text-gray-500">&copy; 2026 Thümmler AI GmbH</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
