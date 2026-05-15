@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Fri, 15 May 2026 01:46:39 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 15 May 2026 03:21:52 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Favicon und Touch-Icons für SEO: Die vollständige Einbindungsanleitung 2026</title>
+      <link>https://shift07.ai/blog/favicon-touch-icons-seo.html</link>
+      <guid>https://shift07.ai/blog/favicon-touch-icons-seo.html</guid>
+      <pubDate>Fri, 15 May 2026 03:21:11 +0000</pubDate>
+      <description>Favicon und Touch-Icons richtig einbinden: ICO, PNG, SVG, Apple-Touch-Icon, Web-App-Manifest. So stärkst du Branding, CTR und Mobile SEO mit wenigen Zeilen Code.</description>
+      <category>Tech-SEO</category>
+    </item>
     <item>
       <title>Gzip-Komprimierung aktivieren: Anleitung für Apache, Nginx &amp; PHP</title>
       <link>https://shift07.ai/blog/gzip-komprimierung-websites.html</link>
@@ -158,14 +166,6 @@
       <pubDate>Sat, 09 May 2026 11:01:41 +0000</pubDate>
       <description>Mit dem kostenlosen ClaimReview Schema Generator von Shift07 erstellst du Faktencheck-Markup für Google News in Sekunden. Anleitung, Beispiele und Tipps zur Validierung.</description>
       <category>Schema Markup</category>
-    </item>
-    <item>
-      <title>SEO-Fehler bei deutschen Steuerberatern: Auswertung von 58 Kanzlei-Websites</title>
-      <link>https://shift07.ai/blog/seo-fehler-steuerberater-kanzlei-analyse.html</link>
-      <guid>https://shift07.ai/blog/seo-fehler-steuerberater-kanzlei-analyse.html</guid>
-      <pubDate>Sat, 09 May 2026 10:59:37 +0000</pubDate>
-      <description>Shift07 hat 58 Steuerberater-Websites in Deutschland analysiert. Ergebnis: 50% fehlen strukturierte Daten, 42% sind JavaScript-überladen, 33% riskieren Duplicate Content. Die vollständige Auswertung.</description>
-      <category>SEO-Analyse</category>
     </item>
   </channel>
 </rss>
