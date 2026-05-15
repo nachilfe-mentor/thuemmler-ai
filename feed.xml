@@ -5,8 +5,24 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Thu, 14 May 2026 14:21:22 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 15 May 2026 01:39:40 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Screaming Frog SEO Spider: Vollständige Anleitung 2026</title>
+      <link>https://shift07.ai/blog/screaming-frog-seo-spider-anleitung.html</link>
+      <guid>https://shift07.ai/blog/screaming-frog-seo-spider-anleitung.html</guid>
+      <pubDate>Fri, 15 May 2026 01:39:15 +0000</pubDate>
+      <description>Screaming Frog SEO Spider richtig nutzen: Installation, Crawl-Einstellungen, die wichtigsten Reports und wie du technische SEO-Fehler schnell findest.</description>
+      <category>Tech-SEO</category>
+    </item>
+    <item>
+      <title>Google Analytics 4 einrichten: Schritt-für-Schritt-Anleitung 2026</title>
+      <link>https://shift07.ai/blog/google-analytics-4-einrichten-anleitung.html</link>
+      <guid>https://shift07.ai/blog/google-analytics-4-einrichten-anleitung.html</guid>
+      <pubDate>Thu, 14 May 2026 14:24:02 +0000</pubDate>
+      <description>Google Analytics 4 einrichten in 6 Schritten: Konto anlegen, Tag einbauen, Conversions definieren und mit der Search Console verknüpfen – die komplette Anleitung für 2026.</description>
+      <category>SEO Grundlagen</category>
+    </item>
     <item>
       <title>Mobile Optimierung für Websites: Die komplette Checkliste 2026</title>
       <link>https://shift07.ai/blog/mobile-optimierung-website-checkliste.html</link>
@@ -149,22 +165,6 @@
       <guid>https://shift07.ai/blog/movie-tvseries-schema-markup-vertieft.html</guid>
       <pubDate>Sat, 09 May 2026 10:58:19 +0000</pubDate>
       <description>Movie und TVSeries Schema Markup vertieft: MovieSeries-Hierarchie, TVSeason, TVEpisode, Trailer als VideoObject, aggregateRating und Google Knowledge Panel richtig implementieren.</description>
-      <category>Schema Markup</category>
-    </item>
-    <item>
-      <title>PodcastSeries Schema Markup Generator: JSON-LD für Podcasts in Google</title>
-      <link>https://shift07.ai/blog/podcastseries-schema-markup-generator.html</link>
-      <guid>https://shift07.ai/blog/podcastseries-schema-markup-generator.html</guid>
-      <pubDate>Sat, 09 May 2026 10:48:05 +0000</pubDate>
-      <description>PodcastSeries und PodcastEpisode Schema Markup vollständig erklärt: wie du mit unserem kostenlosen Generator JSON-LD erstellst, Podcast-Rich-Results aktivierst und Spotify, Apple Podcasts verknüpfst.</description>
-      <category>Schema Markup</category>
-    </item>
-    <item>
-      <title>MedicalCondition Schema Markup vertieft: Krankheiten und Beschwerden für Google richtig strukturieren</title>
-      <link>https://shift07.ai/blog/medicalcondition-schema-markup-vertieft.html</link>
-      <guid>https://shift07.ai/blog/medicalcondition-schema-markup-vertieft.html</guid>
-      <pubDate>Sat, 09 May 2026 10:41:25 +0000</pubDate>
-      <description>MedicalCondition Schema Markup vollständig erklärt: alle Properties, JSON-LD-Beispiele für Diagnosen, Symptome und Behandlungen – und was Google bei YMYL-Inhalten wirklich bewertet.</description>
       <category>Schema Markup</category>
     </item>
   </channel>
