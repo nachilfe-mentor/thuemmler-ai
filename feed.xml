@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Fri, 15 May 2026 03:25:11 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 15 May 2026 03:28:48 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Bild-Dateigrößen für SEO optimieren: WebP, AVIF und LCP verbessern 2026</title>
+      <link>https://shift07.ai/blog/bilder-seo-dateigroesse-webp-avif.html</link>
+      <guid>https://shift07.ai/blog/bilder-seo-dateigroesse-webp-avif.html</guid>
+      <pubDate>Fri, 15 May 2026 03:28:22 +0000</pubDate>
+      <description>Zu große Bilder sind der häufigste Grund für schlechte Core Web Vitals. So reduzierst du Bild-Dateigrößen mit WebP, AVIF und Lazy Loading — und verbesserst deinen LCP-Score.</description>
+      <category>Performance</category>
+    </item>
     <item>
       <title>Favicon und Touch-Icons für SEO: Die vollständige Einbindungsanleitung 2026</title>
       <link>https://shift07.ai/blog/favicon-touch-icons-seo.html</link>
@@ -157,14 +165,6 @@
       <guid>https://shift07.ai/blog/movie-tvseries-schema-generator.html</guid>
       <pubDate>Sat, 09 May 2026 12:42:10 +0000</pubDate>
       <description>Mit dem Movie &amp;amp; TVSeries Schema Generator erstellst du JSON-LD für Filme, Serien, Staffeln und Episoden – kostenlos, ohne Coding-Kenntnisse. Anleitung mit Beispielen.</description>
-      <category>Schema Markup</category>
-    </item>
-    <item>
-      <title>ClaimReview Schema Generator: Faktencheck JSON-LD kostenlos erstellen</title>
-      <link>https://shift07.ai/blog/claimreview-schema-generator.html</link>
-      <guid>https://shift07.ai/blog/claimreview-schema-generator.html</guid>
-      <pubDate>Sat, 09 May 2026 11:01:41 +0000</pubDate>
-      <description>Mit dem kostenlosen ClaimReview Schema Generator von Shift07 erstellst du Faktencheck-Markup für Google News in Sekunden. Anleitung, Beispiele und Tipps zur Validierung.</description>
       <category>Schema Markup</category>
     </item>
   </channel>
