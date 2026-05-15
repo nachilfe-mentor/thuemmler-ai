@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Fri, 15 May 2026 05:03:42 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 15 May 2026 05:07:48 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>hreflang Praxisleitfaden: Fehler vermeiden bei mehrsprachigen Websites 2026</title>
+      <link>https://shift07.ai/blog/hreflang-praxisleitfaden-mehrsprachige-seo.html</link>
+      <guid>https://shift07.ai/blog/hreflang-praxisleitfaden-mehrsprachige-seo.html</guid>
+      <pubDate>Fri, 15 May 2026 05:07:07 +0000</pubDate>
+      <description>Der vollständige hreflang-Praxisleitfaden: Häufige Fehler, korrekte Implementierung, x-default, Sitemap-Integration und Debugging – mit Code-Beispielen für 2026.</description>
+      <category>SEO</category>
+    </item>
     <item>
       <title>Bild-Dateigrößen für SEO optimieren: WebP, AVIF und LCP verbessern 2026</title>
       <link>https://shift07.ai/blog/bilder-seo-dateigroesse-webp-avif.html</link>
@@ -158,14 +166,6 @@
       <pubDate>Sat, 09 May 2026 12:48:58 +0000</pubDate>
       <description>Der NAP-Konsistenz-Checker prüft, ob Name, Adresse und Telefon deines Unternehmens auf Website, Google Business und Verzeichnissen übereinstimmen. Anleitung und Hintergründe.</description>
       <category>Lokal-SEO</category>
-    </item>
-    <item>
-      <title>Movie &amp;amp; TVSeries Schema Generator: JSON-LD für Filme und Serien kostenlos erstellen</title>
-      <link>https://shift07.ai/blog/movie-tvseries-schema-generator.html</link>
-      <guid>https://shift07.ai/blog/movie-tvseries-schema-generator.html</guid>
-      <pubDate>Sat, 09 May 2026 12:42:10 +0000</pubDate>
-      <description>Mit dem Movie &amp;amp; TVSeries Schema Generator erstellst du JSON-LD für Filme, Serien, Staffeln und Episoden – kostenlos, ohne Coding-Kenntnisse. Anleitung mit Beispielen.</description>
-      <category>Schema Markup</category>
     </item>
   </channel>
 </rss>
