@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gzip-Komprimierung aktivieren: Anleitung für Apache, Nginx & PHP | Shift07 Blog</title>
+    <meta name="description" content="Gzip und Brotli-Komprimierung für Websites aktivieren: Schritt-für-Schritt-Anleitung für Apache, Nginx, Cloudflare und PHP. Spart bis zu 80% Bandbreite.">
+    <meta name="author" content="Thümmler AI GmbH">
+    <link rel="icon" type="image/png" href="/logo.png">
+    <link rel="canonical" href="https://shift07.ai/blog/gzip-komprimierung-websites.html">
+    <link rel="alternate" type="application/rss+xml" title="Shift07 Blog" href="https://shift07.ai/feed.xml">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Gzip-Komprimierung aktivieren: Anleitung für Apache, Nginx & PHP | Shift07 Blog">
+    <meta property="og:description" content="Gzip und Brotli-Komprimierung für Websites aktivieren: Schritt-für-Schritt-Anleitung für Apache, Nginx, Cloudflare und PHP. Spart bis zu 80% Bandbreite.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://shift07.ai/blog/gzip-komprimierung-websites.html">
+    <meta property="og:image" content="https://shift07.ai/blog/images/gzip-komprimierung-websites.png">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="Shift07">
+    <meta property="article:published_time" content="2026-05-15T10:00:00+02:00">
+    <meta property="article:section" content="Performance">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Gzip-Komprimierung aktivieren: Apache, Nginx & PHP Anleitung 2026">
+    <meta name="twitter:description" content="Gzip und Brotli aktivieren für bis zu 80% Bandbreite-Ersparnis. Schritt-für-Schritt für Apache, Nginx und PHP.">
+    <meta name="twitter:image" content="https://shift07.ai/blog/images/gzip-komprimierung-websites.png">
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Gzip-Komprimierung aktivieren: Anleitung für Apache, Nginx & PHP",
+      "description": "Gzip und Brotli-Komprimierung für Websites aktivieren: Schritt-für-Schritt-Anleitung für Apache, Nginx, Cloudflare und PHP. Spart bis zu 80% Bandbreite.",
+      "image": "https://shift07.ai/blog/images/gzip-komprimierung-websites.png",
+      "datePublished": "2026-05-15T10:00:00+02:00",
+      "dateModified": "2026-05-15T10:00:00+02:00",
+      "author": {
+        "@type": "Organization",
+        "name": "Shift07",
+        "url": "https://shift07.ai"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Shift07",
+        "url": "https://shift07.ai",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://shift07.ai/assets/logo.png"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://shift07.ai/blog/gzip-komprimierung-websites.html"
+      }
+    }
+    </script>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K1S1RXBDS8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K1S1RXBDS8');
+    </script>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8475857002943858" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-inter bg-gray-50 text-gray-900">
+
+    <!-- Navigation -->
+    <nav class="bg-white border-b border-gray-200 sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="/" class="flex items-center space-x-2">
+                    <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                    <span class="font-bold text-xl text-gray-900">Shift07</span>
+                </a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="/blog/" class="text-gray-600 hover:text-blue-600 font-medium transition-colors">Blog</a>
+                    <a href="/tools/" class="text-gray-600 hover:text-blue-600 font-medium transition-colors">Tools</a>
+                    <a href="/#analyse" class="bg-blue-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-blue-700 transition-colors">Kostenlose Analyse</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <div class="bg-gradient-to-br from-green-900 via-teal-800 to-blue-900 text-white py-16">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center space-x-2 text-green-300 text-sm mb-4">
+                <a href="/blog/" class="hover:text-white transition-colors">Blog</a>
+                <span>›</span>
+                <span>Performance</span>
+            </div>
+            <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-6">
+                Gzip-Komprimierung aktivieren: Anleitung für Apache, Nginx & PHP
+            </h1>
+            <p class="text-xl text-green-100 mb-8 leading-relaxed">
+                HTTP-Komprimierung spart 60–80 % Bandbreite und verbessert direkt LCP, TTFB und Core Web Vitals. Diese Anleitung erklärt, wie du Gzip und Brotli auf deinem Server aktivierst.
+            </p>
+            <div class="flex flex-wrap items-center gap-4 text-green-300 text-sm">
+                <span>von Laurenz Thümmler</span>
+                <span>•</span>
+                <span>15. Mai 2026</span>
+                <span>•</span>
+                <span>12 Min. Lesezeit</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-12">
+
+            <!-- Article -->
+            <article class="lg:col-span-3">
+
+                <!-- Hero Image -->
+                <img src="/blog/images/gzip-komprimierung-websites.png"
+                     alt="Gzip Komprimierung Website aktivieren — Ladezeit verbessern und SEO optimieren"
+                     class="w-full rounded-xl shadow-lg mb-10">
+
+                <!-- Intro -->
+                <div class="prose prose-lg max-w-none">
+                    <p class="text-xl text-gray-700 leading-relaxed mb-8">
+                        <strong>Gzip-Komprimierung</strong> ist eine der einfachsten und wirksamsten Maßnahmen zur Verbesserung der Website-Performance. Aktiviert auf dem Server, reduziert sie die Größe von HTML-, CSS- und JavaScript-Dateien um 60–80 % — ohne jede Qualitätseinbuße. Die meisten Hosting-Umgebungen unterstützen Gzip (oder das modernere Brotli), aber es ist nicht immer standardmäßig aktiviert.
+                    </p>
+
+                    <div class="bg-green-50 border border-green-200 rounded-xl p-6 mb-8">
+                        <h2 class="text-lg font-bold text-green-900 mt-0 mb-3">Was du in diesem Artikel lernst</h2>
+                        <ul class="text-green-800 space-y-1 m-0">
+                            <li>✓ Was Gzip/Brotli macht und warum es SEO-relevant ist</li>
+                            <li>✓ Gzip auf Apache aktivieren (.htaccess)</li>
+                            <li>✓ Gzip auf Nginx aktivieren (nginx.conf)</li>
+                            <li>✓ Brotli als Upgrade zu Gzip einrichten</li>
+                            <li>✓ Komprimierung in PHP aktivieren</li>
+                            <li>✓ Cloudflare und CDN-Einstellungen</li>
+                            <li>✓ WordPress-spezifische Einstellungen</li>
+                            <li>✓ Komprimierung testen und verifizieren</li>
+                        </ul>
+                    </div>
+
+                    <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4">Warum HTTP-Komprimierung so wichtig ist</h2>
+                    <p>
+                        Wenn ein Browser eine Seite aufruft, überträgt der Server HTML, CSS, JavaScript und andere Textdateien. Ohne Komprimierung werden diese Dateien in voller Größe gesendet — oft 100–500 KB pro Seite. Mit Gzip oder Brotli wird diese Größe auf 20–40 KB reduziert.
+                    </p>
+                    <p>
+                        Das wirkt sich direkt auf mehrere SEO-Faktoren aus:
+                    </p>
+                    <ul class="space-y-2">
+                        <li><strong>TTFB (Time to First Byte):</strong> Schnellere Übertragung → Browser empfängt erste Bytes früher</li>
+                        <li><strong>LCP (Largest Contentful Paint):</strong> Haupt-Ressourcen laden schneller → LCP-Wert verbessert sich</li>
+                        <li><strong>Mobile Performance:</strong> Mobilverbindungen profitieren besonders von kleineren Dateien</li>
+                        <li><strong>Crawl-Effizienz:</strong> Googlebot crawlt mehr Seiten mit weniger Bandbreite</li>
+                    </ul>
+                    <p>
+                        Google hat Page Speed als direkten Ranking-Faktor bestätigt — fehlende Komprimierung ist in PageSpeed Insights eines der ersten gemeldeten Probleme. Mehr zur Bedeutung von <a href="/blog/ladezeit-ranking-faktor-page-speed.html" class="text-blue-600 hover:underline">Ladezeit als Ranking-Faktor</a> erklärt unser ausführlicher Artikel dazu.
+                    </p>
+
+                    <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4">Gzip vs. Brotli: Was solltest du nutzen?</h2>
+                    <p>
+                        Beide sind HTTP-Komprimierungsformate, aber Brotli ist der modernere Standard:
+                    </p>
+                    <ul class="space-y-2">
+                        <li><strong>Gzip:</strong> Seit Jahrzehnten Standard, von allen Browsern und Servern unterstützt. Komprimiert HTML/CSS/JS um 60–70 %.</li>
+                        <li><strong>Brotli (br):</strong> Entwickelt von Google, 10–20 % bessere Kompression als Gzip. Unterstützt von allen modernen Browsern (Chrome, Firefox, Edge, Safari). Benötigt HTTPS.</li>
+                    </ul>
+                    <p>
+                        <strong>Empfehlung:</strong> Aktiviere beide. Browser senden im Request-Header an, welche Formate sie unterstützen (<code>Accept-Encoding: br, gzip, deflate</code>). Der Server wählt dann das beste Format. Ältere Clients erhalten Gzip als Fallback.
+                    </p>
+
+                    <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4">Gzip auf Apache aktivieren</h2>
+
+                    <h3 class="text-xl font-semibold text-gray-900 mt-6 mb-3">Variante 1: .htaccess (empfohlen für Shared Hosting)</h3>
+                    <p>Füge folgende Zeilen in die <code>.htaccess</code>-Datei im Wurzelverzeichnis deiner Website ein:</p>
+
+                    <pre class="bg-gray-900 text-green-300 rounded-xl p-5 overflow-x-auto text-sm mb-6"><code>&lt;IfModule mod_deflate.c&gt;
+    # Komprimierung für Textformate aktivieren
+    AddOutputFilterByType DEFLATE text/html
+    AddOutputFilterByType DEFLATE text/plain
+    AddOutputFilterByType DEFLATE text/css
+    AddOutputFilterByType DEFLATE text/javascript
+    AddOutputFilterByType DEFLATE text/xml
+    AddOutputFilterByType DEFLATE application/javascript
+    AddOutputFilterByType DEFLATE application/x-javascript
+    AddOutputFilterByType DEFLATE application/json
+    AddOutputFilterByType DEFLATE application/xml
+    AddOutputFilterByType DEFLATE application/rss+xml
+    AddOutputFilterByType DEFLATE application/atom+xml
+    AddOutputFilterByType DEFLATE image/svg+xml
+
+    # Alte Browser die Komprimierung falsch handhaben ausschließen
+    BrowserMatch ^Mozilla/4 gzip-only-text/html
+    BrowserMatch ^Mozilla/4\.0[678] no-gzip
+    BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
+
+    # Komprimierte Antworten korrekt cachen
+    Header append Vary User-Agent
+&lt;/IfModule&gt;</code></pre>
+
+                    <h3 class="text-xl font-semibold text-gray-900 mt-6 mb-3">Variante 2: Apache-Konfigurationsdatei (VirtualHost)</h3>
+                    <p>Für Server mit direktem Zugriff auf die Apache-Konfiguration (<code>httpd.conf</code> oder <code>apache2.conf</code>):</p>
+
+                    <pre class="bg-gray-900 text-green-300 rounded-xl p-5 overflow-x-auto text-sm mb-6"><code># Modul laden (falls noch nicht aktiv)
+LoadModule deflate_module modules/mod_deflate.so
+LoadModule headers_module modules/mod_headers.so
+
+&lt;VirtualHost *:80&gt;
+    # Gzip für alle Textdateien
+    &lt;Location /&gt;
+        SetOutputFilter DEFLATE
+        SetEnvIfNoCase Request_URI \.(?:gif|jpe?g|png|webp)$ no-gzip
+    &lt;/Location&gt;
+&lt;/VirtualHost&gt;</code></pre>
+
+                    <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-4 mb-6">
+                        <p class="text-yellow-800 text-sm"><strong>Wichtig:</strong> Das Modul <code>mod_deflate</code> muss aktiviert sein. Prüfe mit <code>apache2ctl -M | grep deflate</code>. Aktivieren: <code>a2enmod deflate && systemctl restart apache2</code></p>
+                    </div>
+
+                    <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4">Gzip auf Nginx aktivieren</h2>
+                    <p>Nginx unterstützt Gzip nativ ohne zusätzliche Module. Füge diese Konfiguration in den <code>http {}</code>-Block deiner <code>nginx.conf</code> ein:</p>
+
+                    <pre class="bg-gray-900 text-green-300 rounded-xl p-5 overflow-x-auto text-sm mb-6"><code>http {
+    # Gzip aktivieren
+    gzip on;
+    gzip_vary on;
+    gzip_proxied any;
+
+    # Kompressionsrate: 1 (schnell) bis 9 (maximale Kompression, mehr CPU)
+    # Level 6 ist ein guter Kompromiss
+    gzip_comp_level 6;
+
+    # Dateien unter 1KB nicht komprimieren (kein Vorteil)
+    gzip_min_length 1024;
+
+    # HTTP/1.0 Proxies unterstützen
+    gzip_http_version 1.0;
+
+    # Zu komprimierende MIME-Types
+    gzip_types
+        text/html
+        text/plain
+        text/css
+        text/javascript
+        text/xml
+        application/javascript
+        application/x-javascript
+        application/json
+        application/xml
+        application/rss+xml
+        application/atom+xml
+        image/svg+xml;
+
+    # Bilder NICHT komprimieren (bereits komprimiert, kein Vorteil)
+    # Ausgenommen: SVG (ist XML, komprimierbar)
+}</code></pre>
+
+                    <p>Nginx neu laden: <code>nginx -t && systemctl reload nginx</code></p>
+
+                    <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4">Brotli auf Nginx aktivieren (Upgrade)</h2>
+                    <p>Brotli benötigt das <code>ngx_brotli</code>-Modul. Bei neueren Ubuntu/Debian-Systemen ist es oft bereits als Paket verfügbar:</p>
+
+                    <pre class="bg-gray-900 text-green-300 rounded-xl p-5 overflow-x-auto text-sm mb-6"><code># Paket installieren (Ubuntu/Debian)
+apt install libnginx-mod-http-brotli-filter libnginx-mod-http-brotli-static
+
+# In nginx.conf im http {} Block:
+brotli on;
+brotli_comp_level 6;
+brotli_static on;
+brotli_types
+    text/html
+    text/plain
+    text/css
+    text/javascript
+    application/javascript
+    application/json
+    application/xml
+    image/svg+xml;</code></pre>
+
+                    <div class="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-6">
+                        <p class="text-blue-800 text-sm"><strong>Hinweis:</strong> Wenn sowohl Gzip als auch Brotli aktiv sind, wählt Nginx automatisch Brotli wenn der Browser es im <code>Accept-Encoding</code>-Header signalisiert. Kein weiterer Konfigurationsaufwand nötig.</p>
+                    </div>
+
+                    <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4">Gzip in PHP aktivieren</h2>
+                    <p>
+                        Falls kein direkter Serverzugriff möglich ist, kann PHP die Ausgabe komprimieren. Füge dies am Anfang deiner PHP-Dateien oder in einer globalen Bootstrap-Datei ein:
+                    </p>
+
+                    <pre class="bg-gray-900 text-green-300 rounded-xl p-5 overflow-x-auto text-sm mb-6"><code>&lt;?php
+// Output-Buffering mit Gzip-Komprimierung aktivieren
+if (extension_loaded('zlib') && !headers_sent()) {
+    ob_start('ob_gzhandler');
+}
+// ... restlicher Code</code></pre>
+
+                    <p>Oder via <code>php.ini</code>:</p>
+                    <pre class="bg-gray-900 text-green-300 rounded-xl p-5 overflow-x-auto text-sm mb-6"><code>zlib.output_compression = On
+zlib.output_compression_level = 6</code></pre>
+
+                    <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-4 mb-6">
+                        <p class="text-yellow-800 text-sm"><strong>Achtung:</strong> PHP-Gzip und Server-Gzip gleichzeitig aktivieren führt zu doppelter Komprimierung und kann Fehler verursachen. Nutze nur eine Methode.</p>
+                    </div>
+
+                    <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4">Komprimierung über Cloudflare aktivieren</h2>
+                    <p>
+                        Wenn du Cloudflare als CDN nutzt, aktiviert Cloudflare Gzip automatisch für alle Proxied-Ressourcen. Brotli kannst du aktivieren unter:
+                    </p>
+                    <ol class="space-y-1">
+                        <li>Cloudflare Dashboard → deine Domain → <strong>Speed</strong> → <strong>Optimization</strong></li>
+                        <li>Abschnitt <strong>Protocol Optimization</strong></li>
+                        <li><strong>Brotli</strong>: Schalter auf ON</li>
+                    </ol>
+                    <p>
+                        Cloudflare komprimiert dann Antworten zwischen Cloudflare-Edge und Browser mit Brotli, selbst wenn dein Ursprungsserver nur Gzip oder gar keine Komprimierung liefert.
+                    </p>
+
+                    <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4">WordPress: Gzip per Plugin oder .htaccess</h2>
+                    <p>
+                        WordPress-Nutzer auf Apache können Gzip direkt per <code>.htaccess</code> aktivieren (Methode oben). Zusätzlich bieten Performance-Plugins eine einfachere Oberfläche:
+                    </p>
+                    <ul class="space-y-2">
+                        <li><strong>WP Rocket:</strong> Einstellungen → Dateioptimierung → Gzip-Komprimierung aktivieren</li>
+                        <li><strong>LiteSpeed Cache:</strong> Automatisch aktiviert wenn LiteSpeed-Server vorhanden</li>
+                        <li><strong>W3 Total Cache:</strong> Performance → Browser Cache → Enable HTTP (gzip) compression</li>
+                        <li><strong>Autoptimize:</strong> Extra-Einstellungen → Enable Gzip compression</li>
+                    </ul>
+                    <p>
+                        Mehr zu WordPress-Performance-Optimierung erklärt unser <a href="/blog/wordpress-seo-optimieren.html" class="text-blue-600 hover:underline">WordPress SEO Leitfaden</a>.
+                    </p>
+
+                    <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4">Komprimierung testen und verifizieren</h2>
+
+                    <h3 class="text-xl font-semibold text-gray-900 mt-6 mb-3">Methode 1: Chrome DevTools</h3>
+                    <ol class="space-y-2">
+                        <li>Öffne Chrome und rufe deine Website auf</li>
+                        <li>Öffne DevTools (F12) → Tab <strong>Network</strong></li>
+                        <li>Lade die Seite neu (Ctrl+Shift+R für Hard Reload)</li>
+                        <li>Klicke auf die erste HTML-Anfrage</li>
+                        <li>Unter <strong>Response Headers</strong>: Prüfe <code>content-encoding: gzip</code> oder <code>content-encoding: br</code></li>
+                    </ol>
+
+                    <h3 class="text-xl font-semibold text-gray-900 mt-6 mb-3">Methode 2: curl im Terminal</h3>
+                    <pre class="bg-gray-900 text-green-300 rounded-xl p-5 overflow-x-auto text-sm mb-6"><code># Gzip testen
+curl -I -H "Accept-Encoding: gzip" https://example.de
+
+# Brotli testen
+curl -I -H "Accept-Encoding: br" https://example.de
+
+# In der Ausgabe suchen nach:
+# content-encoding: gzip
+# oder
+# content-encoding: br</code></pre>
+
+                    <h3 class="text-xl font-semibold text-gray-900 mt-6 mb-3">Methode 3: Online-Tool</h3>
+                    <p>
+                        Nutze unseren <a href="/tools/gzip-compression-checker.html" class="text-blue-600 hover:underline">Gzip/Brotli-Compression-Checker</a> um die Komprimierungsstatus deiner Website schnell zu prüfen — kein Terminal oder DevTools nötig.
+                    </p>
+
+                    <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4">Was Gzip und was nicht komprimieren</h2>
+
+                    <div class="overflow-x-auto mb-8">
+                        <table class="w-full border-collapse border border-gray-300 text-sm">
+                            <thead>
+                                <tr class="bg-gray-100">
+                                    <th class="border border-gray-300 px-4 py-3 text-left font-semibold">Dateitype</th>
+                                    <th class="border border-gray-300 px-4 py-3 text-left font-semibold">Komprimieren?</th>
+                                    <th class="border border-gray-300 px-4 py-3 text-left font-semibold">Begründung</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="border border-gray-300 px-4 py-3">HTML, CSS, JS</td>
+                                    <td class="border border-gray-300 px-4 py-3 text-green-600 font-semibold">✓ Ja</td>
+                                    <td class="border border-gray-300 px-4 py-3">Textformate mit hohem Wiederholungsanteil — 60–80 % Einsparung</td>
+                                </tr>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="border border-gray-300 px-4 py-3">XML, JSON, SVG</td>
+                                    <td class="border border-gray-300 px-4 py-3 text-green-600 font-semibold">✓ Ja</td>
+                                    <td class="border border-gray-300 px-4 py-3">Textbasierte Formate, gut komprimierbar</td>
+                                </tr>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="border border-gray-300 px-4 py-3">Schriften (WOFF2)</td>
+                                    <td class="border border-gray-300 px-4 py-3 text-red-600 font-semibold">✗ Nein</td>
+                                    <td class="border border-gray-300 px-4 py-3">WOFF2 ist bereits komprimiert — doppelte Komprimierung erhöht Größe</td>
+                                </tr>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="border border-gray-300 px-4 py-3">JPEG, PNG, WebP</td>
+                                    <td class="border border-gray-300 px-4 py-3 text-red-600 font-semibold">✗ Nein</td>
+                                    <td class="border border-gray-300 px-4 py-3">Bilder sind bereits komprimiert — kein weiterer Vorteil</td>
+                                </tr>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="border border-gray-300 px-4 py-3">ZIP, PDF, MP4</td>
+                                    <td class="border border-gray-300 px-4 py-3 text-red-600 font-semibold">✗ Nein</td>
+                                    <td class="border border-gray-300 px-4 py-3">Bereits komprimierte Binärdateien — nicht sinnvoll</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4">Performance-Impact: Reale Zahlen</h2>
+                    <p>
+                        Zur Illustration: Eine typische WordPress-Seite vor und nach Gzip:
+                    </p>
+                    <ul class="space-y-2">
+                        <li><strong>HTML:</strong> 45 KB → 11 KB (75 % kleiner)</li>
+                        <li><strong>CSS (Bootstrap):</strong> 152 KB → 22 KB (85 % kleiner)</li>
+                        <li><strong>JavaScript:</strong> 87 KB → 29 KB (67 % kleiner)</li>
+                        <li><strong>Gesamt:</strong> ~284 KB → ~62 KB — über <strong>78 % Einsparung</strong></li>
+                    </ul>
+                    <p>
+                        Auf einer mobilen 4G-Verbindung (20 Mbit/s) bedeutet das: Statt 0,11 Sekunden nur für den Transfer lädt die Seite in 0,025 Sekunden — eine Verbesserung von 0,085 Sekunden, die direkt im LCP-Wert sichtbar wird. Mehr dazu in unserem Artikel zu <a href="/blog/core-web-vitals-verbessern-lcp-cls-inp.html" class="text-blue-600 hover:underline">Core Web Vitals verbessern</a>.
+                    </p>
+
+                    <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4">Häufige Fehler und ihre Lösung</h2>
+
+                    <div class="space-y-4 mb-8">
+                        <div class="bg-red-50 border border-red-200 rounded-lg p-4">
+                            <p class="font-semibold text-red-900">Problem: Gzip aktiv, aber doppelte Komprimierung</p>
+                            <p class="text-red-800 text-sm mt-1">Wenn sowohl PHP-Gzip (ob_gzhandler) als auch Server-Gzip aktiv sind, wird die Datei doppelt komprimiert und der Browser kann sie nicht entpacken. Deaktiviere eine der beiden Methoden.</p>
+                        </div>
+                        <div class="bg-red-50 border border-red-200 rounded-lg p-4">
+                            <p class="font-semibold text-red-900">Problem: Nur manche Seiten werden komprimiert</p>
+                            <p class="text-red-800 text-sm mt-1">Oft passiert das bei Caching-Plugins, die bereits komprimierte Versionen ausliefern. Prüfe, ob der Cache geleert wird wenn du Gzip aktivierst, und ob das Plugin Gzip-fähige Caches erstellt.</p>
+                        </div>
+                        <div class="bg-red-50 border border-red-200 rounded-lg p-4">
+                            <p class="font-semibold text-red-900">Problem: mod_deflate nicht geladen</p>
+                            <p class="text-red-800 text-sm mt-1">Prüfe mit <code>apache2ctl -M | grep deflate</code>. Wenn nicht vorhanden: <code>a2enmod deflate && systemctl restart apache2</code>. Einige Shared-Hosting-Anbieter haben das Modul nicht aktiviert — dann PHP-Gzip nutzen.</p>
+                        </div>
+                    </div>
+
+                    <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4">Checkliste: Komprimierung richtig einrichten</h2>
+                    <div class="bg-gray-50 border border-gray-200 rounded-xl p-6 mb-8">
+                        <ol class="space-y-2 text-gray-700 m-0">
+                            <li class="flex items-start gap-2"><span class="text-green-600 font-bold">1.</span> Server prüfen: Apache, Nginx oder PHP-basiert?</li>
+                            <li class="flex items-start gap-2"><span class="text-green-600 font-bold">2.</span> Passende Konfiguration aus dieser Anleitung wählen und anwenden</li>
+                            <li class="flex items-start gap-2"><span class="text-green-600 font-bold">3.</span> Nur Textformate einschließen (HTML, CSS, JS, XML, JSON, SVG)</li>
+                            <li class="flex items-start gap-2"><span class="text-green-600 font-bold">4.</span> Bilder und bereits komprimierte Formate ausschließen</li>
+                            <li class="flex items-start gap-2"><span class="text-green-600 font-bold">5.</span> Mit DevTools oder curl verifizieren: content-encoding Header prüfen</li>
+                            <li class="flex items-start gap-2"><span class="text-green-600 font-bold">6.</span> In PageSpeed Insights gegenchecken: "Serve content with efficient encoding"</li>
+                            <li class="flex items-start gap-2"><span class="text-green-600 font-bold">7.</span> Optional: Brotli als Upgrade aktivieren (10–20 % besser als Gzip)</li>
+                            <li class="flex items-start gap-2"><span class="text-green-600 font-bold">8.</span> TTFB und LCP im Blick behalten — sollten sich verbessern</li>
+                        </ol>
+                    </div>
+
+                    <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4">Fazit</h2>
+                    <p>
+                        Gzip-Komprimierung ist eine der einfachsten Performance-Optimierungen mit dem größten Impact: wenige Zeilen Konfiguration, keine Qualitätseinbußen, bis zu 80 % kleinere Dateiübertragungen. Kombiniert mit Browser-Caching und optimierten Bildern legen diese drei Maßnahmen die Grundlage für gute Core-Web-Vitals-Werte.
+                    </p>
+                    <p>
+                        Prüfe zuerst mit unserem <a href="/tools/gzip-compression-checker.html" class="text-blue-600 hover:underline">Gzip/Brotli-Compression-Checker</a>, ob deine Website bereits komprimiert — und nutze dann die passende Anleitung aus diesem Artikel, um den Status bei Bedarf zu korrigieren. Weitere Performance-Maßnahmen erklärt unser TTFB-Leitfaden zur <a href="/blog/ttfb-verbessern-server-antwortzeit.html" class="text-blue-600 hover:underline">Server-Antwortzeit verbessern</a>.
+                    </p>
+
+                    <!-- CTA -->
+                    <div class="bg-gradient-to-br from-green-600 to-teal-700 text-white rounded-xl p-8 mt-10">
+                        <h2 class="text-2xl font-bold mt-0 mb-3">Performance deiner Website prüfen</h2>
+                        <p class="text-green-100 mb-6">
+                            shift07.ai analysiert deine Website auf Gzip, Ladezeiten, Core Web Vitals und über 50 weitere SEO-Faktoren — kostenlos und in Sekunden.
+                        </p>
+                        <a href="/#analyse" class="inline-block bg-white text-green-700 font-bold px-6 py-3 rounded-lg hover:bg-green-50 transition-colors">
+                            Jetzt kostenlos analysieren →
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Sidebar -->
+            <aside class="lg:col-span-1">
+                <div class="sticky top-24 space-y-6">
+                    <!-- Table of Contents -->
+                    <div class="bg-white border border-gray-200 rounded-xl p-5">
+                        <h3 class="font-bold text-gray-900 mb-4 text-sm uppercase tracking-wide">Inhalt</h3>
+                        <nav class="space-y-2 text-sm">
+                            <a href="#" class="block text-gray-600 hover:text-blue-600">Warum Komprimierung?</a>
+                            <a href="#" class="block text-gray-600 hover:text-blue-600">Gzip vs. Brotli</a>
+                            <a href="#" class="block text-gray-600 hover:text-blue-600">Apache (.htaccess)</a>
+                            <a href="#" class="block text-gray-600 hover:text-blue-600">Nginx (nginx.conf)</a>
+                            <a href="#" class="block text-gray-600 hover:text-blue-600">Brotli auf Nginx</a>
+                            <a href="#" class="block text-gray-600 hover:text-blue-600">PHP</a>
+                            <a href="#" class="block text-gray-600 hover:text-blue-600">Cloudflare</a>
+                            <a href="#" class="block text-gray-600 hover:text-blue-600">WordPress</a>
+                            <a href="#" class="block text-gray-600 hover:text-blue-600">Testen & Verifizieren</a>
+                        </nav>
+                    </div>
+
+                    <!-- Tool CTA -->
+                    <div class="bg-green-50 border border-green-200 rounded-xl p-5">
+                        <h3 class="font-bold text-green-900 mb-2 text-sm">Komprimierung prüfen</h3>
+                        <p class="text-green-800 text-xs mb-3">Ist Gzip oder Brotli auf deiner Website aktiv?</p>
+                        <a href="/tools/gzip-compression-checker.html" class="inline-block bg-green-600 text-white text-sm font-semibold px-4 py-2 rounded-lg hover:bg-green-700 transition-colors w-full text-center">
+                            Jetzt prüfen →
+                        </a>
+                    </div>
+
+                    <!-- Related Tools -->
+                    <div class="bg-white border border-gray-200 rounded-xl p-5">
+                        <h3 class="font-bold text-gray-900 mb-4 text-sm uppercase tracking-wide">Passende Tools</h3>
+                        <div class="space-y-3">
+                            <a href="/tools/gzip-compression-checker.html" class="flex items-center gap-2 text-sm text-blue-600 hover:underline">
+                                <span class="text-gray-400">→</span> Gzip/Brotli-Checker
+                            </a>
+                            <a href="/tools/http-header-checker.html" class="flex items-center gap-2 text-sm text-blue-600 hover:underline">
+                                <span class="text-gray-400">→</span> HTTP-Header-Checker
+                            </a>
+                            <a href="/tools/page-speed-estimator.html" class="flex items-center gap-2 text-sm text-blue-600 hover:underline">
+                                <span class="text-gray-400">→</span> Page-Speed-Estimator
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- AdSense -->
+                    <div class="bg-white border border-gray-200 rounded-xl p-5 text-center">
+                        <ins class="adsbygoogle"
+                             style="display:block"
+                             data-ad-client="ca-pub-8475857002943858"
+                             data-ad-slot="auto"
+                             data-ad-format="auto"
+                             data-full-width-responsive="true"></ins>
+                        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-12 mt-16">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Shift07</h4>
+                    <p class="text-sm">KI-gestütztes SEO-Analyse-Tool für deutsche Unternehmen.</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Tools</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="/tools/" class="hover:text-white transition-colors">Alle Tools</a></li>
+                        <li><a href="/tools/gzip-compression-checker.html" class="hover:text-white transition-colors">Gzip Checker</a></li>
+                        <li><a href="/tools/page-speed-estimator.html" class="hover:text-white transition-colors">Page Speed Estimator</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Blog</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="/blog/" class="hover:text-white transition-colors">Alle Artikel</a></li>
+                        <li><a href="/blog/ladezeit-ranking-faktor-page-speed.html" class="hover:text-white transition-colors">Page Speed & SEO</a></li>
+                        <li><a href="/blog/core-web-vitals-erklaert.html" class="hover:text-white transition-colors">Core Web Vitals</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Rechtliches</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="/impressum.html" class="hover:text-white transition-colors">Impressum</a></li>
+                        <li><a href="/datenschutz.html" class="hover:text-white transition-colors">Datenschutz</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-sm text-center">
+                © 2026 Thümmler AI GmbH · Leonardo-da-Vinci-Straße 15 · 14467 Potsdam
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
