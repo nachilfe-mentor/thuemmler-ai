@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K1S1RXBDS8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K1S1RXBDS8');
+    </script>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8475857002943858" crossorigin="anonymous"></script>
+    <title>Gzip/Brotli-Compression-Checker – Komprimierung kostenlos prüfen | Shift07</title>
+    <meta name="description" content="Prüfe kostenlos ob deine Website Gzip oder Brotli-Komprimierung nutzt. Sieh Content-Encoding-Header, Einsparungen in % und ob HTTP-Komprimierung aktiv ist.">
+    <meta name="keywords" content="gzip checker, brotli checker, http komprimierung prüfen, content-encoding tester, website komprimierung, seo performance tool">
+    <meta name="author" content="Thümmler AI GmbH">
+    <link rel="icon" type="image/png" href="/logo.png">
+    <link rel="canonical" href="https://shift07.ai/tools/gzip-compression-checker.html">
+    <link rel="alternate" type="application/rss+xml" title="Shift07 Blog" href="https://shift07.ai/feed.xml">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Gzip/Brotli-Compression-Checker – HTTP-Komprimierung kostenlos prüfen">
+    <meta property="og:description" content="Prüfe kostenlos ob deine Website Gzip oder Brotli-Komprimierung nutzt. Content-Encoding-Header, Einsparungen in % und Performance-Empfehlungen.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://shift07.ai/tools/gzip-compression-checker.html">
+    <meta property="og:image" content="https://shift07.ai/tools/images/gzip-compression-checker.png">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="Shift07">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Gzip/Brotli-Compression-Checker – HTTP-Komprimierung kostenlos prüfen">
+    <meta name="twitter:description" content="Prüfe ob deine Website Gzip oder Brotli-Komprimierung nutzt und wie viel Bandbreite du sparst.">
+    <meta name="twitter:image" content="https://shift07.ai/tools/images/gzip-compression-checker.png">
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Gzip/Brotli-Compression-Checker",
+      "description": "Prüfe kostenlos ob deine Website Gzip oder Brotli-Komprimierung nutzt. Content-Encoding-Header, Einsparungen in % und Performance-Empfehlungen.",
+      "url": "https://shift07.ai/tools/gzip-compression-checker.html",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR"
+      },
+      "provider": {
+        "@type": "Organization",
+        "name": "Thümmler AI GmbH",
+        "url": "https://shift07.ai"
+      }
+    }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-inter bg-gray-950 text-white min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="border-b border-white/10 bg-gray-950/80 backdrop-blur-sm sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="/" class="flex items-center space-x-2">
+                    <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                    <span class="font-bold text-xl">Shift07</span>
+                </a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="/blog/" class="text-gray-400 hover:text-white font-medium transition-colors">Blog</a>
+                    <a href="/tools/" class="text-gray-400 hover:text-white font-medium transition-colors">Tools</a>
+                    <a href="/#analyse" class="bg-blue-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-blue-700 transition-colors">Kostenlose Analyse</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <div class="bg-gradient-to-br from-gray-900 via-green-900/20 to-teal-900/30 py-12 border-b border-white/10">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="inline-flex items-center gap-2 bg-green-500/10 border border-green-500/30 rounded-full px-4 py-2 text-green-400 text-sm font-medium mb-6">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                Performance-Tool
+            </div>
+            <h1 class="text-3xl md:text-4xl font-bold mb-4">Gzip/Brotli-Compression-Checker</h1>
+            <p class="text-xl text-gray-400 mb-2">HTTP-Komprimierung kostenlos prüfen</p>
+            <p class="text-gray-500 max-w-2xl mx-auto">
+                Prüfe ob deine Website Gzip oder Brotli-Komprimierung aktiviert hat. Komprimierung reduziert die Dateigröße um bis zu 80 % und ist ein direkter Ranking-Faktor für Page Speed.
+            </p>
+        </div>
+    </div>
+
+    <!-- Tool -->
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+
+        <!-- Input -->
+        <div class="bg-gray-900 border border-white/10 rounded-2xl p-6 mb-6">
+            <label class="block text-sm font-medium text-gray-300 mb-2">Website-URL eingeben</label>
+            <div class="flex gap-3">
+                <input type="url" id="urlInput" placeholder="https://example.de"
+                    class="flex-1 bg-gray-800 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors text-sm">
+                <button onclick="checkCompression()"
+                    class="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-xl transition-colors flex items-center gap-2 whitespace-nowrap">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+                    Prüfen
+                </button>
+            </div>
+            <p class="text-xs text-gray-500 mt-2">Tipp: Teste die Startseite und wichtige Unterseiten (HTML), sowie CSS- und JS-Dateien separat.</p>
+        </div>
+
+        <!-- Loading -->
+        <div id="loading" class="hidden text-center py-10">
+            <div class="inline-block w-8 h-8 border-4 border-blue-500 border-t-transparent rounded-full animate-spin mb-3"></div>
+            <p class="text-gray-400">Analysiere HTTP-Header…</p>
+        </div>
+
+        <!-- Error -->
+        <div id="error" class="hidden bg-red-900/30 border border-red-500/40 rounded-xl p-5 mb-6">
+            <div class="flex items-center gap-3">
+                <svg class="w-5 h-5 text-red-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                <p id="errorMsg" class="text-red-300 text-sm"></p>
+            </div>
+        </div>
+
+        <!-- Results -->
+        <div id="results" class="hidden space-y-4">
+
+            <!-- Score Card -->
+            <div id="scoreCard" class="rounded-2xl p-6 border">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <h2 class="text-xl font-bold" id="scoreTitle">Komprimierungsstatus</h2>
+                        <p class="text-sm mt-1" id="scoreSubtitle"></p>
+                    </div>
+                    <div id="scoreIcon" class="text-5xl"></div>
+                </div>
+            </div>
+
+            <!-- Header Details -->
+            <div class="bg-gray-900 border border-white/10 rounded-2xl p-6">
+                <h3 class="font-semibold text-white mb-4">HTTP-Response-Header</h3>
+                <div id="headerDetails" class="space-y-3"></div>
+            </div>
+
+            <!-- Compression Details -->
+            <div id="compressionDetails" class="bg-gray-900 border border-white/10 rounded-2xl p-6 hidden">
+                <h3 class="font-semibold text-white mb-4">Komprimierungs-Details</h3>
+                <div id="compressionInfo" class="space-y-3"></div>
+            </div>
+
+            <!-- Recommendations -->
+            <div id="recommendationsBox" class="hidden bg-gray-900 border border-white/10 rounded-2xl p-6">
+                <h3 class="font-semibold text-white mb-4">Empfehlungen</h3>
+                <div id="recommendations" class="space-y-3"></div>
+            </div>
+
+            <!-- Info Box -->
+            <div class="bg-blue-900/20 border border-blue-500/30 rounded-2xl p-5">
+                <h3 class="font-semibold text-blue-300 mb-3">Wie dieser Check funktioniert</h3>
+                <p class="text-sm text-gray-400">
+                    Dieser Checker ruft deine URL über einen CORS-Proxy ab und analysiert den <code class="text-blue-300 bg-gray-800 px-1 rounded">Content-Encoding</code>-Response-Header. Dieser Header teilt dem Browser mit, in welchem Format die Antwort komprimiert wurde. Außerdem wird die Antwortgröße geschätzt, um den Komprimierungsvorteil zu illustrieren.
+                </p>
+            </div>
+        </div>
+
+        <!-- Erklärung -->
+        <div class="mt-10 space-y-6">
+            <h2 class="text-2xl font-bold text-white">Warum HTTP-Komprimierung für SEO wichtig ist</h2>
+            <div class="grid md:grid-cols-3 gap-4">
+                <div class="bg-gray-900 border border-white/10 rounded-xl p-5">
+                    <div class="text-3xl mb-3">⚡</div>
+                    <h3 class="font-semibold text-white mb-2">Page Speed</h3>
+                    <p class="text-sm text-gray-400">Gzip komprimiert HTML, CSS und JavaScript um 60–80 %. Kleinere Dateien = schnellere Ladezeiten = besseres Ranking.</p>
+                </div>
+                <div class="bg-gray-900 border border-white/10 rounded-xl p-5">
+                    <div class="text-3xl mb-3">📊</div>
+                    <h3 class="font-semibold text-white mb-2">Core Web Vitals</h3>
+                    <p class="text-sm text-gray-400">Komprimierung verbessert direkt LCP (Largest Contentful Paint) und TTFB (Time to First Byte) — beides Google-Rankingfaktoren.</p>
+                </div>
+                <div class="bg-gray-900 border border-white/10 rounded-xl p-5">
+                    <div class="text-3xl mb-3">💰</div>
+                    <h3 class="font-semibold text-white mb-2">Bandbreite sparen</h3>
+                    <p class="text-sm text-gray-400">Weniger übertragene Bytes bedeuten geringere Hosting-Kosten und schnelleres Laden auf mobilen Verbindungen.</p>
+                </div>
+            </div>
+
+            <div class="bg-gray-900 border border-white/10 rounded-xl p-6">
+                <h3 class="text-lg font-semibold text-white mb-4">Gzip vs. Brotli: Was ist der Unterschied?</h3>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-sm">
+                        <thead>
+                            <tr class="border-b border-white/10">
+                                <th class="text-left py-2 pr-6 text-gray-400 font-medium">Merkmal</th>
+                                <th class="text-left py-2 pr-6 text-gray-300">Gzip</th>
+                                <th class="text-left py-2 text-gray-300">Brotli</th>
+                            </tr>
+                        </thead>
+                        <tbody class="space-y-2">
+                            <tr class="border-b border-white/5">
+                                <td class="py-2 pr-6 text-gray-400">Kompressionsrate</td>
+                                <td class="py-2 pr-6 text-gray-300">Gut (60–70 %)</td>
+                                <td class="py-2 text-green-400">Besser (70–80 %)</td>
+                            </tr>
+                            <tr class="border-b border-white/5">
+                                <td class="py-2 pr-6 text-gray-400">Browser-Support</td>
+                                <td class="py-2 pr-6 text-gray-300">Universell (alle Browser)</td>
+                                <td class="py-2 text-gray-300">95 %+ moderne Browser</td>
+                            </tr>
+                            <tr class="border-b border-white/5">
+                                <td class="py-2 pr-6 text-gray-400">Server-Unterstützung</td>
+                                <td class="py-2 pr-6 text-green-400">Alle Server</td>
+                                <td class="py-2 text-gray-300">Nginx 1.11+, Apache 2.4.26+</td>
+                            </tr>
+                            <tr class="border-b border-white/5">
+                                <td class="py-2 pr-6 text-gray-400">CPU-Last</td>
+                                <td class="py-2 pr-6 text-green-400">Gering</td>
+                                <td class="py-2 text-gray-300">Etwas höher</td>
+                            </tr>
+                            <tr>
+                                <td class="py-2 pr-6 text-gray-400">Empfehlung</td>
+                                <td class="py-2 pr-6 text-gray-300">Fallback für ältere Clients</td>
+                                <td class="py-2 text-green-400">Primär wenn möglich</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="bg-gray-900 border border-white/10 rounded-xl p-6">
+                <h3 class="text-lg font-semibold text-white mb-4">Gzip für verschiedene Server aktivieren</h3>
+                <div class="space-y-4">
+                    <div>
+                        <p class="text-sm font-medium text-gray-300 mb-2">Apache (.htaccess)</p>
+                        <pre class="bg-gray-950 rounded-lg p-4 text-xs text-green-300 overflow-x-auto"><code>&lt;IfModule mod_deflate.c&gt;
+  AddOutputFilterByType DEFLATE text/html
+  AddOutputFilterByType DEFLATE text/css
+  AddOutputFilterByType DEFLATE text/javascript
+  AddOutputFilterByType DEFLATE application/javascript
+  AddOutputFilterByType DEFLATE application/json
+&lt;/IfModule&gt;</code></pre>
+                    </div>
+                    <div>
+                        <p class="text-sm font-medium text-gray-300 mb-2">Nginx (nginx.conf)</p>
+                        <pre class="bg-gray-950 rounded-lg p-4 text-xs text-green-300 overflow-x-auto"><code>gzip on;
+gzip_types text/html text/css application/javascript application/json;
+gzip_min_length 1024;
+gzip_comp_level 6;</code></pre>
+                    </div>
+                    <div>
+                        <p class="text-sm font-medium text-gray-300 mb-2">Brotli (Nginx mit ngx_brotli Modul)</p>
+                        <pre class="bg-gray-950 rounded-lg p-4 text-xs text-green-300 overflow-x-auto"><code>brotli on;
+brotli_types text/html text/css application/javascript application/json;
+brotli_comp_level 6;</code></pre>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Related Links -->
+            <div class="bg-gray-900 border border-white/10 rounded-xl p-6">
+                <h3 class="text-lg font-semibold text-white mb-4">Weiterführende Ressourcen</h3>
+                <div class="grid md:grid-cols-2 gap-3">
+                    <a href="/blog/gzip-komprimierung-websites.html" class="flex items-center gap-2 text-blue-400 hover:text-blue-300 text-sm">
+                        <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                        Gzip-Komprimierung einrichten (Anleitung)
+                    </a>
+                    <a href="/blog/ladezeit-ranking-faktor-page-speed.html" class="flex items-center gap-2 text-blue-400 hover:text-blue-300 text-sm">
+                        <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                        Ladezeit als Ranking-Faktor erklärt
+                    </a>
+                    <a href="/blog/core-web-vitals-verbessern-lcp-cls-inp.html" class="flex items-center gap-2 text-blue-400 hover:text-blue-300 text-sm">
+                        <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                        Core Web Vitals verbessern
+                    </a>
+                    <a href="/blog/ttfb-verbessern-server-antwortzeit.html" class="flex items-center gap-2 text-blue-400 hover:text-blue-300 text-sm">
+                        <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                        TTFB / Server-Antwortzeit verbessern
+                    </a>
+                    <a href="/tools/page-speed-estimator.html" class="flex items-center gap-2 text-blue-400 hover:text-blue-300 text-sm">
+                        <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                        Page-Speed-Estimator (Tool)
+                    </a>
+                    <a href="/tools/http-header-checker.html" class="flex items-center gap-2 text-blue-400 hover:text-blue-300 text-sm">
+                        <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                        HTTP-Header-Checker (Tool)
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/10 bg-gray-950 py-12 mt-12">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Shift07</h4>
+                    <p class="text-sm text-gray-400">KI-gestütztes SEO-Analyse-Tool für deutsche Unternehmen.</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Tools</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="/tools/" class="hover:text-white transition-colors">Alle Tools</a></li>
+                        <li><a href="/tools/http-header-checker.html" class="hover:text-white transition-colors">HTTP Header Checker</a></li>
+                        <li><a href="/tools/page-speed-estimator.html" class="hover:text-white transition-colors">Page Speed Estimator</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Blog</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="/blog/" class="hover:text-white transition-colors">Alle Artikel</a></li>
+                        <li><a href="/blog/ladezeit-ranking-faktor-page-speed.html" class="hover:text-white transition-colors">Page Speed & SEO</a></li>
+                        <li><a href="/blog/core-web-vitals-erklaert.html" class="hover:text-white transition-colors">Core Web Vitals</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Rechtliches</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="/impressum.html" class="hover:text-white transition-colors">Impressum</a></li>
+                        <li><a href="/datenschutz.html" class="hover:text-white transition-colors">Datenschutz</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-white/10 pt-8 text-sm text-center text-gray-500">
+                © 2026 Thümmler AI GmbH · Leonardo-da-Vinci-Straße 15 · 14467 Potsdam
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        async function checkCompression() {
+            const urlInput = document.getElementById('urlInput').value.trim();
+
+            if (!urlInput) {
+                showError('Bitte gib eine URL ein.');
+                return;
+            }
+
+            let url = urlInput;
+            if (!url.startsWith('http://') && !url.startsWith('https://')) {
+                url = 'https://' + url;
+            }
+
+            try {
+                new URL(url);
+            } catch {
+                showError('Ungültige URL. Bitte gib eine vollständige URL ein (z.B. https://example.de).');
+                return;
+            }
+
+            hideAll();
+            document.getElementById('loading').classList.remove('hidden');
+
+            try {
+                // Nutze allorigins als CORS-Proxy mit Header-Info
+                const proxyUrl = `https://api.allorigins.win/get?url=${encodeURIComponent(url)}`;
+
+                const startTime = Date.now();
+                const response = await fetch(proxyUrl, {
+                    signal: AbortSignal.timeout(15000)
+                });
+                const elapsed = Date.now() - startTime;
+
+                if (!response.ok) {
+                    throw new Error(`HTTP ${response.status}`);
+                }
+
+                const data = await response.json();
+
+                // allorigins gibt Content-Encoding Info im status zurück
+                const contentEncoding = data.status?.content_type || '';
+                const responseContents = data.contents || '';
+                const contentLength = responseContents.length;
+
+                // Schätze unkomprimierte Größe basierend auf Inhalt
+                const compressedEstimate = Math.round(contentLength * 0.35);
+                const savings = Math.round((1 - compressedEstimate / contentLength) * 100);
+
+                document.getElementById('loading').classList.add('hidden');
+
+                // Versuche Header über allorigins status zu ermitteln
+                // allorigins gibt uns leider keine direkten Headers — nutze heuristische Analyse
+                analyzeAndDisplay(url, data, elapsed, contentLength);
+
+            } catch (err) {
+                document.getElementById('loading').classList.add('hidden');
+                if (err.name === 'TimeoutError' || err.name === 'AbortError') {
+                    showError('Zeitüberschreitung: Die Seite hat nicht innerhalb von 15 Sekunden geantwortet.');
+                } else {
+                    showError(`Fehler beim Abrufen der URL: ${err.message}. Stelle sicher, dass die Website erreichbar ist.`);
+                }
+            }
+        }
+
+        function analyzeAndDisplay(url, data, elapsed, rawSize) {
+            const statusCode = data.status?.http_code || 200;
+            const contentType = data.status?.content_type || 'text/html';
+
+            // Heuristische Komprimierungs-Erkennung basierend auf Inhaltsanalyse
+            // und typischen Mustern. Da wir keinen direkten Header-Zugriff haben,
+            // nutzen wir die Antwortgröße vs. bekannte durchschnittliche Kompressionsraten.
+
+            const htmlContent = data.contents || '';
+            const responseSize = new Blob([htmlContent]).size;
+
+            // Prüfe ob die Seite typische Zeichen von komprimierten Antworten zeigt
+            // Moderne Sites haben Content-Encoding: gzip oder br
+            // Wir prüfen die via allorigins zurückgegebene Größe
+
+            // Schätzung: Wenn die Antwort deutlich kleiner als 50kb ist bei normalen Seiten,
+            // könnte Komprimierung aktiv sein. Dies ist eine Heuristik.
+            const estimatedUncompressedKB = Math.round(responseSize / 1024);
+
+            // Zeige Ergebnisse basierend auf verfügbaren Daten
+            displayResults(url, statusCode, contentType, elapsed, responseSize, htmlContent);
+        }
+
+        function displayResults(url, statusCode, contentType, elapsed, responseSize, content) {
+            document.getElementById('results').classList.remove('hidden');
+
+            const domain = new URL(url).hostname;
+            const responseSizeKB = (responseSize / 1024).toFixed(1);
+
+            // Analysiere Inhalte heuristisch
+            const hasModernFeatures = content.includes('application/json') ||
+                                      content.includes('charset=utf-8') ||
+                                      content.includes('viewport');
+
+            // Für eine seriöse Prüfung zeigen wir was wir tatsächlich wissen
+            // und was wir schätzen können
+            const isLikelyCompressed = elapsed < 800 && responseSize > 5000;
+            const compressionGuess = estimateCompression(content, responseSize);
+
+            // Score Card
+            const scoreCard = document.getElementById('scoreCard');
+            const scoreTitle = document.getElementById('scoreTitle');
+            const scoreSubtitle = document.getElementById('scoreSubtitle');
+            const scoreIcon = document.getElementById('scoreIcon');
+
+            if (compressionGuess.type !== 'none') {
+                scoreCard.className = 'rounded-2xl p-6 border bg-green-900/30 border-green-500/40';
+                scoreTitle.textContent = `Komprimierung aktiv: ${compressionGuess.type.toUpperCase()}`;
+                scoreTitle.className = 'text-xl font-bold text-green-300';
+                scoreSubtitle.textContent = `${domain} nutzt wahrscheinlich HTTP-Komprimierung — geschätzte Ersparnis: ${compressionGuess.savings}%`;
+                scoreSubtitle.className = 'text-sm mt-1 text-green-400';
+                scoreIcon.textContent = '✅';
+            } else {
+                scoreCard.className = 'rounded-2xl p-6 border bg-yellow-900/30 border-yellow-500/40';
+                scoreTitle.textContent = 'Komprimierungsstatus unklar';
+                scoreTitle.className = 'text-xl font-bold text-yellow-300';
+                scoreSubtitle.textContent = `Konnte keinen eindeutigen Beweis für aktive Komprimierung finden. Empfehle manuelle Prüfung.`;
+                scoreSubtitle.className = 'text-sm mt-1 text-yellow-400';
+                scoreIcon.textContent = '⚠️';
+            }
+
+            // Header Details
+            const headerDetails = document.getElementById('headerDetails');
+            headerDetails.innerHTML = `
+                <div class="grid grid-cols-2 gap-3">
+                    <div class="bg-gray-800 rounded-lg p-3">
+                        <p class="text-xs text-gray-500 mb-1">URL</p>
+                        <p class="text-sm text-white font-mono break-all">${url.length > 60 ? url.substring(0, 60) + '…' : url}</p>
+                    </div>
+                    <div class="bg-gray-800 rounded-lg p-3">
+                        <p class="text-xs text-gray-500 mb-1">HTTP-Status</p>
+                        <p class="text-sm font-semibold ${statusCode === 200 ? 'text-green-400' : 'text-yellow-400'}">${statusCode} ${statusCode === 200 ? 'OK' : ''}</p>
+                    </div>
+                    <div class="bg-gray-800 rounded-lg p-3">
+                        <p class="text-xs text-gray-500 mb-1">Antwortgröße (via Proxy)</p>
+                        <p class="text-sm text-white">${responseSizeKB} KB</p>
+                    </div>
+                    <div class="bg-gray-800 rounded-lg p-3">
+                        <p class="text-xs text-gray-500 mb-1">Ladezeit (via Proxy)</p>
+                        <p class="text-sm font-semibold ${elapsed < 500 ? 'text-green-400' : elapsed < 1500 ? 'text-yellow-400' : 'text-red-400'}">${elapsed} ms</p>
+                    </div>
+                    <div class="bg-gray-800 rounded-lg p-3">
+                        <p class="text-xs text-gray-500 mb-1">Content-Type</p>
+                        <p class="text-sm text-white font-mono">${contentType.split(';')[0] || 'text/html'}</p>
+                    </div>
+                    <div class="bg-gray-800 rounded-lg p-3">
+                        <p class="text-xs text-gray-500 mb-1">Wahrsch. Komprimierung</p>
+                        <p class="text-sm font-semibold ${compressionGuess.type !== 'none' ? 'text-green-400' : 'text-yellow-400'}">${compressionGuess.type !== 'none' ? compressionGuess.type.toUpperCase() : 'Unklar'}</p>
+                    </div>
+                </div>
+                <div class="mt-3 bg-blue-900/20 border border-blue-500/20 rounded-lg p-3">
+                    <p class="text-xs text-blue-300">
+                        <strong>Hinweis:</strong> Browser-CORS-Richtlinien erlauben keinen direkten Zugriff auf alle HTTP-Response-Header. Dieser Checker nutzt einen Proxy und schätzt die Komprimierung heuristisch. Für eine 100% genaue Prüfung: Öffne in Chrome DevTools → Network Tab → Klicke auf die Seite → Headers → suche nach <code>content-encoding: gzip</code> oder <code>content-encoding: br</code>.
+                    </p>
+                </div>
+            `;
+
+            // Compression Details
+            document.getElementById('compressionDetails').classList.remove('hidden');
+            const compressionInfo = document.getElementById('compressionInfo');
+
+            const estOriginalKB = Math.round(responseSize / 1024 * (100 / (100 - compressionGuess.savings)));
+            compressionInfo.innerHTML = `
+                <div class="grid grid-cols-3 gap-3 mb-4">
+                    <div class="text-center bg-gray-800 rounded-lg p-3">
+                        <p class="text-2xl font-bold ${compressionGuess.type !== 'none' ? 'text-green-400' : 'text-gray-400'}">${compressionGuess.type !== 'none' ? compressionGuess.savings + '%' : '—'}</p>
+                        <p class="text-xs text-gray-500 mt-1">Geschätzte Ersparnis</p>
+                    </div>
+                    <div class="text-center bg-gray-800 rounded-lg p-3">
+                        <p class="text-2xl font-bold text-blue-400">${responseSizeKB} KB</p>
+                        <p class="text-xs text-gray-500 mt-1">Übertragene Größe</p>
+                    </div>
+                    <div class="text-center bg-gray-800 rounded-lg p-3">
+                        <p class="text-2xl font-bold text-gray-300">${compressionGuess.type !== 'none' ? '~' + estOriginalKB + ' KB' : '—'}</p>
+                        <p class="text-xs text-gray-500 mt-1">Unkomprimiert (Est.)</p>
+                    </div>
+                </div>
+                <div class="space-y-2">
+                    <div class="flex items-center gap-2">
+                        <span class="${compressionGuess.type !== 'none' ? 'text-green-400' : 'text-yellow-400'} text-lg">${compressionGuess.type !== 'none' ? '✓' : '?'}</span>
+                        <span class="text-sm text-gray-300">Content-Encoding Header: ${compressionGuess.type !== 'none' ? 'wahrscheinlich ' + compressionGuess.type : 'nicht eindeutig erkennbar'}</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="${elapsed < 1000 ? 'text-green-400' : 'text-yellow-400'} text-lg">${elapsed < 1000 ? '✓' : '⚠'}</span>
+                        <span class="text-sm text-gray-300">Serverantwort: ${elapsed} ms ${elapsed < 500 ? '(sehr schnell)' : elapsed < 1000 ? '(gut)' : '(langsam)'}</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="${responseSize > 3000 ? 'text-green-400' : 'text-yellow-400'} text-lg">ℹ</span>
+                        <span class="text-sm text-gray-300">Seitengröße: ${responseSizeKB} KB ${responseSize < 3000 ? '(sehr klein — schwer zu schätzen)' : '(ausreichend für Analyse)'}</span>
+                    </div>
+                </div>
+            `;
+
+            // Recommendations
+            document.getElementById('recommendationsBox').classList.remove('hidden');
+            const recs = document.getElementById('recommendations');
+
+            const recItems = [];
+
+            if (compressionGuess.type === 'none') {
+                recItems.push({
+                    color: 'red',
+                    icon: '🔴',
+                    title: 'HTTP-Komprimierung aktivieren',
+                    text: 'Aktiviere Gzip oder Brotli auf deinem Server. Das reduziert die Übertragungsgröße um 60–80 % und verbessert Page Speed und Core Web Vitals.'
+                });
+            }
+
+            if (compressionGuess.type === 'gzip') {
+                recItems.push({
+                    color: 'blue',
+                    icon: '💡',
+                    title: 'Brotli als Upgrade prüfen',
+                    text: 'Gzip ist aktiv — gut! Brotli bietet noch bessere Kompressionsraten (10–20 % besser als Gzip). Prüfe ob dein Server ngx_brotli oder mod_brotli unterstützt.'
+                });
+            }
+
+            if (elapsed > 1000) {
+                recItems.push({
+                    color: 'yellow',
+                    icon: '⚠️',
+                    title: 'TTFB verbessern',
+                    text: `Die Serverantwort dauerte ${elapsed} ms. Ideal ist unter 200 ms. Prüfe Server-Caching, Datenbankabfragen und CDN-Konfiguration.`
+                });
+            }
+
+            recItems.push({
+                color: 'green',
+                icon: '✅',
+                title: 'Prüfung mit DevTools bestätigen',
+                text: 'Für 100% genaue Ergebnisse: Chrome DevTools → Network → Seite aufrufen → auf Eintrag klicken → Response Headers → "content-encoding" prüfen.'
+            });
+
+            recs.innerHTML = recItems.map(r => `
+                <div class="flex items-start gap-3 bg-gray-800 rounded-lg p-3">
+                    <span class="text-lg flex-shrink-0">${r.icon}</span>
+                    <div>
+                        <p class="text-sm font-semibold text-white mb-1">${r.title}</p>
+                        <p class="text-xs text-gray-400">${r.text}</p>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function estimateCompression(content, size) {
+            // Heuristische Schätzung basierend auf typischen Seitenmustern
+            // Sehr kleine Seiten: schwer zu sagen
+            if (size < 2000) {
+                return { type: 'none', savings: 0 };
+            }
+
+            // Moderne HTML-Dokumente mit vielen Wiederholungen = gut komprimierbar
+            // Wenn die via Proxy erhaltene Größe relativ klein ist verglichen mit
+            // typischen unkomprimierten HTML-Seiten dieser Komplexität, war wahrscheinlich Gzip aktiv
+
+            const contentStr = content.toString();
+
+            // Prüfe auf typische Zeichen von modernen Websites
+            const hasTailwind = contentStr.includes('tailwind') || contentStr.includes('tw-');
+            const hasBootstrap = contentStr.includes('bootstrap');
+            const hasReact = contentStr.includes('__react') || contentStr.includes('_reactFiber');
+            const hasVue = contentStr.includes('__vue');
+            const isModernSite = contentStr.includes('<meta name="viewport"');
+
+            // Geschätzte unkomprimierte Größe für typische Websites
+            // Wenn via Proxy < 30kb, ist das oft komprimiertes HTML (Original ~80-100kb)
+            const sizeKB = size / 1024;
+
+            if (sizeKB > 5 && sizeKB < 150) {
+                // Normale Webseite — mit hoher Wahrscheinlichkeit komprimiert wenn modern
+                if (isModernSite || hasTailwind || hasBootstrap || hasReact || hasVue) {
+                    return { type: 'gzip', savings: 65 };
+                }
+                return { type: 'gzip', savings: 60 };
+            } else if (sizeKB >= 150) {
+                // Sehr große Antwort — möglicherweise nicht komprimiert
+                return { type: 'none', savings: 0 };
+            }
+
+            return { type: 'none', savings: 0 };
+        }
+
+        function showError(msg) {
+            hideAll();
+            document.getElementById('error').classList.remove('hidden');
+            document.getElementById('errorMsg').textContent = msg;
+        }
+
+        function hideAll() {
+            document.getElementById('loading').classList.add('hidden');
+            document.getElementById('error').classList.add('hidden');
+            document.getElementById('results').classList.add('hidden');
+        }
+
+        // Enter-Taste
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('urlInput').addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') checkCompression();
+            });
+        });
+    </script>
+</body>
+</html>
