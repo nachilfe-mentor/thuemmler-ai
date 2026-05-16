@@ -14,7 +14,7 @@
   </url>
   <url>
     <loc>https://shift07.ai/tools/</loc>
-    <lastmod>2026-05-15</lastmod>
+    <lastmod>2026-05-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1515,6 +1515,12 @@
   <url>
     <loc>https://shift07.ai/tools/farbkontrast-pruefer.html</loc>
     <lastmod>2026-04-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://shift07.ai/tools/favicon-touch-icons-checker.html</loc>
+    <lastmod>2026-05-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
