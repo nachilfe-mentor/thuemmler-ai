@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Sat, 16 May 2026 00:46:07 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 16 May 2026 00:48:45 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>JavaScript und Crawl-Budget: Wie JS das Googlebot-Rendering beeinflusst</title>
+      <link>https://shift07.ai/blog/javascript-crawl-budget-googlebot.html</link>
+      <guid>https://shift07.ai/blog/javascript-crawl-budget-googlebot.html</guid>
+      <pubDate>Sat, 16 May 2026 00:48:24 +0000</pubDate>
+      <description>Wie JavaScript das Crawl-Budget beeinflusst: Googlebots Two-Wave-Rendering, JavaScript-Rendering-Verzögerung, Crawl-Budget schonen und häufige JS-Fehler die Indexierung verhindern.</description>
+      <category>Tech-SEO</category>
+    </item>
     <item>
       <title>JavaScript SEO: Wie Google SPA-Websites crawlt und indexiert</title>
       <link>https://shift07.ai/blog/javascript-seo-spa-indexierung.html</link>
@@ -158,14 +166,6 @@
       <pubDate>Sun, 10 May 2026 02:39:32 +0000</pubDate>
       <description>Shopify SEO optimieren: So verbesserst du dein Ranking 2026. Meta-Tags, URL-Struktur, Schema Markup, Ladezeit, Backlinks – die komplette Shopify-SEO-Anleitung.</description>
       <category>CMS-SEO</category>
-    </item>
-    <item>
-      <title>WordPress SEO optimieren: Schritt-für-Schritt-Anleitung 2026</title>
-      <link>https://shift07.ai/blog/wordpress-seo-optimieren.html</link>
-      <guid>https://shift07.ai/blog/wordpress-seo-optimieren.html</guid>
-      <pubDate>Sun, 10 May 2026 01:04:03 +0000</pubDate>
-      <description>WordPress SEO richtig einrichten: Permalinks, Yoast vs. RankMath, Schema Markup, Pagespeed, technische SEO und Plugin-Einstellungen. Die vollständige Anleitung 2026.</description>
-      <category>Tech-SEO</category>
     </item>
   </channel>
 </rss>
