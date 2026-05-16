@@ -1279,6 +1279,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://shift07.ai/blog/ttfb-verbessern-fortgeschritten.html</loc>
+    <lastmod>2026-05-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://shift07.ai/blog/ttfb-verbessern-server-antwortzeit.html</loc>
     <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
