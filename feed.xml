@@ -5,8 +5,24 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Sat, 16 May 2026 00:42:50 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 16 May 2026 00:46:07 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>JavaScript SEO: Wie Google SPA-Websites crawlt und indexiert</title>
+      <link>https://shift07.ai/blog/javascript-seo-spa-indexierung.html</link>
+      <guid>https://shift07.ai/blog/javascript-seo-spa-indexierung.html</guid>
+      <pubDate>Sat, 16 May 2026 00:45:50 +0000</pubDate>
+      <description>JavaScript SEO erklärt: Wie Googlebot SPAs crawlt, was Two-Wave Indexing bedeutet und wie du mit SSR oder Static Generation sicherstellst, dass deine Inhalte indexiert werden.</description>
+      <category>Technisches SEO</category>
+    </item>
+    <item>
+      <title>JavaScript async und defer für SEO: Ladezeit und Crawling optimieren 2026</title>
+      <link>https://shift07.ai/blog/javascript-async-defer-seo.html</link>
+      <guid>https://shift07.ai/blog/javascript-async-defer-seo.html</guid>
+      <pubDate>Sat, 16 May 2026 00:45:24 +0000</pubDate>
+      <description>async und defer erklärt: Wie du JavaScript-Ladeverhalten für bessere Core Web Vitals und Googlebot-Crawling optimierst. Mit Praxisbeispielen, Entscheidungshilfe und häufigen Fehlern.</description>
+      <category>Tech-SEO</category>
+    </item>
     <item>
       <title>hreflang Praxisleitfaden: Fehler vermeiden bei mehrsprachigen Websites 2026</title>
       <link>https://shift07.ai/blog/hreflang-praxisleitfaden-mehrsprachige-seo.html</link>
@@ -150,22 +166,6 @@
       <pubDate>Sun, 10 May 2026 01:04:03 +0000</pubDate>
       <description>WordPress SEO richtig einrichten: Permalinks, Yoast vs. RankMath, Schema Markup, Pagespeed, technische SEO und Plugin-Einstellungen. Die vollständige Anleitung 2026.</description>
       <category>Tech-SEO</category>
-    </item>
-    <item>
-      <title>Google Search Console: Vollständige Anleitung 2026</title>
-      <link>https://shift07.ai/blog/google-search-console-anleitung.html</link>
-      <guid>https://shift07.ai/blog/google-search-console-anleitung.html</guid>
-      <pubDate>Sun, 10 May 2026 00:55:26 +0000</pubDate>
-      <description>Google Search Console richtig nutzen: Einrichtung, Berichte verstehen, Indexierung prüfen, Fehler beheben und Rankings verbessern. Die vollständige Anleitung für 2026.</description>
-      <category>Tech-SEO</category>
-    </item>
-    <item>
-      <title>NAP-Konsistenz-Checker: Lokales SEO mit einheitlichem Name, Adresse, Telefon stärken</title>
-      <link>https://shift07.ai/blog/nap-konsistenz-checker-tool.html</link>
-      <guid>https://shift07.ai/blog/nap-konsistenz-checker-tool.html</guid>
-      <pubDate>Sat, 09 May 2026 12:48:58 +0000</pubDate>
-      <description>Der NAP-Konsistenz-Checker prüft, ob Name, Adresse und Telefon deines Unternehmens auf Website, Google Business und Verzeichnissen übereinstimmen. Anleitung und Hintergründe.</description>
-      <category>Lokal-SEO</category>
     </item>
   </channel>
 </rss>
