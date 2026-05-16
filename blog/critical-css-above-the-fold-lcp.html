@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Critical CSS extrahieren: Above-the-Fold optimieren für besseres LCP | Shift07 Blog</title>
+    <meta name="description" content="Critical CSS extrahieren und inline einbinden: So beschleunigst du das Rendern deiner Website, verbesserst den LCP-Wert und rankst besser bei Google. Schritt-für-Schritt-Anleitung 2026.">
+    <meta name="author" content="Thümmler AI GmbH">
+    <link rel="icon" type="image/png" href="/logo.png">
+    <link rel="canonical" href="https://shift07.ai/blog/critical-css-above-the-fold-lcp.html">
+    <link rel="alternate" type="application/rss+xml" title="Shift07 Blog" href="https://shift07.ai/feed.xml">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Critical CSS extrahieren: Above-the-Fold optimieren für besseres LCP | Shift07 Blog">
+    <meta property="og:description" content="Critical CSS extrahieren und inline einbinden: So beschleunigst du das Rendern deiner Website, verbesserst den LCP-Wert und rankst besser bei Google. Schritt-für-Schritt-Anleitung 2026.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://shift07.ai/blog/critical-css-above-the-fold-lcp.html">
+    <meta property="og:image" content="https://shift07.ai/blog/images/critical-css-above-the-fold-lcp.png">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="Shift07">
+    <meta property="article:published_time" content="2026-05-16T10:00:00+02:00">
+    <meta property="article:section" content="Performance">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Critical CSS extrahieren: Above-the-Fold optimieren für besseres LCP">
+    <meta name="twitter:description" content="Critical CSS extrahieren und inline einbinden: So beschleunigst du das Rendern deiner Website, verbesserst den LCP-Wert und rankst besser bei Google.">
+    <meta name="twitter:image" content="https://shift07.ai/blog/images/critical-css-above-the-fold-lcp.png">
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Critical CSS extrahieren: Above-the-Fold optimieren für besseres LCP",
+      "description": "Critical CSS extrahieren und inline einbinden: So beschleunigst du das Rendern deiner Website, verbesserst den LCP-Wert und rankst besser bei Google. Schritt-für-Schritt-Anleitung 2026.",
+      "image": "https://shift07.ai/blog/images/critical-css-above-the-fold-lcp.png",
+      "datePublished": "2026-05-16T10:00:00+02:00",
+      "dateModified": "2026-05-16T10:00:00+02:00",
+      "author": {
+        "@type": "Organization",
+        "name": "Shift07",
+        "url": "https://shift07.ai"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Shift07",
+        "url": "https://shift07.ai",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://shift07.ai/assets/logo.png"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://shift07.ai/blog/critical-css-above-the-fold-lcp.html"
+      }
+    }
+    </script>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K1S1RXBDS8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K1S1RXBDS8');
+    </script>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8475857002943858" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: rgba(15, 23, 42, 0.5); }
+        ::-webkit-scrollbar-thumb { background: rgba(59, 130, 246, 0.5); border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: rgba(59, 130, 246, 0.7); }
+        html { scroll-behavior: smooth; }
+        .article-content h2 { font-size: 1.5rem; font-weight: 700; color: #fff; margin-top: 2.5rem; margin-bottom: 1rem; }
+        .article-content h3 { font-size: 1.25rem; font-weight: 600; color: #e2e8f0; margin-top: 2rem; margin-bottom: 0.75rem; }
+        .article-content p { color: #cbd5e1; line-height: 1.8; margin-bottom: 1.25rem; }
+        .article-content ul, .article-content ol { color: #cbd5e1; margin-bottom: 1.25rem; padding-left: 1.5rem; }
+        .article-content li { margin-bottom: 0.5rem; line-height: 1.7; }
+        .article-content ul li { list-style-type: disc; }
+        .article-content ol li { list-style-type: decimal; }
+        .article-content a { color: #60a5fa; text-decoration: underline; text-underline-offset: 2px; }
+        .article-content a:hover { color: #93bbfc; }
+        .article-content blockquote { border-left: 4px solid #3b82f6; padding-left: 1.25rem; margin: 1.5rem 0; color: #94a3b8; font-style: italic; }
+        .article-content code { background: rgba(59, 130, 246, 0.15); color: #93c5fd; padding: 0.15rem 0.4rem; border-radius: 0.25rem; font-size: 0.9em; }
+        .article-content pre { background: rgba(15, 23, 42, 0.8); border: 1px solid rgba(255,255,255,0.1); border-radius: 0.75rem; padding: 1.25rem; overflow-x: auto; margin-bottom: 1.5rem; }
+        .article-content pre code { background: none; padding: 0; color: #e2e8f0; }
+        .article-content strong { color: #f1f5f9; }
+    </style>
+</head>
+<body class="bg-slate-900 text-white min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-slate-900/80 backdrop-blur-xl border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <a href="/" class="flex items-center gap-2">
+                    <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                    <span class="text-xl font-bold text-white">Shift07</span>
+                </a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="/" class="text-gray-300 hover:text-white transition-colors">SEO-Tool</a>
+                    <a href="/blog/" class="text-white font-medium border-b-2 border-blue-500 pb-0.5">Blog</a>
+                    <a href="/tools/" class="text-gray-300 hover:text-white transition-colors">Tools</a>
+                    <a href="/app/#/login" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-5 py-2 rounded-lg font-medium transition-all">Anmelden</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-gray-300 hover:text-white">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900/95 border-b border-white/10">
+            <div class="px-4 py-3 space-y-2">
+                <a href="/" class="block py-2 text-gray-300 hover:text-white">SEO-Tool</a>
+                <a href="/blog/" class="block py-2 text-white font-medium">Blog</a>
+                <a href="/tools/" class="block py-2 text-gray-300 hover:text-white">Tools</a>
+                <a href="/app/#/login" class="block py-2 text-blue-400 hover:text-blue-300">Anmelden</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Image -->
+    <section class="pt-16 relative">
+        <div class="h-[400px] relative overflow-hidden">
+            <img src="/blog/images/critical-css-above-the-fold-lcp.png" alt="Critical CSS extrahieren für besseres LCP und Above-the-Fold-Performance" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black/50"></div>
+            <div class="absolute inset-0 flex items-center justify-center">
+                <div class="text-center px-4 max-w-4xl">
+                    <span class="inline-block text-sm font-semibold px-4 py-1.5 bg-white/10 text-white/90 rounded-full mb-6">Performance</span>
+                    <h1 class="text-3xl md:text-5xl font-extrabold text-white leading-tight">Critical CSS extrahieren: Above-the-Fold optimieren für besseres LCP</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Article Content -->
+    <section class="py-12 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col lg:flex-row gap-12">
+
+                <!-- Main Content -->
+                <article class="lg:w-2/3">
+                    <!-- Meta -->
+                    <div class="flex flex-wrap items-center gap-4 text-sm text-gray-400 mb-10 pb-6 border-b border-white/10">
+                        <div class="flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+                            Shift07 Team
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                            16. Mai 2026
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                            10 Min. Lesezeit
+                        </div>
+                        <span class="text-xs font-semibold px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full">Performance</span>
+                    </div>
+
+                    <!-- Article Body -->
+                    <div class="article-content">
+
+                        <p>Wenn eine Website lädt, muss der Browser zunächst alle CSS-Dateien herunterladen und verarbeiten, bevor er die Seite darstellen kann. Das führt zu einem <strong>Render-Blocking-Problem</strong>: Der Nutzer sieht nichts, bis alle Stylesheets geladen sind — selbst wenn der Inhalt oberhalb des sichtbaren Bereichs (Above the Fold) nur einen Bruchteil des CSS benötigt. Critical CSS zu extrahieren und direkt im HTML einzubetten löst dieses Problem und verbessert messbar den <strong>Largest Contentful Paint (LCP)</strong>.</p>
+
+                        <p>Dieser Artikel erklärt, was Critical CSS ist, wie du es extrahierst und einbindest, welche Tools du dafür nutzt und was du dabei beachten musst.</p>
+
+                        <h2>Was ist Critical CSS?</h2>
+
+                        <p>Critical CSS bezeichnet den minimalen CSS-Code, der benötigt wird, um den sichtbaren Bereich einer Webseite beim ersten Laden darzustellen — also alles, was der Nutzer sieht, ohne scrollen zu müssen. Der restliche CSS-Code (für Footer, weitere Abschnitte, mobile Layouts etc.) wird als <strong>Non-Critical CSS</strong> bezeichnet und kann verzögert geladen werden.</p>
+
+                        <p>Das Konzept leitet sich aus der <strong>Above-the-Fold-Optimierung</strong> ab: Was der Nutzer sofort sieht, muss sofort da sein. Was unterhalb der Sichtlinie liegt, kann nachgeladen werden. Dieser Ansatz ist direkt mit dem LCP-Wert verknüpft, dem wichtigsten Core Web Vital für wahrgenommene Ladegeschwindigkeit.</p>
+
+                        <blockquote>Google wertet den LCP als stärksten Ranking-Faktor unter den Core Web Vitals. Ein LCP unter 2,5 Sekunden gilt als „gut" — Critical CSS ist eine der effektivsten Maßnahmen, um diesen Wert zu erreichen.</blockquote>
+
+                        <h2>Warum Render-Blocking CSS das LCP zerstört</h2>
+
+                        <p>Standardmäßig lädt HTML-Code Stylesheets mit einem <code>&lt;link rel="stylesheet"&gt;</code>-Tag im <code>&lt;head&gt;</code>. Der Browser stoppt dabei das Rendern vollständig, bis alle verlinkten CSS-Dateien geladen und geparst wurden. Bei einem 200-KB-Framework wie Bootstrap oder Tailwind CSS kann das 300–800 ms Renderblockierung bedeuten — auf mobilen Verbindungen deutlich mehr.</p>
+
+                        <p>Das führt zu folgender Render-Kette:</p>
+                        <ol>
+                            <li>HTML wird empfangen</li>
+                            <li>Browser entdeckt <code>&lt;link rel="stylesheet"&gt;</code></li>
+                            <li><strong>Rendern stoppt</strong> — warten auf CSS-Download</li>
+                            <li>CSS wird heruntergeladen (300–800 ms)</li>
+                            <li>CSS wird geparst</li>
+                            <li>Browser rendert die Seite</li>
+                            <li>LCP wird ausgelöst</li>
+                        </ol>
+
+                        <p>Wenn du das CSS für den sichtbaren Bereich direkt im HTML inline bereitstellst und den Rest asynchron lädst, springst du direkt von Schritt 1 zu Schritt 5 — für den kritischen Bereich.</p>
+
+                        <p>Mehr dazu, wie Render-Blocking-Ressourcen generell entfernt werden, erklärt unser Artikel zu <a href="/blog/render-blocking-ressourcen-entfernen.html">Render-Blocking-Ressourcen entfernen</a>. Den Render-Blocking-Checker von Shift07 kannst du nutzen, um sofort zu sehen, welche CSS- und JS-Dateien auf deiner Website das Rendern blockieren: <a href="/tools/render-blocking-checker.html">Render-Blocking-Ressourcen-Checker</a>.</p>
+
+                        <h2>Critical CSS extrahieren: Die Methoden</h2>
+
+                        <h3>Methode 1: Automatisch mit Critical / Penthouse (Node.js)</h3>
+
+                        <p>Das populärste Tool zur automatischen Extraktion ist <strong>critical</strong> von Addy Osmani. Es startet einen Headless-Browser, ruft die Seite auf und extrahiert genau den CSS-Code, der für das initiale Rendering des sichtbaren Bereichs benötigt wird.</p>
+
+                        <pre><code>npm install -g critical
+
+# Für eine einzelne HTML-Datei
+critical index.html --inline --minify --base ./ --dest index-critical.html
+
+# Oder als Gulp/Grunt/Webpack-Plugin
+npm install critical --save-dev</code></pre>
+
+                        <p>Das Tool nimmt dabei den Viewport in Betracht. Für unterschiedliche Gerätegrößen kannst du mehrere Viewport-Dimensionen angeben:</p>
+
+                        <pre><code>const critical = require('critical');
+
+critical.generate({
+  inline: true,
+  base: 'dist/',
+  src: 'index.html',
+  dest: 'index.html',
+  width: 1300,
+  height: 900,
+  dimensions: [
+    { width: 375, height: 812 },   // iPhone
+    { width: 768, height: 1024 },  // iPad
+    { width: 1440, height: 900 }   // Desktop
+  ]
+});</code></pre>
+
+                        <h3>Methode 2: Penthouse (mehr Kontrolle)</h3>
+
+                        <p><strong>Penthouse</strong> ist das Kernel-Modul hinter dem <em>critical</em>-Package und bietet mehr Feinsteuerung. Es eignet sich besonders für SPAs und React/Vue-Anwendungen, bei denen JavaScript für das erste Rendering ausgeführt werden muss:</p>
+
+                        <pre><code>const penthouse = require('penthouse');
+
+penthouse({
+  url: 'https://deine-website.de',
+  css: './dist/styles.css',
+  width: 1440,
+  height: 900,
+  renderWaitTime: 500,      // ms warten bis JS gerendert hat
+  timeout: 30000,
+  puppeteerLaunchArgs: ['--no-sandbox']
+})
+.then(criticalCss => {
+  // criticalCss direkt in <style> einbetten
+});</code></pre>
+
+                        <h3>Methode 3: Online-Tools</h3>
+
+                        <p>Für schnelle Tests ohne Node.js-Setup eignen sich Online-Tools wie <strong>Crit.CSS</strong> oder der CSS-Extraktor von DebugBear. Diese Tools fordern eine URL an, simulieren einen Browser und geben den Critical-CSS-Code zurück. Für Produktionsumgebungen sind sie weniger geeignet, da sie nicht in den Build-Prozess integriert sind.</p>
+
+                        <h3>Methode 4: WordPress-Plugins</h3>
+
+                        <p>Für WordPress gibt es direkte Plugin-Lösungen:</p>
+                        <ul>
+                            <li><strong>WP Rocket</strong> — hat eine eingebaute Critical-CSS-Generierung, läuft automatisch</li>
+                            <li><strong>LiteSpeed Cache</strong> — generiert Critical CSS per Klick</li>
+                            <li><strong>Autoptimize</strong> — in Kombination mit dem Critical CSS-Addon</li>
+                            <li><strong>NitroPack</strong> — vollautomatisch, cloud-basiert</li>
+                        </ul>
+
+                        <p>Wichtig: Nach dem Aktivieren von Critical CSS in Plugins immer den LCP in PageSpeed Insights messen. Nicht jede automatische Extraktion ist korrekt — manchmal fehlen Stile für wichtige Elemente. Wie du den LCP und andere Core Web Vitals misst, erklärt unser <a href="/blog/core-web-vitals-messen-pagespeed-crux.html">Leitfaden zu Core Web Vitals messen: PSI vs. CrUX</a>.</p>
+
+                        <h2>Critical CSS korrekt einbinden</h2>
+
+                        <h3>Das Inline-Pattern</h3>
+
+                        <p>Das extrahierte Critical CSS wird direkt im <code>&lt;head&gt;</code> als <code>&lt;style&gt;</code>-Block eingebettet. Der restliche CSS wird asynchron geladen, um das Rendern nicht zu blockieren:</p>
+
+                        <pre><code>&lt;head&gt;
+  &lt;!-- Critical CSS inline (kein Render-Blocking) --&gt;
+  &lt;style&gt;
+    /* Extrahiertes Critical CSS hier */
+    body { margin: 0; font-family: sans-serif; }
+    .hero { background: #1e3a5f; color: #fff; padding: 4rem 2rem; }
+    .nav { position: fixed; top: 0; width: 100%; background: rgba(0,0,0,.8); }
+    /* ... weitere Above-the-Fold-Styles ... */
+  &lt;/style&gt;
+
+  &lt;!-- Non-Critical CSS asynchron laden --&gt;
+  &lt;link rel="preload" href="/styles/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'"&gt;
+  &lt;noscript&gt;&lt;link rel="stylesheet" href="/styles/main.css"&gt;&lt;/noscript&gt;
+&lt;/head&gt;</code></pre>
+
+                        <p>Der <code>rel="preload"</code>-Trick mit dem <code>onload</code>-Handler lädt das CSS mit hoher Priorität, ohne das Rendern zu blockieren. Die <code>&lt;noscript&gt;</code>-Fallback-Version stellt sicher, dass CSS auch bei deaktiviertem JavaScript geladen wird.</p>
+
+                        <h3>Alternative: loadCSS von Filament Group</h3>
+
+                        <p>Eine robustere Lösung ist das kleine <strong>loadCSS</strong>-Script der Filament Group, das bereits von vielen Build-Tools integriert wird:</p>
+
+                        <pre><code>&lt;!-- Modernes loadCSS-Pattern --&gt;
+&lt;link rel="stylesheet" href="/styles/main.css" media="print" onload="this.media='all'"&gt;
+&lt;noscript&gt;&lt;link rel="stylesheet" href="/styles/main.css"&gt;&lt;/noscript&gt;</code></pre>
+
+                        <p>Das <code>media="print"</code>-Attribut bewirkt, dass der Browser das CSS lädt (mit niedrigerer Priorität, weil es nur für Print gilt), aber das Rendern nicht blockiert. Beim <code>onload</code>-Event wird <code>media="all"</code> gesetzt und das CSS gilt für alle Medien.</p>
+
+                        <h2>Wichtige Fallstricke beim Critical CSS</h2>
+
+                        <h3>1. Viewport-Abhängigkeit</h3>
+
+                        <p>Critical CSS ist <strong>viewport-abhängig</strong>: Was auf einem 1440px-Desktop Above the Fold ist, ist auf einem 375px-Smartphone anders. Extrahiere Critical CSS für mindestens zwei Dimensionen: einen typischen mobilen Viewport (375×812) und einen Desktop-Viewport (1440×900). Da Google Mobile-First-Indexierung nutzt, hat der Mobile-Viewport Priorität.</p>
+
+                        <h3>2. Flash of Unstyled Content (FOUC)</h3>
+
+                        <p>Wenn das Critical CSS nicht alle notwendigen Stile enthält, kommt es zu einem kurzen <strong>Flash of Unstyled Content</strong>: Die Seite erscheint zunächst ohne Styling und "springt" dann, wenn das vollständige CSS geladen wird. Das verschlechtert den <strong>Cumulative Layout Shift (CLS)</strong> — ebenfalls ein Core Web Vital. Prüfe nach der Implementierung den CLS-Wert in PageSpeed Insights oder mit unserem <a href="/tools/core-web-vitals-checker.html">Core Web Vitals Checker</a>.</p>
+
+                        <h3>3. Cache-Invalidierung</h3>
+
+                        <p>Inline-CSS kann nicht gecacht werden — bei jeder Seite wird es mitgegliefert. Das ist ein Kompromiss: Du verlierst den CSS-Cache-Vorteil für den Critical-CSS-Teil, gewinnst aber deutlich beim First Paint. Bei großen Websites mit vielen Seiten (z.B. E-Commerce) kann das den Unterschied zwischen einem 30 KB und einem 5 KB Critical-CSS-Block ausmachen. Halte das Critical CSS <strong>unter 14 KB</strong>, da dies die initiale TCP-Congestion-Window-Größe ist — alles darunter kommt in einem einzigen TCP-Paket.</p>
+
+                        <h3>4. Dynamischer Content</h3>
+
+                        <p>Bei SPAs (React, Vue, Angular) ist Critical CSS komplexer, da der initiale HTML-Inhalt nach dem JavaScript-Rendering anders aussieht. Hier empfiehlt sich eine Kombination aus <strong>Server-Side Rendering (SSR)</strong> oder <strong>Static Site Generation (SSG)</strong> mit Critical CSS — oder zumindest die Extraktion nach dem JavaScript-Rendering (Penthouse mit <code>renderWaitTime</code>).</p>
+
+                        <h2>Critical CSS im Build-Prozess automatisieren</h2>
+
+                        <p>Für Produktionsumgebungen gehört die Critical-CSS-Extraktion in den Build-Prozess, nicht in einen manuellen Schritt:</p>
+
+                        <h3>Webpack-Integration</h3>
+
+                        <pre><code>// webpack.config.js
+const HtmlCriticalWebpackPlugin = require('html-critical-webpack-plugin');
+
+module.exports = {
+  plugins: [
+    new HtmlCriticalWebpackPlugin({
+      base: path.resolve(__dirname, 'dist'),
+      src: 'index.html',
+      dest: 'index.html',
+      inline: true,
+      minify: true,
+      extract: true,
+      width: 1300,
+      height: 900,
+      penthouse: {
+        blockJSRequests: false,
+      }
+    })
+  ]
+};</code></pre>
+
+                        <h3>PostCSS mit purgecss + critical</h3>
+
+                        <p>Eine effektive Kombination ist <strong>PurgeCSS</strong> (entfernt ungenutzten CSS-Code) gefolgt von Critical-CSS-Extraktion. Das reduziert zunächst die Gesamtgröße des CSS, dann wird daraus der Above-the-Fold-Teil extrahiert. Bei einem typischen Tailwind-CSS-Projekt lässt sich die CSS-Größe so von 3 MB auf unter 10 KB für Critical CSS reduzieren.</p>
+
+                        <h2>Messung und Validierung</h2>
+
+                        <p>Nach der Implementierung von Critical CSS solltest du folgende Metriken prüfen:</p>
+
+                        <ul>
+                            <li><strong>LCP</strong>: Ziel unter 2,5 Sekunden (Verbesserung von 300–800 ms ist typisch)</li>
+                            <li><strong>Render-Blocking Time</strong>: Sollte auf 0 ms sinken in PageSpeed Insights</li>
+                            <li><strong>First Contentful Paint (FCP)</strong>: Sollte sich um 200–500 ms verbessern</li>
+                            <li><strong>CLS</strong>: Darf nicht steigen — FOUC ist ein Zeichen für fehlendes Critical CSS</li>
+                            <li><strong>Total Blocking Time (TBT)</strong>: Wird durch Critical CSS nicht direkt beeinflusst</li>
+                        </ul>
+
+                        <p>Nutze dafür <a href="/tools/core-web-vitals-checker.html">unseren Core Web Vitals Checker</a>, der via PageSpeed Insights API echte Felddaten (CrUX) und Lab-Daten abrufst. Der Unterschied zwischen Lab-Daten und echten Nutzerdaten ist dabei wichtig: Mehr dazu erklärt unser Artikel zu <a href="/blog/core-web-vitals-verbessern-lcp-cls-inp.html">Core Web Vitals verbessern: LCP, CLS, INP optimieren</a>.</p>
+
+                        <h2>Critical CSS vs. CSS-Preloading vs. Async CSS</h2>
+
+                        <p>Es gibt drei verwandte aber unterschiedliche Techniken, die oft verwechselt werden:</p>
+
+                        <ul>
+                            <li><strong>Critical CSS inline</strong>: Extrahiertes Minimal-CSS direkt im HTML — kein Netzwerk-Request nötig, sofortige Darstellung</li>
+                            <li><strong>CSS Preloading</strong> (<code>rel="preload"</code>): CSS wird früh angefordert, blockiert aber immer noch das Rendern bis es geladen ist</li>
+                            <li><strong>Asynchrones CSS</strong> (loadCSS-Methode): CSS blockiert das Rendern nicht, führt aber zum FOUC wenn Critical CSS fehlt</li>
+                        </ul>
+
+                        <p>Die optimale Kombination ist: <strong>Critical CSS inline + asynchrones Non-Critical CSS</strong>. Preloading allein löst das Render-Blocking-Problem nicht vollständig.</p>
+
+                        <h2>Fazit: Critical CSS lohnt sich</h2>
+
+                        <p>Critical CSS zu extrahieren und inline einzubinden ist eine der effektivsten Einzelmaßnahmen für bessere Core Web Vitals. Der Aufwand für die initiale Einrichtung zahlt sich schnell aus: Typische Verbesserungen liegen bei 300–600 ms LCP-Reduktion — genug, um von „verbesserungswürdig" auf „gut" zu springen.</p>
+
+                        <p>Für WordPress-Seiten reicht oft ein Plugin wie WP Rocket. Für custom Build-Systeme empfiehlt sich das <em>critical</em>-npm-Package im CI/CD-Prozess. Wichtig ist in beiden Fällen: Nach der Implementierung messen, FOUC-Probleme prüfen und den CLS im Auge behalten.</p>
+
+                        <p>Die vollständige Performance-Optimierung umfasst neben Critical CSS auch <a href="/blog/ttfb-verbessern-fortgeschritten.html">TTFB-Optimierung</a>, <a href="/blog/javascript-async-defer-seo.html">JavaScript-Defer-Strategien</a> und <a href="/blog/caching-website-einrichten.html">Browser-Caching</a>. Welche Maßnahmen bei deiner Website den größten Impact haben, zeigt dir die kostenlose <a href="/">SEO- und Performance-Analyse von Shift07</a>.</p>
+
+                    </div>
+
+                    <!-- Share / Back -->
+                    <div class="mt-12 pt-8 border-t border-white/10 flex items-center justify-between">
+                        <a href="/blog/" class="text-blue-400 hover:text-blue-300 flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+                            Zurück zum Blog
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Sidebar -->
+                <aside class="lg:w-1/3 space-y-8">
+                    <!-- CTA Box -->
+                    <div class="bg-gradient-to-br from-blue-600/20 to-indigo-600/20 border border-blue-500/30 rounded-2xl p-6 text-center">
+                        <h3 class="text-lg font-bold text-white mb-3">Kostenlose SEO-Analyse</h3>
+                        <p class="text-gray-400 text-sm mb-5">Finde heraus, wie gut deine Website für Suchmaschinen optimiert ist.</p>
+                        <a href="/" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-6 py-3 rounded-lg font-medium transition-all inline-block w-full">Jetzt testen</a>
+                    </div>
+
+                    <!-- Tools CTA -->
+                    <div class="bg-slate-800/50 border border-white/10 rounded-2xl p-6">
+                        <h3 class="text-lg font-bold text-white mb-4">Hilfreiche Tools</h3>
+                        <div class="space-y-3">
+                            <a href="/tools/render-blocking-checker.html" class="block group bg-slate-700/50 rounded-lg p-3 hover:bg-slate-700 transition-colors">
+                                <p class="text-sm text-gray-300 group-hover:text-blue-400 font-medium transition-colors">Render-Blocking-Checker</p>
+                                <p class="text-xs text-gray-500 mt-0.5">CSS & JS Blocker erkennen</p>
+                            </a>
+                            <a href="/tools/core-web-vitals-checker.html" class="block group bg-slate-700/50 rounded-lg p-3 hover:bg-slate-700 transition-colors">
+                                <p class="text-sm text-gray-300 group-hover:text-blue-400 font-medium transition-colors">Core Web Vitals Checker</p>
+                                <p class="text-xs text-gray-500 mt-0.5">LCP, CLS, INP messen</p>
+                            </a>
+                            <a href="/tools/page-speed-estimator.html" class="block group bg-slate-700/50 rounded-lg p-3 hover:bg-slate-700 transition-colors">
+                                <p class="text-sm text-gray-300 group-hover:text-blue-400 font-medium transition-colors">Page-Speed-Estimator</p>
+                                <p class="text-xs text-gray-500 mt-0.5">Ladezeit schnell schätzen</p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Related Articles -->
+                    <div class="bg-slate-800/50 border border-white/10 rounded-2xl p-6">
+                        <h3 class="text-lg font-bold text-white mb-4">Weitere Performance-Artikel</h3>
+                        <div class="space-y-4">
+                            <a href="/blog/render-blocking-ressourcen-entfernen.html" class="block group">
+                                <p class="text-sm text-gray-300 group-hover:text-blue-400 transition-colors font-medium">Render-Blocking-Ressourcen entfernen: CSS und JavaScript richtig laden</p>
+                                <p class="text-xs text-gray-500 mt-1">Performance</p>
+                            </a>
+                            <a href="/blog/core-web-vitals-verbessern-lcp-cls-inp.html" class="block group">
+                                <p class="text-sm text-gray-300 group-hover:text-blue-400 transition-colors font-medium">Core Web Vitals verbessern: LCP, CLS, INP optimieren</p>
+                                <p class="text-xs text-gray-500 mt-1">Performance</p>
+                            </a>
+                            <a href="/blog/ttfb-verbessern-fortgeschritten.html" class="block group">
+                                <p class="text-sm text-gray-300 group-hover:text-blue-400 transition-colors font-medium">TTFB verbessern: Fortgeschrittene Techniken für unter 200ms</p>
+                                <p class="text-xs text-gray-500 mt-1">Performance</p>
+                            </a>
+                            <a href="/blog/javascript-async-defer-seo.html" class="block group">
+                                <p class="text-sm text-gray-300 group-hover:text-blue-400 transition-colors font-medium">JavaScript async und defer für SEO</p>
+                                <p class="text-xs text-gray-500 mt-1">Performance</p>
+                            </a>
+                        </div>
+                    </div>
+                </aside>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer CTA -->
+    <section class="py-16 px-4 bg-gradient-to-r from-blue-900/30 to-indigo-900/30 border-t border-b border-white/5">
+        <div class="max-w-3xl mx-auto text-center">
+            <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">Teste deine Website jetzt kostenlos</h2>
+            <p class="text-gray-400 mb-8">Erhalte eine vollständige SEO-Analyse mit konkreten Verbesserungsvorschlägen.</p>
+            <form action="/" method="get" class="flex flex-col sm:flex-row gap-3 max-w-xl mx-auto">
+                <input type="url" placeholder="https://deine-website.de" class="flex-1 bg-slate-800 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-blue-500">
+                <a href="/" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-8 py-3 rounded-lg font-medium transition-all whitespace-nowrap">Analyse starten</a>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/10 bg-slate-900/50 py-12 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="flex items-center gap-2">
+                    <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                    <span class="text-lg font-bold text-white">Shift07</span>
+                </div>
+                <div class="flex items-center space-x-6 text-sm text-gray-400">
+                    <a href="/impressum.html" class="hover:text-white transition-colors">Impressum</a>
+                    <a href="/datenschutz.html" class="hover:text-white transition-colors">Datenschutz</a>
+                    <a href="/agb.html" class="hover:text-white transition-colors">AGB</a>
+                </div>
+                <p class="text-sm text-gray-500">&copy; 2026 Thümmler AI GmbH</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
