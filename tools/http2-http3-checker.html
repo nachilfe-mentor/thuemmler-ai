@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K1S1RXBDS8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K1S1RXBDS8');
+    </script>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8475857002943858" crossorigin="anonymous"></script>
+    <title>HTTP/2 & HTTP/3 Checker – Server-Protokoll kostenlos prüfen | Shift07</title>
+    <meta name="description" content="Prüfe kostenlos ob deine Website HTTP/2 oder HTTP/3 (QUIC) verwendet. Server-Protokoll-Check für schnellere Ladezeiten und bessere Core Web Vitals.">
+    <meta name="keywords" content="HTTP/2 Checker, HTTP/3 Checker, QUIC Checker, Server-Protokoll prüfen, HTTP2 testen, H2 H3 kostenlos">
+    <meta name="author" content="Thümmler AI GmbH">
+    <link rel="icon" type="image/png" href="/logo.png">
+    <link rel="canonical" href="https://shift07.ai/tools/http2-http3-checker.html">
+    <!-- Open Graph -->
+    <meta property="og:title" content="HTTP/2 & HTTP/3 Checker – Server-Protokoll kostenlos prüfen">
+    <meta property="og:description" content="Prüfe kostenlos ob deine Website HTTP/2 oder HTTP/3 (QUIC) verwendet. Server-Protokoll-Check für schnellere Ladezeiten und bessere Core Web Vitals.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://shift07.ai/tools/http2-http3-checker.html">
+    <meta property="og:image" content="https://shift07.ai/tools/images/http2-http3-checker.png">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="Shift07">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="HTTP/2 & HTTP/3 Checker – Server-Protokoll kostenlos prüfen">
+    <meta name="twitter:description" content="Prüfe kostenlos ob deine Website HTTP/2 oder HTTP/3 (QUIC) verwendet.">
+    <meta name="twitter:image" content="https://shift07.ai/tools/images/http2-http3-checker.png">
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "HTTP/2 & HTTP/3 Checker",
+      "description": "Prüfe kostenlos ob deine Website HTTP/2 oder HTTP/3 (QUIC) verwendet. Server-Protokoll-Check für schnellere Ladezeiten und bessere Core Web Vitals.",
+      "url": "https://shift07.ai/tools/http2-http3-checker.html",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR"
+      },
+      "provider": {
+        "@type": "Organization",
+        "name": "Shift07",
+        "url": "https://shift07.ai"
+      }
+    }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: { extend: { fontFamily: { 'inter': ['Inter', 'system-ui', '-apple-system', 'sans-serif'] } } }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', system-ui, sans-serif; background-color: #0f172a; color: #e2e8f0; }
+        .result-card { transition: all 0.3s ease; }
+        .badge-good { background: rgba(34,197,94,0.15); color: #4ade80; border: 1px solid rgba(34,197,94,0.3); }
+        .badge-warn { background: rgba(251,191,36,0.15); color: #fbbf24; border: 1px solid rgba(251,191,36,0.3); }
+        .badge-bad { background: rgba(239,68,68,0.15); color: #f87171; border: 1px solid rgba(239,68,68,0.3); }
+        .badge-info { background: rgba(59,130,246,0.15); color: #60a5fa; border: 1px solid rgba(59,130,246,0.3); }
+        .protocol-h3 { background: linear-gradient(135deg, rgba(16,185,129,0.15), rgba(5,150,105,0.1)); border: 1px solid rgba(16,185,129,0.4); }
+        .protocol-h2 { background: linear-gradient(135deg, rgba(59,130,246,0.15), rgba(37,99,235,0.1)); border: 1px solid rgba(59,130,246,0.4); }
+        .protocol-h1 { background: linear-gradient(135deg, rgba(239,68,68,0.15), rgba(185,28,28,0.1)); border: 1px solid rgba(239,68,68,0.4); }
+    </style>
+</head>
+<body class="min-h-screen">
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 bg-slate-900/95 backdrop-blur-sm border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <a href="/" class="flex items-center gap-2">
+                    <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                    <span class="text-lg font-bold text-white">Shift07</span>
+                </a>
+                <div class="hidden md:flex items-center space-x-6 text-sm font-medium text-gray-400">
+                    <a href="/" class="hover:text-white transition-colors">SEO-Analyse</a>
+                    <a href="/blog/" class="hover:text-white transition-colors">Blog</a>
+                    <a href="/tools/" class="hover:text-white transition-colors">Tools</a>
+                </div>
+                <a href="/" class="bg-blue-600 hover:bg-blue-500 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors">Kostenlos testen</a>
+                <button id="mobile-menu-btn" class="md:hidden text-gray-400">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                </button>
+            </div>
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4 border-t border-white/10 pt-4 space-y-3 text-sm text-gray-400">
+                <a href="/" class="block hover:text-white">SEO-Analyse</a>
+                <a href="/blog/" class="block hover:text-white">Blog</a>
+                <a href="/tools/" class="block hover:text-white">Tools</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="py-12 px-4 bg-gradient-to-b from-slate-800/50 to-transparent border-b border-white/5">
+        <div class="max-w-4xl mx-auto text-center">
+            <div class="inline-flex items-center gap-2 text-sm text-blue-400 bg-blue-500/10 border border-blue-500/20 rounded-full px-4 py-1.5 mb-6">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                Kostenloser SEO-Checker
+            </div>
+            <h1 class="text-3xl md:text-5xl font-bold text-white mb-4">HTTP/2 & HTTP/3 Checker</h1>
+            <p class="text-xl text-gray-400 mb-8 max-w-2xl mx-auto">
+                Prüfe ob deine Website HTTP/2 oder HTTP/3 (QUIC) verwendet — und ob HTTP/3-Support per <code class="bg-slate-700 px-1 py-0.5 rounded text-blue-300">Alt-Svc</code>-Header ankündigt wird.
+            </p>
+
+            <!-- Input Form -->
+            <div class="bg-slate-800/70 border border-white/10 rounded-2xl p-6 max-w-2xl mx-auto">
+                <div class="flex flex-col sm:flex-row gap-3">
+                    <input type="url" id="url-input" placeholder="https://deine-website.de"
+                           class="flex-1 bg-slate-700/50 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 text-sm"
+                           value="">
+                    <button onclick="startCheck()" id="check-btn"
+                            class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-6 py-3 rounded-xl font-semibold transition-all whitespace-nowrap text-sm">
+                        Jetzt prüfen
+                    </button>
+                </div>
+                <p class="text-xs text-gray-500 mt-3">Gibt die URL mit https:// ein. Beispiel: https://meinshop.de</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section class="py-10 px-4" id="results-section" style="display:none;">
+        <div class="max-w-4xl mx-auto">
+            <!-- Protocol Banner -->
+            <div id="protocol-banner" class="rounded-2xl p-6 mb-8 text-center">
+                <div id="protocol-icon" class="text-6xl mb-3"></div>
+                <div id="protocol-label" class="text-2xl font-bold text-white mb-1"></div>
+                <div id="protocol-sub" class="text-gray-400 text-sm"></div>
+            </div>
+
+            <!-- Result Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+                <!-- HTTPS -->
+                <div class="bg-slate-800/50 border border-white/10 rounded-xl p-5">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="text-sm font-semibold text-gray-300">HTTPS / TLS</span>
+                        <span id="badge-https" class="text-xs px-2.5 py-1 rounded-full font-medium">–</span>
+                    </div>
+                    <p id="result-https" class="text-sm text-gray-400">–</p>
+                    <p class="text-xs text-gray-500 mt-2">Voraussetzung für HTTP/2 und HTTP/3</p>
+                </div>
+
+                <!-- HTTP/2 -->
+                <div class="bg-slate-800/50 border border-white/10 rounded-xl p-5">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="text-sm font-semibold text-gray-300">HTTP/2 (h2)</span>
+                        <span id="badge-h2" class="text-xs px-2.5 py-1 rounded-full font-medium">–</span>
+                    </div>
+                    <p id="result-h2" class="text-sm text-gray-400">–</p>
+                    <p class="text-xs text-gray-500 mt-2">Multiplexing, Header-Komprimierung, Server Push</p>
+                </div>
+
+                <!-- HTTP/3 -->
+                <div class="bg-slate-800/50 border border-white/10 rounded-xl p-5">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="text-sm font-semibold text-gray-300">HTTP/3 / QUIC (h3)</span>
+                        <span id="badge-h3" class="text-xs px-2.5 py-1 rounded-full font-medium">–</span>
+                    </div>
+                    <p id="result-h3" class="text-sm text-gray-400">–</p>
+                    <p class="text-xs text-gray-500 mt-2">UDP-basiert, 0-RTT, ideal für Mobile-Verbindungen</p>
+                </div>
+
+                <!-- Server -->
+                <div class="bg-slate-800/50 border border-white/10 rounded-xl p-5">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="text-sm font-semibold text-gray-300">Webserver / CDN</span>
+                        <span id="badge-server" class="text-xs px-2.5 py-1 rounded-full font-medium badge-info">Info</span>
+                    </div>
+                    <p id="result-server" class="text-sm text-gray-400">–</p>
+                    <p class="text-xs text-gray-500 mt-2">Aus Server-Header (wenn sichtbar)</p>
+                </div>
+            </div>
+
+            <!-- Alt-Svc Header -->
+            <div id="altsvc-section" class="bg-slate-800/50 border border-white/10 rounded-xl p-5 mb-6" style="display:none;">
+                <h3 class="text-sm font-semibold text-gray-300 mb-2">Alt-Svc Header (HTTP/3-Ankündigung)</h3>
+                <code id="altsvc-value" class="text-xs text-blue-300 bg-slate-700/50 px-3 py-2 rounded-lg block break-all"></code>
+                <p class="text-xs text-gray-500 mt-2">Dieser Header teilt dem Browser mit, dass HTTP/3 verfügbar ist und bei späteren Requests genutzt werden kann.</p>
+            </div>
+
+            <!-- Empfehlungen -->
+            <div id="recommendations" class="bg-slate-800/50 border border-white/10 rounded-xl p-6 mb-6">
+                <h3 class="text-base font-bold text-white mb-4">Empfehlungen</h3>
+                <ul id="rec-list" class="space-y-3"></ul>
+            </div>
+
+            <!-- DevTools Tipp -->
+            <div class="bg-slate-800/30 border border-white/5 rounded-xl p-5 mb-6">
+                <h3 class="text-sm font-semibold text-white mb-2">💡 Protokoll im Browser direkt prüfen</h3>
+                <p class="text-xs text-gray-400 mb-3">Da Browser-Sicherheitsrichtlinien das Auslesen mancher HTTP-Header von anderen Domains einschränken, ist die direkteste Methode:</p>
+                <ol class="text-xs text-gray-400 space-y-1 list-decimal list-inside">
+                    <li>Öffne die URL im Browser → Rechtsklick → "Untersuchen" (DevTools)</li>
+                    <li>Klicke auf den Tab "Netzwerk" (Network)</li>
+                    <li>Lade die Seite neu (F5)</li>
+                    <li>Klicke auf den ersten Request (HTML-Dokument)</li>
+                    <li>Unter "Header" → "Allgemein" siehst du das Protokoll (h2, h3, HTTP/1.1)</li>
+                </ol>
+                <p class="text-xs text-gray-500 mt-3">Alternativ: Rechtsklick auf Spaltenheader im Network-Tab → "Protokoll" aktivieren, um das Protokoll für alle Requests zu sehen.</p>
+            </div>
+
+            <!-- Error Info -->
+            <div id="cors-info" class="bg-amber-500/10 border border-amber-500/20 rounded-xl p-5 mb-6" style="display:none;">
+                <h3 class="text-sm font-semibold text-amber-400 mb-2">Eingeschränkte Erkennung</h3>
+                <p id="cors-info-text" class="text-xs text-gray-400"></p>
+            </div>
+
+            <!-- Neue Prüfung -->
+            <div class="text-center">
+                <button onclick="resetTool()" class="bg-slate-700 hover:bg-slate-600 text-white px-6 py-3 rounded-xl font-medium transition-colors text-sm">
+                    Weitere URL prüfen
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Loading -->
+    <section class="py-20 px-4" id="loading-section" style="display:none;">
+        <div class="max-w-md mx-auto text-center">
+            <div class="animate-spin w-12 h-12 border-4 border-blue-500 border-t-transparent rounded-full mx-auto mb-4"></div>
+            <p class="text-gray-400">Prüfe Server-Protokoll...</p>
+            <p id="loading-sub" class="text-xs text-gray-500 mt-2">Verbindung wird aufgebaut</p>
+        </div>
+    </section>
+
+    <!-- Info Section -->
+    <section class="py-16 px-4 border-t border-white/5">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-2xl font-bold text-white mb-8 text-center">HTTP/2 und HTTP/3: Was du wissen musst</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-slate-800/50 border border-white/10 rounded-xl p-6">
+                    <div class="text-red-400 font-bold text-lg mb-3">HTTP/1.1</div>
+                    <ul class="text-sm text-gray-400 space-y-2">
+                        <li>• Ein Request pro TCP-Verbindung</li>
+                        <li>• Head-of-Line Blocking</li>
+                        <li>• Unkomprimierte Header</li>
+                        <li>• Browser nutzt 6 parallele Verbindungen als Workaround</li>
+                        <li class="text-red-400">→ Langsamer, mehr Overhead</li>
+                    </ul>
+                </div>
+                <div class="bg-slate-800/50 border border-blue-500/20 rounded-xl p-6">
+                    <div class="text-blue-400 font-bold text-lg mb-3">HTTP/2 (h2)</div>
+                    <ul class="text-sm text-gray-400 space-y-2">
+                        <li>• Multiplexing: viele Requests gleichzeitig</li>
+                        <li>• HPACK Header-Komprimierung</li>
+                        <li>• Binäres statt Textprotokoll</li>
+                        <li>• Server Push (selten genutzt)</li>
+                        <li class="text-blue-400">→ 2-3× schneller als HTTP/1.1</li>
+                    </ul>
+                </div>
+                <div class="bg-slate-800/50 border border-emerald-500/20 rounded-xl p-6">
+                    <div class="text-emerald-400 font-bold text-lg mb-3">HTTP/3 / QUIC (h3)</div>
+                    <ul class="text-sm text-gray-400 space-y-2">
+                        <li>• UDP statt TCP</li>
+                        <li>• 0-RTT-Verbindungsaufbau</li>
+                        <li>• Kein Head-of-Line Blocking</li>
+                        <li>• Besser bei Paketverlust (Mobilfunk)</li>
+                        <li class="text-emerald-400">→ Beste LCP auf mobilen Netzwerken</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="mt-8 bg-blue-500/10 border border-blue-500/20 rounded-xl p-6">
+                <h3 class="text-base font-bold text-white mb-3">SEO-Relevanz: Warum HTTP/2 & HTTP/3 wichtig sind</h3>
+                <p class="text-sm text-gray-400">Das HTTP-Protokoll beeinflusst direkt deine Core Web Vitals — insbesondere LCP (Largest Contentful Paint) und TTFB (Time to First Byte). Google nutzt CWV als Ranking-Faktor. Websites auf HTTP/1.1 laden durchschnittlich 2-3× langsamer als HTTP/2-Sites, weil Browser serielle Anfragen stellen müssen. Für <a href="/blog/core-web-vitals-verbessern-lcp-cls-inp.html" class="text-blue-400 hover:text-blue-300 underline">gute Core Web Vitals</a> ist HTTP/2 heute Mindeststandard — HTTP/3 ist besonders für Mobile-Traffic relevant.</p>
+            </div>
+
+            <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <h3 class="text-base font-bold text-white mb-3">HTTP/2 aktivieren (je nach Server)</h3>
+                    <div class="space-y-3">
+                        <div class="bg-slate-800/50 rounded-lg p-4 text-xs">
+                            <div class="text-blue-400 font-medium mb-1">Nginx</div>
+                            <code class="text-gray-300">server { listen 443 ssl http2; ... }</code>
+                        </div>
+                        <div class="bg-slate-800/50 rounded-lg p-4 text-xs">
+                            <div class="text-blue-400 font-medium mb-1">Apache</div>
+                            <code class="text-gray-300">Protocols h2 h2c http/1.1<br>LoadModule http2_module modules/mod_http2.so</code>
+                        </div>
+                        <div class="bg-slate-800/50 rounded-lg p-4 text-xs">
+                            <div class="text-blue-400 font-medium mb-1">Cloudflare / CDN</div>
+                            <code class="text-gray-300">HTTP/2 ist automatisch aktiv (kein Setup nötig)</code>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-base font-bold text-white mb-3">Verwandte Tools</h3>
+                    <div class="space-y-3">
+                        <a href="/tools/ssl-zertifikat-checker.html" class="block bg-slate-800/50 border border-white/10 hover:border-blue-500/30 rounded-xl p-4 transition-colors">
+                            <p class="text-sm font-medium text-white">SSL-Zertifikat-Checker</p>
+                            <p class="text-xs text-gray-400 mt-1">HTTPS-Status und Zertifikat prüfen</p>
+                        </a>
+                        <a href="/tools/http-header-checker.html" class="block bg-slate-800/50 border border-white/10 hover:border-blue-500/30 rounded-xl p-4 transition-colors">
+                            <p class="text-sm font-medium text-white">HTTP Header Checker</p>
+                            <p class="text-xs text-gray-400 mt-1">Alle Response-Header analysieren</p>
+                        </a>
+                        <a href="/tools/gzip-compression-checker.html" class="block bg-slate-800/50 border border-white/10 hover:border-blue-500/30 rounded-xl p-4 transition-colors">
+                            <p class="text-sm font-medium text-white">Gzip/Brotli-Checker</p>
+                            <p class="text-xs text-gray-400 mt-1">Komprimierung kostenlos prüfen</p>
+                        </a>
+                        <a href="/tools/core-web-vitals-checker.html" class="block bg-slate-800/50 border border-white/10 hover:border-blue-500/30 rounded-xl p-4 transition-colors">
+                            <p class="text-sm font-medium text-white">Core Web Vitals Checker</p>
+                            <p class="text-xs text-gray-400 mt-1">LCP, CLS, INP via PSI-API messen</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer CTA -->
+    <section class="py-16 px-4 bg-gradient-to-r from-blue-900/30 to-indigo-900/30 border-t border-b border-white/5">
+        <div class="max-w-3xl mx-auto text-center">
+            <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">Vollständige Website-Analyse</h2>
+            <p class="text-gray-400 mb-8">HTTP-Protokoll ist nur ein Faktor. Entdecke alle SEO-Probleme auf deiner Website.</p>
+            <a href="/" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-8 py-3 rounded-lg font-medium transition-all inline-block">Kostenlose SEO-Analyse starten</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/10 bg-slate-900/50 py-12 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="flex items-center gap-2">
+                    <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                    <span class="text-lg font-bold text-white">Shift07</span>
+                </div>
+                <div class="flex items-center space-x-6 text-sm text-gray-400">
+                    <a href="/impressum.html" class="hover:text-white transition-colors">Impressum</a>
+                    <a href="/datenschutz.html" class="hover:text-white transition-colors">Datenschutz</a>
+                    <a href="/agb.html" class="hover:text-white transition-colors">AGB</a>
+                </div>
+                <p class="text-sm text-gray-500">&copy; 2026 Thümmler AI GmbH</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        document.getElementById('url-input').addEventListener('keydown', function(e) {
+            if (e.key === 'Enter') startCheck();
+        });
+
+        function normalizeUrl(url) {
+            url = url.trim();
+            if (!url) return null;
+            if (!url.startsWith('http://') && !url.startsWith('https://')) {
+                url = 'https://' + url;
+            }
+            try {
+                return new URL(url).href;
+            } catch(e) {
+                return null;
+            }
+        }
+
+        function showBadge(id, type, text) {
+            const el = document.getElementById(id);
+            el.className = 'text-xs px-2.5 py-1 rounded-full font-medium ' + {
+                good: 'badge-good',
+                warn: 'badge-warn',
+                bad: 'badge-bad',
+                info: 'badge-info'
+            }[type];
+            el.textContent = text;
+        }
+
+        function addRec(icon, text, color) {
+            const li = document.createElement('li');
+            li.className = 'flex items-start gap-3';
+            li.innerHTML = `<span class="text-lg leading-none mt-0.5">${icon}</span><span class="text-sm text-gray-400">${text}</span>`;
+            document.getElementById('rec-list').appendChild(li);
+        }
+
+        async function startCheck() {
+            const rawUrl = document.getElementById('url-input').value;
+            const url = normalizeUrl(rawUrl);
+
+            if (!url) {
+                alert('Bitte eine gültige URL eingeben (z.B. https://meine-website.de)');
+                return;
+            }
+
+            document.getElementById('url-input').value = url;
+            document.querySelector('section.py-12').style.display = 'none';
+            document.getElementById('results-section').style.display = 'none';
+            document.getElementById('loading-section').style.display = 'block';
+            document.getElementById('rec-list').innerHTML = '';
+
+            const isHttps = url.startsWith('https://');
+            let protocol = null;
+            let h3Support = false;
+            let altSvc = null;
+            let server = null;
+            let corsBlocked = false;
+            let h2Detected = false;
+            let h3Detected = false;
+            let detectionMethod = 'timing';
+
+            const updateLoading = (msg) => {
+                document.getElementById('loading-sub').textContent = msg;
+            };
+
+            if (!isHttps) {
+                protocol = 'http/1.1';
+                detectionMethod = 'url';
+            } else {
+                updateLoading('Verbindung aufbauen...');
+
+                // Method 1: Direct fetch with CORS
+                try {
+                    const controller = new AbortController();
+                    const timer = setTimeout(() => controller.abort(), 9000);
+                    const resp = await fetch(url, { mode: 'cors', signal: controller.signal });
+                    clearTimeout(timer);
+
+                    altSvc = resp.headers.get('alt-svc');
+                    server = resp.headers.get('server') || resp.headers.get('x-powered-by');
+                    if (!server) server = resp.headers.get('x-server');
+                    const via = resp.headers.get('via');
+                    if (via && !server) server = 'Proxy/CDN (' + via.split('/')[0].trim() + ')';
+                    h3Support = altSvc ? (altSvc.includes('h3') || altSvc.includes('"h3"')) : false;
+                    detectionMethod = 'cors';
+
+                    // Check timing after CORS fetch
+                    await new Promise(r => setTimeout(r, 300));
+                    const entries = performance.getEntriesByType('resource');
+                    const entry = entries.find(e => e.name === url || e.name.startsWith(url.split('?')[0]));
+                    if (entry && entry.nextHopProtocol) {
+                        protocol = entry.nextHopProtocol;
+                    }
+                } catch (corsErr) {
+                    corsBlocked = true;
+                    updateLoading('Direkte Verbindung eingeschränkt — versuche Timing-Analyse...');
+
+                    // Method 2: no-cors + timing
+                    try {
+                        const controller2 = new AbortController();
+                        const timer2 = setTimeout(() => controller2.abort(), 8000);
+                        await fetch(url, { mode: 'no-cors', signal: controller2.signal });
+                        clearTimeout(timer2);
+
+                        await new Promise(r => setTimeout(r, 400));
+                        const entries2 = performance.getEntriesByType('resource');
+                        const entry2 = entries2.find(e => e.name === url || e.name.startsWith(url.split('?')[0]));
+                        if (entry2 && entry2.nextHopProtocol) {
+                            protocol = entry2.nextHopProtocol;
+                            detectionMethod = 'timing';
+                        } else {
+                            detectionMethod = 'unknown';
+                        }
+                    } catch (e2) {
+                        detectionMethod = 'failed';
+                    }
+                }
+            }
+
+            // Interpret protocol
+            if (protocol) {
+                h2Detected = protocol === 'h2' || protocol === 'http/2' || protocol === 'h2c';
+                h3Detected = protocol === 'h3' || protocol === 'http/3' || protocol === 'quic';
+            }
+
+            // Also check Alt-Svc even if protocol unknown
+            if (h3Support && !h3Detected) {
+                // Alt-Svc says h3 is available but we didn't detect it in current connection
+            }
+
+            // Render results
+            document.getElementById('loading-section').style.display = 'none';
+            document.getElementById('results-section').style.display = 'block';
+
+            // Protocol Banner
+            const banner = document.getElementById('protocol-banner');
+            const icon = document.getElementById('protocol-icon');
+            const label = document.getElementById('protocol-label');
+            const sub = document.getElementById('protocol-sub');
+
+            if (h3Detected) {
+                banner.className = 'rounded-2xl p-6 mb-8 text-center protocol-h3';
+                icon.textContent = '⚡';
+                label.textContent = 'HTTP/3 (QUIC) — Topklasse!';
+                sub.textContent = 'Deine Website nutzt das modernste verfügbare Protokoll. Maximale Performance auf allen Verbindungstypen.';
+            } else if (h2Detected) {
+                banner.className = 'rounded-2xl p-6 mb-8 text-center protocol-h2';
+                icon.textContent = '✅';
+                label.textContent = 'HTTP/2 — Gut aufgestellt';
+                sub.textContent = 'Deine Website verwendet HTTP/2 mit Multiplexing und Header-Komprimierung. HTTP/3 wäre noch besser.';
+            } else if (protocol && (protocol === 'http/1.1' || protocol === 'http/1.0')) {
+                banner.className = 'rounded-2xl p-6 mb-8 text-center protocol-h1';
+                icon.textContent = '⚠️';
+                label.textContent = 'HTTP/1.1 — Upgrade empfohlen';
+                sub.textContent = 'Veraltetes Protokoll ohne Multiplexing. Ein Upgrade auf HTTP/2 kann Ladezeiten um 20-50% verbessern.';
+            } else if (detectionMethod === 'unknown' || detectionMethod === 'failed') {
+                banner.className = 'rounded-2xl p-6 mb-8 text-center bg-slate-800/50 border border-white/10';
+                icon.textContent = '🔍';
+                label.textContent = 'Protokoll nicht eindeutig erkennbar';
+                sub.textContent = 'Aus Datenschutzgründen kann der Browser das Protokoll externer Seiten nicht immer auslesen. Nutze die DevTools-Anleitung unten.';
+            } else if (!isHttps) {
+                banner.className = 'rounded-2xl p-6 mb-8 text-center protocol-h1';
+                icon.textContent = '🔓';
+                label.textContent = 'HTTP (kein HTTPS) — Upgrade nötig!';
+                sub.textContent = 'HTTP/2 und HTTP/3 erfordern HTTPS. Aktiviere zuerst ein SSL-Zertifikat.';
+            } else {
+                banner.className = 'rounded-2xl p-6 mb-8 text-center bg-slate-800/50 border border-white/10';
+                icon.textContent = '❓';
+                label.textContent = 'Protokoll unbekannt';
+                sub.textContent = 'Die Website konnte nicht analysiert werden. Prüfe ob die URL erreichbar ist.';
+            }
+
+            // HTTPS Badge
+            showBadge('badge-https', isHttps ? 'good' : 'bad', isHttps ? 'Aktiv' : 'Nicht aktiv');
+            document.getElementById('result-https').textContent = isHttps
+                ? 'HTTPS ist aktiv — Voraussetzung für HTTP/2 und HTTP/3 erfüllt.'
+                : 'Kein HTTPS! HTTP/2 und HTTP/3 erfordern eine verschlüsselte Verbindung. Aktiviere ein SSL-Zertifikat.';
+
+            // HTTP/2 Badge
+            if (h2Detected || h3Detected) {
+                showBadge('badge-h2', 'good', 'Aktiv');
+                document.getElementById('result-h2').textContent = h3Detected
+                    ? 'Aktiv (via HTTP/3-Verbindung, die HTTP/2-Features beinhaltet).'
+                    : 'Deine Website nutzt HTTP/2 mit Multiplexing und HPACK-Header-Komprimierung.';
+            } else if (protocol === 'http/1.1' || protocol === 'http/1.0') {
+                showBadge('badge-h2', 'bad', 'Nicht aktiv');
+                document.getElementById('result-h2').textContent = 'Kein HTTP/2 erkannt. Aktiviere HTTP/2 auf deinem Webserver oder nutze ein CDN.';
+            } else {
+                showBadge('badge-h2', 'info', 'Nicht prüfbar');
+                document.getElementById('result-h2').textContent = 'Konnte nicht geprüft werden. Nutze die Browser-DevTools für eine direkte Prüfung.';
+            }
+
+            // HTTP/3 Badge
+            if (h3Detected) {
+                showBadge('badge-h3', 'good', 'Aktiv');
+                document.getElementById('result-h3').textContent = 'HTTP/3 (QUIC) ist aktiv! Das ist das modernste verfügbare Protokoll.';
+            } else if (h3Support && altSvc) {
+                showBadge('badge-h3', 'warn', 'Angekündigt');
+                document.getElementById('result-h3').textContent = 'HTTP/3 wird per Alt-Svc-Header angekündigt. Browser nutzen es bei wiederholten Besuchen.';
+            } else if (protocol === 'http/1.1' || (!isHttps)) {
+                showBadge('badge-h3', 'bad', 'Nicht verfügbar');
+                document.getElementById('result-h3').textContent = 'HTTP/3 ist nicht verfügbar. Upgrade zuerst auf HTTP/2 und HTTPS.';
+            } else {
+                showBadge('badge-h3', 'info', 'Nicht prüfbar');
+                document.getElementById('result-h3').textContent = 'HTTP/3-Status konnte nicht geprüft werden (CORS-Einschränkung).';
+            }
+
+            // Server Badge
+            if (server) {
+                showBadge('badge-server', 'info', 'Erkannt');
+                document.getElementById('result-server').textContent = server;
+            } else {
+                showBadge('badge-server', 'info', 'Verborgen');
+                document.getElementById('result-server').textContent = 'Server-Header nicht sichtbar (kann aus Sicherheitsgründen ausgeblendet sein).';
+            }
+
+            // Alt-Svc Section
+            if (altSvc) {
+                document.getElementById('altsvc-section').style.display = 'block';
+                document.getElementById('altsvc-value').textContent = altSvc;
+            }
+
+            // CORS info
+            if (corsBlocked) {
+                document.getElementById('cors-info').style.display = 'block';
+                document.getElementById('cors-info-text').textContent =
+                    'Diese Website erlaubt keinen direkten Cross-Origin-Zugriff auf Response-Header. Die Erkennung basiert auf der Performance-API (Timing). Falls das Protokoll als "nicht erkennbar" angezeigt wird, nutze die Browser-DevTools für eine direkte Prüfung.';
+            }
+
+            // Recommendations
+            if (!isHttps) {
+                addRec('🔐', '<strong>SSL-Zertifikat aktivieren:</strong> HTTPS ist Voraussetzung für HTTP/2. Nutze Let\'s Encrypt (kostenlos) oder dein Hosting-Panel.', 'red');
+                addRec('⬆️', '<strong>HTTP/2 aktivieren:</strong> Nach dem HTTPS-Upgrade aktiviere HTTP/2 in deinem Webserver (Nginx/Apache) oder wechsle zu einem CDN wie Cloudflare.', 'orange');
+            } else if (protocol === 'http/1.1') {
+                addRec('⬆️', '<strong>HTTP/2 aktivieren:</strong> Nginx: <code class="bg-slate-700 px-1 rounded text-xs">listen 443 ssl http2</code>. Apache: <code class="bg-slate-700 px-1 rounded text-xs">Protocols h2 http/1.1</code>. Oder nutze Cloudflare als Reverse Proxy.', 'orange');
+                addRec('📈', '<strong>Erwarteter Gewinn:</strong> HTTP/2-Upgrade kann LCP um 20-40% verbessern, besonders bei Seiten mit vielen Ressourcen (CSS, JS, Bilder).', 'blue');
+                addRec('🌐', '<strong>CDN als einfachste Lösung:</strong> Cloudflare, BunnyCDN oder CloudFront aktivieren automatisch HTTP/2 und HTTP/3 — kein Server-Setup nötig.', 'blue');
+            } else if (h2Detected && !h3Detected && !h3Support) {
+                addRec('⚡', '<strong>HTTP/3 aktivieren:</strong> Nginx 1.25+: <code class="bg-slate-700 px-1 rounded text-xs">listen 443 quic reuseport</code> und UDP-Port 443 freigeben. Oder aktiviere HTTP/3 in Cloudflare (kostenlos).', 'blue');
+                addRec('📱', '<strong>Mobile Performance:</strong> HTTP/3 ist besonders bei schwachen Mobilfunkverbindungen 15-30% schneller als HTTP/2 — wichtig für Mobile CWV.', 'blue');
+            } else if (h3Detected || h3Support) {
+                addRec('✅', '<strong>Gut aufgestellt:</strong> Deine Website nutzt das modernste Protokoll. Fokussiere dich jetzt auf andere Performance-Faktoren wie Bilder, JavaScript und Caching.', 'green');
+                addRec('📊', '<strong>Nächster Schritt:</strong> Prüfe deine Core Web Vitals mit dem <a href="/tools/core-web-vitals-checker.html" class="text-blue-400 hover:underline">CWV-Checker</a> — das Protokoll ist nur einer von vielen Ladezeit-Faktoren.', 'green');
+            }
+
+            if (detectionMethod === 'unknown' || detectionMethod === 'failed') {
+                addRec('🔍', '<strong>Direktprüfung empfohlen:</strong> Öffne die URL im Browser, öffne DevTools (F12) → Network → lade neu → klicke auf den ersten Request → sieh das Protokoll unter "General" oder aktiviere die "Protocol"-Spalte in der Request-Liste.', 'info');
+            }
+        }
+
+        function resetTool() {
+            document.getElementById('url-input').value = '';
+            document.getElementById('results-section').style.display = 'none';
+            document.getElementById('cors-info').style.display = 'none';
+            document.getElementById('altsvc-section').style.display = 'none';
+            document.querySelector('section.py-12').style.display = 'block';
+            document.getElementById('url-input').focus();
+        }
+    </script>
+</body>
+</html>
