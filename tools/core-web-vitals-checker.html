@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Core Web Vitals Checker – LCP, CLS, INP kostenlos messen | Shift07</title>
+    <meta name="description" content="Messe echte Core Web Vitals Lab-Daten deiner Website: LCP, CLS, INP, FCP und TTFB via PageSpeed Insights API. Kostenlos, sofort, ohne Anmeldung.">
+    <meta name="keywords" content="core web vitals checker, lcp messen, cls messen, inp messen, pagespeed insights, web vitals tool kostenlos">
+    <meta name="author" content="Thümmler AI GmbH">
+    <link rel="icon" type="image/png" href="/logo.png">
+    <link rel="canonical" href="https://shift07.ai/tools/core-web-vitals-checker.html">
+    <link rel="alternate" type="application/rss+xml" title="Shift07 Blog" href="https://shift07.ai/feed.xml">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Core Web Vitals Checker – LCP, CLS, INP messen">
+    <meta property="og:description" content="Messe echte Core Web Vitals Lab-Daten deiner Website via PageSpeed Insights. LCP, CLS, INP, FCP, TTFB – sofort und kostenlos.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://shift07.ai/tools/core-web-vitals-checker.html">
+    <meta property="og:image" content="https://shift07.ai/tools/images/core-web-vitals-checker.png">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="Shift07">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Core Web Vitals Checker – LCP, CLS, INP kostenlos messen">
+    <meta name="twitter:description" content="Echte Lab-Daten via PageSpeed Insights API. Sofort kostenlos.">
+    <meta name="twitter:image" content="https://shift07.ai/tools/images/core-web-vitals-checker.png">
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Core Web Vitals Checker",
+      "description": "Messe echte Core Web Vitals Lab-Daten deiner Website: LCP, CLS, INP, FCP und TTFB via PageSpeed Insights API.",
+      "url": "https://shift07.ai/tools/core-web-vitals-checker.html",
+      "applicationCategory": "SEO Tool",
+      "operatingSystem": "Any",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+      "publisher": { "@type": "Organization", "name": "Shift07", "url": "https://shift07.ai" }
+    }
+    </script>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8475857002943858" crossorigin="anonymous"></script>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K1S1RXBDS8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K1S1RXBDS8');
+    </script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0a0a0a; color: #e0e0e0; line-height: 1.7; min-height: 100vh; }
+
+        nav { background: rgba(10,10,10,0.95); border-bottom: 1px solid #1e293b; padding: 1rem 2rem; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 100; }
+        .nav-logo { font-size: 1.4rem; font-weight: 800; background: linear-gradient(135deg, #3b82f6, #8b5cf6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-decoration: none; }
+        .nav-links { display: flex; gap: 1.5rem; }
+        .nav-links a { color: #94a3b8; text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
+        .nav-links a:hover { color: #e2e8f0; }
+
+        .hero { background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #0f172a 100%); padding: 3rem 2rem 2rem; text-align: center; border-bottom: 1px solid #1e293b; }
+        .hero-badge { display: inline-block; background: rgba(59,130,246,0.15); border: 1px solid rgba(59,130,246,0.3); color: #60a5fa; padding: 0.3rem 1rem; border-radius: 20px; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.5px; margin-bottom: 1rem; }
+        .hero h1 { font-size: 2.2rem; font-weight: 800; color: #f1f5f9; margin-bottom: 0.8rem; line-height: 1.2; }
+        .hero h1 span { background: linear-gradient(135deg, #3b82f6, #8b5cf6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .hero p { color: #94a3b8; font-size: 1rem; max-width: 600px; margin: 0 auto; }
+
+        main { max-width: 900px; margin: 2rem auto; padding: 0 1.5rem; }
+
+        .tool-card { background: #111827; border: 1px solid #1e293b; border-radius: 16px; padding: 2rem; margin-bottom: 2rem; }
+
+        .strategy-tabs { display: flex; gap: 0.5rem; margin-bottom: 1.5rem; }
+        .tab-btn { flex: 1; padding: 0.7rem 1rem; border-radius: 8px; border: 1px solid #1e293b; background: #0f172a; color: #64748b; font-size: 0.9rem; font-weight: 600; cursor: pointer; transition: all 0.2s; display: flex; align-items: center; justify-content: center; gap: 0.4rem; }
+        .tab-btn.active { background: rgba(59,130,246,0.15); border-color: #3b82f6; color: #60a5fa; }
+        .tab-btn:hover:not(.active) { border-color: #334155; color: #94a3b8; }
+
+        .input-row { display: flex; gap: 0.8rem; }
+        .url-input { flex: 1; background: #0f172a; border: 1px solid #1e293b; border-radius: 8px; padding: 0.9rem 1.2rem; color: #e2e8f0; font-size: 1rem; outline: none; transition: border-color 0.2s; }
+        .url-input:focus { border-color: #3b82f6; }
+        .url-input::placeholder { color: #475569; }
+        .check-btn { background: linear-gradient(135deg, #3b82f6, #8b5cf6); color: white; border: none; border-radius: 8px; padding: 0.9rem 1.8rem; font-size: 1rem; font-weight: 700; cursor: pointer; white-space: nowrap; transition: opacity 0.2s; }
+        .check-btn:hover { opacity: 0.9; }
+        .check-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+        .both-btn { width: 100%; margin-top: 0.8rem; background: #1e293b; color: #94a3b8; border: 1px dashed #334155; border-radius: 8px; padding: 0.7rem; font-size: 0.85rem; cursor: pointer; transition: all 0.2s; }
+        .both-btn:hover { background: #334155; color: #e2e8f0; }
+
+        #status-area { margin-top: 1.5rem; }
+        .status-msg { text-align: center; padding: 1.5rem; color: #64748b; font-size: 0.9rem; }
+        .loading-ring { display: inline-block; width: 40px; height: 40px; border: 3px solid #1e293b; border-top-color: #3b82f6; border-radius: 50%; animation: spin 0.8s linear infinite; margin-bottom: 1rem; }
+        @keyframes spin { to { transform: rotate(360deg); } }
+
+        .results-grid { display: grid; gap: 1.5rem; }
+        .strategy-result { background: #0f172a; border: 1px solid #1e293b; border-radius: 12px; padding: 1.5rem; }
+        .strategy-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.2rem; }
+        .strategy-label { font-size: 1rem; font-weight: 700; color: #e2e8f0; display: flex; align-items: center; gap: 0.5rem; }
+        .strategy-label .icon { font-size: 1.2rem; }
+
+        .score-circle { width: 64px; height: 64px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; font-weight: 800; border: 3px solid; }
+        .score-good { border-color: #22c55e; color: #22c55e; background: rgba(34,197,94,0.08); }
+        .score-needs { border-color: #f59e0b; color: #f59e0b; background: rgba(245,158,11,0.08); }
+        .score-poor { border-color: #ef4444; color: #ef4444; background: rgba(239,68,68,0.08); }
+
+        .metrics-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.8rem; }
+        @media (min-width: 600px) { .metrics-grid { grid-template-columns: repeat(3, 1fr); } }
+
+        .metric-card { background: #111827; border: 1px solid #1e293b; border-radius: 10px; padding: 1rem; text-align: center; position: relative; }
+        .metric-card.good { border-left: 3px solid #22c55e; }
+        .metric-card.needs { border-left: 3px solid #f59e0b; }
+        .metric-card.poor { border-left: 3px solid #ef4444; }
+        .metric-name { font-size: 0.75rem; font-weight: 600; color: #64748b; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 0.4rem; }
+        .metric-value { font-size: 1.5rem; font-weight: 800; line-height: 1; margin-bottom: 0.3rem; }
+        .metric-card.good .metric-value { color: #22c55e; }
+        .metric-card.needs .metric-value { color: #f59e0b; }
+        .metric-card.poor .metric-value { color: #ef4444; }
+        .metric-label { font-size: 0.7rem; color: #475569; }
+        .metric-badge { display: inline-block; font-size: 0.65rem; padding: 0.15rem 0.5rem; border-radius: 10px; font-weight: 600; margin-top: 0.3rem; }
+        .metric-card.good .metric-badge { background: rgba(34,197,94,0.15); color: #22c55e; }
+        .metric-card.needs .metric-badge { background: rgba(245,158,11,0.15); color: #f59e0b; }
+        .metric-card.poor .metric-badge { background: rgba(239,68,68,0.15); color: #ef4444; }
+        .metric-tag { position: absolute; top: 0.4rem; right: 0.4rem; font-size: 0.6rem; background: rgba(99,102,241,0.15); color: #818cf8; padding: 0.1rem 0.4rem; border-radius: 4px; font-weight: 600; }
+
+        .opportunities { margin-top: 1.2rem; }
+        .opp-title { font-size: 0.85rem; font-weight: 600; color: #94a3b8; margin-bottom: 0.6rem; }
+        .opp-item { background: #1e293b; border-radius: 6px; padding: 0.6rem 0.8rem; margin-bottom: 0.4rem; font-size: 0.8rem; color: #94a3b8; display: flex; align-items: center; gap: 0.5rem; }
+        .opp-item .save { color: #22c55e; font-weight: 700; font-size: 0.75rem; }
+
+        .thresholds-table { margin-top: 2rem; }
+        .thresholds-table h3 { font-size: 1.1rem; font-weight: 700; color: #e2e8f0; margin-bottom: 1rem; }
+        table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
+        th { background: #1e293b; color: #94a3b8; padding: 0.7rem 1rem; text-align: left; font-weight: 600; }
+        td { padding: 0.7rem 1rem; border-bottom: 1px solid #1e293b; color: #cbd5e1; }
+        .good-txt { color: #22c55e; font-weight: 600; }
+        .needs-txt { color: #f59e0b; font-weight: 600; }
+        .poor-txt { color: #ef4444; font-weight: 600; }
+        .cwv-badge { display: inline-block; font-size: 0.65rem; background: rgba(99,102,241,0.15); color: #818cf8; padding: 0.1rem 0.4rem; border-radius: 4px; font-weight: 700; margin-left: 0.3rem; }
+
+        .info-section { margin-top: 2rem; }
+        .info-section h2 { font-size: 1.3rem; font-weight: 700; color: #e2e8f0; margin-bottom: 0.8rem; border-left: 3px solid #3b82f6; padding-left: 0.8rem; }
+        .info-section p { color: #94a3b8; font-size: 0.9rem; margin-bottom: 0.8rem; }
+        .info-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 1rem; margin: 1rem 0; }
+        .info-card { background: #111827; border: 1px solid #1e293b; border-radius: 10px; padding: 1.2rem; }
+        .info-card h4 { font-size: 0.9rem; font-weight: 700; color: #e2e8f0; margin-bottom: 0.4rem; }
+        .info-card p { font-size: 0.8rem; color: #64748b; margin-bottom: 0; }
+
+        .error-box { background: rgba(239,68,68,0.08); border: 1px solid rgba(239,68,68,0.3); border-radius: 10px; padding: 1.2rem; color: #f87171; text-align: center; font-size: 0.9rem; }
+
+        footer { background: #111827; border-top: 1px solid #1e293b; padding: 2rem; text-align: center; margin-top: 3rem; }
+        footer p { color: #475569; font-size: 0.85rem; }
+        footer a { color: #60a5fa; text-decoration: none; }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="/" class="nav-logo">Shift07</a>
+    <div class="nav-links">
+        <a href="/blog/">Blog</a>
+        <a href="/tools/">Tools</a>
+        <a href="/#analyse">Analyse</a>
+    </div>
+</nav>
+
+<div class="hero">
+    <div class="hero-badge">🔬 Echte Lab-Daten via PageSpeed Insights API</div>
+    <h1>Core Web Vitals <span>Checker</span></h1>
+    <p>Miss LCP, CLS, INP, FCP und TTFB deiner Website — kostenlos, direkt aus der PageSpeed Insights API.</p>
+</div>
+
+<main>
+
+    <div class="tool-card">
+        <div class="strategy-tabs">
+            <button class="tab-btn active" id="tab-mobile" onclick="setStrategy('mobile')">📱 Mobile</button>
+            <button class="tab-btn" id="tab-desktop" onclick="setStrategy('desktop')">🖥️ Desktop</button>
+        </div>
+
+        <div class="input-row">
+            <input type="url" id="url-input" class="url-input" placeholder="https://deine-website.de" value="">
+            <button class="check-btn" id="check-btn" onclick="runCheck()">Jetzt prüfen</button>
+        </div>
+        <button class="both-btn" id="both-btn" onclick="runBoth()">📊 Beide Strategien gleichzeitig prüfen (Mobile + Desktop)</button>
+
+        <div id="status-area">
+            <p class="status-msg">Gib eine URL ein und wähle eine Strategie — die Analyse dauert ca. 15–30 Sekunden.</p>
+        </div>
+    </div>
+
+    <div class="thresholds-table">
+        <div class="tool-card">
+            <h3>Core Web Vitals Grenzwerte (Google 2026)</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Metrik</th>
+                        <th>Was wird gemessen?</th>
+                        <th class="good-txt">Gut</th>
+                        <th class="needs-txt">Verbesserungsbedarf</th>
+                        <th class="poor-txt">Schlecht</th>
+                        <th>CWV?</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>LCP</strong></td>
+                        <td>Largest Contentful Paint — größtes sichtbares Element</td>
+                        <td class="good-txt">≤ 2,5 s</td>
+                        <td class="needs-txt">≤ 4,0 s</td>
+                        <td class="poor-txt">&gt; 4,0 s</td>
+                        <td><span class="cwv-badge">CWV</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>CLS</strong></td>
+                        <td>Cumulative Layout Shift — Layoutverschiebungen</td>
+                        <td class="good-txt">≤ 0,1</td>
+                        <td class="needs-txt">≤ 0,25</td>
+                        <td class="poor-txt">&gt; 0,25</td>
+                        <td><span class="cwv-badge">CWV</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>INP</strong></td>
+                        <td>Interaction to Next Paint — Reaktionszeit auf Eingaben</td>
+                        <td class="good-txt">≤ 200 ms</td>
+                        <td class="needs-txt">≤ 500 ms</td>
+                        <td class="poor-txt">&gt; 500 ms</td>
+                        <td><span class="cwv-badge">CWV</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>FCP</strong></td>
+                        <td>First Contentful Paint — erstes sichtbares Element</td>
+                        <td class="good-txt">≤ 1,8 s</td>
+                        <td class="needs-txt">≤ 3,0 s</td>
+                        <td class="poor-txt">&gt; 3,0 s</td>
+                        <td>Diagnostik</td>
+                    </tr>
+                    <tr>
+                        <td><strong>TTFB</strong></td>
+                        <td>Time to First Byte — Serverantwortzeit</td>
+                        <td class="good-txt">≤ 800 ms</td>
+                        <td class="needs-txt">≤ 1.800 ms</td>
+                        <td class="poor-txt">&gt; 1.800 ms</td>
+                        <td>Diagnostik</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Speed Index</strong></td>
+                        <td>Wie schnell sichtbarer Inhalt geladen wird</td>
+                        <td class="good-txt">≤ 3,4 s</td>
+                        <td class="needs-txt">≤ 5,8 s</td>
+                        <td class="poor-txt">&gt; 5,8 s</td>
+                        <td>Diagnostik</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="info-section">
+        <h2>Was sind Core Web Vitals?</h2>
+        <p>Core Web Vitals (CWV) sind drei Google-Ranking-Faktoren, die die Nutzererfahrung einer Website messen. Seit dem Google Page Experience Update 2021 fließen sie direkt in das Ranking ein.</p>
+        <div class="info-grid">
+            <div class="info-card">
+                <h4>🖼️ LCP – Largest Contentful Paint</h4>
+                <p>Misst, wie lange das größte sichtbare Element (Bild, Text, Video) braucht, um geladen zu werden. Ein schlechter LCP entsteht durch langsame Server, große Bilder oder render-blockierende Ressourcen.</p>
+            </div>
+            <div class="info-card">
+                <h4>📐 CLS – Cumulative Layout Shift</h4>
+                <p>Misst unerwartete Layoutverschiebungen während des Ladens. Häufige Ursachen: Bilder ohne definierte Größe, dynamisch eingefügte Inhalte (Ads, Cookies) oder Webfonts die Texte verschieben.</p>
+            </div>
+            <div class="info-card">
+                <h4>⚡ INP – Interaction to Next Paint</h4>
+                <p>Seit März 2024 ersetzt INP den alten FID. Es misst die Latenz aller Nutzerinteraktionen (Klicks, Tastendrücke) auf der Seite — nicht nur die erste. Schwere JS-Tasks sind die Hauptursache.</p>
+            </div>
+            <div class="info-card">
+                <h4>🔍 Lab-Daten vs. Felddaten</h4>
+                <p>Dieses Tool zeigt <strong>Lab-Daten</strong> — gemessen in einer kontrollierten Umgebung. Googles Ranking-Entscheidungen basieren primär auf <strong>Felddaten</strong> (CrUX – echte Nutzerdaten). Beide ergänzen sich.</p>
+            </div>
+        </div>
+        <p>Mehr dazu: <a href="/blog/core-web-vitals-verbessern-lcp-cls-inp" style="color:#60a5fa">Core Web Vitals verbessern: LCP, CLS, INP optimieren</a> oder <a href="/blog/core-web-vitals-erklaert" style="color:#60a5fa">Core Web Vitals erklärt</a>.</p>
+    </div>
+
+</main>
+
+<footer>
+    <p>
+        <a href="/">Shift07</a> · <a href="/blog/">Blog</a> · <a href="/tools/">Alle Tools</a> ·
+        <a href="/datenschutz.html">Datenschutz</a> · <a href="/impressum.html">Impressum</a>
+    </p>
+    <p style="margin-top:0.5rem">© 2026 Thümmler AI GmbH · Leonardo-da-Vinci-Straße 15, 14467 Potsdam</p>
+</footer>
+
+<script>
+    let currentStrategy = 'mobile';
+
+    function setStrategy(s) {
+        currentStrategy = s;
+        document.getElementById('tab-mobile').classList.toggle('active', s === 'mobile');
+        document.getElementById('tab-desktop').classList.toggle('active', s === 'desktop');
+    }
+
+    function getUrl() {
+        let url = document.getElementById('url-input').value.trim();
+        if (!url) { alert('Bitte gib eine URL ein.'); return null; }
+        if (!/^https?:\/\//i.test(url)) url = 'https://' + url;
+        return url;
+    }
+
+    async function runCheck() {
+        const url = getUrl();
+        if (!url) return;
+        const btn = document.getElementById('check-btn');
+        btn.disabled = true;
+        btn.textContent = 'Analysiere…';
+        showLoading(currentStrategy);
+        try {
+            const data = await fetchPSI(url, currentStrategy);
+            const area = document.getElementById('status-area');
+            area.innerHTML = '';
+            area.appendChild(buildResultCard(data, currentStrategy));
+        } catch(e) {
+            showError(e.message);
+        } finally {
+            btn.disabled = false;
+            btn.textContent = 'Jetzt prüfen';
+        }
+    }
+
+    async function runBoth() {
+        const url = getUrl();
+        if (!url) return;
+        const btn = document.getElementById('both-btn');
+        btn.disabled = true;
+        btn.textContent = '⏳ Analysiere Mobile + Desktop…';
+        showLoading('both');
+        try {
+            const [mob, desk] = await Promise.all([
+                fetchPSI(url, 'mobile'),
+                fetchPSI(url, 'desktop')
+            ]);
+            const area = document.getElementById('status-area');
+            const grid = document.createElement('div');
+            grid.className = 'results-grid';
+            grid.appendChild(buildResultCard(mob, 'mobile'));
+            grid.appendChild(buildResultCard(desk, 'desktop'));
+            area.innerHTML = '';
+            area.appendChild(grid);
+        } catch(e) {
+            showError(e.message);
+        } finally {
+            btn.disabled = false;
+            btn.textContent = '📊 Beide Strategien gleichzeitig prüfen (Mobile + Desktop)';
+        }
+    }
+
+    async function fetchPSI(url, strategy) {
+        const apiUrl = `https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=${encodeURIComponent(url)}&strategy=${strategy}&locale=de`;
+        const res = await fetch(apiUrl);
+        if (!res.ok) {
+            const err = await res.json().catch(() => ({}));
+            throw new Error(err?.error?.message || `API-Fehler: ${res.status}`);
+        }
+        return res.json();
+    }
+
+    function showLoading(strategy) {
+        const label = strategy === 'both' ? 'Mobile und Desktop' : (strategy === 'mobile' ? 'Mobile' : 'Desktop');
+        document.getElementById('status-area').innerHTML = `
+            <div class="status-msg">
+                <div class="loading-ring"></div><br>
+                <strong>Analysiere ${label}…</strong><br>
+                <span style="font-size:0.8rem">PageSpeed Insights läuft. Dauert 15–30 Sekunden.</span>
+            </div>`;
+    }
+
+    function showError(msg) {
+        document.getElementById('status-area').innerHTML = `<div class="error-box">⚠️ Fehler: ${escHtml(msg)}<br><small>Mögliche Ursachen: Ungültige URL, Website nicht erreichbar oder API-Limit erreicht. Bitte in 1 Minute erneut versuchen.</small></div>`;
+    }
+
+    function escHtml(s) { return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+
+    function buildResultCard(data, strategy) {
+        const lhr = data.lighthouseResult;
+        const cats = lhr?.categories;
+        const audits = lhr?.audits;
+        const score = cats?.performance?.score != null ? Math.round(cats.performance.score * 100) : null;
+
+        const metrics = {
+            lcp: extractMetric(audits, 'largest-contentful-paint'),
+            cls: extractMetric(audits, 'cumulative-layout-shift'),
+            inp: extractMetric(audits, 'experimental-interaction-to-next-paint') || extractMetric(audits, 'interaction-to-next-paint'),
+            fcp: extractMetric(audits, 'first-contentful-paint'),
+            ttfb: extractMetric(audits, 'server-response-time'),
+            si:  extractMetric(audits, 'speed-index'),
+        };
+
+        const label = strategy === 'mobile' ? '📱 Mobile' : '🖥️ Desktop';
+        const scoreClass = score === null ? '' : score >= 90 ? 'score-good' : score >= 50 ? 'score-needs' : 'score-poor';
+
+        const opportunities = [];
+        const oppAudits = ['render-blocking-resources','uses-optimized-images','uses-webp-images','uses-text-compression','eliminate-render-blocking-resources','unused-javascript','unused-css-rules'];
+        oppAudits.forEach(id => {
+            const a = audits?.[id];
+            if (a && a.score !== null && a.score < 1 && a.displayValue) {
+                opportunities.push({ title: a.title, value: a.displayValue });
+            }
+        });
+
+        const card = document.createElement('div');
+        card.className = 'strategy-result';
+        card.innerHTML = `
+            <div class="strategy-header">
+                <div class="strategy-label"><span class="icon">${strategy === 'mobile' ? '📱' : '🖥️'}</span> ${strategy === 'mobile' ? 'Mobile' : 'Desktop'}</div>
+                ${score !== null ? `<div class="score-circle ${scoreClass}">${score}</div>` : '<div style="color:#475569;font-size:0.8rem">kein Score</div>'}
+            </div>
+            <div class="metrics-grid">
+                ${metricCard('LCP', metrics.lcp, 'lcp', true)}
+                ${metricCard('CLS', metrics.cls, 'cls', true)}
+                ${metricCard('INP', metrics.inp, 'inp', true)}
+                ${metricCard('FCP', metrics.fcp, 'fcp', false)}
+                ${metricCard('TTFB', metrics.ttfb, 'ttfb', false)}
+                ${metricCard('Speed Index', metrics.si, 'si', false)}
+            </div>
+            ${opportunities.length > 0 ? `
+            <div class="opportunities">
+                <div class="opp-title">💡 Optimierungspotenziale</div>
+                ${opportunities.slice(0,4).map(o => `<div class="opp-item">▶ ${escHtml(o.title)} <span class="save">${escHtml(o.value)}</span></div>`).join('')}
+            </div>` : ''}
+        `;
+        return card;
+    }
+
+    function extractMetric(audits, id) {
+        if (!audits || !audits[id]) return null;
+        const a = audits[id];
+        return { value: a.numericValue, display: a.displayValue, score: a.score };
+    }
+
+    function metricCard(name, m, type, isCWV) {
+        if (!m) return `<div class="metric-card"><div class="metric-name">${name}</div><div class="metric-value" style="color:#475569">—</div><div class="metric-label">keine Daten</div></div>`;
+        const cls = rateMetric(type, m.score);
+        const badge = cls === 'good' ? 'Gut' : cls === 'needs' ? 'Verbesserung' : 'Schlecht';
+        return `<div class="metric-card ${cls}">
+            ${isCWV ? '<div class="metric-tag">CWV</div>' : ''}
+            <div class="metric-name">${name}</div>
+            <div class="metric-value">${escHtml(formatMetric(type, m))}</div>
+            <div class="metric-label">${metricUnit(type)}</div>
+            <div class="metric-badge">${badge}</div>
+        </div>`;
+    }
+
+    function rateMetric(type, score) {
+        if (score === null || score === undefined) return 'needs';
+        if (score >= 0.9) return 'good';
+        if (score >= 0.5) return 'needs';
+        return 'poor';
+    }
+
+    function formatMetric(type, m) {
+        if (!m || m.display == null) return '—';
+        return m.display;
+    }
+
+    function metricUnit(type) {
+        const u = { lcp: 'Ladezeit', cls: 'Verschiebungs-Score', inp: 'Reaktionszeit', fcp: 'Erster Inhalt', ttfb: 'Serverantwort', si: 'Sichtbarkeit' };
+        return u[type] || '';
+    }
+
+    document.getElementById('url-input').addEventListener('keydown', e => { if (e.key === 'Enter') runCheck(); });
+</script>
+</body>
+</html>
