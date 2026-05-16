@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript SEO für E-Commerce: Produktseiten und Facettennavigation | Shift07 Blog</title>
+    <meta name="description" content="Wie Googlebot JavaScript in Online-Shops verarbeitet: Produktseiten per SSR/SSG optimieren, Facettennavigation richtig handhaben und Crawl-Budget schützen.">
+    <meta name="author" content="Thümmler AI GmbH">
+    <link rel="icon" type="image/png" href="/logo.png">
+    <link rel="canonical" href="https://shift07.ai/blog/javascript-seo-ecommerce-produktseiten-facettennavigation.html">
+    <link rel="alternate" type="application/rss+xml" title="Shift07 Blog" href="https://shift07.ai/feed.xml">
+    <!-- Open Graph -->
+    <meta property="og:title" content="JavaScript SEO für E-Commerce: Produktseiten und Facettennavigation | Shift07 Blog">
+    <meta property="og:description" content="Wie Googlebot JavaScript in Online-Shops verarbeitet: Produktseiten per SSR/SSG optimieren, Facettennavigation richtig handhaben und Crawl-Budget schützen.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://shift07.ai/blog/javascript-seo-ecommerce-produktseiten-facettennavigation.html">
+    <meta property="og:image" content="https://shift07.ai/blog/images/javascript-seo-ecommerce-facettennavigation.png">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="Shift07">
+    <meta property="article:published_time" content="2026-05-16T10:00:00+02:00">
+    <meta property="article:section" content="Tech-SEO">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="JavaScript SEO für E-Commerce: Produktseiten und Facettennavigation">
+    <meta name="twitter:description" content="Wie Googlebot JavaScript in Online-Shops verarbeitet: Produktseiten per SSR/SSG optimieren, Facettennavigation richtig handhaben und Crawl-Budget schützen.">
+    <meta name="twitter:image" content="https://shift07.ai/blog/images/javascript-seo-ecommerce-facettennavigation.png">
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "JavaScript SEO für E-Commerce: Produktseiten und Facettennavigation",
+      "description": "Wie Googlebot JavaScript in Online-Shops verarbeitet: Produktseiten per SSR/SSG optimieren, Facettennavigation richtig handhaben und Crawl-Budget schützen.",
+      "image": "https://shift07.ai/blog/images/javascript-seo-ecommerce-facettennavigation.png",
+      "datePublished": "2026-05-16T10:00:00+02:00",
+      "dateModified": "2026-05-16T10:00:00+02:00",
+      "author": {
+        "@type": "Organization",
+        "name": "Shift07",
+        "url": "https://shift07.ai"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Shift07",
+        "url": "https://shift07.ai",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://shift07.ai/assets/logo.png"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://shift07.ai/blog/javascript-seo-ecommerce-produktseiten-facettennavigation.html"
+      }
+    }
+    </script>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K1S1RXBDS8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K1S1RXBDS8');
+    </script>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8475857002943858" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', system-ui, sans-serif; background-color: #0f172a; color: #e2e8f0; }
+        .article-content h2 { font-size: 1.5rem; font-weight: 700; color: #f8fafc; margin-top: 2.5rem; margin-bottom: 1rem; }
+        .article-content h3 { font-size: 1.2rem; font-weight: 600; color: #e2e8f0; margin-top: 2rem; margin-bottom: 0.75rem; }
+        .article-content p { color: #94a3b8; line-height: 1.8; margin-bottom: 1.25rem; }
+        .article-content ul, .article-content ol { color: #94a3b8; padding-left: 1.5rem; margin-bottom: 1.25rem; }
+        .article-content li { margin-bottom: 0.5rem; line-height: 1.7; }
+        .article-content a { color: #60a5fa; text-decoration: underline; }
+        .article-content a:hover { color: #93c5fd; }
+        .article-content code { background: #1e293b; padding: 0.15rem 0.4rem; border-radius: 0.25rem; font-size: 0.85em; color: #7dd3fc; }
+        .article-content pre { background: #1e293b; border: 1px solid rgba(255,255,255,0.1); border-radius: 0.75rem; padding: 1.25rem; overflow-x: auto; margin-bottom: 1.5rem; }
+        .article-content pre code { background: none; padding: 0; color: #7dd3fc; font-size: 0.875rem; line-height: 1.7; }
+        .article-content strong { color: #e2e8f0; font-weight: 600; }
+        .article-content table { width: 100%; border-collapse: collapse; margin-bottom: 1.5rem; }
+        .article-content th { background: #1e293b; color: #e2e8f0; padding: 0.75rem; text-align: left; font-weight: 600; border: 1px solid rgba(255,255,255,0.1); }
+        .article-content td { padding: 0.75rem; border: 1px solid rgba(255,255,255,0.1); color: #94a3b8; }
+        .article-content tr:nth-child(even) td { background: rgba(255,255,255,0.03); }
+        .callout { background: rgba(59,130,246,0.1); border-left: 4px solid #3b82f6; border-radius: 0.5rem; padding: 1rem 1.25rem; margin-bottom: 1.5rem; }
+        .callout-warn { background: rgba(251,191,36,0.1); border-left: 4px solid #fbbf24; border-radius: 0.5rem; padding: 1rem 1.25rem; margin-bottom: 1.5rem; }
+        .callout p, .callout-warn p { margin-bottom: 0; }
+    </style>
+</head>
+<body class="min-h-screen">
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 bg-slate-900/95 backdrop-blur-sm border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <a href="/" class="flex items-center gap-2">
+                    <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                    <span class="text-lg font-bold text-white">Shift07</span>
+                </a>
+                <div class="hidden md:flex items-center space-x-6 text-sm font-medium text-gray-400">
+                    <a href="/" class="hover:text-white transition-colors">SEO-Analyse</a>
+                    <a href="/blog/" class="hover:text-white transition-colors">Blog</a>
+                    <a href="/tools/" class="hover:text-white transition-colors">Tools</a>
+                </div>
+                <a href="/" class="bg-blue-600 hover:bg-blue-500 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors">Kostenlos testen</a>
+                <button id="mobile-menu-btn" class="md:hidden text-gray-400">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                </button>
+            </div>
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4 border-t border-white/10 pt-4 space-y-3 text-sm text-gray-400">
+                <a href="/" class="block hover:text-white">SEO-Analyse</a>
+                <a href="/blog/" class="block hover:text-white">Blog</a>
+                <a href="/tools/" class="block hover:text-white">Tools</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="py-12 px-4 bg-gradient-to-b from-slate-800/50 to-transparent">
+        <div class="max-w-4xl mx-auto">
+            <div class="flex items-center gap-2 text-sm text-gray-400 mb-4">
+                <a href="/blog/" class="hover:text-white transition-colors">Blog</a>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                <span>Tech-SEO</span>
+            </div>
+            <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
+                JavaScript SEO für E-Commerce: Produktseiten und Facettennavigation
+            </h1>
+            <p class="text-xl text-gray-400 leading-relaxed">
+                Wie Googlebot JavaScript in Online-Shops verarbeitet, welche Rendering-Strategie du für Produktseiten brauchst — und wie Facettennavigation dein Crawl-Budget ruiniert (wenn du sie falsch handhabst).
+            </p>
+            <div class="mt-6">
+                <img src="/blog/images/javascript-seo-ecommerce-facettennavigation.png" alt="JavaScript SEO für E-Commerce: Produktseiten und Facettennavigation" class="w-full rounded-2xl border border-white/10 object-cover" style="max-height:420px;">
+            </div>
+        </div>
+    </section>
+
+    <!-- Content -->
+    <section class="py-12 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col lg:flex-row gap-12">
+
+                <article class="lg:w-2/3">
+                    <!-- Meta -->
+                    <div class="flex flex-wrap items-center gap-4 text-sm text-gray-400 mb-10 pb-6 border-b border-white/10">
+                        <div class="flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+                            Shift07 Team
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                            16. Mai 2026
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                            14 Min. Lesezeit
+                        </div>
+                        <span class="text-xs font-semibold px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full">Tech-SEO</span>
+                    </div>
+
+                    <!-- Article Body -->
+                    <div class="article-content">
+
+                        <p>JavaScript-basierte Online-Shops sind heute der Standard. React, Vue, Next.js, Nuxt — die modernen E-Commerce-Frontends setzen fast alle auf clientseitiges Rendering. Das schafft großartige Nutzererlebnisse, aber einen gefährlichen blinden Fleck: Googlebot sieht zunächst nur das leere HTML-Gerüst, bevor er JavaScript ausführt.</p>
+
+                        <p>Während sich generelle <a href="/blog/javascript-seo-spa-indexierung.html">JavaScript-SEO-Probleme</a> auf alle SPA-Websites beziehen, gelten im E-Commerce ganz spezifische Herausforderungen: Tausende Produktseiten müssen indexierbar bleiben, Filternavigation erzeugt Millionen URL-Kombinationen, und jeder Crawl-Budget-Fehler kostet direkt Rankings und Umsatz.</p>
+
+                        <h2>Das Rendering-Problem im E-Commerce</h2>
+
+                        <p>Ein typischer Online-Shop mit 10.000 Produkten hat oft folgende Struktur:</p>
+                        <ul>
+                            <li>1 Startseite</li>
+                            <li>50–200 Kategorieseiten</li>
+                            <li>10.000 Produktseiten</li>
+                            <li>Potentiell Millionen Facetten-URLs (Filterseiten)</li>
+                        </ul>
+
+                        <p>Googlebot muss all diese Seiten crawlen, rendern und indexieren. Das ist eine Menge Arbeit — und wenn dein Shop clientseitiges Rendering (CSR) verwendet, wird jede Seite zweimal verarbeitet: erst das initiale HTML, dann das gerenderte DOM nach JS-Ausführung. Das verdoppelt den Ressourcenaufwand für Google.</p>
+
+                        <div class="callout">
+                            <p><strong>Kernproblem:</strong> Googles JS-Rendering-Warteschlange kann Stunden bis Tage dauern. Produkte, die heute neu eingestellt werden, erscheinen im Index vielleicht erst in drei Tagen — zu spät für Blitzangebote oder zeitkritische Promotions.</p>
+                        </div>
+
+                        <h3>Was Googlebot beim CSR-Shop sieht</h3>
+
+                        <p>Stell dir eine React-Produktseite vor. Das initiale HTML sieht so aus:</p>
+
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="de"&gt;
+&lt;head&gt;
+  &lt;title&gt;Online-Shop&lt;/title&gt; &lt;!-- Kein Produktname! --&gt;
+  &lt;meta name="description" content=""&gt; &lt;!-- Leer! --&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;div id="root"&gt;&lt;/div&gt; &lt;!-- Leere Hülle --&gt;
+  &lt;script src="/static/js/main.abc123.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+                        <p>Kein Produkttitel, keine Description, kein Inhalt. Googlebot muss jetzt warten, bis er das JavaScript heruntergeladen, geparsed und ausgeführt hat — und das für jede einzelne deiner 10.000 Produktseiten.</p>
+
+                        <h2>Die drei Rendering-Strategien für E-Commerce</h2>
+
+                        <p>Es gibt drei bewährte Ansätze, um das JS-Rendering-Problem zu lösen. Jeder hat andere Trade-offs:</p>
+
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Strategie</th>
+                                    <th>Wie es funktioniert</th>
+                                    <th>SEO-Vorteil</th>
+                                    <th>Nachteil</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>SSR</strong> (Server-Side Rendering)</td>
+                                    <td>HTML wird bei jedem Request serverseitig erzeugt</td>
+                                    <td>Vollständiges HTML sofort verfügbar</td>
+                                    <td>Höhere Server-Last, langsamer TTFB</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>SSG</strong> (Static Site Generation)</td>
+                                    <td>HTML wird beim Build-Prozess erzeugt</td>
+                                    <td>Schnellstes TTFB, ideal für Crawler</td>
+                                    <td>Build-Zeiten bei 10k+ Produkten lang</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>ISR</strong> (Incremental Static Regeneration)</td>
+                                    <td>Statisches HTML, automatisch revalidiert</td>
+                                    <td>Beste Kombination aus Speed & Aktualität</td>
+                                    <td>Komplexere Infrastruktur, Next.js-spezifisch</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>CSR</strong> (Client-Side Rendering)</td>
+                                    <td>Browser rendert alles via JavaScript</td>
+                                    <td>Keiner — problematisch für SEO</td>
+                                    <td>Indexierungs-Delays, Crawl-Budget-Verschwendung</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h3>Empfehlung für E-Commerce-Shops</h3>
+
+                        <p><strong>Produktseiten:</strong> SSR oder ISR. Next.js und Nuxt.js bieten beide direkte Unterstützung. Mit ISR kannst du stale-while-revalidate konfigurieren — Produktseiten werden im Hintergrund neu generiert, während Googlebot das aktuelle statische HTML bekommt.</p>
+
+<pre><code>// Next.js: ISR für Produktseiten
+export async function getStaticProps({ params }) {
+  const product = await getProduct(params.slug);
+  return {
+    props: { product },
+    revalidate: 3600, // Alle 60 Minuten revalidieren
+  };
+}
+
+export async function getStaticPaths() {
+  const products = await getAllProductSlugs();
+  return {
+    paths: products.map(slug => ({ params: { slug } })),
+    fallback: 'blocking', // SSR für neue Produkte
+  };
+}</code></pre>
+
+                        <p>Mit <code>fallback: 'blocking'</code> werden neue Produkte beim ersten Request serverseitig gerendert und danach gecacht — Googlebot wartet nie auf leere HTML-Shells.</p>
+
+                        <h2>Produktseiten-SEO: Die wichtigsten Elemente</h2>
+
+                        <p>Unabhängig von der Rendering-Strategie müssen Produktseiten bestimmte SEO-Elemente im initialen HTML (vor JS-Ausführung) enthalten:</p>
+
+                        <h3>1. Title-Tag und Meta-Description</h3>
+
+<pre><code>&lt;title&gt;Nike Air Max 270 Schwarz Größe 42 | Shop-Name&lt;/title&gt;
+&lt;meta name="description" content="Nike Air Max 270 in Schwarz, Größe 42.
+Kostenloser Versand ab 50 €. Jetzt kaufen und in 1-2 Tagen erhalten."&gt;</code></pre>
+
+                        <p>Verwende im Titel: Marke + Produktname + wichtigstes Attribut (Farbe, Größe, Material). Die Meta-Description sollte USPs enthalten: Lieferzeit, kostenloser Versand, Rückgaberecht.</p>
+
+                        <h3>2. Product Schema Markup</h3>
+
+                        <p>Produktseiten sind einer der wichtigsten Anwendungsfälle für strukturierte Daten. <a href="/blog/product-schema-markup-seo.html">Product Schema Markup</a> ermöglicht Rich Snippets mit Preis, Bewertung und Verfügbarkeit direkt in den Google-Suchergebnissen.</p>
+
+<pre><code>&lt;script type="application/ld+json"&gt;
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Nike Air Max 270 Schwarz",
+  "image": [
+    "https://shop.de/images/airmax270-black-1.jpg",
+    "https://shop.de/images/airmax270-black-2.jpg"
+  ],
+  "description": "Der Nike Air Max 270 vereint maximalen Komfort...",
+  "brand": {
+    "@type": "Brand",
+    "name": "Nike"
+  },
+  "sku": "AM270-BLK-42",
+  "offers": {
+    "@type": "Offer",
+    "url": "https://shop.de/produkte/nike-air-max-270-schwarz-42",
+    "priceCurrency": "EUR",
+    "price": "149.99",
+    "availability": "https://schema.org/InStock",
+    "itemCondition": "https://schema.org/NewCondition",
+    "shippingDetails": {
+      "@type": "OfferShippingDetails",
+      "shippingRate": {
+        "@type": "MonetaryAmount",
+        "value": "0",
+        "currency": "EUR"
+      },
+      "deliveryTime": {
+        "@type": "ShippingDeliveryTime",
+        "handlingTime": {
+          "@type": "QuantitativeValue",
+          "minValue": 0,
+          "maxValue": 1,
+          "unitCode": "DAY"
+        },
+        "transitTime": {
+          "@type": "QuantitativeValue",
+          "minValue": 1,
+          "maxValue": 3,
+          "unitCode": "DAY"
+        }
+      }
+    }
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.7",
+    "reviewCount": "128"
+  }
+}
+&lt;/script&gt;</code></pre>
+
+                        <div class="callout">
+                            <p><strong>Wichtig:</strong> Das Schema Markup muss im statischen HTML enthalten sein — nicht erst nach JS-Ausführung eingefügt werden. Prüfe das mit unserem <a href="/tools/javascript-seo-checker.html">JavaScript SEO Checker</a>: er zeigt, ob dein Schema Markup im initalen HTML oder erst nach Rendering vorhanden ist.</p>
+                        </div>
+
+                        <h3>3. Kanonische URLs für Produktvarianten</h3>
+
+                        <p>Ein Produkt in 5 Farben und 8 Größen erzeugt 40 potentielle URLs — oder mehr, wenn Farbe und Größe per URL-Parameter gesteuert werden:</p>
+
+<pre><code>https://shop.de/produkte/nike-air-max-270?farbe=schwarz&amp;groesse=42
+https://shop.de/produkte/nike-air-max-270?farbe=weiss&amp;groesse=42
+https://shop.de/produkte/nike-air-max-270?farbe=schwarz&amp;groesse=43
+...</code></pre>
+
+                        <p>Das ist klassischer Duplicate Content. Lösung: Setze auf allen Variantenseiten einen Canonical-Tag auf die Hauptproduktseite (oder auf die "beliebteste" Variante). Mehr dazu erkläre ich im Artikel über <a href="/blog/canonical-tags-seo.html">Canonical-Tags für SEO</a>.</p>
+
+<pre><code>&lt;!-- Auf jeder Varianteseite: --&gt;
+&lt;link rel="canonical" href="https://shop.de/produkte/nike-air-max-270"&gt;</code></pre>
+
+                        <h2>Facettennavigation: Das größte JS-SEO-Problem im E-Commerce</h2>
+
+                        <p>Facettennavigation — auch bekannt als "Filter" — ist das größte SEO-Problem bei Online-Shops. Ein Shop mit 10.000 Produkten, 10 Filtertypen und je 10 Optionen kann theoretisch 10^10 URL-Kombinationen erzeugen. Das ist mehr URLs als Google jemals crawlen wird.</p>
+
+                        <div class="callout-warn">
+                            <p><strong>Beispielrechnung:</strong> Kategorie "Schuhe" mit Filtern für Farbe (10), Größe (15), Marke (50), Material (8), Absatzhöhe (5): 10 × 15 × 50 × 8 × 5 = <strong>300.000 URL-Kombinationen</strong> — alleine in dieser Kategorie.</p>
+                        </div>
+
+                        <p>Diese URLs entstehen typischerweise durch JavaScript: Nutzer klickt Filter → JS manipuliert URL → neue Filterseite wird ohne echten Seitenaufruf geladen (pushState). Das <a href="/blog/javascript-crawl-budget-googlebot.html">beeinflusst das Crawl-Budget von Googlebot massiv</a>, der diese URLs eventuell trotzdem folgt.</p>
+
+                        <h3>Die vier Strategien für Facettennavigation</h3>
+
+                        <p>Welche Strategie du wählst, hängt vom Suchvolumen der Filterseiten ab. Manche Filterkombinationen ("rote Winterjacken Damen") werden tatsächlich gesucht — andere ("grüne Herrensocken Größe 42 aus Baumwolle mit Streifenmuster") nie.</p>
+
+                        <h3>Strategie 1: Noindex für alle Filterseiten</h3>
+
+                        <p>Einfachste Lösung: Alle Filter-URLs bekommen <code>&lt;meta name="robots" content="noindex, follow"&gt;</code>. Google crawlt sie weiterhin (um interne Links zu folgen), indexiert sie aber nicht.</p>
+
+<pre><code>&lt;!-- Auf Filterseiten wie /schuhe?farbe=schwarz: --&gt;
+&lt;meta name="robots" content="noindex, follow"&gt;</code></pre>
+
+                        <p><strong>Vorteil:</strong> Einfach, sofort wirksam, kein Duplicate Content.<br>
+                        <strong>Nachteil:</strong> Du verlierst potenziell rankenden Traffic für Filterkombinationen mit echtem Suchvolumen.</p>
+
+                        <h3>Strategie 2: Canonical auf Kategorie-URL</h3>
+
+                        <p>Jede Filterseite hat einen Canonical-Tag zurück auf die Hauptkategorie ohne Filter:</p>
+
+<pre><code>&lt;!-- Auf /schuhe?farbe=schwarz: --&gt;
+&lt;link rel="canonical" href="https://shop.de/schuhe"&gt;</code></pre>
+
+                        <p><strong>Vorteil:</strong> Linkjuice fließt zur Hauptkategorie. <a href="/blog/facettennavigation-seo-filter-urls.html">Grundlegende Facettennavigation-Strategie</a>, die bei den meisten Shops funktioniert.<br>
+                        <strong>Nachteil:</strong> Filterseiten können nicht ranken, selbst wenn Suchvolumen vorhanden wäre.</p>
+
+                        <h3>Strategie 3: Robots.txt-Blockierung für bestimmte Parameter</h3>
+
+                        <p>Filtere Parameter in robots.txt, die niemals gerankt werden sollen:</p>
+
+<pre><code>User-agent: *
+# Sortierungsparameter blockieren (kein SEO-Wert)
+Disallow: /*?sort=
+Disallow: /*?order=
+Disallow: /*?page=
+# Mehrfach-Filter blockieren (zu viele Kombinationen)
+Disallow: /*?farbe=*&amp;groesse=</code></pre>
+
+                        <div class="callout-warn">
+                            <p><strong>Warnung:</strong> Robots.txt blockiert nur das Crawling, nicht die Indexierung. Blockierte Seiten können trotzdem im Index landen, wenn andere Seiten auf sie verlinken. Nutze Robots.txt-Blockierung ergänzend zu Noindex, nicht als alleinige Lösung.</p>
+                        </div>
+
+                        <h3>Strategie 4: Selektive Indexierung wertvoller Filterseiten</h3>
+
+                        <p>Die fortgeschrittenste Strategie: Analysiere, welche Filterkombinationen echtes Suchvolumen haben, und stelle nur diese Seiten für die Indexierung bereit. Alle anderen bekommen Noindex.</p>
+
+<pre><code>// Beispiel-Logik (Next.js)
+export async function getServerSideProps({ params, query }) {
+  const filters = query;
+  const hasSearchVolume = await checkSearchVolume(filters);
+
+  return {
+    props: {
+      // Robots-Direktive basierend auf Suchvolumen
+      robotsDirective: hasSearchVolume ? 'index, follow' : 'noindex, follow',
+      products: await getFilteredProducts(filters),
+    }
+  };
+}</code></pre>
+
+                        <p>Diese Strategie maximiert den SEO-Wert, ist aber aufwändig zu implementieren und erfordert regelmäßige Keyword-Analyse.</p>
+
+                        <h2>Crawl-Budget schützen: Konkrete Maßnahmen</h2>
+
+                        <p>Das <a href="/blog/crawl-budget-optimieren.html">Crawl-Budget zu optimieren</a> ist im E-Commerce kritischer als auf normalen Websites. Hier sind die wichtigsten Maßnahmen:</p>
+
+                        <h3>1. Pagination richtig handhaben</h3>
+
+                        <p>Kategorieseiten mit vielen Seiten ("Seite 2", "Seite 3"...) sind Crawl-Budget-Fresser. Google empfiehlt heute, nur die erste Seite zu indexieren und Pagination-URLs per Noindex zu kennzeichnen oder auf die erste Seite zu canonicalisieren:</p>
+
+<pre><code>&lt;!-- Auf /schuhe?page=2, /schuhe?page=3 etc.: --&gt;
+&lt;link rel="canonical" href="https://shop.de/schuhe"&gt;
+&lt;!-- ODER --&gt;
+&lt;meta name="robots" content="noindex, follow"&gt;</code></pre>
+
+                        <h3>2. Interne Verlinkung optimieren</h3>
+
+                        <p>Sorge dafür, dass deine wichtigsten Produkt- und Kategorieseiten intern verlinkt sind — am besten über Breadcrumbs, verwandte Produkte und Kategorienavigation. Seiten ohne interne Links werden seltener gecrawlt.</p>
+
+                        <h3>3. URL-Parameter in der Search Console konfigurieren</h3>
+
+                        <p>In der Google Search Console gibt es unter "Legacy-Tools" den URL-Parameter-Bericht. Dort kannst du Google mitteilen, wie es mit bestimmten Parametern umgehen soll (ignorieren, crawlen, Seite repräsentiert durch...).</p>
+
+                        <h3>4. Sitemaps strategisch einsetzen</h3>
+
+                        <p>Füge in deine sitemap.xml <strong>nur</strong> die URLs ein, die du auch indexiert haben möchtest. Keine Filterseiten, keine Pagination-Seiten, keine Variantenparameter. Eine Sitemap mit 5.000 URLs die alle "noindex" sind, verwirrt Google und verschwendet Crawl-Budget.</p>
+
+                        <h2>JavaScript-Rendering überwachen</h2>
+
+                        <p>Wie erkennst du, ob Googlebot deine Produktseiten korrekt rendert? Drei Methoden:</p>
+
+                        <h3>1. URL-Inspektion in der Search Console</h3>
+                        <p>Gib eine Produkt-URL in die Google Search Console ein → "Testen, ob Seite indexierbar ist" → "Gerenderte Seite anzeigen". Du siehst genau, was Googlebot nach dem JavaScript-Rendering sieht.</p>
+
+                        <h3>2. Fetch as Google</h3>
+                        <p>Gleiche Funktion, aber auch direkt aus der Search Console heraus erreichbar. Vergleiche: Hat das gerenderte HTML alle Produktinformationen? Sind Title-Tag, Description und Schema Markup korrekt?</p>
+
+                        <h3>3. Unseren JavaScript SEO Checker nutzen</h3>
+                        <p>Mit dem <a href="/tools/javascript-seo-checker.html">JavaScript SEO Checker</a> kannst du jede URL prüfen — das Tool vergleicht das initiale HTML mit dem gerenderten DOM und zeigt, welche SEO-relevanten Elemente erst nach JS-Ausführung verfügbar sind.</p>
+
+                        <h2>Checkliste: JavaScript SEO-Audit für E-Commerce</h2>
+
+                        <ul>
+                            <li>☐ Produkttitel und Meta-Description im initialen HTML (vor JS-Rendering) vorhanden?</li>
+                            <li>☐ Product Schema Markup im statischen HTML eingebettet?</li>
+                            <li>☐ Facettennavigation: Klare Strategie (Noindex, Canonical oder selektive Indexierung)?</li>
+                            <li>☐ Produktvarianten: Canonical-Tag auf Hauptprodukt gesetzt?</li>
+                            <li>☐ Pagination: Noindex oder Canonical auf erste Seite?</li>
+                            <li>☐ Sitemap enthält nur indexierbare Seiten?</li>
+                            <li>☐ Robots.txt blockiert wertlose Parameter?</li>
+                            <li>☐ Rendering-Strategie: SSR, SSG oder ISR statt reinem CSR?</li>
+                            <li>☐ Neue Produkte: Werden sie in angemessener Zeit gecrawlt (Search Console prüfen)?</li>
+                            <li>☐ <a href="/tools/canonical-tag-checker.html">Canonical-Tag-Checker</a> läuft regelmäßig über Produktseiten?</li>
+                        </ul>
+
+                        <h2>Häufige Fehler — und wie du sie vermeidest</h2>
+
+                        <h3>Fehler 1: Produktpreise nur per JS geladen</h3>
+                        <p>Viele Shops laden Preise dynamisch nach (für personalisierte Preise, B2B-Staffelpreise etc.). Problem: Googlebot sieht keinen Preis → kein Product Schema Markup mit Preis → keine Price-Rich-Snippets. Lösung: Standardpreis im SSR-HTML vorrendern, dynmische Anpassung per JS danach.</p>
+
+                        <h3>Fehler 2: Lazy Loading für above-the-fold Produktbilder</h3>
+                        <p>Das erste Produktbild sollte <strong>nie</strong> lazy-loaded sein. Es ist das LCP-Element auf Produktseiten — Lazy Loading verzögert das LCP und schadet den Core Web Vitals. Nutze <code>loading="eager"</code> oder <code>fetchpriority="high"</code> für das Hauptbild.</p>
+
+<pre><code>&lt;!-- Hauptbild: nie lazy-load --&gt;
+&lt;img src="produkt-hauptbild.jpg" alt="Nike Air Max 270 Schwarz"
+     fetchpriority="high" loading="eager"&gt;
+
+&lt;!-- Zusatzbilder: lazy-load ok --&gt;
+&lt;img src="produkt-detail-2.jpg" alt="Nike Air Max 270 Schwarz Seitenansicht"
+     loading="lazy"&gt;</code></pre>
+
+                        <h3>Fehler 3: JavaScript-basierte Breadcrumbs</h3>
+                        <p>Breadcrumbs sind wichtig für Googles Strukturverständnis — und für BreadcrumbList Schema Markup. Wenn sie erst nach JS-Rendering erscheinen, verpasst Googlebot sie möglicherweise. Rendere Breadcrumbs serverseitig.</p>
+
+                        <h3>Fehler 4: Dynamische interne Links</h3>
+                        <p>Wenn "Ähnliche Produkte" oder "Andere Kunden kauften auch" erst per JS nachgeladen werden, kann Googlebot diesen Links nicht folgen. Das schwächt die interne Verlinkungsstruktur. Render mindestens 5-10 verwandte Produkte im initialen HTML.</p>
+
+                        <h2>Fazit</h2>
+
+                        <p>JavaScript SEO im E-Commerce ist komplexer als bei einfachen Websites, weil die Anzahl der betroffenen Seiten enorm ist und Fehler direkte Umsatzauswirkungen haben. Die Kernprinzipien sind jedoch klar:</p>
+
+                        <ol>
+                            <li><strong>SSR oder ISR</strong> statt reinem CSR für alle indexierbaren Seiten</li>
+                            <li><strong>Produktdaten im initialen HTML</strong> — Title, Description, Schema Markup, erste interne Links</li>
+                            <li><strong>Facettennavigation kontrollieren</strong> — klare Strategie mit Noindex oder Canonical, keine unkontrollierten URL-Explosionen</li>
+                            <li><strong>Crawl-Budget überwachen</strong> — regelmäßige Checks in Search Console und Log-Analyse</li>
+                        </ol>
+
+                        <p>Nutze unsere Tools um den aktuellen Status deines Shops zu prüfen: Der <a href="/tools/javascript-seo-checker.html">JavaScript SEO Checker</a> zeigt, welche Elemente erst nach Rendering verfügbar sind, der <a href="/tools/canonical-tag-checker.html">Canonical-Tag-Checker</a> findet Canonical-Probleme auf Produktseiten, und der <a href="/tools/redirect-ketten-tester.html">Redirect-Ketten-Tester</a> deckt ineffiziente Weiterleitungen auf.</p>
+
+                        <p>Für eine vollständige Analyse deines E-Commerce-Shops empfehle ich außerdem unseren <a href="/blog/ecommerce-seo-leitfaden.html">E-Commerce-SEO-Leitfaden</a> — dort gehe ich auf alle weiteren Aspekte ein, von Kategorieseiten über Produkttexte bis zu technischen Audits.</p>
+
+                    </div>
+
+                    <!-- Share / Back -->
+                    <div class="mt-12 pt-8 border-t border-white/10 flex items-center justify-between">
+                        <a href="/blog/" class="text-blue-400 hover:text-blue-300 flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+                            Zurück zum Blog
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Sidebar -->
+                <aside class="lg:w-1/3 space-y-8">
+                    <!-- CTA Box -->
+                    <div class="bg-gradient-to-br from-blue-600/20 to-indigo-600/20 border border-blue-500/30 rounded-2xl p-6 text-center">
+                        <h3 class="text-lg font-bold text-white mb-3">Kostenlose SEO-Analyse</h3>
+                        <p class="text-gray-400 text-sm mb-5">Finde heraus, wie gut deine Website für Suchmaschinen optimiert ist.</p>
+                        <a href="/" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-6 py-3 rounded-lg font-medium transition-all inline-block w-full">Jetzt testen</a>
+                    </div>
+
+                    <!-- Related Articles -->
+                    <div class="bg-slate-800/50 border border-white/10 rounded-2xl p-6">
+                        <h3 class="text-lg font-bold text-white mb-4">Verwandte Artikel</h3>
+                        <div class="space-y-4">
+                            <a href="/blog/javascript-seo-spa-indexierung.html" class="block group">
+                                <p class="text-sm text-gray-300 group-hover:text-blue-400 transition-colors font-medium">JavaScript SEO: Wie Google SPA-Websites crawlt und indexiert</p>
+                                <p class="text-xs text-gray-500 mt-1">Tech-SEO</p>
+                            </a>
+                            <a href="/blog/facettennavigation-seo-filter-urls.html" class="block group">
+                                <p class="text-sm text-gray-300 group-hover:text-blue-400 transition-colors font-medium">Facettennavigation SEO: Filter-URLs richtig handhaben</p>
+                                <p class="text-xs text-gray-500 mt-1">Tech-SEO</p>
+                            </a>
+                            <a href="/blog/ecommerce-seo-leitfaden.html" class="block group">
+                                <p class="text-sm text-gray-300 group-hover:text-blue-400 transition-colors font-medium">E-Commerce SEO: Der vollständige Leitfaden 2026</p>
+                                <p class="text-xs text-gray-500 mt-1">E-Commerce</p>
+                            </a>
+                            <a href="/blog/crawl-budget-optimieren.html" class="block group">
+                                <p class="text-sm text-gray-300 group-hover:text-blue-400 transition-colors font-medium">Crawl-Budget optimieren: So crawlt Google deine Website effizienter</p>
+                                <p class="text-xs text-gray-500 mt-1">Tech-SEO</p>
+                            </a>
+                            <a href="/blog/dynamic-rendering-javascript-seo.html" class="block group">
+                                <p class="text-sm text-gray-300 group-hover:text-blue-400 transition-colors font-medium">Dynamic Rendering für JavaScript SEO</p>
+                                <p class="text-xs text-gray-500 mt-1">Tech-SEO</p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Tools Box -->
+                    <div class="bg-slate-800/50 border border-white/10 rounded-2xl p-6">
+                        <h3 class="text-lg font-bold text-white mb-4">Passende Tools</h3>
+                        <div class="space-y-3">
+                            <a href="/tools/javascript-seo-checker.html" class="block bg-slate-700/50 hover:bg-slate-700 border border-white/10 rounded-xl p-4 transition-colors">
+                                <p class="text-sm font-medium text-white">JavaScript SEO Checker</p>
+                                <p class="text-xs text-gray-400 mt-1">JS-abhängige Inhalte kostenlos prüfen</p>
+                            </a>
+                            <a href="/tools/canonical-tag-checker.html" class="block bg-slate-700/50 hover:bg-slate-700 border border-white/10 rounded-xl p-4 transition-colors">
+                                <p class="text-sm font-medium text-white">Canonical-Tag-Checker</p>
+                                <p class="text-xs text-gray-400 mt-1">Canonical URLs kostenlos prüfen</p>
+                            </a>
+                            <a href="/tools/redirect-ketten-tester.html" class="block bg-slate-700/50 hover:bg-slate-700 border border-white/10 rounded-xl p-4 transition-colors">
+                                <p class="text-sm font-medium text-white">Redirect-Ketten-Tester</p>
+                                <p class="text-xs text-gray-400 mt-1">HTTP-Weiterleitungen prüfen</p>
+                            </a>
+                        </div>
+                    </div>
+                </aside>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer CTA -->
+    <section class="py-16 px-4 bg-gradient-to-r from-blue-900/30 to-indigo-900/30 border-t border-b border-white/5">
+        <div class="max-w-3xl mx-auto text-center">
+            <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">Teste deine Website jetzt kostenlos</h2>
+            <p class="text-gray-400 mb-8">Erhalte eine vollständige SEO-Analyse mit konkreten Verbesserungsvorschlägen.</p>
+            <form action="/" method="get" class="flex flex-col sm:flex-row gap-3 max-w-xl mx-auto">
+                <input type="url" placeholder="https://deine-website.de" class="flex-1 bg-slate-800 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-blue-500">
+                <a href="/" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-8 py-3 rounded-lg font-medium transition-all whitespace-nowrap">Analyse starten</a>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/10 bg-slate-900/50 py-12 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="flex items-center gap-2">
+                    <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                    <span class="text-lg font-bold text-white">Shift07</span>
+                </div>
+                <div class="flex items-center space-x-6 text-sm text-gray-400">
+                    <a href="/impressum.html" class="hover:text-white transition-colors">Impressum</a>
+                    <a href="/datenschutz.html" class="hover:text-white transition-colors">Datenschutz</a>
+                    <a href="/agb.html" class="hover:text-white transition-colors">AGB</a>
+                </div>
+                <p class="text-sm text-gray-500">&copy; 2026 Thümmler AI GmbH</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
