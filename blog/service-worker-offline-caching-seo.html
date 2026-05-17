@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K1S1RXBDS8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K1S1RXBDS8');
+    </script>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8475857002943858" crossorigin="anonymous"></script>
+    <title>Service Worker und Offline-Caching für SEO: PWA-Performance für bessere Rankings | Shift07 Blog</title>
+    <meta name="description" content="Service Worker und Offline-Caching für SEO: Wie Progressive Web Apps mit cleverer Cache-Strategie Ladezeiten verbessern, Core Web Vitals optimieren und Google-Rankings steigern.">
+    <meta name="author" content="Thümmler AI GmbH">
+    <link rel="icon" type="image/png" href="/logo.png">
+    <link rel="canonical" href="https://shift07.ai/blog/service-worker-offline-caching-seo.html">
+    <link rel="alternate" type="application/rss+xml" title="Shift07 Blog" href="https://shift07.ai/feed.xml">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Service Worker und Offline-Caching für SEO: PWA-Performance für bessere Rankings | Shift07 Blog">
+    <meta property="og:description" content="Wie Service Worker mit cleverer Cache-Strategie Ladezeiten verbessern, Core Web Vitals optimieren und Google-Rankings steigern.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://shift07.ai/blog/service-worker-offline-caching-seo.html">
+    <meta property="og:image" content="https://shift07.ai/blog/images/service-worker-offline-caching-seo.png">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="Shift07">
+    <meta property="article:published_time" content="2026-05-17T12:00:00+02:00">
+    <meta property="article:section" content="Performance">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Service Worker und Offline-Caching für SEO">
+    <meta name="twitter:description" content="Progressive Web Apps mit Service Workern verbessern Ladezeit, Core Web Vitals und SEO-Rankings messbar.">
+    <meta name="twitter:image" content="https://shift07.ai/blog/images/service-worker-offline-caching-seo.png">
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Service Worker und Offline-Caching für SEO: PWA-Performance für bessere Rankings",
+      "description": "Service Worker und Offline-Caching für SEO: Wie Progressive Web Apps mit cleverer Cache-Strategie Ladezeiten verbessern, Core Web Vitals optimieren und Google-Rankings steigern.",
+      "image": "https://shift07.ai/blog/images/service-worker-offline-caching-seo.png",
+      "datePublished": "2026-05-17T12:00:00+02:00",
+      "dateModified": "2026-05-17T12:00:00+02:00",
+      "author": {
+        "@type": "Organization",
+        "name": "Shift07",
+        "url": "https://shift07.ai"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Shift07",
+        "url": "https://shift07.ai",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://shift07.ai/assets/logo.png"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://shift07.ai/blog/service-worker-offline-caching-seo.html"
+      },
+      "keywords": "service worker seo, offline caching seo, pwa seo, progressive web app seo, workbox seo"
+    }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { 'inter': ['Inter', 'system-ui', '-apple-system', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+        .prose h2 { font-size: 1.5rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 1rem; color: #f9fafb; }
+        .prose h3 { font-size: 1.2rem; font-weight: 600; margin-top: 1.8rem; margin-bottom: 0.75rem; color: #f3f4f6; }
+        .prose p { color: #d1d5db; line-height: 1.8; margin-bottom: 1.25rem; }
+        .prose ul { color: #d1d5db; margin-bottom: 1.25rem; padding-left: 1.5rem; list-style-type: disc; }
+        .prose ol { color: #d1d5db; margin-bottom: 1.25rem; padding-left: 1.5rem; list-style-type: decimal; }
+        .prose li { margin-bottom: 0.5rem; line-height: 1.7; }
+        .prose a { color: #60a5fa; text-decoration: underline; }
+        .prose a:hover { color: #93c5fd; }
+        .prose code { background: rgba(255,255,255,0.08); padding: 0.15rem 0.4rem; border-radius: 0.25rem; font-size: 0.875em; color: #a5f3fc; }
+        .prose pre { background: #0f172a; border: 1px solid rgba(255,255,255,0.1); border-radius: 0.75rem; padding: 1.25rem; overflow-x: auto; margin-bottom: 1.5rem; }
+        .prose pre code { background: none; padding: 0; color: #e2e8f0; font-size: 0.875rem; line-height: 1.7; }
+        .prose strong { color: #f9fafb; font-weight: 600; }
+        .prose table { width: 100%; border-collapse: collapse; margin-bottom: 1.5rem; }
+        .prose th { background: rgba(255,255,255,0.08); color: #f9fafb; font-weight: 600; padding: 0.75rem 1rem; text-align: left; border: 1px solid rgba(255,255,255,0.1); font-size: 0.875rem; }
+        .prose td { color: #d1d5db; padding: 0.75rem 1rem; border: 1px solid rgba(255,255,255,0.08); font-size: 0.875rem; line-height: 1.6; }
+        .prose tr:nth-child(even) td { background: rgba(255,255,255,0.02); }
+        .callout { background: rgba(59,130,246,0.08); border-left: 4px solid #3b82f6; padding: 1rem 1.25rem; border-radius: 0 0.5rem 0.5rem 0; margin-bottom: 1.5rem; }
+        .callout-warn { background: rgba(234,179,8,0.08); border-left-color: #eab308; }
+        .callout-success { background: rgba(34,197,94,0.08); border-left-color: #22c55e; }
+    </style>
+</head>
+<body class="bg-gray-950 text-white min-h-screen font-inter">
+
+    <!-- Navigation -->
+    <nav class="border-b border-white/10 bg-gray-950/80 backdrop-blur-sm sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="/" class="flex items-center space-x-2">
+                    <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-auto">
+                    <span class="text-xl font-bold text-white">Shift07</span>
+                </a>
+                <div class="hidden md:flex space-x-6">
+                    <a href="/tools/" class="text-gray-400 hover:text-white transition-colors text-sm">Alle Tools</a>
+                    <a href="/blog/" class="text-gray-400 hover:text-white transition-colors text-sm">Blog</a>
+                    <a href="/" class="text-gray-400 hover:text-white transition-colors text-sm">SEO-Analyse</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="py-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-900 to-gray-950">
+        <div class="max-w-3xl mx-auto">
+            <div class="flex items-center gap-2 mb-4">
+                <a href="/blog/" class="text-gray-500 hover:text-gray-300 text-sm transition-colors">Blog</a>
+                <span class="text-gray-700">›</span>
+                <span class="text-blue-400 text-sm">Performance</span>
+            </div>
+            <h1 class="text-3xl sm:text-4xl font-bold mb-4 leading-tight">
+                Service Worker und Offline-Caching für SEO: PWA-Performance für bessere Rankings
+            </h1>
+            <p class="text-gray-400 text-lg mb-6">
+                Progressive Web Apps mit Service Workern laden Inhalte aus dem Cache statt vom Server — das verbessert LCP, TTFB und Core Web Vitals direkt und damit auch das Google-Ranking.
+            </p>
+            <div class="flex flex-wrap items-center gap-4 text-sm text-gray-500">
+                <span>17. Mai 2026</span>
+                <span>·</span>
+                <span>12 min Lesezeit</span>
+                <span>·</span>
+                <span>Laurenz Thümmler, Shift07</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Featured Image -->
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 mb-8">
+        <img
+            src="/blog/images/service-worker-offline-caching-seo.png"
+            alt="Service Worker und Offline-Caching für SEO: PWA-Performance und Rankings verbessern"
+            class="w-full rounded-2xl object-cover"
+            loading="eager"
+        >
+    </div>
+
+    <!-- Content -->
+    <main class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+        <article class="prose">
+
+            <p>
+                Service Worker sind eine der leistungsstärksten Technologien, die ein Frontend-Entwickler heute einsetzen kann — und gleichzeitig eine der am meisten unterschätzten SEO-Maßnahmen. Sie sitzen als programmierbarer Proxy zwischen Browser und Netzwerk, fangen Anfragen ab und entscheiden, ob sie die Antwort aus dem Cache liefern oder frisch vom Server holen. Das Ergebnis: Ladezeiten, die sich wie Magie anfühlen — weil gecachte Assets in unter 10 ms bereit stehen.
+            </p>
+
+            <p>
+                Für SEO ist das relevant, weil Google seit dem Page Experience Update Ladegeschwindigkeit und <a href="/blog/core-web-vitals-erklaert">Core Web Vitals</a> direkt als Ranking-Faktoren gewichtet. Ein Service Worker, der Assets aus dem Cache serviert, verbessert LCP, TTFB und INP messbar — ohne eine einzige Zeile im Backend zu ändern.
+            </p>
+
+            <div class="callout">
+                <p class="text-blue-300 font-semibold mb-1">Was du in diesem Artikel lernst</p>
+                <ul class="text-gray-300 text-sm space-y-1 list-disc pl-4 mb-0">
+                    <li>Wie Service Worker funktionieren und warum sie SEO-relevant sind</li>
+                    <li>Welche Cache-Strategie für welchen Content-Typ passt</li>
+                    <li>Wie du mit Workbox einen Service Worker in 15 Minuten aufsetzt</li>
+                    <li>Welche SEO-Fallstricke du vermeiden musst (veraltete Cache-Inhalte!)</li>
+                    <li>Wie Google Service Worker beim Crawling behandelt</li>
+                </ul>
+            </div>
+
+            <h2>Was ist ein Service Worker?</h2>
+
+            <p>
+                Ein Service Worker ist ein JavaScript-Skript, das im Hintergrund des Browsers läuft — getrennt vom eigentlichen Seitenkontext, ohne DOM-Zugriff. Es registriert sich für eine Domain oder einen Pfad und kann dann Netzwerkanfragen abfangen, modifizieren oder aus seinem eigenen Cache beantworten.
+            </p>
+
+            <p>
+                Technisch handelt es sich um einen Web Worker mit Netzwerk-Proxy-Fähigkeiten. Der Browser installiert ihn beim ersten Besuch und aktiviert ihn bei allen folgenden Aufrufen derselben Domain. Service Worker laufen über HTTPS (außer auf localhost) und sind auf dieselbe Origin beschränkt.
+            </p>
+
+            <pre><code>// service-worker.js — minimales Beispiel
+const CACHE_NAME = 'shift07-v1';
+const PRECACHE_URLS = [
+  '/',
+  '/styles/main.css',
+  '/scripts/app.js',
+  '/offline.html'
+];
+
+// Installation: Assets vorab cachen
+self.addEventListener('install', event => {
+  event.waitUntil(
+    caches.open(CACHE_NAME)
+      .then(cache => cache.addAll(PRECACHE_URLS))
+  );
+});
+
+// Fetch: Cache-First für statische Assets
+self.addEventListener('fetch', event => {
+  event.respondWith(
+    caches.match(event.request)
+      .then(cached => cached || fetch(event.request))
+  );
+});
+</code></pre>
+
+            <p>
+                Die Registrierung im Haupt-JS-Bundle ist minimal:
+            </p>
+
+            <pre><code>// Registrierung im Haupt-JavaScript
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/service-worker.js')
+    .then(reg => console.log('SW registriert:', reg.scope));
+}
+</code></pre>
+
+            <h2>Die fünf Cache-Strategien und wann du welche einsetzt</h2>
+
+            <p>
+                Nicht jeder Content-Typ profitiert von derselben Cache-Strategie. Die falsche Wahl führt entweder zu veralteten Inhalten oder zu keiner Performance-Verbesserung. Hier sind die fünf etablierten Strategien:
+            </p>
+
+            <h3>1. Cache First (Cache-zuerst)</h3>
+
+            <p>
+                <strong>Wie es funktioniert:</strong> Der Service Worker prüft zuerst den Cache. Nur wenn kein Eintrag vorhanden ist, geht er ins Netzwerk und speichert die Antwort.
+            </p>
+
+            <p>
+                <strong>Geeignet für:</strong> Statische Assets, die sich selten ändern — CSS-Dateien, JavaScript-Bundles, Webfonts, Logos, Bilder. Diese sind meist versioniert (<code>main.abc123.js</code>) und ändern sich nie nach dem Build.
+            </p>
+
+            <p>
+                <strong>SEO-Impact:</strong> Direkt. Statische Assets aus dem Cache bedeuten, dass Browser-LCP-Kandidaten (Hero-Bilder, Fonts) sofort verfügbar sind. Der <a href="/blog/ttfb-verbessern-server-antwortzeit">TTFB</a> für diese Ressourcen fällt auf nahezu null.
+            </p>
+
+            <h3>2. Network First (Netzwerk-zuerst)</h3>
+
+            <p>
+                <strong>Wie es funktioniert:</strong> Zuerst wird das Netzwerk versucht. Wenn die Anfrage scheitert (offline, Server nicht erreichbar), liefert der Cache die gespeicherte Version.
+            </p>
+
+            <p>
+                <strong>Geeignet für:</strong> HTML-Seiten, API-Antworten, News-Feeds — Inhalte, die aktuell sein müssen, aber im Offline-Fall besser veraltet als gar nicht gezeigt werden.
+            </p>
+
+            <div class="callout callout-warn">
+                <p class="text-yellow-300 font-semibold mb-1">SEO-Fallstrick: Network First mit Timeout</p>
+                <p class="text-gray-300 text-sm mb-0">Network First kann TTFB erhöhen, wenn der Server langsam antwortet — der Browser wartet auf die Netzwerkantwort bevor er den Cache prüft. Verwende einen Timeout (z.B. 3 s), nach dem automatisch auf den Cache zurückgegriffen wird.</p>
+            </div>
+
+            <h3>3. Stale While Revalidate (Veraltetes liefern, im Hintergrund aktualisieren)</h3>
+
+            <p>
+                <strong>Wie es funktioniert:</strong> Der Cache wird sofort geliefert (schnell!), während im Hintergrund gleichzeitig eine Netzwerkanfrage läuft, die den Cache für den nächsten Besuch aktualisiert.
+            </p>
+
+            <p>
+                <strong>Geeignet für:</strong> Blog-Artikel, Produktseiten, statisch generierte HTML-Seiten — Inhalte, die sich gelegentlich ändern aber nicht sekundenaktuell sein müssen.
+            </p>
+
+            <p>
+                <strong>SEO-Impact:</strong> Sehr gut. Der Browser erhält die gecachte Antwort sofort, was LCP und TTFB drastisch verbessert. Beim nächsten Aufruf ist der Cache bereits aktualisiert.
+            </p>
+
+            <h3>4. Cache Only</h3>
+
+            <p>
+                Ausschließlich aus dem Cache, kein Netzwerkzugriff. Sinnvoll für Assets, die beim Install-Event vorab gecacht wurden und sich nicht ändern (z.B. App-Shell). Im SEO-Kontext selten direkt relevant.
+            </p>
+
+            <h3>5. Network Only</h3>
+
+            <p>
+                Immer frisch vom Netzwerk, kein Caching. Für Echtzeit-Daten wie Börsenkurse, Live-Scores oder personalisierte API-Endpunkte. Kein direkter SEO-Vorteil.
+            </p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Strategie</th>
+                        <th>Geschwindigkeit</th>
+                        <th>Aktualität</th>
+                        <th>Geeignet für</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Cache First</td><td>⚡⚡⚡ Sehr schnell</td><td>❌ Veraltet möglich</td><td>Versionierte Assets (CSS, JS)</td></tr>
+                    <tr><td>Network First</td><td>⚡ Langsamer</td><td>✅ Immer aktuell</td><td>API-Antworten, News</td></tr>
+                    <tr><td>Stale While Revalidate</td><td>⚡⚡⚡ Sehr schnell</td><td>✅ Nächster Besuch</td><td>Blog-Artikel, HTML-Seiten</td></tr>
+                    <tr><td>Cache Only</td><td>⚡⚡⚡ Maximal</td><td>❌ Nie aktualisiert</td><td>App-Shell, Offline-Fallback</td></tr>
+                    <tr><td>Network Only</td><td>⚡ Normal</td><td>✅ Immer aktuell</td><td>Echtzeit-Daten</td></tr>
+                </tbody>
+            </table>
+
+            <h2>Workbox: Service Worker in der Praxis</h2>
+
+            <p>
+                Manuell einen Service Worker zu schreiben, der alle Edge Cases korrekt behandelt (Cache-Invalidierung, Race Conditions, Update-Lifecycle), ist fehleranfällig. <strong>Workbox</strong> ist die offizielle Google-Bibliothek, die diese Komplexität abstrahiert.
+            </p>
+
+            <pre><code>// service-worker.js mit Workbox
+import { registerRoute } from 'workbox-routing';
+import { CacheFirst, StaleWhileRevalidate, NetworkFirst } from 'workbox-strategies';
+import { precacheAndRoute } from 'workbox-precaching';
+import { ExpirationPlugin } from 'workbox-expiration';
+
+// Vorab-Caching des Build-Outputs (Vite/Webpack inject __WB_MANIFEST)
+precacheAndRoute(self.__WB_MANIFEST);
+
+// Strategie 1: Cache First für Bilder (max 30 Tage, max 60 Einträge)
+registerRoute(
+  ({ request }) => request.destination === 'image',
+  new CacheFirst({
+    cacheName: 'images-cache',
+    plugins: [
+      new ExpirationPlugin({ maxEntries: 60, maxAgeSeconds: 30 * 24 * 60 * 60 })
+    ]
+  })
+);
+
+// Strategie 2: Stale While Revalidate für Blog-HTML
+registerRoute(
+  ({ request }) => request.destination === 'document',
+  new StaleWhileRevalidate({ cacheName: 'html-cache' })
+);
+
+// Strategie 3: Network First für API-Anfragen
+registerRoute(
+  ({ url }) => url.pathname.startsWith('/api/'),
+  new NetworkFirst({ cacheName: 'api-cache', networkTimeoutSeconds: 3 })
+);
+</code></pre>
+
+            <p>
+                Mit Vite verwendest du das Plugin <code>vite-plugin-pwa</code>, das Workbox automatisch konfiguriert und den Service Worker in deinen Build-Prozess integriert:
+            </p>
+
+            <pre><code>// vite.config.js
+import { VitePWA } from 'vite-plugin-pwa';
+
+export default {
+  plugins: [
+    VitePWA({
+      registerType: 'autoUpdate',
+      workbox: {
+        globPatterns: ['**/*.{js,css,html,ico,png,svg,woff2}'],
+        runtimeCaching: [{
+          urlPattern: /^https:\/\/shift07\.ai\/blog\//,
+          handler: 'StaleWhileRevalidate',
+          options: { cacheName: 'blog-cache' }
+        }]
+      }
+    })
+  ]
+};
+</code></pre>
+
+            <h2>Service Worker und SEO: Was Googlebot sieht</h2>
+
+            <p>
+                Eine häufige Frage: Crawlt Googlebot Service Worker? Die Antwort ist differenziert. Googlebot führt JavaScript aus — er ist ein vollständiger Chromium-basierter Renderer. Das bedeutet:
+            </p>
+
+            <ul>
+                <li><strong>Service Worker werden registriert</strong>, aber Googlebot hat keinen persistenten Cache zwischen Crawls. Jeder Crawl beginnt mit einem leeren Cache.</li>
+                <li><strong>Offline-Inhalte werden NICHT gecrawlt.</strong> Was nur aus dem Service Worker Cache erreichbar ist und kein echtes HTTP-Ergebnis hat, sieht Googlebot nicht.</li>
+                <li><strong>Gecachte Assets beschleunigen</strong> das Rendering beim zweiten Crawl derselben URL nicht — weil Googlebot keinen persistenten State hält.</li>
+                <li><strong>Navigation Preload</strong> (siehe unten) ist die wichtigste Technik um TTFB auch beim Googlebot-Crawl zu verbessern.</li>
+            </ul>
+
+            <div class="callout callout-warn">
+                <p class="text-yellow-300 font-semibold mb-1">Kritisch: Verberge keine Inhalte hinter Service Workern</p>
+                <p class="text-gray-300 text-sm mb-0">Wenn dein Service Worker Inhalte ausliefert, die nicht über das Netzwerk erreichbar sind (nur im Cache), wird Googlebot diese nicht crawlen können. Stelle sicher, dass jede URL auch ohne Service Worker eine valide HTTP-Antwort zurückgibt.</p>
+            </div>
+
+            <h3>Navigation Preload: TTFB auch beim ersten Crawl verbessern</h3>
+
+            <p>
+                Normalerweise muss der Browser warten bis der Service Worker gestartet ist, bevor er die Navigation-Anfrage abfangen kann — das kostet 50–200 ms. <strong>Navigation Preload</strong> löst dieses Problem: Der Browser startet die Netzwerkanfrage parallel zum Service Worker Start.
+            </p>
+
+            <pre><code>// Navigation Preload aktivieren
+self.addEventListener('activate', event => {
+  event.waitUntil(self.registration.navigationPreload.enable());
+});
+
+self.addEventListener('fetch', event => {
+  if (event.request.mode === 'navigate') {
+    event.respondWith(async function() {
+      // Nutze die preloaded Antwort wenn verfügbar
+      const preloadResponse = await event.preloadResponse;
+      if (preloadResponse) return preloadResponse;
+
+      // Fallback: Cache oder Netzwerk
+      const cached = await caches.match(event.request);
+      return cached || fetch(event.request);
+    }());
+  }
+});
+</code></pre>
+
+            <p>
+                Das verkürzt den TTFB für wiederkehrende Besucher und liefert gleichzeitig der gecachten Version für sofortiges Rendering. Für den Googlebot, der immer ein "erster Besuch" ist, bedeutet es: die Netzwerkanfrage wird nicht durch den SW-Start verzögert.
+            </p>
+
+            <h2>Offline-Fallback: UX und Crawlability</h2>
+
+            <p>
+                Ein guter Service Worker zeigt bei fehlender Verbindung eine sinnvolle Offline-Seite statt des Browser-Fehlerbildschirms. Das verbessert die User Experience, hat aber keinen direkten SEO-Vorteil — Googlebot crawlt im Netzwerk, nicht offline.
+            </p>
+
+            <pre><code>// Offline-Fallback
+self.addEventListener('fetch', event => {
+  if (event.request.mode === 'navigate') {
+    event.respondWith(
+      fetch(event.request).catch(() =>
+        caches.match('/offline.html')
+      )
+    );
+  }
+});
+</code></pre>
+
+            <p>
+                Die <code>offline.html</code> sollte eine hilfreiche Seite mit deinen wichtigsten gecachten Inhalten sein — zum Beispiel Links zu bereits besuchten Artikeln aus dem Cache.
+            </p>
+
+            <h2>Cache-Invalidierung: Der wichtigste SEO-Fallstrick</h2>
+
+            <p>
+                Der häufigste Fehler mit Service Workern: veraltete Inhalte werden zu lange ausgeliefert. Wenn du einen Artikel aktualisierst, aber der Service Worker noch die alte Version ausliefert, können wiederkehrende Nutzer veraltete Inhalte sehen — und wenn Google keinen direkten Cache-Hit hat, bekommt er die korrekte Version. Kein direkter SEO-Schaden, aber schlechte UX.
+            </p>
+
+            <p>
+                Die richtige Lösung: <strong>Versionierung im Cache-Namen</strong> kombiniert mit <strong>automatischem Update</strong>.
+            </p>
+
+            <pre><code>// Cache-Versionierung: Bei Änderung CACHE_VERSION erhöhen
+const CACHE_VERSION = 'v3';
+const CACHE_NAME = `shift07-${CACHE_VERSION}`;
+
+// Beim Activate: Alte Caches löschen
+self.addEventListener('activate', event => {
+  event.waitUntil(
+    caches.keys().then(keys =>
+      Promise.all(
+        keys
+          .filter(key => key.startsWith('shift07-') && key !== CACHE_NAME)
+          .map(key => caches.delete(key))
+      )
+    )
+  );
+});
+</code></pre>
+
+            <p>
+                Mit Workbox und <code>registerType: 'autoUpdate'</code> übernimmt Workbox das automatisch: Wenn eine neue Service-Worker-Version erkannt wird, wird sie im Hintergrund installiert und beim nächsten Tab-Wechsel aktiviert.
+            </p>
+
+            <h2>Messbare SEO-Effekte von Service Workern</h2>
+
+            <p>
+                Was kannst du realistisch erwarten? Die Zahlen variieren je nach Ausgangssituation, aber hier sind typische Verbesserungen:
+            </p>
+
+            <ul>
+                <li><strong>TTFB für gecachte Seiten:</strong> Von 400–800 ms auf &lt;20 ms (Cache-Hit)</li>
+                <li><strong>LCP für gecachte Hero-Bilder:</strong> Reduktion um 60–80 % beim Folgebesuch</li>
+                <li><strong>Repeat Visit Performance:</strong> Dramatisch verbessert, da keine Netzwerkanfragen für statische Assets nötig sind</li>
+                <li><strong>Bounce Rate bei schlechter Verbindung:</strong> Reduziert durch schnellere Ladezeiten auf mobilen Verbindungen</li>
+            </ul>
+
+            <p>
+                Google bewertet CrUX-Daten (Chrome User Experience Report), die reale Nutzerdaten widerspiegeln. Service Worker verbessern diese Feldmessdaten direkt, weil wiederkehrende Nutzer (der Großteil des Traffics) von gecachten Assets profitieren. Das schlägt sich in den CrUX-Daten nieder, die Google für das Ranking nutzt. Prüfe deine aktuellen Werte mit dem <a href="/tools/core-web-vitals-checker.html">Core Web Vitals Checker</a>.
+            </p>
+
+            <h2>Service Worker und JavaScript-Performance kombinieren</h2>
+
+            <p>
+                Service Worker sind besonders effektiv in Kombination mit anderen Performance-Maßnahmen. Die wichtigste Synergie: <a href="/blog/javascript-performance-spa-bundle-groessen-code-splitting">Code Splitting</a> und Service Worker.
+            </p>
+
+            <p>
+                Wenn dein Build-Tool (Vite, Webpack) das JavaScript in kleine Chunks aufteilt, können diese Chunks einzeln gecacht werden. Wenn sich nur eine Komponente ändert, müssen Nutzer nur diesen einen Chunk neu laden — alle anderen bleiben im Cache. Das maximiert die Cache-Effizienz.
+            </p>
+
+            <pre><code>// Vite: Code Splitting + Workbox Precaching
+// vite.config.js
+export default {
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ['react', 'react-dom'],  // Selten geändert → lang gecacht
+          ui: ['@radix-ui/react-dialog'],   // Mittel geändert
+          // App-Code → kurz gecacht, häufig aktualisiert
+        }
+      }
+    }
+  }
+};
+</code></pre>
+
+            <p>
+                Ergänze das mit <a href="/blog/javascript-async-defer-seo"><code>defer</code> und <code>async</code></a> für nicht-kritisches JavaScript, damit der First Contentful Paint nicht durch Script-Parsing blockiert wird, während der Service Worker die Assets aus dem Cache lädt.
+            </p>
+
+            <h2>Browser-Caching vs. Service Worker Caching: Was ist der Unterschied?</h2>
+
+            <p>
+                Diese Frage wird oft gestellt. Der <a href="/blog/caching-website-einrichten">Browser-Cache</a> wird vom HTTP-Server via Cache-Control-Header gesteuert — du kannst festlegen, wie lange Ressourcen gecacht werden, aber du hast keine Kontrolle über das Cache-Verhalten bei Netzwerkproblemen oder kannst keine programmatische Logik einsetzen.
+            </p>
+
+            <p>
+                Der Service Worker Cache ist vollständig programmatisch steuerbar:
+            </p>
+
+            <ul>
+                <li><strong>Strategisch:</strong> Du entscheidest pro URL-Muster, ob Cache First, Network First oder Stale While Revalidate gilt</li>
+                <li><strong>Offline-fähig:</strong> Du kannst Antworten ausliefern, auch wenn das Netzwerk nicht verfügbar ist</li>
+                <li><strong>Hintergrund-Updates:</strong> Du kannst Inhalte im Hintergrund aktualisieren, ohne dass der Nutzer warten muss</li>
+                <li><strong>Cache-Größe steuerbar:</strong> Mit ExpirationPlugin kannst du maximale Einträge und Ablaufdaten setzen</li>
+            </ul>
+
+            <p>
+                Für maximale Performance kombinierst du beide: HTTP Cache-Control für statische Assets (lange TTL, da versioniert) + Service Worker für dynamische Caching-Logik und Offline-Fallbacks.
+            </p>
+
+            <h2>Checkliste: Service Worker für SEO richtig einsetzen</h2>
+
+            <div class="callout callout-success">
+                <ul class="text-gray-300 text-sm space-y-1 list-none pl-0 mb-0">
+                    <li>✅ HTTPS aktiviert (Service Worker Pflichtvoraussetzung)</li>
+                    <li>✅ Workbox statt manuellem Service Worker verwenden</li>
+                    <li>✅ Statische Assets (CSS, JS, Bilder) mit Cache First cachen</li>
+                    <li>✅ HTML-Seiten mit Stale While Revalidate cachen</li>
+                    <li>✅ Navigation Preload aktivieren (reduziert SW-Startup-Latenz)</li>
+                    <li>✅ Cache-Versionierung bei jedem Deploy aktualisieren</li>
+                    <li>✅ Offline-Fallback-Seite implementieren</li>
+                    <li>✅ Alle Seiten sind auch ohne SW via HTTP erreichbar (für Googlebot)</li>
+                    <li>✅ ExpirationPlugin für Runtime-Caches konfigurieren (max Größe + Alter)</li>
+                    <li>✅ Code Splitting für maximale Cache-Effizienz kombinieren</li>
+                    <li>✅ Performance nach Implementierung mit CrUX-Daten messen</li>
+                </ul>
+            </div>
+
+            <h2>Fazit: Service Worker sind unterschätztes SEO-Werkzeug</h2>
+
+            <p>
+                Service Worker werden oft als "PWA-Feature" betrachtet — als wären sie nur für App-ähnliche Erlebnisse relevant. Das ist ein Missverständnis. Für jede Website, die wiederkehrende Besucher hat, verbessern Service Worker mit der richtigen Cache-Strategie die Core Web Vitals direkt und damit die Google-Rankings.
+            </p>
+
+            <p>
+                Der Aufwand für eine grundlegende Implementierung mit Workbox ist gering — besonders wenn du bereits Vite oder Webpack verwendest. Die <code>vite-plugin-pwa</code> erledigt den Großteil der Konfiguration automatisch. Was bleibt, ist die Strategie-Entscheidung pro Content-Typ: statische Assets Cache First, HTML Stale While Revalidate, APIs Network First.
+            </p>
+
+            <p>
+                Achte dabei auf den wichtigsten Fallstrick: Cache-Invalidierung. Lass Workbox die Cache-Versionierung übernehmen und stelle sicher, dass alle URLs auch ohne Service Worker gültige HTTP-Antworten zurückgeben. Dann profitierst du von der Performance, ohne SEO-Risiken einzugehen.
+            </p>
+
+            <p>
+                Prüfe deine aktuelle Performance-Situation mit dem <a href="/tools/core-web-vitals-checker.html">Core Web Vitals Checker</a> und kombiniere Service Worker mit <a href="/blog/render-blocking-ressourcen-entfernen">entfernten Render-Blocking-Ressourcen</a> für maximalen Effekt auf deine Rankings.
+            </p>
+
+        </article>
+
+        <!-- CTA Box -->
+        <div class="mt-12 bg-gradient-to-r from-blue-900/30 to-purple-900/30 border border-blue-500/20 rounded-2xl p-8 text-center">
+            <h2 class="text-2xl font-bold mb-3">Wie schnell ist deine Website wirklich?</h2>
+            <p class="text-gray-400 mb-6">Prüfe Core Web Vitals, LCP und INP — kostenlos und ohne Anmeldung.</p>
+            <a href="/tools/core-web-vitals-checker.html" class="inline-flex items-center bg-blue-600 hover:bg-blue-500 text-white px-8 py-3 rounded-xl font-semibold transition-colors">
+                Core Web Vitals jetzt prüfen
+                <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </a>
+        </div>
+
+        <!-- Related Articles -->
+        <div class="mt-12">
+            <h3 class="text-xl font-bold mb-6">Verwandte Artikel</h3>
+            <div class="grid sm:grid-cols-2 gap-4">
+                <a href="/blog/core-web-vitals-erklaert.html" class="bg-gray-900 border border-white/10 rounded-xl p-5 hover:border-blue-500/30 transition-colors">
+                    <div class="text-blue-400 text-sm font-medium mb-2">Performance</div>
+                    <div class="font-semibold text-white mb-2">Core Web Vitals erklärt: LCP, CLS und FID einfach verstehen</div>
+                    <div class="text-gray-500 text-sm">Die wichtigsten Google-Metriken verständlich erklärt.</div>
+                </a>
+                <a href="/blog/javascript-performance-spa-bundle-groessen-code-splitting.html" class="bg-gray-900 border border-white/10 rounded-xl p-5 hover:border-blue-500/30 transition-colors">
+                    <div class="text-yellow-400 text-sm font-medium mb-2">JavaScript-SEO</div>
+                    <div class="font-semibold text-white mb-2">JavaScript-Performance für SPAs: Bundle-Größen und Code-Splitting</div>
+                    <div class="text-gray-500 text-sm">Bundle-Größen reduzieren mit modernen Build-Tools.</div>
+                </a>
+                <a href="/blog/caching-website-einrichten.html" class="bg-gray-900 border border-white/10 rounded-xl p-5 hover:border-blue-500/30 transition-colors">
+                    <div class="text-green-400 text-sm font-medium mb-2">Performance</div>
+                    <div class="font-semibold text-white mb-2">Caching richtig einrichten: Browser-Cache & Server-Cache</div>
+                    <div class="text-gray-500 text-sm">HTTP Cache-Control-Header für maximale Performance.</div>
+                </a>
+                <a href="/blog/render-blocking-ressourcen-entfernen.html" class="bg-gray-900 border border-white/10 rounded-xl p-5 hover:border-blue-500/30 transition-colors">
+                    <div class="text-orange-400 text-sm font-medium mb-2">Performance</div>
+                    <div class="font-semibold text-white mb-2">Render-Blocking-Ressourcen entfernen: CSS und JavaScript richtig laden</div>
+                    <div class="text-gray-500 text-sm">First Paint beschleunigen durch richtiges Laden von Ressourcen.</div>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/10 bg-gray-950 mt-8 py-8 px-4">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="text-gray-500 text-sm">&copy; 2026 Thümmler AI GmbH. Alle Rechte vorbehalten.</div>
+            <div class="flex gap-6 text-sm">
+                <a href="/impressum.html" class="text-gray-500 hover:text-gray-300 transition-colors">Impressum</a>
+                <a href="/datenschutz.html" class="text-gray-500 hover:text-gray-300 transition-colors">Datenschutz</a>
+                <a href="/agb.html" class="text-gray-500 hover:text-gray-300 transition-colors">AGB</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
