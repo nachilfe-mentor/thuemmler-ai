@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Sun, 17 May 2026 01:18:46 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 17 May 2026 01:22:03 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>JavaScript-Performance für SPAs: Bundle-Größen und Code-Splitting</title>
+      <link>https://shift07.ai/blog/javascript-performance-spa-bundle-groessen-code-splitting.html</link>
+      <guid>https://shift07.ai/blog/javascript-performance-spa-bundle-groessen-code-splitting.html</guid>
+      <pubDate>Sun, 17 May 2026 01:21:35 +0000</pubDate>
+      <description>Wie du JavaScript-Bundle-Größen in Single-Page-Apps reduzierst: Code-Splitting, Lazy Loading, Tree Shaking und dynamische Imports erklärt. Mit konkreten Beispielen für React, Vue und Angular.</description>
+      <category>Performance</category>
+    </item>
     <item>
       <title>Critical CSS extrahieren: Above-the-Fold optimieren für besseres LCP</title>
       <link>https://shift07.ai/blog/critical-css-above-the-fold-lcp.html</link>
@@ -158,14 +166,6 @@
       <pubDate>Thu, 14 May 2026 12:39:47 +0000</pubDate>
       <description>Twitter Cards (X Cards) richtig einsetzen: twitter:card, twitter:title, twitter:image und mehr. Vollständige Anleitung mit Code-Beispielen, Card-Typen und Checkliste.</description>
       <category>Social Media SEO</category>
-    </item>
-    <item>
-      <title>Jimdo SEO optimieren: Schritt-für-Schritt-Anleitung 2026</title>
-      <link>https://shift07.ai/blog/jimdo-seo-optimieren.html</link>
-      <guid>https://shift07.ai/blog/jimdo-seo-optimieren.html</guid>
-      <pubDate>Thu, 14 May 2026 12:32:36 +0000</pubDate>
-      <description>Jimdo SEO optimieren: Seitentitel, Meta-Descriptions, URL-Pfade, Alt-Texte, Schema Markup und Analytics. Die vollständige Anleitung für Creator und Dolphin mit Checkliste.</description>
-      <category>CMS-SEO</category>
     </item>
   </channel>
 </rss>
