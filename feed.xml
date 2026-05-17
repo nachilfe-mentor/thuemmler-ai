@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Sun, 17 May 2026 03:04:20 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 17 May 2026 03:07:51 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Lazy Loading für Bilder und iframes: Best Practices 2026</title>
+      <link>https://shift07.ai/blog/lazy-loading-bilder-iframes-best-practices.html</link>
+      <guid>https://shift07.ai/blog/lazy-loading-bilder-iframes-best-practices.html</guid>
+      <pubDate>Sun, 17 May 2026 03:07:21 +0000</pubDate>
+      <description>Lazy Loading für Bilder und iframes richtig einsetzen: loading=lazy, Intersection Observer, LCP-Fallstricke und SEO-Auswirkungen erklärt — mit konkreten Code-Beispielen.</description>
+      <category>Performance</category>
+    </item>
     <item>
       <title>Service Worker und Offline-Caching für SEO: PWA-Performance für bessere Rankings</title>
       <link>https://shift07.ai/blog/service-worker-offline-caching-seo.html</link>
@@ -158,14 +166,6 @@
       <pubDate>Thu, 14 May 2026 14:20:06 +0000</pubDate>
       <description>Der Viewport-Meta-Tag entscheidet, ob deine Seite mobilfreundlich ist. Erfahre, wie du width=device-width und initial-scale korrekt setzt – und welche Fehler Rankings kosten.</description>
       <category>Mobile SEO</category>
-    </item>
-    <item>
-      <title>Meta-Tags richtig einsetzen: Die vollständige Anleitung</title>
-      <link>https://shift07.ai/blog/meta-tags-richtig-einsetzen.html</link>
-      <guid>https://shift07.ai/blog/meta-tags-richtig-einsetzen.html</guid>
-      <pubDate>Thu, 14 May 2026 12:40:52 +0000</pubDate>
-      <description>Lerne, wie du Meta-Tags wie Title, Description und Open Graph korrekt für SEO einsetzt. Mit Checkliste, Beispielen und häufigen Fehlern.</description>
-      <category>SEO Grundlagen</category>
     </item>
   </channel>
 </rss>
