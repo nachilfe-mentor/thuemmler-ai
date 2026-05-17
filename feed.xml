@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Sun, 17 May 2026 01:22:03 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 17 May 2026 01:25:29 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Above-the-Fold-Optimierung für Mobile: LCP auf Smartphones verbessern</title>
+      <link>https://shift07.ai/blog/above-the-fold-optimierung-mobile-lcp-smartphones.html</link>
+      <guid>https://shift07.ai/blog/above-the-fold-optimierung-mobile-lcp-smartphones.html</guid>
+      <pubDate>Sun, 17 May 2026 01:25:02 +0000</pubDate>
+      <description>Wie du den Above-the-Fold-Bereich auf Smartphones für bessere LCP-Werte optimierst: Hero-Bilder, Critical CSS, Schriftarten und Render-Reihenfolge auf mobilen Geräten erklärt.</description>
+      <category>Performance</category>
+    </item>
     <item>
       <title>JavaScript-Performance für SPAs: Bundle-Größen und Code-Splitting</title>
       <link>https://shift07.ai/blog/javascript-performance-spa-bundle-groessen-code-splitting.html</link>
@@ -158,14 +166,6 @@
       <pubDate>Thu, 14 May 2026 12:40:36 +0000</pubDate>
       <description>Lerne, wie Open Graph Tags funktionieren und warum sie entscheidend für die Klickrate deiner geteilten Links sind. Mit kostenlosem Preview-Tool zum Testen.</description>
       <category>Social Media & SEO</category>
-    </item>
-    <item>
-      <title>Twitter Cards richtig einsetzen: X Card Tags Schritt für Schritt 2026</title>
-      <link>https://shift07.ai/blog/twitter-cards-richtig-einsetzen.html</link>
-      <guid>https://shift07.ai/blog/twitter-cards-richtig-einsetzen.html</guid>
-      <pubDate>Thu, 14 May 2026 12:39:47 +0000</pubDate>
-      <description>Twitter Cards (X Cards) richtig einsetzen: twitter:card, twitter:title, twitter:image und mehr. Vollständige Anleitung mit Code-Beispielen, Card-Typen und Checkliste.</description>
-      <category>Social Media SEO</category>
     </item>
   </channel>
 </rss>
