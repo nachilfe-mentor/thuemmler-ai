@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Sun, 17 May 2026 04:42:53 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 17 May 2026 04:46:17 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Resource Hints für SEO: preload, prefetch, preconnect richtig einsetzen</title>
+      <link>https://shift07.ai/blog/resource-hints-preload-prefetch-preconnect-seo.html</link>
+      <guid>https://shift07.ai/blog/resource-hints-preload-prefetch-preconnect-seo.html</guid>
+      <pubDate>Sun, 17 May 2026 04:45:49 +0000</pubDate>
+      <description>Resource Hints (preload, prefetch, preconnect, dns-prefetch) richtig einsetzen: Wie du mit Link-Rel-Attributen die Ladezeit senkst und LCP, FCP sowie Core Web Vitals verbesserst.</description>
+      <category>Performance SEO</category>
+    </item>
     <item>
       <title>Lazy Loading für Bilder und iframes: Best Practices 2026</title>
       <link>https://shift07.ai/blog/lazy-loading-bilder-iframes-best-practices.html</link>
@@ -157,14 +165,6 @@
       <guid>https://shift07.ai/blog/mobile-seo-responsive-design.html</guid>
       <pubDate>Thu, 14 May 2026 14:20:57 +0000</pubDate>
       <description>Mobile SEO ist kein optionaler Bonus mehr - Google indexiert Websites zuerst auf dem Smartphone. Lerne, wie Responsive Design und der Mobile-First Index dein Ranking beeinflussen.</description>
-      <category>Mobile SEO</category>
-    </item>
-    <item>
-      <title>Viewport-Meta-Tag richtig setzen: Der Leitfaden für Mobile SEO</title>
-      <link>https://shift07.ai/blog/viewport-meta-tag-richtig-setzen.html</link>
-      <guid>https://shift07.ai/blog/viewport-meta-tag-richtig-setzen.html</guid>
-      <pubDate>Thu, 14 May 2026 14:20:06 +0000</pubDate>
-      <description>Der Viewport-Meta-Tag entscheidet, ob deine Seite mobilfreundlich ist. Erfahre, wie du width=device-width und initial-scale korrekt setzt – und welche Fehler Rankings kosten.</description>
       <category>Mobile SEO</category>
     </item>
   </channel>
