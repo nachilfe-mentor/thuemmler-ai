@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Sun, 17 May 2026 04:46:17 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 17 May 2026 04:49:22 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Web Workers für JavaScript-Performance: Hauptthread entlasten</title>
+      <link>https://shift07.ai/blog/web-workers-javascript-performance-hauptthread-seo.html</link>
+      <guid>https://shift07.ai/blog/web-workers-javascript-performance-hauptthread-seo.html</guid>
+      <pubDate>Sun, 17 May 2026 04:48:57 +0000</pubDate>
+      <description>Web Workers in JavaScript richtig einsetzen: Wie du rechenintensive Aufgaben aus dem Hauptthread auslagern, INP verbessern und Core Web Vitals optimierst. Mit praktischen Beispielen.</description>
+      <category>Performance SEO</category>
+    </item>
     <item>
       <title>Resource Hints für SEO: preload, prefetch, preconnect richtig einsetzen</title>
       <link>https://shift07.ai/blog/resource-hints-preload-prefetch-preconnect-seo.html</link>
@@ -158,14 +166,6 @@
       <pubDate>Thu, 14 May 2026 14:21:07 +0000</pubDate>
       <description>Mobile Optimierung für deine Website: Checkliste mit 15 konkreten Schritten für Responsive Design, Ladezeit, Touch-Bedienung und Mobile-First SEO.</description>
       <category>SEO Grundlagen</category>
-    </item>
-    <item>
-      <title>Mobile SEO: Responsive Design und Mobile-First Index erklärt</title>
-      <link>https://shift07.ai/blog/mobile-seo-responsive-design.html</link>
-      <guid>https://shift07.ai/blog/mobile-seo-responsive-design.html</guid>
-      <pubDate>Thu, 14 May 2026 14:20:57 +0000</pubDate>
-      <description>Mobile SEO ist kein optionaler Bonus mehr - Google indexiert Websites zuerst auf dem Smartphone. Lerne, wie Responsive Design und der Mobile-First Index dein Ranking beeinflussen.</description>
-      <category>Mobile SEO</category>
     </item>
   </channel>
 </rss>
