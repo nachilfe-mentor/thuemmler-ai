@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Mon, 18 May 2026 00:32:08 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 18 May 2026 02:07:22 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Zero-Click SEO: Wenn Google direkt antwortet – Strategien 2026</title>
+      <link>https://shift07.ai/blog/zero-click-seo-google-direkt-antwortet.html</link>
+      <guid>https://shift07.ai/blog/zero-click-seo-google-direkt-antwortet.html</guid>
+      <pubDate>Mon, 18 May 2026 02:06:48 +0000</pubDate>
+      <description>Zero-Click-Suchen dominieren über 60% aller Google-Anfragen. Erfahre, warum Zero-Click SEO trotzdem wertvoll ist und wie du mit Featured Snippets, AI Overviews und Structured Data sichtbar bleibst.</description>
+      <category>OnPage-SEO</category>
+    </item>
     <item>
       <title>GEO – Generative Engine Optimization: SEO für KI-Antworten 2026</title>
       <link>https://shift07.ai/blog/geo-generative-engine-optimization-ki-suche.html</link>
@@ -158,14 +166,6 @@
       <pubDate>Fri, 15 May 2026 01:46:16 +0000</pubDate>
       <description>Gzip und Brotli-Komprimierung für Websites aktivieren: Schritt-für-Schritt-Anleitung für Apache, Nginx, Cloudflare und PHP. Spart bis zu 80% Bandbreite.</description>
       <category>Performance</category>
-    </item>
-    <item>
-      <title>Screaming Frog SEO Spider: Vollständige Anleitung 2026</title>
-      <link>https://shift07.ai/blog/screaming-frog-seo-spider-anleitung.html</link>
-      <guid>https://shift07.ai/blog/screaming-frog-seo-spider-anleitung.html</guid>
-      <pubDate>Fri, 15 May 2026 01:39:15 +0000</pubDate>
-      <description>Screaming Frog SEO Spider richtig nutzen: Installation, Crawl-Einstellungen, die wichtigsten Reports und wie du technische SEO-Fehler schnell findest.</description>
-      <category>Tech-SEO</category>
     </item>
   </channel>
 </rss>
