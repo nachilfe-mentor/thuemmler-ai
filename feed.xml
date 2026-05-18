@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Sun, 17 May 2026 04:49:22 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 18 May 2026 00:25:24 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Google AI Overviews und SEO 2026: Wie du in der KI-Suche sichtbar bleibst</title>
+      <link>https://shift07.ai/blog/google-ai-overviews-seo-2026.html</link>
+      <guid>https://shift07.ai/blog/google-ai-overviews-seo-2026.html</guid>
+      <pubDate>Mon, 18 May 2026 00:24:53 +0000</pubDate>
+      <description>Google AI Overviews verändern die Suche grundlegend. Erfahre, wie du deine Website für AI Overviews optimierst und in der KI-gesteuerten Suche 2026 sichtbar bleibst.</description>
+      <category>AI-SEO</category>
+    </item>
     <item>
       <title>Web Workers für JavaScript-Performance: Hauptthread entlasten</title>
       <link>https://shift07.ai/blog/web-workers-javascript-performance-hauptthread-seo.html</link>
@@ -157,14 +165,6 @@
       <guid>https://shift07.ai/blog/google-analytics-4-einrichten-anleitung.html</guid>
       <pubDate>Thu, 14 May 2026 14:24:02 +0000</pubDate>
       <description>Google Analytics 4 einrichten in 6 Schritten: Konto anlegen, Tag einbauen, Conversions definieren und mit der Search Console verknüpfen – die komplette Anleitung für 2026.</description>
-      <category>SEO Grundlagen</category>
-    </item>
-    <item>
-      <title>Mobile Optimierung für Websites: Die komplette Checkliste 2026</title>
-      <link>https://shift07.ai/blog/mobile-optimierung-website-checkliste.html</link>
-      <guid>https://shift07.ai/blog/mobile-optimierung-website-checkliste.html</guid>
-      <pubDate>Thu, 14 May 2026 14:21:07 +0000</pubDate>
-      <description>Mobile Optimierung für deine Website: Checkliste mit 15 konkreten Schritten für Responsive Design, Ladezeit, Touch-Bedienung und Mobile-First SEO.</description>
       <category>SEO Grundlagen</category>
     </item>
   </channel>
