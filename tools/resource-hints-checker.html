@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K1S1RXBDS8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K1S1RXBDS8');
+    </script>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8475857002943858" crossorigin="anonymous"></script>
+    <title>Resource-Hints-Checker – preload, prefetch & preconnect kostenlos prüfen | Shift07</title>
+    <meta name="description" content="Prüfe kostenlos ob deine Website Resource Hints (preload, prefetch, preconnect) korrekt einsetzt. Verbessere LCP und Ladezeit durch optimierte Browser-Hinweise.">
+    <meta name="keywords" content="resource hints checker, preload prüfen, prefetch checker, preconnect testen, ladezeit optimieren, lcp verbessern">
+    <meta name="author" content="Thümmler AI GmbH">
+    <link rel="icon" type="image/png" href="/logo.png">
+    <link rel="canonical" href="https://shift07.ai/tools/resource-hints-checker.html">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Resource-Hints-Checker – preload, prefetch & preconnect kostenlos prüfen">
+    <meta property="og:description" content="Prüfe kostenlos ob deine Website Resource Hints (preload, prefetch, preconnect) korrekt einsetzt. Verbessere LCP und Ladezeit durch optimierte Browser-Hinweise.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://shift07.ai/tools/resource-hints-checker.html">
+    <meta property="og:image" content="https://shift07.ai/tools/images/resource-hints-checker.png">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="Shift07">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Resource-Hints-Checker – preload, prefetch & preconnect kostenlos prüfen">
+    <meta name="twitter:description" content="Prüfe kostenlos ob deine Website Resource Hints (preload, prefetch, preconnect) korrekt einsetzt.">
+    <meta name="twitter:image" content="https://shift07.ai/tools/images/resource-hints-checker.png">
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Resource-Hints-Checker",
+      "description": "Prüfe kostenlos ob deine Website Resource Hints (preload, prefetch, preconnect) korrekt einsetzt. Verbessere LCP und Ladezeit durch optimierte Browser-Hinweise.",
+      "url": "https://shift07.ai/tools/resource-hints-checker.html",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR"
+      },
+      "provider": {
+        "@type": "Organization",
+        "name": "Thümmler AI GmbH",
+        "url": "https://shift07.ai"
+      }
+    }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-inter bg-gray-950 text-gray-100 min-h-screen">
+
+<!-- Navigation -->
+<nav class="border-b border-white/10 bg-gray-900/80 backdrop-blur-sm sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+            <a href="/" class="flex items-center space-x-2">
+                <img src="/logo.png" alt="Shift07" class="h-8 w-8">
+                <span class="font-bold text-xl text-white">Shift07</span>
+            </a>
+            <div class="hidden md:flex items-center space-x-6">
+                <a href="/" class="text-gray-400 hover:text-white font-medium">SEO-Analyse</a>
+                <a href="/tools/" class="text-blue-400 font-medium">Tools</a>
+                <a href="/blog/" class="text-gray-400 hover:text-white font-medium">Blog</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero -->
+<div class="bg-gradient-to-b from-gray-900 to-gray-950 border-b border-white/10">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 text-center">
+        <div class="inline-flex items-center gap-2 bg-emerald-500/10 border border-emerald-500/20 rounded-full px-4 py-2 mb-6">
+            <span class="text-emerald-400 text-sm font-semibold">Performance SEO</span>
+        </div>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-4">
+            Resource-Hints-Checker
+        </h1>
+        <p class="text-xl text-gray-400 max-w-2xl mx-auto">
+            Prüfe ob deine Website <code class="bg-white/10 px-1.5 py-0.5 rounded text-emerald-300">preload</code>, <code class="bg-white/10 px-1.5 py-0.5 rounded text-blue-300">prefetch</code> und <code class="bg-white/10 px-1.5 py-0.5 rounded text-violet-300">preconnect</code> korrekt einsetzt — kostenlos und ohne Anmeldung.
+        </p>
+    </div>
+</div>
+
+<!-- Tool -->
+<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+
+    <!-- Input -->
+    <div class="bg-gray-900 border border-white/10 rounded-2xl p-6 mb-6">
+        <label class="block text-sm font-semibold text-gray-300 mb-2">Website-URL prüfen</label>
+        <div class="flex gap-3">
+            <input type="url" id="urlInput" placeholder="https://example.de"
+                class="flex-1 bg-gray-800 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-emerald-500/50 focus:ring-1 focus:ring-emerald-500/30">
+            <button onclick="analyzeURL()" id="analyzeBtn"
+                class="bg-emerald-600 hover:bg-emerald-500 text-white font-semibold px-6 py-3 rounded-xl transition-colors whitespace-nowrap">
+                Prüfen
+            </button>
+        </div>
+        <p class="text-xs text-gray-500 mt-2">Gibt HTML der URL ab und analysiert alle &lt;link rel="..."&gt; Elemente im &lt;head&gt;</p>
+    </div>
+
+    <!-- Loading -->
+    <div id="loadingState" class="hidden text-center py-12">
+        <div class="inline-flex items-center gap-3 text-gray-400">
+            <svg class="animate-spin w-5 h-5 text-emerald-500" fill="none" viewBox="0 0 24 24">
+                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"></path>
+            </svg>
+            <span>Analysiere Resource Hints...</span>
+        </div>
+    </div>
+
+    <!-- Error -->
+    <div id="errorState" class="hidden bg-red-900/30 border border-red-500/30 rounded-2xl p-6 mb-6">
+        <p class="text-red-400 font-semibold">Fehler beim Abrufen der URL</p>
+        <p id="errorMsg" class="text-red-300 text-sm mt-1"></p>
+        <p class="text-gray-400 text-sm mt-2">Mögliche Ursachen: CORS, die Seite blockiert externe Anfragen, oder die URL ist nicht erreichbar.</p>
+    </div>
+
+    <!-- Results -->
+    <div id="results" class="hidden space-y-6">
+
+        <!-- Summary -->
+        <div class="bg-gray-900 border border-white/10 rounded-2xl p-6">
+            <h2 class="font-bold text-white text-lg mb-4">Übersicht für <span id="checkedUrl" class="text-emerald-400"></span></h2>
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4" id="summaryCards">
+            </div>
+        </div>
+
+        <!-- Score + Empfehlungen -->
+        <div id="scoreBlock" class="bg-gray-900 border border-white/10 rounded-2xl p-6">
+        </div>
+
+        <!-- Gefundene Hints -->
+        <div id="hintsFound" class="bg-gray-900 border border-white/10 rounded-2xl p-6">
+            <h2 class="font-bold text-white text-lg mb-4">Gefundene Resource Hints</h2>
+            <div id="hintsList"></div>
+        </div>
+
+        <!-- Fehlende Hints -->
+        <div id="missingSection" class="hidden bg-gray-900 border border-yellow-500/20 rounded-2xl p-6">
+            <h2 class="font-bold text-yellow-400 text-lg mb-4">⚠️ Mögliche Optimierungen</h2>
+            <div id="missingList" class="space-y-3"></div>
+        </div>
+
+        <!-- Fehler in Hints -->
+        <div id="errorsSection" class="hidden bg-gray-900 border border-red-500/20 rounded-2xl p-6">
+            <h2 class="font-bold text-red-400 text-lg mb-4">❌ Probleme gefunden</h2>
+            <div id="errorsList" class="space-y-3"></div>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- Info Section -->
+<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+        <div class="bg-gray-900 border border-white/10 rounded-2xl p-5">
+            <div class="text-2xl mb-3">⚡</div>
+            <h3 class="font-bold text-white mb-2">preload</h3>
+            <p class="text-gray-400 text-sm">Lädt kritische Ressourcen (Schriften, Hero-Bilder, kritisches CSS) früher und mit hoher Priorität. Pflicht: <code class="bg-white/10 px-1 rounded text-emerald-300">as=""</code> Attribut!</p>
+        </div>
+        <div class="bg-gray-900 border border-white/10 rounded-2xl p-5">
+            <div class="text-2xl mb-3">🔄</div>
+            <h3 class="font-bold text-white mb-2">prefetch</h3>
+            <p class="text-gray-400 text-sm">Lädt Ressourcen für die nächste wahrscheinliche Seite im Hintergrund. Ideal für Links auf der aktuellen Seite, die häufig als nächstes besucht werden.</p>
+        </div>
+        <div class="bg-gray-900 border border-white/10 rounded-2xl p-5">
+            <div class="text-2xl mb-3">🔗</div>
+            <h3 class="font-bold text-white mb-2">preconnect</h3>
+            <p class="text-gray-400 text-sm">Baut DNS, TCP und TLS für externe Domains vorab auf. Spart 100–400ms bei externen Ressourcen. Maximal 4–6 gleichzeitig nutzen.</p>
+        </div>
+    </div>
+
+    <!-- Blog Link -->
+    <div class="bg-gradient-to-r from-emerald-900/30 to-blue-900/30 border border-emerald-500/20 rounded-2xl p-6 flex flex-col sm:flex-row items-start sm:items-center gap-4">
+        <div class="flex-1">
+            <h3 class="font-bold text-white mb-1">Resource Hints richtig einsetzen</h3>
+            <p class="text-gray-400 text-sm">Lerne in unserem Guide, wie preload, prefetch und preconnect deine Ladezeiten und Core Web Vitals verbessern.</p>
+        </div>
+        <a href="/blog/resource-hints-preload-prefetch-preconnect-seo.html"
+           class="flex-shrink-0 bg-emerald-600 hover:bg-emerald-500 text-white font-semibold px-5 py-2.5 rounded-xl text-sm transition-colors">
+            Zum Leitfaden →
+        </a>
+    </div>
+
+    <!-- Related Tools -->
+    <div class="mt-10">
+        <h2 class="text-xl font-bold text-white mb-4">Verwandte Tools</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <a href="/tools/render-blocking-checker.html" class="bg-gray-900 border border-white/10 rounded-xl p-4 hover:border-emerald-500/30 transition-colors">
+                <p class="font-semibold text-white text-sm">Render-Blocking-Checker</p>
+                <p class="text-gray-500 text-xs mt-1">CSS & JS Blocker prüfen</p>
+            </a>
+            <a href="/tools/page-speed-estimator.html" class="bg-gray-900 border border-white/10 rounded-xl p-4 hover:border-emerald-500/30 transition-colors">
+                <p class="font-semibold text-white text-sm">Page-Speed-Estimator</p>
+                <p class="text-gray-500 text-xs mt-1">Ladezeit-Score prüfen</p>
+            </a>
+            <a href="/tools/core-web-vitals-checker.html" class="bg-gray-900 border border-white/10 rounded-xl p-4 hover:border-emerald-500/30 transition-colors">
+                <p class="font-semibold text-white text-sm">Core Web Vitals Checker</p>
+                <p class="text-gray-500 text-xs mt-1">LCP, CLS, INP messen</p>
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="bg-gray-900 border-t border-white/10 text-gray-400">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div class="col-span-2 md:col-span-1">
+                <div class="flex items-center space-x-2 mb-4">
+                    <img src="/logo.png" alt="Shift07" class="h-8 w-8">
+                    <span class="font-bold text-white text-lg">Shift07</span>
+                </div>
+                <p class="text-sm">Kostenlose SEO-Tools für deine Website.</p>
+            </div>
+            <div>
+                <h4 class="text-white font-semibold mb-3">Tools</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="/tools/" class="hover:text-white transition-colors">Alle Tools</a></li>
+                    <li><a href="/tools/lazy-load-checker.html" class="hover:text-white transition-colors">Lazy-Load-Checker</a></li>
+                    <li><a href="/tools/css-minifizierungs-checker.html" class="hover:text-white transition-colors">CSS-Minifizierung</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-semibold mb-3">Blog</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="/blog/" class="hover:text-white transition-colors">Alle Artikel</a></li>
+                    <li><a href="/blog/resource-hints-preload-prefetch-preconnect-seo.html" class="hover:text-white transition-colors">Resource Hints Guide</a></li>
+                    <li><a href="/blog/core-web-vitals-erklaert.html" class="hover:text-white transition-colors">Core Web Vitals</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-semibold mb-3">Unternehmen</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="/impressum.html" class="hover:text-white transition-colors">Impressum</a></li>
+                    <li><a href="/datenschutz.html" class="hover:text-white transition-colors">Datenschutz</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="border-t border-white/10 mt-8 pt-8 text-sm text-center">
+            © 2026 Thümmler AI GmbH · Leonardo-da-Vinci-Straße 15 · 14467 Potsdam
+        </div>
+    </div>
+</footer>
+
+<script>
+const PROXY = 'https://api.allorigins.win/get?url=';
+
+async function analyzeURL() {
+    const url = document.getElementById('urlInput').value.trim();
+    if (!url) return;
+
+    let normalized = url;
+    if (!normalized.startsWith('http://') && !normalized.startsWith('https://')) {
+        normalized = 'https://' + normalized;
+    }
+
+    document.getElementById('results').classList.add('hidden');
+    document.getElementById('errorState').classList.add('hidden');
+    document.getElementById('loadingState').classList.remove('hidden');
+    document.getElementById('analyzeBtn').disabled = true;
+
+    try {
+        const resp = await fetch(PROXY + encodeURIComponent(normalized), { signal: AbortSignal.timeout(15000) });
+        if (!resp.ok) throw new Error('HTTP ' + resp.status);
+        const data = await resp.json();
+        const html = data.contents;
+        parseAndShow(normalized, html);
+    } catch (e) {
+        document.getElementById('loadingState').classList.add('hidden');
+        document.getElementById('errorState').classList.remove('hidden');
+        document.getElementById('errorMsg').textContent = e.message || 'Unbekannter Fehler';
+    } finally {
+        document.getElementById('analyzeBtn').disabled = false;
+    }
+}
+
+function parseAndShow(url, html) {
+    document.getElementById('loadingState').classList.add('hidden');
+
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(html, 'text/html');
+    const links = Array.from(doc.querySelectorAll('link[rel]'));
+
+    // Collect resource hints
+    const preloads = [];
+    const prefetches = [];
+    const preconnects = [];
+    const dnsPrefetches = [];
+    const errors = [];
+    const suggestions = [];
+
+    links.forEach(link => {
+        const rel = link.getAttribute('rel') || '';
+        const href = link.getAttribute('href') || '';
+        const as = link.getAttribute('as') || '';
+        const crossorigin = link.getAttribute('crossorigin');
+        const type = link.getAttribute('type') || '';
+
+        if (rel === 'preload') {
+            const item = { href, as, crossorigin, type };
+            // Check for missing "as" attribute
+            if (!as) {
+                errors.push({
+                    type: 'preload',
+                    href,
+                    issue: 'preload ohne as="" Attribut',
+                    detail: 'Ohne as="" ignoriert der Browser den preload-Hint oder lädt die Ressource doppelt. Pflicht: as="script", as="style", as="font", as="image" etc.',
+                    severity: 'error'
+                });
+                item.hasError = true;
+            }
+            // Fonts need crossorigin
+            if (as === 'font' && crossorigin === null) {
+                errors.push({
+                    type: 'preload',
+                    href,
+                    issue: 'Font-preload ohne crossorigin',
+                    detail: 'Fonts via preload müssen crossorigin="anonymous" haben, sonst wird die Schrift doppelt geladen (einmal für preload, einmal für @font-face).',
+                    severity: 'warning'
+                });
+                item.fontWarning = true;
+            }
+            preloads.push(item);
+        } else if (rel === 'prefetch') {
+            prefetches.push({ href, as, crossorigin });
+        } else if (rel === 'preconnect') {
+            const item = { href, crossorigin };
+            // Check if crossorigin is set for third-party fonts/CDNs
+            if (href.includes('fonts.gstatic') && crossorigin === null) {
+                errors.push({
+                    type: 'preconnect',
+                    href,
+                    issue: 'fonts.gstatic.com preconnect ohne crossorigin',
+                    detail: 'Google Fonts Schriften werden über CORS geladen. Ohne crossorigin="anonymous" ist der preconnect-Hint wirkungslos.',
+                    severity: 'warning'
+                });
+                item.hasError = true;
+            }
+            preconnects.push(item);
+        } else if (rel === 'dns-prefetch') {
+            dnsPrefetches.push({ href });
+        }
+    });
+
+    // Suggestions
+    // Too many preloads
+    if (preloads.length > 6) {
+        suggestions.push({
+            title: `${preloads.length} preload-Hints — das ist zu viel`,
+            detail: 'Mehr als 4–6 preloads konkurrieren um Bandbreite und können LCP verschlechtern. Reduziere auf die wirklich kritischen Ressourcen: Hero-Bild, Primärschrift, kritisches CSS.'
+        });
+    }
+
+    // Check if fonts.googleapis.com has preconnect
+    const hasGFontsLink = html.includes('fonts.googleapis.com');
+    const hasGFontsPreconnect = preconnects.some(p => p.href.includes('fonts.googleapis.com'));
+    const hasGStatic = html.includes('fonts.gstatic.com');
+    const hasGStaticPreconnect = preconnects.some(p => p.href.includes('fonts.gstatic.com'));
+
+    if (hasGFontsLink && !hasGFontsPreconnect) {
+        suggestions.push({
+            title: 'Google Fonts ohne preconnect zu fonts.googleapis.com',
+            detail: 'Füge <code>&lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;</code> hinzu, um den DNS/TCP-Aufbau zu Google Fonts vorab zu starten.',
+            code: '<link rel="preconnect" href="https://fonts.googleapis.com">'
+        });
+    }
+    if (hasGStatic && !hasGStaticPreconnect) {
+        suggestions.push({
+            title: 'Google Fonts ohne preconnect zu fonts.gstatic.com',
+            detail: 'Für Google Fonts werden Schriftdateien von fonts.gstatic.com geladen. Füge preconnect mit crossorigin hinzu.',
+            code: '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>'
+        });
+    }
+
+    // No resource hints at all
+    if (preloads.length === 0 && prefetches.length === 0 && preconnects.length === 0) {
+        suggestions.push({
+            title: 'Keine Resource Hints gefunden',
+            detail: 'Deine Website nutzt keine Resource Hints. Überprüfe ob du externe Schriften, kritische CSS-Dateien oder wichtige Bilder (Hero-Bild, LCP-Element) preloaden könntest.'
+        });
+    }
+
+    // No preload for potential LCP image
+    if (preloads.filter(p => p.as === 'image').length === 0) {
+        suggestions.push({
+            title: 'Kein preload für das LCP-Bild',
+            detail: 'Das größte sichtbare Element (LCP) ist häufig ein Bild. Lade es mit preload vor, um LCP zu verbessern.',
+            code: '<link rel="preload" as="image" href="/hero.jpg">'
+        });
+    }
+
+    // Show results
+    document.getElementById('checkedUrl').textContent = url;
+
+    // Summary cards
+    const cards = [
+        { label: 'preload', count: preloads.length, color: 'emerald' },
+        { label: 'prefetch', count: prefetches.length, color: 'blue' },
+        { label: 'preconnect', count: preconnects.length, color: 'violet' },
+        { label: 'dns-prefetch', count: dnsPrefetches.length, color: 'gray' }
+    ];
+    document.getElementById('summaryCards').innerHTML = cards.map(c => `
+        <div class="bg-gray-800 rounded-xl p-4 text-center">
+            <div class="text-2xl font-bold text-${c.color}-400">${c.count}</div>
+            <div class="text-xs text-gray-400 mt-1">${c.label}</div>
+        </div>
+    `).join('');
+
+    // Score
+    const totalHints = preloads.length + prefetches.length + preconnects.length;
+    const totalErrors = errors.length;
+    let score, scoreColor, scoreLabel;
+    if (totalErrors > 0 || totalHints === 0) {
+        score = totalErrors > 2 ? 'Schlecht' : 'Verbesserungsbedarf';
+        scoreColor = totalErrors > 0 ? 'red' : 'yellow';
+    } else if (totalHints >= 2 && totalErrors === 0 && suggestions.length <= 2) {
+        score = 'Gut';
+        scoreColor = 'green';
+    } else {
+        score = 'Okay';
+        scoreColor = 'yellow';
+    }
+
+    document.getElementById('scoreBlock').innerHTML = `
+        <div class="flex items-center gap-4">
+            <div class="w-16 h-16 rounded-2xl flex items-center justify-center text-2xl font-extrabold bg-${scoreColor}-500/20 text-${scoreColor}-400 flex-shrink-0">
+                ${totalErrors === 0 && totalHints >= 2 ? '✓' : totalErrors > 0 ? '!' : '~'}
+            </div>
+            <div>
+                <div class="text-lg font-bold text-white">Resource Hints: <span class="text-${scoreColor}-400">${score}</span></div>
+                <div class="text-gray-400 text-sm mt-1">${totalHints} Resource Hint${totalHints !== 1 ? 's' : ''} gefunden, ${totalErrors} Fehler${totalErrors !== 1 ? '' : ''}, ${suggestions.length} Empfehlung${suggestions.length !== 1 ? 'en' : ''}</div>
+            </div>
+        </div>
+    `;
+
+    // Hints list
+    const allHints = [
+        ...preloads.map(h => ({...h, relType: 'preload', color: 'emerald'})),
+        ...prefetches.map(h => ({...h, relType: 'prefetch', color: 'blue'})),
+        ...preconnects.map(h => ({...h, relType: 'preconnect', color: 'violet'})),
+        ...dnsPrefetches.map(h => ({...h, relType: 'dns-prefetch', color: 'gray'}))
+    ];
+
+    if (allHints.length === 0) {
+        document.getElementById('hintsList').innerHTML = '<p class="text-gray-500 text-sm">Keine Resource Hints im &lt;head&gt; gefunden.</p>';
+    } else {
+        document.getElementById('hintsList').innerHTML = `
+            <div class="space-y-2">
+                ${allHints.map(h => `
+                    <div class="bg-gray-800 rounded-xl p-4 flex flex-wrap items-start gap-3">
+                        <span class="flex-shrink-0 text-xs font-bold px-2.5 py-1 rounded-full bg-${h.color}-500/20 text-${h.color}-400">${h.relType}</span>
+                        <div class="flex-1 min-w-0">
+                            <p class="text-white text-sm font-mono truncate">${escHtml(h.href)}</p>
+                            <p class="text-gray-500 text-xs mt-0.5">
+                                ${h.as ? `as="${escHtml(h.as)}"` : ''}
+                                ${h.crossorigin !== undefined && h.crossorigin !== null ? ` crossorigin="${h.crossorigin || 'anonymous'}"` : ''}
+                                ${h.hasError ? '<span class="text-red-400 ml-1">⚠ Fehler</span>' : ''}
+                                ${h.fontWarning ? '<span class="text-yellow-400 ml-1">⚠ crossorigin fehlt</span>' : ''}
+                            </p>
+                        </div>
+                    </div>
+                `).join('')}
+            </div>
+        `;
+    }
+
+    // Errors
+    if (errors.length > 0) {
+        document.getElementById('errorsSection').classList.remove('hidden');
+        document.getElementById('errorsList').innerHTML = errors.map(e => `
+            <div class="bg-red-900/20 border border-red-500/20 rounded-xl p-4">
+                <div class="flex items-start gap-2">
+                    <span class="text-red-400 font-bold text-sm flex-shrink-0">${e.severity === 'error' ? '❌' : '⚠️'}</span>
+                    <div>
+                        <p class="font-semibold text-red-300 text-sm">${escHtml(e.issue)}</p>
+                        <p class="text-gray-400 text-xs mt-1 font-mono text-red-200/60">${escHtml(e.href)}</p>
+                        <p class="text-gray-400 text-sm mt-2">${e.detail}</p>
+                    </div>
+                </div>
+            </div>
+        `).join('');
+    } else {
+        document.getElementById('errorsSection').classList.add('hidden');
+    }
+
+    // Suggestions
+    if (suggestions.length > 0) {
+        document.getElementById('missingSection').classList.remove('hidden');
+        document.getElementById('missingList').innerHTML = suggestions.map(s => `
+            <div class="bg-yellow-900/20 border border-yellow-500/20 rounded-xl p-4">
+                <p class="font-semibold text-yellow-300 text-sm">💡 ${escHtml(s.title)}</p>
+                <p class="text-gray-400 text-sm mt-1">${s.detail}</p>
+                ${s.code ? `<pre class="mt-2 bg-gray-800 rounded-lg p-2 text-xs text-emerald-300 overflow-x-auto">${escHtml(s.code)}</pre>` : ''}
+            </div>
+        `).join('');
+    } else {
+        document.getElementById('missingSection').classList.add('hidden');
+    }
+
+    document.getElementById('results').classList.remove('hidden');
+}
+
+function escHtml(str) {
+    return String(str).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+document.getElementById('urlInput').addEventListener('keydown', function(e) {
+    if (e.key === 'Enter') analyzeURL();
+});
+</script>
+
+</body>
+</html>
