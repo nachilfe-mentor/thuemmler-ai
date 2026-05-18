@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Mon, 18 May 2026 00:28:26 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 18 May 2026 00:32:08 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>GEO – Generative Engine Optimization: SEO für KI-Antworten 2026</title>
+      <link>https://shift07.ai/blog/geo-generative-engine-optimization-ki-suche.html</link>
+      <guid>https://shift07.ai/blog/geo-generative-engine-optimization-ki-suche.html</guid>
+      <pubDate>Mon, 18 May 2026 00:31:40 +0000</pubDate>
+      <description>GEO (Generative Engine Optimization) ist die Weiterentwicklung von SEO für KI-Suchmaschinen. Erfahre wie du ChatGPT, Perplexity und Google AI Overviews als Quelle gewinnst.</description>
+      <category>AI-SEO</category>
+    </item>
     <item>
       <title>Google AI Overviews und SEO 2026: Wie du in der KI-Suche sichtbar bleibst</title>
       <link>https://shift07.ai/blog/google-ai-overviews-seo-2026.html</link>
@@ -158,14 +166,6 @@
       <pubDate>Fri, 15 May 2026 01:39:15 +0000</pubDate>
       <description>Screaming Frog SEO Spider richtig nutzen: Installation, Crawl-Einstellungen, die wichtigsten Reports und wie du technische SEO-Fehler schnell findest.</description>
       <category>Tech-SEO</category>
-    </item>
-    <item>
-      <title>Google Analytics 4 einrichten: Schritt-für-Schritt-Anleitung 2026</title>
-      <link>https://shift07.ai/blog/google-analytics-4-einrichten-anleitung.html</link>
-      <guid>https://shift07.ai/blog/google-analytics-4-einrichten-anleitung.html</guid>
-      <pubDate>Thu, 14 May 2026 14:24:02 +0000</pubDate>
-      <description>Google Analytics 4 einrichten in 6 Schritten: Konto anlegen, Tag einbauen, Conversions definieren und mit der Search Console verknüpfen – die komplette Anleitung für 2026.</description>
-      <category>SEO Grundlagen</category>
     </item>
   </channel>
 </rss>
