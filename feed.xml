@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Mon, 18 May 2026 02:14:35 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 18 May 2026 03:48:49 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>SGE und E-Commerce: Wie KI-Suche den Online-Handel verändert 2026</title>
+      <link>https://shift07.ai/blog/sge-ecommerce-ki-suche-online-handel.html</link>
+      <guid>https://shift07.ai/blog/sge-ecommerce-ki-suche-online-handel.html</guid>
+      <pubDate>Mon, 18 May 2026 03:48:08 +0000</pubDate>
+      <description>Google SGE und KI-Suche verändern den E-Commerce grundlegend. Wie Online-Shops sichtbar bleiben, Product Schema optimieren und KI-Empfehlungen nutzen – der vollständige Leitfaden.</description>
+      <category>E-Commerce SEO</category>
+    </item>
     <item>
       <title>AI Search Intent: Suchabsicht im KI-Zeitalter verstehen und optimieren 2026</title>
       <link>https://shift07.ai/blog/ai-search-intent-suchabsicht-ki-zeitalter.html</link>
@@ -158,14 +166,6 @@
       <pubDate>Fri, 15 May 2026 03:28:22 +0000</pubDate>
       <description>Zu große Bilder sind der häufigste Grund für schlechte Core Web Vitals. So reduzierst du Bild-Dateigrößen mit WebP, AVIF und Lazy Loading — und verbesserst deinen LCP-Score.</description>
       <category>Performance</category>
-    </item>
-    <item>
-      <title>Favicon und Touch-Icons für SEO: Die vollständige Einbindungsanleitung 2026</title>
-      <link>https://shift07.ai/blog/favicon-touch-icons-seo.html</link>
-      <guid>https://shift07.ai/blog/favicon-touch-icons-seo.html</guid>
-      <pubDate>Fri, 15 May 2026 03:21:11 +0000</pubDate>
-      <description>Favicon und Touch-Icons richtig einbinden: ICO, PNG, SVG, Apple-Touch-Icon, Web-App-Manifest. So stärkst du Branding, CTR und Mobile SEO mit wenigen Zeilen Code.</description>
-      <category>Tech-SEO</category>
     </item>
   </channel>
 </rss>
