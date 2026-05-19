@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K1S1RXBDS8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K1S1RXBDS8');
+    </script>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8475857002943858" crossorigin="anonymous"></script>
+    <title>CSS-Spezifitäts-Rechner — Selektor-Gewicht kostenlos berechnen | Shift07</title>
+    <meta name="description" content="CSS-Spezifität sofort berechnen: Selektor eingeben und Spezifitätswert (a,b,c) mit Erklärung erhalten. Kostenloser CSS-Spezifitäts-Rechner für Entwickler und SEO.">
+    <meta name="keywords" content="CSS Spezifität Rechner, CSS Spezifität berechnen, CSS Selektor Gewicht, CSS specificity calculator, CSS Kaskade verstehen">
+    <meta name="author" content="Thümmler AI GmbH">
+    <link rel="icon" type="image/png" href="/logo.png">
+    <link rel="canonical" href="https://shift07.ai/tools/css-spezifitaet-rechner.html">
+    <link rel="alternate" type="application/rss+xml" title="Shift07 Blog" href="https://shift07.ai/feed.xml">
+    <!-- Open Graph -->
+    <meta property="og:title" content="CSS-Spezifitäts-Rechner — Selektor-Gewicht kostenlos berechnen">
+    <meta property="og:description" content="CSS-Spezifität sofort berechnen: Selektor eingeben und Spezifitätswert (a,b,c) mit Erklärung erhalten. Kostenloser CSS-Spezifitäts-Rechner.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://shift07.ai/tools/css-spezifitaet-rechner.html">
+    <meta property="og:image" content="https://shift07.ai/tools/images/css-spezifitaet-rechner.png">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="Shift07">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="CSS-Spezifitäts-Rechner — Selektor-Gewicht kostenlos berechnen">
+    <meta name="twitter:description" content="CSS-Spezifität sofort berechnen: Selektor eingeben und Spezifitätswert mit Erklärung erhalten.">
+    <meta name="twitter:image" content="https://shift07.ai/tools/images/css-spezifitaet-rechner.png">
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "CSS-Spezifitäts-Rechner",
+      "description": "CSS-Spezifität sofort berechnen: Selektor eingeben und Spezifitätswert (a,b,c) mit Erklärung erhalten. Kostenloser CSS-Spezifitäts-Rechner für Entwickler und SEO.",
+      "url": "https://shift07.ai/tools/css-spezifitaet-rechner.html",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR"
+      },
+      "provider": {
+        "@type": "Organization",
+        "name": "Shift07",
+        "url": "https://shift07.ai"
+      }
+    }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+                        'mono': ['JetBrains Mono', 'ui-monospace', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', system-ui, sans-serif; }
+        code, .mono { font-family: 'JetBrains Mono', ui-monospace, monospace; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: rgba(15, 23, 42, 0.5); }
+        ::-webkit-scrollbar-thumb { background: rgba(59, 130, 246, 0.5); border-radius: 4px; }
+        html { scroll-behavior: smooth; }
+        .segment-a { color: #f87171; }
+        .segment-b { color: #fb923c; }
+        .segment-c { color: #4ade80; }
+        .badge-a { background: rgba(248,113,113,0.15); border: 1px solid rgba(248,113,113,0.4); color: #f87171; }
+        .badge-b { background: rgba(251,146,60,0.15); border: 1px solid rgba(251,146,60,0.4); color: #fb923c; }
+        .badge-c { background: rgba(74,222,128,0.15); border: 1px solid rgba(74,222,128,0.4); color: #4ade80; }
+        .token-inline { display: inline-block; padding: 1px 6px; border-radius: 4px; font-size: 0.8rem; margin: 1px; }
+        .selector-input { font-family: 'JetBrains Mono', ui-monospace, monospace; }
+        .highlight-a { background: rgba(248,113,113,0.1); border-left: 3px solid #f87171; }
+        .highlight-b { background: rgba(251,146,60,0.1); border-left: 3px solid #fb923c; }
+        .highlight-c { background: rgba(74,222,128,0.1); border-left: 3px solid #4ade80; }
+    </style>
+</head>
+<body class="bg-slate-900 text-white min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-slate-900/80 backdrop-blur-xl border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <a href="/" class="flex items-center gap-2">
+                    <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                    <span class="text-xl font-bold text-white">Shift07</span>
+                </a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="/" class="text-gray-300 hover:text-white transition-colors">SEO-Tool</a>
+                    <a href="/blog/" class="text-gray-300 hover:text-white transition-colors">Blog</a>
+                    <a href="/tools/" class="text-white font-medium border-b-2 border-blue-500 pb-0.5">Tools</a>
+                    <a href="/app/#/login" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-5 py-2 rounded-lg font-medium transition-all">Anmelden</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-gray-300 hover:text-white">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900/95 border-b border-white/10">
+            <div class="px-4 py-3 space-y-2">
+                <a href="/" class="block py-2 text-gray-300 hover:text-white">SEO-Tool</a>
+                <a href="/blog/" class="block py-2 text-gray-300 hover:text-white">Blog</a>
+                <a href="/tools/" class="block py-2 text-white font-medium">Tools</a>
+                <a href="/app/#/login" class="block py-2 text-blue-400 hover:text-blue-300">Anmelden</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="pt-24 pb-10 px-4">
+        <div class="max-w-4xl mx-auto text-center">
+            <div class="inline-flex items-center gap-2 text-sm text-blue-400 font-semibold mb-4 px-4 py-1.5 bg-blue-500/10 rounded-full border border-blue-500/20">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+                CSS-Entwicklungs-Tool
+            </div>
+            <h1 class="text-3xl md:text-5xl font-extrabold text-white mb-4">CSS-Spezifitäts-Rechner</h1>
+            <p class="text-lg text-gray-400 max-w-2xl mx-auto">Selektor eingeben — Spezifitätswert (a,b,c) sofort berechnen. Mit Token-Aufschlüsselung und Vergleichsfunktion für mehrere Selektoren.</p>
+        </div>
+    </section>
+
+    <!-- Tool -->
+    <section class="px-4 pb-16">
+        <div class="max-w-4xl mx-auto">
+
+            <!-- Main Calculator -->
+            <div class="bg-slate-800/50 border border-white/10 rounded-2xl p-6 md:p-8 mb-8">
+                <h2 class="text-xl font-bold text-white mb-6">Spezifität berechnen</h2>
+
+                <!-- Input -->
+                <div class="mb-6">
+                    <label class="block text-sm font-medium text-gray-300 mb-2">CSS-Selektor eingeben</label>
+                    <div class="flex gap-3">
+                        <input
+                            type="text"
+                            id="selectorInput"
+                            placeholder="z.B. #nav .item:hover > span"
+                            class="selector-input flex-1 bg-slate-900 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 text-base"
+                        >
+                        <button
+                            onclick="calculate()"
+                            class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-6 py-3 rounded-xl font-semibold transition-all whitespace-nowrap"
+                        >
+                            Berechnen
+                        </button>
+                    </div>
+                    <p class="text-xs text-gray-500 mt-2">Komplexe Selektoren werden vollständig analysiert. <code class="text-gray-400">!important</code> wird erkannt aber nicht berechnet (überschreibt immer).</p>
+                </div>
+
+                <!-- Result -->
+                <div id="result" class="hidden">
+                    <!-- Score Display -->
+                    <div class="bg-slate-900/60 rounded-xl p-6 mb-6 border border-white/5">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider">Spezifitätswert</h3>
+                            <span id="importantBadge" class="hidden text-xs font-bold px-3 py-1 bg-red-500/20 text-red-400 border border-red-500/30 rounded-full">!important erkannt</span>
+                        </div>
+                        <div class="flex items-end gap-6 mb-4">
+                            <div class="text-center">
+                                <div id="scoreA" class="text-4xl font-extrabold font-mono segment-a">0</div>
+                                <div class="text-xs text-gray-500 mt-1">IDs (a)</div>
+                            </div>
+                            <div class="text-2xl text-gray-600 mb-1">,</div>
+                            <div class="text-center">
+                                <div id="scoreB" class="text-4xl font-extrabold font-mono segment-b">0</div>
+                                <div class="text-xs text-gray-500 mt-1">Klassen (b)</div>
+                            </div>
+                            <div class="text-2xl text-gray-600 mb-1">,</div>
+                            <div class="text-center">
+                                <div id="scoreC" class="text-4xl font-extrabold font-mono segment-c">0</div>
+                                <div class="text-xs text-gray-500 mt-1">Elemente (c)</div>
+                            </div>
+                            <div class="ml-auto text-right">
+                                <div id="scoreTotal" class="text-3xl font-bold text-white font-mono">0</div>
+                                <div class="text-xs text-gray-500 mt-1">Gesamt (gewichtet)</div>
+                            </div>
+                        </div>
+                        <!-- Visual Bar -->
+                        <div class="flex gap-1 h-3 rounded-full overflow-hidden bg-slate-800">
+                            <div id="barA" class="h-full bg-red-400 transition-all duration-500" style="width:0%"></div>
+                            <div id="barB" class="h-full bg-orange-400 transition-all duration-500" style="width:0%"></div>
+                            <div id="barC" class="h-full bg-green-400 transition-all duration-500" style="width:0%"></div>
+                        </div>
+                    </div>
+
+                    <!-- Token Breakdown -->
+                    <div id="tokenBreakdown" class="mb-6">
+                        <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3">Token-Aufschlüsselung</h3>
+                        <div id="tokenList" class="space-y-2"></div>
+                    </div>
+
+                    <!-- Explanation -->
+                    <div id="explanation" class="bg-blue-500/5 border border-blue-500/20 rounded-xl p-4">
+                        <h3 class="text-sm font-semibold text-blue-400 mb-2">Was bedeutet das?</h3>
+                        <p id="explanationText" class="text-sm text-gray-300 leading-relaxed"></p>
+                    </div>
+                </div>
+
+                <!-- Examples -->
+                <div id="examples" class="mt-6">
+                    <h3 class="text-sm font-medium text-gray-400 mb-3">Beispiele zum Ausprobieren:</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <button onclick="tryExample('#nav')" class="text-xs px-3 py-1.5 bg-slate-700 hover:bg-slate-600 text-gray-300 rounded-lg transition-colors font-mono">#nav</button>
+                        <button onclick="tryExample('.menu .item')" class="text-xs px-3 py-1.5 bg-slate-700 hover:bg-slate-600 text-gray-300 rounded-lg transition-colors font-mono">.menu .item</button>
+                        <button onclick="tryExample('#header nav.active > a:hover')" class="text-xs px-3 py-1.5 bg-slate-700 hover:bg-slate-600 text-gray-300 rounded-lg transition-colors font-mono">#header nav.active > a:hover</button>
+                        <button onclick="tryExample('div p span')" class="text-xs px-3 py-1.5 bg-slate-700 hover:bg-slate-600 text-gray-300 rounded-lg transition-colors font-mono">div p span</button>
+                        <button onclick="tryExample('[data-active]:not(.disabled)')" class="text-xs px-3 py-1.5 bg-slate-700 hover:bg-slate-600 text-gray-300 rounded-lg transition-colors font-mono">[data-active]:not(.disabled)</button>
+                        <button onclick="tryExample('ul li:nth-child(2n+1) a.link')" class="text-xs px-3 py-1.5 bg-slate-700 hover:bg-slate-600 text-gray-300 rounded-lg transition-colors font-mono">ul li:nth-child(2n+1) a.link</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Comparator -->
+            <div class="bg-slate-800/50 border border-white/10 rounded-2xl p-6 md:p-8 mb-8">
+                <h2 class="text-xl font-bold text-white mb-2">Selektoren vergleichen</h2>
+                <p class="text-gray-400 text-sm mb-6">Bis zu 4 Selektoren gleichzeitig vergleichen — welcher gewinnt?</p>
+
+                <div id="compareInputs" class="space-y-3 mb-4">
+                    <div class="flex gap-2">
+                        <input type="text" placeholder="#id .class element" class="selector-input flex-1 bg-slate-900 border border-white/10 rounded-xl px-4 py-2.5 text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 text-sm compare-input">
+                    </div>
+                    <div class="flex gap-2">
+                        <input type="text" placeholder=".class:hover span" class="selector-input flex-1 bg-slate-900 border border-white/10 rounded-xl px-4 py-2.5 text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 text-sm compare-input">
+                    </div>
+                </div>
+
+                <div class="flex gap-3 mb-6">
+                    <button onclick="addCompareRow()" class="text-sm text-blue-400 hover:text-blue-300 flex items-center gap-1 transition-colors">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
+                        Selektor hinzufügen
+                    </button>
+                    <button onclick="runComparison()" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-5 py-2 rounded-xl text-sm font-semibold transition-all ml-auto">
+                        Vergleichen
+                    </button>
+                </div>
+
+                <div id="compareResult" class="hidden space-y-3"></div>
+            </div>
+
+            <!-- Reference -->
+            <div class="grid md:grid-cols-3 gap-4 mb-8">
+                <div class="bg-slate-800/50 border border-white/10 rounded-2xl p-5">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-8 h-8 bg-red-500/20 rounded-lg flex items-center justify-center">
+                            <span class="text-red-400 font-bold text-sm font-mono">a</span>
+                        </div>
+                        <h3 class="font-semibold text-white">IDs <span class="text-red-400">(+100)</span></h3>
+                    </div>
+                    <ul class="text-sm text-gray-400 space-y-1">
+                        <li><code class="text-red-300">#id</code> — ID-Selektor</li>
+                    </ul>
+                </div>
+                <div class="bg-slate-800/50 border border-white/10 rounded-2xl p-5">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-8 h-8 bg-orange-500/20 rounded-lg flex items-center justify-center">
+                            <span class="text-orange-400 font-bold text-sm font-mono">b</span>
+                        </div>
+                        <h3 class="font-semibold text-white">Klassen <span class="text-orange-400">(+10)</span></h3>
+                    </div>
+                    <ul class="text-sm text-gray-400 space-y-1">
+                        <li><code class="text-orange-300">.class</code> — Klassenselektor</li>
+                        <li><code class="text-orange-300">[attr]</code> — Attributselektor</li>
+                        <li><code class="text-orange-300">:hover</code> — Pseudo-Klassen</li>
+                        <li><code class="text-orange-300">:nth-child()</code> — Strukturell</li>
+                    </ul>
+                </div>
+                <div class="bg-slate-800/50 border border-white/10 rounded-2xl p-5">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-8 h-8 bg-green-500/20 rounded-lg flex items-center justify-center">
+                            <span class="text-green-400 font-bold text-sm font-mono">c</span>
+                        </div>
+                        <h3 class="font-semibold text-white">Elemente <span class="text-green-400">(+1)</span></h3>
+                    </div>
+                    <ul class="text-sm text-gray-400 space-y-1">
+                        <li><code class="text-green-300">div</code> — Element-Tags</li>
+                        <li><code class="text-green-300">::before</code> — Pseudo-Elemente</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- SEO-Relevanz -->
+            <div class="bg-gradient-to-br from-blue-900/20 to-indigo-900/20 border border-blue-500/20 rounded-2xl p-6 mb-8">
+                <h2 class="text-lg font-bold text-white mb-3">Warum CSS-Spezifität für SEO relevant ist</h2>
+                <p class="text-gray-300 text-sm leading-relaxed mb-3">CSS-Konflikte durch falsch verstandene Spezifität führen zu visuellen Bugs, schlechter Nutzerführung und im schlimmsten Fall zu unlesbarem Content — alles negative Nutzersignale für Google. Ein Selektor wie <code class="text-blue-300">#main p</code> überschreibt immer <code class="text-blue-300">.article p</code>, egal in welcher Reihenfolge sie stehen.</p>
+                <p class="text-gray-300 text-sm leading-relaxed">Außerdem: Unvorhergesehene Stil-Konflikte durch Spezifitätsprobleme können <a href="/blog/core-web-vitals-verbessern-lcp-cls-inp.html" class="text-blue-400 hover:text-blue-300">Cumulative Layout Shift (CLS)</a> verursachen — ein Core Web Vital, das direkt in Googles Ranking einfließt. Dieses Tool hilft, solche Konflikte präventiv zu erkennen.</p>
+            </div>
+
+            <!-- Erklärung -->
+            <div class="bg-slate-800/50 border border-white/10 rounded-2xl p-6 mb-8">
+                <h2 class="text-xl font-bold text-white mb-4">CSS-Spezifität verstehen</h2>
+                <div class="space-y-4 text-sm text-gray-300 leading-relaxed">
+                    <p>CSS-Spezifität bestimmt, welche Regel bei Konflikten angewendet wird. Sie wird als dreistelliger Wert (a, b, c) ausgedrückt, wobei ein höherer Wert links immer gewinnt:</p>
+                    <ul class="list-disc pl-5 space-y-1">
+                        <li><strong class="text-white">a</strong> = Anzahl der ID-Selektoren (<code>#id</code>)</li>
+                        <li><strong class="text-white">b</strong> = Anzahl der Klassen, Attribut- und Pseudoklassen-Selektoren</li>
+                        <li><strong class="text-white">c</strong> = Anzahl der Element- und Pseudoelement-Selektoren</li>
+                    </ul>
+                    <p>Vergleich: <code>1,0,0</code> gewinnt immer gegen <code>0,99,99</code> — ID-Selektoren sind dominant. Der Universal-Selektor <code>*</code>, Kombinatoren (<code>&gt;</code>, <code>+</code>, <code>~</code>) und das <code>:not()</code>-Pseudoelement zählen selbst nicht, wohl aber ihr Inhalt.</p>
+                    <p><code>!important</code> überschreibt die gesamte Spezifität und sollte nur als letztes Mittel eingesetzt werden — es erschwert Wartung und Debugging erheblich.</p>
+                </div>
+            </div>
+
+            <!-- Related links -->
+            <div class="bg-slate-800/50 border border-white/10 rounded-2xl p-6">
+                <h3 class="font-bold text-white mb-4">Weitere SEO-Tools und Artikel</h3>
+                <div class="grid md:grid-cols-2 gap-3">
+                    <a href="/tools/schema-markup-generator.html" class="flex items-center gap-3 p-3 rounded-xl hover:bg-slate-700/50 transition-colors group">
+                        <div class="w-8 h-8 bg-blue-500/20 rounded-lg flex items-center justify-center shrink-0">
+                            <svg class="w-4 h-4 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+                        </div>
+                        <div>
+                            <p class="text-sm font-medium text-white group-hover:text-blue-400 transition-colors">Schema-Markup-Generator</p>
+                            <p class="text-xs text-gray-500">LocalBusiness JSON-LD</p>
+                        </div>
+                    </a>
+                    <a href="/blog/core-web-vitals-verbessern-lcp-cls-inp.html" class="flex items-center gap-3 p-3 rounded-xl hover:bg-slate-700/50 transition-colors group">
+                        <div class="w-8 h-8 bg-green-500/20 rounded-lg flex items-center justify-center shrink-0">
+                            <svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                        </div>
+                        <div>
+                            <p class="text-sm font-medium text-white group-hover:text-green-400 transition-colors">Core Web Vitals verbessern</p>
+                            <p class="text-xs text-gray-500">LCP, CLS, INP optimieren</p>
+                        </div>
+                    </a>
+                    <a href="/blog/critical-css-above-the-fold-lcp.html" class="flex items-center gap-3 p-3 rounded-xl hover:bg-slate-700/50 transition-colors group">
+                        <div class="w-8 h-8 bg-purple-500/20 rounded-lg flex items-center justify-center shrink-0">
+                            <svg class="w-4 h-4 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10M12 21V11m0 0l-4 4m4-4l4 4M12 3v4"/></svg>
+                        </div>
+                        <div>
+                            <p class="text-sm font-medium text-white group-hover:text-purple-400 transition-colors">Critical CSS extrahieren</p>
+                            <p class="text-xs text-gray-500">Above-the-Fold für besseres LCP</p>
+                        </div>
+                    </a>
+                    <a href="/tools/" class="flex items-center gap-3 p-3 rounded-xl hover:bg-slate-700/50 transition-colors group">
+                        <div class="w-8 h-8 bg-gray-500/20 rounded-lg flex items-center justify-center shrink-0">
+                            <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"/></svg>
+                        </div>
+                        <div>
+                            <p class="text-sm font-medium text-white group-hover:text-gray-300 transition-colors">Alle SEO-Tools</p>
+                            <p class="text-xs text-gray-500">125 kostenlose Tools</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/10 bg-slate-900/50 py-12 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="flex items-center gap-2">
+                    <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                    <span class="text-lg font-bold text-white">Shift07</span>
+                </div>
+                <div class="flex items-center space-x-6 text-sm text-gray-400">
+                    <a href="/impressum.html" class="hover:text-white transition-colors">Impressum</a>
+                    <a href="/datenschutz.html" class="hover:text-white transition-colors">Datenschutz</a>
+                    <a href="/agb.html" class="hover:text-white transition-colors">AGB</a>
+                </div>
+                <p class="text-sm text-gray-500">&copy; 2026 Thümmler AI GmbH</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // Allow Enter key in main input
+        document.getElementById('selectorInput').addEventListener('keydown', function(e) {
+            if (e.key === 'Enter') calculate();
+        });
+
+        // ---- CSS Specificity Parser ----
+
+        function parseSpecificity(selector) {
+            let a = 0, b = 0, c = 0;
+            const tokens = [];
+            let important = false;
+
+            if (/!important/i.test(selector)) {
+                important = true;
+                selector = selector.replace(/!important/gi, '').trim();
+            }
+
+            // Work on a copy to strip processed parts
+            let s = selector;
+
+            // Remove combinators (>, +, ~, whitespace-as-combinator) — they don't count
+            // We'll tokenize instead
+
+            // Strip strings in quotes to avoid false matches
+            s = s.replace(/"[^"]*"|'[^']*'/g, '""');
+
+            // Process :not() — count contents, not :not itself
+            // We'll handle nested parens for :not, :is, :where, :has, :matches
+            // :is() and :has() and :matches() count as their most specific argument (simplified: count contents)
+            // :where() counts as 0
+            // :not() contents count
+
+            // Simplification: expand known pseudo-functions
+            const pseudoFunctions = [];
+            const pfRegex = /:(not|is|has|matches|nth-child|nth-last-child|nth-of-type|nth-last-of-type|lang|dir)\(([^)]*)\)/gi;
+            s = s.replace(pfRegex, (match, fn, args) => {
+                const fnL = fn.toLowerCase();
+                if (fnL === 'where') {
+                    // :where() has 0 specificity
+                    tokens.push({ type: 'pseudo-where', raw: match, a: 0, b: 0, c: 0 });
+                    return ' ';
+                }
+                if (fnL === 'not' || fnL === 'is' || fnL === 'has' || fnL === 'matches') {
+                    // Count the most specific argument (simplified: count all args as b)
+                    const innerSpec = parseSpecificity(args);
+                    tokens.push({ type: 'pseudo-fn', fn: fn, raw: match, a: innerSpec.a, b: innerSpec.b, c: innerSpec.c });
+                    a += innerSpec.a; b += innerSpec.b; c += innerSpec.c;
+                    return ' ';
+                }
+                // Structural pseudo-classes like :nth-child() — count as b
+                tokens.push({ type: 'pseudo-structural', raw: match, a: 0, b: 1, c: 0 });
+                b += 1;
+                return ' ';
+            });
+
+            // :where() without args
+            s = s.replace(/:where\(\)/gi, (match) => {
+                tokens.push({ type: 'pseudo-where', raw: match, a: 0, b: 0, c: 0 });
+                return ' ';
+            });
+
+            // ID selectors
+            s = s.replace(/#[\w-]+/g, (match) => {
+                tokens.push({ type: 'id', raw: match, a: 1, b: 0, c: 0 });
+                a += 1;
+                return ' ';
+            });
+
+            // Attribute selectors [...]
+            s = s.replace(/\[[^\]]*\]/g, (match) => {
+                tokens.push({ type: 'attribute', raw: match, a: 0, b: 1, c: 0 });
+                b += 1;
+                return ' ';
+            });
+
+            // Class selectors
+            s = s.replace(/\.[\w-]+/g, (match) => {
+                tokens.push({ type: 'class', raw: match, a: 0, b: 1, c: 0 });
+                b += 1;
+                return ' ';
+            });
+
+            // Pseudo-elements (::before, ::after, etc.) — count as c
+            s = s.replace(/::[\w-]+/g, (match) => {
+                tokens.push({ type: 'pseudo-element', raw: match, a: 0, b: 0, c: 1 });
+                c += 1;
+                return ' ';
+            });
+
+            // Pseudo-classes (:hover, :focus, etc.) — count as b (single colon, not already replaced)
+            s = s.replace(/:[\w-]+/g, (match) => {
+                // Skip if it's a pseudo-element written with single colon (legacy: :before, :after)
+                const legacy = [':before', ':after', ':first-line', ':first-letter'];
+                if (legacy.includes(match.toLowerCase())) {
+                    tokens.push({ type: 'pseudo-element', raw: match, a: 0, b: 0, c: 1 });
+                    c += 1;
+                } else {
+                    tokens.push({ type: 'pseudo-class', raw: match, a: 0, b: 1, c: 0 });
+                    b += 1;
+                }
+                return ' ';
+            });
+
+            // Element types (remaining word chars that aren't combinators/universal)
+            const elementRegex = /\b([a-zA-Z][a-zA-Z0-9-]*)\b/g;
+            let m;
+            while ((m = elementRegex.exec(s)) !== null) {
+                const tag = m[1];
+                if (tag === '*') continue; // Universal selector
+                tokens.push({ type: 'element', raw: tag, a: 0, b: 0, c: 1 });
+                c += 1;
+            }
+
+            return { a, b, c, tokens, important, total: a * 100 + b * 10 + c };
+        }
+
+        function getTokenClass(type) {
+            if (type === 'id') return 'badge-a';
+            if (['class', 'attribute', 'pseudo-class', 'pseudo-fn', 'pseudo-structural'].includes(type)) return 'badge-b';
+            if (['element', 'pseudo-element'].includes(type)) return 'badge-c';
+            return 'bg-slate-700 text-gray-400';
+        }
+
+        function getTypeLabel(type, fn) {
+            const labels = {
+                'id': 'ID',
+                'class': 'Klasse',
+                'attribute': 'Attribut',
+                'pseudo-class': 'Pseudo-Klasse',
+                'pseudo-element': 'Pseudo-Element',
+                'pseudo-fn': `:${fn || 'fn'}()`,
+                'pseudo-structural': 'Strukt. Pseudo-Klasse',
+                'pseudo-where': ':where() — 0',
+                'element': 'Element',
+            };
+            return labels[type] || type;
+        }
+
+        function getExplanation(a, b, c, total, important) {
+            if (important) {
+                return '⚠️ Dieser Selektor enthält <strong>!important</strong>. Es überschreibt die Kaskade vollständig — unabhängig vom Spezifitätswert. Sollte nur als letztes Mittel eingesetzt werden.';
+            }
+            if (a === 0 && b === 0 && c === 0) {
+                return 'Dieser Selektor hat keine berechnete Spezifität (z.B. Universal-Selektor <code>*</code> oder nur Kombinatoren). Er gewinnt nur gegen andere Selektoren mit derselben Spezifität, wenn er später in der CSS-Datei steht.';
+            }
+            const parts = [];
+            if (a > 0) parts.push(`<span class="segment-a">${a} ID${a > 1 ? 's' : ''}</span>`);
+            if (b > 0) parts.push(`<span class="segment-b">${b} Klasse${b > 1 ? 'n/Pseudo-Klasse' : '/Pseudo-Klasse'}</span>`);
+            if (c > 0) parts.push(`<span class="segment-c">${c} Element${c > 1 ? 'e' : ''}</span>`);
+            const dominance = a > 0 ? 'sehr hoch (ID-Selektor dominiert)' : b > 2 ? 'hoch' : b > 0 ? 'mittel' : 'niedrig';
+            return `Dieser Selektor enthält ${parts.join(', ')} und hat eine Spezifität von <strong>(${a}, ${b}, ${c})</strong> — gewichteter Wert: <strong>${total}</strong>. Dominanz: <span class="text-yellow-400">${dominance}</span>. Alle anderen Selektoren mit einer niedrigeren Spezifität werden von diesem überschrieben.`;
+        }
+
+        function calculate() {
+            const input = document.getElementById('selectorInput').value.trim();
+            if (!input) return;
+
+            const spec = parseSpecificity(input);
+            const maxVal = Math.max(spec.a * 100 + spec.b * 10 + spec.c, 1);
+
+            document.getElementById('scoreA').textContent = spec.a;
+            document.getElementById('scoreB').textContent = spec.b;
+            document.getElementById('scoreC').textContent = spec.c;
+            document.getElementById('scoreTotal').textContent = spec.total;
+
+            // Bars
+            const aW = Math.min(spec.a / (spec.a + spec.b + spec.c || 1) * 100, 100);
+            const bW = Math.min(spec.b / (spec.a + spec.b + spec.c || 1) * 100, 100);
+            const cW = Math.min(spec.c / (spec.a + spec.b + spec.c || 1) * 100, 100);
+            document.getElementById('barA').style.width = aW + '%';
+            document.getElementById('barB').style.width = bW + '%';
+            document.getElementById('barC').style.width = cW + '%';
+
+            // !important badge
+            const impBadge = document.getElementById('importantBadge');
+            if (spec.important) {
+                impBadge.classList.remove('hidden');
+            } else {
+                impBadge.classList.add('hidden');
+            }
+
+            // Token breakdown
+            const tokenList = document.getElementById('tokenList');
+            tokenList.innerHTML = '';
+            if (spec.tokens.length === 0) {
+                tokenList.innerHTML = '<p class="text-sm text-gray-500">Keine zählbaren Tokens gefunden (Universal-Selektor oder nur Kombinatoren)</p>';
+            } else {
+                spec.tokens.forEach(token => {
+                    const row = document.createElement('div');
+                    const cls = getTokenClass(token.type);
+                    const label = getTypeLabel(token.type, token.fn);
+                    const score = `(${token.a},${token.b},${token.c})`;
+                    const highlight = token.type === 'id' ? 'highlight-a' : ['class','attribute','pseudo-class','pseudo-fn','pseudo-structural'].includes(token.type) ? 'highlight-b' : token.type === 'pseudo-where' ? '' : 'highlight-c';
+                    row.className = `flex items-center justify-between p-2 rounded-lg ${highlight}`;
+                    row.innerHTML = `
+                        <div class="flex items-center gap-2">
+                            <code class="text-sm font-mono text-white">${escapeHtml(token.raw)}</code>
+                            <span class="text-xs px-2 py-0.5 rounded-full ${cls}">${label}</span>
+                        </div>
+                        <span class="text-xs font-mono text-gray-400">${score}</span>
+                    `;
+                    tokenList.appendChild(row);
+                });
+            }
+
+            // Explanation
+            document.getElementById('explanationText').innerHTML = getExplanation(spec.a, spec.b, spec.c, spec.total, spec.important);
+
+            document.getElementById('result').classList.remove('hidden');
+
+            // Track with GA
+            if (typeof gtag === 'function') {
+                gtag('event', 'calculate_specificity', { selector_length: input.length, score_total: spec.total });
+            }
+        }
+
+        function tryExample(sel) {
+            document.getElementById('selectorInput').value = sel;
+            calculate();
+        }
+
+        function escapeHtml(str) {
+            return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+        }
+
+        // ---- Comparator ----
+
+        let compareCount = 2;
+
+        function addCompareRow() {
+            if (compareCount >= 4) return;
+            compareCount++;
+            const div = document.createElement('div');
+            div.className = 'flex gap-2';
+            div.innerHTML = `<input type="text" placeholder="Selektor ${compareCount}" class="selector-input flex-1 bg-slate-900 border border-white/10 rounded-xl px-4 py-2.5 text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 text-sm compare-input">`;
+            document.getElementById('compareInputs').appendChild(div);
+        }
+
+        function runComparison() {
+            const inputs = document.querySelectorAll('.compare-input');
+            const results = [];
+            inputs.forEach((inp, i) => {
+                const val = inp.value.trim();
+                if (!val) return;
+                const spec = parseSpecificity(val);
+                results.push({ selector: val, ...spec, idx: i });
+            });
+
+            if (results.length === 0) return;
+
+            results.sort((a, b) => {
+                if (a.a !== b.a) return b.a - a.a;
+                if (a.b !== b.b) return b.b - a.b;
+                return b.c - a.c;
+            });
+
+            const maxTotal = results[0].total || 1;
+            const container = document.getElementById('compareResult');
+            container.innerHTML = '';
+            container.classList.remove('hidden');
+
+            results.forEach((r, i) => {
+                const isWinner = i === 0;
+                const barPct = Math.max(r.total / (maxTotal || 1) * 100, 2);
+                const row = document.createElement('div');
+                row.className = `p-4 rounded-xl border ${isWinner ? 'border-green-500/50 bg-green-500/5' : 'border-white/10 bg-slate-900/40'}`;
+                row.innerHTML = `
+                    <div class="flex items-center justify-between mb-2">
+                        <div class="flex items-center gap-2">
+                            ${isWinner ? '<span class="text-xs font-bold px-2 py-0.5 bg-green-500/20 text-green-400 rounded-full">Gewinnt</span>' : `<span class="text-xs text-gray-500">#${i+1}</span>`}
+                            <code class="text-sm text-white font-mono">${escapeHtml(r.selector)}</code>
+                        </div>
+                        <span class="text-xs font-mono text-gray-400">(${r.a},${r.b},${r.c}) = ${r.total}</span>
+                    </div>
+                    <div class="h-2 bg-slate-700 rounded-full overflow-hidden">
+                        <div class="h-full ${isWinner ? 'bg-green-400' : 'bg-blue-400/50'} rounded-full transition-all duration-500" style="width:${barPct}%"></div>
+                    </div>
+                `;
+                container.appendChild(row);
+            });
+        }
+    </script>
+</body>
+</html>
