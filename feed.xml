@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Mon, 18 May 2026 03:54:14 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 19 May 2026 00:51:08 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>KI-Suche für lokale Unternehmen: Wie Restaurants, Ärzte &amp;amp; Handwerker sichtbar bleiben</title>
+      <link>https://shift07.ai/blog/ki-suche-lokale-unternehmen-sichtbarkeit.html</link>
+      <guid>https://shift07.ai/blog/ki-suche-lokale-unternehmen-sichtbarkeit.html</guid>
+      <pubDate>Tue, 19 May 2026 00:50:40 +0000</pubDate>
+      <description>Google AI Overviews verändern lokale Suchergebnisse. So bleiben Restaurants, Arztpraxen und Handwerksbetriebe in der KI-Suche 2026 sichtbar – mit konkreten Maßnahmen.</description>
+      <category>Lokal-SEO</category>
+    </item>
     <item>
       <title>KI-Halluzinierung und SEO: Was tun wenn KI falsche Infos verbreitet? 2026</title>
       <link>https://shift07.ai/blog/ki-halluzinierung-seo-falsche-informationen.html</link>
@@ -158,14 +166,6 @@
       <pubDate>Sat, 16 May 2026 00:45:24 +0000</pubDate>
       <description>async und defer erklärt: Wie du JavaScript-Ladeverhalten für bessere Core Web Vitals und Googlebot-Crawling optimierst. Mit Praxisbeispielen, Entscheidungshilfe und häufigen Fehlern.</description>
       <category>Tech-SEO</category>
-    </item>
-    <item>
-      <title>hreflang Praxisleitfaden: Fehler vermeiden bei mehrsprachigen Websites 2026</title>
-      <link>https://shift07.ai/blog/hreflang-praxisleitfaden-mehrsprachige-seo.html</link>
-      <guid>https://shift07.ai/blog/hreflang-praxisleitfaden-mehrsprachige-seo.html</guid>
-      <pubDate>Fri, 15 May 2026 05:07:07 +0000</pubDate>
-      <description>Der vollständige hreflang-Praxisleitfaden: Häufige Fehler, korrekte Implementierung, x-default, Sitemap-Integration und Debugging – mit Code-Beispielen für 2026.</description>
-      <category>SEO</category>
     </item>
   </channel>
 </rss>
