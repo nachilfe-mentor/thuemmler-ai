@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Tue, 19 May 2026 00:58:09 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 19 May 2026 02:32:33 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Voice Search 2026: Wie lokale Unternehmen für Sprachsuche optimieren</title>
+      <link>https://shift07.ai/blog/voice-search-2026-sprachsuche-optimieren.html</link>
+      <guid>https://shift07.ai/blog/voice-search-2026-sprachsuche-optimieren.html</guid>
+      <pubDate>Tue, 19 May 2026 02:32:05 +0000</pubDate>
+      <description>Voice Search 2026: So optimieren lokale Unternehmen ihre Website für Sprachsuche. Praktische Tipps für Google Assistant, Siri und Alexa – inkl. Featured Snippets und FAQ-Schema.</description>
+      <category>KI &amp; SEO 2026</category>
+    </item>
     <item>
       <title>KI-generierter Content und SEO: Was Google 2026 wirklich bewertet</title>
       <link>https://shift07.ai/blog/ki-generierter-content-seo-google-2026.html</link>
@@ -158,14 +166,6 @@
       <pubDate>Sat, 16 May 2026 00:48:24 +0000</pubDate>
       <description>Wie JavaScript das Crawl-Budget beeinflusst: Googlebots Two-Wave-Rendering, JavaScript-Rendering-Verzögerung, Crawl-Budget schonen und häufige JS-Fehler die Indexierung verhindern.</description>
       <category>Tech-SEO</category>
-    </item>
-    <item>
-      <title>JavaScript SEO: Wie Google SPA-Websites crawlt und indexiert</title>
-      <link>https://shift07.ai/blog/javascript-seo-spa-indexierung.html</link>
-      <guid>https://shift07.ai/blog/javascript-seo-spa-indexierung.html</guid>
-      <pubDate>Sat, 16 May 2026 00:45:50 +0000</pubDate>
-      <description>JavaScript SEO erklärt: Wie Googlebot SPAs crawlt, was Two-Wave Indexing bedeutet und wie du mit SSR oder Static Generation sicherstellst, dass deine Inhalte indexiert werden.</description>
-      <category>Technisches SEO</category>
     </item>
   </channel>
 </rss>
