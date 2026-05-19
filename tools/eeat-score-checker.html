@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K1S1RXBDS8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K1S1RXBDS8');
+    </script>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8475857002943858" crossorigin="anonymous"></script>
+    <title>EEAT Score Checker – Kostenlos Expertise, Autorität &amp; Vertrauen prüfen | Shift07</title>
+    <meta name="description" content="Kostenloser EEAT Score Checker: Analysiere deine Website auf Google-Qualitätssignale – Expertise, Autorität, Vertrauen und Experience. Sofort-Analyse mit konkreten Tipps.">
+    <meta name="keywords" content="eeat checker, eeat score, eeat analyse, expertise autorität vertrauen, google qualitätssignale, eeat seo tool">
+    <meta name="author" content="Thümmler AI GmbH">
+    <link rel="icon" type="image/png" href="/logo.png">
+    <link rel="canonical" href="https://shift07.ai/tools/eeat-score-checker.html">
+    <!-- Open Graph -->
+    <meta property="og:title" content="EEAT Score Checker – Kostenlos Expertise, Autorität &amp; Vertrauen prüfen">
+    <meta property="og:description" content="Kostenloser EEAT Score Checker: Analysiere deine Website auf Google-Qualitätssignale – Expertise, Autorität, Vertrauen und Experience.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://shift07.ai/tools/eeat-score-checker.html">
+    <meta property="og:image" content="https://shift07.ai/tools/images/eeat-score-checker.png">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="Shift07">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="EEAT Score Checker – Kostenlos Expertise, Autorität &amp; Vertrauen prüfen">
+    <meta name="twitter:description" content="Analysiere deine Website auf EEAT-Signale und erhalte konkrete Verbesserungsvorschläge für Google 2026.">
+    <meta name="twitter:image" content="https://shift07.ai/tools/images/eeat-score-checker.png">
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "EEAT Score Checker",
+      "description": "Kostenloser EEAT Score Checker: Analysiere deine Website auf Google-Qualitätssignale – Expertise, Autorität, Vertrauen und Experience.",
+      "url": "https://shift07.ai/tools/eeat-score-checker.html",
+      "applicationCategory": "SEO Tool",
+      "operatingSystem": "Web",
+      "isAccessibleForFree": true,
+      "publisher": {
+        "@type": "Organization",
+        "name": "Shift07",
+        "url": "https://shift07.ai"
+      }
+    }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { 'inter': ['Inter', 'system-ui', '-apple-system', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', system-ui, sans-serif; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: rgba(15, 23, 42, 0.5); }
+        ::-webkit-scrollbar-thumb { background: rgba(59, 130, 246, 0.5); border-radius: 4px; }
+        .check-pass { color: #34d399; }
+        .check-fail { color: #f87171; }
+        .check-warn { color: #fbbf24; }
+        .score-ring { transition: stroke-dashoffset 1s ease; }
+    </style>
+</head>
+<body class="bg-slate-900 text-white min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-slate-900/80 backdrop-blur-xl border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <a href="/" class="flex items-center gap-2">
+                    <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                    <span class="text-xl font-bold text-white">Shift07</span>
+                </a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="/" class="text-gray-300 hover:text-white transition-colors">SEO-Tool</a>
+                    <a href="/blog/" class="text-gray-300 hover:text-white transition-colors">Blog</a>
+                    <a href="/tools/" class="text-white font-medium border-b-2 border-blue-500 pb-0.5">Tools</a>
+                    <a href="/app/#/login" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-5 py-2 rounded-lg font-medium transition-all">Anmelden</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-gray-300 hover:text-white">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900/95 border-b border-white/10">
+            <div class="px-4 py-3 space-y-2">
+                <a href="/" class="block py-2 text-gray-300 hover:text-white">SEO-Tool</a>
+                <a href="/blog/" class="block py-2 text-gray-300 hover:text-white">Blog</a>
+                <a href="/tools/" class="block py-2 text-white font-medium">Tools</a>
+                <a href="/app/#/login" class="block py-2 text-blue-400 hover:text-blue-300">Anmelden</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="pt-24 pb-12 px-4">
+        <div class="max-w-4xl mx-auto text-center">
+            <span class="inline-block text-sm font-semibold px-4 py-1.5 bg-emerald-500/20 text-emerald-400 rounded-full mb-6">SEO-Tool</span>
+            <h1 class="text-3xl md:text-5xl font-extrabold text-white mb-4">EEAT Score Checker</h1>
+            <p class="text-lg text-gray-400 max-w-2xl mx-auto">Analysiere deine Website auf Google-Qualitätssignale: Expertise, Experience, Autorität und Vertrauen — kostenlos und sofort.</p>
+        </div>
+    </section>
+
+    <!-- Tool -->
+    <section class="pb-16 px-4">
+        <div class="max-w-4xl mx-auto">
+
+            <!-- Input -->
+            <div class="bg-slate-800/60 border border-white/10 rounded-2xl p-6 mb-8">
+                <label class="block text-sm font-semibold text-gray-300 mb-3">Website-URL analysieren</label>
+                <div class="flex gap-3">
+                    <input id="url-input" type="url" placeholder="https://deine-website.de"
+                        class="flex-1 bg-slate-900 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-emerald-500 transition-colors">
+                    <button id="analyze-btn" onclick="startAnalysis()"
+                        class="bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white px-6 py-3 rounded-xl font-semibold transition-all whitespace-nowrap">
+                        Analysieren
+                    </button>
+                </div>
+                <p class="text-xs text-gray-500 mt-2">Die Analyse überprüft 20 EEAT-Signale und gibt dir einen Score von 0–100.</p>
+            </div>
+
+            <!-- Loading -->
+            <div id="loading" class="hidden text-center py-12">
+                <div class="inline-block w-10 h-10 border-4 border-emerald-500/30 border-t-emerald-500 rounded-full animate-spin mb-4"></div>
+                <p class="text-gray-400" id="loading-msg">Analysiere EEAT-Signale...</p>
+            </div>
+
+            <!-- Results -->
+            <div id="results" class="hidden space-y-6">
+
+                <!-- Score Overview -->
+                <div class="bg-slate-800/60 border border-white/10 rounded-2xl p-6">
+                    <div class="flex flex-col md:flex-row items-center gap-8">
+                        <!-- Score Circle -->
+                        <div class="relative flex-shrink-0">
+                            <svg width="140" height="140" viewBox="0 0 140 140">
+                                <circle cx="70" cy="70" r="58" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="12"/>
+                                <circle id="score-circle" cx="70" cy="70" r="58" fill="none" stroke="#34d399" stroke-width="12"
+                                    stroke-linecap="round" stroke-dasharray="364.4" stroke-dashoffset="364.4"
+                                    transform="rotate(-90 70 70)" class="score-ring"/>
+                            </svg>
+                            <div class="absolute inset-0 flex flex-col items-center justify-center">
+                                <span id="score-number" class="text-4xl font-extrabold text-white">0</span>
+                                <span class="text-xs text-gray-400">/ 100</span>
+                            </div>
+                        </div>
+                        <!-- Summary -->
+                        <div class="flex-1">
+                            <h2 class="text-xl font-bold text-white mb-2" id="score-label">EEAT-Score</h2>
+                            <p class="text-gray-400 mb-4" id="score-description"></p>
+                            <div class="grid grid-cols-2 gap-3">
+                                <div class="bg-slate-900/60 rounded-xl p-3 text-center">
+                                    <div class="text-2xl font-bold text-emerald-400" id="pass-count">0</div>
+                                    <div class="text-xs text-gray-400">Bestanden</div>
+                                </div>
+                                <div class="bg-slate-900/60 rounded-xl p-3 text-center">
+                                    <div class="text-2xl font-bold text-red-400" id="fail-count">0</div>
+                                    <div class="text-xs text-gray-400">Verbesserbar</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category Scores -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="bg-slate-800/60 border border-white/10 rounded-xl p-4 text-center">
+                        <div class="text-2xl mb-1">🎓</div>
+                        <div class="text-xs text-gray-400 mb-1">Expertise</div>
+                        <div class="text-xl font-bold" id="cat-expertise">–</div>
+                    </div>
+                    <div class="bg-slate-800/60 border border-white/10 rounded-xl p-4 text-center">
+                        <div class="text-2xl mb-1">⭐</div>
+                        <div class="text-xs text-gray-400 mb-1">Experience</div>
+                        <div class="text-xl font-bold" id="cat-experience">–</div>
+                    </div>
+                    <div class="bg-slate-800/60 border border-white/10 rounded-xl p-4 text-center">
+                        <div class="text-2xl mb-1">🏆</div>
+                        <div class="text-xs text-gray-400 mb-1">Autorität</div>
+                        <div class="text-xl font-bold" id="cat-authority">–</div>
+                    </div>
+                    <div class="bg-slate-800/60 border border-white/10 rounded-xl p-4 text-center">
+                        <div class="text-2xl mb-1">🔒</div>
+                        <div class="text-xs text-gray-400 mb-1">Vertrauen</div>
+                        <div class="text-xl font-bold" id="cat-trust">–</div>
+                    </div>
+                </div>
+
+                <!-- Detailed Checks -->
+                <div class="bg-slate-800/60 border border-white/10 rounded-2xl p-6">
+                    <h3 class="text-lg font-bold text-white mb-5">Detaillierte EEAT-Prüfung</h3>
+                    <div id="checks-list" class="space-y-3"></div>
+                </div>
+
+                <!-- Recommendations -->
+                <div id="recommendations-box" class="bg-slate-800/60 border border-white/10 rounded-2xl p-6">
+                    <h3 class="text-lg font-bold text-white mb-4">Empfehlungen (nach Priorität)</h3>
+                    <div id="recommendations-list" class="space-y-3"></div>
+                </div>
+
+                <!-- Learn More -->
+                <div class="bg-gradient-to-br from-emerald-600/10 to-teal-600/10 border border-emerald-500/20 rounded-2xl p-6">
+                    <h3 class="text-base font-bold text-white mb-2">EEAT tiefer verstehen</h3>
+                    <p class="text-gray-400 text-sm mb-4">Lies unsere ausführlichen Guides zu EEAT-Signalen im KI-Zeitalter und wie du sie für Google 2026 optimierst.</p>
+                    <div class="flex flex-wrap gap-3">
+                        <a href="/blog/eat-signale-ki-zeitalter-google-2026.html" class="text-emerald-400 hover:text-emerald-300 text-sm underline underline-offset-2">E-A-T im KI-Zeitalter 2026 →</a>
+                        <a href="/blog/ki-generierter-content-seo-google-2026.html" class="text-emerald-400 hover:text-emerald-300 text-sm underline underline-offset-2">KI-Content und EEAT →</a>
+                        <a href="/blog/google-ai-overviews-seo-2026.html" class="text-emerald-400 hover:text-emerald-300 text-sm underline underline-offset-2">Google AI Overviews →</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Error -->
+            <div id="error-box" class="hidden bg-red-900/20 border border-red-500/30 rounded-2xl p-6 text-center">
+                <p class="text-red-400 font-medium" id="error-msg"></p>
+                <p class="text-gray-500 text-sm mt-2">Stelle sicher, dass die URL gültig ist und mit https:// beginnt.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Info Section -->
+    <section class="py-16 px-4 bg-slate-800/30 border-t border-white/5">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-2xl font-bold text-white mb-8">Was prüft der EEAT Score Checker?</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold text-emerald-400 mb-3">🎓 Expertise-Signale</h3>
+                    <ul class="text-gray-400 text-sm space-y-2">
+                        <li>• Autorenangaben vorhanden (Name, Profil)</li>
+                        <li>• Person-Schema-Markup mit Credentials</li>
+                        <li>• Inhalte werden regelmäßig aktualisiert</li>
+                        <li>• Quellenangaben und externe Verlinkungen</li>
+                        <li>• Fachspezifische Tiefe der Inhalte</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold text-blue-400 mb-3">⭐ Experience-Signale</h3>
+                    <ul class="text-gray-400 text-sm space-y-2">
+                        <li>• Eigene Erfahrungsberichte und Beispiele</li>
+                        <li>• Reviews und Nutzerbewertungen eingebunden</li>
+                        <li>• Unique Content (kein Copy-Paste)</li>
+                        <li>• Aktuelle, datierte Inhalte</li>
+                        <li>• Medien und eigene Grafiken</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold text-purple-400 mb-3">🏆 Autoritäts-Signale</h3>
+                    <ul class="text-gray-400 text-sm space-y-2">
+                        <li>• Organisation/Publisher klar benannt</li>
+                        <li>• Organization-Schema-Markup vorhanden</li>
+                        <li>• Social-Media-Präsenz verlinkt</li>
+                        <li>• Backlink-Profil (via sameAs)</li>
+                        <li>• Bekannte externe Erwähnungen</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold text-yellow-400 mb-3">🔒 Vertrauens-Signale</h3>
+                    <ul class="text-gray-400 text-sm space-y-2">
+                        <li>• HTTPS aktiv und zertifiziert</li>
+                        <li>• Impressum vorhanden und vollständig</li>
+                        <li>• Datenschutzerklärung verlinkt</li>
+                        <li>• Kontaktdaten erkennbar</li>
+                        <li>• AGB / Widerrufsrecht (bei E-Commerce)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer CTA -->
+    <section class="py-16 px-4 bg-gradient-to-r from-blue-900/30 to-indigo-900/30 border-t border-b border-white/5">
+        <div class="max-w-3xl mx-auto text-center">
+            <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">Vollständige SEO-Analyse starten</h2>
+            <p class="text-gray-400 mb-8">Neben EEAT analysiert Shift07 über 50 weitere SEO-Faktoren deiner Website.</p>
+            <a href="/" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-8 py-3 rounded-lg font-medium transition-all inline-block">Jetzt kostenlos testen</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/10 bg-slate-900/50 py-12 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="flex items-center gap-2">
+                    <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                    <span class="text-lg font-bold text-white">Shift07</span>
+                </div>
+                <div class="flex items-center space-x-6 text-sm text-gray-400">
+                    <a href="/impressum.html" class="hover:text-white transition-colors">Impressum</a>
+                    <a href="/datenschutz.html" class="hover:text-white transition-colors">Datenschutz</a>
+                    <a href="/agb.html" class="hover:text-white transition-colors">AGB</a>
+                </div>
+                <p class="text-sm text-gray-500">&copy; 2026 Thümmler AI GmbH</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        document.getElementById('url-input').addEventListener('keydown', function(e) {
+            if (e.key === 'Enter') startAnalysis();
+        });
+
+        const CHECKS = [
+            // Trustworthiness
+            { id: 'https', cat: 'trust', label: 'HTTPS aktiv', desc: 'Die Website nutzt eine sichere HTTPS-Verbindung.', points: 10 },
+            { id: 'impressum', cat: 'trust', label: 'Impressum-Link vorhanden', desc: 'Ein Impressum-Link ist im HTML erkennbar.', points: 8 },
+            { id: 'datenschutz', cat: 'trust', label: 'Datenschutzerklärung verlinkt', desc: 'Eine Datenschutzseite ist verlinkt.', points: 7 },
+            { id: 'contact', cat: 'trust', label: 'Kontaktinformationen', desc: 'E-Mail-Adresse oder Telefonnummer ist erkennbar.', points: 6 },
+            // Expertise
+            { id: 'author_name', cat: 'expertise', label: 'Autorenname angegeben', desc: 'Ein Autor wird auf der Seite namentlich genannt.', points: 8 },
+            { id: 'person_schema', cat: 'expertise', label: 'Person-Schema-Markup', desc: 'Schema.org Person-Markup für den Autor vorhanden.', points: 8 },
+            { id: 'org_schema', cat: 'expertise', label: 'Organization-Schema-Markup', desc: 'Schema.org Organization-Markup vorhanden.', points: 7 },
+            { id: 'article_schema', cat: 'expertise', label: 'Article-Schema-Markup', desc: 'Schema.org Article-Markup auf der Seite vorhanden.', points: 6 },
+            { id: 'external_links', cat: 'expertise', label: 'Externe Quellenlinks', desc: 'Der Artikel verlinkt auf externe Quellen oder Referenzen.', points: 5 },
+            // Authority
+            { id: 'og_site_name', cat: 'authority', label: 'Publisher/Site-Name angegeben', desc: 'og:site_name oder Organisation ist klar benannt.', points: 6 },
+            { id: 'social_links', cat: 'authority', label: 'Social-Media-Links', desc: 'Links zu LinkedIn, Twitter/X oder anderen Plattformen vorhanden.', points: 5 },
+            { id: 'same_as', cat: 'authority', label: 'sameAs-Verlinkungen', desc: 'sameAs-Felder in Schema-Markup verknüpfen externe Profile.', points: 6 },
+            { id: 'backlinks_hint', cat: 'authority', label: 'Sitemap oder Feed vorhanden', desc: 'sitemap.xml oder RSS-Feed erhöht crawlbare Autorität.', points: 4 },
+            // Experience
+            { id: 'date_published', cat: 'experience', label: 'Veröffentlichungsdatum', desc: 'Ein Datum für den Artikel oder Inhalt ist angegeben.', points: 6 },
+            { id: 'date_modified', cat: 'experience', label: 'Aktualisierungsdatum', desc: 'Ein Aktualisierungsdatum signalisiert gepflegte Inhalte.', points: 5 },
+            { id: 'images', cat: 'experience', label: 'Bilder mit Alt-Text', desc: 'Eigene Bilder mit beschreibenden Alt-Attributen vorhanden.', points: 5 },
+            { id: 'word_count', cat: 'experience', label: 'Ausreichende Inhaltstiefe', desc: 'Der sichtbare Text der Seite umfasst mindestens 300 Wörter.', points: 6 },
+            { id: 'faq_schema', cat: 'experience', label: 'FAQ-Schema vorhanden', desc: 'FAQPage-Markup erhöht Sichtbarkeit und Nutzererfahrung.', points: 4 },
+            { id: 'structured_data_general', cat: 'experience', label: 'Weitere strukturierte Daten', desc: 'Zusätzliche Schema.org-Typen (Breadcrumb, Product usw.) vorhanden.', points: 3 },
+            { id: 'canonical', cat: 'trust', label: 'Canonical-Tag vorhanden', desc: 'Ein kanonischer Link verhindert Duplicate-Content-Probleme.', points: 5 },
+        ];
+
+        const CAT_NAMES = { trust: 'Vertrauen', expertise: 'Expertise', authority: 'Autorität', experience: 'Experience' };
+
+        async function startAnalysis() {
+            const raw = document.getElementById('url-input').value.trim();
+            if (!raw) { showError('Bitte gib eine URL ein.'); return; }
+
+            let url = raw;
+            if (!url.startsWith('http')) url = 'https://' + url;
+
+            try { new URL(url); } catch(e) { showError('Ungültige URL. Bitte vollständige URL eingeben (z.B. https://beispiel.de).'); return; }
+
+            document.getElementById('results').classList.add('hidden');
+            document.getElementById('error-box').classList.add('hidden');
+            document.getElementById('loading').classList.remove('hidden');
+            setLoadingMsg('Lade Seiteninhalt...');
+
+            let html = '';
+            try {
+                const proxyUrl = 'https://api.allorigins.win/get?url=' + encodeURIComponent(url);
+                const resp = await fetch(proxyUrl, { signal: AbortSignal.timeout(15000) });
+                const data = await resp.json();
+                html = data.contents || '';
+            } catch(e) {
+                document.getElementById('loading').classList.add('hidden');
+                showError('Seite konnte nicht geladen werden. Manche Seiten blockieren externe Anfragen. Du kannst die Analyse trotzdem manuell durchführen.');
+                // Show manual checklist instead
+                runAnalysis(url, '');
+                return;
+            }
+
+            setLoadingMsg('Analysiere EEAT-Signale...');
+            await new Promise(r => setTimeout(r, 300));
+            runAnalysis(url, html);
+        }
+
+        function setLoadingMsg(msg) { document.getElementById('loading-msg').textContent = msg; }
+        function showError(msg) {
+            document.getElementById('loading').classList.add('hidden');
+            document.getElementById('error-box').classList.remove('hidden');
+            document.getElementById('error-msg').textContent = msg;
+        }
+
+        function runAnalysis(url, html) {
+            const lower = html.toLowerCase();
+            const isHttps = url.startsWith('https://');
+
+            const results = {};
+
+            // Trust
+            results.https = isHttps;
+            results.impressum = /impressum/i.test(html);
+            results.datenschutz = /datenschutz|privacy/i.test(html);
+            results.contact = /@[a-z0-9.-]+\.[a-z]{2,}/.test(html) || /tel:|telefon|phone/i.test(html) || /\+49|\+43|\+41/.test(html);
+            results.canonical = /<link[^>]+rel=["']canonical["']/i.test(html);
+
+            // Expertise
+            results.author_name = /"@type"\s*:\s*"Person"/.test(html) || /author|autor/i.test(html);
+            results.person_schema = /"@type"\s*:\s*"Person"/.test(html);
+            results.org_schema = /"@type"\s*:\s*"Organization"/.test(html);
+            results.article_schema = /"@type"\s*:\s*"Article"/.test(html) || /"@type"\s*:\s*"BlogPosting"/.test(html);
+            results.external_links = (html.match(/<a[^>]+href=["']https?:\/\/(?!shift07\.ai)[^"']+["']/gi) || []).length >= 2;
+
+            // Authority
+            results.og_site_name = /og:site_name/i.test(html) || /"name"\s*:\s*"[^"]{3,}"/.test(html);
+            results.social_links = /linkedin\.com|twitter\.com|x\.com|facebook\.com|instagram\.com/i.test(html);
+            results.same_as = /sameAs/i.test(html);
+            results.backlinks_hint = /sitemap\.xml|feed\.xml|rss/i.test(html);
+
+            // Experience
+            results.date_published = /datePublished|published_time|article:published|veröffentlicht|datum/i.test(html);
+            results.date_modified = /dateModified|modified_time|aktualisiert|updated/i.test(html);
+            results.images = (html.match(/<img[^>]+alt=["'][^"']{3,}["']/gi) || []).length >= 1;
+            const plainText = html.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ');
+            results.word_count = plainText.trim().split(/\s+/).length >= 300;
+            results.faq_schema = /FAQPage|faqpage/i.test(html);
+            const schemaMatches = (html.match(/"@type"\s*:/gi) || []).length;
+            results.structured_data_general = schemaMatches >= 3;
+
+            // If no HTML was loaded, all fail except HTTPS
+            if (!html) {
+                Object.keys(results).forEach(k => { if (k !== 'https') results[k] = null; });
+            }
+
+            displayResults(url, results);
+        }
+
+        function displayResults(url, results) {
+            document.getElementById('loading').classList.add('hidden');
+            document.getElementById('results').classList.remove('hidden');
+
+            let totalPoints = 0, maxPoints = 0, passed = 0, failed = 0;
+            const catScores = { trust: { got: 0, max: 0 }, expertise: { got: 0, max: 0 }, authority: { got: 0, max: 0 }, experience: { got: 0, max: 0 } };
+            const failedChecks = [];
+
+            CHECKS.forEach(check => {
+                maxPoints += check.points;
+                catScores[check.cat].max += check.points;
+                const val = results[check.id];
+                if (val === true) { totalPoints += check.points; catScores[check.cat].got += check.points; passed++; }
+                else if (val === false) { failed++; failedChecks.push({ ...check, score: check.points }); }
+            });
+
+            const score = html ? Math.round((totalPoints / maxPoints) * 100) : Math.round((totalPoints / maxPoints) * 100);
+            const actualScore = Math.round((totalPoints / maxPoints) * 100);
+
+            // Animate score ring
+            const circumference = 364.4;
+            const offset = circumference - (actualScore / 100) * circumference;
+            const circle = document.getElementById('score-circle');
+            circle.style.strokeDashoffset = circumference;
+            setTimeout(() => { circle.style.strokeDashoffset = offset; }, 100);
+
+            // Color ring by score
+            if (actualScore >= 75) circle.setAttribute('stroke', '#34d399');
+            else if (actualScore >= 50) circle.setAttribute('stroke', '#fbbf24');
+            else circle.setAttribute('stroke', '#f87171');
+
+            // Score label
+            document.getElementById('score-number').textContent = actualScore;
+            document.getElementById('pass-count').textContent = passed;
+            document.getElementById('fail-count').textContent = failed;
+
+            let scoreLabel, scoreDesc;
+            if (actualScore >= 80) { scoreLabel = 'Hervorragend'; scoreDesc = 'Deine Website zeigt starke EEAT-Signale. Google stuft solche Seiten als vertrauenswürdig ein.'; }
+            else if (actualScore >= 60) { scoreLabel = 'Gut'; scoreDesc = 'Solide EEAT-Basis, aber es gibt noch Optimierungspotenzial bei einigen Signalen.'; }
+            else if (actualScore >= 40) { scoreLabel = 'Ausbaufähig'; scoreDesc = 'Mehrere wichtige EEAT-Signale fehlen. Das kann Rankings im KI-Zeitalter schwächen.'; }
+            else { scoreLabel = 'Kritisch'; scoreDesc = 'Viele EEAT-Signale fehlen. Dringend handeln, um Google-Vertrauen aufzubauen.'; }
+
+            document.getElementById('score-label').textContent = `EEAT-Score: ${scoreLabel}`;
+            document.getElementById('score-description').textContent = scoreDesc;
+
+            // Category scores
+            ['trust', 'expertise', 'authority', 'experience'].forEach(cat => {
+                const pct = catScores[cat].max > 0 ? Math.round((catScores[cat].got / catScores[cat].max) * 100) : 0;
+                const el = document.getElementById('cat-' + cat);
+                el.textContent = pct + '%';
+                el.className = 'text-xl font-bold ' + (pct >= 75 ? 'text-emerald-400' : pct >= 50 ? 'text-yellow-400' : 'text-red-400');
+            });
+
+            // Detailed checks list
+            const checksList = document.getElementById('checks-list');
+            checksList.innerHTML = '';
+            CHECKS.forEach(check => {
+                const val = results[check.id];
+                let icon, cls;
+                if (val === true) { icon = '✓'; cls = 'text-emerald-400'; }
+                else if (val === null) { icon = '?'; cls = 'text-gray-500'; }
+                else { icon = '✗'; cls = 'text-red-400'; }
+                checksList.innerHTML += `
+                    <div class="flex items-start gap-3 p-3 bg-slate-900/40 rounded-xl">
+                        <span class="text-lg font-bold ${cls} w-5 flex-shrink-0">${icon}</span>
+                        <div class="flex-1">
+                            <div class="flex items-center gap-2">
+                                <span class="text-sm font-semibold text-white">${check.label}</span>
+                                <span class="text-xs text-gray-500 px-2 py-0.5 bg-slate-800 rounded-full">${CAT_NAMES[check.cat]}</span>
+                                <span class="text-xs text-blue-400 ml-auto">+${check.points} Pkt</span>
+                            </div>
+                            <p class="text-xs text-gray-400 mt-1">${check.desc}</p>
+                        </div>
+                    </div>`;
+            });
+
+            // Recommendations
+            const recList = document.getElementById('recommendations-list');
+            recList.innerHTML = '';
+            const sorted = [...failedChecks].sort((a, b) => b.score - a.score).slice(0, 5);
+            if (sorted.length === 0) {
+                recList.innerHTML = '<p class="text-emerald-400 text-sm">Sehr gut! Keine kritischen EEAT-Lücken gefunden.</p>';
+            } else {
+                sorted.forEach((check, i) => {
+                    recList.innerHTML += `
+                        <div class="flex items-start gap-3 p-3 bg-slate-900/40 rounded-xl border-l-2 border-red-500/40">
+                            <span class="text-sm font-bold text-gray-500 w-5">${i + 1}.</span>
+                            <div>
+                                <p class="text-sm font-semibold text-white">${check.label} <span class="text-xs text-red-400">(+${check.score} Punkte möglich)</span></p>
+                                <p class="text-xs text-gray-400 mt-1">${check.desc}</p>
+                            </div>
+                        </div>`;
+                });
+            }
+        }
+    </script>
+</body>
+</html>
