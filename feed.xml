@@ -5,8 +5,24 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Wed, 20 May 2026 01:28:53 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 20 May 2026 03:01:55 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Google My Business optimieren: Anleitung für lokale Unternehmen 2026</title>
+      <link>https://shift07.ai/blog/google-my-business-optimieren.html</link>
+      <guid>https://shift07.ai/blog/google-my-business-optimieren.html</guid>
+      <pubDate>Wed, 20 May 2026 03:01:47 +0000</pubDate>
+      <description>Google My Business optimieren: Schritt-für-Schritt-Anleitung mit Checkliste. So wird dein Unternehmen in der Google-Suche und auf Google Maps sichtbar.</description>
+      <category>Lokales SEO</category>
+    </item>
+    <item>
+      <title>Google Business Profile Posts richtig nutzen: Anleitung 2026</title>
+      <link>https://shift07.ai/blog/google-business-profile-posts-nutzen.html</link>
+      <guid>https://shift07.ai/blog/google-business-profile-posts-nutzen.html</guid>
+      <pubDate>Wed, 20 May 2026 03:01:24 +0000</pubDate>
+      <description>Google Business Profile Posts gezielt einsetzen: Welche Post-Typen es gibt, wie oft du posten solltest und wie Beiträge deine lokale Sichtbarkeit erhöhen.</description>
+      <category>Lokal-SEO</category>
+    </item>
     <item>
       <title>Lokale Konkurrenzanalyse: Wettbewerber im lokalen SEO analysieren</title>
       <link>https://shift07.ai/blog/lokale-konkurrenzanalyse-seo.html</link>
@@ -149,22 +165,6 @@
       <guid>https://shift07.ai/blog/service-worker-offline-caching-seo.html</guid>
       <pubDate>Sun, 17 May 2026 03:03:46 +0000</pubDate>
       <description>Service Worker und Offline-Caching für SEO: Wie Progressive Web Apps mit cleverer Cache-Strategie Ladezeiten verbessern, Core Web Vitals optimieren und Google-Rankings steigern.</description>
-      <category>Performance</category>
-    </item>
-    <item>
-      <title>Above-the-Fold-Optimierung für Mobile: LCP auf Smartphones verbessern</title>
-      <link>https://shift07.ai/blog/above-the-fold-optimierung-mobile-lcp-smartphones.html</link>
-      <guid>https://shift07.ai/blog/above-the-fold-optimierung-mobile-lcp-smartphones.html</guid>
-      <pubDate>Sun, 17 May 2026 01:25:02 +0000</pubDate>
-      <description>Wie du den Above-the-Fold-Bereich auf Smartphones für bessere LCP-Werte optimierst: Hero-Bilder, Critical CSS, Schriftarten und Render-Reihenfolge auf mobilen Geräten erklärt.</description>
-      <category>Performance</category>
-    </item>
-    <item>
-      <title>JavaScript-Performance für SPAs: Bundle-Größen und Code-Splitting</title>
-      <link>https://shift07.ai/blog/javascript-performance-spa-bundle-groessen-code-splitting.html</link>
-      <guid>https://shift07.ai/blog/javascript-performance-spa-bundle-groessen-code-splitting.html</guid>
-      <pubDate>Sun, 17 May 2026 01:21:35 +0000</pubDate>
-      <description>Wie du JavaScript-Bundle-Größen in Single-Page-Apps reduzierst: Code-Splitting, Lazy Loading, Tree Shaking und dynamische Imports erklärt. Mit konkreten Beispielen für React, Vue und Angular.</description>
       <category>Performance</category>
     </item>
   </channel>
