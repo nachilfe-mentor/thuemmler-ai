@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lokale Landing Page Checker – Standortseiten prüfen | Shift07</title>
+    <meta name="description" content="Kostenloser Lokale Landing Page Checker: Prüfe deine Standortseite auf Stadt im Title, LocalBusiness Schema, NAP-Daten, Google Maps, FAQ und einzigartigen Content in Sekunden.">
+    <meta name="author" content="Thümmler AI GmbH">
+    <link rel="icon" type="image/png" href="/logo.png">
+    <link rel="canonical" href="https://shift07.ai/tools/lokale-landing-page-checker.html">
+    <meta property="og:title" content="Lokale Landing Page Checker – Standortseiten prüfen | Shift07">
+    <meta property="og:description" content="Prüfe deine lokale Landing Page auf alle wichtigen Ranking-Elemente: Stadt im Title, Schema, NAP, Maps, FAQ und einzigartigen Content.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://shift07.ai/tools/lokale-landing-page-checker.html">
+    <meta property="og:image" content="https://shift07.ai/tools/images/lokale-landing-page-checker.png">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="Shift07">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Lokale Landing Page Checker – Standortseiten prüfen">
+    <meta name="twitter:description" content="Prüfe deine lokale Landing Page auf Stadt im Title, Schema, NAP, Maps, FAQ und einzigartigen Content.">
+    <meta name="twitter:image" content="https://shift07.ai/tools/images/lokale-landing-page-checker.png">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Lokale Landing Page Checker",
+      "description": "Kostenloser Checker für lokale Landing Pages: prüft Stadt im Title, LocalBusiness Schema, NAP-Daten, Google Maps, FAQ und einzigartigen Content.",
+      "url": "https://shift07.ai/tools/lokale-landing-page-checker.html",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+      "provider": { "@type": "Organization", "name": "Shift07", "url": "https://shift07.ai" }
+    }
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K1S1RXBDS8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date()); gtag('config', 'G-K1S1RXBDS8');
+    </script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8475857002943858" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: { extend: { fontFamily: { 'inter': ['Inter', 'system-ui', '-apple-system', 'sans-serif'] } } }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+        .badge-ok { background: rgba(34,197,94,0.15); color: #4ade80; border: 1px solid rgba(34,197,94,0.3); }
+        .badge-warn { background: rgba(245,158,11,0.15); color: #fbbf24; border: 1px solid rgba(245,158,11,0.3); }
+        .badge-err { background: rgba(239,68,68,0.15); color: #f87171; border: 1px solid rgba(239,68,68,0.3); }
+        .score-ring { stroke-dasharray: 251; stroke-dashoffset: 251; transition: stroke-dashoffset 1.2s ease; }
+        .fade-in { animation: fadeIn 0.4s ease forwards; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+        .check-item { animation: fadeIn 0.3s ease forwards; }
+    </style>
+</head>
+<body class="bg-slate-900 text-white min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-slate-900/80 backdrop-blur-xl border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <a href="/" class="flex items-center gap-2">
+                    <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                    <span class="text-xl font-bold text-white">Shift07</span>
+                </a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="/" class="text-gray-300 hover:text-white transition-colors">SEO-Tool</a>
+                    <a href="/blog/" class="text-gray-300 hover:text-white transition-colors">Blog</a>
+                    <a href="/tools/" class="text-white font-medium border-b-2 border-blue-500 pb-0.5">Tools</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-gray-400 hover:text-white">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                </button>
+            </div>
+            <div id="mobile-menu" class="hidden md:hidden pb-4 space-y-2">
+                <a href="/" class="block text-sm text-gray-300 hover:text-white py-2">SEO-Tool</a>
+                <a href="/blog/" class="block text-sm text-gray-300 hover:text-white py-2">Blog</a>
+                <a href="/tools/" class="block text-sm text-gray-300 hover:text-white py-2">Tools</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="pt-24 pb-12 px-4 bg-gradient-to-b from-slate-900 to-slate-800">
+        <div class="max-w-3xl mx-auto text-center">
+            <span class="inline-flex items-center gap-2 text-sm font-semibold px-4 py-1.5 bg-green-500/10 text-green-400 rounded-full border border-green-500/20 mb-6">
+                <span>📄</span> Kostenloser Lokale Landing Page Checker
+            </span>
+            <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-4 leading-tight">Lokale Landing Page Checker</h1>
+            <p class="text-lg text-gray-400 mb-8">Prüfe, ob deine Standortseite alle wichtigen lokalen Ranking-Elemente enthält — von Stadt im Title über Schema Markup bis FAQ und einzigartigem Content.</p>
+
+            <!-- Input -->
+            <div class="bg-slate-800/80 border border-white/10 rounded-2xl p-6">
+                <div class="flex flex-col sm:flex-row gap-3">
+                    <input type="url" id="url-input" placeholder="https://deine-firma.de/standort/muenchen"
+                        class="flex-1 bg-slate-700/60 border border-white/10 rounded-xl px-4 py-3.5 text-white placeholder-gray-500 focus:outline-none focus:border-green-500 focus:ring-1 focus:ring-green-500 transition-all text-sm">
+                    <button onclick="startCheck()" id="check-btn"
+                        class="bg-gradient-to-r from-green-600 to-teal-600 hover:from-green-500 hover:to-teal-500 text-white px-8 py-3.5 rounded-xl font-semibold transition-all whitespace-nowrap shadow-lg shadow-green-900/30">
+                        Seite prüfen
+                    </button>
+                </div>
+                <p class="text-xs text-gray-500 mt-3">Gib die URL deiner Standort- bzw. Stadtseite ein. Analyse direkt im Browser, keine Anmeldung.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Loading -->
+    <div id="loading" class="hidden max-w-3xl mx-auto px-4 py-10 text-center">
+        <div class="inline-flex items-center gap-3 bg-slate-800/80 border border-white/10 rounded-2xl px-8 py-6">
+            <svg class="animate-spin w-6 h-6 text-green-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"></path>
+            </svg>
+            <span class="text-gray-300" id="loading-text">Seite wird analysiert...</span>
+        </div>
+    </div>
+
+    <!-- Error -->
+    <div id="error-box" class="hidden max-w-3xl mx-auto px-4 py-6">
+        <div class="bg-red-900/20 border border-red-500/30 rounded-2xl p-6 text-center">
+            <p class="text-red-400 font-semibold mb-1">Analyse nicht möglich</p>
+            <p class="text-gray-400 text-sm" id="error-text"></p>
+        </div>
+    </div>
+
+    <!-- Results -->
+    <div id="results" class="hidden max-w-4xl mx-auto px-4 pb-16 fade-in">
+
+        <!-- Score -->
+        <div class="my-10 flex flex-col md:flex-row gap-6 items-center justify-center">
+            <div class="relative w-44 h-44">
+                <svg class="w-44 h-44 -rotate-90" viewBox="0 0 88 88">
+                    <circle cx="44" cy="44" r="40" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="8"/>
+                    <circle id="score-circle" cx="44" cy="44" r="40" fill="none" stroke="#22c55e" stroke-width="8" stroke-linecap="round" class="score-ring"/>
+                </svg>
+                <div class="absolute inset-0 flex flex-col items-center justify-center">
+                    <span id="score-number" class="text-4xl font-extrabold text-white">0</span>
+                    <span class="text-xs text-gray-400 font-medium">/ 100 Punkte</span>
+                </div>
+            </div>
+            <div>
+                <h2 class="text-2xl font-bold text-white mb-1">Landing-Page-Score</h2>
+                <p id="score-desc" class="text-gray-400 mb-3">Auswertung läuft...</p>
+                <div class="flex flex-wrap gap-2">
+                    <span id="badge-city" class="text-xs font-semibold px-3 py-1 rounded-full hidden">Stadt</span>
+                    <span id="badge-schema" class="text-xs font-semibold px-3 py-1 rounded-full hidden">Schema</span>
+                    <span id="badge-nap" class="text-xs font-semibold px-3 py-1 rounded-full hidden">NAP</span>
+                    <span id="badge-content" class="text-xs font-semibold px-3 py-1 rounded-full hidden">Content</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Checks Grid -->
+        <div id="checks-grid" class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8"></div>
+
+        <!-- Top Recommendations -->
+        <div id="recommendations" class="bg-slate-800/50 border border-white/10 rounded-2xl p-6 mb-8 hidden">
+            <h3 class="text-lg font-bold text-white mb-4 flex items-center gap-2">
+                <span>💡</span> Top-Empfehlungen für deine Standortseite
+            </h3>
+            <ol id="reco-list" class="space-y-3 text-sm text-gray-300 list-decimal list-inside"></ol>
+        </div>
+
+        <!-- Raw data accordion -->
+        <div id="raw-section" class="hidden">
+            <button onclick="toggleRaw()" class="text-sm text-gray-500 hover:text-gray-300 transition-colors mb-3 flex items-center gap-1">
+                <svg id="raw-chevron" class="w-4 h-4 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                Gefundene Daten anzeigen
+            </button>
+            <div id="raw-content" class="hidden bg-slate-800/30 border border-white/10 rounded-xl p-4 text-xs text-gray-400 overflow-x-auto">
+                <pre id="raw-json"></pre>
+            </div>
+        </div>
+    </div>
+
+    <!-- Info Section -->
+    <section class="py-16 px-4 border-t border-white/5">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-2xl font-bold text-white text-center mb-10">Was prüft der Lokale Landing Page Checker?</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-slate-800/50 border border-white/10 rounded-2xl p-6">
+                    <div class="text-3xl mb-3">🏙️</div>
+                    <h3 class="font-bold text-white mb-2">Lokaler Bezug</h3>
+                    <p class="text-sm text-gray-400">Erkennt, ob Stadt bzw. Ort in Title, H1 und URL vorkommt — die Grundlage jeder rankenden Standortseite.</p>
+                </div>
+                <div class="bg-slate-800/50 border border-white/10 rounded-2xl p-6">
+                    <div class="text-3xl mb-3">📝</div>
+                    <h3 class="font-bold text-white mb-2">Einzigartiger Content</h3>
+                    <p class="text-sm text-gray-400">Misst die Textmenge und prüft auf FAQ-Inhalte — gegen dünne Doorway-Pages, die Google abstraft.</p>
+                </div>
+                <div class="bg-slate-800/50 border border-white/10 rounded-2xl p-6">
+                    <div class="text-3xl mb-3">📍</div>
+                    <h3 class="font-bold text-white mb-2">Conversion & Schema</h3>
+                    <p class="text-sm text-gray-400">Prüft NAP-Daten, Click-to-Call, eingebettete Maps und LocalBusiness Schema Markup.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related -->
+    <section class="py-12 px-4 bg-slate-800/30 border-t border-white/5">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-xl font-bold text-white mb-6">Weitere Lokales SEO Tools & Artikel</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <a href="/blog/lokale-landing-pages-erstellen.html" class="bg-slate-800/50 border border-white/10 rounded-xl p-4 hover:border-green-500/40 transition-all group">
+                    <div class="text-2xl mb-2">📖</div>
+                    <p class="font-semibold text-white group-hover:text-green-400 transition-colors text-sm">Lokale Landing Pages erstellen</p>
+                    <p class="text-xs text-gray-500 mt-1">Anleitung für rankende Standortseiten</p>
+                </a>
+                <a href="/tools/lokales-seo-audit.html" class="bg-slate-800/50 border border-white/10 rounded-xl p-4 hover:border-green-500/40 transition-all group">
+                    <div class="text-2xl mb-2">🔍</div>
+                    <p class="font-semibold text-white group-hover:text-green-400 transition-colors text-sm">Lokales SEO Audit</p>
+                    <p class="text-xs text-gray-500 mt-1">Gesamte Website lokal prüfen</p>
+                </a>
+                <a href="/tools/nap-konsistenz-checker.html" class="bg-slate-800/50 border border-white/10 rounded-xl p-4 hover:border-green-500/40 transition-all group">
+                    <div class="text-2xl mb-2">📍</div>
+                    <p class="font-semibold text-white group-hover:text-green-400 transition-colors text-sm">NAP-Konsistenz-Checker</p>
+                    <p class="text-xs text-gray-500 mt-1">Name, Adresse, Telefon vergleichen</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/10 bg-slate-900/50 py-12 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="flex items-center gap-2">
+                    <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                    <span class="text-lg font-bold text-white">Shift07</span>
+                </div>
+                <div class="flex items-center space-x-6 text-sm text-gray-400">
+                    <a href="/impressum.html" class="hover:text-white transition-colors">Impressum</a>
+                    <a href="/datenschutz.html" class="hover:text-white transition-colors">Datenschutz</a>
+                    <a href="/agb.html" class="hover:text-white transition-colors">AGB</a>
+                </div>
+                <p class="text-sm text-gray-500">&copy; 2026 Thümmler AI GmbH</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+    document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+        document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+
+    document.getElementById('url-input').addEventListener('keydown', function(e) {
+        if (e.key === 'Enter') startCheck();
+    });
+
+    function toggleRaw() {
+        const c = document.getElementById('raw-content');
+        const ch = document.getElementById('raw-chevron');
+        c.classList.toggle('hidden');
+        ch.style.transform = c.classList.contains('hidden') ? '' : 'rotate(90deg)';
+    }
+
+    const CHECKS = [
+        { id: 'city_title', label: 'Ort im Title-Tag', weight: 12, tip: 'Nimm den Ort in den Title auf, z.B. "Elektriker München | Firma XY". Das ist das stärkste Signal für lokale Rankings.' },
+        { id: 'city_h1', label: 'Ort in der H1-Überschrift', weight: 11, tip: 'Deine H1 sollte Leistung + Ort kombinieren, z.B. "Ihr Elektriker in München".' },
+        { id: 'city_url', label: 'Ort im URL-Slug', weight: 6, tip: 'Verwende sprechende URLs mit Ortsbezug, z.B. /standort/muenchen oder /elektriker-muenchen.' },
+        { id: 'content_length', label: 'Ausreichend einzigartiger Text (400+ Wörter)', weight: 14, tip: 'Standortseiten brauchen mindestens 400–600 Wörter eigenen, ortsspezifischen Inhalt — sonst gelten sie als dünne Doorway-Page.' },
+        { id: 'schema_local', label: 'LocalBusiness Schema mit Adresse', weight: 13, tip: 'Füge ein LocalBusiness-JSON-LD mit der exakten Standortadresse ein. Siehe unsere LocalBusiness-Schema-Anleitung.' },
+        { id: 'address', label: 'Standort-Adresse sichtbar', weight: 9, tip: 'Zeige die vollständige Adresse des Standorts (Straße + PLZ + Ort) — konsistent mit dem Google Business Profil.' },
+        { id: 'phone_link', label: 'Click-to-Call Telefon-Link', weight: 9, tip: 'Mache die Telefonnummer als <a href="tel:..."> anklickbar, damit Mobilnutzer direkt anrufen.' },
+        { id: 'map_embed', label: 'Google Maps eingebunden', weight: 6, tip: 'Bette eine Karte ein, die genau diesen Standort zeigt — hilft Nutzern und Google bei der Verortung.' },
+        { id: 'opening_hours', label: 'Öffnungszeiten / Anfahrt', weight: 5, tip: 'Ergänze Öffnungszeiten und Anfahrtshinweise (ÖPNV, Parken) für den Standort.' },
+        { id: 'faq', label: 'FAQ / häufige Fragen', weight: 6, tip: 'Eine lokale FAQ mit Ortsbezug erhöht den Inhalt und kann FAQ-Rich-Results auslösen.' },
+        { id: 'reviews', label: 'Bewertungen / Referenzen', weight: 5, tip: 'Binde echte Bewertungen oder Referenzprojekte aus der Region ein — starkes Vertrauenssignal.' },
+        { id: 'cta', label: 'Klarer Call-to-Action', weight: 4, tip: 'Setze einen deutlichen CTA: Kontaktformular, Terminbuchung oder "Jetzt anrufen".' },
+    ];
+
+    const SCORE_DESCS = [
+        [0,  39,  'text-red-400',   '⚠️ Schwach — diese Seite wird für lokale Suchen kaum ranken. Sofortiger Handlungsbedarf!'],
+        [40, 59,  'text-orange-400','🔧 Ausbaufähig — wichtige Landing-Page-Elemente fehlen. Mit gezielten Ergänzungen schnell verbesserbar.'],
+        [60, 74,  'text-yellow-400','👍 Solide — gute Basis, aber Lücken kosten Sichtbarkeit und Conversions.'],
+        [75, 89,  'text-teal-400',  '✅ Gut gemacht — deine Standortseite enthält die meisten Ranking-Elemente. Feintuning möglich.'],
+        [90, 100, 'text-green-400', '🏆 Exzellent — eine vorbildliche lokale Landing Page. Weiter so!'],
+    ];
+
+    function getScoreDesc(score) {
+        return SCORE_DESCS.find(([min, max]) => score >= min && score <= max) || SCORE_DESCS[0];
+    }
+
+    // German + common cities to detect a local reference
+    const CITIES = ['berlin','hamburg','münchen','munchen','muenchen','munich','köln','koeln','frankfurt','stuttgart',
+        'düsseldorf','duesseldorf','dortmund','essen','leipzig','dresden','hannover','nürnberg','nuernberg','potsdam',
+        'augsburg','freiburg','heidelberg','mannheim','bonn','wiesbaden','münster','muenster','karlsruhe','bielefeld',
+        'wuppertal','bochum','bremen','aachen','kiel','lübeck','luebeck','rostock','erfurt','mainz','kassel','saarbrücken',
+        'krefeld','chemnitz','halle','magdeburg','würzburg','wuerzburg','regensburg','ingolstadt','ulm','heilbronn',
+        'pforzheim','göttingen','goettingen','koblenz','bremerhaven','jena','gera','siegen','hildesheim','oldenburg'];
+
+    async function startCheck() {
+        const rawUrl = document.getElementById('url-input').value.trim();
+        if (!rawUrl) { alert('Bitte eine URL eingeben.'); return; }
+        let url = rawUrl;
+        if (!/^https?:\/\//i.test(url)) url = 'https://' + url;
+
+        document.getElementById('results').classList.add('hidden');
+        document.getElementById('error-box').classList.add('hidden');
+        document.getElementById('loading').classList.remove('hidden');
+        document.getElementById('loading-text').textContent = 'Seite wird abgerufen...';
+        document.getElementById('check-btn').disabled = true;
+
+        try {
+            const proxyUrl = 'https://api.allorigins.win/get?url=' + encodeURIComponent(url);
+            let html = '';
+            try {
+                document.getElementById('loading-text').textContent = 'Seiteninhalte werden analysiert...';
+                const resp = await fetch(proxyUrl, { signal: AbortSignal.timeout(15000) });
+                if (resp.ok) {
+                    const data = await resp.json();
+                    html = data.contents || '';
+                }
+            } catch(e) { /* fall through with empty html */ }
+
+            if (!html) {
+                document.getElementById('loading').classList.add('hidden');
+                document.getElementById('error-box').classList.remove('hidden');
+                document.getElementById('error-text').textContent = 'Die Seite konnte nicht abgerufen werden. Prüfe die URL oder versuche es später erneut.';
+                document.getElementById('check-btn').disabled = false;
+                return;
+            }
+
+            document.getElementById('loading-text').textContent = 'Landing-Page-Signale werden ausgewertet...';
+            const results = analyzeHtml(html, url);
+            showResults(results, url);
+        } catch(err) {
+            document.getElementById('loading').classList.add('hidden');
+            document.getElementById('error-box').classList.remove('hidden');
+            document.getElementById('error-text').textContent = 'Fehler beim Abruf: ' + err.message;
+        }
+        document.getElementById('check-btn').disabled = false;
+    }
+
+    function stripTags(html) {
+        let s = html.replace(/<script[\s\S]*?<\/script>/gi, ' ')
+                    .replace(/<style[\s\S]*?<\/style>/gi, ' ')
+                    .replace(/<[^>]+>/g, ' ')
+                    .replace(/&nbsp;/g, ' ')
+                    .replace(/\s+/g, ' ');
+        return s.trim();
+    }
+
+    function analyzeHtml(html, url) {
+        const lower = html.toLowerCase();
+        const checks = {};
+        const detected = {};
+
+        const titleMatch = html.match(/<title[^>]*>([\s\S]*?)<\/title>/i);
+        const title = titleMatch ? titleMatch[1].toLowerCase() : '';
+        const h1Match = html.match(/<h1[^>]*>([\s\S]*?)<\/h1>/i);
+        const h1 = h1Match ? h1Match[1].toLowerCase().replace(/<[^>]+>/g, ' ') : '';
+        const urlLower = url.toLowerCase();
+
+        const cityInTitle = CITIES.find(c => title.includes(c));
+        const cityInH1 = CITIES.find(c => h1.includes(c));
+        const cityInUrl = CITIES.find(c => urlLower.includes(c));
+        detected.cityTitle = cityInTitle || null;
+        detected.cityH1 = cityInH1 || null;
+        detected.cityUrl = cityInUrl || null;
+
+        checks.city_title = !!cityInTitle;
+        checks.city_h1 = !!cityInH1;
+        checks.city_url = !!cityInUrl;
+
+        const text = stripTags(html);
+        const wordCount = text ? text.split(/\s+/).length : 0;
+        detected.wordCount = wordCount;
+        checks.content_length = wordCount >= 400;
+
+        const localBusinessTypes = ['localbusiness','dentist','doctor','restaurant','store','autorepair',
+            'electrician','plumber','hairsalon','hotel','fitnesscenter','beautysalon','foodestablishment',
+            'medicalclinic','veterinarycare','gym','bakery','realestateagent','accountingservice','professionalservice'];
+        const hasJsonLd = /<script[^>]+type=["']application\/ld\+json["']/i.test(html);
+        const hasAddressInSchema = /"address"\s*:/i.test(html) && /"streetaddress"\s*:/i.test(html.replace(/\s/g,''));
+        checks.schema_local = hasJsonLd && (
+            localBusinessTypes.some(t => new RegExp('"@type"\\s*:\\s*"' + t + '"', 'i').test(html)) ||
+            /"streetaddress"/i.test(html.replace(/\s/g,''))
+        );
+
+        checks.address = /stra(?:ße|sse|ss?e)\s+\d+|str\.\s*\d+|\d+\s+stra/i.test(html) ||
+            /\b\d{5}\s+[A-ZÄÖÜ][a-zäöüß]/i.test(html);
+
+        checks.phone_link = /href=["']tel:/i.test(html);
+
+        checks.map_embed = /google\.com\/maps|maps\.googleapis|maps\.google|<iframe[^>]+maps/i.test(html);
+
+        checks.opening_hours = /öffnungszeiten|opening.?hours|mo\s*[-–]\s*fr|montag|geöffnet|anfahrt|parkpl|öpnv/i.test(html);
+
+        checks.faq = /faq|häufige fragen|haeufige fragen|"@type"\s*:\s*"faqpage"|oft gestellt/i.test(html);
+
+        checks.reviews = /bewertung|kundenstimm|referenz|rezension|"@type"\s*:\s*"review"|"aggregaterating"|sterne|google bewert/i.test(lower);
+
+        checks.cta = /href=["']tel:|kontaktformular|termin (buchen|vereinbaren)|jetzt anrufen|angebot anfordern|kontakt aufnehmen|<form/i.test(lower);
+
+        return { checks, detected };
+    }
+
+    function showResults(result, url) {
+        const checks = result.checks;
+        const detected = result.detected;
+        document.getElementById('loading').classList.add('hidden');
+        document.getElementById('results').classList.remove('hidden');
+
+        let totalWeight = 0, earned = 0;
+        CHECKS.forEach(c => { totalWeight += c.weight; if (checks[c.id]) earned += c.weight; });
+        const score = Math.round((earned / totalWeight) * 100);
+
+        const num = document.getElementById('score-number');
+        const circle = document.getElementById('score-circle');
+        const circumference = 251;
+        let current = 0;
+        const step = Math.max(score / 40, 1);
+        const timer = setInterval(() => {
+            current = Math.min(current + step, score);
+            num.textContent = Math.round(current);
+            circle.style.strokeDashoffset = circumference - (circumference * current / 100);
+            if (current >= score) clearInterval(timer);
+        }, 25);
+
+        const [,, colorClass, desc] = getScoreDesc(score);
+        num.className = 'text-4xl font-extrabold ' + colorClass;
+        document.getElementById('score-desc').innerHTML = desc;
+
+        const showBadge = (id, text, ok) => {
+            const el = document.getElementById(id);
+            el.textContent = text;
+            el.className = 'text-xs font-semibold px-3 py-1 rounded-full ' + (ok ? 'badge-ok' : 'badge-err');
+            el.classList.remove('hidden');
+        };
+        const cityOk = checks.city_title || checks.city_h1;
+        showBadge('badge-city', cityOk ? '✅ Ort erkannt' : '❌ Ort fehlt', cityOk);
+        showBadge('badge-schema', checks.schema_local ? '✅ Schema' : '❌ Schema fehlt', checks.schema_local);
+        showBadge('badge-nap', (checks.phone_link && checks.address) ? '✅ NAP' : '⚠️ NAP unvollständig', checks.phone_link && checks.address);
+        showBadge('badge-content', checks.content_length ? '✅ Content' : '❌ Zu dünn', checks.content_length);
+
+        const grid = document.getElementById('checks-grid');
+        grid.innerHTML = '';
+        CHECKS.forEach((c, i) => {
+            const ok = checks[c.id];
+            let extra = '';
+            if (c.id === 'content_length' && detected.wordCount != null) {
+                extra = ` <span class="text-gray-500">(${detected.wordCount} Wörter erkannt)</span>`;
+            }
+            const div = document.createElement('div');
+            div.className = 'check-item bg-slate-800/50 border rounded-xl p-4 ' + (ok ? 'border-green-500/20' : 'border-red-500/20');
+            div.style.animationDelay = (i * 40) + 'ms';
+            div.innerHTML = `
+                <div class="flex items-start gap-3">
+                    <span class="text-xl mt-0.5 flex-shrink-0">${ok ? '✅' : '❌'}</span>
+                    <div class="min-w-0">
+                        <p class="font-semibold text-sm text-white mb-1">${c.label}</p>
+                        ${!ok ? `<p class="text-xs text-gray-400 leading-relaxed">${c.tip}</p>` : `<p class="text-xs text-green-400/80">Vorhanden${extra}</p>`}
+                    </div>
+                    <span class="ml-auto flex-shrink-0 text-xs font-bold px-2 py-0.5 rounded ${ok ? 'badge-ok' : 'badge-err'}">${c.weight} Pkt</span>
+                </div>`;
+            grid.appendChild(div);
+        });
+
+        const failed = CHECKS.filter(c => !checks[c.id]).sort((a, b) => b.weight - a.weight).slice(0, 5);
+        if (failed.length > 0) {
+            document.getElementById('recommendations').classList.remove('hidden');
+            const list = document.getElementById('reco-list');
+            list.innerHTML = '';
+            failed.forEach(c => {
+                const li = document.createElement('li');
+                li.className = 'text-gray-300 leading-relaxed';
+                li.innerHTML = `<strong class="text-white">${c.label}:</strong> ${c.tip}`;
+                list.appendChild(li);
+            });
+        } else {
+            document.getElementById('recommendations').classList.add('hidden');
+        }
+
+        const meta = {
+            url, score,
+            ortImTitle: detected.cityTitle,
+            ortInH1: detected.cityH1,
+            ortInUrl: detected.cityUrl,
+            woerter: detected.wordCount,
+            localBusinessSchema: checks.schema_local,
+            adresse: checks.address,
+            clickToCall: checks.phone_link,
+            googleMaps: checks.map_embed,
+            oeffnungszeiten: checks.opening_hours,
+            faq: checks.faq,
+            bewertungen: checks.reviews,
+            cta: checks.cta,
+        };
+        document.getElementById('raw-section').classList.remove('hidden');
+        document.getElementById('raw-json').textContent = JSON.stringify(meta, null, 2);
+
+        if (window.gtag) gtag('event', 'landing_page_check', { score, url: url.substring(0, 60) });
+
+        window.scrollTo({ top: document.getElementById('results').offsetTop - 80, behavior: 'smooth' });
+    }
+    </script>
+</body>
+</html>
