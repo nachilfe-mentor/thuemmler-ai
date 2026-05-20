@@ -5,8 +5,24 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Wed, 20 May 2026 04:41:02 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 20 May 2026 04:43:06 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Core Web Vitals verbessern: LCP, CLS, INP optimieren - Schritt für Schritt</title>
+      <link>https://shift07.ai/blog/core-web-vitals-verbessern-lcp-cls-inp.html</link>
+      <guid>https://shift07.ai/blog/core-web-vitals-verbessern-lcp-cls-inp.html</guid>
+      <pubDate>Wed, 20 May 2026 04:42:58 +0000</pubDate>
+      <description>Core Web Vitals verbessern: Schritt-für-Schritt-Anleitung für LCP, CLS und INP. Konkrete Maßnahmen, Tools und Benchmarks für bessere Google-Rankings 2026.</description>
+      <category>Performance-SEO</category>
+    </item>
+    <item>
+      <title>Performance-Budget erstellen: Ladezeit planen statt hoffen (2026)</title>
+      <link>https://shift07.ai/blog/performance-budget-erstellen.html</link>
+      <guid>https://shift07.ai/blog/performance-budget-erstellen.html</guid>
+      <pubDate>Wed, 20 May 2026 04:42:35 +0000</pubDate>
+      <description>Performance-Budget erstellen: So legst du fest, wie viele Kilobyte deine Website wiegen darf, um schnell zu laden und die Core Web Vitals zu bestehen — mit kostenlosem Planer.</description>
+      <category>Performance</category>
+    </item>
     <item>
       <title>Lokales SEO für Restaurants: Mehr Gäste über Google gewinnen</title>
       <link>https://shift07.ai/blog/lokales-seo-restaurants.html</link>
@@ -150,22 +166,6 @@
       <pubDate>Mon, 18 May 2026 00:31:40 +0000</pubDate>
       <description>GEO (Generative Engine Optimization) ist die Weiterentwicklung von SEO für KI-Suchmaschinen. Erfahre wie du ChatGPT, Perplexity und Google AI Overviews als Quelle gewinnst.</description>
       <category>AI-SEO</category>
-    </item>
-    <item>
-      <title>Google AI Overviews und SEO 2026: Wie du in der KI-Suche sichtbar bleibst</title>
-      <link>https://shift07.ai/blog/google-ai-overviews-seo-2026.html</link>
-      <guid>https://shift07.ai/blog/google-ai-overviews-seo-2026.html</guid>
-      <pubDate>Mon, 18 May 2026 00:24:53 +0000</pubDate>
-      <description>Google AI Overviews verändern die Suche grundlegend. Erfahre, wie du deine Website für AI Overviews optimierst und in der KI-gesteuerten Suche 2026 sichtbar bleibst.</description>
-      <category>AI-SEO</category>
-    </item>
-    <item>
-      <title>Web Workers für JavaScript-Performance: Hauptthread entlasten</title>
-      <link>https://shift07.ai/blog/web-workers-javascript-performance-hauptthread-seo.html</link>
-      <guid>https://shift07.ai/blog/web-workers-javascript-performance-hauptthread-seo.html</guid>
-      <pubDate>Sun, 17 May 2026 04:48:57 +0000</pubDate>
-      <description>Web Workers in JavaScript richtig einsetzen: Wie du rechenintensive Aufgaben aus dem Hauptthread auslagern, INP verbessern und Core Web Vitals optimierst. Mit praktischen Beispielen.</description>
-      <category>Performance SEO</category>
     </item>
   </channel>
 </rss>
