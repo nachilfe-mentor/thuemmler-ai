@@ -5,14 +5,22 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Wed, 20 May 2026 03:05:31 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 20 May 2026 04:39:09 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>Lokales SEO für Restaurants: Mehr Gäste über Google gewinnen</title>
       <link>https://shift07.ai/blog/lokales-seo-restaurants.html</link>
       <guid>https://shift07.ai/blog/lokales-seo-restaurants.html</guid>
-      <pubDate>Wed, 20 May 2026 03:05:14 +0000</pubDate>
+      <pubDate>Wed, 20 May 2026 04:39:01 +0000</pubDate>
       <description>Lokales SEO für Restaurants: So gewinnst du über Google und Google Maps mehr Gäste — Google Business Profile, Bewertungen, Speisekarte, lokale Keywords und Website.</description>
+      <category>Lokal-SEO</category>
+    </item>
+    <item>
+      <title>Lokales SEO für Cafés und Bäckereien: Mehr Laufkundschaft über Google</title>
+      <link>https://shift07.ai/blog/lokales-seo-cafes-baeckereien.html</link>
+      <guid>https://shift07.ai/blog/lokales-seo-cafes-baeckereien.html</guid>
+      <pubDate>Wed, 20 May 2026 04:38:25 +0000</pubDate>
+      <description>Lokales SEO für Cafés und Bäckereien: So gewinnst du über Google und Google Maps mehr Laufkundschaft — Google Business Profile, Fotos, Bewertungen, lokale Keywords und eine schnelle Website.</description>
       <category>Lokal-SEO</category>
     </item>
     <item>
@@ -157,14 +165,6 @@
       <guid>https://shift07.ai/blog/web-workers-javascript-performance-hauptthread-seo.html</guid>
       <pubDate>Sun, 17 May 2026 04:48:57 +0000</pubDate>
       <description>Web Workers in JavaScript richtig einsetzen: Wie du rechenintensive Aufgaben aus dem Hauptthread auslagern, INP verbessern und Core Web Vitals optimierst. Mit praktischen Beispielen.</description>
-      <category>Performance SEO</category>
-    </item>
-    <item>
-      <title>Resource Hints für SEO: preload, prefetch, preconnect richtig einsetzen</title>
-      <link>https://shift07.ai/blog/resource-hints-preload-prefetch-preconnect-seo.html</link>
-      <guid>https://shift07.ai/blog/resource-hints-preload-prefetch-preconnect-seo.html</guid>
-      <pubDate>Sun, 17 May 2026 04:45:49 +0000</pubDate>
-      <description>Resource Hints (preload, prefetch, preconnect, dns-prefetch) richtig einsetzen: Wie du mit Link-Rel-Attributen die Ladezeit senkst und LCP, FCP sowie Core Web Vitals verbesserst.</description>
       <category>Performance SEO</category>
     </item>
   </channel>
