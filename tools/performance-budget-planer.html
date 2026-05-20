@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K1S1RXBDS8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K1S1RXBDS8');
+    </script>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8475857002943858" crossorigin="anonymous"></script>
+    <title>Performance-Budget-Planer - Ladezeit-Budget für Websites berechnen | Shift07</title>
+    <meta name="description" content="Berechne dein Performance-Budget: Wie viele Kilobyte darf deine Website wiegen, um dein Ladezeit-Ziel zu erreichen? Aufteilung auf HTML, CSS, JS, Bilder und Schriften. 100% kostenlos.">
+    <meta name="keywords" content="performance budget, ladezeit budget, page weight budget, website ladezeit berechnen, seitengewicht, core web vitals budget">
+    <meta name="author" content="Thümmler AI GmbH">
+    <link rel="icon" type="image/png" href="/logo.png">
+    <link rel="canonical" href="https://shift07.ai/tools/performance-budget-planer.html">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Performance-Budget-Planer - Ladezeit-Budget für Websites berechnen">
+    <meta property="og:description" content="Wie viele Kilobyte darf deine Website wiegen, um dein Ladezeit-Ziel zu erreichen? Berechne dein Performance-Budget und teile es auf Ressourcentypen auf.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://shift07.ai/tools/performance-budget-planer.html">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="Shift07">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Performance-Budget-Planer - Ladezeit-Budget für Websites berechnen">
+    <meta name="twitter:description" content="Wie viele Kilobyte darf deine Website wiegen, um dein Ladezeit-Ziel zu erreichen? Berechne dein Performance-Budget.">
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Performance-Budget-Planer",
+      "description": "Berechne dein Performance-Budget: Wie viele Kilobyte darf deine Website wiegen, um dein Ladezeit-Ziel zu erreichen? Aufteilung auf HTML, CSS, JS, Bilder und Schriften.",
+      "url": "https://shift07.ai/tools/performance-budget-planer.html",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR"
+      },
+      "provider": {
+        "@type": "Organization",
+        "name": "Thümmler AI GmbH",
+        "url": "https://shift07.ai"
+      }
+    }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { theme: { extend: { fontFamily: { 'inter': ['Inter', 'system-ui', '-apple-system', 'sans-serif'] } } } }
+    </script>
+    <style>
+        body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: rgba(15, 23, 42, 0.5); }
+        ::-webkit-scrollbar-thumb { background: rgba(59, 130, 246, 0.5); border-radius: 4px; }
+        html { scroll-behavior: smooth; }
+        .glass { background: rgba(255, 255, 255, 0.06); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        input[type=range]{ accent-color:#3b82f6; }
+    </style>
+</head>
+<body class="antialiased">
+    <div class="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
+        <!-- Navigation -->
+        <nav class="bg-black/20 backdrop-blur-md border-b border-white/10">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center h-16">
+                    <a href="/" class="flex items-center gap-2">
+                        <img src="/logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                        <span class="text-xl font-bold text-white">Shift07</span>
+                    </a>
+                    <div class="hidden md:flex items-baseline space-x-4">
+                        <a href="/" class="text-white hover:text-blue-300 px-3 py-2 text-sm font-medium transition-colors">SEO-Tool</a>
+                        <a href="/blog/" class="text-white hover:text-blue-300 px-3 py-2 text-sm font-medium transition-colors">Blog</a>
+                        <a href="/tools/" class="text-blue-300 px-3 py-2 text-sm font-medium">Tools</a>
+                        <a href="/app/#/login" class="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:from-blue-600 hover:to-purple-700 transition-all">Anmelden</a>
+                    </div>
+                    <button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="md:hidden text-white">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                    </button>
+                </div>
+                <div id="mobile-menu" class="hidden md:hidden pb-4">
+                    <a href="/" class="block text-white hover:text-blue-300 px-3 py-2 text-sm font-medium">SEO-Tool</a>
+                    <a href="/blog/" class="block text-white hover:text-blue-300 px-3 py-2 text-sm font-medium">Blog</a>
+                    <a href="/tools/" class="block text-blue-300 px-3 py-2 text-sm font-medium">Tools</a>
+                    <a href="/app/#/login" class="block text-white hover:text-blue-300 px-3 py-2 text-sm font-medium">Anmelden</a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero -->
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-6 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">
+                <span class="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Performance-Budget-Planer</span>
+            </h1>
+            <p class="text-xl text-blue-200/80 max-w-2xl mx-auto">Wie viele Kilobyte darf deine Website wiegen, um dein Ladezeit-Ziel zu erreichen? Berechne dein Performance-Budget und vergleiche es mit deinen aktuellen Ressourcen — kostenlos und direkt im Browser.</p>
+        </section>
+
+        <!-- Main Tool -->
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+            <div class="grid lg:grid-cols-2 gap-8">
+                <!-- Input Form -->
+                <div class="glass rounded-xl p-6 md:p-8">
+                    <h2 class="text-xl font-semibold text-white mb-4">1. Dein Ziel festlegen</h2>
+
+                    <label class="block text-blue-200/80 text-sm font-medium mb-2">Ziel-Ladezeit (Sekunden bis zum sichtbaren Inhalt)</label>
+                    <div class="flex items-center gap-4 mb-1">
+                        <input type="range" id="targetTime" min="1" max="6" step="0.5" value="2.5" class="flex-1">
+                        <span id="targetTimeVal" class="text-white font-mono w-14 text-right">2,5 s</span>
+                    </div>
+                    <p class="text-blue-200/50 text-xs mb-5">Empfehlung: 2,5 s entspricht dem „gut"-Schwellenwert für den LCP (Largest Contentful Paint).</p>
+
+                    <label class="block text-blue-200/80 text-sm font-medium mb-2">Ziel-Verbindung deiner Besucher</label>
+                    <select id="connection" class="w-full bg-black/30 border border-white/10 rounded-lg p-3 text-white text-sm focus:outline-none focus:border-blue-500 mb-5">
+                        <option value="50">Langsames 3G (50 KB/s) — ländlich/unterwegs</option>
+                        <option value="200" selected>Langsames 4G (200 KB/s) — Lighthouse-Mobilstandard</option>
+                        <option value="700">Reguläres 4G (700 KB/s)</option>
+                        <option value="2000">WLAN / Kabel (2000 KB/s)</option>
+                    </select>
+
+                    <h2 class="text-xl font-semibold text-white mb-4 mt-2">2. Aktuelle Größen (optional)</h2>
+                    <p class="text-blue-200/60 text-sm mb-4">Trage die übertragene Größe pro Ressourcentyp in <strong class="text-white">KB</strong> ein (aus den DevTools → Netzwerk-Tab). So vergleichst du Ist gegen Budget.</p>
+                    <div class="space-y-3" id="currentInputs">
+                        <div class="flex items-center gap-3"><label class="text-blue-100/80 text-sm w-28">HTML</label><input type="number" min="0" data-type="html" class="cur flex-1 bg-black/30 border border-white/10 rounded-lg p-2 text-white text-sm focus:outline-none focus:border-blue-500" placeholder="z. B. 25"></div>
+                        <div class="flex items-center gap-3"><label class="text-blue-100/80 text-sm w-28">CSS</label><input type="number" min="0" data-type="css" class="cur flex-1 bg-black/30 border border-white/10 rounded-lg p-2 text-white text-sm focus:outline-none focus:border-blue-500" placeholder="z. B. 40"></div>
+                        <div class="flex items-center gap-3"><label class="text-blue-100/80 text-sm w-28">JavaScript</label><input type="number" min="0" data-type="js" class="cur flex-1 bg-black/30 border border-white/10 rounded-lg p-2 text-white text-sm focus:outline-none focus:border-blue-500" placeholder="z. B. 180"></div>
+                        <div class="flex items-center gap-3"><label class="text-blue-100/80 text-sm w-28">Bilder</label><input type="number" min="0" data-type="img" class="cur flex-1 bg-black/30 border border-white/10 rounded-lg p-2 text-white text-sm focus:outline-none focus:border-blue-500" placeholder="z. B. 600"></div>
+                        <div class="flex items-center gap-3"><label class="text-blue-100/80 text-sm w-28">Schriften</label><input type="number" min="0" data-type="font" class="cur flex-1 bg-black/30 border border-white/10 rounded-lg p-2 text-white text-sm focus:outline-none focus:border-blue-500" placeholder="z. B. 80"></div>
+                    </div>
+                    <div class="flex items-center gap-3 mt-5">
+                        <button id="calcBtn" class="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-3 rounded-lg font-medium hover:from-blue-600 hover:to-purple-700 transition-all">Budget berechnen</button>
+                        <button id="exampleBtn" class="text-blue-300 hover:text-blue-200 text-sm font-medium">Beispiel laden</button>
+                    </div>
+                </div>
+
+                <!-- Output -->
+                <div>
+                    <div class="glass rounded-xl p-6 md:p-8">
+                        <h2 class="text-xl font-semibold text-white mb-6">Dein Performance-Budget</h2>
+                        <div id="summary" class="mb-5"></div>
+                        <div id="output" class="space-y-3 text-sm leading-relaxed text-white/80">
+                            <p class="text-white/40">Lege links dein Ziel fest und klicke auf „Budget berechnen".</p>
+                        </div>
+                    </div>
+
+                    <!-- Cross-sell -->
+                    <div class="glass rounded-xl p-6 mt-6 border-blue-500/30 border">
+                        <div class="flex items-start gap-4">
+                            <div class="bg-blue-500/20 rounded-lg p-3 flex-shrink-0">
+                                <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                            </div>
+                            <div>
+                                <h3 class="text-white font-semibold mb-1">Komplette SEO- und Performance-Analyse</h3>
+                                <p class="text-blue-200/70 text-sm mb-3">Ladezeit ist ein Rankingfaktor. Prüfe Title-Tags, Meta-Descriptions, Core Web Vitals und mehr in einem Durchlauf.</p>
+                                <a href="/" class="inline-flex items-center text-blue-400 hover:text-blue-300 text-sm font-medium transition-colors">
+                                    Jetzt kostenlos mit Shift07 prüfen
+                                    <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tips/Explanation Section -->
+            <div class="glass rounded-xl p-6 md:p-8 mt-12">
+                <h2 class="text-2xl font-bold text-white mb-6">Was ist ein Performance-Budget?</h2>
+                <div class="grid md:grid-cols-2 gap-6 text-blue-100/80 text-sm leading-relaxed">
+                    <div>
+                        <h3 class="text-white font-semibold mb-2">Die Idee</h3>
+                        <p>Ein Performance-Budget ist eine selbst gesetzte Obergrenze für das Gewicht deiner Website. Statt erst nach dem Launch zu messen, ob die Seite zu langsam ist, legst du vorher fest: „Meine Startseite darf höchstens X Kilobyte übertragen." Jede neue Schriftart, jedes Karussell und jedes Tracking-Skript muss sich in dieses Budget einfügen — sonst muss etwas anderes weichen.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-white font-semibold mb-2">Wie dieses Tool rechnet</h3>
+                        <p>Aus deiner Ziel-Ladezeit und der angenommenen Verbindungsgeschwindigkeit deiner Besucher errechnet der Planer das maximale Übertragungsbudget. Davon zieht er einen Puffer für Netzwerk-Latenz und Rendering ab und verteilt den Rest nach bewährten Anteilen auf HTML, CSS, JavaScript, Bilder und Schriften.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-white font-semibold mb-2">Warum die langsame Verbindung zählt</h3>
+                        <p>Google bewertet die mobile Performance unter realistischen, eher langsamen Bedingungen (Lighthouse simuliert ein „langsames 4G"). Wer sein Budget nur für schnelles WLAN plant, fällt bei echten Nutzern und in den Core Web Vitals durch. Plane deshalb konservativ für die Verbindung deiner schwächsten relevanten Zielgruppe.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-white font-semibold mb-2">So hältst du dein Budget ein</h3>
+                        <ul class="list-disc pl-5 space-y-1">
+                            <li><strong class="text-white">Bilder:</strong> moderne Formate (WebP/AVIF), korrekte Größen, Lazy Loading.</li>
+                            <li><strong class="text-white">JavaScript:</strong> Code-Splitting, ungenutzte Bibliotheken entfernen, Third-Party-Skripte prüfen.</li>
+                            <li><strong class="text-white">Schriften:</strong> nur benötigte Schnitte laden, <code class="bg-black/30 px-1 rounded text-blue-300">font-display: swap</code>.</li>
+                            <li><strong class="text-white">CSS:</strong> Critical CSS inline, ungenutzte Regeln entfernen.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="mt-6 text-blue-100/80 text-sm leading-relaxed border-t border-white/10 pt-6">
+                    <p>Mehr zum Thema findest du in unseren Leitfäden <a href="/blog/core-web-vitals-verbessern-lcp-cls-inp.html" class="text-blue-400 hover:text-blue-300 underline">Core Web Vitals verbessern</a>, <a href="/blog/bildoptimierung-webp-avif-lazy-loading.html" class="text-blue-400 hover:text-blue-300 underline">Bildoptimierung mit WebP und AVIF</a> und <a href="/blog/critical-css-above-the-fold-lcp.html" class="text-blue-400 hover:text-blue-300 underline">Critical CSS extrahieren</a>. Zum Messen deiner tatsächlichen Werte hilft der <a href="/tools/core-web-vitals-checker.html" class="text-blue-400 hover:text-blue-300 underline">Core-Web-Vitals-Checker</a>.</p>
+                    <p class="mt-3 text-blue-200/60"><strong class="text-white">Datenschutz:</strong> Die Berechnung läuft zu 100 % in deinem Browser. Es werden keine Daten an einen Server gesendet, gespeichert oder protokolliert.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-black/30 backdrop-blur-md border-t border-white/10">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <div class="text-white/60 mb-4 md:mb-0 text-sm">&copy; 2026 Thümmler AI GmbH. Alle Rechte vorbehalten.</div>
+                    <div class="flex space-x-6">
+                        <a href="/impressum.html" class="text-gray-300 hover:text-white transition-colors text-sm">Impressum</a>
+                        <a href="/datenschutz.html" class="text-gray-300 hover:text-white transition-colors text-sm">Datenschutz</a>
+                        <a href="/agb.html" class="text-gray-300 hover:text-white transition-colors text-sm">AGB</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Empfohlene Budget-Aufteilung nach Ressourcentyp
+        const SPLIT = [
+            {type:'html',  label:'HTML',       pct:0.07},
+            {type:'css',   label:'CSS',        pct:0.10},
+            {type:'js',    label:'JavaScript', pct:0.25},
+            {type:'img',   label:'Bilder',     pct:0.48},
+            {type:'font',  label:'Schriften',  pct:0.10}
+        ];
+
+        const targetTime = document.getElementById('targetTime');
+        const targetTimeVal = document.getElementById('targetTimeVal');
+        targetTime.addEventListener('input', ()=>{
+            targetTimeVal.textContent = targetTime.value.replace('.',',') + ' s';
+        });
+
+        function fmt(kb){
+            if(kb >= 1024) return (kb/1024).toFixed(2).replace('.',',') + ' MB';
+            return Math.round(kb) + ' KB';
+        }
+
+        function calc(){
+            const t = parseFloat(targetTime.value);          // Zielzeit in s
+            const speed = parseFloat(document.getElementById('connection').value); // KB/s
+            // Puffer für Latenz/Verbindungsaufbau/Rendering: ca. 0,6 s effektiv nicht für Transfer nutzbar
+            const overhead = 0.6;
+            const usable = Math.max(t - overhead, t * 0.4);  // mind. 40 % der Zeit bleiben für Transfer
+            const totalBudget = usable * speed;              // KB
+
+            const curVals = {};
+            let hasCurrent = false;
+            document.querySelectorAll('.cur').forEach(inp=>{
+                const v = parseFloat(inp.value);
+                if(!isNaN(v) && v>0){ curVals[inp.dataset.type] = v; hasCurrent = true; }
+                else curVals[inp.dataset.type] = 0;
+            });
+            const curTotal = Object.values(curVals).reduce((a,b)=>a+b,0);
+
+            // Summary
+            const summaryEl = document.getElementById('summary');
+            let summary = `<div class="bg-blue-500/10 border border-blue-500/30 rounded-lg p-4">
+                <p class="text-blue-200/80 text-sm">Gesamtbudget für ${t.toString().replace('.',',')} s Ladezeit:</p>
+                <p class="text-3xl font-bold text-white mt-1">${fmt(totalBudget)}</p>
+                <p class="text-blue-200/60 text-xs mt-1">übertragene Größe (komprimiert), inkl. Latenz-Puffer</p></div>`;
+            if(hasCurrent){
+                const ratio = curTotal/totalBudget;
+                let badge, geschätzt = curTotal/speed + overhead;
+                if(ratio <= 1) badge = `<span class="inline-block px-3 py-1 rounded-full bg-green-500/20 text-green-300 text-sm font-semibold">Im Budget</span>`;
+                else if(ratio <= 1.3) badge = `<span class="inline-block px-3 py-1 rounded-full bg-amber-500/20 text-amber-300 text-sm font-semibold">Knapp drüber</span>`;
+                else badge = `<span class="inline-block px-3 py-1 rounded-full bg-red-500/20 text-red-300 text-sm font-semibold">Über Budget</span>`;
+                summary += `<div class="mt-3 flex flex-wrap items-center gap-3">${badge}
+                    <span class="text-blue-100/80 text-sm">Aktuell: <strong class="text-white">${fmt(curTotal)}</strong> (${Math.round(ratio*100)} % des Budgets)</span></div>
+                    <p class="text-blue-200/60 text-xs mt-2">Geschätzte Ladezeit aktuell: ca. ${geschätzt.toFixed(1).replace('.',',')} s bei dieser Verbindung.</p>`;
+            }
+            summaryEl.innerHTML = summary;
+
+            // Per-type table
+            let html = '<h3 class="text-white font-semibold mb-1">Empfohlene Aufteilung</h3>';
+            SPLIT.forEach(s=>{
+                const budget = totalBudget * s.pct;
+                let row = `<div class="bg-black/20 border border-white/10 rounded-lg p-3">
+                    <div class="flex justify-between items-center">
+                        <span class="text-white font-medium">${s.label} <span class="text-blue-200/50 text-xs">(${Math.round(s.pct*100)} %)</span></span>
+                        <span class="text-blue-300 font-mono">${fmt(budget)}</span>
+                    </div>`;
+                if(hasCurrent){
+                    const cur = curVals[s.type] || 0;
+                    const r = cur/budget;
+                    let bar, col;
+                    if(r<=1){ col='bg-green-500'; }
+                    else if(r<=1.3){ col='bg-amber-500'; }
+                    else { col='bg-red-500'; }
+                    const w = Math.min(r*100,100);
+                    bar = `<div class="mt-2"><div class="h-2 bg-white/10 rounded-full overflow-hidden"><div class="h-full ${col}" style="width:${w}%"></div></div>
+                        <p class="text-xs mt-1 ${r<=1?'text-green-300':r<=1.3?'text-amber-300':'text-red-300'}">Aktuell ${fmt(cur)} — ${Math.round(r*100)} % des Teilbudgets${r>1?' (zu viel)':''}</p></div>`;
+                    row += bar;
+                }
+                row += '</div>';
+                html += row;
+            });
+            document.getElementById('output').innerHTML = '<div class="space-y-3">'+html+'</div>';
+        }
+
+        document.getElementById('calcBtn').addEventListener('click', calc);
+        document.getElementById('exampleBtn').addEventListener('click', ()=>{
+            targetTime.value = 2.5; targetTimeVal.textContent = '2,5 s';
+            document.getElementById('connection').value = '200';
+            const ex = {html:28, css:45, js:210, img:680, font:95};
+            document.querySelectorAll('.cur').forEach(inp=>{ inp.value = ex[inp.dataset.type]; });
+            calc();
+        });
+    </script>
+</body>
+</html>
