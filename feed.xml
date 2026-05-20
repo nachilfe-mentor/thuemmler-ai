@@ -5,8 +5,16 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Wed, 20 May 2026 01:26:51 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 20 May 2026 01:28:53 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Lokale Konkurrenzanalyse: Wettbewerber im lokalen SEO analysieren</title>
+      <link>https://shift07.ai/blog/lokale-konkurrenzanalyse-seo.html</link>
+      <guid>https://shift07.ai/blog/lokale-konkurrenzanalyse-seo.html</guid>
+      <pubDate>Wed, 20 May 2026 01:28:32 +0000</pubDate>
+      <description>Lokale Konkurrenzanalyse Schritt für Schritt: So findest du deine lokalen SEO-Wettbewerber, analysierst Google Business Profile, Bewertungen, Keywords und Backlinks — und überholst sie.</description>
+      <category>Lokales SEO</category>
+    </item>
     <item>
       <title>Lokale Landing Pages erstellen: Anleitung für mehrere Standorte</title>
       <link>https://shift07.ai/blog/lokale-landing-pages-erstellen.html</link>
@@ -157,14 +165,6 @@
       <guid>https://shift07.ai/blog/javascript-performance-spa-bundle-groessen-code-splitting.html</guid>
       <pubDate>Sun, 17 May 2026 01:21:35 +0000</pubDate>
       <description>Wie du JavaScript-Bundle-Größen in Single-Page-Apps reduzierst: Code-Splitting, Lazy Loading, Tree Shaking und dynamische Imports erklärt. Mit konkreten Beispielen für React, Vue und Angular.</description>
-      <category>Performance</category>
-    </item>
-    <item>
-      <title>Critical CSS extrahieren: Above-the-Fold optimieren für besseres LCP</title>
-      <link>https://shift07.ai/blog/critical-css-above-the-fold-lcp.html</link>
-      <guid>https://shift07.ai/blog/critical-css-above-the-fold-lcp.html</guid>
-      <pubDate>Sat, 16 May 2026 05:43:06 +0000</pubDate>
-      <description>Critical CSS extrahieren und inline einbinden: So beschleunigst du das Rendern deiner Website, verbesserst den LCP-Wert und rankst besser bei Google. Schritt-für-Schritt-Anleitung 2026.</description>
       <category>Performance</category>
     </item>
   </channel>
