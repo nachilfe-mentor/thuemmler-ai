@@ -5,8 +5,40 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Thu, 21 May 2026 00:17:59 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 21 May 2026 01:55:18 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Lokales SEO für Cafés und Bäckereien: Mehr Laufkundschaft über Google</title>
+      <link>https://shift07.ai/blog/lokales-seo-cafes-baeckereien.html</link>
+      <guid>https://shift07.ai/blog/lokales-seo-cafes-baeckereien.html</guid>
+      <pubDate>Thu, 21 May 2026 01:55:06 +0000</pubDate>
+      <description>Lokales SEO für Cafés und Bäckereien: So gewinnst du über Google und Google Maps mehr Laufkundschaft — Google Business Profile, Fotos, Bewertungen, lokale Keywords und eine schnelle Website.</description>
+      <category>Lokal-SEO</category>
+    </item>
+    <item>
+      <title>Lokales SEO für Restaurants: Mehr Gäste über Google gewinnen</title>
+      <link>https://shift07.ai/blog/lokales-seo-restaurants.html</link>
+      <guid>https://shift07.ai/blog/lokales-seo-restaurants.html</guid>
+      <pubDate>Thu, 21 May 2026 01:54:57 +0000</pubDate>
+      <description>Lokales SEO für Restaurants: So gewinnst du über Google und Google Maps mehr Gäste — Google Business Profile, Bewertungen, Speisekarte, lokale Keywords und Website.</description>
+      <category>Lokal-SEO</category>
+    </item>
+    <item>
+      <title>Lokales SEO für Hotels: Mehr Direktbuchungen über Google</title>
+      <link>https://shift07.ai/blog/lokales-seo-hotels.html</link>
+      <guid>https://shift07.ai/blog/lokales-seo-hotels.html</guid>
+      <pubDate>Thu, 21 May 2026 01:54:25 +0000</pubDate>
+      <description>Lokales SEO für Hotels: So gewinnst du über Google, Google Maps und deine eigene Website mehr Direktbuchungen — Google Business Profile, Bewertungen, lokale Keywords und Hotel-Schema-Markup.</description>
+      <category>Lokal-SEO</category>
+    </item>
+    <item>
+      <title>Render-Blocking-Ressourcen entfernen: CSS und JavaScript richtig laden</title>
+      <link>https://shift07.ai/blog/render-blocking-ressourcen-entfernen.html</link>
+      <guid>https://shift07.ai/blog/render-blocking-ressourcen-entfernen.html</guid>
+      <pubDate>Thu, 21 May 2026 00:20:48 +0000</pubDate>
+      <description>Render-Blocking-Ressourcen entfernen: So lädst du CSS und JavaScript richtig, verkürzt die Ladezeit drastisch und verbesserst deine Core Web Vitals.</description>
+      <category>Performance SEO</category>
+    </item>
     <item>
       <title>Core Web Vitals verbessern: LCP, CLS, INP optimieren - Schritt für Schritt</title>
       <link>https://shift07.ai/blog/core-web-vitals-verbessern-lcp-cls-inp.html</link>
@@ -22,22 +54,6 @@
       <pubDate>Wed, 20 May 2026 04:42:35 +0000</pubDate>
       <description>Performance-Budget erstellen: So legst du fest, wie viele Kilobyte deine Website wiegen darf, um schnell zu laden und die Core Web Vitals zu bestehen — mit kostenlosem Planer.</description>
       <category>Performance</category>
-    </item>
-    <item>
-      <title>Lokales SEO für Restaurants: Mehr Gäste über Google gewinnen</title>
-      <link>https://shift07.ai/blog/lokales-seo-restaurants.html</link>
-      <guid>https://shift07.ai/blog/lokales-seo-restaurants.html</guid>
-      <pubDate>Wed, 20 May 2026 04:39:01 +0000</pubDate>
-      <description>Lokales SEO für Restaurants: So gewinnst du über Google und Google Maps mehr Gäste — Google Business Profile, Bewertungen, Speisekarte, lokale Keywords und Website.</description>
-      <category>Lokal-SEO</category>
-    </item>
-    <item>
-      <title>Lokales SEO für Cafés und Bäckereien: Mehr Laufkundschaft über Google</title>
-      <link>https://shift07.ai/blog/lokales-seo-cafes-baeckereien.html</link>
-      <guid>https://shift07.ai/blog/lokales-seo-cafes-baeckereien.html</guid>
-      <pubDate>Wed, 20 May 2026 04:38:25 +0000</pubDate>
-      <description>Lokales SEO für Cafés und Bäckereien: So gewinnst du über Google und Google Maps mehr Laufkundschaft — Google Business Profile, Fotos, Bewertungen, lokale Keywords und eine schnelle Website.</description>
-      <category>Lokal-SEO</category>
     </item>
     <item>
       <title>Keyword-Kannibalisierung erkennen und beheben: Wenn eigene Seiten konkurrieren</title>
@@ -150,22 +166,6 @@
       <pubDate>Mon, 18 May 2026 02:10:37 +0000</pubDate>
       <description>KI-Suchmaschinen interpretieren Suchabsicht anders als klassisches Google. Erfahre, wie sich die vier Intent-Kategorien durch AI Overviews und generative Suche verändern und wie du Inhalte anpasst.</description>
       <category>AI &amp; SEO 2026</category>
-    </item>
-    <item>
-      <title>Zero-Click SEO: Wenn Google direkt antwortet – Strategien 2026</title>
-      <link>https://shift07.ai/blog/zero-click-seo-google-direkt-antwortet.html</link>
-      <guid>https://shift07.ai/blog/zero-click-seo-google-direkt-antwortet.html</guid>
-      <pubDate>Mon, 18 May 2026 02:06:48 +0000</pubDate>
-      <description>Zero-Click-Suchen dominieren über 60% aller Google-Anfragen. Erfahre, warum Zero-Click SEO trotzdem wertvoll ist und wie du mit Featured Snippets, AI Overviews und Structured Data sichtbar bleibst.</description>
-      <category>OnPage-SEO</category>
-    </item>
-    <item>
-      <title>GEO – Generative Engine Optimization: SEO für KI-Antworten 2026</title>
-      <link>https://shift07.ai/blog/geo-generative-engine-optimization-ki-suche.html</link>
-      <guid>https://shift07.ai/blog/geo-generative-engine-optimization-ki-suche.html</guid>
-      <pubDate>Mon, 18 May 2026 00:31:40 +0000</pubDate>
-      <description>GEO (Generative Engine Optimization) ist die Weiterentwicklung von SEO für KI-Suchmaschinen. Erfahre wie du ChatGPT, Perplexity und Google AI Overviews als Quelle gewinnst.</description>
-      <category>AI-SEO</category>
     </item>
   </channel>
 </rss>
