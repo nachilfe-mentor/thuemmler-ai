@@ -5,22 +5,38 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Fri, 22 May 2026 04:14:08 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 22 May 2026 05:50:42 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Lokales SEO für Fotografen: Mehr Buchungen über Google gewinnen</title>
+      <link>https://shift07.ai/blog/lokales-seo-fotografen.html</link>
+      <guid>https://shift07.ai/blog/lokales-seo-fotografen.html</guid>
+      <pubDate>Fri, 22 May 2026 05:50:33 +0000</pubDate>
+      <description>Lokales SEO für Fotografen: So wird dein Fotostudio in Google und Google Maps sichtbar und gewinnt mehr Buchungen — Google Business Profile, Bewertungen, Bilder-SEO, Nischenseiten und Schema-Markup.</description>
+      <category>Lokal-SEO</category>
+    </item>
+    <item>
+      <title>Lokales SEO für Arztpraxen: Mehr Patienten über Google gewinnen</title>
+      <link>https://shift07.ai/blog/lokales-seo-arztpraxen.html</link>
+      <guid>https://shift07.ai/blog/lokales-seo-arztpraxen.html</guid>
+      <pubDate>Fri, 22 May 2026 05:50:11 +0000</pubDate>
+      <description>Lokales SEO für Arztpraxen: So wird deine Praxis in Google und Google Maps sichtbar und gewinnt mehr Patienten — Google Business Profile, Bewertungen, lokale Keywords und MedicalClinic Schema-Markup.</description>
+      <category>Lokal-SEO</category>
+    </item>
+    <item>
+      <title>Lokales SEO für Tierärzte: Mehr Tierbesitzer über Google gewinnen</title>
+      <link>https://shift07.ai/blog/lokales-seo-tieraerzte.html</link>
+      <guid>https://shift07.ai/blog/lokales-seo-tieraerzte.html</guid>
+      <pubDate>Fri, 22 May 2026 05:49:48 +0000</pubDate>
+      <description>Lokales SEO für Tierärzte: So wird deine Tierarztpraxis in Google und Google Maps sichtbar — Google Business Profile, Notdienst, Bewertungen, lokale Keywords und VeterinaryCare Schema-Markup.</description>
+      <category>Lokal-SEO</category>
+    </item>
     <item>
       <title>Lokales SEO für Immobilienmakler: Mehr Eigentümer &amp; Käufer über Google</title>
       <link>https://shift07.ai/blog/lokales-seo-immobilienmakler.html</link>
       <guid>https://shift07.ai/blog/lokales-seo-immobilienmakler.html</guid>
       <pubDate>Fri, 22 May 2026 04:13:57 +0000</pubDate>
       <description>Lokales SEO für Immobilienmakler: So gewinnst du über Google und Google Maps mehr Eigentümer-Anfragen und Käufer — Google Business Profile, Bewertungen, lokale Keywords und RealEstateAgent Schema-Markup.</description>
-      <category>Lokal-SEO</category>
-    </item>
-    <item>
-      <title>Lokales SEO für Fotografen: Mehr Buchungen über Google gewinnen</title>
-      <link>https://shift07.ai/blog/lokales-seo-fotografen.html</link>
-      <guid>https://shift07.ai/blog/lokales-seo-fotografen.html</guid>
-      <pubDate>Fri, 22 May 2026 04:13:35 +0000</pubDate>
-      <description>Lokales SEO für Fotografen: So wird dein Fotostudio in Google und Google Maps sichtbar und gewinnt mehr Buchungen — Google Business Profile, Bewertungen, Bilder-SEO, Nischenseiten und Schema-Markup.</description>
       <category>Lokal-SEO</category>
     </item>
     <item>
@@ -128,14 +144,6 @@
       <category>SEO-Strategie</category>
     </item>
     <item>
-      <title>Lokales SEO für Arztpraxen: Mehr Patienten über Google gewinnen</title>
-      <link>https://shift07.ai/blog/lokales-seo-arztpraxen.html</link>
-      <guid>https://shift07.ai/blog/lokales-seo-arztpraxen.html</guid>
-      <pubDate>Thu, 21 May 2026 05:12:04 +0000</pubDate>
-      <description>Lokales SEO für Arztpraxen: So wird deine Praxis in Google und Google Maps sichtbar und gewinnt mehr Patienten — Google Business Profile, Bewertungen, lokale Keywords und MedicalClinic Schema-Markup.</description>
-      <category>Lokal-SEO</category>
-    </item>
-    <item>
       <title>GEO – Generative Engine Optimization: SEO für KI-Antworten 2026</title>
       <link>https://shift07.ai/blog/geo-generative-engine-optimization-ki-suche.html</link>
       <guid>https://shift07.ai/blog/geo-generative-engine-optimization-ki-suche.html</guid>
@@ -158,14 +166,6 @@
       <pubDate>Thu, 21 May 2026 03:31:46 +0000</pubDate>
       <description>Wir haben 79 Friseursalon-Websites in Deutschland analysiert. Ergebnis: 75% leiden unter JavaScript-Überladung, 68% haben kein Schema Markup, 38% fehlt eine Meta-Description. Die vollständige Auswertung mit konkreten Tipps.</description>
       <category>Datenanalyse</category>
-    </item>
-    <item>
-      <title>Lokales SEO für Hotels: Mehr Direktbuchungen über Google</title>
-      <link>https://shift07.ai/blog/lokales-seo-hotels.html</link>
-      <guid>https://shift07.ai/blog/lokales-seo-hotels.html</guid>
-      <pubDate>Thu, 21 May 2026 01:57:26 +0000</pubDate>
-      <description>Lokales SEO für Hotels: So gewinnst du über Google, Google Maps und deine eigene Website mehr Direktbuchungen — Google Business Profile, Bewertungen, lokale Keywords und Hotel-Schema-Markup.</description>
-      <category>Lokal-SEO</category>
     </item>
   </channel>
 </rss>

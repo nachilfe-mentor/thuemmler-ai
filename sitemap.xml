@@ -890,7 +890,7 @@
   </url>
   <url>
     <loc>https://shift07.ai/blog/lokales-seo-arztpraxen.html</loc>
-    <lastmod>2026-05-21</lastmod>
+    <lastmod>2026-05-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -957,6 +957,12 @@
   <url>
     <loc>https://shift07.ai/blog/lokales-seo-restaurants.html</loc>
     <lastmod>2026-05-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://shift07.ai/blog/lokales-seo-tieraerzte.html</loc>
+    <lastmod>2026-05-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
