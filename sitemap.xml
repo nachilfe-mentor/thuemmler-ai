@@ -224,7 +224,7 @@
   </url>
   <url>
     <loc>https://shift07.ai/blog/content-laenge-seo-wie-lang-artikel.html</loc>
-    <lastmod>2026-04-20</lastmod>
+    <lastmod>2026-05-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -2025,6 +2025,12 @@
   <url>
     <loc>https://shift07.ai/tools/lesbarkeits-score-checker.html</loc>
     <lastmod>2026-04-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://shift07.ai/tools/lesezeit-rechner.html</loc>
+    <lastmod>2026-05-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
