@@ -560,7 +560,7 @@
   </url>
   <url>
     <loc>https://shift07.ai/blog/healthclub-civicstructure-schema-markup.html</loc>
-    <lastmod>2026-05-01</lastmod>
+    <lastmod>2026-05-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -903,6 +903,12 @@
   <url>
     <loc>https://shift07.ai/blog/lokales-seo-cafes-baeckereien.html</loc>
     <lastmod>2026-05-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://shift07.ai/blog/lokales-seo-fitnessstudios.html</loc>
+    <lastmod>2026-05-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

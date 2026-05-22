@@ -5,8 +5,24 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Fri, 22 May 2026 02:33:47 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 22 May 2026 02:36:10 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>HealthClub &amp;amp; CivicStructure Schema Markup: Fitnessstudio und öffentliche Einrichtungen für Google</title>
+      <link>https://shift07.ai/blog/healthclub-civicstructure-schema-markup.html</link>
+      <guid>https://shift07.ai/blog/healthclub-civicstructure-schema-markup.html</guid>
+      <pubDate>Fri, 22 May 2026 02:35:57 +0000</pubDate>
+      <description>HealthClub und CivicStructure Schema Markup: JSON-LD für Fitnessstudios, Gesundheitsclubs, Stadthallen, Bibliotheken und öffentliche Gebäude. Mit vollständigen Codebeispielen 2026.</description>
+      <category>Schema Markup</category>
+    </item>
+    <item>
+      <title>Lokales SEO für Fitnessstudios: Mehr Mitglieder über Google gewinnen</title>
+      <link>https://shift07.ai/blog/lokales-seo-fitnessstudios.html</link>
+      <guid>https://shift07.ai/blog/lokales-seo-fitnessstudios.html</guid>
+      <pubDate>Fri, 22 May 2026 02:35:35 +0000</pubDate>
+      <description>Lokales SEO für Fitnessstudios: So wird dein Studio in Google und Google Maps sichtbar und gewinnt mehr Mitglieder — Google Business Profile, Bewertungen, lokale Keywords und HealthClub Schema-Markup.</description>
+      <category>Lokal-SEO</category>
+    </item>
     <item>
       <title>RealEstateAgent Schema Markup: Immobilienmakler für Google optimieren</title>
       <link>https://shift07.ai/blog/realestate-agent-schema-markup.html</link>
@@ -150,22 +166,6 @@
       <pubDate>Thu, 21 May 2026 00:20:48 +0000</pubDate>
       <description>Render-Blocking-Ressourcen entfernen: So lädst du CSS und JavaScript richtig, verkürzt die Ladezeit drastisch und verbesserst deine Core Web Vitals.</description>
       <category>Performance SEO</category>
-    </item>
-    <item>
-      <title>Core Web Vitals verbessern: LCP, CLS, INP optimieren - Schritt für Schritt</title>
-      <link>https://shift07.ai/blog/core-web-vitals-verbessern-lcp-cls-inp.html</link>
-      <guid>https://shift07.ai/blog/core-web-vitals-verbessern-lcp-cls-inp.html</guid>
-      <pubDate>Wed, 20 May 2026 04:42:58 +0000</pubDate>
-      <description>Core Web Vitals verbessern: Schritt-für-Schritt-Anleitung für LCP, CLS und INP. Konkrete Maßnahmen, Tools und Benchmarks für bessere Google-Rankings 2026.</description>
-      <category>Performance-SEO</category>
-    </item>
-    <item>
-      <title>Performance-Budget erstellen: Ladezeit planen statt hoffen (2026)</title>
-      <link>https://shift07.ai/blog/performance-budget-erstellen.html</link>
-      <guid>https://shift07.ai/blog/performance-budget-erstellen.html</guid>
-      <pubDate>Wed, 20 May 2026 04:42:35 +0000</pubDate>
-      <description>Performance-Budget erstellen: So legst du fest, wie viele Kilobyte deine Website wiegen darf, um schnell zu laden und die Core Web Vitals zu bestehen — mit kostenlosem Planer.</description>
-      <category>Performance</category>
     </item>
   </channel>
 </rss>
