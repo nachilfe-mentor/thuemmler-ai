@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K1S1RXBDS8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K1S1RXBDS8');
+    </script>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8475857002943858" crossorigin="anonymous"></script>
+    <title>Lesezeit-Rechner – Lesedauer, Wörter & Zeichen für SEO-Content | Shift07</title>
+    <meta name="description" content="Kostenloser Lesezeit-Rechner: Lesedauer, Wortanzahl, Zeichen, Sätze und Absätze deines Textes berechnen. Mit SEO-Einordnung der Content-Länge und Sprechzeit für Videos.">
+    <meta name="keywords" content="lesezeit rechner, lesedauer berechnen, wörter zählen, zeichen zählen, wortanzahl, content länge seo, sprechzeit rechner, kostenlos">
+    <meta name="author" content="Thümmler AI GmbH">
+    <link rel="icon" type="image/png" href="../logo.png">
+    <link rel="canonical" href="https://shift07.ai/tools/lesezeit-rechner.html">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Lesezeit-Rechner – Lesedauer, Wörter & Zeichen für SEO-Content">
+    <meta property="og:description" content="Berechne kostenlos Lesedauer, Wortanzahl und Zeichen deines Textes – inklusive SEO-Einordnung der Content-Länge.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://shift07.ai/tools/lesezeit-rechner.html">
+    <meta property="og:image" content="https://shift07.ai/tools/images/lesezeit-rechner.png">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="Shift07">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Lesezeit-Rechner – Lesedauer, Wörter & Zeichen für SEO-Content">
+    <meta name="twitter:description" content="Berechne kostenlos Lesedauer, Wortanzahl und Zeichen deines Textes.">
+    <meta name="twitter:image" content="https://shift07.ai/tools/images/lesezeit-rechner.png">
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Lesezeit-Rechner",
+      "description": "Kostenloser Lesezeit-Rechner: Berechne Lesedauer, Wortanzahl, Zeichen, Sätze und Absätze eines Textes inklusive SEO-Einordnung der Content-Länge.",
+      "url": "https://shift07.ai/tools/lesezeit-rechner.html",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR"
+      },
+      "provider": {
+        "@type": "Organization",
+        "name": "Thümmler AI GmbH",
+        "url": "https://shift07.ai"
+      }
+    }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: { extend: { fontFamily: { 'inter': ['Inter', 'system-ui', '-apple-system', 'sans-serif'] } } }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: rgba(15, 23, 42, 0.5); }
+        ::-webkit-scrollbar-thumb { background: rgba(59, 130, 246, 0.5); border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: rgba(59, 130, 246, 0.7); }
+        html { scroll-behavior: smooth; }
+        .glass {
+            background: rgba(255, 255, 255, 0.06);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .bar { transition: width .6s ease; }
+    </style>
+</head>
+<body class="antialiased">
+    <div class="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
+        <!-- Navigation -->
+        <nav class="bg-black/20 backdrop-blur-md border-b border-white/10">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center h-16">
+                    <a href="/" class="flex items-center gap-2">
+                        <img src="../logo.png" alt="Shift07 Logo" class="h-8 w-8">
+                        <span class="text-xl font-bold text-white">Shift07</span>
+                    </a>
+                    <div class="hidden md:flex items-baseline space-x-4">
+                        <a href="/" class="text-white hover:text-blue-300 px-3 py-2 text-sm font-medium transition-colors">SEO-Tool</a>
+                        <a href="/blog/" class="text-white hover:text-blue-300 px-3 py-2 text-sm font-medium transition-colors">Blog</a>
+                        <a href="/tools/" class="text-blue-300 px-3 py-2 text-sm font-medium">Tools</a>
+                        <a href="/ueber-uns.html" class="text-white hover:text-blue-300 px-3 py-2 text-sm font-medium transition-colors">Über uns</a>
+                        <a href="/app/#/login" class="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:from-blue-600 hover:to-purple-700 transition-all">Anmelden</a>
+                    </div>
+                    <button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="md:hidden text-white">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                    </button>
+                </div>
+                <div id="mobile-menu" class="hidden md:hidden pb-4">
+                    <a href="/" class="block text-white hover:text-blue-300 px-3 py-2 text-sm font-medium">SEO-Tool</a>
+                    <a href="/blog/" class="block text-white hover:text-blue-300 px-3 py-2 text-sm font-medium">Blog</a>
+                    <a href="/tools/" class="block text-blue-300 px-3 py-2 text-sm font-medium">Tools</a>
+                    <a href="/ueber-uns.html" class="block text-white hover:text-blue-300 px-3 py-2 text-sm font-medium">Über uns</a>
+                    <a href="/app/#/login" class="block text-white hover:text-blue-300 px-3 py-2 text-sm font-medium">Anmelden</a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero -->
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-6 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">
+                <span class="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Lesezeit-Rechner</span>
+            </h1>
+            <p class="text-xl text-blue-200/80 max-w-2xl mx-auto">Berechne Lesedauer, Wortanzahl und Zeichen deines Textes – mit SEO-Einordnung der Content-Länge und Sprechzeit für Videos und Podcasts.</p>
+        </section>
+
+        <!-- Main Tool -->
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+            <div class="grid lg:grid-cols-2 gap-8">
+                <!-- Input -->
+                <div class="glass rounded-xl p-6 md:p-8">
+                    <h2 class="text-xl font-semibold text-white mb-6">Text einfügen</h2>
+
+                    <textarea id="text" rows="14" class="w-full bg-black/30 border border-white/10 rounded-lg p-3 text-white/90 mb-5 focus:outline-none focus:border-blue-500/50 resize-y" placeholder="Füge hier deinen Artikel, Blogtext oder dein Skript ein – die Auswertung erscheint sofort." oninput="update()"></textarea>
+
+                    <label class="block text-blue-200/80 text-sm mb-2">Lesegeschwindigkeit: <span id="wpmLabel" class="text-white font-semibold">220</span> Wörter/Min.</label>
+                    <input id="wpm" type="range" min="120" max="350" value="220" step="10" class="w-full mb-2 accent-blue-500" oninput="update()">
+                    <div class="flex justify-between text-white/40 text-xs mb-5">
+                        <span>langsam (120)</span><span>Durchschnitt (220)</span><span>schnell (350)</span>
+                    </div>
+
+                    <div class="flex gap-3">
+                        <button onclick="loadDemo()" class="flex-1 bg-white/10 text-white px-4 py-2.5 rounded-lg font-medium hover:bg-white/20 transition-all text-sm">Beispieltext laden</button>
+                        <button onclick="clearText()" class="flex-1 bg-white/10 text-white px-4 py-2.5 rounded-lg font-medium hover:bg-white/20 transition-all text-sm">Leeren</button>
+                    </div>
+                    <p class="text-white/40 text-xs mt-4">Alle Berechnungen laufen im Browser. Dein Text wird nicht gesendet oder gespeichert.</p>
+                </div>
+
+                <!-- Output -->
+                <div>
+                    <div class="glass rounded-xl p-6 md:p-8 mb-6">
+                        <div class="bg-gradient-to-r from-blue-500/15 to-purple-500/10 border border-blue-500/30 rounded-lg p-5 text-center mb-6">
+                            <p class="text-blue-200/80 text-sm mb-1">Geschätzte Lesezeit</p>
+                            <p class="text-4xl font-bold text-blue-400" id="readTime">0 Sek.</p>
+                            <p class="text-blue-200/60 text-xs mt-1" id="speakTime">Sprechzeit: 0 Sek.</p>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="bg-white/5 rounded-lg p-4">
+                                <p class="text-blue-200/60 text-xs mb-1">Wörter</p>
+                                <p class="text-2xl font-bold text-white" id="words">0</p>
+                            </div>
+                            <div class="bg-white/5 rounded-lg p-4">
+                                <p class="text-blue-200/60 text-xs mb-1">Zeichen (mit Leerz.)</p>
+                                <p class="text-2xl font-bold text-white" id="chars">0</p>
+                            </div>
+                            <div class="bg-white/5 rounded-lg p-4">
+                                <p class="text-blue-200/60 text-xs mb-1">Zeichen (ohne Leerz.)</p>
+                                <p class="text-2xl font-bold text-white" id="charsNoSpace">0</p>
+                            </div>
+                            <div class="bg-white/5 rounded-lg p-4">
+                                <p class="text-blue-200/60 text-xs mb-1">Sätze</p>
+                                <p class="text-2xl font-bold text-white" id="sentences">0</p>
+                            </div>
+                            <div class="bg-white/5 rounded-lg p-4">
+                                <p class="text-blue-200/60 text-xs mb-1">Absätze</p>
+                                <p class="text-2xl font-bold text-white" id="paragraphs">0</p>
+                            </div>
+                            <div class="bg-white/5 rounded-lg p-4">
+                                <p class="text-blue-200/60 text-xs mb-1">Ø Wörter / Satz</p>
+                                <p class="text-2xl font-bold text-white" id="avgSentence">0</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SEO-Einordnung -->
+                    <div class="glass rounded-xl p-6 md:p-8">
+                        <h2 class="text-lg font-semibold text-white mb-4">SEO-Einordnung der Content-Länge</h2>
+                        <div class="w-full bg-white/5 rounded-full h-3 overflow-hidden mb-3">
+                            <div id="lenBar" class="bar h-3 rounded-full bg-gradient-to-r from-blue-500 to-purple-500" style="width:0%"></div>
+                        </div>
+                        <p id="seoVerdict" class="text-blue-200/80 text-sm">Füge einen Text ein, um eine Einordnung zu erhalten.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cross-sell -->
+            <div class="glass rounded-xl p-6 border-blue-500/30 border mt-8">
+                <div class="flex items-start gap-4">
+                    <div class="bg-blue-500/20 rounded-lg p-3 flex-shrink-0">
+                        <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                    </div>
+                    <div>
+                        <h3 class="text-white font-semibold mb-1">Schreibst du für die richtigen Begriffe?</h3>
+                        <p class="text-blue-200/70 text-sm mb-3">Länge allein reicht nicht – die wichtigsten Keywords müssen in der richtigen Dichte vorkommen. Prüfe deinen Text auf Keyword-Verteilung.</p>
+                        <a href="keyword-density-checker.html" class="inline-flex items-center text-blue-400 hover:text-blue-300 text-sm font-medium transition-colors">
+                            Zum Keyword-Density-Checker
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Erklärung -->
+            <div class="glass rounded-xl p-6 md:p-8 mt-12">
+                <h2 class="text-2xl font-bold text-white mb-6">So nutzt du den Lesezeit-Rechner</h2>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-white/5 rounded-lg p-5">
+                        <h3 class="text-white font-semibold mb-2 flex items-center gap-2"><span class="text-blue-400">01</span> Lesezeit angeben</h3>
+                        <p class="text-blue-200/60 text-sm">Eine sichtbare Lesezeit-Angabe (z.&nbsp;B. „8 Min. Lesezeit") am Anfang eines Artikels setzt eine klare Erwartung und kann die Verweildauer erhöhen. Die Lesezeit basiert auf der Wortanzahl geteilt durch die Lesegeschwindigkeit.</p>
+                    </div>
+                    <div class="bg-white/5 rounded-lg p-5">
+                        <h3 class="text-white font-semibold mb-2 flex items-center gap-2"><span class="text-blue-400">02</span> Content-Länge prüfen</h3>
+                        <p class="text-blue-200/60 text-sm">Bei umkämpften Keywords ranken oft umfassendere Texte besser, weil sie das Thema vollständiger abdecken. Der Rechner ordnet deine Wortzahl ein – ohne dabei künstliches Aufblähen zu empfehlen.</p>
+                    </div>
+                    <div class="bg-white/5 rounded-lg p-5">
+                        <h3 class="text-white font-semibold mb-2 flex items-center gap-2"><span class="text-blue-400">03</span> Sätze kurz halten</h3>
+                        <p class="text-blue-200/60 text-sm">Die durchschnittliche Satzlänge ist ein Lesbarkeitssignal. Liegt sie deutlich über 20 Wörtern pro Satz, lohnt es sich, lange Sätze aufzuteilen – das verbessert Lesefluss und Verständlichkeit.</p>
+                    </div>
+                    <div class="bg-white/5 rounded-lg p-5">
+                        <h3 class="text-white font-semibold mb-2 flex items-center gap-2"><span class="text-blue-400">04</span> Sprechzeit für Video & Audio</h3>
+                        <p class="text-blue-200/60 text-sm">Schreibst du ein Skript für ein YouTube-Video oder einen Podcast? Die Sprechzeit (rund 130 Wörter/Minute) hilft dir, die Länge im Voraus zu planen.</p>
+                    </div>
+                </div>
+                <p class="text-blue-200/70 text-sm mt-6">Mehr dazu in unseren Leitfäden: <a href="/blog/content-laenge-seo-wie-lang-artikel" class="text-blue-400 hover:text-blue-300 underline">Content-Länge und SEO</a> und <a href="/blog/keyword-density-checker-tool" class="text-blue-400 hover:text-blue-300 underline">Keyword-Dichte richtig messen</a>.</p>
+            </div>
+
+            <!-- Weitere Tools -->
+            <div class="glass rounded-xl p-6 md:p-8 mt-8">
+                <h2 class="text-xl font-bold text-white mb-4">Weitere kostenlose Tools</h2>
+                <div class="grid md:grid-cols-3 gap-4">
+                    <a href="keyword-density-checker.html" class="bg-white/5 rounded-lg p-4 hover:bg-white/10 transition-colors group">
+                        <h3 class="text-white font-semibold mb-1 group-hover:text-blue-400 transition-colors">Keyword-Density-Checker</h3>
+                        <p class="text-blue-200/50 text-sm">Keyword-Dichte deines Textes messen.</p>
+                    </a>
+                    <a href="title-tag-laengen-checker.html" class="bg-white/5 rounded-lg p-4 hover:bg-white/10 transition-colors group">
+                        <h3 class="text-white font-semibold mb-1 group-hover:text-blue-400 transition-colors">Title-Tag-Längen-Checker</h3>
+                        <p class="text-blue-200/50 text-sm">Title-Länge mit SERP-Vorschau prüfen.</p>
+                    </a>
+                    <a href="serp-snippet-optimizer.html" class="bg-white/5 rounded-lg p-4 hover:bg-white/10 transition-colors group">
+                        <h3 class="text-white font-semibold mb-1 group-hover:text-blue-400 transition-colors">SERP-Snippet-Optimizer</h3>
+                        <p class="text-blue-200/50 text-sm">Title & Meta-Description für höhere CTR.</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-black/30 backdrop-blur-md border-t border-white/10">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <div class="text-white/60 mb-4 md:mb-0 text-sm">&copy; 2026 Thümmler AI GmbH. Alle Rechte vorbehalten.</div>
+                    <div class="flex space-x-6">
+                        <a href="/impressum.html" class="text-gray-300 hover:text-white transition-colors text-sm">Impressum</a>
+                        <a href="/datenschutz.html" class="text-gray-300 hover:text-white transition-colors text-sm">Datenschutz</a>
+                        <a href="/agb.html" class="text-gray-300 hover:text-white transition-colors text-sm">AGB</a>
+                        <a href="/ueber-uns.html" class="text-gray-300 hover:text-white transition-colors text-sm">Über uns</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        const SPEAK_WPM = 130; // durchschnittliche Sprechgeschwindigkeit Deutsch
+
+        function fmtTime(minutes) {
+            const totalSec = Math.round(minutes * 60);
+            if (totalSec < 60) return totalSec + ' Sek.';
+            const m = Math.floor(totalSec / 60);
+            const s = totalSec % 60;
+            return s === 0 ? `${m} Min.` : `${m} Min. ${s} Sek.`;
+        }
+
+        function update() {
+            const text = document.getElementById('text').value;
+            const wpm = parseInt(document.getElementById('wpm').value);
+            document.getElementById('wpmLabel').textContent = wpm;
+
+            const trimmed = text.trim();
+            const words = trimmed ? trimmed.split(/\s+/).filter(Boolean).length : 0;
+            const chars = text.length;
+            const charsNoSpace = text.replace(/\s/g, '').length;
+            const sentences = trimmed ? (trimmed.match(/[^.!?]+[.!?]+(\s|$)|[^.!?]+$/g) || []).filter(s => s.trim().length > 0).length : 0;
+            const paragraphs = trimmed ? trimmed.split(/\n\s*\n/).filter(p => p.trim().length > 0).length : 0;
+            const avgSentence = sentences > 0 ? (words / sentences) : 0;
+
+            document.getElementById('words').textContent = words.toLocaleString('de-DE');
+            document.getElementById('chars').textContent = chars.toLocaleString('de-DE');
+            document.getElementById('charsNoSpace').textContent = charsNoSpace.toLocaleString('de-DE');
+            document.getElementById('sentences').textContent = sentences.toLocaleString('de-DE');
+            document.getElementById('paragraphs').textContent = paragraphs.toLocaleString('de-DE');
+            document.getElementById('avgSentence').textContent = avgSentence > 0 ? avgSentence.toFixed(1) : '0';
+
+            document.getElementById('readTime').textContent = words > 0 ? fmtTime(words / wpm) : '0 Sek.';
+            document.getElementById('speakTime').textContent = 'Sprechzeit: ' + (words > 0 ? fmtTime(words / SPEAK_WPM) : '0 Sek.');
+
+            renderVerdict(words, avgSentence);
+        }
+
+        function renderVerdict(words, avgSentence) {
+            const bar = document.getElementById('lenBar');
+            const verdict = document.getElementById('seoVerdict');
+            // Referenz: 1500 Wörter = 100% Balken (umfassender Ratgeber-Bereich)
+            const pct = Math.min(100, Math.round(words / 1500 * 100));
+            bar.style.width = pct + '%';
+
+            let msg, color;
+            if (words === 0) {
+                msg = 'Füge einen Text ein, um eine Einordnung zu erhalten.';
+                color = 'text-blue-200/80';
+            } else if (words < 300) {
+                msg = `Mit ${words} Wörtern ist der Text kurz. Für eigenständig rankende Seiten (Blog, Ratgeber) sind meist 300+ Wörter sinnvoll. Für Produkt- oder Kontaktseiten kann das aber völlig ausreichen.`;
+                color = 'text-amber-300/90';
+            } else if (words < 600) {
+                msg = `${words} Wörter – solide Basislänge. Gut für klar umrissene Themen und Long-Tail-Keywords. Bei umkämpften Begriffen lohnt oft mehr Tiefe.`;
+                color = 'text-blue-200/90';
+            } else if (words < 1500) {
+                msg = `${words} Wörter – guter Umfang für ausführliche Blogartikel und Ratgeber. Diese Länge deckt die meisten Themen vollständig ab, ohne aufgebläht zu wirken.`;
+                color = 'text-green-300/90';
+            } else if (words < 3000) {
+                msg = `${words} Wörter – umfassender Pillar-Content. Ideal für zentrale Themenseiten. Achte auf klare Gliederung mit Zwischenüberschriften und Sprungmarken, damit Leser sich orientieren.`;
+                color = 'text-green-300/90';
+            } else {
+                msg = `${words} Wörter – sehr ausführlich. Stelle sicher, dass jeder Abschnitt echten Mehrwert bietet und der Text nicht zum Durchscrollen zwingt. Länge ist kein Selbstzweck.`;
+                color = 'text-blue-200/90';
+            }
+
+            if (words > 0 && avgSentence > 22) {
+                msg += ` Hinweis: Mit Ø ${avgSentence.toFixed(1)} Wörtern pro Satz schreibst du recht lange Sätze – kürzere Sätze verbessern die Lesbarkeit.`;
+            }
+
+            verdict.className = color + ' text-sm';
+            verdict.textContent = msg;
+        }
+
+        function loadDemo() {
+            document.getElementById('text').value = 'Lokales SEO ist für kleine Unternehmen der direkteste Weg zu mehr Kundinnen und Kunden aus der Region. Wer bei „Dienstleistung in der Nähe" sichtbar ist, gewinnt genau die Menschen, die kurz vor einer Entscheidung stehen.\n\nDas Fundament bildet ein vollständig gepflegtes Google Business Profil. Dazu kommen echte Bewertungen, lokale Keywords auf der eigenen Website und sauberes Schema-Markup. Wer diese Bausteine konsequent bespielt, wird gefunden, wenn es zählt.';
+            update();
+        }
+
+        function clearText() {
+            document.getElementById('text').value = '';
+            update();
+        }
+
+        update();
+    </script>
+</body>
+</html>
