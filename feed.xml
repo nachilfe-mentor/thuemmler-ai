@@ -5,8 +5,24 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Fri, 22 May 2026 02:30:56 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 22 May 2026 02:33:47 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>RealEstateAgent Schema Markup: Immobilienmakler für Google optimieren</title>
+      <link>https://shift07.ai/blog/realestate-agent-schema-markup.html</link>
+      <guid>https://shift07.ai/blog/realestate-agent-schema-markup.html</guid>
+      <pubDate>Fri, 22 May 2026 02:33:36 +0000</pubDate>
+      <description>Wie du mit RealEstateAgent Schema Markup dein Immobilienbüro in Google hervorhebst – vollständiges JSON-LD-Beispiel, alle Properties, Fehlerdiagnose und Praxis-Tipps.</description>
+      <category>Schema Markup</category>
+    </item>
+    <item>
+      <title>Lokales SEO für Immobilienmakler: Mehr Eigentümer &amp; Käufer über Google</title>
+      <link>https://shift07.ai/blog/lokales-seo-immobilienmakler.html</link>
+      <guid>https://shift07.ai/blog/lokales-seo-immobilienmakler.html</guid>
+      <pubDate>Fri, 22 May 2026 02:33:02 +0000</pubDate>
+      <description>Lokales SEO für Immobilienmakler: So gewinnst du über Google und Google Maps mehr Eigentümer-Anfragen und Käufer — Google Business Profile, Bewertungen, lokale Keywords und RealEstateAgent Schema-Markup.</description>
+      <category>Lokal-SEO</category>
+    </item>
     <item>
       <title>AutoDealer &amp; CarRepair Schema Markup: Autohaus und KFZ-Werkstatt für Google</title>
       <link>https://shift07.ai/blog/autodealer-carrepair-schema-markup.html</link>
@@ -150,22 +166,6 @@
       <pubDate>Wed, 20 May 2026 04:42:35 +0000</pubDate>
       <description>Performance-Budget erstellen: So legst du fest, wie viele Kilobyte deine Website wiegen darf, um schnell zu laden und die Core Web Vitals zu bestehen — mit kostenlosem Planer.</description>
       <category>Performance</category>
-    </item>
-    <item>
-      <title>Keyword-Kannibalisierung erkennen und beheben: Wenn eigene Seiten konkurrieren</title>
-      <link>https://shift07.ai/blog/keyword-kannibalisierung-erkennen-beheben.html</link>
-      <guid>https://shift07.ai/blog/keyword-kannibalisierung-erkennen-beheben.html</guid>
-      <pubDate>Wed, 20 May 2026 03:04:05 +0000</pubDate>
-      <description>Keyword-Kannibalisierung erkennen und lösen: Wenn mehrere Seiten dasselbe Keyword targetieren, kämpfen sie gegeneinander. Diagnose, Ursachen und Lösungen im Überblick.</description>
-      <category>OnPage-SEO</category>
-    </item>
-    <item>
-      <title>Google My Business optimieren: Anleitung für lokale Unternehmen 2026</title>
-      <link>https://shift07.ai/blog/google-my-business-optimieren.html</link>
-      <guid>https://shift07.ai/blog/google-my-business-optimieren.html</guid>
-      <pubDate>Wed, 20 May 2026 03:01:47 +0000</pubDate>
-      <description>Google My Business optimieren: Schritt-für-Schritt-Anleitung mit Checkliste. So wird dein Unternehmen in der Google-Suche und auf Google Maps sichtbar.</description>
-      <category>Lokales SEO</category>
     </item>
   </channel>
 </rss>
