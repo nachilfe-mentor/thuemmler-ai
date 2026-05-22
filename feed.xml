@@ -5,8 +5,32 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Fri, 22 May 2026 00:53:01 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 22 May 2026 00:55:17 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>AutoDealer &amp; CarRepair Schema Markup: Autohaus und KFZ-Werkstatt für Google</title>
+      <link>https://shift07.ai/blog/autodealer-carrepair-schema-markup.html</link>
+      <guid>https://shift07.ai/blog/autodealer-carrepair-schema-markup.html</guid>
+      <pubDate>Fri, 22 May 2026 00:55:09 +0000</pubDate>
+      <description>AutoDealer und CarRepair Schema Markup als JSON-LD: Autohaus, KFZ-Werkstatt und Reifenhandel für Google Rich Results optimieren — mit priceRange, brand, serviceType und vollständigen Beispielen.</description>
+      <category>Schema Markup</category>
+    </item>
+    <item>
+      <title>Lokales SEO für Handwerker: Mehr Aufträge über Google gewinnen</title>
+      <link>https://shift07.ai/blog/lokales-seo-handwerker.html</link>
+      <guid>https://shift07.ai/blog/lokales-seo-handwerker.html</guid>
+      <pubDate>Fri, 22 May 2026 00:54:59 +0000</pubDate>
+      <description>Lokales SEO für Handwerker: So wird dein Betrieb in Google und Google Maps sichtbar und gewinnt mehr Aufträge — Google Business Profile, Bewertungen, lokale Keywords und Schema-Markup für Maler, Elektriker, Dachdecker und Co.</description>
+      <category>Lokal-SEO</category>
+    </item>
+    <item>
+      <title>Lokales SEO für Autohäuser &amp; KFZ-Werkstätten: Mehr Kunden über Google</title>
+      <link>https://shift07.ai/blog/lokales-seo-autohaeuser.html</link>
+      <guid>https://shift07.ai/blog/lokales-seo-autohaeuser.html</guid>
+      <pubDate>Fri, 22 May 2026 00:54:32 +0000</pubDate>
+      <description>Lokales SEO für Autohäuser und KFZ-Werkstätten: So gewinnst du über Google und Google Maps mehr Kunden – Profil, Bewertungen, lokale Keywords und Schema-Markup.</description>
+      <category>Lokal-SEO</category>
+    </item>
     <item>
       <title>Zero-Click SEO: Wenn Google direkt antwortet – Strategien 2026</title>
       <link>https://shift07.ai/blog/zero-click-seo-google-direkt-antwortet.html</link>
@@ -45,14 +69,6 @@
       <guid>https://shift07.ai/blog/lokales-seo-arztpraxen.html</guid>
       <pubDate>Thu, 21 May 2026 05:12:04 +0000</pubDate>
       <description>Lokales SEO für Arztpraxen: So wird deine Praxis in Google und Google Maps sichtbar und gewinnt mehr Patienten — Google Business Profile, Bewertungen, lokale Keywords und MedicalClinic Schema-Markup.</description>
-      <category>Lokal-SEO</category>
-    </item>
-    <item>
-      <title>Lokales SEO für Handwerker: Mehr Aufträge über Google gewinnen</title>
-      <link>https://shift07.ai/blog/lokales-seo-handwerker.html</link>
-      <guid>https://shift07.ai/blog/lokales-seo-handwerker.html</guid>
-      <pubDate>Thu, 21 May 2026 05:10:45 +0000</pubDate>
-      <description>Lokales SEO für Handwerker: So wird dein Betrieb in Google und Google Maps sichtbar und gewinnt mehr Aufträge — Google Business Profile, Bewertungen, lokale Keywords und Schema-Markup für Maler, Elektriker, Dachdecker und Co.</description>
       <category>Lokal-SEO</category>
     </item>
     <item>
@@ -149,22 +165,6 @@
       <guid>https://shift07.ai/blog/google-my-business-optimieren.html</guid>
       <pubDate>Wed, 20 May 2026 03:01:47 +0000</pubDate>
       <description>Google My Business optimieren: Schritt-für-Schritt-Anleitung mit Checkliste. So wird dein Unternehmen in der Google-Suche und auf Google Maps sichtbar.</description>
-      <category>Lokales SEO</category>
-    </item>
-    <item>
-      <title>Google Business Profile Posts richtig nutzen: Anleitung 2026</title>
-      <link>https://shift07.ai/blog/google-business-profile-posts-nutzen.html</link>
-      <guid>https://shift07.ai/blog/google-business-profile-posts-nutzen.html</guid>
-      <pubDate>Wed, 20 May 2026 03:01:24 +0000</pubDate>
-      <description>Google Business Profile Posts gezielt einsetzen: Welche Post-Typen es gibt, wie oft du posten solltest und wie Beiträge deine lokale Sichtbarkeit erhöhen.</description>
-      <category>Lokal-SEO</category>
-    </item>
-    <item>
-      <title>Lokale Konkurrenzanalyse: Wettbewerber im lokalen SEO analysieren</title>
-      <link>https://shift07.ai/blog/lokale-konkurrenzanalyse-seo.html</link>
-      <guid>https://shift07.ai/blog/lokale-konkurrenzanalyse-seo.html</guid>
-      <pubDate>Wed, 20 May 2026 01:28:32 +0000</pubDate>
-      <description>Lokale Konkurrenzanalyse Schritt für Schritt: So findest du deine lokalen SEO-Wettbewerber, analysierst Google Business Profile, Bewertungen, Keywords und Backlinks — und überholst sie.</description>
       <category>Lokales SEO</category>
     </item>
   </channel>
