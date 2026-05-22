@@ -5,8 +5,32 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Fri, 22 May 2026 00:49:58 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 22 May 2026 00:53:01 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Zero-Click SEO: Wenn Google direkt antwortet – Strategien 2026</title>
+      <link>https://shift07.ai/blog/zero-click-seo-google-direkt-antwortet.html</link>
+      <guid>https://shift07.ai/blog/zero-click-seo-google-direkt-antwortet.html</guid>
+      <pubDate>Fri, 22 May 2026 00:52:51 +0000</pubDate>
+      <description>Zero-Click-Suchen dominieren über 60% aller Google-Anfragen. Erfahre, warum Zero-Click SEO trotzdem wertvoll ist und wie du mit Featured Snippets, AI Overviews und Structured Data sichtbar bleibst.</description>
+      <category>OnPage-SEO</category>
+    </item>
+    <item>
+      <title>Title-Tag optimieren: Die vollständige Anleitung 2026</title>
+      <link>https://shift07.ai/blog/title-tag-optimieren-seo.html</link>
+      <guid>https://shift07.ai/blog/title-tag-optimieren-seo.html</guid>
+      <pubDate>Fri, 22 May 2026 00:52:33 +0000</pubDate>
+      <description>Title-Tags richtig optimieren: Länge, Keyword-Platzierung, Formeln und häufige Fehler. Mit Checkliste und kostenlosen Tools für perfekte SEO-Titel.</description>
+      <category>OnPage-SEO</category>
+    </item>
+    <item>
+      <title>Google CTR nach Position: Wie viele Klicks bringt Platz 1–10?</title>
+      <link>https://shift07.ai/blog/google-ctr-nach-position-klickrate.html</link>
+      <guid>https://shift07.ai/blog/google-ctr-nach-position-klickrate.html</guid>
+      <pubDate>Fri, 22 May 2026 00:52:00 +0000</pubDate>
+      <description>Wie viele Klicks bringt Platz 1 bei Google wirklich? Die organische CTR nach Position im Überblick – mit aktueller Tabelle, Einflussfaktoren und Rechenbeispielen.</description>
+      <category>OnPage-SEO</category>
+    </item>
     <item>
       <title>Saisonales SEO: Saisonale Suchtrends und Aktionen richtig planen</title>
       <link>https://shift07.ai/blog/saisonales-seo.html</link>
@@ -141,30 +165,6 @@
       <guid>https://shift07.ai/blog/lokale-konkurrenzanalyse-seo.html</guid>
       <pubDate>Wed, 20 May 2026 01:28:32 +0000</pubDate>
       <description>Lokale Konkurrenzanalyse Schritt für Schritt: So findest du deine lokalen SEO-Wettbewerber, analysierst Google Business Profile, Bewertungen, Keywords und Backlinks — und überholst sie.</description>
-      <category>Lokales SEO</category>
-    </item>
-    <item>
-      <title>Lokale Landing Pages erstellen: Anleitung für mehrere Standorte</title>
-      <link>https://shift07.ai/blog/lokale-landing-pages-erstellen.html</link>
-      <guid>https://shift07.ai/blog/lokale-landing-pages-erstellen.html</guid>
-      <pubDate>Wed, 20 May 2026 01:24:43 +0000</pubDate>
-      <description>Lokale Landing Pages erstellen — Schritt-für-Schritt-Anleitung für Standortseiten, die ranken: Struktur, einzigartiger Content, Schema Markup und typische Fehler vermeiden.</description>
-      <category>Lokales SEO</category>
-    </item>
-    <item>
-      <title>Google Maps Ranking verbessern 2026: 9 Faktoren für den Local Pack</title>
-      <link>https://shift07.ai/blog/google-maps-ranking-verbessern-2026.html</link>
-      <guid>https://shift07.ai/blog/google-maps-ranking-verbessern-2026.html</guid>
-      <pubDate>Tue, 19 May 2026 04:20:46 +0000</pubDate>
-      <description>Google Maps Ranking verbessern 2026: Lerne die 9 wichtigsten Faktoren für den Local Pack kennen — Relevanz, Distanz, Prominenz, Bewertungen und mehr mit konkreten Tipps.</description>
-      <category>Lokales SEO</category>
-    </item>
-    <item>
-      <title>Lokales SEO 2026: Der komplette Leitfaden für lokale Unternehmen</title>
-      <link>https://shift07.ai/blog/lokales-seo-2026-leitfaden.html</link>
-      <guid>https://shift07.ai/blog/lokales-seo-2026-leitfaden.html</guid>
-      <pubDate>Tue, 19 May 2026 04:14:06 +0000</pubDate>
-      <description>Lokales SEO 2026 — Schritt-für-Schritt-Leitfaden für lokale Unternehmen: Google Business Profile, NAP-Konsistenz, Local Pack, Bewertungen und Schema Markup richtig einsetzen.</description>
       <category>Lokales SEO</category>
     </item>
   </channel>
