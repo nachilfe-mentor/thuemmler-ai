@@ -5,8 +5,24 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Fri, 22 May 2026 04:11:55 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 22 May 2026 04:14:08 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Lokales SEO für Immobilienmakler: Mehr Eigentümer &amp; Käufer über Google</title>
+      <link>https://shift07.ai/blog/lokales-seo-immobilienmakler.html</link>
+      <guid>https://shift07.ai/blog/lokales-seo-immobilienmakler.html</guid>
+      <pubDate>Fri, 22 May 2026 04:13:57 +0000</pubDate>
+      <description>Lokales SEO für Immobilienmakler: So gewinnst du über Google und Google Maps mehr Eigentümer-Anfragen und Käufer — Google Business Profile, Bewertungen, lokale Keywords und RealEstateAgent Schema-Markup.</description>
+      <category>Lokal-SEO</category>
+    </item>
+    <item>
+      <title>Lokales SEO für Fotografen: Mehr Buchungen über Google gewinnen</title>
+      <link>https://shift07.ai/blog/lokales-seo-fotografen.html</link>
+      <guid>https://shift07.ai/blog/lokales-seo-fotografen.html</guid>
+      <pubDate>Fri, 22 May 2026 04:13:35 +0000</pubDate>
+      <description>Lokales SEO für Fotografen: So wird dein Fotostudio in Google und Google Maps sichtbar und gewinnt mehr Buchungen — Google Business Profile, Bewertungen, Bilder-SEO, Nischenseiten und Schema-Markup.</description>
+      <category>Lokal-SEO</category>
+    </item>
     <item>
       <title>Content-Länge und SEO: Wie lang sollte ein Artikel sein?</title>
       <link>https://shift07.ai/blog/content-laenge-seo-wie-lang-artikel.html</link>
@@ -54,14 +70,6 @@
       <pubDate>Fri, 22 May 2026 02:33:36 +0000</pubDate>
       <description>Wie du mit RealEstateAgent Schema Markup dein Immobilienbüro in Google hervorhebst – vollständiges JSON-LD-Beispiel, alle Properties, Fehlerdiagnose und Praxis-Tipps.</description>
       <category>Schema Markup</category>
-    </item>
-    <item>
-      <title>Lokales SEO für Immobilienmakler: Mehr Eigentümer &amp; Käufer über Google</title>
-      <link>https://shift07.ai/blog/lokales-seo-immobilienmakler.html</link>
-      <guid>https://shift07.ai/blog/lokales-seo-immobilienmakler.html</guid>
-      <pubDate>Fri, 22 May 2026 02:33:02 +0000</pubDate>
-      <description>Lokales SEO für Immobilienmakler: So gewinnst du über Google und Google Maps mehr Eigentümer-Anfragen und Käufer — Google Business Profile, Bewertungen, lokale Keywords und RealEstateAgent Schema-Markup.</description>
-      <category>Lokal-SEO</category>
     </item>
     <item>
       <title>AutoDealer &amp; CarRepair Schema Markup: Autohaus und KFZ-Werkstatt für Google</title>
@@ -157,14 +165,6 @@
       <guid>https://shift07.ai/blog/lokales-seo-hotels.html</guid>
       <pubDate>Thu, 21 May 2026 01:57:26 +0000</pubDate>
       <description>Lokales SEO für Hotels: So gewinnst du über Google, Google Maps und deine eigene Website mehr Direktbuchungen — Google Business Profile, Bewertungen, lokale Keywords und Hotel-Schema-Markup.</description>
-      <category>Lokal-SEO</category>
-    </item>
-    <item>
-      <title>Lokales SEO für Cafés und Bäckereien: Mehr Laufkundschaft über Google</title>
-      <link>https://shift07.ai/blog/lokales-seo-cafes-baeckereien.html</link>
-      <guid>https://shift07.ai/blog/lokales-seo-cafes-baeckereien.html</guid>
-      <pubDate>Thu, 21 May 2026 01:55:06 +0000</pubDate>
-      <description>Lokales SEO für Cafés und Bäckereien: So gewinnst du über Google und Google Maps mehr Laufkundschaft — Google Business Profile, Fotos, Bewertungen, lokale Keywords und eine schnelle Website.</description>
       <category>Lokal-SEO</category>
     </item>
   </channel>
