@@ -5,8 +5,24 @@
     <link>https://shift07.ai/blog/</link>
     <description>SEO-Tipps und Strategien fuer bessere Websites</description>
     <language>de-de</language>
-    <lastBuildDate>Fri, 22 May 2026 02:36:10 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 22 May 2026 04:09:50 +0000</lastBuildDate>
     <atom:link href="https://shift07.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Lokales SEO für Friseure: Mehr Termine über Google gewinnen</title>
+      <link>https://shift07.ai/blog/lokales-seo-friseure.html</link>
+      <guid>https://shift07.ai/blog/lokales-seo-friseure.html</guid>
+      <pubDate>Fri, 22 May 2026 04:09:39 +0000</pubDate>
+      <description>Lokales SEO für Friseure: So wird dein Salon in Google und Google Maps sichtbar und gewinnt mehr Termine — Google Business Profile, Bewertungen, lokale Keywords und Schema-Markup.</description>
+      <category>Lokal-SEO</category>
+    </item>
+    <item>
+      <title>Lokales SEO für Kosmetikstudios: Mehr Kundinnen über Google gewinnen</title>
+      <link>https://shift07.ai/blog/lokales-seo-kosmetikstudios.html</link>
+      <guid>https://shift07.ai/blog/lokales-seo-kosmetikstudios.html</guid>
+      <pubDate>Fri, 22 May 2026 04:09:11 +0000</pubDate>
+      <description>Lokales SEO für Kosmetikstudios: So wird dein Studio in Google und Google Maps sichtbar und gewinnt mehr Kundinnen — Google Business Profile, Bewertungen, lokale Keywords und BeautySalon Schema-Markup.</description>
+      <category>Lokal-SEO</category>
+    </item>
     <item>
       <title>HealthClub &amp;amp; CivicStructure Schema Markup: Fitnessstudio und öffentliche Einrichtungen für Google</title>
       <link>https://shift07.ai/blog/healthclub-civicstructure-schema-markup.html</link>
@@ -128,14 +144,6 @@
       <category>Datenanalyse</category>
     </item>
     <item>
-      <title>Lokales SEO für Friseure: Mehr Termine über Google gewinnen</title>
-      <link>https://shift07.ai/blog/lokales-seo-friseure.html</link>
-      <guid>https://shift07.ai/blog/lokales-seo-friseure.html</guid>
-      <pubDate>Thu, 21 May 2026 03:31:16 +0000</pubDate>
-      <description>Lokales SEO für Friseure: So wird dein Salon in Google und Google Maps sichtbar und gewinnt mehr Termine — Google Business Profile, Bewertungen, lokale Keywords und Schema-Markup.</description>
-      <category>Lokal-SEO</category>
-    </item>
-    <item>
       <title>Lokales SEO für Hotels: Mehr Direktbuchungen über Google</title>
       <link>https://shift07.ai/blog/lokales-seo-hotels.html</link>
       <guid>https://shift07.ai/blog/lokales-seo-hotels.html</guid>
@@ -158,14 +166,6 @@
       <pubDate>Thu, 21 May 2026 01:54:57 +0000</pubDate>
       <description>Lokales SEO für Restaurants: So gewinnst du über Google und Google Maps mehr Gäste — Google Business Profile, Bewertungen, Speisekarte, lokale Keywords und Website.</description>
       <category>Lokal-SEO</category>
-    </item>
-    <item>
-      <title>Render-Blocking-Ressourcen entfernen: CSS und JavaScript richtig laden</title>
-      <link>https://shift07.ai/blog/render-blocking-ressourcen-entfernen.html</link>
-      <guid>https://shift07.ai/blog/render-blocking-ressourcen-entfernen.html</guid>
-      <pubDate>Thu, 21 May 2026 00:20:48 +0000</pubDate>
-      <description>Render-Blocking-Ressourcen entfernen: So lädst du CSS und JavaScript richtig, verkürzt die Ladezeit drastisch und verbesserst deine Core Web Vitals.</description>
-      <category>Performance SEO</category>
     </item>
   </channel>
 </rss>
